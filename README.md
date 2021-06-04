@@ -12,4 +12,7 @@ GitHub will automatically trigger a new build whenever a change is commited.
 
 https://build.fhir.org/ig/HL7/pacio-adi/
 
+or for pre-ballot 0.1.0 version here:
+http://build.fhir.org/ig/HL7/pacio-adi/branches/main/
+
 ### To request changes or ask question post on the Zulip at https://chat.fhir.org/#narrow/stream/282785-Advance-Directives

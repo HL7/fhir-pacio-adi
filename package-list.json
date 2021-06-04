@@ -15,7 +15,7 @@
         "version": "0.0.1",
         "desc": "PACIO Advance Directive Information Implementation Guide Release 1 - US Realm Pre-ballot",
         "path": "http://build.fhir.org/ig/HL7/pacio-adi/v0.1.0",
-        "date": "2021-03-02",
+        "date": "2021-06-04",
         "status": "draft",
         "sequence": "STU 1",
         "fhirversion": "4.0.1",
