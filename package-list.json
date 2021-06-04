@@ -1,0 +1,26 @@
+{
+    "package-id": "hl7.fhir.us.pacio-adi",
+    "title": "PACIO Advance Directive Information Implementation Guide",
+    "canonical": "http://hl7.org/fhir/us/pacio-adi",
+    "introduction": "This implementation guide describes the CARIN Blue Button® Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.",
+    "list": [
+      {
+        "version": "current",
+        "desc": "PACIO Advance Directive Information Implementation Guide CI Build",
+        "path": "http://build.fhir.org/ig/HL7/pacio-adi",
+        "status": "ci-build",
+        "current": true
+      },
+      {
+        "version": "0.0.1",
+        "desc": "PACIO Advance Directive Information Implementation Guide Release 1 - US Realm Pre-ballot",
+        "path": "http://build.fhir.org/ig/HL7/pacio-adi/v0.1.0",
+        "date": "2021-03-02",
+        "status": "draft",
+        "sequence": "STU 1",
+        "fhirversion": "4.0.1",
+        "current": true
+      }
+    ],
+    "category": "Clinical Documents"
+  }

@@ -1,0 +1,8 @@
+== Suppressed Messages ==
+# The following code systems are external and not supported by terminology server 
+
+# These are actual warnings to surpress, all relating to validation of values from terminologies
+
+#informational -- these examples are in the IG because they are examples of the referenced profiles. 
+
+# Suppress warnings about validation of build-in FHIR resources

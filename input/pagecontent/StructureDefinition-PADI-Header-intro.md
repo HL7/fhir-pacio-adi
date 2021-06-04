@@ -1,0 +1,3 @@
+This profile, largely based on the CCDA on FHIR US Realm Header pfofile, defines requirements that address specific exchange requirements for a composition containing a person's advance care plan (PACP) information.
+
+In the cases where the patient is not able to "write" the PACP contents due to literacy constraints or physical disability, e.g. hemiplegia, the patient/subject is still considered author of the content, and a data enterer will fill the role of physically creating the document by entering the author’s requested information into the system used to create the document.

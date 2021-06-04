@@ -1,0 +1,3 @@
+This profile defines the requirements for communicating a Personal Advance Care Plan using a [Composition] Resource. It is used to create a person generated document which is authored by the subject of the document (the patient). It contains information about the person's goals, preferences, and priorities (GPPs) for care and treatment under certain future conditions.
+
+The composition [TODO verify] may contain a structured body, or it may contain a non-xml body that includes the advance care plan information by reference to a document with a supported file format or by embedding the information.

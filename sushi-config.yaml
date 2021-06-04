@@ -1,0 +1,85 @@
+# ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
+# │  ACTION REQUIRED: REVIEW AND EDIT THIS FILE TO ENSURE IT ACCURATELY REFLECTS YOUR PROJECT!     │
+# │                                                                                                │
+# │  This file was generated from your existing project files and will be used for SUSHI           │
+# │  configuration from now on. You may delete your package.json as it is no longer needed.        │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+# ╭─────────────────────────ImplementationGuide-hl7.fhir.us.pacio-adi.json──────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see:                                                                    │
+# │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.html#ig-development           │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: hl7.fhir.us.pacio-adi
+canonical: http://hl7.org/fhir/us/pacio-adi
+version: 0.0.1
+name: PACIOAdvanceDirectiveInteroperability
+title: PACIO Advance Directive Interoperability Implementation Guide
+status: draft
+publisher:
+  name: HL7 Patient Empowerment Working Group
+  url: http://www.hl7.org/Special/committees/patientempowerment/index.cfm
+  email: patients@lists.HL7.org
+description: PACIO Advance Directive Interoperability Implementation Guide
+license: CC0-1.0
+fhirVersion: 4.0.1
+dependencies:
+  hl7.fhir.us.core: 3.1.1   # updated from 3.1.0 on 9/23/20
+#  hl7.fhir.us.ccda: 1.1.0   # US Realm Header for DocumentReference
+parameters:
+  show-inherited-invariants: false
+  apply-jurisdiction: true
+  apply-publisher: true
+copyrightYear: 2021+
+releaseLabel: STU1
+jurisdiction: urn:iso:std:iso:3166#US
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To control the menu.xml using this config, uncomment and set the "menu" property.             │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  Home: index.html
+  Table of Contents: toc.html
+  Guidance:
+    Business Case:  business_case.html
+    Patient Stories and Personas: patient_stories_and_personas.html
+    Use Cases: use_cases.html
+    Security: security.html
+  FHIR Artifacts:
+    Profiles: artifacts.html#1
+    Extensions: artifacts.html#3
+    Terminology: artifacts.html#4
+    Capability Statement: CapabilityStatement-padi.html
+    Examples: artifacts.html#5
+#    Search Parameters: 6_searchparameters.html
+  #Examples: artifacts.html#7
+  Downloads: downloads.html
+
+# Old menu for reference
+#menu:
+#  Home: index.html
+#    Introduction: introduction.html
+#  How to read this Guide: how_to_read_this_guide.html
+#  ADI Business Case: ADI_business_case.html
+#  Patient Stories and Personas: patient_stories_and_personas.html
+#  ADI Actors: ADI_actors.html
+#  ADI Profiles: ADI_profiles.html
+#  Table of Contents: toc.html
+#  Underlying Technologies: underlying_technologies.html
+#  Use Case Example: advance_directive_use_case.html
+#  Profile Highlights and Guidance: profile_highlights_and_guidance.html
+#  Artifacts Summary: artifacts.html
+#  Other Resources: 
+#    FHIR Spec: http://hl7.org/fhir/R4/index.html
+#    Downloads: downloads.html downloads page is not included in the other PACIO
+
+# ╭───────────────────────────────────────package-list.json────────────────────────────────────────╮
+# │  To control the package-list.json using this config, uncomment and set the "history" property. │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+#resources:
+#  Coverage/CoverageEx1:
+#    name: Coverage Example 1
+#    description: Coverage Example 1
+#    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
+
