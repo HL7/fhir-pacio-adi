@@ -147,7 +147,7 @@ In Use Case 4, the process is started by a person wanting to update previously c
 Note: FHIR Resource versioning is only used for error corrections. 
 </p>
 
-##### Use Case 4 Sequence Diagram######
+##### Use Case 4 Sequence Diagram
 <br clear="all" />
 <img src="./use_case_4_2.png" alt="Use Case 4: Diagram 2"/>
 <br clear="all" />

@@ -108,11 +108,11 @@ This Guide is divided into several pages which are listed at the top of each pag
         <td>A use case is a list of technical actions or event steps typically defining the interactions between a role and a system to achieve a goal. The actor can be a human or other external system. Technical scenarios that describe systems interactions between technical actors to implement the business case.</td>
     </tr>
     <tr>
-        <td>Advance directive (AD)</td>
+        <td>Advance directives</td>
         <td>Advance directives = is a concept. Living will (what you want), medical power of attorney (who speaks), combined living will and medical power of attorney. These documents have several names depending on where you are. “Advance directives” is the general term that people use to refer to all of these documents as a concept.</td>
     </tr>
     <tr>
-        <td>Advance directives</td>
+        <td>Advance directive (AD)</td>
         <td>Advance directive = People have used “advance directive” to refer to any of these documents in the singular, e.g., instead of saying “living will,” someone will generally, abstractly refer to the document as “an advance directive.”</td>
     </tr>
     <tr>

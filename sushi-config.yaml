@@ -41,10 +41,11 @@ menu:
   Home: index.html
   Table of Contents: toc.html
   Guidance:
-    Business Case:  business_case.html
+    Business Case: business_case.html
     Patient Stories and Personas: patient_stories_and_personas.html
     Use Cases: use_cases.html
-    Security: security.html
+    General Guidance: general_guidance.html
+    Security, Privacy, and Consent: security_privacy_consent.html
   FHIR Artifacts:
     Profiles: artifacts.html#1
     Extensions: artifacts.html#3
