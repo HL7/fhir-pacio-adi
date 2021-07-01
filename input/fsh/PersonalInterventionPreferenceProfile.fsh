@@ -30,7 +30,7 @@ Description: "This profile is used to represent a personal preference for a type
 * text 1..1 MS
 * status = #active
 // [TODO] Need to determine if it should be a proposal, plan, or directive
-* intent = #directive
+* intent = #proposal
 
 * doNotPerform MS
 //[TODO] Guidance that if code is not available that there would be text. Could this be a valueset that includes LOINC and Snomed examples (extensible)?

@@ -29,13 +29,13 @@ For the purposes of Advance Directive Interoperability, additional security conf
 2.	Server implementations SHALL support individual user authentication and MAY support system level authentication if access controls of the system are trusted for the scope of use.
 3.	Implementation SHALL utilize OAuth 2.0 compliant authorization protocols.
 4.	This guide requires SMART on FHIR App Launch Framework which provides guidance on [scopes](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context/index.html). Server implementations of this Implementation guide SHALL support, at a minimum, the following granted authorization scopes:
-a.	openid
-b.	fhirUser
-c.	launch/patient
-d.	patient/*.read
-e.	patient/Bundle.*
-f.	user/Patient.read
-g.	user/Bundle.read
+    a.	openid
+    b.	fhirUser
+    c.	launch/patient
+    d.	patient/*.read
+    e.	patient/Bundle.*
+    f.	user/Patient.read
+    g.	user/Bundle.read
 
 #### Individual-Authorized Exchange
 1.	http://hl7.org/fhir/us/davinci-pdex/Member-AuthorizedOAuth2Exchange.html
