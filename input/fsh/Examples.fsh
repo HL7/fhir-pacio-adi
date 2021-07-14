@@ -43,20 +43,20 @@ Usage: #example
 * entry[=].resource = Example-McBee-PersonalInterventionPreference7
 * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-McBee-PersonalInterventionPreference8"
 * entry[=].resource = Example-McBee-PersonalInterventionPreference8
-* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-McBee-PersonalHealthGoal1"
-* entry[=].resource = Example-McBee-PersonalHealthGoal1
-* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-McBee-PersonalHealthGoal2"
-* entry[=].resource = Example-McBee-PersonalHealthGoal2
-* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-McBee-PersonalHealthGoal3"
-* entry[=].resource = Example-McBee-PersonalHealthGoal3
-* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-McBee-PersonalHealthGoal4"
-* entry[=].resource = Example-McBee-PersonalHealthGoal4
-* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-McBee-PersonalHealthGoal5"
-* entry[=].resource = Example-McBee-PersonalHealthGoal5
-* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-McBee-PersonalHealthGoal6"
-* entry[=].resource = Example-McBee-PersonalHealthGoal6
-* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-McBee-PersonalHealthGoal7"
-* entry[=].resource = Example-McBee-PersonalHealthGoal7
+* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-McBee-PersonalGoal1"
+* entry[=].resource = Example-McBee-PersonalGoal1
+* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-McBee-PersonalGoal2"
+* entry[=].resource = Example-McBee-PersonalGoal2
+* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-McBee-PersonalGoal3"
+* entry[=].resource = Example-McBee-PersonalGoal3
+* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-McBee-PersonalGoal4"
+* entry[=].resource = Example-McBee-PersonalGoal4
+* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-McBee-PersonalGoal5"
+* entry[=].resource = Example-McBee-PersonalGoal5
+* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-McBee-PersonalGoal6"
+* entry[=].resource = Example-McBee-PersonalGoal6
+* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-McBee-PersonalGoal7"
+* entry[=].resource = Example-McBee-PersonalGoal7
 
 
 * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-McBee-OrganDonationObservation1"
@@ -506,19 +506,19 @@ Description: "Example Patient McBee Personal Priorities Organizer"
 * title = "My Advance Care Goals"
 * code = $LOINC#81340-2 "Goals AndOr Preferences in Order of Priority [Reported]"
 * orderedBy = http://terminology.hl7.org/CodeSystem/list-order#priority
-* entry[0].item = Reference(Example-McBee-PersonalHealthGoal1)
-* entry[1].item = Reference(Example-McBee-PersonalHealthGoal2)
-* entry[2].item = Reference(Example-McBee-PersonalHealthGoal3)
-* entry[3].item = Reference(Example-McBee-PersonalHealthGoal4)
-* entry[4].item = Reference(Example-McBee-PersonalHealthGoal5)
-* entry[5].item = Reference(Example-McBee-PersonalHealthGoal6)
-* entry[6].item = Reference(Example-McBee-PersonalHealthGoal7)
+* entry[0].item = Reference(Example-McBee-PersonalGoal1)
+* entry[1].item = Reference(Example-McBee-PersonalGoal2)
+* entry[2].item = Reference(Example-McBee-PersonalGoal3)
+* entry[3].item = Reference(Example-McBee-PersonalGoal4)
+* entry[4].item = Reference(Example-McBee-PersonalGoal5)
+* entry[5].item = Reference(Example-McBee-PersonalGoal6)
+* entry[6].item = Reference(Example-McBee-PersonalGoal7)
 
 
 // Health Goal Examples
-Instance: Example-McBee-PersonalHealthGoal1
-InstanceOf: PADIPersonalHealthGoal
-Description: "Example Patient McBee Personal Health Goal 1"
+Instance: Example-McBee-PersonalGoal1
+InstanceOf: PADIPersonalGoal
+Description: "Example Patient McBee Personal Goal 1"
 
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
@@ -531,9 +531,9 @@ Description: "Example Patient McBee Personal Health Goal 1"
 * subject = Reference(Example-McBee-Patient1)
 
 
-Instance: Example-McBee-PersonalHealthGoal2
-InstanceOf: PADIPersonalHealthGoal
-Description: "Example Patient McBee Personal Health Goal 2"
+Instance: Example-McBee-PersonalGoal2
+InstanceOf: PADIPersonalGoal
+Description: "Example Patient McBee Personal Goal 2"
 
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
@@ -546,9 +546,9 @@ Description: "Example Patient McBee Personal Health Goal 2"
 * subject = Reference(Example-McBee-Patient1)
 
 
-Instance: Example-McBee-PersonalHealthGoal3
-InstanceOf: PADIPersonalHealthGoal
-Description: "Example Patient McBee Personal Health Goal 3"
+Instance: Example-McBee-PersonalGoal3
+InstanceOf: PADIPersonalGoal
+Description: "Example Patient McBee Personal Goal 3"
 
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
@@ -561,9 +561,9 @@ Description: "Example Patient McBee Personal Health Goal 3"
 * subject = Reference(Example-McBee-Patient1)
 
 
-Instance: Example-McBee-PersonalHealthGoal4
-InstanceOf: PADIPersonalHealthGoal
-Description: "Example Patient McBee Personal Health Goal 4"
+Instance: Example-McBee-PersonalGoal4
+InstanceOf: PADIPersonalGoal
+Description: "Example Patient McBee Personal Goal 4"
 
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
@@ -577,9 +577,9 @@ Description: "Example Patient McBee Personal Health Goal 4"
 
 
 
-Instance: Example-McBee-PersonalHealthGoal5
-InstanceOf: PADIPersonalHealthGoal
-Description: "Example Patient McBee Personal Health Goal 5"
+Instance: Example-McBee-PersonalGoal5
+InstanceOf: PADIPersonalGoal
+Description: "Example Patient McBee Personal Goal 5"
 
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
@@ -593,9 +593,9 @@ Description: "Example Patient McBee Personal Health Goal 5"
 
 
 
-Instance: Example-McBee-PersonalHealthGoal6
-InstanceOf: PADIPersonalHealthGoal
-Description: "Example Patient McBee Personal Health Goal 6"
+Instance: Example-McBee-PersonalGoal6
+InstanceOf: PADIPersonalGoal
+Description: "Example Patient McBee Personal Goal 6"
 
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
@@ -609,9 +609,9 @@ Description: "Example Patient McBee Personal Health Goal 6"
 
 
 
-Instance: Example-McBee-PersonalHealthGoal7
-InstanceOf: PADIPersonalHealthGoal
-Description: "Example Patient McBee Personal Health Goal 7"
+Instance: Example-McBee-PersonalGoal7
+InstanceOf: PADIPersonalGoal
+Description: "Example Patient McBee Personal Goal 7"
 
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">

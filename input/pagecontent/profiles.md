@@ -88,13 +88,6 @@ Table: ADI Profiles
         <p><i>Development status: Not started.</i></p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
     </tr>
-    <tr>    
-        <td style="padding: 7px;">12</td>
-        <td style="padding: 7px;"><a href="#">ADI Guardian</a></td>
-        <td style="padding: 7px;"><p>This profile will show a relationship to a ward</p>
-        <p><i>Development status: Not started.</i></p></td>
-        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a></td>
-    </tr>
     <tr>
         <td style="padding: 7px;">13</td>
         <td style="padding: 7px;">ADI Consent for Healthcare Agent</td>

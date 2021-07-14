@@ -27,15 +27,16 @@ For the purposes of Advance Directive Interoperability, additional security conf
 ##### Authentication and Authorization Requirements
 1.	Implementations SHOULD consider the SMART on FHIR Best Practices in Authorization found [here](https://docs.smarthealthit.org/authorization/best-practices/)
 2.	Server implementations SHALL support individual user authentication and MAY support system level authentication if access controls of the system are trusted for the scope of use.
-3.	Implementation SHALL utilize OAuth 2.0 compliant authorization protocols.
-4.	This guide requires SMART on FHIR App Launch Framework which provides guidance on [scopes](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context/index.html). Server implementations of this Implementation guide SHALL support, at a minimum, the following granted authorization scopes:
-    a.	openid
-    b.	fhirUser
-    c.	launch/patient
-    d.	patient/*.read
-    e.	patient/Bundle.*
-    f.	user/Patient.read
-    g.	user/Bundle.read
+3. Implementation MAY support [Health Relationship Trust Profile for User-Managed Access (HEART)](https://openid.net/specs/openid-heart-uma2-1_0.html).
+4.	Implementation SHALL utilize OAuth 2.0 compliant authorization protocols.
+5.	This guide requires SMART on FHIR App Launch Framework which provides guidance on [scopes](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context/index.html). Server implementations of this Implementation guide SHALL support, at a minimum, the following granted authorization scopes:
+    1.	openid
+    2.	fhirUser
+    3.	launch/patient
+    4.	patient/*.read
+    5.	patient/Bundle.*
+    6.	user/Patient.read
+    7.	user/Bundle.read
 
 #### Individual-Authorized Exchange
 1.	http://hl7.org/fhir/us/davinci-pdex/Member-AuthorizedOAuth2Exchange.html

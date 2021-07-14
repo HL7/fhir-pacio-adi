@@ -262,29 +262,15 @@ TODO
     </tr>
     <tr>    
         <td style="padding: 7px;">12</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-PersonalHealthGoal.html">ADI Personal Health Goal</a></td>
-        <td style="padding: 7px;"><p>This profile is a statement that presents the author's personal health goals that are pertinent when planning his or her care.</p>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-PersonalGoal.html">ADI Personal Goal</a></td>
+        <td style="padding: 7px;"><p>This profile is a statement that presents the author's personal health and treatment goals that are pertinent when planning his or her care.</p>
         <p><i>Development status: Initial draft available. Initial Mapping complete.</i></p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
-    </tr>
-    <tr>    
-        <td style="padding: 7px;">13</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-Guardian.html">ADI Guardian</a></td>
-        <td style="padding: 7px;"><p>This profile will show a relationship to a ward.</p>
-        <p><i>Development status: Not started.</i></p></td>
-        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a></td>
-    </tr>
-    <tr>
-        <td style="padding: 7px;">14</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-ConsentForHealthcareAgent.html">ADI Consent for Healthcare Agent</a></td>
-        <td style="padding: 7px;"><p>This profile is used for the healthcare agent to consent/express acceptance of being appointed as the agent for the patient.</p>
-        <p><i>Development status: Not started.</i></p></td>
-        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/consent.html">Consent</a></td>
     </tr>
     <tr>
         <td style="padding: 7px;">15</td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-Provenance.html">ADI Provenance</a></td>
-        <td style="padding: 7px;"><p>[TODO] This profile is used for tracking the provenance of the Advance Directive resources.</p>
+        <td style="padding: 7px;"><p>Advance Directive Interoperability Provanance based on US Core to capture, search and fetch provenance information associated with advance directive interoperability data.</p>
         <p><i>Development status: Mapping in Progress.</i></p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-provenance.html">US Core Provenance</a></td>
     </tr>

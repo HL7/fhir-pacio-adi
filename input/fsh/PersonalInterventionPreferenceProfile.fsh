@@ -11,6 +11,7 @@ Description: "This profile is used to represent a personal preference for a type
 * status = #final
 * code MS
 * code from PADIInterventionPreferencesVS (extensible)
+* code.text MS
 
 * value[x] 1..1 MS
 * note MS
@@ -35,19 +36,25 @@ Description: "This profile is used to represent a personal preference for a type
 * doNotPerform MS
 //[TODO] Guidance that if code is not available that there would be text. Could this be a valueset that includes LOINC and Snomed examples (extensible)?
 * code 1..1 MS
+* code.text MS
+
 // [TODO] How do we handle items where there is more expected information (e.g. [Reported]). Perhaps Order detail. That needs guidance and or/binding
 * code from PADIInterventionPreferencesVS (extensible)
+* code.text MS
 * orderDetail MS
+* orderDetail.text MS
 
 * subject only Reference($USCorePatient)
 
 //[TODO] requires guidance
 * asNeeded[x] MS
+* asNeededCodeableConcept.text MS
 
 * requester 1..1
 * requester only Reference($USCorePatient)
 
 * reasonCode MS
+* reasonCode.text MS
 
 * supportingInfo MS
 

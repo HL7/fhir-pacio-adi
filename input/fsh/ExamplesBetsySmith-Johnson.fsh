@@ -56,12 +56,12 @@ Usage: #example
 * entry[=].resource = Example-Smith-Johnson-PersonalInterventionPreference6
 
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-PersonalHealthGoal1"
-* entry[=].resource = Example-Smith-Johnson-PersonalHealthGoal1
-* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-PersonalHealthGoal2"
-* entry[=].resource = Example-Smith-Johnson-PersonalHealthGoal2
-* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-PersonalHealthGoal3"
-* entry[=].resource = Example-Smith-Johnson-PersonalHealthGoal3
+* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-PersonalGoal1"
+* entry[=].resource = Example-Smith-Johnson-PersonalGoal1
+* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-PersonalGoal2"
+* entry[=].resource = Example-Smith-Johnson-PersonalGoal2
+* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-PersonalGoal3"
+* entry[=].resource = Example-Smith-Johnson-PersonalGoal3
 
 
 
@@ -577,16 +577,16 @@ Description: "Example Patient Smith-Johnson Personal Priorities Organizer"
 * title = "Priorities for Goals and Preferences"
 * code = $LOINC#81340-2 "Goals AndOr preferences in order of priority [Reported]"
 * orderedBy = http://terminology.hl7.org/CodeSystem/list-order#priority
-* entry[+].item = Reference(Example-Smith-Johnson-PersonalHealthGoal1)
-* entry[+].item = Reference(Example-Smith-Johnson-PersonalHealthGoal2)
-* entry[+].item = Reference(Example-Smith-Johnson-PersonalHealthGoal3)
+* entry[+].item = Reference(Example-Smith-Johnson-PersonalGoal1)
+* entry[+].item = Reference(Example-Smith-Johnson-PersonalGoal2)
+* entry[+].item = Reference(Example-Smith-Johnson-PersonalGoal3)
 
 
 
 // Health Goal Examples
-Instance: Example-Smith-Johnson-PersonalHealthGoal1
-InstanceOf: PADIPersonalHealthGoal
-Description: "Example Patient Smith-Johnson Personal Health Goal 1"
+Instance: Example-Smith-Johnson-PersonalGoal1
+InstanceOf: PADIPersonalGoal
+Description: "Example Patient Smith-Johnson Personal Goal 1"
 
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
@@ -599,9 +599,9 @@ Description: "Example Patient Smith-Johnson Personal Health Goal 1"
 * subject = Reference(Example-Smith-Johnson-Patient1)
 
 
-Instance: Example-Smith-Johnson-PersonalHealthGoal2
-InstanceOf: PADIPersonalHealthGoal
-Description: "Example Patient Smith-Johnson Personal Health Goal 2"
+Instance: Example-Smith-Johnson-PersonalGoal2
+InstanceOf: PADIPersonalGoal
+Description: "Example Patient Smith-Johnson Personal Goal 2"
 
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
@@ -614,9 +614,9 @@ Description: "Example Patient Smith-Johnson Personal Health Goal 2"
 * subject = Reference(Example-Smith-Johnson-Patient1)
 
 
-Instance: Example-Smith-Johnson-PersonalHealthGoal3
-InstanceOf: PADIPersonalHealthGoal
-Description: "Example Patient Smith-Johnson Personal Health Goal 3"
+Instance: Example-Smith-Johnson-PersonalGoal3
+InstanceOf: PADIPersonalGoal
+Description: "Example Patient Smith-Johnson Personal Goal 3"
 
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">

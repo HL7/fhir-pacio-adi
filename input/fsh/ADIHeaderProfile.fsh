@@ -31,7 +31,6 @@ Description: "This abstract profile defines constraints that represent common ad
     padi-performer-extension named PerformerExtension 0..* MS and
     padi-authorization-extension named AuthorizationExtension 0..* MS and
     padi-order-extension named OrderExtension 0..* MS
-    // and 
 
 * language 1..1 MS
 * identifier 1..1 MS

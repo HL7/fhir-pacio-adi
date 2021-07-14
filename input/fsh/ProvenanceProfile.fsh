@@ -3,7 +3,7 @@ Profile: PADIProvenance
 Parent: $USCoreProvenance
 Id: PADI-Provenance
 Title: "PACIO ADI Provenance"
-Description: "[TODO] Advance Directive Interoperability Provanance baed on US Core"
+Description: "Advance Directive Interoperability Provanance based on US Core to capture, search and fetch provenance information associated with advance directive interoperability data."
 
 * agent contains
     assembler 0..1 MS

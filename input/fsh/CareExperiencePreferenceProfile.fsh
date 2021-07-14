@@ -8,6 +8,7 @@ Description: "Care Experience Preference is a clinical statement that presents t
 * status = #final
 * code MS
 * code from PADICareExperiencePreferencesVS (extensible)
+* code.text MS
 
 * value[x] 1..1 MS
 * note MS
