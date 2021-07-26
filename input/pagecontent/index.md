@@ -326,12 +326,6 @@ TODO
         <th style="padding: 10px;"><b>Based On</b></th>
     </tr>
     <tr>
-        <td style="padding: 7px;"> </td>
-        <td style="padding: 7px;">Not yet specified</td>
-        <td style="padding: 7px;"></td>
-        <td style="padding: 7px;"></td>
-    </tr>
-    <tr>
         <td style="padding: 7px;">21</td>
         <td style="padding: 7px;">ADI Consent for Portable Medical Orders</td>
         <td style="padding: 7px;"><p>This profile is used to express the patient’s or healthcare agent consent that is not bound by an encounter.</p>

@@ -47,11 +47,11 @@ menu:
     General Guidance: general_guidance.html
     Security, Privacy, and Consent: security_privacy_consent.html
   FHIR Artifacts:
-    Profiles: artifacts.html#1
-    Extensions: artifacts.html#3
-    Terminology: artifacts.html#4
+    Profiles: artifacts.html#2
+    Extensions: artifacts.html#4
+    Terminology: artifacts.html#5
     Capability Statement: CapabilityStatement-padi.html
-    Examples: artifacts.html#5
+    Examples: artifacts.html#6
 #    Search Parameters: 6_searchparameters.html
   #Examples: artifacts.html#7
   Downloads: downloads.html

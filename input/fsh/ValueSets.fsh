@@ -14,7 +14,7 @@ This ValueSet is managed at the US National Library of Medicine (NLM) Value Set 
 
 ValueSet: PADIHealthcareAgentRelationshipVS
 Title: "Healthcare Agent Relationships"
-Description: "[TODO] This value set identifies the healthcare agent or proxy roles that individuals commonly designate to empower surrogates to make medical treatment and care decisions when the individual is unable to effectively communicate with medical personnel or requires assistance with decision making.
+Description: "This value set identifies the healthcare agent or proxy roles that individuals commonly designate to empower surrogates to make medical treatment and care decisions when the individual is unable to effectively communicate with medical personnel or requires assistance with decision making.
 
 This ValueSet is managed at the US National Library of Medicine (NLM) Value Set Authority Center (VSAC): https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1046.35/expansion"
 * codes from valueset PADIHealthcareAgentOrProxyChoicesVS
@@ -130,3 +130,13 @@ RuleSet: LOINCCopyrightNotice
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc."
 
 
+ValueSet: PADINoHealthcareAgentIncludedReasonVS
+Title: "No Healthcare Agent Inculded Reason"
+Description: "Includes data absent reason concepts to express why a Healthcare Agent is not included."
+* include $HL7AdataAbsentReason#unknown
+* include $HL7AdataAbsentReason#asked-unknown
+* include $HL7AdataAbsentReason#temp-unknown
+* include $HL7AdataAbsentReason#not-asked
+* include $HL7AdataAbsentReason#asked-declined
+* include $HL7AdataAbsentReason#not-applicable
+* include $HL7AdataAbsentReason#unsupported

@@ -29,6 +29,8 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[healthcare_agent_appointment].code = $LOINC#81335-2
 * section[healthcare_agent_appointment].entry MS
 * section[healthcare_agent_appointment].entry only Reference(PADIHealthcareAgent or PADI-HealthcareAgentAuthority)
+* section[healthcare_agent_appointment].emptyReason from PADINoHealthcareAgentIncludedReasonVS (required)
+// TODO add guidance around this emptyReason element
 
 * section[gpp_personal_care_experience].title 1..1 MS
 * section[gpp_personal_care_experience].code 1..1 MS
