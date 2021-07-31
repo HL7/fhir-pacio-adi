@@ -1,16 +1,17 @@
-[//]: #  ## Patient Stories and Personas 
+
 
 ### Create in a digital form and make available for sharing and accessing 
+
 #### Create in a digital form and make available for sharing and accessing advance directive information
-<p>
+
 Angie has Sickle Cell Disease. She worries that if she contracts COVID-19 and becomes unable to communicate with medical personnel, they won't be familiar with her history and specific treatment needs. 
-</p>
-<p>
+
+
 She uses a consumer facing tool to create a digital advance directive or upload a scanned copy of her paper advance directive document. Her interoperable digital advance directive information is made available by being stored in a registry/repository/HIE/QHIN/EHR. 
-</p>
-<p>
+
+
 Angie shares her advance directive information with her medical proxy/healthcare agent and primary care physician so if either are contacted by a treating provider in an emergency, they can make her advance directive accessible to inform treatment.
-</p>
+
 <img src="./patient_story_1a.png" alt="Patient Story 1a"/>
  <br clear="all" />
 

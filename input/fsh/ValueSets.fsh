@@ -6,7 +6,7 @@ Description: "Kinds of Advance Directives
 This ValueSet is managed at the US National Library of Medicine (NLM) Value Set Authority Center (VSAC): https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.69.4/expansion"
 * include $LOINC#64298-3 "Power of attorney"
 * include $LOINC#81334-5 "Patient Personal advance care plan"
-* include $LOINC#86533-7 "Patient Living will"
+* include $LOINC#86533-7 "Patient Living will,"
 * include $LOINC#92664-2 "Power of attorney and Living will"
 * insert LOINCCopyrightNotice
 
@@ -131,7 +131,7 @@ RuleSet: LOINCCopyrightNotice
 
 
 ValueSet: PADINoHealthcareAgentIncludedReasonVS
-Title: "No Healthcare Agent Inculded Reason"
+Title: "No Healthcare Agent Included Reason"
 Description: "Includes data absent reason concepts to express why a Healthcare Agent is not included."
 * include $HL7AdataAbsentReason#unknown
 * include $HL7AdataAbsentReason#asked-unknown

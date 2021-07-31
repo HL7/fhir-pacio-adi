@@ -137,7 +137,7 @@ Usage: #example
 
 
 * status = #final
-* type = $LOINC#81334-5 "Personal Advance Care Plan Document"
+* type = $LOINC#81334-5 "Patient Personal advance care plan"
 * category = $LOINC#75320-2 "Advance Directive"
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * date = "2021-03-29T14:25:34-05:00"
@@ -248,7 +248,7 @@ Usage: #example
 
 // Line 477
 * section[gpp_for_end_of_life_or_severely_dibilitating_condition].title = "Goals, Priorities, and Preferences for End of Life or aSeverely Dibilitating "
-* section[gpp_for_end_of_life_or_severely_dibilitating_condition].code = $LOINC#81336-0 "Goals, Priorities, and Preferences Under Certain Health Conditions" //"Patient Goals, preferences, and priorities under certain health conditions"
+* section[gpp_for_end_of_life_or_severely_dibilitating_condition].code = $LOINC#81336-0 "Patient Goals, preferences, and priorities under certain health conditions" 
 * section[gpp_for_end_of_life_or_severely_dibilitating_condition].text.status = #additional
 * section[gpp_for_end_of_life_or_severely_dibilitating_condition].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p><b>My Advance Care Goals</b></p>
@@ -397,8 +397,8 @@ Usage: #example
 </div>"
 
 * patient = Reference(Example-Smith-Johnson-Patient1)
-* relationship[0] = $LOINC#75783-1 "Primary healthcare agent [Reported]"
-* relationship[1] = $HL7RoleCode#SON "natural son"
+* relationship[heatlhcare_agent_or_proxy_role] = $LOINC#75783-1 "Primary healthcare agent [Reported]"
+* relationship[personal_and_legal_relationship_role] = $HL7RoleCode#SON "natural son"
 
 * name[0].family = "Johnson"
 * name[0].given[0] = "Charles"
@@ -462,7 +462,7 @@ Description: "Example Patient Smith-Johnson Care Experience Preference (My Likes
 <p><i>I love the smell of lavender and the feeling of sunshine on my face.</i></p>
 </div>"
 * status = #final
-* code = $LOINC#81360-0 "Death arrangements [Reported]"
+* code = $LOINC#81360-0 "My likes and joys [Reported]"
 * valueString = "Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed: I love the smell of lavender and the feeling of sunshine on my face."
 
 
@@ -492,7 +492,7 @@ Description: "Example Patient Smith-Johnson Care Experience Preference (How to C
 <p><i>I want photos of my family where I can see them.</i></p>
 </div>"
 * status = #final
-* code = $LOINC#81380-8 "Goals, Preferences, and Priorities for Care Experience"
+* code = $LOINC#81380-8 "Goals, preferences, and priorities for care experience [Reported]"
 * valueString = "How to care for me: If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me: I want photos of my family where I can see them."
 
 
@@ -507,7 +507,7 @@ Description: "Example Patient Smith-Johnson Care Experience Preference (My Relig
 <p><i>Please call Father Mark if my condition warrants the services of a priest.</i></p>
 </div>"
 * status = #final
-* code = $LOINC#81364-2 "Religious Beliefs"
+* code = $LOINC#81364-2 "Religious beliefs [Reported]"
 * valueString = "If I appear to be approaching the end of my life, here are some things that I would like for my caregivers to know about my faith and my religion. Please call Father Mark if my condition warrants the services of a priest."
 
 Instance: Example-Smith-Johnson-CareExperiencePreference6
@@ -632,6 +632,7 @@ Description: "Example Patient Smith-Johnson Personal Goal 3"
 
 
 // Personal Intervention Preferences
+
 Instance: Example-Smith-Johnson-PersonalInterventionPreference1
 InstanceOf: PADIPersonalInterventionPreference
 Description: "Example Patient Smith-Johnson Personal Intervention Preference (Significant Pain or Suffering)"
@@ -717,6 +718,95 @@ Description: "Example Patient Smith-Johnson Personal Intervention Preference (De
 * valueString = "If I were to pass away: Please call Jim Houston, my lawyer, for arrangements I have already made."
 
 
+
+
+
+
+/*
+// Personal Intervention Request Preferences
+Instance: Example-Smith-Johnson-PersonalInterventionPreference1
+InstanceOf: PADIPersonalInterventionRequestPreference
+Description: "Example Patient Smith-Johnson Personal Intervention Preference (Significant Pain or Suffering)"
+
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p>If I am having significant pain or suffering,</p>
+<p><i>I would like my doctors to consult a Supportive and Palliative Care Team to help treat my physical, emotional and spiritual discomfort, and to support my family.</i></p>
+</div>"
+* status = #final
+* code = $LOINC#75776-5 "Preference on consulting a supportive and palliative care team to help treat physical, emotional, and spiritual discomfort and support family [Reported]"
+* valueString = "If I am having significant pain or suffering, I would like my doctors to consult a Supportive and Palliative Care Team to help treat my physical, emotional and spiritual discomfort, and to support my family."
+
+
+Instance: Example-Smith-Johnson-PersonalInterventionPreference2
+InstanceOf: PADIPersonalInterventionPreference
+Description: "Example Patient Smith-Johnson Personal Intervention Preference (Specific Circumstance)"
+
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>My Preferences in Specific Circumstances</b></p>
+<p>In addition to the general advance care goals provided above, below are specific treatment preferences with respect to certain specific circumstances or situations.</p>
+</div>"
+* status = #final
+* code = $LOINC#75777-3 "Information to tell doctors if my health deteriorates due to a terminal illness and I am unable to interact meaningfully with family, friends, or surroundings [Reported]"
+* valueString = "My Preferences in Specific Circumstances: In addition to the general advance care goals provided above, below are specific treatment preferences with respect to certain specific circumstances or situations."
+
+
+Instance: Example-Smith-Johnson-PersonalInterventionPreference3
+InstanceOf: PADIPersonalInterventionPreference
+Description: "Example Patient Smith-Johnson Personal Intervention Preference (Mental Illness Detioration)"
+
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p>If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings,</p>
+<p><i>I would like for them to keep trying life-sustaining treatments until my healthcare agent decides it is time to stop and such treatments and let me die gently.</i></p>
+</div>"
+* status = #final
+* code = $LOINC#75778-1 "Information to tell doctors if I have a severe, irreversible brain injury or illness and can't dress, feed, or bathe myself, or communicate my medical wishes, but can be kept alive [Reported]"
+* valueString = "If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings, I would like for them to keep trying life-sustaining treatments until my healthcare agent decides it is time to stop and such treatments and let me die gently."
+
+
+Instance: Example-Smith-Johnson-PersonalInterventionPreference4
+InstanceOf: PADIPersonalInterventionPreference
+Description: "Example Patient Smith-Johnson Personal Intervention Preference (Severe Irreversable Brain Injury or Illness)"
+
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p>Although I understand that, depending on the situation and circumstances, medical personnel may not be able to follow my wishes, here are my general thoughts on cardiopulmonary resuscitation (CPR):</p>
+<p><i>I want my healthcare agent to decide for me.</i></p>
+</div>"
+* status = #final
+* code = $LOINC#75779-9 "Thoughts on cardiopulmonary resuscitation (CPR) [Reported]"
+* valueString = "Although I understand that, depending on the situation and circumstances, medical personnel may not be able to follow my wishes, here are my general thoughts on cardiopulmonary resuscitation (CPR): I want my healthcare agent to decide for me."
+
+
+Instance: Example-Smith-Johnson-PersonalInterventionPreference5
+InstanceOf: PADIPersonalInterventionPreference
+Description: "Example Patient Smith-Johnson Personal Intervention Preference (Final Days Location)"
+
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p>If it were possible to choose, here is where I would like to spend my final days:</p>
+<p><i>At home.I would like to receive hospice care at home if possible.</i></p>
+</div>"
+* status = #final
+* code = $LOINC#75780-7 "Preferred location to spend final days if possible to choose [Reported]"
+* valueString = "If it were possible to choose, here is where I would like to spend my final days: At home.I would like to receive hospice care at home if possible."
+
+
+Instance: Example-Smith-Johnson-PersonalInterventionPreference6
+InstanceOf: PADIPersonalInterventionPreference
+Description: "Example Patient Smith-Johnson Personal Intervention Preference (Death Arrangements)"
+
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>Here are my thoughts on funeral or burial plans:</b></p>
+<p><i>If I were to pass away:</i></p>
+<p><i>Please call Jim Houston, my lawyer, for arrangements I have already made.</i></p>
+</div>"
+* status = #final
+* code = $LOINC#81356-8 "Death arrangements [Reported]"
+* valueString = "If I were to pass away: Please call Jim Houston, my lawyer, for arrangements I have already made."
 /*
 
 
@@ -940,7 +1030,7 @@ Usage: #example
 * docStatus = #final
 
 
-* type.coding[0] = $LOINC#86533-7 "Living Will"
+* type.coding[0] = $LOINC#86533-7 "Patient Living will,"
 
 
 * category.coding[0] = http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category#clinical-note "Clinical Note"

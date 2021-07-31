@@ -1,9 +1,9 @@
-## Actors
+### Actors
 <p>
 Use Cases that describe the basic information exchange transactions that support information to be shared between systems.
 </p>
 
-### Roles and Actors
+#### Roles and Actors
 
 <p>
 In health information exchange, actors of different types are at play. The following nomenclature will be utilized in this Implementation Guide. 

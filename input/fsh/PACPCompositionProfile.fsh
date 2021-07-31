@@ -42,13 +42,13 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[gpp_for_end_of_life_or_severely_dibilitating_condition].code 1..1 MS
 * section[gpp_for_end_of_life_or_severely_dibilitating_condition].code = $LOINC#81336-0
 * section[gpp_for_end_of_life_or_severely_dibilitating_condition].entry MS
-* section[gpp_for_end_of_life_or_severely_dibilitating_condition].entry only Reference(PADIPersonalInterventionPreference or PADIPersonalPrioritiesOrganizer or PADIPersonalGoal)
+* section[gpp_for_end_of_life_or_severely_dibilitating_condition].entry only Reference(PADIPersonalInterventionPreference or PADIPersonalInterventionRequestPreference or PADIPersonalPrioritiesOrganizer or PADIPersonalGoal)
 
 * section[gpp_upon_death].title 1..1 MS
 * section[gpp_upon_death].code 1..1 MS
 * section[gpp_upon_death].code = $LOINC#81337-8
 * section[gpp_upon_death].entry MS
-* section[gpp_upon_death].entry only Reference(PADIPersonalInterventionPreference or PADIPersonalPrioritiesOrganizer or PADIAutopsyObservation or PADIOrganDonationObservation or PADIPersonalGoal)
+* section[gpp_upon_death].entry only Reference(PADIPersonalInterventionPreference or PADIPersonalInterventionRequestPreference or PADIPersonalPrioritiesOrganizer or PADIAutopsyObservation or PADIOrganDonationObservation or PADIPersonalGoal)
 
 * section[administrative_information].title 1..1 MS
 * section[administrative_information].code 1..1 MS

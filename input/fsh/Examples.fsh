@@ -142,7 +142,7 @@ Usage: #example
 
 
 * status = #final
-* type = $LOINC#81334-5 "Patient Personal Advance Care Plan"
+* type = $LOINC#81334-5 "Patient Personal advance care plan"
 * category = $LOINC#75320-2 "Advance Directive"
 * subject = Reference(Example-McBee-Patient1)
 * date = "2018-08-28T08:49:58.313-04:00"
@@ -230,7 +230,7 @@ Usage: #example
 
 // Line 477
 * section[gpp_for_end_of_life_or_severely_dibilitating_condition].title = "Goals, Priorities, and Preferences for End of Life or a Severely Dibilitating Condition"
-* section[gpp_for_end_of_life_or_severely_dibilitating_condition].code = $LOINC#81336-0 "Patient Goals, Preferences, and Priorities Under Certain Health Conditions"
+* section[gpp_for_end_of_life_or_severely_dibilitating_condition].code = $LOINC#81336-0 "Patient Goals, preferences, and priorities under certain health conditions"
 * section[gpp_for_end_of_life_or_severely_dibilitating_condition].text.status = #additional
 * section[gpp_for_end_of_life_or_severely_dibilitating_condition].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p><b>My Advance Care Goals</b></p>
@@ -383,7 +383,7 @@ Usage: #example
 </div>"
 
 * patient = Reference(Example-McBee-Patient1)
-* relationship[0] = $LOINC#75783-1 "Primary Healthcare Agent [Reported]"
+* relationship[heatlhcare_agent_or_proxy_role] = $LOINC#75783-1 "Primary healthcare agent [Reported]"
 
 * name[0].family = "Sally"
 * name[0].given[0] = "Bobbins"
@@ -431,7 +431,7 @@ Description: "Example Patient McBee Care Experience Preference (My Joys)"
 <p><i>Like Bach, especially the cantatas.  St. Martin in the Fields</i></p>
 </div>"
 * status = #final
-* code = $LOINC#81360-0 "My Likes and Joys [Reported]"
+* code = $LOINC#81360-0 "My likes and joys [Reported]"
 * valueString = "Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed: Like Bach, especially the cantatas.  St. Martin in the Fields"
 
 
@@ -446,7 +446,7 @@ Description: "Example Patient McBee Care Experience Preference (How to care for 
 <p><i>I don’t like being treated like an object. I would like to be greeted like a person before working on me.</i></p>
 </div>"
 * status = #final
-* code = $LOINC#81380-8 "Goals, Preferences, and Priorities for Care Experience [Reported]"
+* code = $LOINC#81380-8 "Goals, preferences, and priorities for care experience [Reported]"
 * valueString = "How to care for me: If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me: I don’t like being treated like an object. I would like to be greeted like a person before working on me."
 
 

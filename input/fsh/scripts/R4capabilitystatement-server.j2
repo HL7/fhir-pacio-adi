@@ -270,7 +270,7 @@
 							<strong>{% if s.extension %}{{ s.extension[0].valueCode }}{% else %}undefined{% endif %}</strong>
 						</td>
 						<td>
-							<a href="{% if path_map[s.definition] %}{{path_map[s.definition]}}{% else %}http://hl7.org/fhir/R4/search.html{% endif %}">{{s.name}}</a>
+							<a href="{% if sp_url_map[s.name] %}{{sp_url_map[s.name]}}{% else %}http://hl7.org/fhir/R4/search.html{% endif %}">{{s.name}}</a>
 						</td>
 						<td>
 							{{s.type}}

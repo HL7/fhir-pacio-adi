@@ -1,23 +1,23 @@
-### General Guidance
 
 This section defines additional requirements and guidance relevant to this guide as a whole. The conformance verbs - **SHALL**, **SHOULD**, **MAY** - used in this guide are defined in [FHIR Conformance Rules](http://hl7.org/fhir/R4/conformance-rules.html).
 
-#### Claiming Conformance to a PACIO ADI Profile
+
+### Claiming Conformance to a PACIO ADI Profile
 To claim conformance to a profile in this guide, servers **SHALL**:
 
 - Be able to populate all profile data elements that have a minimum cardinality >= 1 and/or flagged as Must Support as defined by that profile’s StructureDefinition.
 - Conform to the [PACIO ADI Capability Statement](CapabilityStatement-padi.html) expectations for that profile’s type.
 <!-- TODO note about what profiles must be supported?-->
 
-#### Must Support
+### Must Support
 The following rules apply to all PACIO ADI Profile elements marked as Must Support. Must Support on any profile data element **SHALL** be interpreted as follows:
 
 
-##### Data Source System Requirements
+#### Data Source System Requirements
 
 - Data Sources Systems **SHALL** be capable of populating all data elements as part of the query results as specified by the [PACIO ADI Capability Statement](CapabilityStatement-padi.html).
 
-##### Data Consumer System Requirements
+#### Data Consumer System Requirements
 
 - Data Consumer Systems **SHALL** be capable of displaying the data elements for human use.
 - Data Consumer Systems **SHOULD** be capable of storing the data elements for other uses (such record keeping of data used for clinical use).
@@ -27,7 +27,7 @@ The following rules apply to all PACIO ADI Profile elements marked as Must Suppo
 
 Profiles by this guide, but defined in other implementation guides inherit the definition of Must Support from their respective guides.
 
-#### Must Support of CodeableConcept Text Elements
+### Must Support of CodeableConcept Text Elements
 
 The area of advance directive interoperability is relatively new and codes capturing the concepts related to advance directives are not well established or well known. This implementation guide provides several codes for expressing this information, but specifies extensible bindings to use other code systems where necessary. These code systems may also not be well-known. 
 Additionally, there are not widely accepted universal or national for standards for capturing this information. Different scopes of use and jurisdictions capture and organize this information in different ways. As such, it is important for data sources to capture this information as it is presented and for data consumer systems to be able to present it the same way to users. 
@@ -45,7 +45,7 @@ For example, using text only, the `Goal.category` element would be:
         "text": "Free text concept description"
     }
 
-#### Must Support of Resource Text Elements
+### Must Support of Resource Text Elements
 
 Due to the fact that advance directive interoperability is relatively new and there are not any widely accepted universal or national for standards for capturing this information, advance directives may be represented in many different ways. It is important that this information be communicated as it is meant and that it is received and viewable in that same manner. 
 
@@ -55,7 +55,7 @@ The `text` element of a resource is a [Narrative](http://hl7.org/fhir/R4/narrati
 
 For the purposes of this implemention guide, it is expected that most implementations will have resource instances that have additional data in the `text` than is captured in the structured data. When that is the case, the narrative `text.status` **SHALL** be `additional`.
 
-#### Document Bundles and Constituent Resources
+### Document Bundles and Constituent Resources
 
 <!--[TODO]--> 
 This guide requires the interoperability of Advance Directive Information through the use of wholly contained documents as part of its use case. While it is required that this data be made interoperable as a collection of Advance Directive Information in document Bundles, systems may decide to make use of the constituent resources as separate resources for additional uses and purposes, such as use in support of Clinical Decision Support 

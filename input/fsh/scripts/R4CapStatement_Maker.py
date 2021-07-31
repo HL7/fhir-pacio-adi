@@ -214,11 +214,12 @@ def main():
     template = env.get_template(in_file)
 
     sp_map = {sp.code: sp.type for sp in df_sp.itertuples(index=True)}
+    sp_url_map  = {sp.code: sp.rel_url for sp in df_sp.itertuples(index=True)}
     pname_map = {p.Profile: p.Name for p in df_profiles.itertuples(index=True)}
     print(pname_map)
 
     rendered = template.render(cs=cs, path_map=path_map,
-                            pname_map=pname_map, sp_map=sp_map)
+                            pname_map=pname_map, sp_map=sp_map, sp_url_map=sp_url_map)
 
     # print(HTML(rendered))
 
@@ -400,6 +401,9 @@ def get_sp(r_type, df_sp, pre, canon):
                         #sp.definition = f'{fhir_base_url}SearchParameter/Resource-{i.code.split("_")[-1]}'
                         sp.definition = f'{fhir_base_url}SearchParameter/{i.base}-{i.code.split("_")[-1]}'
 
+            if(validators.url(i.rel_url)):
+                sp.documentation = f'{i.rel_url}'
+            # sp.documentation = f'{i.rel_url}'
             sp.type = i.type
             sp.extension = get_conf(i.base_conf)
             sp_list.append(sp.as_json())
