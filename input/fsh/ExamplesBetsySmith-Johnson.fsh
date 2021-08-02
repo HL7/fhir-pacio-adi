@@ -1030,7 +1030,7 @@ Usage: #example
 * docStatus = #final
 
 
-* type.coding[0] = $LOINC#86533-7 "Patient Living will,"
+* type.coding[0] = $LOINC#86533-7 "Patient Living will"
 
 
 * category.coding[0] = http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category#clinical-note "Clinical Note"
