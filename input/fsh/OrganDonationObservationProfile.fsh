@@ -6,8 +6,13 @@ Description: "This profile is used to represent the author's thoughts about orga
 
 * text 1..1 MS
 * status = #final
+
+
+* code 1..1 MS
 * code from PADIOrganDonationVS (required)
 * code = $LOINC#75781-5
+* code.text MS
+
 * value[x] 1..1 MS
 
 * note MS

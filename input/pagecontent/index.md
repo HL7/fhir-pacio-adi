@@ -1,29 +1,88 @@
-This Advance Directive Interoperability (ADI) FHIR implementation guide (IG) is used for explaining how to represent, exchange, and verify a person’s goals, preferences and priorities for treatments and interventions regarding future medical care.
+The Advance Directive Interoperability (ADI) FHIR implementation guide (IG) explains  how to represent, exchange, and verify a person’s goals, preferences and priorities for treatments and interventions regarding future medical care.
 
 ### Introduction 
 <p>
-This ADI FHIR implementation guide (IG) describes how to use existing FHIR standards to exchange information about an individual's advance directives (e.g. a person’s advance medical treatment and intervention goals, preferences and priorities, regardless of the individual’s current health condition or physical location) regarding potential future medical care in the event the individual becomes a patient and can not speak for herself or himself.
+This ADI implementation guide (IG) describes how to use existing HL7 FHIR® standards to create, update, share, verify, and exchange information about an individual's advance medical goals, preferences, and priorities for care in the event the individual is unable to communicate this information to medical teams for himself or herself.   Advance directives in this IG includes person-authored advance directives and personal advance care plans, and patient consent information attesting to a patient authorizing a person or persons to serve as a healthcare agent or attesting to permission granted to share advance directive information with others. It also includes practitioner-authored patient instructions (obligation and  prohibitions),practitioner-authored portable medical orders for life sustaining treatments.
 </p>
 <p>
-A subsequent version of this IG will define the minimum conformance requirements for digital representation and exchange of encounter-centric patient instructions regarding medical treatment and intervention preferences and priorities that apply to a specific encounter.
+This initial version defines the minimum conformance requirements for digital representation and exchange of person-authored advance directives and personal advance care plans (e.g. a person’s advance medical treatment and intervention goals, preferences and priorities,  regarding potential future medical care in the event the individual becomes a patient and cannot speak for himself or herself. The intervention preferences may be conditional upon a specific health condition or physical situation. It also defines minimum conformance for the representation of patient consent for the appointment of a healthcare agent or agents, and consent to share advance directive information.
 </p>
 <p>
-A further subsequent version of this IG will define the minimum conformance requirements for digital composition, representation and exchange of advance medical treatment order sets used to record the life-sustaining medical treatments a patient does or does not want to receive should they require life-sustaining treatments due to a health crisis or emergency. These order sets are established by a practitioner(i.e., portable medical orders for life-sustaining treatments).
+A subsequent version of this IG will define the minimum conformance requirements for digital representation and exchange of practitioner-authored encounter-centric patient instructions regarding medical treatment and intervention preferences and priorities that are immediate and apply to the current encounter.
+</p>
+<p>
+A subsequent version of this IG will define the minimum conformance requirements for digital representation and exchange of practitioner-authored advance medical treatment orders. The representation creates a portable record of medical orders regarding specific aspects of life-sustaining medical treatments a patient does or does not want to receive, which could be performed during a potential future medical care event if the patient were to require life-sustaining medical interventions due to a health crisis or emergency. These orders include instructions commonly found in portable medical orders for life-sustaining treatments, and may include other orders such as but not limited to Do Not Hospitalize and Do Not Intubate orders.
 </p>
 
 ### Background
 <p>
-Advance directives interoperability is a complex area that involves many stakeholders. The HL7 sponsor for this FHIR IG is Patient Empowerment. HL7 Co-sponsor workgroups include Patient Care, Community Based Care and Privacy, and Orders & Observations. As part of their main goal in establishing a framework for the development of FHIR IGs to facilitate health information exchange to support clinical practice and the management, delivery and evaluation of health services, the Post-Acute Care Interoperability (PACIO) Community has adopted this FHIR IG as a project use case. The PACIO Community has a strong interest in the topic of advance directives and will support the community engagement and technical FHIR IG development needed for advance directives interoperability. PACIO is supported by MITRE, CMS, ONC and many other stakeholders (clinical, technical, and industry associations).
+Advance directive interoperability is a complex area that involves many stakeholders. The HL7 workgroup sponsor for this FHIR IG is Patient Empowerment. HL7 co-sponsor workgroups include Patient Care, Community Based Care and Privacy, and Orders & Observations. As part of PACIO’s main goal in establishing in improving care transitions, the Post-Acute Care Interoperability (PACIO) Community has adopted this project as a critical use case. The PACIO Community has a strong interest in the topic of advance directive interoperability with FHIR and will support the community engagement and technical FHIR IG development needed for advance directives interoperability. PACIO is supported by MITRE, CMS, ONC and many other stakeholders (clinical, technical, and industry associations).
 </p>
 <p>
-FHIR profiles have been developed for several existing FHIR resources to represent advance directive content such as: living will, durable medical power of attorney, personal health goals at end of life, care experience preferences, patient instructions (obligation, prohibitions, and consent), and portable medical orders for life sustaining treatments.
+FHIR profiles have been developed for several existing FHIR resources to represent advance directive content such as: living will, durable medical power of attorney, personal health goals at end of life, care experience preferences, end-of-life and emergency intervention preferences under certain circumstances, patient instructions (obligation, prohibitions, and consent), and portable medical orders for life sustaining treatments.
 </p>
-<p>
-The current version of this FHIR IG covers the use of RESTful API interactions for creating, sharing, query/access, and verification of advance directive documentation between systems. It is intended to address advance directive interoperability needs where the author is the individual that is making medical intervention goals, preferences, priorities known in advance. This IG is not intended to cover medical intervention goals, preferences, priorities for individuals who are not able to make their own wishes known.
-</p>
-<p>
-Future versions of this FHIR IG will address encounter-centric patient instructions and portable medical orders for life-sustaining treatment.
-</p>
+
+There is a very important distinction for the three types of information that will be covered in this IG.  Below is a description of each type of content that will be covered by the IG.
+
+<p>&nbsp;</p>
+<table>
+    <tr>
+        <th width="50">&nbsp;</th>
+        <th colspan="2" style="background-color:#DEEBF7; border: 1px solid black; vertical-align: middle; padding: 5px"><p style="font-size: 14px;"><b>Type I: Advance Directive Information</b></p></th>
+    </tr>
+    <tr><td width="50">&nbsp;</td>
+        <td width="25">&nbsp;</td>
+        <td>
+            <ul>
+                <li>Patient-authored information</li>
+                <li>Used as a tool for sharing an individual’s (patient’s) medical treatment and intervention goals, preferences, and priorities (GPP)</li>
+                <li>Provides guidance that a patient would want known so as to inform care planning during a potential future medical emergency, in the case where the patient is unable to communicate with caregivers and medical personnel</li>
+                <li>There is NO “contract” between the author (patient) and any other party involved in the future medical emergency that the GPP is required to be followed (i.e., no offer or acceptance, no consideration, no consequences for failure to follow the patient’s directives)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr height="15"><td colspan="3">&nbsp;</td></tr>
+    <tr>
+        <th width="50">&nbsp;</th>
+        <th colspan="2" style="background-color:#9DC3E6; border: 1px solid black; vertical-align: middle;  padding: 5px"><p style="font-size: 14px;"><b>Type II: Encounter-Centric Instructions</b></p></th>
+    </tr>
+    <tr><td width="50">&nbsp;</td>
+        <td width="25">&nbsp;</td>
+        <td>
+            <ul>
+                <li>Practitioner-authored</li>
+                <li>Instructions are related to a current, immediate episode of care</li>
+                <li>The patient, or healthcare agent, provides direct input in the creation of the instructions which document decisions that have been made about treatments that may be utilized during a medical emergency occurring within the current episode of care.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr height="15"><td colspan="3">&nbsp;</td></tr>
+    <tr>
+        <th width="50">&nbsp;</th>
+        <th colspan="2" style="background-color:#478FD1; border: 1px solid black; vertical-align: middle;  padding: 5px"><p style="font-size: 14px;"><b>Type III: Portable Medical Orders for Life-Sustaining Treatments</b></p></th>
+    </tr>
+    <tr><td width="50">&nbsp;</td>
+        <td width="25">&nbsp;</td>
+        <td>
+            <ul>
+                <li>Practitioner-authored</li>
+                <li>A set of medical orders intended to follow a patient and be available across the continuum of care</li>
+                <li>The patient, or healthcare agent, provides direct input in the creation of the instructions.</li>
+                <li>These orders are used to document a provider’s order for or prohibition of treatments that are to be utilized during a future medical emergency that would necessitate this type of treatment be necessitated and are based on a patient’s wishes for or against the treatments.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<img src="./ADI_types_overview.png" alt="ADI Types Overview" width="800"/>
+<br clear="all" />
+
+The current version of this FHIR IG covers the use of RESTful API interactions for creation, sharing, query/access, and verification of advance directive documentation between systems. It is intended to address advance directive interoperability needs for Content Type 1, where the author is the individual that is making medical intervention goals, preferences, priorities known in advance. This IG is not intended to cover medical intervention goals, preferences, priorities for individuals who are not able to make their own wishes known.
+
+
+Future versions of this FHIR IG will address encounter-centric patient instructions, Content Type 2, and portable medical orders for life-sustaining treatment, Content Type 3.
+
+<p>&nbsp;</p>
 
 ![PACIO logo](./pacio.png)
 
@@ -142,18 +201,7 @@ Systems used to create and update patient-generated advance directive informatio
 <p>Interoperable exchange of the advance directive information supports more effective sharing of advance directive information across transitions in care and enables practitioners to create person-centered care plans that align with a patient’s values, goals of care, treatment preferences, and quality of life priorities when a patient cannot communicate for themselves.</p>
 -->
 
-<!--
-### Content and Organization
-TODO
-<p>The implementation guide is organized into the following sections:</p>
-<ul>
-  <li><a href="advance_directive_use_case.html">Use Case Example</a> Describes an example of its use and provides a high-level overview of expected process flow.</li>
-  <li><a href="underlying_technologies.html">Underlying Technologies</a> Describes the different specifications this implementation guide relies on and indicates what developers should read and understand prior to implementing this specification.</li>
-  <li><a href="profile_highlights_and_guidance.html">Profile Highlights and Guidance</a> Provides a closer look at the IG profiles and guidance for constructing profile instances with examples for data exchange.</li>
-  <li><a href="security_and_data_sharing.html">Security and Data Sharing</a> Covers issues concerning security and patient information access and sharing.</li>
-  <li><a href="artifacts.html">Artifacts Summary</a> Introduces and provides links to the Capability Statement, IG Resource Profiles, and IG Extension Definitions as well as example profile instances.</li>
-</ul>
--->
+
 
 ### Dependencies
 <p>This implementation guide relies on the following other specifications:</p>
@@ -169,7 +217,7 @@ TODO
 <p>Table: ADI Profiles</p>
 <table border="1" style="border-spacing: 100px;">
     <tr>
-        <th colspan="4" style="background-color: #DEEBF7; text-align:center; padding: 10px; padding: 10px;"><b>CONTENT TYPE I: Advance Directives Information</b> <i>(in STU1 scope)</i></th>
+        <th colspan="4" style="background-color: #DEEBF7; text-align:center; padding: 10px; padding: 10px;"><b>CONTENT TYPE I: Advance Directive Information</b> <i>(in STU1 scope)</i></th>
     </tr>
     <tr style="background-color: #D9D9D9;">
         <th style="padding: 10px;" colspan="2"><b>Name of Profile to be developed</b></th>

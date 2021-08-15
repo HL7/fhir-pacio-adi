@@ -34,19 +34,21 @@ Description: "This profile is used to represent a personal preference for a type
 * intent = #proposal
 
 * doNotPerform MS
+
+
 //[TODO] Guidance that if code is not available that there would be text. Could this be a valueset that includes LOINC and Snomed examples (extensible)?
 * code 1..1 MS
+* code from PADIInterventionPreferencesVS (extensible)
 * code.text MS
 
 // [TODO] How do we handle items where there is more expected information (e.g. [Reported]). Perhaps Order detail. That needs guidance and or/binding
-* code from PADIInterventionPreferencesVS (extensible)
-* code.text MS
+
 * orderDetail MS
 * orderDetail.text MS
 
 * subject only Reference($USCorePatient)
 
-//[TODO] requires guidance
+//healthcare_agent_appointment//[TODO] requires guidance
 * asNeeded[x] MS
 * asNeededCodeableConcept.text MS
 
