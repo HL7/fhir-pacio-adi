@@ -28,15 +28,17 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[healthcare_agent_appointment].code 1..1 MS
 * section[healthcare_agent_appointment].code = $LOINC#81335-2
 * section[healthcare_agent_appointment].entry MS
-* section[healthcare_agent_appointment].entry only Reference(PADIHealthcareAgent or PADI-HealthcareAgentAuthority)
+* section[healthcare_agent_appointment].entry only Reference(PADIHealthcareAgentConsent or PADIHealthcareAgent)
 * section[healthcare_agent_appointment].emptyReason from PADINoHealthcareAgentIncludedReasonVS (required)
 // TODO add guidance around this emptyReason element
+// TODO add invariant stating that if entry exists, then agent Consent must exist
 
 * section[gpp_personal_care_experience].title 1..1 MS
 * section[gpp_personal_care_experience].code 1..1 MS
 * section[gpp_personal_care_experience].code = $LOINC#81338-6
 * section[gpp_personal_care_experience].entry MS
 * section[gpp_personal_care_experience].entry only Reference(PADICareExperiencePreference or PADIPersonalPrioritiesOrganizer or PADIPersonalGoal)
+* section[gpp_personal_care_experience] obeys HCA-section-entries
 
 * section[gpp_for_end_of_life_or_severely_dibilitating_condition].title 1..1 MS
 * section[gpp_for_end_of_life_or_severely_dibilitating_condition].code 1..1 MS
@@ -54,5 +56,10 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[administrative_information].code 1..1 MS
 * section[administrative_information].code = $LOINC#81339-4
 
-* section[administrative_information].entry only Reference(PADIPMOLSTObservation)
+* section[administrative_information].entry only Reference(PADIPMOLSTObservation or PADIDNROrderObservation)
 
+
+Invariant:  HCA-section-entries
+Description: "If healthcare agent section entry exists, then the HCA consent entry and HCA relatedPerson entry must exist"
+Expression: "entry.exists() implies (entry.where($this is Consent).exists() and entry.where($this is RelatedPerson).exists())"
+Severity:   #error

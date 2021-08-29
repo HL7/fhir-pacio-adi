@@ -17,7 +17,7 @@ Title: "Healthcare Agent Relationships"
 Description: "This value set identifies the healthcare agent or proxy roles that individuals commonly designate to empower surrogates to make medical treatment and care decisions when the individual is unable to effectively communicate with medical personnel or requires assistance with decision making.
 
 This ValueSet is managed at the US National Library of Medicine (NLM) Value Set Authority Center (VSAC): https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1046.35/expansion"
-* codes from valueset PADIHealthcareAgentOrProxyChoicesVS
+//* codes from valueset PADIHealthcareAgentOrProxyChoicesVS
 * codes from valueset PADIPersonalAndLegalRelationshipRoleTypeVS
 
 
@@ -97,6 +97,26 @@ Description: "Clinical Focus: This value set includes concepts representing an i
 * codes from valueset PADIUponDeathPreferencesVS
 * insert LOINCCopyrightNotice
 
+ValueSet: PADIHCAConsentTypeVS
+Title: "Healthcare Agent Powers or Limitations Indicator"
+Description: "Codes indicating information is regarding powers or limitations of a healthcare agent."
+* include $LOINC#81335-2 "Patient Healthcare agent" // "Healthcare agents identified with no powers or limitations specified"
+* include $LOINC#75786-4 "Powers granted to healthcare agent [Reported]" // "Healthcare agents identified with powers granted specified"
+* include $LOINC#75788-0 "Limitations placed on healthcare agent [Reported]" // "Healthcare agents identified with limitations placed specified"
+* insert LOINCCopyrightNotice
+
+
+ValueSet: PADIHCADecisionsVS
+Title: "Healthcare Agent Decisions"
+Description: "Codes indicating decisions a healtcare agent may or may not make on behalf of an individual."
+* include $LOINC#75787-2 "Advance directive - request for intubation"
+* include $LOINC#75788-0 "Advance directive - request for tube feeding"
+* include $LOINC#75789-8 "Advance directive - request for life support"
+* include $LOINC#75790-6 "Advance directive - request for IV fluid and support"
+* include $LOINC#75791-4 "Advance directive - request for antibiotics"
+* include $LOINC#75792-2 "Advance directive - request for resuscitation that differs from cardiopulmonary resuscitation"
+* insert LOINCCopyrightNotice
+
 
 
 ValueSet: PADIUponDeathPreferencesVS
@@ -109,7 +129,7 @@ Description: "This value set includes concepts representing an individual's pref
 * include $LOINC#81364-2 "Religious beliefs [Reported]"
 * include $LOINC#81365-9 "Religious affiliation contact to notify [Reported]"
 * insert LOINCCopyrightNotice
-
+/*
 ValueSet: PADIAutopsyVS
 Title: "Autopsy Thoughts"
 Description: "This value set includes the concept representing an individual's thoughts on autopsy after death."
@@ -122,13 +142,7 @@ Title: "Organ Donation"
 Description: "This value set includes the concept representing an individual's thoughts on organ and tissue donation after death."
 * include $LOINC#75781-5 "Thoughts on organ and tissue donations [Reported]"
 * insert LOINCCopyrightNotice
-
-
-
-
-RuleSet: LOINCCopyrightNotice
-* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc."
-
+*/
 
 ValueSet: PADINoHealthcareAgentIncludedReasonVS
 Title: "No Healthcare Agent Included Reason"
@@ -140,3 +154,31 @@ Description: "Includes data absent reason concepts to express why a Healthcare A
 * include $HL7AdataAbsentReason#asked-declined
 * include $HL7AdataAbsentReason#not-applicable
 * include $HL7AdataAbsentReason#unsupported
+
+// TODO SNOMED license statement
+ValueSet: PADIPresenceIndicatorVS
+Title: "Presence Indicator"
+Description: "Codes specifying whether the presence of something exists or is unknown to exist."
+* include $SNOMEDCT#373066001 "Yes"
+* include $SNOMEDCT#373067005 "No"
+* include $SNOMEDCT#373068000 "Undetermined"
+* insert SNOMEDCopyrightNotice
+
+
+ValueSet: PADIAttesterRoleTypeVS
+Title: "Attester Role"
+Description: "Codes indicating a role of an attester."
+* include $LOINC#81372-5 "Notary"
+* include $LOINC#81369-1 "First witness"
+* include $LOINC#81370-9 "Second witness"
+* include $LOINC#81371-7 "Third witness"
+* insert LOINCCopyrightNotice
+
+
+
+
+RuleSet: LOINCCopyrightNotice
+* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc."
+
+RuleSet: SNOMEDCopyrightNotice
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"

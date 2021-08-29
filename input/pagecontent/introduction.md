@@ -1,18 +1,18 @@
 [//]: #  ## Introduction
 
 <p>
-This FHIR implementation guide (IG) defines the minimum conformance requirements for representing Personal Advance Care Plan (PACP) data.  It is based on <a href="http://hl7.org/fhir/us/core/STU3.1.1/index.html">US Core 3.1.1</a>, <a href="http://hl7.org/fhir/us/ccda/STU1.1/index.html">C-CDA on FHIR 1.1.0</a>, and <a href="http://hl7.org/fhir/R4/">FHIR R4</a>.
+This FHIR implementation guide (IG) defines the minimum conformance requirements for representing Personal Advance Care Plan (PACP) data. It is based on <a href="http://hl7.org/fhir/us/core/STU3.1.1/index.html">US Core 3.1.1</a>, <a href="http://hl7.org/fhir/us/ccda/STU1.1/index.html">C-CDA on FHIR 1.1.0</a>, and <a href="http://hl7.org/fhir/R4/">FHIR R4</a>.
 </p>
 
 <p>
-Advance directives information is a complex area that involves many stakeholders. The HL7 sponsor for this IG is Patient Empowerment.  Co-sponsors include Patient Care, Community Based Care and Privacy, and Orders & Observations.  In order to reach out to a broader community, the Post-Acute Care Interoperability (PACIO) Community has adopted this IG as a project use case.  The PACIO Community has a strong interest in the topic of advance directives and will support the community engagement and technical FHIR IG development needed for advance directives interoperability. PACIO is supported by MITRE, CMS, ONC and many other stakeholders (clinical, technical, and industry associations).
+Advance directives information is a complex area that involves many stakeholders. The HL7 sponsor for this IG is Patient Empowerment. Co-sponsors include Patient Care, Community Based Care and Privacy, and Orders & Observations. In order to reach out to a broader community, the Post-Acute Care Interoperability (PACIO) Community has adopted this IG as a project use case. The PACIO Community has a strong interest in the topic of advance directives and will support the community engagement and technical FHIR IG development needed for advance directives interoperability. PACIO is supported by MITRE, CMS, ONC and many other stakeholders (clinical, technical, and industry associations).
 </p>
 
 <p>
 FHIR profiles will be developed for several existing FHIR resources to represent advance directive content such as: living will, durable medical power of attorney, personal health goals at end of life, care experience preferences, patient instructions (obligation, prohibitions, and consent), and portable medical orders for life sustaining treatments.
 </p>
 <p>
-The current version of this FHIR IG covers the use of RESTful API interactions for creating, sharing, query/access, and verification of advance directive information between systems.  It is intended to address advance directive interoperability needs where the author is the individual that is making medical intervention goals, preferences, priorities known in advance.  This IG is not intended to cover medical intervention goals, preferences, priorities for individuals who are not able to make their own wishes known.
+The current version of this FHIR IG covers the use of RESTful API interactions for creating, sharing, query/access, and verification of advance directive information between systems. It is intended to address advance directive interoperability needs where the author is the individual that is making medical intervention goals, preferences, priorities known in advance. This IG is not intended to cover medical intervention goals, preferences, priorities for individuals who are not able to make their own wishes known.
 </p>
 <p>
 Future versions of this FHIR IG will address encounter-centric patient instructions and portable medical orders for life-sustaining treatment
@@ -25,13 +25,13 @@ Systems used to create and update patient-generated advance care plans through a
 
 ### External drivers
 <p>
-The aging population receiving healthcare in skilled nursing facilities and assisted living communities have been under forced isolation to reduce the risk of contracting COVID-19.  Additionally, due to the pandemic, those requiring medical care have found themselves during a transition of care without family or personal advocate to accompany them to influence medical care or be at their side; concerns about the viral transmission potential associated with paper advance directive documents further complicate transitions of care. The impact is a sense of disempowerment, isolation, and a disconnection with the world they can no longer safely interact freely with.  
+The aging population receiving healthcare in skilled nursing facilities and assisted living communities have been under forced isolation to reduce the risk of contracting COVID-19. Additionally, due to the pandemic, those requiring medical care have found themselves during a transition of care without family or personal advocate to accompany them to influence medical care or be at their side; concerns about the viral transmission potential associated with paper advance directive documents further complicate transitions of care. The impact is a sense of disempowerment, isolation, and a disconnection with the world they can no longer safely interact freely with.
 </p>
 <p>
 Never before has the availability of verifiable digital advance directive information been so essential to delivering care.
 </p>
 <p>
-The role of technology and expanded adoption by the aging population, providers, and care teams has brought to the forefront the expectation of seamless accessibility of advance directive information.  An increased understanding exists that a person’s goals, preferences, and priorities for care are a critical element in a person-centered healthcare system.
+The role of technology and expanded adoption by the aging population, providers, and care teams has brought to the forefront the expectation of seamless accessibility of advance directive information. An increased understanding exists that a person’s goals, preferences, and priorities for care are a critical element in a person-centered healthcare system.
 </p>
 
 ###	Audience

@@ -36,7 +36,3 @@ Description: "This profile is used for the healthcare agent to consent/express a
 * provision.actor.role = $HL7RoleClass#AGNT
 * provision.actor.reference only Reference(PADIHealthcareAgent)
 
-
-
-
-

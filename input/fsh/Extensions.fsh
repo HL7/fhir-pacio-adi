@@ -5,6 +5,14 @@ Description: "Advance Directive Information VersionNumber Extension represents a
 * valueInteger 0..1 MS
 * value[x] only integer
 
+Extension: Jurisdiction
+Id: padi-jurisdiction-extension
+Title: "Juristiction"
+Description: "Jurisdiction for which content is applicable."
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1 MS
+* valueCodeableConcept from $HL7JurisdictionCodes (extensible)
+
 
 //[TODO get clarification on the extension descriptions and constraints. ]
 
@@ -72,6 +80,40 @@ Description: "The Advance Directive Information Order Extension represents order
 
 
 
+Extension: ContextualValueExtension
+Id: padi-contextualValue-extension
+Title: "Contextual Value"
+Description: "The Contextual Value Extension represents one or more values with a singular context."
+* extension contains
+	Context 1..1 and
+	Value 1..*
+* extension[Context] ^short = "Context the value is provided within"
+* extension[Context].value[x] 1..1
+* extension[Value] ^short = "Value"
+* extension[Value].value[x] 1..1
+
+
+Extension: AttestationInformationExtension
+Id: padi-attestationInformation-extension
+Title: "Attestation Information"
+Description: "The Attestation Information Extension allows for the capture of information relevant to the attestation."
+* extension contains
+	AttesterRole 1..1 and
+    AttestationStatement 0..1 and
+    Signature 0..1
+* extension[AttesterRole] ^short = "Attester Role"
+* extension[AttesterRole].value[x] 1..1 MS
+* extension[AttesterRole].value[x] only CodeableConcept
+* extension[AttesterRole].valueCodeableConcept from PADIAttesterRoleTypeVS (extensible)
+* extension[AttestationStatement] ^short = "Attestation Statement"
+* extension[AttestationStatement].value[x] 1..1 MS
+* extension[AttestationStatement].value[x] only string or markdown
+* extension[Signature] ^short = "Attester Signature with Date"
+* extension[Signature].value[x] 1..1 MS
+* extension[Signature].value[x] only Signature
+
+// TODO Could add Invariant for Signature.type matching the attesterRole
+// TODO Notary Expiration Date?
 
 /*
 

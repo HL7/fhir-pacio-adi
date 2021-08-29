@@ -9,9 +9,11 @@ Description: "This profile is used to represent the author's thoughts about orga
 
 
 * code 1..1 MS
-* code from PADIOrganDonationVS (required)
+//* code from PADIOrganDonationVS (required)
 * code = $LOINC#75781-5
 * code.text MS
+* subject 1..1 MS
+* subject only Reference($USCorePatient)
 
 * value[x] 1..1 MS
 

@@ -24,6 +24,7 @@ Description: "This abstract profile defines constraints that represent common ad
 
 * extension contains
     padi-versionNumber-extension named VersionNumber 0..1 MS and
+    padi-jurisdiction-extension named Jurisdiction 0..* and 
     padi-dataEnterer-extension named DataEntererExtension 0..1 MS and
     padi-informant-extension named InformatExtension 0..* MS and
     padi-informationRecipient-extension named InformationRecipientExtension 0..* MS and
@@ -38,7 +39,7 @@ Description: "This abstract profile defines constraints that represent common ad
 * type from PADIAdvanceDirectiveCategoriesVS (extensible)
 
 * category 1..1 MS
-* subject MS
+* subject 1..1 MS
 * subject only Reference($USCorePatient)
 * encounter MS
 * encounter only Reference($USCoreEncounter)
@@ -47,6 +48,9 @@ Description: "This abstract profile defines constraints that represent common ad
 * author only Reference($USCorePractitioner or $USCorePractitionerRole or PractitionerRole or $USCorePatient or Device or RelatedPerson)
 * title MS
 * confidentiality 0..0
+
+* attester.extension contains
+    padi-attestationInformation-extension named AttestationInformationExtension 1..1
 
 * attester ^slicing.discriminator.type = #value 
 * attester ^slicing.discriminator.path = "mode"

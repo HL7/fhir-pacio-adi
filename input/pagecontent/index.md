@@ -2,7 +2,7 @@ The Advance Directive Interoperability (ADI) FHIR implementation guide (IG) expl
 
 ### Introduction 
 <p>
-This ADI implementation guide (IG) describes how to use existing HL7 FHIR® standards to create, update, share, verify, and exchange information about an individual's advance medical goals, preferences, and priorities for care in the event the individual is unable to communicate this information to medical teams for himself or herself.   Advance directives in this IG includes person-authored advance directives and personal advance care plans, and patient consent information attesting to a patient authorizing a person or persons to serve as a healthcare agent or attesting to permission granted to share advance directive information with others. It also includes practitioner-authored patient instructions (obligation and  prohibitions),practitioner-authored portable medical orders for life sustaining treatments.
+This ADI implementation guide (IG) describes how to use existing HL7 FHIR® standards to create, update, share, verify, and exchange information about an individual's advance medical goals, preferences, and priorities for care in the event the individual is unable to communicate this information to medical teams for himself or herself. Advance directives in this IG includes person-authored advance directives and personal advance care plans, and patient consent information attesting to a patient authorizing a person or persons to serve as a healthcare agent or attesting to permission granted to share advance directive information with others. It also includes practitioner-authored patient instructions (obligation and  prohibitions),practitioner-authored portable medical orders for life sustaining treatments.
 </p>
 <p>
 This initial version defines the minimum conformance requirements for digital representation and exchange of person-authored advance directives and personal advance care plans (e.g. a person’s advance medical treatment and intervention goals, preferences and priorities,  regarding potential future medical care in the event the individual becomes a patient and cannot speak for himself or herself. The intervention preferences may be conditional upon a specific health condition or physical situation. It also defines minimum conformance for the representation of patient consent for the appointment of a healthcare agent or agents, and consent to share advance directive information.
@@ -22,7 +22,7 @@ Advance directive interoperability is a complex area that involves many stakehol
 FHIR profiles have been developed for several existing FHIR resources to represent advance directive content such as: living will, durable medical power of attorney, personal health goals at end of life, care experience preferences, end-of-life and emergency intervention preferences under certain circumstances, patient instructions (obligation, prohibitions, and consent), and portable medical orders for life sustaining treatments.
 </p>
 
-There is a very important distinction for the three types of information that will be covered in this IG.  Below is a description of each type of content that will be covered by the IG.
+There is a very important distinction for the three types of information that will be covered in this IG. Below is a description of each type of content that will be covered by the IG.
 
 <p>&nbsp;</p>
 <table>
@@ -126,7 +126,7 @@ This Guide is divided into several pages which are listed at the top of each pag
     <li>Guidance: These pages provide overall guidance in using the profiles and transactions defined in this guide by detailing the business case, patient stories and personas and use cases.
         <ul>
             <li>Business Case: A business case summarizes the scope of information exchange covered by the IG.</li>
-            <li>Patient Stories and Personas: Patient stories and personas give context to the data exchange standards detailed in the technical areas of the IG.  They allow the non-technical reader to envision situations in which the IGs provisions would apply, and ensure that development aspects of conforming to the IG meet the intended needs for exchange of this type of information.</li>
+            <li>Patient Stories and Personas: Patient stories and personas give context to the data exchange standards detailed in the technical areas of the IG. They allow the non-technical reader to envision situations in which the IGs provisions would apply, and ensure that development aspects of conforming to the IG meet the intended needs for exchange of this type of information.</li>
             <li>Use Cases: A use case is a list of technical actions or event steps typically defining the interactions between a role and a system to achieve a goal. The actor can be a human or other external system. Technical scenarios that describe systems interactions between technical actors to implement the business case.</li>
             <li>Security: General security requirements and recommendations for HL7 FHIR® ADI Implementation Guide actors.TBD: Security information will need to be described as needed.</li>
             <li>About ADI Examples: Descriptive examples that demonstrate the use of ADI profiles and exchange mechanisms.</li>
@@ -237,9 +237,9 @@ Systems used to create and update patient-generated advance directive informatio
         <td style="padding: 7px;"><p>This profile defines constraints that represent common administrative and demographic concepts for advance directives information used in US Realm clinical documents.</p>
         <p>Known issues:
             <ul>
-                <li>Currently extension:data_enterer_extension only allows reference to US Core Practitioner Profile | US Core PractitionerRole Profile.  Need to add RelatedPerson to CDA on FHIR of use.</li>
-                <li>Currently extension:information_recipient_extension allows reference to US Core Practitioner Profile | US Core PractitionerRole Profile | US Core Patient Profile.  Need to add  RelatedPerson and US Core Organization.</li>
-                <li>Currently attester:legal_attester.party--> allows reference to US Core Practitioner Profile | US Core PractitionerRole Profile.  Need to add  RelatedPerson and US Core Organization.</li>
+                <li>Currently extension:data_enterer_extension only allows reference to US Core Practitioner Profile | US Core PractitionerRole Profile. Need to add RelatedPerson to CDA on FHIR of use.</li>
+                <li>Currently extension:information_recipient_extension allows reference to US Core Practitioner Profile | US Core PractitionerRole Profile | US Core Patient Profile. Need to add  RelatedPerson and US Core Organization.</li>
+                <li>Currently attester:legal_attester.party--> allows reference to US Core Practitioner Profile | US Core PractitionerRole Profile. Need to add  RelatedPerson and US Core Organization.</li>
             </ul>
         </p>
         <p><i>Development status: Initial draft available. Initial Mapping complete.</i></p></td>
@@ -261,8 +261,8 @@ Systems used to create and update patient-generated advance directive informatio
     </tr>
     <tr>    
         <td style="padding: 7px;">5</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-HealthcareAgentAuthority.html">ADI Healthcare Agent Authority</a></td>
-        <td style="padding: 7px;"><p>This profile is used to represent a power or limitation granted to a person acting as a healthcare agent.</p>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-HealthcareAgentConsent.html">ADI Healthcare Agent Consent</a></td>
+        <td style="padding: 7px;"><p>This profile is used to represent a consent for a healthcare agent and power or limitation granted to a person acting as a healthcare agent.</p>
         <p><i>Development status: Not started.</i></p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/consent.html">Consent</a></td>
     </tr>

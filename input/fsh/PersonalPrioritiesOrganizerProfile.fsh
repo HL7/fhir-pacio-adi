@@ -13,6 +13,9 @@ Description: "Personal Priorities Organizer is used to represent a set of person
 //* code from $LOINC (extensible)
 * code = $LOINC#81340-2 // CONF:4445-33374
 
+* subject 1..1 MS
+* subject only Reference($USCorePatient)
+
 * orderedBy 1..1 MS
 * orderedBy = http://terminology.hl7.org/CodeSystem/list-order#priority
 

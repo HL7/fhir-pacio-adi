@@ -14,6 +14,10 @@ Description: "This profile is used to represent a personal preference for a type
 * code.text MS
 
 * value[x] 1..1 MS
+* value[x].extension contains
+    padi-contextualValue-extension named ContextualValueExtension 0..1
+* value[x].extension[padi-contextualValue-extension] ^comment = "Contextual Value contains the components that make up the Actual Value for use by systems for rendering or other purposes. It must not include additional information."
+
 * note MS
 
 
@@ -46,6 +50,7 @@ Description: "This profile is used to represent a personal preference for a type
 * orderDetail MS
 * orderDetail.text MS
 
+* subject 1..1 MS
 * subject only Reference($USCorePatient)
 
 //healthcare_agent_appointment//[TODO] requires guidance

@@ -11,9 +11,15 @@ Description: "Care Experience Preference is a clinical statement that presents t
 * code 1..1 MS
 * code from PADICareExperiencePreferencesVS (extensible)
 * code.text MS
-
+* subject 1..1 MS
+* subject only Reference($USCorePatient)
 
 * value[x] 1..1 MS
+* value[x].extension contains
+    padi-contextualValue-extension named ContextualValueExtension 0..1
+
+* value[x].extension[padi-contextualValue-extension] ^comment = "Contextual Value contains the components that make up the Actual Value for use by systems for rendering or other purposes. It must not include additional information."
+
 * note MS
 
 
