@@ -1,7 +1,7 @@
 [//]: #  ## Introduction
 
 <p>
-This FHIR implementation guide (IG) defines the minimum conformance requirements for representing Personal Advance Care Plan (PACP) data. It is based on <a href="http://hl7.org/fhir/us/core/STU3.1.1/index.html">US Core 3.1.1</a>, <a href="http://hl7.org/fhir/us/ccda/STU1.1/index.html">C-CDA on FHIR 1.1.0</a>, and <a href="http://hl7.org/fhir/R4/">FHIR R4</a>.
+This FHIR implementation guide (IG) defines the minimum conformance requirements for representing Personal Advance Care Plan (PACP) data. It is based on <a href="http://hl7.org/fhir/us/core/STU4/">US Core 4.0.0</a>, <a href="http://hl7.org/fhir/us/ccda/STU1.1/index.html">C-CDA on FHIR 1.1.0</a>, and <a href="http://hl7.org/fhir/R4/">FHIR R4</a>.
 </p>
 
 <p>

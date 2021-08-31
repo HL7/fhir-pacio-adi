@@ -207,7 +207,7 @@ Systems used to create and update patient-generated advance directive informatio
 <p>This implementation guide relies on the following other specifications:</p>
 <ul>
   <li><a href="http://hl7.org/fhir/R4/">FHIR R4</a> - The version of FHIR used as the base for this implementation guide.</li>
-  <li><a href="http://hl7.org/fhir/us/core/STU3.1.1/index.html">US Core STU3.1</a> - The version of US Core based on FHIR R4.</li>
+  <li><a href="http://hl7.org/fhir/us/core/STU4/index.html">US Core STU4.0.0</a> - The version of US Core based on FHIR R4.</li>
   <!--<li><a href="http://hl7.org/fhir/us/ccda/STU1.1/index.html">C-CDA on FHIR STU1.1</a> - The version of C-CDA on FHIR based on FHIR R4.</li>-->
 </ul>
 
@@ -229,7 +229,7 @@ Systems used to create and update patient-generated advance directive informatio
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-DocumentReference.html">ADI Document Reference</a></td>
         <td style="padding: 7px;"><p>This profile defines constraints that represent the information needed to register an advance directive information document on a FHIR server.</p>
         <p><i>Development status: Initial draft available. Mapping in progress.</i></p></td>
-        <td style="padding: 7px;"><a href="http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-documentreference.html">US Core DocumentReference</a></td>
+        <td style="padding: 7px;"><a href="http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-documentreference.html">US Core DocumentReference</a></td>
     </tr>
     <tr>
         <td style="padding: 7px;">2</td>
@@ -320,7 +320,7 @@ Systems used to create and update patient-generated advance directive informatio
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-Provenance.html">ADI Provenance</a></td>
         <td style="padding: 7px;"><p>Advance Directive Interoperability Provanance based on US Core to capture, search and fetch provenance information associated with advance directive interoperability data.</p>
         <p><i>Development status: Mapping in Progress.</i></p></td>
-        <td style="padding: 7px;"><a href="http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-provenance.html">US Core Provenance</a></td>
+        <td style="padding: 7px;"><a href="http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-provenance.html">US Core Provenance</a></td>
     </tr>
     <tr>
         <th colspan="4" style="background-color: #9DC3E6; text-align:center; padding: 10px; padding: 10px;"><b>CONTENT TYPE II: Encounter-Centric Patient Instructions</b> <i>(after STU1)</i></th>
@@ -363,7 +363,7 @@ Systems used to create and update patient-generated advance directive informatio
         <td style="padding: 7px;"><a href="#">ADI Advance Care Planning Intervention</a></td>
         <td style="padding: 7px;"><p>This profile is used to record a planned intervention that will involve reviewing and verifying a person’s directives, or will involve educating and supporting a person on establishing or modifying his or her advance directives.</p>
         <p><i>Development status: planned post STU1</i></p></td>
-        <td style="padding: 7px;"><a href="http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-procedure.html">US Core Procedure</a></td>
+        <td style="padding: 7px;"><a href="http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-procedure.html">US Core Procedure</a></td>
     </tr>
     <tr>
         <th colspan="4" style="background-color: #478FD1; text-align:center; padding: 10px; padding: 10px;"><b>CONTENT Type III: P/MOLST</b> <i>(after STU1)</i></th>

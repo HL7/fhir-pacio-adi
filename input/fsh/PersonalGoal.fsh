@@ -1,18 +1,17 @@
-Profile: PADIPersonalGoal
+Profile: PADIGoal
 Parent: $USCoreGoal
-Id: PADI-PersonalGoal
-Title: "ADI Personal Goal"
-Description: "This profile is a statement that presents the author's personal health and treatment goals that are pertinent when planning his or her care."
+Id: PADI-Goal
+Title: "ADI Goal"
+Description: "This profile defines the base requirements for all ADI Goals."
+
+* ^abstract = true 
 
 * obeys goal-subject-expressedby
-//[TODO]
-//* ^purpose = "here is a description in markdown"
+
 
 * text 1..1 MS
 
-//* lifeCycleStatus = #accepted
 * category 1..1 MS
-* category from PADIHealthGoalsVS (extensible)
 * category.text MS
 * description 1..1 MS
 * description.extension contains
@@ -30,6 +29,17 @@ Description: "This profile is a statement that presents the author's personal he
 
 * note MS
 
+
+
+
+
+Profile: PADIPersonalGoal
+Parent: PADIGoal
+Id: PADI-PersonalGoal
+Title: "ADI Personal Goal"
+Description: "This profile is a statement that presents the author's personal health and treatment goals that are pertinent when planning his or her care."
+
+* category from PADIHealthGoalsVS (extensible)
 
 
 

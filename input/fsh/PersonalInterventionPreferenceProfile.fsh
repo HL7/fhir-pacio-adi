@@ -1,6 +1,12 @@
+Profile: PADIPersonalInterventionPreference
+Parent: PADIGoal
+Id: PADI-PersonalInterventionPreference
+Title: "Personal Intervention Preference"
+Description: "This profile is used to represent a personal preference for a type of medical intervention (treatment) request under certain conditions."
 
+* category from PADIInterventionPreferencesVS (extensible)
 
-
+/*
 Profile: PADIPersonalInterventionPreference
 Parent: Observation
 Id: PADI-PersonalInterventionPreference
@@ -21,10 +27,10 @@ Description: "This profile is used to represent a personal preference for a type
 * note MS
 
 
+*/
 
 
-
-
+/*
 Profile: PADIPersonalInterventionRequestPreference
 Parent: ServiceRequest
 Id: PADI-PersonalInterventionRequestPreference
@@ -66,3 +72,5 @@ Description: "This profile is used to represent a personal preference for a type
 * supportingInfo MS
 
 * note MS
+
+*/
