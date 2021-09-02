@@ -16,7 +16,7 @@ Table: ADI Profiles
         <td style="padding: 7px;"><a href="#">ADI Document Reference</a></td>
         <td style="padding: 7px;"><p>This profile defines constraints that represent the information needed to register an advance directive information document on a FHIR server.</p>
         <p><i>Development status: Initial draft available. Mapping in progress.</i></p></td>
-        <td style="padding: 7px;"><a href="http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-documentreference.html">US Core DocumentReference</a></td>
+        <td style="padding: 7px;"><a href="https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-documentreference.html">US Core DocumentReference</a></td>
     </tr>
     <tr>
         <td style="padding: 7px;">2</td>
@@ -100,7 +100,7 @@ Table: ADI Profiles
         <td style="padding: 7px;">ADI Provenance</td>
         <td style="padding: 7px;"><p>[TODO] This profile is used for tracking the provenance of the Advance Directive resources.</p>
         <p><i>Development status: Not started.</i></p></td>
-        <td style="padding: 7px;"><a href="http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-provenance.html">US Core Provenance</a></td>
+        <td style="padding: 7px;"><a href="https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-provenance.html">US Core Provenance</a></td>
     </tr>
     <tr>
         <th colspan="4" style="background-color: #FFF2CC; text-align:center; padding: 10px; padding: 10px;"><b>CONTENT TYPE II: Encounter-Centric Patient Instructions</b> <i>(after STU1)</i></th>
@@ -143,7 +143,7 @@ Table: ADI Profiles
         <td style="padding: 7px;"><a href="#">ADI Advance Care Planning Intervention</a></td>
         <td style="padding: 7px;"><p>The Advance Care Planning Intervention template is used to record a planned intervention that will involve reviewing and verifying a person’s directives, or will involve educating and supporting a person on establishing or modifying his or her advance directives.</p>
         <p><i>Development status: planned post STU1</i></p></td>
-        <td style="padding: 7px;"><a href="http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-procedure.html">US Core Procedure</a></td>
+        <td style="padding: 7px;"><a href="https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-procedure.html">US Core Procedure</a></td>
     </tr>
     <tr>
         <th colspan="4" style="background-color: #FFF2CC; text-align:center; padding: 10px; padding: 10px;"><b>CONTENT Type III: P/MOLST</b> <i>(after STU1)</i></th>

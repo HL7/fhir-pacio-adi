@@ -30,6 +30,7 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[healthcare_agent_appointment].entry MS
 * section[healthcare_agent_appointment].entry only Reference(PADIHealthcareAgentConsent or PADIHealthcareAgent)
 * section[healthcare_agent_appointment].emptyReason from PADINoHealthcareAgentIncludedReasonVS (required)
+* section[healthcare_agent_appointment] obeys HCA-section-entries
 // TODO add guidance around this emptyReason element
 // TODO add invariant stating that if entry exists, then agent Consent must exist
 
@@ -39,7 +40,7 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[healthcare_agent_appointment].orderedBy MS
 * section[gpp_personal_care_experience].entry MS
 * section[gpp_personal_care_experience].entry only Reference(PADICareExperiencePreference or PADIPersonalPrioritiesOrganizer or PADIPersonalGoal)
-* section[gpp_personal_care_experience] obeys HCA-section-entries
+
 
 * section[gpp_for_certain_health_condition].title 1..1 MS
 * section[gpp_for_certain_health_condition].code 1..1 MS
@@ -61,8 +62,35 @@ Description: "This profile encompasses information that makes up the author’s 
 
 * section[administrative_information].entry only Reference(PADIPMOLSTObservation or PADIDNROrderObservation)
 
+/*
+Invariant:  HCA-section-entries0
+Description: "0 - If healthcare agent section entry exists, then the HCA consent entry and HCA relatedPerson entry must exist"
+//Expression: "entry.exists() implies (entry.where($this is Consent).exists() and entry.where($this is RelatedPerson).exists())"
+Expression: "entry.exists().not()"
+//Expression: "entry.resolve() is Consent" fail
+Severity:   #error
+
+
+
+Invariant:  HCA-section-entries1
+Description: "1 -If healthcare agent section entry exists, then the HCA consent entry and HCA relatedPerson entry must exist"
+//Expression: "entry.exists() implies (entry.where($this is Consent).exists() and entry.where($this is RelatedPerson).exists())"
+Expression: "entry.where($this.resolve() is Consent)"
+Severity:   #error
+
+
+
+Invariant:  HCA-section-entries2
+Description: "2 - If healthcare agent section entry exists, then the HCA consent entry and HCA relatedPerson entry must exist"
+//Expression: "entry.exists() implies (entry.where($this is Consent).exists() and entry.where($this is RelatedPerson).exists())"
+Expression: "entry.where($this.resolve() is relatedPerson)"
+Severity:   #error
+
+*/
 
 Invariant:  HCA-section-entries
 Description: "If healthcare agent section entry exists, then the HCA consent entry and HCA relatedPerson entry must exist"
-Expression: "entry.exists() implies (entry.where($this is Consent).exists() and entry.where($this is RelatedPerson).exists())"
+//Expression: "entry.exists() implies (entry.where($this is Consent).exists() and entry.where($this is RelatedPerson).exists())"
+Expression: "entry.exists().not() or (entry.where($this.resolve() is Consent).exists() and entry.where($this.resolve() is relatedPerson).exists())"
 Severity:   #error
+

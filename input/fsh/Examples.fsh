@@ -69,10 +69,10 @@ Usage: #example
 * entry[=].resource = Example-McBee-AutopsyObservation1
 * entry[+].fullUrl = "http://www.example.org/fhir/Organization/Example-McBee-OrganizationCustodian1"
 * entry[=].resource = Example-McBee-OrganizationCustodian1
-* entry[+].fullUrl = "http://www.example.org/fhir/Organization/Example-McBee-OrganizationAssembler1"
-* entry[=].resource = Example-McBee-OrganizationAssembler1
-* entry[+].fullUrl = "http://www.example.org/fhir/Provenance/Example-McBee-PACPProvenance1"
-* entry[=].resource = Example-McBee-PACPProvenance1
+//* entry[+].fullUrl = "http://www.example.org/fhir/Organization/Example-McBee-OrganizationAssembler1"
+//* entry[=].resource = Example-McBee-OrganizationAssembler1
+//* entry[+].fullUrl = "http://www.example.org/fhir/Provenance/Example-McBee-PACPProvenance1"
+//* entry[=].resource = Example-McBee-PACPProvenance1
 
 
 

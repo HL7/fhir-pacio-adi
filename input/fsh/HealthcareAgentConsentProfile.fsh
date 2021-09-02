@@ -85,5 +85,5 @@ Description: "This profile is used to represent a consent for a healthcare agent
 
 Invariant:  HCA-authority-scope-provisionType
 Description: "Scope indicates powers granted and provision type is permit or scope indicates limitations placed and provision type is deny or scope indicates no powers/limitations and no provisions type and no action exist"
-Expression: "(scope.code.coding.code = '75786-4' and provision.type = 'permit') or (scope.code.coding.code = '75788-0' and provision.type = 'deny') or (scope.code.coding.code = '75788-0' and provision.type.exists().not() and provision.action.exists().not() and provision.provision.exists().not())"
+Expression: "(scope.coding.code = '75786-4' and provision.type = 'permit') or (scope.coding.code = '81346-9' and provision.type = 'deny') or (scope.coding.code = '81335-2' and provision.type.exists().not() and provision.action.exists().not() and provision.provision.exists().not())"
 Severity:   #error

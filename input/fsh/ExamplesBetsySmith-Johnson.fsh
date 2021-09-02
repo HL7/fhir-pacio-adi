@@ -1,5 +1,3 @@
-// TODO remove top level section
-
 // Bundle Examples
 Instance: Example-Smith-Johnson-Bundle1
 InstanceOf: Bundle
@@ -81,10 +79,10 @@ Usage: #example
 * entry[+].fullUrl = "http://www.example.org/fhir/Organization/Example-Smith-Johnson-OrganizationCustodian1"
 * entry[=].resource = Example-Smith-Johnson-OrganizationCustodian1
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Organization/Example-Smith-Johnson-OrganizationAssembler1"
-* entry[=].resource = Example-Smith-Johnson-OrganizationAssembler1
-* entry[+].fullUrl = "http://www.example.org/fhir/Provenance/Example-Smith-Johnson-PACPProvenance1"
-* entry[=].resource = Example-Smith-Johnson-PACPProvenance1
+//* entry[+].fullUrl = "http://www.example.org/fhir/Organization/Example-Smith-Johnson-OrganizationAssembler1"
+//* entry[=].resource = Example-Smith-Johnson-OrganizationAssembler1
+//* entry[+].fullUrl = "http://www.example.org/fhir/Provenance/Example-Smith-Johnson-PACPProvenance1"
+//* entry[=].resource = Example-Smith-Johnson-PACPProvenance1
 
 
 
@@ -194,6 +192,11 @@ Usage: #example
 <p><i>If at some point in the future I am declared incompetent,</i></p>
 <p><i>I DO NOT want to be allowed to override these preferences. I want my doctors to follow the preferences I express in this document.</i></p>
 <p>Unless I have stated otherwise somewhere else in this uADD™, I understand that my healthcare agent may reconsider my medical treatment choices expressed above in light of my other instructions contained elsewhere in this uADD™ or new medical information.</p>
+
+<p><b>Primary Healthcare Agent Consent</b></p>
+
+<p><b>status</b>: active</p><p><b>scope</b>: <span title='Codes: {http://loinc.org 75786-4}'>Powers granted to healthcare agent [Reported]</span></p><p><b>category</b>: <span title='Codes: {http://terminology.hl7.org/CodeSystem/consentcategorycodes acd}'>Advance Directive</span></p><p><b>patient</b>: <a href='Patient-Example-Smith-Johnson-Patient1.html'>Betsy Smith-Johnson</a> ; BetsySJ@example.com; gender: female; birthDate: 1950-11-15</p><p><b>dateTime</b>: 2020-08-03</p><h3>Policies</h3><table class='grid'><tr><td>-</td><td><b>Authority</b></td><td><b>Uri</b></td></tr><tr><td>*</td><td><a href='https://www.michigan.gov/'>https://www.michigan.gov/</a></td><td><a href='http://www.legislature.mi.gov/(S(tpnclc1ofteerx2x2dppcmdz))/mileg.aspx?page=GetObject&amp;objectname=mcl-386-1998-V-5'>http://www.legislature.mi.gov/(S(tpnclc1ofteerx2x2dppcmdz))/mileg.aspx?page=GetObject&amp;objectname=mcl-386-1998-V-5</a></td></tr></table><blockquote><p><b>provision</b></p><p><b>type</b>: permit</p><blockquote><p><b>actor</b></p><p><b>role</b>: <span title='Codes: {http://loinc.org 75783-1}'>Primary healthcare agent [Reported]</span></p><p><b>reference</b>: <a href='RelatedPerson-Example-Smith-Johnson-HealthcareAgent1.html'><span title='Codes: {http://terminology.hl7.org/CodeSystem/v3-RoleCode SON}'>natural son</span>; Charles Johnson ; CharlesSJ@example.com</a></p></blockquote><blockquote><p><b>actor</b></p><p><b>role</b>: <span title='Codes: {http://loinc.org 75784-9}'>First alternate healthcare agent [Reported]</span></p><p><b>reference</b>: <a href='RelatedPerson-Example-Smith-Johnson-HealthcareAgent2.html'><span title='Codes: {http://loinc.org 75784-9}'>First alternate healthcare agent [Reported]</span>, <span title='Codes: {http://terminology.hl7.org/CodeSystem/v3-RoleCode DAU}'>natural daughter</span>; Debra Johnson ; DebraSJ@example.com</a></p></blockquote><p><b>action</b>: <span title='Codes: {http://loinc.org 75787-2}'>Advance directive - request for intubation</span>, <span title='Codes: {http://loinc.org 75788-0}'>Advance directive - request for tube feeding</span>, <span title='Codes: {http://loinc.org 75789-8}'>Advance directive - request for life support</span>, <span title='Codes: {http://loinc.org 75790-6}'>Advance directive - request for IV fluid and support</span>, <span title='Codes: {http://loinc.org 75791-4}'>Advance directive - request for antibiotics</span>, <span title='Codes: {http://loinc.org 75792-2}'>Advance directive - request for resuscitation that differs from cardiopulmonary resuscitation</span></p><p><b>purpose</b>: <span title='{http://terminology.hl7.org/CodeSystem/v3-ActReason PWATRNY}'>power of attorney</span></p></blockquote>
+
 </div>"
 
 * section[healthcare_agent_appointment].entry[+] = Reference(Example-Smith-Johnson-HealthcareAgent1)
@@ -261,38 +264,18 @@ Usage: #example
 * section[gpp_for_certain_health_condition].code = $LOINC#81336-0 "Patient Goals, preferences, and priorities under certain health conditions" 
 * section[gpp_for_certain_health_condition].text.status = #additional
 * section[gpp_for_certain_health_condition].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-<p><b>My Advance Care Goals</b></p>
-<p>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:</p>
-<ol>
-	<li><i>Avoiding prolonged dependence on machines</i></li>
-	<li><i>Not being a physical burden to my family</i></li>
-	<li><i>Dying at home</i></li>
-</ol>
-<p> </p>
-<p>Here are some thoughts that I would like for my medical care team and my healthcare agent(s) to know about the role that religion, faith or spirituality play in my life:</p>
-<p><i>I am Catholic, please call Father Mark at Saint Catherine's on Main Street.</i></p>
-<p> </p>
-<p>If I am having significant pain or suffering,</p>
-<p><i>I would like my doctors to consult a Supportive and Palliative Care Team to help treat my physical, emotional and spiritual discomfort, and to support my family.</i></p>
-<p> </p>
-<p><b>My Preferences in Specific Circumstances</b></p>
-<p>In addition to the general advance care goals provided above, below are specific treatment preferences with respect to certain specific circumstances or situations.</p>
-<p> </p>
-<p>If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings,</p>
-<p><i>I would like for them to keep trying life-sustaining treatments until my healthcare agent decides it is time to stop and such treatments and let me die gently.</i></p>
-<p> </p>
-<p>If I have a severe, irreversible brain injury or illness and can’t dress, feed, or bathe myself, or communicate my medical wishes, but doctors can keep me alive in this condition for a long period of time,</p>
-<p><i>I would like for them to keep trying life-sustaining treatments until my healthcare agent decides it is time to stop and such treatments and let me die gently.</i></p>
-<p> </p>
-<p>Although I understand that, depending on the situation and circumstances, medical personnel may not be able to follow my wishes, here are my general thoughts on cardiopulmonary resuscitation (CPR):</p>
-<p><i>I want my healthcare agent to decide for me.</i></p>
-<p> </p>
-<p><b>Other Instructions</b></p>
-<p> </p>
-<p>If it were possible to choose, here is where I would like to spend my final days:</p>
-<p><i>At home.I would like to receive hospice care at home if possible.</i></p>
-<p> </p>
-<p>I understand that, in certain jurisdictions, if I have been diagnosed as pregnant and that diagnosis is known to my attending physician, medical treatment providers may refuse to follow my directives and provide life-sustaining treatment including artificially administered nutrition and hydration, as well as CPR and other resuscitation measures.</p>
+<p><b>Care Plan 1</b></p>
+
+<p><b>status</b>: active</p><p><b>intent</b>: proposal</p><p><b>category</b>: <span title='Codes: {http://snomed.info/sct 736366004}'>Advance care plan</span></p><p><b>subject</b>: <a href='Patient-Example-Smith-Johnson-Patient1.html'>Betsy Smith-Johnson</a> ; BetsySJ@example.com; gender: female; birthDate: 1950-11-15</p><p><b>addresses</b>: </p><ul><li><span>Unconscious, in a coma, or in a persistent vegetative state with little or no chance of recovery</span></li><li><span>Persistent vegetative state (SNOMED CT 24473007)</span></li><li><span>Irreversible coma (SNOMED CT 73453007)</span></li></ul><p><b>goal</b>: </p><ul><li><a href='Goal-Example-Smith-Johnson-PersonalGoal1.html'><span title='Codes: {http://loinc.org 81378-2}'>Goals, preferences, and priorities under certain health conditions [Reported]</span></a>; <span title='Codes: '>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Avoiding prolonged dependence on machines, Not being a physical burden to my family, Dying at home</span></li><li><a href='Goal-Example-Smith-Johnson-PersonalInterventionPreference3.html'><span title='Codes: {http://loinc.org 75778-1}'>Information to tell doctors if I have a severe, irreversible brain injury or illness and can't dress, feed, or bathe myself, or communicate my medical wishes, but can be kept alive [Reported]</span></a>; <span title='Codes: '>If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings, I would like for them to keep trying life-sustaining treatments until my healthcare agent decides it is time to stop and such treatments and let me die gently.</span></li><li><a href='Goal-Example-Smith-Johnson-CareExperiencePreference6.html'><span title='Codes: {http://loinc.org 81365-9}'>Religious affiliation contact to notify [Reported]</span></a>; <span title='Codes: '>Please attempt to notify someone from my religion at the following phone number: If I have included one: Catholic</span></li><li><a href='Goal-Example-Smith-Johnson-CareExperiencePreference5.html'><span title='Codes: {http://loinc.org 81364-2}'>Religious beliefs [Reported]</span></a>; <span title='Codes: '>If I appear to be approaching the end of my life, here are some things that I would like for my caregivers to know about my faith and my religion. Please call Father Mark if my condition warrants the services of a priest.</span></li><li><a href='Goal-Example-Smith-Johnson-CareExperiencePreference1.html'><span title='Codes: {http://loinc.org 75775-7}'>Decision to inform doctors and nurses about the role religion, faith, or spirituality play in my life [Reported]</span></a>; <span title='Codes: '>Here are some thoughts that I would like for my medical care team and my healthcare agent(s) to know about the role that religion, faith or spirituality play in my life: I am Catholic, please call Father Mark at Saint Catherine's on Main Street.</span></li></ul>
+
+<p><b>Care Plan 2</b></p>
+
+<p><b>status</b>: active</p><p><b>intent</b>: proposal</p><p><b>category</b>: <span title='Codes: {http://snomed.info/sct 736366004}'>Advance care plan</span></p><p><b>subject</b>: <a href='Patient-Example-Smith-Johnson-Patient1.html'>Betsy Smith-Johnson</a> ; BetsySJ@example.com; gender: female; birthDate: 1950-11-15</p><p><b>addresses</b>: <span>Permanent, sever brain damage and I am unable to recognize my family and friends</span></p><p><b>goal</b>: </p><ul><li><a href='Goal-Example-Smith-Johnson-PersonalGoal1.html'><span title='Codes: {http://loinc.org 81378-2}'>Goals, preferences, and priorities under certain health conditions [Reported]</span></a>; <span title='Codes: '>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Avoiding prolonged dependence on machines, Not being a physical burden to my family, Dying at home</span></li><li><a href='Goal-Example-Smith-Johnson-PersonalInterventionPreference3.html'><span title='Codes: {http://loinc.org 75778-1}'>Information to tell doctors if I have a severe, irreversible brain injury or illness and can't dress, feed, or bathe myself, or communicate my medical wishes, but can be kept alive [Reported]</span></a>; <span title='Codes: '>If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings, I would like for them to keep trying life-sustaining treatments until my healthcare agent decides it is time to stop and such treatments and let me die gently.</span></li><li><a href='Goal-Example-Smith-Johnson-CareExperiencePreference5.html'><span title='Codes: {http://loinc.org 81364-2}'>Religious beliefs [Reported]</span></a>; <span title='Codes: '>If I appear to be approaching the end of my life, here are some things that I would like for my caregivers to know about my faith and my religion. Please call Father Mark if my condition warrants the services of a priest.</span></li></ul>
+
+
+<p><b>Care Plan 3</b></p>
+
+<p><b>status</b>: active</p><p><b>intent</b>: proposal</p><p><b>category</b>: <span title='Codes: {http://snomed.info/sct 736366004}'>Advance care plan</span></p><p><b>subject</b>: <a href='Patient-Example-Smith-Johnson-Patient1.html'>Betsy Smith-Johnson</a> ; BetsySJ@example.com; gender: female; birthDate: 1950-11-15</p><p><b>addresses</b>: <span>Terminal illness, lack of meaningful interaction</span></p><p><b>goal</b>: </p><ul><li><a href='Goal-Example-Smith-Johnson-PersonalGoal1.html'><span title='Codes: {http://loinc.org 81378-2}'>Goals, preferences, and priorities under certain health conditions [Reported]</span></a>; <span title='Codes: '>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Avoiding prolonged dependence on machines, Not being a physical burden to my family, Dying at home</span></li><li><a href='Goal-Example-Smith-Johnson-CareExperiencePreference1.html'><span title='Codes: {http://loinc.org 75775-7}'>Decision to inform doctors and nurses about the role religion, faith, or spirituality play in my life [Reported]</span></a>; <span title='Codes: '>Here are some thoughts that I would like for my medical care team and my healthcare agent(s) to know about the role that religion, faith or spirituality play in my life: I am Catholic, please call Father Mark at Saint Catherine's on Main Street.</span></li><li><a href='Goal-Example-Smith-Johnson-CareExperiencePreference2.html'><span title='Codes: {http://loinc.org 81360-0}'>My likes and joys [Reported]</span></a>; <span title='Codes: '>Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed: I love the smell of lavender and the feeling of sunshine on my face.</span></li><li><a href='Goal-Example-Smith-Johnson-CareExperiencePreference3.html'><span title='Codes: {http://loinc.org 81362-6}'>My dislikes and fears [Reported]</span></a>; <span title='Codes: '>Here is a list of things that I would like to avoid if at all possible, people that I don’t wish to see, and concerns I have about particular family members, pets, and so on: I do not like my feet to be cold.</span></li><li><a href='Goal-Example-Smith-Johnson-CareExperiencePreference4.html'><span title='Codes: {http://loinc.org 81380-8}'>Goals, preferences, and priorities for care experience [Reported]</span></a>; <span title='Codes: '>How to care for me: If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me: I want photos of my family where I can see them.</span></li><li><a href='Goal-Example-Smith-Johnson-CareExperiencePreference5.html'><span title='Codes: {http://loinc.org 81364-2}'>Religious beliefs [Reported]</span></a>; <span title='Codes: '>If I appear to be approaching the end of my life, here are some things that I would like for my caregivers to know about my faith and my religion. Please call Father Mark if my condition warrants the services of a priest.</span></li><li><a href='Goal-Example-Smith-Johnson-CareExperiencePreference7.html'><span title='Codes: {http://loinc.org 81366-7}'>Unfinished business [Reported]</span></a>; <span title='Codes: '>If it appears that I am approaching the end of my life, and I cannot communicate with persons around me, I would want my doctors and nurses, my family, and my friends to know about some unfinished business that I need to address: I want my sister and I to talk again, and miss her.  I wish we hadn't disagreed all those years ago and regret the time it has cost us.  I'd like to see her face if I were very ill and needed the comfort of family at my side.</span></li><li><a href='Goal-Example-Smith-Johnson-PersonalInterventionPreference1.html'><span title='Codes: {http://loinc.org 75776-5}'>Preference on consulting a supportive and palliative care team to help treat physical, emotional, and spiritual discomfort and support family [Reported]</span></a>; <span title='Codes: '>If I am having significant pain or suffering, I would like my doctors to consult a Supportive and Palliative Care Team to help treat my physical, emotional and spiritual discomfort, and to support my family.</span></li><li><a href='Goal-Example-Smith-Johnson-PersonalInterventionPreference3.html'><span title='Codes: {http://loinc.org 75778-1}'>Information to tell doctors if I have a severe, irreversible brain injury or illness and can't dress, feed, or bathe myself, or communicate my medical wishes, but can be kept alive [Reported]</span></a>; <span title='Codes: '>If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings, I would like for them to keep trying life-sustaining treatments until my healthcare agent decides it is time to stop and such treatments and let me die gently.</span></li><li><a href='Goal-Example-Smith-Johnson-PersonalInterventionPreference5.html'><span title='Codes: {http://loinc.org 75780-7}'>Preferred location to spend final days if possible to choose [Reported]</span></a>; <span title='Codes: '>If it were possible to choose, here is where I would like to spend my final days: At home.I would like to receive hospice care at home if possible.</span></li></ul>
 
 </div>"
 
@@ -1274,6 +1257,53 @@ Usage: #example
 
 * content[0].attachment.contentType = #text/xml
 * content[0].attachment.url = "Binary/Example-Smith-Johnson-DocRef-Binary1"
+
+
+
+
+
+
+Instance: Example-Smith-Johnson-DocRef-Bundle
+InstanceOf: DocumentReference
+Description: "Example Patient Smith-Johnson DocumentReference Bundle"
+Usage: #example
+
+* masterIdentifier.system = "urn:oid:2.16.840.1.113883.4.823.1.7124"
+* masterIdentifier.value = "0-87f37989294a408897aacd1fc5d8fd16"
+
+* identifier[+].system = "urn:oid:2.16.840.1.113883.3.3208.101.1"
+* identifier[=].value = "0-87f37989294a408897aacd1fc5d8fd16"
+
+
+* status = #current
+* docStatus = #final
+
+
+* type.coding[0] = $LOINC#81334-5 "Patient Personal advance care plan"
+
+
+* category.coding[0] = $LOINC#75320-2 "Advance directive"
+
+
+* subject = Reference(Example-Smith-Johnson-Patient1)
+
+* date = "2021-03-29T14:25:34.001-05:00"
+
+* author = Reference(Example-Smith-Johnson-Patient1)
+
+
+* authenticator = Reference(Example-Smith-Johnson-OrganizationCustodian1)
+
+* custodian = Reference(Organization/Example-Smith-Johnson-OrganizationCustodian1)
+
+* description = "Personal Advance Care Plan"
+
+* securityLabel.coding[0] = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N "normal"
+
+* content[0].attachment.contentType = #application/fhir+json
+* content[0].attachment.url = "Bundle/Example-Smith-Johnson-Bundle1"
+
+
 
 
 
