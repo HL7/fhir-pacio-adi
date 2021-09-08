@@ -227,99 +227,91 @@ Systems used to create and update patient-generated advance directive informatio
     <tr>
         <td style="padding: 7px;">1</td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-DocumentReference.html">ADI Document Reference</a></td>
-        <td style="padding: 7px;"><p>This profile defines constraints that represent the information needed to register an advance directive information document on a FHIR server.</p>
-        <p><i>Development status: Initial draft available. Mapping in progress.</i></p></td>
+        <td style="padding: 7px;"><p>This profile defines constraints that represent the information needed to register an advance directive information document on a FHIR server.</p></td>
         <td style="padding: 7px;"><a href="https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-documentreference.html">US Core DocumentReference</a></td>
     </tr>
     <tr>
         <td style="padding: 7px;">2</td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-Header.html">ADI Header</a></td>
-        <td style="padding: 7px;"><p>This profile defines constraints that represent common administrative and demographic concepts for advance directives information used in US Realm clinical documents.</p>
-        <p>Known issues:
-            <ul>
-                <li>Currently extension:data_enterer_extension only allows reference to US Core Practitioner Profile | US Core PractitionerRole Profile. Need to add RelatedPerson to CDA on FHIR of use.</li>
-                <li>Currently extension:information_recipient_extension allows reference to US Core Practitioner Profile | US Core PractitionerRole Profile | US Core Patient Profile. Need to add  RelatedPerson and US Core Organization.</li>
-                <li>Currently attester:legal_attester.party--> allows reference to US Core Practitioner Profile | US Core PractitionerRole Profile. Need to add  RelatedPerson and US Core Organization.</li>
-            </ul>
-        </p>
-        <p><i>Development status: Initial draft available. Initial Mapping complete.</i></p></td>
+        <td style="padding: 7px;"><p>This profile defines constraints that represent common administrative and demographic concepts for advance directives information used in US Realm clinical documents.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/clinicaldocument.html">ClinicalDocument</a></td>
     </tr>
     <tr>
         <td style="padding: 7px;">3</td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-PACPComposition.html">ADI Personal Advance Care Plan Composition</a></td>
-        <td style="padding: 7px;"><p>This profile encompasses information that makes up the author’s advance care information plan.</p>
-        <p><i>Development status: Initial draft available. Initial Mapping complete.</i></p></td>
+        <td style="padding: 7px;"><p>This profile encompasses information that makes up the author’s advance care information plan.</p></td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-Header.html">ADI Header</a></td>
     </tr>
     <tr>
         <td style="padding: 7px;">4</td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-HealthcareAgent.html">ADI Healthcare Agent</a></td>
-        <td style="padding: 7px;"><p>This profile represents a person's appointment of a healthcare agent.</p>
-        <p><i>Development status: Initial draft available. Initial Mapping complete.</i></p></td>
+        <td style="padding: 7px;"><p>This profile represents a person's appointment of a healthcare agent.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">5</td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-HealthcareAgentConsent.html">ADI Healthcare Agent Consent</a></td>
-        <td style="padding: 7px;"><p>This profile is used to represent a consent for a healthcare agent and power or limitation granted to a person acting as a healthcare agent.</p>
-        <p><i>Development status: Not started.</i></p></td>
+        <td style="padding: 7px;"><p>This profile is used to represent a consent for a healthcare agent and power or limitation granted to a person acting as a healthcare agent.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/consent.html">Consent</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">6</td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-PMOLSTObservation.html">ADI PMOLST Observation</a></td>
-        <td style="padding: 7px;"><p>This profile is used to indicate if a person has a medical order or physician order for life sustaining treatment (MOLST or POLST).</p>
-        <p><i>Development status: Initial draft available. Initial Mapping complete.</i></p></td>
+        <td style="padding: 7px;"><p>This profile is used to indicate if a person has a medical order or physician order for life sustaining treatment (MOLST or POLST).</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
     </tr>
-    <tr>    
+        <tr>    
         <td style="padding: 7px;">7</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-PersonalInterventionPreference.html">ADI Personal Intervention Preference</a></td>
-        <td style="padding: 7px;"><p>This profile is used to represent a personal preference for a type of medical intervention (treatment).</p>
-        <p><i>Development status: Mapping in Progress.</i></p></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-DNROrderObservation.html">ADI DNR Observation</a></td>
+        <td style="padding: 7px;"><p>This profile is used to indicate if a person has a Do Not Resuscitate, Do Not Attempt Resuscitation, or Allow Natural Death order is in place.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">8</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-OrganDonationObservation.html">ADI Organ Donation Observation</a></td>
-        <td style="padding: 7px;"><p>This profile is used to represent the author's thoughts about organ donation.</p>
-        <p><i>Development status: Initial draft available. Initial Mapping complete.</i></p></td>
-        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-Goal.html">ADI Goal</a></td>
+        <td style="padding: 7px;"><p>This profile defines the base requirements for all ADI Goals.</p></td>
+        <td style="padding: 7px;"><a href="https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-goal.html">US Core Goal</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">9</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-AutopsyObservation.html">ADI Autopsy Observation</a></td>
-        <td style="padding: 7px;"><p>This profile is used to represent the author's thoughts about autopsy.</p>
-        <p><i>Development status: Initial draft available. Initial Mapping complete.</i></p></td>
-        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-PersonalInterventionPreference.html">ADI Personal Intervention Preference</a></td>
+        <td style="padding: 7px;"><p>This profile is used to represent a personal preference for a type of medical intervention (treatment).</p></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-Goal.html">ADI Goal</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">10</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-PersonalPrioritiesOrganizer.html">ADI Personal Priorities Organizer</a></td>
-        <td style="padding: 7px;"><p>This profile is used to represent a set of personal goals, preferences or care experiences in a preferred ranked order.</p>
-        <p><i>Development status: Initial draft available. Initial Mapping complete.</i></p></td>
-        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/list.html">List</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-CareExperiencePreference.html">ADI Care Experience Preference</a></td>
+        <td style="padding: 7px;"><p>This profile is a clinical statement that presents the author's personal thoughts about something he or she feels is relevant to his or her care experience and may be pertinent when planning his or her care.</p></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-Goal.html">ADI Goal</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">11</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-CareExperiencePreference.html">ADI Care Experience Preference</a></td>
-        <td style="padding: 7px;"><p>This profile is a clinical statement that presents the author's personal thoughts about something he or she feels is relevant to his or her care experience and may be pertinent when planning his or her care.</p>
-        <p><i>Development status: Initial draft available. Initial Mapping complete.</i></p></td>
-        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-PersonalGoal.html">ADI Personal Goal</a></td>
+        <td style="padding: 7px;"><p>This profile is a statement that presents the author's personal health and treatment goals that are pertinent when planning his or her care.</p></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-Goal.html">ADI Goal</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">12</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-PersonalGoal.html">ADI Personal Goal</a></td>
-        <td style="padding: 7px;"><p>This profile is a statement that presents the author's personal health and treatment goals that are pertinent when planning his or her care.</p>
-        <p><i>Development status: Initial draft available. Initial Mapping complete.</i></p></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-PersonalPrioritiesOrganizer.html">ADI Personal Priorities Organizer</a></td>
+        <td style="padding: 7px;"><p>This profile is used to represent a set of personal goals, preferences or care experiences in a preferred ranked order.</p></td>
+        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/list.html">List</a></td>
+    </tr>
+    <tr>    
+        <td style="padding: 7px;">13</td>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-OrganDonationObservation.html">ADI Organ Donation Observation</a></td>
+        <td style="padding: 7px;"><p>This profile is used to represent the author's thoughts about organ donation.</p></td>
+        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
+    </tr>
+    <tr>    
+        <td style="padding: 7px;">14</td>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-AutopsyObservation.html">ADI Autopsy Observation</a></td>
+        <td style="padding: 7px;"><p>This profile is used to represent the author's thoughts about autopsy.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
     </tr>
     <tr>
         <td style="padding: 7px;">15</td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-Provenance.html">ADI Provenance</a></td>
-        <td style="padding: 7px;"><p>Advance Directive Interoperability Provanance based on US Core to capture, search and fetch provenance information associated with advance directive interoperability data.</p>
-        <p><i>Development status: Mapping in Progress.</i></p></td>
+        <td style="padding: 7px;"><p>Advance Directive Interoperability Provanance based on US Core to capture, search and fetch provenance information associated with advance directive interoperability data.</p></td>
         <td style="padding: 7px;"><a href="https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-provenance.html">US Core Provenance</a></td>
     </tr>
     <tr>
@@ -381,6 +373,13 @@ Systems used to create and update patient-generated advance directive informatio
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/consent.html">Consent</a></td>
     </tr>
     <tr>
+        <td style="padding: 7px;">22</td>
+        <td style="padding: 7px;">ADI Consent for DNR Orders</td>
+        <td style="padding: 7px;"><p>This profile is used to express the patient’s or healthcare agent consent that is not bound by an encounter.</p>
+        <p><i>Development status: planned post STU1</i></p></td>
+        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/consent.html">Consent</a></td>
+    </tr>
+    <tr>
         <th colspan="4" style="background-color: #FFF2CC; text-align:center; padding: 10px; padding: 10px;"><b>Sharing Documents</b></th>
     </tr>
     <tr style="background-color: #D9D9D9;">
@@ -389,7 +388,7 @@ Systems used to create and update patient-generated advance directive informatio
         <th style="padding: 10px;"><b>Based On</b></th>
     </tr>
     <tr>
-        <td style="padding: 7px;">22</td>
+        <td style="padding: 7px;">23</td>
         <td style="padding: 7px;"><a href="#">ADI Consent to Share</a></td>
         <td style="padding: 7px;"><p>This profile is used to expresses the patient’s or healthcare agent consent to share Advance Directive information with others</p>
         <p><i>Development status: planned post STU1</i></p></td>

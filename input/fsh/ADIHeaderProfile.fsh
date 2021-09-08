@@ -65,7 +65,7 @@ Description: "This abstract profile defines constraints that represent common ad
 * attester[legal_attester].mode 1..1 MS
 * attester[legal_attester].mode = #legal
 * attester[legal_attester].party 1..1 MS
-* attester[legal_attester].party  only Reference ($USCorePractitioner or $USCorePractitionerRole or $USCoreOrganization)
+* attester[legal_attester].party  only Reference ($USCorePractitioner or $USCorePractitionerRole or RelatedPerson or $USCoreOrganization)
 * attester[notary_attester].mode 1..1 MS
 * attester[notary_attester].mode = #professional
 * attester[notary_attester].party 1..1 MS
