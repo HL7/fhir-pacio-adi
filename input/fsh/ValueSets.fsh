@@ -102,7 +102,7 @@ Title: "Healthcare Agent Powers or Limitations Indicator"
 Description: "Codes indicating information is regarding powers or limitations of a healthcare agent."
 * include $LOINC#81335-2 "Patient Healthcare agent" // "Healthcare agents identified with no powers or limitations specified"
 * include $LOINC#75786-4 "Powers granted to healthcare agent [Reported]" // "Healthcare agents identified with powers granted specified"
-* include $LOINC#75788-0 "Limitations placed on healthcare agent [Reported]" // "Healthcare agents identified with limitations placed specified"
+* include $LOINC#81346-9 "Limitations placed on healthcare agent [Reported]" // "Healthcare agents identified with limitations placed specified"
 * insert LOINCCopyrightNotice
 
 
