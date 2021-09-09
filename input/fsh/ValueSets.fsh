@@ -110,7 +110,7 @@ ValueSet: PADIHCADecisionsVS
 Title: "Healthcare Agent Decisions"
 Description: "Codes indicating decisions a healtcare agent may or may not make on behalf of an individual."
 * include $LOINC#75787-2 "Advance directive - request for intubation"
-* include $LOINC#81346-9 "Advance directive - request for tube feeding"
+* include $LOINC#75788-0 "Advance directive - request for tube feeding"
 * include $LOINC#75789-8 "Advance directive - request for life support"
 * include $LOINC#75790-6 "Advance directive - request for IV fluid and support"
 * include $LOINC#75791-4 "Advance directive - request for antibiotics"
