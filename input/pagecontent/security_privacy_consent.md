@@ -2,9 +2,11 @@
 
 ### General Considerations
 
-Advance Directive Interoperability involves communication of advance directive information across multiple parties including who the information is about, their healthcare agents and identified advisors, and care providers. The author, whom is also the person the information is about, needs access to create, modify, remove, and share this information either directly or through an authorized third party. Users of this information, be them the appointed healthcare agents or advisors, care providers in emergency, intensive, or critical care environments, or others providing longer term care in a skilled nursing or other similar facility.
+Advance Directive Interoperability (ADI) involves communication of advance directive information across multiple parties including who the information is about, their healthcare agents and identified advisors, and care providers. The author, whom is also the person the information is about, needs access to create, modify, remove, and share this information either directly or through an authorized third party. Users of this information, be them the appointed healthcare agents or advisors, care providers in emergency, intensive, or critical care environments, or others providing longer term care in a skilled nursing or other similar facility.
 
 Advance directive information contains patient specific information, which means that it needs to be protected with proper security and privacy protections to avoid malicious or unintentional exposure of such information. All Advance Directive Interoperability exchanges must be appropriately secured in transit and access limited only to authorized individuals.
+
+The ADI IG focuses on providing a structure to share data and information. Currently policy, legal and regulatory differ across states and local areas impacting the workflow and requirements associated with Advance Directives Information. Implementors should review the current context for where this IG is expected to be used to ensure those requirements are met.
 
 
 #### Security Considerations and Guidance
@@ -56,8 +58,10 @@ For the purposes of Advance Directive Interoperability, additional security conf
             3.	launch/patient
             4.	patient/*.read
             5.	patient/Bundle.*
-            6.	user/Patient.read
-            7.	user/Bundle.read
+            6.	patient/DocumentReference.*
+            7.	user/Patient.read
+            8.	user/Bundle.*
+            8.	user/DocumentReference.*
 
 #### Individual-Authorized Exchange
 1.	http://hl7.org/fhir/us/davinci-pdex/Member-AuthorizedOAuth2Exchange.html
