@@ -1,9 +1,9 @@
-## Actors
+### Actors
 <p>
 Use Cases that describe the basic information exchange transactions that support information to be shared between systems.
 </p>
 
-### Roles and Actors
+#### Roles and Actors
 
 <p>
 In health information exchange, actors of different types are at play. The following nomenclature will be utilized in this Implementation Guide. 
@@ -147,7 +147,7 @@ In Use Case 4, the process is started by a person wanting to update previously c
 Note: FHIR Resource versioning is only used for error corrections. 
 </p>
 
-##### Use Case 4 Sequence Diagram######
+##### Use Case 4 Sequence Diagram
 <br clear="all" />
 <img src="./use_case_4_2.png" alt="Use Case 4: Diagram 2"/>
 <br clear="all" />

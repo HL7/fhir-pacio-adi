@@ -24,12 +24,15 @@ Alias: $HL7NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 Alias: $HL7CompositionAttestation = http://hl7.org/fhir/ValueSet/composition-attestation-mode
 Alias: $HL7ConsentScope = http://terminology.hl7.org/CodeSystem/consentscope
 Alias: $HL7ConsentCategoryCodes = http://terminology.hl7.org/CodeSystem/consentcategorycodes
+Alias: $HL7JurisdictionCodes = http://hl7.org/fhir/ValueSet/jurisdiction
 
 Alias: $LOINC = http://loinc.org
-
+Alias: $SNOMEDCT = http://snomed.info/sct
 
 Alias: $HL7RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $HL7RoleClass = http://terminology.hl7.org/CodeSystem/v3-RoleClass
+
+Alias: $HL7AdataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason
 
 //Alias:   $USCoreProviderRole = http://hl7.org/fhir/us/core/ValueSet/us-core-provider-role
 //Alias:   $USCoreProviderSpecialty = http://hl7.org/fhir/us/core/ValueSet/us-core-provider-specialty

@@ -1,29 +1,88 @@
-This Advance Directive Interoperability (ADI) FHIR implementation guide (IG) is used for explaining how to represent, exchange, and verify a person’s goals, preferences and priorities for treatments and interventions regarding future medical care.
+The Advance Directive Interoperability (ADI) FHIR implementation guide (IG) explains  how to represent, exchange, and verify a person’s goals, preferences and priorities for treatments and interventions regarding future medical care.
 
 ### Introduction 
 <p>
-This ADI FHIR implementation guide (IG) describes how to use existing FHIR standards to exchange information about an individual's advance directives (e.g. a person’s advance medical treatment and intervention goals, preferences and priorities, regardless of the individual’s current health condition or physical location) regarding potential future medical care in the event the individual becomes a patient and can not speak for herself or himself.
+This ADI implementation guide (IG) describes how to use existing HL7 FHIR® standards to create, update, share, verify, and exchange information about an individual's advance medical goals, preferences, and priorities for care in the event the individual is unable to communicate this information to medical teams for himself or herself. Advance directives in this IG includes person-authored advance directives and personal advance care plans, and patient consent information attesting to a patient authorizing a person or persons to serve as a healthcare agent or attesting to permission granted to share advance directive information with others. It also includes practitioner-authored patient instructions (obligation and  prohibitions),practitioner-authored portable medical orders for life sustaining treatments.
 </p>
 <p>
-A subsequent version of this IG will define the minimum conformance requirements for digital representation and exchange of encounter-centric patient instructions regarding medical treatment and intervention preferences and priorities that apply to a specific encounter.
+This initial version defines the minimum conformance requirements for digital representation and exchange of person-authored advance directives and personal advance care plans (e.g. a person’s advance medical treatment and intervention goals, preferences and priorities,  regarding potential future medical care in the event the individual becomes a patient and cannot speak for himself or herself. The intervention preferences may be conditional upon a specific health condition or physical situation. It also defines minimum conformance for the representation of patient consent for the appointment of a healthcare agent or agents, and consent to share advance directive information.
 </p>
 <p>
-A further subsequent version of this IG will define the minimum conformance requirements for digital composition, representation and exchange of advance medical treatment order sets used to record the life-sustaining medical treatments a patient does or does not want to receive should they require life-sustaining treatments due to a health crisis or emergency. These order sets are established by a practitioner(i.e., portable medical orders for life-sustaining treatments).
+A subsequent version of this IG will define the minimum conformance requirements for digital representation and exchange of practitioner-authored encounter-centric patient instructions regarding medical treatment and intervention preferences and priorities that are immediate and apply to the current encounter.
+</p>
+<p>
+A subsequent version of this IG will define the minimum conformance requirements for digital representation and exchange of practitioner-authored advance medical treatment orders. The representation creates a portable record of medical orders regarding specific aspects of life-sustaining medical treatments a patient does or does not want to receive, which could be performed during a potential future medical care event if the patient were to require life-sustaining medical interventions due to a health crisis or emergency. These orders include instructions commonly found in portable medical orders for life-sustaining treatments, and may include other orders such as but not limited to Do Not Hospitalize and Do Not Intubate orders.
 </p>
 
 ### Background
 <p>
-Advance directives interoperability is a complex area that involves many stakeholders. The HL7 sponsor for this FHIR IG is Patient Empowerment. HL7 Co-sponsor workgroups include Patient Care, Community Based Care and Privacy, and Orders & Observations. As part of their main goal in establishing a framework for the development of FHIR IGs to facilitate health information exchange to support clinical practice and the management, delivery and evaluation of health services, the Post-Acute Care Interoperability (PACIO) Community has adopted this FHIR IG as a project use case. The PACIO Community has a strong interest in the topic of advance directives and will support the community engagement and technical FHIR IG development needed for advance directives interoperability. PACIO is supported by MITRE, CMS, ONC and many other stakeholders (clinical, technical, and industry associations).
+Advance directive interoperability is a complex area that involves many stakeholders. The HL7 workgroup sponsor for this FHIR IG is Patient Empowerment. HL7 co-sponsor workgroups include Patient Care, Community Based Care and Privacy, and Orders & Observations. As part of PACIO’s main goal in establishing in improving care transitions, the Post-Acute Care Interoperability (PACIO) Community has adopted this project as a critical use case. The PACIO Community has a strong interest in the topic of advance directive interoperability with FHIR and will support the community engagement and technical FHIR IG development needed for advance directives interoperability. PACIO is supported by MITRE, CMS, ONC and many other stakeholders (clinical, technical, and industry associations).
 </p>
 <p>
-FHIR profiles have been developed for several existing FHIR resources to represent advance directive content such as: living will, durable medical power of attorney, personal health goals at end of life, care experience preferences, patient instructions (obligation, prohibitions, and consent), and portable medical orders for life sustaining treatments.
+FHIR profiles have been developed for several existing FHIR resources to represent advance directive content such as: living will, durable medical power of attorney, personal health goals at end of life, care experience preferences, end-of-life and emergency intervention preferences under certain circumstances, patient instructions (obligation, prohibitions, and consent), and portable medical orders for life sustaining treatments.
 </p>
-<p>
-The current version of this FHIR IG covers the use of RESTful API interactions for creating, sharing, query/access, and verification of advance directive documentation between systems. It is intended to address advance directive interoperability needs where the author is the individual that is making medical intervention goals, preferences, priorities known in advance. This IG is not intended to cover medical intervention goals, preferences, priorities for individuals who are not able to make their own wishes known.
-</p>
-<p>
-Future versions of this FHIR IG will address encounter-centric patient instructions and portable medical orders for life-sustaining treatment.
-</p>
+
+There is a very important distinction for the three types of information that will be covered in this IG. Below is a description of each type of content that will be covered by the IG.
+
+<p>&nbsp;</p>
+<table>
+    <tr>
+        <th width="50">&nbsp;</th>
+        <th colspan="2" style="background-color:#DEEBF7; border: 1px solid black; vertical-align: middle; padding: 5px"><p style="font-size: 14px;"><b>Type I: Advance Directive Information</b></p></th>
+    </tr>
+    <tr><td width="50">&nbsp;</td>
+        <td width="25">&nbsp;</td>
+        <td>
+            <ul>
+                <li>Patient-authored information</li>
+                <li>Used as a tool for sharing an individual’s (patient’s) medical treatment and intervention goals, preferences, and priorities (GPP)</li>
+                <li>Provides guidance that a patient would want known so as to inform care planning during a potential future medical emergency, in the case where the patient is unable to communicate with caregivers and medical personnel</li>
+                <li>There is NO “contract” between the author (patient) and any other party involved in the future medical emergency that the GPP is required to be followed (i.e., no offer or acceptance, no consideration, no consequences for failure to follow the patient’s directives)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr height="15"><td colspan="3">&nbsp;</td></tr>
+    <tr>
+        <th width="50">&nbsp;</th>
+        <th colspan="2" style="background-color:#9DC3E6; border: 1px solid black; vertical-align: middle;  padding: 5px"><p style="font-size: 14px;"><b>Type II: Encounter-Centric Instructions</b></p></th>
+    </tr>
+    <tr><td width="50">&nbsp;</td>
+        <td width="25">&nbsp;</td>
+        <td>
+            <ul>
+                <li>Practitioner-authored</li>
+                <li>Instructions are related to a current, immediate episode of care</li>
+                <li>The patient, or healthcare agent, provides direct input in the creation of the instructions which document decisions that have been made about treatments that may be utilized during a medical emergency occurring within the current episode of care.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr height="15"><td colspan="3">&nbsp;</td></tr>
+    <tr>
+        <th width="50">&nbsp;</th>
+        <th colspan="2" style="background-color:#478FD1; border: 1px solid black; vertical-align: middle;  padding: 5px"><p style="font-size: 14px;"><b>Type III: Portable Medical Orders for Life-Sustaining Treatments</b></p></th>
+    </tr>
+    <tr><td width="50">&nbsp;</td>
+        <td width="25">&nbsp;</td>
+        <td>
+            <ul>
+                <li>Practitioner-authored</li>
+                <li>A set of medical orders intended to follow a patient and be available across the continuum of care</li>
+                <li>The patient, or healthcare agent, provides direct input in the creation of the instructions.</li>
+                <li>These orders are used to document a provider’s order for or prohibition of treatments that are to be utilized during a future medical emergency that would necessitate this type of treatment be necessitated and are based on a patient’s wishes for or against the treatments.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<img src="./ADI_types_overview.png" alt="ADI Types Overview" width="800"/>
+<br clear="all" />
+
+The current version of this FHIR IG covers the use of RESTful API interactions for creation, sharing, query/access, and verification of advance directive documentation between systems. It is intended to address advance directive interoperability needs for Content Type 1, where the author is the individual that is making medical intervention goals, preferences, priorities known in advance. This IG is not intended to cover medical intervention goals, preferences, priorities for individuals who are not able to make their own wishes known.
+
+
+Future versions of this FHIR IG will address encounter-centric patient instructions, Content Type 2, and portable medical orders for life-sustaining treatment, Content Type 3.
+
+<p>&nbsp;</p>
 
 ![PACIO logo](./pacio.png)
 
@@ -67,7 +126,7 @@ This Guide is divided into several pages which are listed at the top of each pag
     <li>Guidance: These pages provide overall guidance in using the profiles and transactions defined in this guide by detailing the business case, patient stories and personas and use cases.
         <ul>
             <li>Business Case: A business case summarizes the scope of information exchange covered by the IG.</li>
-            <li>Patient Stories and Personas: Patient stories and personas give context to the data exchange standards detailed in the technical areas of the IG.  They allow the non-technical reader to envision situations in which the IGs provisions would apply, and ensure that development aspects of conforming to the IG meet the intended needs for exchange of this type of information.</li>
+            <li>Patient Stories and Personas: Patient stories and personas give context to the data exchange standards detailed in the technical areas of the IG. They allow the non-technical reader to envision situations in which the IGs provisions would apply, and ensure that development aspects of conforming to the IG meet the intended needs for exchange of this type of information.</li>
             <li>Use Cases: A use case is a list of technical actions or event steps typically defining the interactions between a role and a system to achieve a goal. The actor can be a human or other external system. Technical scenarios that describe systems interactions between technical actors to implement the business case.</li>
             <li>Security: General security requirements and recommendations for HL7 FHIR® ADI Implementation Guide actors.TBD: Security information will need to be described as needed.</li>
             <li>About ADI Examples: Descriptive examples that demonstrate the use of ADI profiles and exchange mechanisms.</li>
@@ -108,11 +167,11 @@ This Guide is divided into several pages which are listed at the top of each pag
         <td>A use case is a list of technical actions or event steps typically defining the interactions between a role and a system to achieve a goal. The actor can be a human or other external system. Technical scenarios that describe systems interactions between technical actors to implement the business case.</td>
     </tr>
     <tr>
-        <td>Advance directive (AD)</td>
+        <td>Advance directives</td>
         <td>Advance directives = is a concept. Living will (what you want), medical power of attorney (who speaks), combined living will and medical power of attorney. These documents have several names depending on where you are. “Advance directives” is the general term that people use to refer to all of these documents as a concept.</td>
     </tr>
     <tr>
-        <td>Advance directives</td>
+        <td>Advance directive (AD)</td>
         <td>Advance directive = People have used “advance directive” to refer to any of these documents in the singular, e.g., instead of saying “living will,” someone will generally, abstractly refer to the document as “an advance directive.”</td>
     </tr>
     <tr>
@@ -142,24 +201,13 @@ Systems used to create and update patient-generated advance directive informatio
 <p>Interoperable exchange of the advance directive information supports more effective sharing of advance directive information across transitions in care and enables practitioners to create person-centered care plans that align with a patient’s values, goals of care, treatment preferences, and quality of life priorities when a patient cannot communicate for themselves.</p>
 -->
 
-<!--
-### Content and Organization
-TODO
-<p>The implementation guide is organized into the following sections:</p>
-<ul>
-  <li><a href="advance_directive_use_case.html">Use Case Example</a> Describes an example of its use and provides a high-level overview of expected process flow.</li>
-  <li><a href="underlying_technologies.html">Underlying Technologies</a> Describes the different specifications this implementation guide relies on and indicates what developers should read and understand prior to implementing this specification.</li>
-  <li><a href="profile_highlights_and_guidance.html">Profile Highlights and Guidance</a> Provides a closer look at the IG profiles and guidance for constructing profile instances with examples for data exchange.</li>
-  <li><a href="security_and_data_sharing.html">Security and Data Sharing</a> Covers issues concerning security and patient information access and sharing.</li>
-  <li><a href="artifacts.html">Artifacts Summary</a> Introduces and provides links to the Capability Statement, IG Resource Profiles, and IG Extension Definitions as well as example profile instances.</li>
-</ul>
--->
+
 
 ### Dependencies
 <p>This implementation guide relies on the following other specifications:</p>
 <ul>
   <li><a href="http://hl7.org/fhir/R4/">FHIR R4</a> - The version of FHIR used as the base for this implementation guide.</li>
-  <li><a href="http://hl7.org/fhir/us/core/STU3.1.1/index.html">US Core STU3.1</a> - The version of US Core based on FHIR R4.</li>
+  <li><a href="https://hl7.org/fhir/us/core/STU4/index.html">US Core STU4.0.0</a> - The version of US Core based on FHIR R4.</li>
   <!--<li><a href="http://hl7.org/fhir/us/ccda/STU1.1/index.html">C-CDA on FHIR STU1.1</a> - The version of C-CDA on FHIR based on FHIR R4.</li>-->
 </ul>
 
@@ -169,7 +217,7 @@ TODO
 <p>Table: ADI Profiles</p>
 <table border="1" style="border-spacing: 100px;">
     <tr>
-        <th colspan="4" style="background-color: #DEEBF7; text-align:center; padding: 10px; padding: 10px;"><b>CONTENT TYPE I: Advance Directives Information</b> <i>(in STU1 scope)</i></th>
+        <th colspan="4" style="background-color: #DEEBF7; text-align:center; padding: 10px; padding: 10px;"><b>CONTENT TYPE I: Advance Directive Information</b> <i>(in STU1 scope)</i></th>
     </tr>
     <tr style="background-color: #D9D9D9;">
         <th style="padding: 10px;" colspan="2"><b>Name of Profile to be developed</b></th>
@@ -179,114 +227,92 @@ TODO
     <tr>
         <td style="padding: 7px;">1</td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-DocumentReference.html">ADI Document Reference</a></td>
-        <td style="padding: 7px;"><p>This profile defines constraints that represent the information needed to register an advance directive information document on a FHIR server.</p>
-        <p><i>Development status: Initial draft available. Mapping in progress.</i></p></td>
-        <td style="padding: 7px;"><a href="http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-documentreference.html">US Core DocumentReference</a></td>
+        <td style="padding: 7px;"><p>This profile defines constraints that represent the information needed to register an advance directive information document on a FHIR server.</p></td>
+        <td style="padding: 7px;"><a href="https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-documentreference.html">US Core DocumentReference</a></td>
     </tr>
     <tr>
         <td style="padding: 7px;">2</td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-Header.html">ADI Header</a></td>
-        <td style="padding: 7px;"><p>This profile defines constraints that represent common administrative and demographic concepts for advance directives information used in US Realm clinical documents.</p>
-        <p>Known issues:
-            <ul>
-                <li>Currently extension:data_enterer_extension only allows reference to US Core Practitioner Profile | US Core PractitionerRole Profile.  Need to add RelatedPerson to CDA on FHIR of use.</li>
-                <li>Currently extension:information_recipient_extension allows reference to US Core Practitioner Profile | US Core PractitionerRole Profile | US Core Patient Profile.  Need to add  RelatedPerson and US Core Organization.</li>
-                <li>Currently attester:legal_attester.party--> allows reference to US Core Practitioner Profile | US Core PractitionerRole Profile.  Need to add  RelatedPerson and US Core Organization.</li>
-            </ul>
-        </p>
-        <p><i>Development status: Initial draft available. Initial Mapping complete.</i></p></td>
+        <td style="padding: 7px;"><p>This profile defines constraints that represent common administrative and demographic concepts for advance directives information used in US Realm clinical documents.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/clinicaldocument.html">ClinicalDocument</a></td>
     </tr>
     <tr>
         <td style="padding: 7px;">3</td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-PACPComposition.html">ADI Personal Advance Care Plan Composition</a></td>
-        <td style="padding: 7px;"><p>This profile encompasses information that makes up the author’s advance care information plan.</p>
-        <p><i>Development status: Initial draft available. Initial Mapping complete.</i></p></td>
+        <td style="padding: 7px;"><p>This profile encompasses information that makes up the author’s advance care information plan.</p></td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-Header.html">ADI Header</a></td>
     </tr>
     <tr>
         <td style="padding: 7px;">4</td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-HealthcareAgent.html">ADI Healthcare Agent</a></td>
-        <td style="padding: 7px;"><p>This profile represents a person's appointment of a healthcare agent.</p>
-        <p><i>Development status: Initial draft available. Initial Mapping complete.</i></p></td>
+        <td style="padding: 7px;"><p>This profile represents a person's appointment of a healthcare agent.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">5</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-HealthcareAgentAuthority.html">ADI Healthcare Agent Authority</a></td>
-        <td style="padding: 7px;"><p>This profile is used to represent a power or limitation granted to a person acting as a healthcare agent.</p>
-        <p><i>Development status: Not started.</i></p></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-HealthcareAgentConsent.html">ADI Healthcare Agent Consent</a></td>
+        <td style="padding: 7px;"><p>This profile is used to represent a consent for a healthcare agent and power or limitation granted to a person acting as a healthcare agent.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/consent.html">Consent</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">6</td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-PMOLSTObservation.html">ADI PMOLST Observation</a></td>
-        <td style="padding: 7px;"><p>This profile is used to indicate if a person has a medical order or physician order for life sustaining treatment (MOLST or POLST).</p>
-        <p><i>Development status: Initial draft available. Initial Mapping complete.</i></p></td>
+        <td style="padding: 7px;"><p>This profile is used to indicate if a person has a medical order or physician order for life sustaining treatment (MOLST or POLST).</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
     </tr>
-    <tr>    
+        <tr>    
         <td style="padding: 7px;">7</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-PersonalInterventionPreference.html">ADI Personal Intervention Preference</a></td>
-        <td style="padding: 7px;"><p>This profile is used to represent a personal preference for a type of medical intervention (treatment).</p>
-        <p><i>Development status: Mapping in Progress.</i></p></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-DNROrderObservation.html">ADI DNR Observation</a></td>
+        <td style="padding: 7px;"><p>This profile is used to indicate if a person has a Do Not Resuscitate, Do Not Attempt Resuscitation, or Allow Natural Death order is in place.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">8</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-OrganDonationObservation.html">ADI Organ Donation Observation</a></td>
-        <td style="padding: 7px;"><p>This profile is used to represent the author's thoughts about organ donation.</p>
-        <p><i>Development status: Initial draft available. Initial Mapping complete.</i></p></td>
-        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-Goal.html">ADI Goal</a></td>
+        <td style="padding: 7px;"><p>This profile defines the base requirements for all ADI Goals.</p></td>
+        <td style="padding: 7px;"><a href="https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-goal.html">US Core Goal</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">9</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-AutopsyObservation.html">ADI Autopsy Observation</a></td>
-        <td style="padding: 7px;"><p>This profile is used to represent the author's thoughts about autopsy.</p>
-        <p><i>Development status: Initial draft available. Initial Mapping complete.</i></p></td>
-        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-PersonalInterventionPreference.html">ADI Personal Intervention Preference</a></td>
+        <td style="padding: 7px;"><p>This profile is used to represent a personal preference for a type of medical intervention (treatment).</p></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-Goal.html">ADI Goal</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">10</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-PersonalPrioritiesOrganizer.html">ADI Personal Priorities Organizer</a></td>
-        <td style="padding: 7px;"><p>This profile is used to represent a set of personal goals, preferences or care experiences in a preferred ranked order.</p>
-        <p><i>Development status: Initial draft available. Initial Mapping complete.</i></p></td>
-        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/list.html">List</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-CareExperiencePreference.html">ADI Care Experience Preference</a></td>
+        <td style="padding: 7px;"><p>This profile is a clinical statement that presents the author's personal thoughts about something he or she feels is relevant to his or her care experience and may be pertinent when planning his or her care.</p></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-Goal.html">ADI Goal</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">11</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-CareExperiencePreference.html">ADI Care Experience Preference</a></td>
-        <td style="padding: 7px;"><p>This profile is a clinical statement that presents the author's personal thoughts about something he or she feels is relevant to his or her care experience and may be pertinent when planning his or her care.</p>
-        <p><i>Development status: Initial draft available. Initial Mapping complete.</i></p></td>
-        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-PersonalGoal.html">ADI Personal Goal</a></td>
+        <td style="padding: 7px;"><p>This profile is a statement that presents the author's personal health and treatment goals that are pertinent when planning his or her care.</p></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-Goal.html">ADI Goal</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">12</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-PersonalHealthGoal.html">ADI Personal Health Goal</a></td>
-        <td style="padding: 7px;"><p>This profile is a statement that presents the author's personal health goals that are pertinent when planning his or her care.</p>
-        <p><i>Development status: Initial draft available. Initial Mapping complete.</i></p></td>
-        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-PersonalPrioritiesOrganizer.html">ADI Personal Priorities Organizer</a></td>
+        <td style="padding: 7px;"><p>This profile is used to represent a set of personal goals, preferences or care experiences in a preferred ranked order.</p></td>
+        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/list.html">List</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">13</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-Guardian.html">ADI Guardian</a></td>
-        <td style="padding: 7px;"><p>This profile will show a relationship to a ward.</p>
-        <p><i>Development status: Not started.</i></p></td>
-        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-OrganDonationObservation.html">ADI Organ Donation Observation</a></td>
+        <td style="padding: 7px;"><p>This profile is used to represent the author's thoughts about organ donation.</p></td>
+        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
     </tr>
-    <tr>
+    <tr>    
         <td style="padding: 7px;">14</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-ConsentForHealthcareAgent.html">ADI Consent for Healthcare Agent</a></td>
-        <td style="padding: 7px;"><p>This profile is used for the healthcare agent to consent/express acceptance of being appointed as the agent for the patient.</p>
-        <p><i>Development status: Not started.</i></p></td>
-        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/consent.html">Consent</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-AutopsyObservation.html">ADI Autopsy Observation</a></td>
+        <td style="padding: 7px;"><p>This profile is used to represent the author's thoughts about autopsy.</p></td>
+        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
     </tr>
     <tr>
         <td style="padding: 7px;">15</td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-Provenance.html">ADI Provenance</a></td>
-        <td style="padding: 7px;"><p>[TODO] This profile is used for tracking the provenance of the Advance Directive resources.</p>
-        <p><i>Development status: Mapping in Progress.</i></p></td>
-        <td style="padding: 7px;"><a href="http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-provenance.html">US Core Provenance</a></td>
+        <td style="padding: 7px;"><p>Advance Directive Interoperability Provanance based on US Core to capture, search and fetch provenance information associated with advance directive interoperability data.</p></td>
+        <td style="padding: 7px;"><a href="https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-provenance.html">US Core Provenance</a></td>
     </tr>
     <tr>
         <th colspan="4" style="background-color: #9DC3E6; text-align:center; padding: 10px; padding: 10px;"><b>CONTENT TYPE II: Encounter-Centric Patient Instructions</b> <i>(after STU1)</i></th>
@@ -329,7 +355,7 @@ TODO
         <td style="padding: 7px;"><a href="#">ADI Advance Care Planning Intervention</a></td>
         <td style="padding: 7px;"><p>This profile is used to record a planned intervention that will involve reviewing and verifying a person’s directives, or will involve educating and supporting a person on establishing or modifying his or her advance directives.</p>
         <p><i>Development status: planned post STU1</i></p></td>
-        <td style="padding: 7px;"><a href="http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-procedure.html">US Core Procedure</a></td>
+        <td style="padding: 7px;"><a href="https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-procedure.html">US Core Procedure</a></td>
     </tr>
     <tr>
         <th colspan="4" style="background-color: #478FD1; text-align:center; padding: 10px; padding: 10px;"><b>CONTENT Type III: P/MOLST</b> <i>(after STU1)</i></th>
@@ -340,14 +366,15 @@ TODO
         <th style="padding: 10px;"><b>Based On</b></th>
     </tr>
     <tr>
-        <td style="padding: 7px;"> </td>
-        <td style="padding: 7px;">Not yet specified</td>
-        <td style="padding: 7px;"></td>
-        <td style="padding: 7px;"></td>
-    </tr>
-    <tr>
         <td style="padding: 7px;">21</td>
         <td style="padding: 7px;">ADI Consent for Portable Medical Orders</td>
+        <td style="padding: 7px;"><p>This profile is used to express the patient’s or healthcare agent consent that is not bound by an encounter.</p>
+        <p><i>Development status: planned post STU1</i></p></td>
+        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/consent.html">Consent</a></td>
+    </tr>
+    <tr>
+        <td style="padding: 7px;">22</td>
+        <td style="padding: 7px;">ADI Consent for DNR Orders</td>
         <td style="padding: 7px;"><p>This profile is used to express the patient’s or healthcare agent consent that is not bound by an encounter.</p>
         <p><i>Development status: planned post STU1</i></p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/consent.html">Consent</a></td>
@@ -361,7 +388,7 @@ TODO
         <th style="padding: 10px;"><b>Based On</b></th>
     </tr>
     <tr>
-        <td style="padding: 7px;">22</td>
+        <td style="padding: 7px;">23</td>
         <td style="padding: 7px;"><a href="#">ADI Consent to Share</a></td>
         <td style="padding: 7px;"><p>This profile is used to expresses the patient’s or healthcare agent consent to share Advance Directive information with others</p>
         <p><i>Development status: planned post STU1</i></p></td>

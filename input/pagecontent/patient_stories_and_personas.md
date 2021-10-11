@@ -1,16 +1,17 @@
-[//]: #  ## Patient Stories and Personas 
+
 
 ### Create in a digital form and make available for sharing and accessing 
+
 #### Create in a digital form and make available for sharing and accessing advance directive information
-<p>
+
 Angie has Sickle Cell Disease. She worries that if she contracts COVID-19 and becomes unable to communicate with medical personnel, they won't be familiar with her history and specific treatment needs. 
-</p>
-<p>
+
+
 She uses a consumer facing tool to create a digital advance directive or upload a scanned copy of her paper advance directive document. Her interoperable digital advance directive information is made available by being stored in a registry/repository/HIE/QHIN/EHR. 
-</p>
-<p>
+
+
 Angie shares her advance directive information with her medical proxy/healthcare agent and primary care physician so if either are contacted by a treating provider in an emergency, they can make her advance directive accessible to inform treatment.
-</p>
+
 <img src="./patient_story_1a.png" alt="Patient Story 1a"/>
  <br clear="all" />
 
@@ -53,7 +54,7 @@ Frank's condition worsens sharply one day and he is taken by ambulance to the ne
 Frank is transferred to a skilled nursing facility for post-acute care. The practitioner overseeing his care in the Skilled Nursing Facility (SNF) meets with Frank to discuss his goals of care, his hospital DNR, and reviews his advance directive with him. He recommends creation of a portable medical order for life-sustaining treatment to align with Frank's desire to prevent an unwanted hospital transfer. 
 </p>
 <p>
-The practitioner ensures the portable medical order for life-sustaining treatment document is added to Frank’s SNF medical record so it is accessible by facility staff in case of emergency.  Frank also receives a copy of this new document, which he places in his bedside table.
+The practitioner ensures the portable medical order for life-sustaining treatment document is added to Frank’s SNF medical record so it is accessible by facility staff in case of emergency. Frank also receives a copy of this new document, which he places in his bedside table.
 </p>
 <p>
 The facility's medical record is integrated to the broader healthcare ecosystem which accessed Frank's advance directive, and now enables his portable medical order for life-sustaining treatment document to be available in a registry/repository/HIE/QHIN so as to inform treatment during a transition of care. 

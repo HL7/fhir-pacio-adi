@@ -1,7 +1,7 @@
 '''
 Benjamin Langley
 
-Usage: python3 R4CapStatement_Maker.py [xlsx file]
+Usage: python3 R4CapStatement_NarrativeMaker.py [json file]
 Dependecies: 
     fhirclient
     pandas
@@ -36,6 +36,7 @@ import re
 
 import tarfile
 # import fhirclient.r4models.narrative as N
+import json
 from json import dumps, loads
 from requests import post
 from pathlib import Path
@@ -74,131 +75,23 @@ def markdown(text, *args, **kwargs):
 def main():
     if (len(sys.argv) < 2):
         print(
-            "Error: missing xlsx file - correct usage is:\n\tpython3 R4CapStatement_Maker.py [xlsx file]")
+            "Error: missing json file - correct usage is:\n\tpython3 R4CapStatement_NarrativeMaker.py [json file]")
         return
 
     xls = sys.argv[1]
 
-    print('....creating CapabilityStatement.....')
+    in_json_file = sys.argv[1]
+    
+    print('....Generating CapabilityStatement Narrative.....')
 
-    # Read the config sheet from the spreadsheet
-    # use the index_col = 0 for setting the first row as the index
-    config_df = read_excel(xls, 'config', na_filter=False, index_col=0)
 
-    # --------- ig specific variable -------------------
-    pre = config_df.Value.pre  # for Titles - not sure this is actually used
-    canon = config_df.Value.canon  # don't forget the slash  - fix using os.join or path
-    publisher = config_df.Value.publisher
-    restinteraction = config_df.Value.rest
-    publisher_endpoint = dict(
-        system=config_df.Value.publishersystem,
-        value=config_df.Value.publishervalue,
-    )
-  
-    definitions_file = config_df.Value.definitions_file   #source of  spec.internal file manually extracted from downloaded spec
-    # Read the meta sheet from the spreadsheet
-    meta_df = read_excel(xls, 'meta', na_filter=False)
-    meta_dict = dict(zip(meta_df.Element, meta_df.Value))
-    meta = namedtuple("Meta", meta_dict.keys())(*meta_dict.values())
 
-    # Create the CapabilityStatement
-    cs = create_capabilitystatement(
-        meta, canon, publisher, publisher_endpoint, xls)
-    rest = CS.CapabilityStatementRest(dict(
-        mode=meta.mode,
-        documentation=meta.documentation,
-        security=dict(
-            description=meta.security
-        ) if meta.security else None,
-        interaction=get_rest_ints(xls) if restinteraction else None,
-        operation=get_sys_op(xls)
-    ))
-    cs.rest = [rest]
+    with open(in_json_file, 'r') as h:
+        pjs = json.load(h)
+    capStatement = CS.CapabilityStatement(pjs)
+    #print(dumps(capStatement.as_json(), indent=3))    # %% [markdown]
 
-    df_profiles = read_excel(xls, 'profiles', na_filter=False)
-    df_profiles = df_profiles[df_profiles.Profile.str[0] != '!']
-
-    resources_df = read_excel(xls, 'resources', na_filter=False)
-    resources_df = resources_df[resources_df.type.str[0] != '!']
-
-    df_i = read_excel(xls, 'interactions', na_filter=False)
-    df_sp = read_excel(xls, 'sps', na_filter=False)
-    df_combos = read_excel(xls, 'sp_combos', na_filter=False)
-    df_op = read_excel(xls, 'ops', na_filter=False)
-
-    rest.resource = []
-    for r in resources_df.itertuples(index=True):
-        supported_profile = [p.Profile for p in df_profiles.itertuples(
-            index=True) if p.Type == r.type]
-        res = CS.CapabilityStatementRestResource(
-            dict(
-                type=r.type,
-                documentation=r.documentation if r.documentation not in none_list else None,
-                versioning=r.versioning if r.versioning not in none_list else None,
-                readHistory=r.readHistory if r.readHistory not in none_list else None,
-                updateCreate=r.updateCreate if r.updateCreate not in none_list else None,
-                conditionalCreate=r.conditionalCreate if r.conditionalCreate not in none_list else None,
-                conditionalRead=r.conditionalRead if r.conditionalRead not in none_list else None,
-                conditionalUpdate=r.conditionalUpdate if r.conditionalUpdate not in none_list else None,
-                conditionalDelete=r.conditionalDelete if r.conditionalDelete not in none_list else None,
-                referencePolicy=[re.sub('\s+','',x) for x in r.referencePolicy.split(",") if x],
-                searchInclude=[re.sub('\s+','',x) for x in r.shall_include.split(
-                    ",") + r.should_include.split(",") if x],
-                searchRevInclude=[re.sub('\s+','',x) for x in r.shall_revinclude.split(
-                    ",") + r.should_revinclude.split(",") if x],
-                interaction=get_i(r.type, df_i),
-                searchParam=get_sp(r.type, df_sp, pre, canon),
-                operation=get_op(r.type, df_op),
-                supportedProfile=supported_profile
-            )
-        )
-        res.extension = get_conf(r.conformance)
-        combos = {(i.combo, i.combo_conf)
-                  for i in df_combos.itertuples(index=True) if i.base == r.type}
-        # convert list to  lst of combo extension
-        res.extension = res.extension + get_combo_ext(r.type, combos)
-        rest.resource.append(res)
-
-    rest.resource = sorted(
-        rest.resource, key=lambda x: x.type)  # sort resources
-    cs.rest = [rest]
-
-    # add in conformance expectations for primitives
-    # convert to dict since model can't handle primitive extensions
-    resttype_dict = res.as_json()
-
-    for i in ['Include', 'RevInclude']:
-        element = f'_search{i}' 
-        resttype_dict[element] = []
-        for expectation in ['should', 'shall']:  # list all should includes first
-            sp_attr = f'{expectation}_{i.lower()}'
-            includes = getattr(r, sp_attr).split(',')
-
-            for include in includes:
-                if include not in none_list:
-                    conf = get_conf(expectation.upper(), as_dict=True)
-                    resttype_dict[element].append(conf)
-
-        if not resttype_dict[element]:
-            del(resttype_dict[element])
-
-    print(resttype_dict)
-
-    print(dumps(cs.as_json(), indent=3))    # %% [markdown]
-
-    print('.............validating..............')
-    r = validate(cs)
-    if (r.status_code != 200):
-        print("Error: Unable to validate - status code {}".format(r.status_code))
-    path = Path.cwd() / 'validation.html'
-    path.write_text(
-        f'<h1>Validation output</h1><h3>Status Code = {r.status_code}</h3> {r.json()["text"]["div"]}')
-    print(f"HTML webpage of validation saved to:\n\t {path}")
-
-    # get from package (json) file in local .fhir directory
-    si = get_si2(definitions_file)
-    path_map = si['paths']
-    path_map
+    # CapabilityStatement loaded
 
     in_path = ''
     in_file = 'R4capabilitystatement-server.j2'
@@ -213,16 +106,11 @@ def main():
 
     template = env.get_template(in_file)
 
-    sp_map = {sp.code: sp.type for sp in df_sp.itertuples(index=True)}
-    sp_url_map  = {sp.code: sp.rel_url for sp in df_sp.itertuples(index=True)}
-    pname_map = {p.Profile: p.Name for p in df_profiles.itertuples(index=True)}
-    print(pname_map)
-
-    rendered = template.render(cs=cs, path_map=path_map,
-                            pname_map=pname_map, sp_map=sp_map, sp_url_map=sp_url_map)
+    rendered = template.render(cs=capStatement, path_map='',
+                            pname_map='', sp_map='')
 
     # print(HTML(rendered))
-
+    
 
     parser = etree.XMLParser(remove_blank_text=True)
     root = etree.fromstring(rendered, parser=parser)
@@ -230,14 +118,37 @@ def main():
     div = (etree.tostring(root[1][0], encoding='unicode', method='html'))
     narr = N.Narrative()
     narr.status = 'generated'
+
+
+    #div = re.sub('https://paciowg.github.io/advance-directives-ig/StructureDefinition-', 'SSSSSSSSSSSSSSSSS', div)
+    # replace all of the supported profile urls in link text with just the profile name from inside the cononical url
+    div = re.sub('">\(https?://.*/StructureDefinition-(.*)\.html\)</a>', '">\\1</a>', div)
+    #div = re.sub('">\(https://paciowg.github.io/advance-directives-ig/StructureDefinition-PADI-(PersonalGoal.html)</a>', '\\1', div)
     narr.div = div
-    cs.text = narr
+
+    #print(dumps(narr.div, indent=3))    # %% [markdown]
+    capStatement.text = narr
+    outfile = 'Narrative-' + in_json_file
+    path = Path.cwd() / outfile
+    path.write_text(dumps(capStatement.as_json(), indent=4))
+
+
+    print('.............validating..............')
+    r = validate(capStatement)
+    if (r.status_code != 200):
+        print("Error: Unable to validate - status code {}".format(r.status_code))
+    path = Path.cwd() / 'validation.html'
+    path.write_text(
+        f'<h1>Validation output</h1><h3>Status Code = {r.status_code}</h3> {r.json()["text"]["div"]}')
+    print(f"HTML webpage of validation saved to:\n\t {path}")
+
+    # get from package (json) file in local .fhir directory
     # save to file
-    print('...........saving to file............')
+    print('...........done............')
     # path = Path.cwd() / f'capabilitystatement-{cs.id.lower()}.json'
-    path = Path.cwd() / f'capabilitystatement-{meta.title.lower()}.json'
-    path.write_text(dumps(cs.as_json(), indent=4))
-    print(f"CapabilityStatement saved to:\n\t {path}")
+    #path = Path.cwd() / f'capabilitystatement-{meta.title.lower()}.json'
+    #path.write_text(dumps(cs.as_json(), indent=4))
+    #print(f"CapabilityStatement saved to:\n\t {path}")
 
 
 def get_conf(conf='MAY', as_dict=False):
@@ -401,9 +312,6 @@ def get_sp(r_type, df_sp, pre, canon):
                         #sp.definition = f'{fhir_base_url}SearchParameter/Resource-{i.code.split("_")[-1]}'
                         sp.definition = f'{fhir_base_url}SearchParameter/{i.base}-{i.code.split("_")[-1]}'
 
-            if(validators.url(i.rel_url)):
-                sp.documentation = f'{i.rel_url}'
-            # sp.documentation = f'{i.rel_url}'
             sp.type = i.type
             sp.extension = get_conf(i.base_conf)
             sp_list.append(sp.as_json())

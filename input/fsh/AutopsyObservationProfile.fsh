@@ -6,8 +6,11 @@ Description: "This profile is used to represent the author's thoughts about auto
 
 * text 1..1 MS
 * status = #final
-* code from PADIAutopsyVS (required)
+//* code from PADIAutopsyVS (required)
 * code = $LOINC#75782-3
+* subject 1..1 MS
+* subject only Reference($USCorePatient)
+
 * value[x] 1..1 MS
 
 * note MS

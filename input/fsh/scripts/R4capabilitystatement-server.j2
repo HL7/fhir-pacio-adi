@@ -71,9 +71,12 @@
 						<td>
 							<a href="#{{r.type | lower }}">{{r.type}}</a>
 						</td>
-						<td>
+						<td style="white-space:nowrap;">
 {% if r.supportedProfile %}{% for i in r.supportedProfile %}
-						<a href="{% if path_map[i] %}{{path_map[i]}}{% else %}{{i}}{% endif %}">{{pname_map[i]}}</a>{%- if not loop.last %}, {% endif %}
+						
+						<a href="{% if path_map[i] %}{{path_map[i]}}{% else %}{{i}}{% endif %}">{% if pname_map[i] %}{{pname_map[i]}}{% else %}({{i}}){% endif %}</a>
+						
+						{%- if not loop.last %}, {% endif %}
 {%  endfor %}{% endif %}
 						</td>
 
@@ -115,7 +118,7 @@
 
 			{% if r.supportedProfile %}<p>Supported Profiles:
 				{% for i in r.supportedProfile %}
-											<a href="{% if path_map[i] %}{{path_map[i]}}{% else %}{{i}}{% endif %}">{{pname_map[i]}}</a>{%- if not loop.last %}, {% endif %}
+											<a href="{% if path_map[i] %}{{path_map[i]}}{% else %}{{i}}{% endif %}">{% if pname_map[i] %}{{pname_map[i]}}{% else %}({{i}}){% endif %}</a>{%- if not loop.last %}, {% endif %}
 				{%  endfor %}
 				</p>{% endif %}
 
@@ -267,7 +270,7 @@
 							<strong>{% if s.extension %}{{ s.extension[0].valueCode }}{% else %}undefined{% endif %}</strong>
 						</td>
 						<td>
-							<a href="{% if path_map[s.definition] %}{{path_map[s.definition]}}{% else %}http://hl7.org/fhir/R4/search.html{% endif %}">{{s.name}}</a>
+							<a href="{% if sp_url_map[s.name] %}{{sp_url_map[s.name]}}{% else %}http://hl7.org/fhir/R4/search.html{% endif %}">{{s.name}}</a>
 						</td>
 						<td>
 							{{s.type}}

@@ -24,7 +24,7 @@ description: PACIO Advance Directive Interoperability Implementation Guide
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.us.core: 3.1.1   # updated from 3.1.0 on 9/23/20
+  hl7.fhir.us.core: 4.0.0  # updated from 3.1.0 on 9/23/20
 #  hl7.fhir.us.ccda: 1.1.0   # US Realm Header for DocumentReference
 parameters:
   show-inherited-invariants: false
@@ -41,16 +41,17 @@ menu:
   Home: index.html
   Table of Contents: toc.html
   Guidance:
-    Business Case:  business_case.html
+    Business Case: business_case.html
     Patient Stories and Personas: patient_stories_and_personas.html
     Use Cases: use_cases.html
-    Security: security.html
+    General Guidance: general_guidance.html
+    Security, Privacy, and Consent: security_privacy_consent.html
   FHIR Artifacts:
-    Profiles: artifacts.html#1
-    Extensions: artifacts.html#3
-    Terminology: artifacts.html#4
+    Profiles: artifacts.html#2
+    Extensions: artifacts.html#4
+    Terminology: artifacts.html#5
     Capability Statement: CapabilityStatement-padi.html
-    Examples: artifacts.html#5
+    Examples: artifacts.html#6
 #    Search Parameters: 6_searchparameters.html
   #Examples: artifacts.html#7
   Downloads: downloads.html
