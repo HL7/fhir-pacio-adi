@@ -58,8 +58,10 @@ For the purposes of Advance Directive Interoperability, additional security conf
             3.	launch/patient
             4.	patient/*.read
             5.	patient/Bundle.*
-            6.	user/Patient.read
-            7.	user/Bundle.read
+            6.	patient/DocumentReference.*
+            7.	user/Patient.read
+            8.	user/Bundle.*
+            8.	user/DocumentReference.*
 
 #### Individual-Authorized Exchange
 1.	http://hl7.org/fhir/us/davinci-pdex/Member-AuthorizedOAuth2Exchange.html
