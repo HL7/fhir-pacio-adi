@@ -30,3 +30,5 @@ Description: "The Preference Care Plan is a means for an individual to express t
 * goal 1..* MS
 * goal only Reference(PADIPersonalInterventionPreference or PADIPersonalGoal or PADICareExperiencePreference)
 
+* extension contains
+    padi-goal-order-by-descening-priority-extension named GoalOrderByDescendingPriority 0..1 

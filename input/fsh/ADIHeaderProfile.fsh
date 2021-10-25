@@ -24,6 +24,7 @@ Description: "This abstract profile defines constraints that represent common ad
 
 * extension contains
     padi-versionNumber-extension named VersionNumber 0..1 MS and
+    padi-effective-date-extension named EffectiveDateExtension 0..1 MS and
     padi-jurisdiction-extension named Jurisdiction 0..* and 
     padi-dataEnterer-extension named DataEntererExtension 0..1 MS and
     padi-informant-extension named InformatExtension 0..* MS and
@@ -31,7 +32,8 @@ Description: "This abstract profile defines constraints that represent common ad
     padi-participant-extension named ParticipantExtension 0..* MS and
     padi-performer-extension named PerformerExtension 0..* MS and
     padi-authorization-extension named AuthorizationExtension 0..* MS and
-    padi-order-extension named OrderExtension 0..* MS
+    padi-order-extension named OrderExtension 0..* MS and
+    padi-clause-extension named ClauseExtension 0..* MS
 
 * language 1..1 MS
 * identifier 1..1 MS

@@ -70,12 +70,22 @@ This ValueSet is managed at the US National Library of Medicine (NLM) Value Set 
 
 
 
+
 ValueSet: PADIInterventionPreferencesVS
 Title: "Intervention Preferences"
 Description: "Clinical Focus: This value set includes concepts representing an individual's intervention preferences which can be expressed by the individual in his or her advance care plan.),(Data Element Scope: The intent of this value set is to identify personal intervention preferences that may be relevant and could be considered by clinicians or any person or organization that is providing care, treatment, or performing any other type of act to or on behalf of the individual.)"
-* include $LOINC#75776-5 "Preference on consulting a supportive and palliative care team to help treat physical, emotional, and spiritual discomfort and support family [Reported]"
-* include $LOINC#75777-3 "Information to tell doctors if my health deteriorates due to a terminal illness and I am unable to interact meaningfully with family, friends, or surroundings [Reported]"
-* include $LOINC#75778-1 "Information to tell doctors if I have a severe, irreversible brain injury or illness and can't dress, feed, or bathe myself, or communicate my medical wishes, but can be kept alive [Reported]"
+* codes from valueset PADIInterventionPreferencesOrdinalVS
+* codes from valueset PADIInterventionPreferencesNarrativeVS
+//* codes from valueset PADIUponDeathPreferencesVS
+* insert LOINCCopyrightNotice
+
+
+
+
+
+ValueSet: PADIInterventionPreferencesOrdinalVS
+Title: "Intervention Preferences - Ordinal"
+Description: "Clinical Focus: This value set includes concepts representing an individual's intervention preferences which can be expressed by the individual in his or her advance care plan.),(Data Element Scope: The intent of this value set is to identify personal intervention preferences that may be relevant and could be considered by clinicians or any person or organization that is providing care, treatment, or performing any other type of act to or on behalf of the individual.)"
 * include $LOINC#75780-7 "Preferred location to spend final days if possible to choose [Reported]"
 * include $LOINC#75787-2 "Advance directive - request for intubation"
 * include $LOINC#75788-0 "Advance directive - request for tube feeding"
@@ -83,6 +93,19 @@ Description: "Clinical Focus: This value set includes concepts representing an i
 * include $LOINC#75790-6 "Advance directive - request for IV fluid and support"
 * include $LOINC#75791-4 "Advance directive - request for antibiotics"
 * include $LOINC#75792-2 "Advance directive - request for resuscitation that differs from cardiopulmonary resuscitation"
+* insert LOINCCopyrightNotice
+
+
+
+
+
+ValueSet: PADIInterventionPreferencesNarrativeVS
+Title: "Intervention Preferences - Narrative"
+Description: "Clinical Focus: This value set includes concepts representing an individual's intervention preferences which can be expressed by the individual in his or her advance care plan.),(Data Element Scope: The intent of this value set is to identify personal intervention preferences that may be relevant and could be considered by clinicians or any person or organization that is providing care, treatment, or performing any other type of act to or on behalf of the individual.)"
+* include $LOINC#75776-5 "Preference on consulting a supportive and palliative care team to help treat physical, emotional, and spiritual discomfort and support family [Reported]"
+* include $LOINC#75777-3 "Information to tell doctors if my health deteriorates due to a terminal illness and I am unable to interact meaningfully with family, friends, or surroundings [Reported]"
+* include $LOINC#75778-1 "Information to tell doctors if I have a severe, irreversible brain injury or illness and can't dress, feed, or bathe myself, or communicate my medical wishes, but can be kept alive [Reported]"
+* include $LOINC#75780-7 "Preferred location to spend final days if possible to choose [Reported]"
 * include $LOINC#75793-0 "Other directives that have not otherwise been documented [Reported]"
 * include $LOINC#77352-3 "Thoughts on artificial nutrition and hydration [Reported]"
 * include $LOINC#81329-5 "Thoughts on resuscitation [Reported]"
@@ -94,8 +117,9 @@ Description: "Clinical Focus: This value set includes concepts representing an i
 * include $LOINC#81350-1 "Thoughts on pain management [Reported]"
 * include $LOINC#81376-6 "Mental health treatment preferences [Reported]"
 * include $LOINC#75779-9 "Thoughts on cardiopulmonary resuscitation (CPR) [Reported]"
-* codes from valueset PADIUponDeathPreferencesVS
 * insert LOINCCopyrightNotice
+
+
 
 ValueSet: PADIHCAConsentTypeVS
 Title: "Healthcare Agent Powers or Limitations Indicator"
@@ -109,14 +133,21 @@ Description: "Codes indicating information is regarding powers or limitations of
 ValueSet: PADIHCADecisionsVS
 Title: "Healthcare Agent Decisions"
 Description: "Codes indicating decisions a healtcare agent may or may not make on behalf of an individual."
-* include $LOINC#75787-2 "Advance directive - request for intubation"
-* include $LOINC#75788-0 "Advance directive - request for tube feeding"
-* include $LOINC#75789-8 "Advance directive - request for life support"
-* include $LOINC#75790-6 "Advance directive - request for IV fluid and support"
-* include $LOINC#75791-4 "Advance directive - request for antibiotics"
-* include $LOINC#75792-2 "Advance directive - request for resuscitation that differs from cardiopulmonary resuscitation"
+* codes from system PADIHCADecisionsCS
 * insert LOINCCopyrightNotice
 
+
+CodeSystem: PADIHCADecisionsCS
+Title: "Healthcare Agent Decisions"
+Description: "Codes indicating decisions a healtcare agent may or may not make on behalf of an individual."
+* #intubation "Intubation" "Request or reject intubation on behalf of the patient"
+* #tube-feeding "Tube feeding" "Request or reject tube feeding on behalf of the patient"
+* #life-support "Life support" "Request or reject life support on behalf of the patient"
+* #iv-fluid-and-support "IV fluid and support" "Request or reject IV fluid and support on behalf of the patient"
+* #antibiotics "Antibiotics" "Request or reject intubation on behalf of the patient"
+* #cpr "Cardiopulmonary Resuscitation (CPR)" "Request or reject cardiopulmonary Resuscitation (CPR) on behalf of the patient"
+* #resuscitations-non-cpr "Non-CPR Resuscitation" "Request or reject resuscitation that differs from cardiopulmonary resuscitation on behalf of the patient"
+* insert LOINCCopyrightNotice
 
 
 ValueSet: PADIUponDeathPreferencesVS
@@ -176,9 +207,33 @@ Description: "Codes indicating a role of an attester."
 
 
 
+ValueSet: PADIClauseTypesVS
+Title: "Type of clause"
+Description: "Type of clause"
+* codes from system PADIClauseTypesCS
+
+
+CodeSystem: PADIClauseTypesCS
+Title: "Type of clause"
+Description: "Type of clause"
+* #introduction "Indtroduction"
+* #operative "Operative"
+* #signatory "Signatory"
+* #recital "Recital"
+
+
+ValueSet: PADIDocumentationTypeVS
+Title: "Advance Directive Documentation Types"
+Description: "Types of Advance Directive Documents"
+* include $LOINC#81352-7 "Medical Order for Life-Sustaining Treatment, Physician Order for Life-Sustaining Treatment, or a similar medical order is in place [Reported]"
+* include $LOINC#81351-9 "Do Not Resuscitate, Do Not Attempt Resuscitation, or Allow Natural Death order is in place [Reported]"
+* insert LOINCCopyrightNotice
+
+
 
 RuleSet: LOINCCopyrightNotice
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc."
 
 RuleSet: SNOMEDCopyrightNotice
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+

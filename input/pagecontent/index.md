@@ -256,14 +256,8 @@ Systems used to create and update patient-generated advance directive informatio
     </tr>
     <tr>    
         <td style="padding: 7px;">6</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-PMOLSTObservation.html">ADI PMOLST Observation</a></td>
-        <td style="padding: 7px;"><p>This profile is used to indicate if a person has a medical order or physician order for life sustaining treatment (MOLST or POLST).</p></td>
-        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
-    </tr>
-        <tr>    
-        <td style="padding: 7px;">7</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-DNROrderObservation.html">ADI DNR Observation</a></td>
-        <td style="padding: 7px;"><p>This profile is used to indicate if a person has a Do Not Resuscitate, Do Not Attempt Resuscitation, or Allow Natural Death order is in place.</p></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-DocumentationObservation.html">ADI Documentation Observation</a></td>
+        <td style="padding: 7px;"><p>This profile is used to indicate if additional advance directive documents, such as physician order for life sustaining treatment (MOLST or POLST) or Do Not Resuscitate Order (DNR) exist and a reference to the document.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
     </tr>
     <tr>    

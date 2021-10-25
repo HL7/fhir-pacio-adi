@@ -112,6 +112,47 @@ Description: "The Attestation Information Extension allows for the capture of in
 * extension[Signature].value[x] 1..1 MS
 * extension[Signature].value[x] only Signature
 
+
+Extension: EffectiveDateExtension
+Id: padi-effective-date-extension
+Title: "Effective Date"
+Description: "The Advance Directive document effective dates."
+* value[x] only Period
+* valuePeriod 1..1 MS
+
+
+Extension: ClauseExtension
+Id: padi-clause-extension
+Title: "Clause"
+Description: "A clause or set of clauses relavant to the resource or element being extended"
+* extension 1..*
+* extension contains
+	Section 0..1 and
+	Type 0..1 and
+	Clause 1..* MS
+
+* extension[Section] ^short = "Section in which clauses are presented."
+* extension[Section].value[x] 1..1
+* extension[Section].value[x] only string
+
+* extension[Type] ^short = "Type of clause."
+* extension[Type].value[x] 1..1
+* extension[Type].value[x] only CodeableConcept
+* extension[Type].valueCodeableConcept from PADIClauseTypesVS
+
+* extension[Clause] ^short = "A human readable clause."
+* extension[Clause].value[x] 1..1 MS
+* extension[Clause].value[x] only markdown
+
+
+Extension: GoalOrderByDescendingPriority
+Id: padi-goal-order-by-descening-priority-extension
+Title: "Goal Order by Descending Priority"
+Description: "Inidcates if the goals are ordered in descending priority (Y) or no specific order (N)."
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1 MS
+* valueCodeableConcept from $HL7YesNoVS (extensible)
+
 // TODO Could add Invariant for Signature.type matching the attesterRole
 // TODO Notary Expiration Date?
 

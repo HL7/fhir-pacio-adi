@@ -19,6 +19,9 @@ Alias: $USRealmHeader = http://hl7.org/fhir/us/ccda/StructureDefinition/US-Realm
 
 Alias: $HL7ProvenancePartcipantType = http://terminology.hl7.org/CodeSystem/provenance-participant-type
 Alias: $HL7NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
+Alias: $HL7YesNoVS = http://terminology.hl7.org/ValueSet/v2-0136
+Alias: $HL7YesNoCS = http://terminology.hl7.org/CodeSystem/v2-0532
+
 
 
 Alias: $HL7CompositionAttestation = http://hl7.org/fhir/ValueSet/composition-attestation-mode

@@ -6,6 +6,16 @@ Description: "This profile is used to represent a personal preference for a type
 
 * category from PADIInterventionPreferencesVS (extensible)
 
+* obeys value-personal-intervention-preference-ordinal
+
+
+Invariant:  value-personal-intervention-preference-ordinal
+Description: "If the Personal Intervention Preference code is from the Personal Intervention Preference Ordinal ValueSet, the value SHALL be 'Y' or 'N'"
+Expression: "category.coding.where(code.memberOf('http://hl7.org/fhir/us/pacio-adi/ValueSet/PADIInterventionPreferencesOrinalVS')).exists() implies description.coding.code = 'Y'"
+//Expression: "category.coding.where(code.memberOf('http://hl7.org/fhir/us/pacio-adi/ValueSet/PADIInterventionPreferencesOrinalVS')).exists() implies description.coding.where(code.memberOf('http://terminology.hl7.org/ValueSet/v2-0136')).exists()"
+//Expression: "category.coding.code.memberOf('http://hl7.org/fhir/us/pacio-adi/ValueSet/PADIInterventionPreferencesOrinalVS').exists()"
+Severity:   #error
+
 /*
 Profile: PADIPersonalInterventionPreference
 Parent: Observation

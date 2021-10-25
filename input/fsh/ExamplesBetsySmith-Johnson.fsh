@@ -76,6 +76,10 @@ Usage: #example
 * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-AutopsyObservation1"
 * entry[=].resource = Example-Smith-Johnson-AutopsyObservation1
 
+* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-DocumentationObservation1"
+* entry[=].resource = Example-Smith-Johnson-DocumentationObservation1
+
+
 * entry[+].fullUrl = "http://www.example.org/fhir/Organization/Example-Smith-Johnson-OrganizationCustodian1"
 * entry[=].resource = Example-Smith-Johnson-OrganizationCustodian1
 
@@ -315,11 +319,23 @@ Usage: #example
 
 
 
+
+* section[additional_documentation].title = "Additional Documentation"
+* section[additional_documentation].code = $LOINC#77599-9
+* section[additional_documentation].text.status = #generated
+* section[additional_documentation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>PMOLST Order Observation</b></p>
+<p><i>Order Exists: <a href='http://www.example.com'>available here</a></i></p>
+</div>"
+
+* section[additional_documentation].entry[+] = Reference(Example-Smith-Johnson-DocumentationObservation1)
+
+
 // Line 1205
-* section[administrative_information].title = "Witnesses and Notary"
-* section[administrative_information].code = $LOINC#81339-4 "Witness and Notary Document"
-* section[administrative_information].text.status = #additional
-* section[administrative_information].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+* section[witness_and_notary].title = "Witnesses and Notary"
+* section[witness_and_notary].code = $LOINC#81339-4 "Witness and Notary Document"
+* section[witness_and_notary].text.status = #additional
+* section[witness_and_notary].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 
 <p>I am emotionally and mentally competent to make this uADD.  I understand the purpose and effect of this uADD, I agree with everything that is written in this uADD, and I have made this uADD knowingly, willingly and after careful deliberation.</p>
 
@@ -452,12 +468,12 @@ Usage: #example
 * provision.actor[+].role = $LOINC#75784-9 "First alternate healthcare agent [Reported]"
 * provision.actor[=].reference = Reference(Example-Smith-Johnson-HealthcareAgent2)
 
-* provision.action[+] = $LOINC#75787-2 "Advance directive - request for intubation"
-* provision.action[+] = $LOINC#75788-0 "Advance directive - request for tube feeding"
-* provision.action[+] = $LOINC#75789-8 "Advance directive - request for life support"
-* provision.action[+] = $LOINC#75790-6 "Advance directive - request for IV fluid and support"
-* provision.action[+] = $LOINC#75791-4 "Advance directive - request for antibiotics"
-* provision.action[+] = $LOINC#75792-2 "Advance directive - request for resuscitation that differs from cardiopulmonary resuscitation"
+* provision.action[+] = PADIHCADecisionsCS#intubation "Intubation"
+* provision.action[+] = PADIHCADecisionsCS#tube-feeding "Tube feeding"
+* provision.action[+] = PADIHCADecisionsCS#life-support "Life support"
+* provision.action[+] = PADIHCADecisionsCS#iv-fluid-and-support "IV fluid and support"
+* provision.action[+] = PADIHCADecisionsCS#antibiotics "Antibiotics"
+* provision.action[+] = PADIHCADecisionsCS#resuscitations-non-cpr "Non-CPR Resuscitation"
 
 * provision.purpose = http://terminology.hl7.org/CodeSystem/v3-ActReason#PWATRNY
 
@@ -558,7 +574,7 @@ InstanceOf: PADICareExperiencePreference
 Description: "Example Patient Smith-Johnson Care Experience Preference (Role of Religion)"
 Usage: #example
 
-* text.status = #additional
+* text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p>Here are some thoughts that I would like for my medical care team and my healthcare agent(s) to know about the role that religion, faith or spirituality play in my life:</p>
 <p><i>I am Catholic, please call Father Mark at Saint Catherine's on Main Street.</i></p>
@@ -577,7 +593,7 @@ InstanceOf: PADICareExperiencePreference
 Description: "Example Patient Smith-Johnson Care Experience Preference (My Likes and Joys)"
 Usage: #example
 
-* text.status = #additional
+* text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p><b>My likes / joys:</b></p>
 <p>Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed:</p>
@@ -597,7 +613,7 @@ InstanceOf: PADICareExperiencePreference
 Description: "Example Patient Smith-Johnson Care Experience Preference (My Dislikes and Fears)"
 Usage: #example
 
-* text.status = #additional
+* text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p><b>My dislikes / fears:</b></p>
 <p>Here is a list of things that I would like to avoid if at all possible, people that I don’t wish to see, and concerns I have about particular family members, pets, and so on:</p>
@@ -617,7 +633,7 @@ InstanceOf: PADICareExperiencePreference
 Description: "Example Patient Smith-Johnson Care Experience Preference (How to Care for Me)"
 Usage: #example
 
-* text.status = #additional
+* text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p><b>How to care for me:</b></p>
 <p>If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me:</p>
@@ -637,7 +653,7 @@ InstanceOf: PADICareExperiencePreference
 Description: "Example Patient Smith-Johnson Care Experience Preference (My Religion)"
 Usage: #example
 
-* text.status = #additional
+* text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p><b>My religion:</b></p>
 <p>If I appear to be approaching the end of my life, here are some things that I would like for my caregivers to know about my faith and my religion.</p>
@@ -656,7 +672,7 @@ InstanceOf: PADICareExperiencePreference
 Description: "Example Patient Smith-Johnson Care Experience Preference (Religious Contact)"
 Usage: #example
 
-* text.status = #additional
+* text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p><b>Please attempt to notify someone from my religion at the following phone number:</b></p>
 <p>If I have included one</p>
@@ -677,7 +693,7 @@ InstanceOf: PADICareExperiencePreference
 Description: "Example Patient Smith-Johnson Care Experience Preference (Religious Contact)"
 Usage: #example
 
-* text.status = #additional
+* text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p><b>My unfinished business:</b></p>
 <p>If it appears that I am approaching the end of my life, and I cannot communicate with persons around me, I would want my doctors and nurses, my family, and my friends to know about some unfinished business that I need to address:</p>
@@ -697,7 +713,7 @@ InstanceOf: PADICareExperiencePreference
 Description: "Example Patient Smith-Johnson Care Experience Preference (Religious Contact)"
 Usage: #example
 
-* text.status = #additional
+* text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p><b>Laughter:</b></p>
 <p>These are some of my fondest memories from life that have always brought a smile to my face or made me laugh:</p>
@@ -748,7 +764,7 @@ InstanceOf: PADIPersonalGoal
 Description: "Example Patient Smith-Johnson Personal Goal 1"
 Usage: #example
 
-* text.status = #additional
+* text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p><b>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:</b></p>
 <p>
@@ -810,13 +826,14 @@ InstanceOf: PADIPersonalInterventionPreference
 Description: "Example Patient Smith-Johnson Personal Intervention Preference (Significant Pain or Suffering)"
 Usage: #example
 
-* text.status = #additional
+* text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p>If I am having significant pain or suffering,</p>
 <p><i>I would like my doctors to consult a Supportive and Palliative Care Team to help treat my physical, emotional and spiritual discomfort, and to support my family.</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category = $LOINC#75776-5 "Preference on consulting a supportive and palliative care team to help treat physical, emotional, and spiritual discomfort and support family [Reported]"
+//* category = $LOINC#75776-5 "Preference on consulting a supportive and palliative care team to help treat physical, emotional, and spiritual discomfort and support family [Reported]"
+* category = $LOINC#75780-7
 * description.text = "If I am having significant pain or suffering, I would like my doctors to consult a Supportive and Palliative Care Team to help treat my physical, emotional and spiritual discomfort, and to support my family."
 * description.extension[padi-contextualValue-extension].extension[Context].valueString = "If I am having significant pain or suffering"
 * description.extension[padi-contextualValue-extension].extension[Value].valueString = "I would like my doctors to consult a Supportive and Palliative Care Team to help treat my physical, emotional and spiritual discomfort, and to support my family."
@@ -829,7 +846,7 @@ InstanceOf: PADIPersonalInterventionPreference
 Description: "Example Patient Smith-Johnson Personal Intervention Preference (Specific Circumstance)"
 Usage: #example
 
-* text.status = #additional
+* text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p><b>My Preferences in Specific Circumstances</b></p>
 <p>In addition to the general advance care goals provided above, below are specific treatment preferences with respect to certain specific circumstances or situations.</p>
@@ -848,7 +865,7 @@ InstanceOf: PADIPersonalInterventionPreference
 Description: "Example Patient Smith-Johnson Personal Intervention Preference (Mental Illness Detioration)"
 Usage: #example
 
-* text.status = #additional
+* text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p>If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings,</p>
 <p><i>I would like for them to keep trying life-sustaining treatments until my healthcare agent decides it is time to stop and such treatments and let me die gently.</i></p>
@@ -867,7 +884,7 @@ InstanceOf: PADIPersonalInterventionPreference
 Description: "Example Patient Smith-Johnson Personal Intervention Preference (Severe Irreversable Brain Injury or Illness)"
 Usage: #example
 
-* text.status = #additional
+* text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p>Although I understand that, depending on the situation and circumstances, medical personnel may not be able to follow my wishes, here are my general thoughts on cardiopulmonary resuscitation (CPR):</p>
 <p><i>I want my healthcare agent to decide for me.</i></p>
@@ -886,7 +903,7 @@ InstanceOf: PADIPersonalInterventionPreference
 Description: "Example Patient Smith-Johnson Personal Intervention Preference (Final Days Location)"
 Usage: #example
 
-* text.status = #additional
+* text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p>If it were possible to choose, here is where I would like to spend my final days:</p>
 <p><i>At home.I would like to receive hospice care at home if possible.</i></p>
@@ -905,7 +922,7 @@ InstanceOf: PADIPersonalInterventionPreference
 Description: "Example Patient Smith-Johnson Personal Intervention Preference (Death Arrangements)"
 Usage: #example
 
-* text.status = #additional
+* text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p><b>Here are my thoughts on funeral or burial plans:</b></p>
 <p><i>If I were to pass away:</i></p>
@@ -1114,7 +1131,7 @@ InstanceOf: PADIOrganDonationObservation
 Description: "Example Patient Smith-Johnson Organ Donation Observation 1"
 Usage: #example
 
-* text.status = #additional
+* text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p><b>Consent to Donate</b></p>
 <p><i>I consent to donate all organs and tissues.</i></p>
@@ -1132,7 +1149,7 @@ InstanceOf: PADIAutopsyObservation
 Description: "Example Patient Smith-Johnson Autopsy Observation (Thoughts Regarding Autopsy)"
 Usage: #example
 
-* text.status = #additional
+* text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p><b>Autopsy</b></p>
 <p><i>I want an autopsy</i></p>
@@ -1142,6 +1159,24 @@ Usage: #example
 * code = $LOINC#75782-3 "Thoughts regarding autopsy [Reported]"
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * valueString = "Autopsy: I want an autopsy: only if there are questions about my death."
+
+
+Instance: Example-Smith-Johnson-DocumentationObservation1
+InstanceOf: PADIDocumentationObservation
+Description: "Example Patient Smith-Johnson PMOLST Documentation Observation"
+Usage: #example
+
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>PMOLST Order Observation</b></p>
+<p><i>Order Exists: <a href='http://www.example.com'>available here</a></i></p>
+</div>"
+* status = #final
+* code = $LOINC#81352-7 "Medical Order for Life-Sustaining Treatment, Physician Order for Life-Sustaining Treatment, or a similar medical order is in place [Reported]"
+* subject = Reference(Example-Smith-Johnson-Patient1)
+//* focus = "DocumentReference/Example-Smith-Johnson-Patient1-DocumentReference_PMOLST"
+* effectiveDateTime = "2021-03-29T14:25:34.001-05:00"
+* valueCodeableConcept = $SNOMEDCT#373066001 "Yes"
 
 
 // Organization Examples

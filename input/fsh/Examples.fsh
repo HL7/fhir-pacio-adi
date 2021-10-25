@@ -141,7 +141,7 @@ Usage: #example
 * extension[padi-dataEnterer-extension].valueReference = Reference(Example-McBee-Patient1)
 // witness Sally Bobbins
 
-* identifier.system = "urn:oid:"
+* identifier.system = "urn:oid:2.16.840.1.113883.4.823.1.7124"
 * identifier.value = "20130607100315-CCDA-CCD"
 
 
@@ -307,10 +307,10 @@ Usage: #example
 
 
 // Line 1205
-* section[administrative_information].title = "Witnesses and Notary"
-* section[administrative_information].code = $LOINC#81339-4 "Witness and Notary Document"
-* section[administrative_information].text.status = #additional
-* section[administrative_information].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+* section[witness_and_notary].title = "Witnesses and Notary"
+* section[witness_and_notary].code = $LOINC#81339-4 "Witness and Notary Document"
+* section[witness_and_notary].text.status = #additional
+* section[witness_and_notary].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 
 
 <p><b>I am emotionally and mentally competent to make this uADD.  I understand the purpose and effect of this uADD, I agree with everything that is written in this uADD, and I have made this uADD knowingly, willingly and after careful deliberation.</b></p>
@@ -440,9 +440,9 @@ Usage: #example
 * provision.actor[+].role = $LOINC#75784-9 "First alternate healthcare agent [Reported]"
 * provision.actor[=].reference = Reference(Example-McBee-HealthcareAgent2)
 
-* provision.action[+] = $LOINC#75787-2 "Advance directive - request for intubation"
-* provision.action[+] = $LOINC#75788-0 "Advance directive - request for tube feeding"
-* provision.action[+] = $LOINC#75789-8 "Advance directive - request for life support"
+* provision.action[+] = PADIHCADecisionsCS#intubation "Intubation"
+* provision.action[+] = PADIHCADecisionsCS#tube-feeding "Tube feeding"
+* provision.action[+] = PADIHCADecisionsCS#life-support "Life support"
 
 * provision.purpose = http://terminology.hl7.org/CodeSystem/v3-ActReason#PWATRNY
 

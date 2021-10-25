@@ -22,7 +22,8 @@ Description: "This profile encompasses information that makes up the author’s 
     gpp_personal_care_experience 0..1 MS and
     gpp_for_certain_health_condition 0..1 MS and
     gpp_upon_death 0..1 MS and
-    administrative_information 0..1 MS
+    additional_documentation 0..1 MS and
+    witness_and_notary 0..1 MS
 
 * section[healthcare_agent_appointment].title 1..1 MS
 * section[healthcare_agent_appointment].code 1..1 MS
@@ -56,11 +57,20 @@ Description: "This profile encompasses information that makes up the author’s 
 //* section[gpp_upon_death].entry only Reference(PADIPreferenceCarePlan or PADIPersonalInterventionPreference or PADIPersonalInterventionRequestPreference or PADIPersonalPrioritiesOrganizer or PADIAutopsyObservation or PADIOrganDonationObservation or PADIPersonalGoal)
 * section[gpp_upon_death].entry only Reference(PADIPreferenceCarePlan or PADIPersonalInterventionPreference or PADIPersonalPrioritiesOrganizer or PADIAutopsyObservation or PADIOrganDonationObservation or PADIPersonalGoal)
 
-* section[administrative_information].title 1..1 MS
-* section[administrative_information].code 1..1 MS
-* section[administrative_information].code = $LOINC#81339-4
 
-* section[administrative_information].entry only Reference(PADIPMOLSTObservation or PADIDNROrderObservation)
+* section[additional_documentation].title 1..1 MS
+* section[additional_documentation].code 1..1 MS
+* section[additional_documentation].code = $LOINC#77599-9
+
+* section[additional_documentation].entry only Reference(PADIDocumentationObservation)
+
+
+
+* section[witness_and_notary].title 1..1 MS
+* section[witness_and_notary].code 1..1 MS
+* section[witness_and_notary].code = $LOINC#81339-4
+
+* section[witness_and_notary].entry only Reference(RelatedPerson)
 
 /*
 Invariant:  HCA-section-entries0

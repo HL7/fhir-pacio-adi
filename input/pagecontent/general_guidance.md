@@ -59,3 +59,15 @@ For the purposes of this implemention guide, it is expected that most implementa
 
 <!--[TODO]--> 
 This guide requires the interoperability of Advance Directive Information through the use of wholly contained documents as part of its use case. While it is required that this data be made interoperable as a collection of Advance Directive Information in document Bundles, systems may decide to make use of the constituent resources as separate resources for additional uses and purposes, such as use in support of Clinical Decision Support 
+
+### Advance Directive Native FHIR Document Structure Requirements
+
+DocumentReference, Binary, Bundle
+
+### Document Digital Signatures
+
+### Replacing Documents
+
+
+### Deprecating Documents
+
