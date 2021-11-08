@@ -367,7 +367,7 @@ Usage: #example
 // Healthcare Agent examples
 
 Instance: Example-McBee-HealthcareAgent1
-InstanceOf: PADIHealthcareAgent
+InstanceOf: PADIParticipant
 Description: "Example Patient McBee Healthcare Agent (Sally Bobbins)"
 Usage: #example
 * text.status = #additional
@@ -392,8 +392,8 @@ Usage: #example
 
 
 Instance: Example-McBee-HealthcareAgent2
-InstanceOf: PADIHealthcareAgent
-Description: "Example Patient McBee Healthcare Agent (S. Leaonard Susskind)"
+InstanceOf: PADIParticipant
+Description: "Example Patient McBee Healthcare Agent (S. Leonard Susskind)"
 Usage: #example
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
@@ -418,7 +418,7 @@ Usage: #example
 
 // TODO update text
 Instance: Example-McBee-HealthcareAgentConsent
-InstanceOf: PADIHealthcareAgentConsent
+InstanceOf: PADIParticipantConsent
 Description: "Example Patient McBee Healthcare Agent Consent"
 Usage: #example
 * text.status = #additional

@@ -1,8 +1,5 @@
 
-
-### Create in a digital form and make available for sharing and accessing 
-
-#### Create in a digital form and make available for sharing and accessing advance directive information
+### Create in a digital form and make available for sharing and accessing advance directive information
 
 Angie has Sickle Cell Disease. She worries that if she contracts COVID-19 and becomes unable to communicate with medical personnel, they won't be familiar with her history and specific treatment needs. 
 
@@ -14,8 +11,8 @@ Angie shares her advance directive information with her medical proxy/healthcare
 
 <img src="./patient_story_1a.png" alt="Patient Story 1a"/>
  <br clear="all" />
-
-#### Create in a digital form and make available for sharing and accessing Encounter-Centric Patient Instructions
+<!-- Future versions
+### Create in a digital form and make available for sharing and accessing Encounter-Centric Patient Instructions
 <p>
 Steven is a 34 year old man who has had Cystic Fibrosis all his life. He created his advance directive a few years ago when his condition sharply worsened. He is eligible for a lung transplant due to his age and disease state. 
 </p>
@@ -40,12 +37,12 @@ Steven’s patient instructions and associated order, as part of the encounter s
 <img src="./patient_story_1b.png" alt="Patient Story 1b"/>
 <br clear="all" />
 
-#### Create in a digital form and make available for sharing and accessing Portable Medical Order for Life-Sustaining Treatment
+### Create in a digital form and make available for sharing and accessing Portable Medical Order for Life-Sustaining Treatment
 <p>
 Frank is a 78 year old man who has end stage kidney disease and receives dialysis 3x per week. He receives long term supportive services in his home. Frank is cognitively intact.
 </p>
 <p>
-Frank suffers from a chronic health condition that has resulted in a limited life-expectancy of 6-12 months. He creates an advance directive with his caregiver. Frank does not want to have life-sustaining treatment rendered if his condition warrants those measures, if he is unable to communicate for himself. 
+Frank suffers from a chronic health condition that has resulted in a limited life-expectancy of 6-12 months. He creates an advance directive with his caregiver. Frank does not want to have life-sustaining treatment rendered if his condition warrants those measures if he is unable to communicate for himself. 
 </p>
 <p>
 Frank's condition worsens sharply one day and he is taken by ambulance to the nearest hospital for treatment. Frank tells the ER physician about his advance directive and the physician writes a DNR order, valid for that hospitalization only, to Frank's medical record. 
@@ -65,5 +62,5 @@ One evening Frank sustains a significant change in condition that renders him un
 <img src="./patient_story_1c.png" alt="Patient Story 1c"/>
 <br clear="all" />
 
-
+-->
  

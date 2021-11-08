@@ -29,7 +29,7 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[healthcare_agent_appointment].code 1..1 MS
 * section[healthcare_agent_appointment].code = $LOINC#81335-2
 * section[healthcare_agent_appointment].entry MS
-* section[healthcare_agent_appointment].entry only Reference(PADIHealthcareAgentConsent or PADIHealthcareAgent)
+* section[healthcare_agent_appointment].entry only Reference(PADIParticipantConsent or PADIParticipant)
 * section[healthcare_agent_appointment].emptyReason from PADINoHealthcareAgentIncludedReasonVS (required)
 * section[healthcare_agent_appointment] obeys HCA-section-entries
 // TODO add guidance around this emptyReason element

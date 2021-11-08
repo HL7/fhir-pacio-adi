@@ -2,11 +2,11 @@
 
 ### General Considerations
 
-Advance Directive Interoperability (ADI) involves communication of advance directive information across multiple parties including who the information is about, their healthcare agents and identified advisors, and care providers. The author, whom is also the person the information is about, needs access to create, modify, remove, and share this information either directly or through an authorized third party. Users of this information, be them the appointed healthcare agents or advisors, care providers in emergency, intensive, or critical care environments, or others providing longer term care in a skilled nursing or other similar facility.
+Advance Directive Interoperability (ADI) involves communication of advance directive information across multiple parties including who the information is about, their healthcare agents and identified advisors, and care providers. The author, who is also the person the information is about, needs access to create, modify, remove, and share this information either directly or through an authorized third party. Users of this information are the appointed healthcare agents or advisors, care providers in emergency, intensive, or critical care environments, or others providing longer term care in a skilled nursing or other similar facility.
 
 Advance directive information contains patient specific information, which means that it needs to be protected with proper security and privacy protections to avoid malicious or unintentional exposure of such information. All Advance Directive Interoperability exchanges must be appropriately secured in transit and access limited only to authorized individuals.
 
-The ADI IG focuses on providing a structure to share data and information. Currently policy, legal and regulatory differ across states and local areas impacting the workflow and requirements associated with Advance Directives Information. Implementors should review the current context for where this IG is expected to be used to ensure those requirements are met.
+The ADI IG focuses on providing a structure to share data and information. Policy, legal, and regulatory differences across states and local areas may impact the workflow and requirements associated with Advance Directives Information. Implementors should review the current context for where this IG is expected to be used to ensure those requirements are met.
 
 
 #### Security Considerations and Guidance
@@ -24,7 +24,7 @@ For the purposes of Advance Directive Interoperability, additional security conf
 2.	Implementers of this Implementation Guide **SHALL** support [SMART on FHIR App Launch Framework](http://hl7.org/fhir/smart-app-launch/index.html) and **MAY** support [SMART on FHIR Backend Services](https://hl7.org/fhir/uv/bulkdata/authorization/index.html).
 3.	Implementers of this Implementation Guide **SHOULD** support SMART on FHIR Authorization best practices Transport Security section found [here](https://docs.smarthealthit.org/authorization/best-practices/#11--transport-security).
 4.	Implementers of this Implementation Guide **SHOULD** support mutually authenticated TLS.
-5.	Server implementations that expect to support browser-based javascript applications SHOULD enable [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) for REST operations. Many client web-based apps use javascript for API calls which requires CORS. However, CORS could present security concerns if not implemented correctly or is not continually updated as new security issues are found and addressed. Implementers of CORS **SHOULD** consider advice about CORS from sources such as [Enable-CORS](http://enable-cors.org/) and [Moesif blog on Guide to CORS Pitfalls](https://www.moesif.com/blog/technical/cors/Authoritative-Guide-to-CORS-Cross-Origin-Resource-Sharing-for-REST-APIs/)  
+5.	Server implementations that expect to support browser-based javascript applications SHOULD enable [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) for REST operations. Many client web-based apps use javascript for API calls which requires CORS. However, CORS could present security concerns if not implemented correctly or not updated as new security issues are found and addressed. Implementers of CORS **SHOULD** consider advice about CORS from sources such as [Enable-CORS](http://enable-cors.org/) and [Moesif blog on Guide to CORS Pitfalls](https://www.moesif.com/blog/technical/cors/Authoritative-Guide-to-CORS-Cross-Origin-Resource-Sharing-for-REST-APIs/)  
 
 ##### Authentication and Authorization Requirements
 1.	Implementations **SHOULD** consider the SMART on FHIR Best Practices in Authorization found [here](https://docs.smarthealthit.org/authorization/best-practices/)
@@ -62,10 +62,10 @@ For the purposes of Advance Directive Interoperability, additional security conf
             7.	user/Patient.read
             8.	user/Bundle.*
             8.	user/DocumentReference.*
-
+<!--  TODO
 #### Individual-Authorized Exchange
 1.	http://hl7.org/fhir/us/davinci-pdex/Member-AuthorizedOAuth2Exchange.html
-
+-->
 #### Privacy Requirement
 For the purposes of Advance Directive Interoperability, privacy conformance requirements are as follows:
 - Implementers **SHOULD** support data sharing policies with use of the Consent resource.

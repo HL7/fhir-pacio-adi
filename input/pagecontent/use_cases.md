@@ -25,7 +25,7 @@ Technical Actors - Technical roles are the activities of system actors that cond
 ### Overview of ADI Use Cases
 
 <p>
-In this ADI use case, advance directive content created and updated will be represented using FHIR resources. The advance directives content is created and may be updated periodically by human actors. For advance directives information, there may be multiple human actors involved; however, there is only one author which is the patient. Other human actors may include the healthcare agent and alternate agents, witness, notary, provider, and data enterer.
+In ADI use cases, advance directive content created and updated will be represented using FHIR resources. The advance directives content is created and may be updated periodically by human actors. For advance directives information, there may be multiple human actors involved; however, there is only one author which is the patient. Other human actors may include the healthcare agent and alternate agents, witness, notary, provider, and data enterer.
 </p>
 <p>
 System actors are responsible for ensuring the advance directive information is correctly represented using FHIR resources. The technical actor is responsible for carrying out activities to conduct transition exchanges.
@@ -54,7 +54,7 @@ In Use Case 1, the person that wants to create their advance directive informati
 ##### Use Case 1 Processes Steps
 
 <p>
-In Use Case 1, the process is started by a person wanting to create advance directive information in a digital form. The precondition for the process includes the system is able to capture and make the AD Info available in standardized digital format. The person creates AD info in the system or optionally in a different system. AD info is stored and indexed by a custodian system responsible for information exchange. Finally, the AD Info is available in digital form within a Custodian System that can share as a FHIR Client and/or support query as a FHIR Server.
+In Use Case 1, the process is started by a person wanting to create advance directive information in a digital form. The person creates AD info in a system that can capture the data. This information may then be sent forward to a different system acting as a custodian. AD info is stored and indexed by the custodian system responsible for further information exchange. Finally, the AD Info is available in digital form within a Custodian System that can share as a FHIR Client and/or support query as a FHIR Server.
 </p>
 
 ##### Use Case 1 Sequence Diagram
@@ -67,7 +67,7 @@ In Use Case 1, the process is started by a person wanting to create advance dire
 ##### Use Case 2 Description
 
 <p>
-In Use Case 2, the Content Creator/Custodian that has created advance directive information will share the FHIR resource with a Content Receiver where a FHIR API is supported which enables the advance directive information to be stored.
+In Use Case 2, the Content Creator/Custodian will share advance directive information with a Content Receiver using a FHIR API.
 </p>
 
 ##### Use Case 2 Actor Transition Diagram

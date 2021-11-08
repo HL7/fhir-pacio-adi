@@ -20,7 +20,6 @@ Description: "This profile is used to indicate if additional advance directive d
 * subject 1..1 MS
 * subject only Reference($USCorePatient)
 
-* focus only Reference(DocumentReference or Binary or Bundle or Basic)
 * focus ^short = "Reference to the additional document this observation is about"
 
 * effective[x] 1..1 MS  // CONF:4445-33113
@@ -31,9 +30,14 @@ Description: "This profile is used to indicate if additional advance directive d
 
 // need to add derived from documentReference to allow pointing to the actual order
 
+* performer 1..1
+
+
 
 * note MS
 
+
+* performer ^comment = "The party responsible for or made the observation. For individual (patient) authored advance directive documents this will likely be the patient."
 
 
 /*

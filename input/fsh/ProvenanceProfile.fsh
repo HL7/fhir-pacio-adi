@@ -3,15 +3,15 @@ Profile: PADIProvenance
 Parent: $USCoreProvenance
 Id: PADI-Provenance
 Title: "PACIO ADI Provenance"
-Description: "Advance Directive Interoperability Provanance based on US Core to capture, search and fetch provenance information associated with advance directive interoperability data."
+Description: "Advance Directive Interoperability Provenance based on US Core to capture, search and fetch provenance information associated with advance directive interoperability data."
 
 * agent contains
     assembler 0..1 MS
 
 * agent[assembler].type 1..1 MS 
-* agent[assembler].type = $HL7ProvenancePartcipantType#assembler
+* agent[assembler].type = $HL7ProvenanceParticipantType#assembler
 
-// TODO US Core prevenance does not allow provenance agent.who of a device
+// TODO US Core provenance does not allow provenance agent.who of a device
 
 * insert PADIProvenanceDescriptions
 

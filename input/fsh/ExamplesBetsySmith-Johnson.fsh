@@ -391,7 +391,7 @@ Usage: #example
 // Healthcare Agent examples
 
 Instance: Example-Smith-Johnson-HealthcareAgent1
-InstanceOf: PADIHealthcareAgent
+InstanceOf: PADIParticipant
 Description: "Example Patient Smith-Johnson Healthcare Agent (Charles Johnson)"
 Usage: #example
 * text.status = #additional
@@ -406,7 +406,6 @@ Usage: #example
 </div>"
 
 * patient = Reference(Example-Smith-Johnson-Patient1)
-//* relationship[heatlhcare_agent_or_proxy_role] = $LOINC#75783-1 "Primary healthcare agent [Reported]"
 * relationship[personal_and_legal_relationship_role] = $HL7RoleCode#SON "natural son"
 
 * name[0].family = "Johnson"
@@ -418,7 +417,7 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-HealthcareAgent2
-InstanceOf: PADIHealthcareAgent
+InstanceOf: PADIParticipant
 Description: "Example Patient Smith-Johnson Healthcare Agent (Debra Johnson)"
 Usage: #example
 * text.status = #additional
@@ -446,7 +445,7 @@ Usage: #example
 
 // TODO update text
 Instance: Example-Smith-Johnson-HealthcareAgentConsent
-InstanceOf: PADIHealthcareAgentConsent
+InstanceOf: PADIParticipantConsent
 Description: "Example Patient Smith-Johnson Healthcare Agent Consent"
 Usage: #example
 * text.status = #additional
@@ -473,7 +472,7 @@ Usage: #example
 * provision.action[+] = PADIHCADecisionsCS#life-support "Life support"
 * provision.action[+] = PADIHCADecisionsCS#iv-fluid-and-support "IV fluid and support"
 * provision.action[+] = PADIHCADecisionsCS#antibiotics "Antibiotics"
-* provision.action[+] = PADIHCADecisionsCS#resuscitations-non-cpr "Non-CPR Resuscitation"
+* provision.action[+] = PADIHCADecisionsCS#resuscitation-non-cpr "Non-CPR Resuscitation"
 
 * provision.purpose = http://terminology.hl7.org/CodeSystem/v3-ActReason#PWATRNY
 
@@ -862,7 +861,7 @@ Usage: #example
 
 Instance: Example-Smith-Johnson-PersonalInterventionPreference3
 InstanceOf: PADIPersonalInterventionPreference
-Description: "Example Patient Smith-Johnson Personal Intervention Preference (Mental Illness Detioration)"
+Description: "Example Patient Smith-Johnson Personal Intervention Preference (Mental Illness Deterioration)"
 Usage: #example
 
 * text.status = #generated
@@ -881,7 +880,7 @@ Usage: #example
 
 Instance: Example-Smith-Johnson-PersonalInterventionPreference4
 InstanceOf: PADIPersonalInterventionPreference
-Description: "Example Patient Smith-Johnson Personal Intervention Preference (Severe Irreversable Brain Injury or Illness)"
+Description: "Example Patient Smith-Johnson Personal Intervention Preference (Severe Irreversible Brain Injury or Illness)"
 Usage: #example
 
 * text.status = #generated
@@ -971,7 +970,7 @@ Description: "Example Patient Smith-Johnson Personal Intervention Preference (Sp
 
 Instance: Example-Smith-Johnson-PersonalInterventionPreference3
 InstanceOf: PADIPersonalInterventionPreference
-Description: "Example Patient Smith-Johnson Personal Intervention Preference (Mental Illness Detioration)"
+Description: "Example Patient Smith-Johnson Personal Intervention Preference (Mental Illness Deterioration)"
 
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
@@ -985,7 +984,7 @@ Description: "Example Patient Smith-Johnson Personal Intervention Preference (Me
 
 Instance: Example-Smith-Johnson-PersonalInterventionPreference4
 InstanceOf: PADIPersonalInterventionPreference
-Description: "Example Patient Smith-Johnson Personal Intervention Preference (Severe Irreversable Brain Injury or Illness)"
+Description: "Example Patient Smith-Johnson Personal Intervention Preference (Severe Irreversible Brain Injury or Illness)"
 
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
@@ -1172,8 +1171,10 @@ Usage: #example
 <p><i>Order Exists: <a href='http://www.example.com'>available here</a></i></p>
 </div>"
 * status = #final
-* code = $LOINC#81352-7 "Medical Order for Life-Sustaining Treatment, Physician Order for Life-Sustaining Treatment, or a similar medical order is in place [Reported]"
+//* code = $LOINC#81352-7 "Medical Order for Life-Sustaining Treatment, Physician Order for Life-Sustaining Treatment, or a similar medical order is in place [Reported]"
+* code = $SNOMEDCT#697978002 "Provider orders for life-sustaining treatment"
 * subject = Reference(Example-Smith-Johnson-Patient1)
+* performer = Reference(Example-Smith-Johnson-Patient1)
 //* focus = "DocumentReference/Example-Smith-Johnson-Patient1-DocumentReference_PMOLST"
 * effectiveDateTime = "2021-03-29T14:25:34.001-05:00"
 * valueCodeableConcept = $SNOMEDCT#373066001 "Yes"

@@ -7,7 +7,7 @@ Description: "Advance Directive Information VersionNumber Extension represents a
 
 Extension: Jurisdiction
 Id: padi-jurisdiction-extension
-Title: "Juristiction"
+Title: "Jurisdiction"
 Description: "Jurisdiction for which content is applicable."
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1 MS
@@ -124,21 +124,26 @@ Description: "The Advance Directive document effective dates."
 Extension: ClauseExtension
 Id: padi-clause-extension
 Title: "Clause"
-Description: "A clause or set of clauses relavant to the resource or element being extended"
+Description: "A clause or set of clauses relevant to the resource or element being extended"
 * extension 1..*
 * extension contains
-	Section 0..1 and
+	Title 0..1 and
 	Type 0..1 and
+	Policy 0..* and
 	Clause 1..* MS
 
-* extension[Section] ^short = "Section in which clauses are presented."
-* extension[Section].value[x] 1..1
-* extension[Section].value[x] only string
+* extension[Title] ^short = "Section in which clauses are presented."
+* extension[Title].value[x] 1..1
+* extension[Title].value[x] only string
 
 * extension[Type] ^short = "Type of clause."
 * extension[Type].value[x] 1..1
 * extension[Type].value[x] only CodeableConcept
-* extension[Type].valueCodeableConcept from PADIClauseTypesVS
+* extension[Type].valueCodeableConcept from PADIClauseTypeVS
+
+* extension[Policy] ^short = "Link o the policies related to the clause"
+* extension[Policy].value[x] 1..1 MS
+* extension[Policy].value[x] only Reference
 
 * extension[Clause] ^short = "A human readable clause."
 * extension[Clause].value[x] 1..1 MS
@@ -146,9 +151,9 @@ Description: "A clause or set of clauses relavant to the resource or element bei
 
 
 Extension: GoalOrderByDescendingPriority
-Id: padi-goal-order-by-descening-priority-extension
+Id: padi-goal-order-by-descending-priority-extension
 Title: "Goal Order by Descending Priority"
-Description: "Inidcates if the goals are ordered in descending priority (Y) or no specific order (N)."
+Description: "Indicates if the goals are ordered in descending priority (Y) or no specific order (N)."
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1 MS
 * valueCodeableConcept from $HL7YesNoVS (extensible)

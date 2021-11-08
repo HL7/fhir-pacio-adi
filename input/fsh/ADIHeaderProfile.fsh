@@ -80,6 +80,9 @@ Description: "This abstract profile defines constraints that represent common ad
 * custodian 1..1 MS
 * custodian only Reference ($USCoreOrganization)
 
+* section.extension contains    
+    padi-clause-extension named ClauseExtension 0..* MS
+    
 // need to add notes on which attester roles there are. Change name of personal_attester to witness_attester professional_attester to notary_attester
 // Need to add an extension with a code that explains the role, witness or notary. Others?
 

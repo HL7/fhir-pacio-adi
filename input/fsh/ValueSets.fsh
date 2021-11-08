@@ -12,18 +12,15 @@ This ValueSet is managed at the US National Library of Medicine (NLM) Value Set 
 
 
 
-ValueSet: PADIHealthcareAgentRelationshipVS
-Title: "Healthcare Agent Relationships"
-Description: "This value set identifies the healthcare agent or proxy roles that individuals commonly designate to empower surrogates to make medical treatment and care decisions when the individual is unable to effectively communicate with medical personnel or requires assistance with decision making.
-
-This ValueSet is managed at the US National Library of Medicine (NLM) Value Set Authority Center (VSAC): https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1046.35/expansion"
-//* codes from valueset PADIHealthcareAgentOrProxyChoicesVS
+ValueSet: PADIParticipantRelationshipVS
+Title: "Participant Relationships"
+Description: "This value set identifies the relationship an advance directive participant has with the person the advance directive is about."
 * codes from valueset PADIPersonalAndLegalRelationshipRoleTypeVS
 
 
-ValueSet: PADIHealthcareAgentOrProxyChoicesVS
-Title: "Healthcare Agent or Proxy Choices"
-Description: "This value set identifies the healthcare agent or proxy roles that individuals commonly designate to empower surrogates to make medical treatment and care decisions when the individual is unable to effectively communicate with medical personnel or requires assistance with decision making.
+ValueSet: PADIParticipantRoleVS
+Title: "ADI Participant Role"
+Description: "This value set identifies the role the advance directive participant has, which could include: healthcare agent, proxy, or advisor roles that individuals commonly designate to empower surrogates to make medical treatment and care decisions when the individual is unable to effectively communicate with medical personnel or requires assistance with decision making.
 
 This ValueSet is managed at the US National Library of Medicine (NLM) Value Set Authority Center (VSAC): https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1046.35/expansion"
 * include $LOINC#75783-1 "Primary healthcare agent [Reported]"
@@ -117,37 +114,32 @@ Description: "Clinical Focus: This value set includes concepts representing an i
 * include $LOINC#81350-1 "Thoughts on pain management [Reported]"
 * include $LOINC#81376-6 "Mental health treatment preferences [Reported]"
 * include $LOINC#75779-9 "Thoughts on cardiopulmonary resuscitation (CPR) [Reported]"
+* include $LOINC#81353-5 "Thoughts on hastening death [Reported]"
 * insert LOINCCopyrightNotice
 
 
 
-ValueSet: PADIHCAConsentTypeVS
+ValueSet: PADIParticipantConsentTypeVS
 Title: "Healthcare Agent Powers or Limitations Indicator"
 Description: "Codes indicating information is regarding powers or limitations of a healthcare agent."
 * include $LOINC#81335-2 "Patient Healthcare agent" // "Healthcare agents identified with no powers or limitations specified"
 * include $LOINC#75786-4 "Powers granted to healthcare agent [Reported]" // "Healthcare agents identified with powers granted specified"
 * include $LOINC#81346-9 "Limitations placed on healthcare agent [Reported]" // "Healthcare agents identified with limitations placed specified"
+* include $LOINC#81343-6 "Healthcare agent advisor [Reported]"
+* codes from system PADIParticipantRoleCS
 * insert LOINCCopyrightNotice
 
 
 ValueSet: PADIHCADecisionsVS
 Title: "Healthcare Agent Decisions"
-Description: "Codes indicating decisions a healtcare agent may or may not make on behalf of an individual."
+Description: "Codes indicating decisions a healthcare agent may or may not make on behalf of an individual."
 * codes from system PADIHCADecisionsCS
+* include $LOINC#81347-7 "Consent for healthcare agent to deviate from stated goals, preferences and priorities [Reported]"
+* include $LOINC#81344-4 "Healthcare agent authority to inspect and disclose mental and physical health information [Reported]"
+* include $LOINC#81345-1 "Healthcare agent authority to inspect and disclose specially protected health information [Reported]"
+
 * insert LOINCCopyrightNotice
 
-
-CodeSystem: PADIHCADecisionsCS
-Title: "Healthcare Agent Decisions"
-Description: "Codes indicating decisions a healtcare agent may or may not make on behalf of an individual."
-* #intubation "Intubation" "Request or reject intubation on behalf of the patient"
-* #tube-feeding "Tube feeding" "Request or reject tube feeding on behalf of the patient"
-* #life-support "Life support" "Request or reject life support on behalf of the patient"
-* #iv-fluid-and-support "IV fluid and support" "Request or reject IV fluid and support on behalf of the patient"
-* #antibiotics "Antibiotics" "Request or reject intubation on behalf of the patient"
-* #cpr "Cardiopulmonary Resuscitation (CPR)" "Request or reject cardiopulmonary Resuscitation (CPR) on behalf of the patient"
-* #resuscitations-non-cpr "Non-CPR Resuscitation" "Request or reject resuscitation that differs from cardiopulmonary resuscitation on behalf of the patient"
-* insert LOINCCopyrightNotice
 
 
 ValueSet: PADIUponDeathPreferencesVS
@@ -207,19 +199,14 @@ Description: "Codes indicating a role of an attester."
 
 
 
-ValueSet: PADIClauseTypesVS
+ValueSet: PADIClauseTypeVS
 Title: "Type of clause"
 Description: "Type of clause"
-* codes from system PADIClauseTypesCS
+* $LOINC#81382-4 "Statement of document creator"
+* $LOINC#81368-3 "Statement of witness"
+* $LOINC#81381-6 "Administrative information associated with this personal advance care plan [Reported]"
+* insert LOINCCopyrightNotice
 
-
-CodeSystem: PADIClauseTypesCS
-Title: "Type of clause"
-Description: "Type of clause"
-* #introduction "Indtroduction"
-* #operative "Operative"
-* #signatory "Signatory"
-* #recital "Recital"
 
 
 ValueSet: PADIDocumentationTypeVS
@@ -227,7 +214,15 @@ Title: "Advance Directive Documentation Types"
 Description: "Types of Advance Directive Documents"
 * include $LOINC#81352-7 "Medical Order for Life-Sustaining Treatment, Physician Order for Life-Sustaining Treatment, or a similar medical order is in place [Reported]"
 * include $LOINC#81351-9 "Do Not Resuscitate, Do Not Attempt Resuscitation, or Allow Natural Death order is in place [Reported]"
+* include $LOINC#75320-2 "Advance directive"
+* include $LOINC#81375-8 "Self assessment of health status [Reported]"
+* include $LOINC#81354-3 "Prescribed anticipatory medication [Reported]"
+* include $SNOMEDCT#304253006 "Not for resuscitation"
+* include $SNOMEDCT#714748000 "Has advance care plan"
+* include codes from system $SNOMEDCT where concept is-a #425392003 "Active advance directive"
+* include codes from system $SNOMEDCT where concept is-a #423876004 "Clinical document"
 * insert LOINCCopyrightNotice
+* insert SNOMEDCopyrightNotice
 
 
 

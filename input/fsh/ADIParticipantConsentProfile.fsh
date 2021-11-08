@@ -1,8 +1,8 @@
-Profile: PADIHealthcareAgentConsent
+Profile: PADIParticipantConsent
 Parent: Consent
-Id: PADI-HealthcareAgentConsent
-Title: "ADI Healthcare Agent Consent"
-Description: "This profile is used to represent a consent for a healthcare agent and power or limitation granted to a person acting as a healthcare agent."
+Id: PADI-ParticipantConsent
+Title: "ADI Participant Consent"
+Description: "This profile is used to represent a consent for an advance directive participant such as a healthcare agent or advisor and power or limitation granted to such persons."
 
 * obeys HCA-authority-scope-provisionType
 * text 1..1 MS
@@ -24,7 +24,7 @@ Description: "This profile is used to represent a consent for a healthcare agent
 //[TODO] need verification that it is active only. Is the authority proposed if the agent is not yet aware or accepted the role?
 * status = #active
 // [TODO], the LOINC code is an observable, which is not meant to express scope. Will need to find another code that could (Follow-up with Dan Vreeman  Liz Umberfield)
-* scope from PADIHCAConsentTypeVS (required)
+* scope from PADIParticipantConsentTypeVS (required)
 
 
 * category = http://terminology.hl7.org/CodeSystem/consentcategorycodes#acd
@@ -46,12 +46,17 @@ Description: "This profile is used to represent a consent for a healthcare agent
 //$LOINC#75786-4
 
 * provision 1..1 MS
+
+* provision.extension contains
+    padi-clause-extension named ClauseExtension 0..* MS
+
+
 * provision.type 1..1 MS
 * provision.period MS
 //[TODO] do we need to support and require provision.actor for all HCA's?
 * provision.actor 1..* MS
-* provision.actor.role from PADIHealthcareAgentOrProxyChoicesVS (required)
-* provision.actor.reference only Reference(PADIHealthcareAgent)
+* provision.actor.role from PADIParticipantRoleVS (required)
+* provision.actor.reference only Reference(PADIParticipant)
 
 // [TODO] we need a valueset defined. Any candidates?
 * provision.action MS
@@ -79,7 +84,7 @@ Description: "This profile is used to represent a consent for a healthcare agent
 
 */
 
-// need to define juristiction, original form?
+// need to define jurisdiction, original form?
 
 
 
