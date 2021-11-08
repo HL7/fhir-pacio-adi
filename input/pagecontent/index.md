@@ -156,7 +156,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 ### Key Terms and Acronyms 
 
-<table class="border: 1px solid black; border-collapse: collapse;">
+<table border="1">
     <tr>
         <th><b>Term</b></th>
         <th><b>Definition</b></th>
@@ -193,7 +193,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 ### ADI Profiles
 
 <p>Table: ADI Profiles</p>
-<table style="border-spacing: 100px;">
+<table border="1">
     <tr>
         <th colspan="4" style="background-color: #DEEBF7; text-align:center; padding: 10px; padding: 10px;"><b>CONTENT TYPE I: Advance Directive Information</b> <i>(in STU1 scope)</i></th>
     </tr>
@@ -222,14 +222,14 @@ This Guide is divided into several pages which are listed at the top of each pag
     </tr>
     <tr>
         <td style="padding: 7px;">4</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-HealthcareAgent.html">ADI Healthcare Agent</a></td>
-        <td style="padding: 7px;"><p>This profile represents a person's appointment of a healthcare agent.</p></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-Participant.html">ADI Participant</a></td>
+        <td style="padding: 7px;"><p>This profile represents a person participating in a persons advance directives in some capacity such as healthcare agent or healthcare agent advisor.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">5</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-HealthcareAgentConsent.html">ADI Healthcare Agent Consent</a></td>
-        <td style="padding: 7px;"><p>This profile is used to represent a consent for a healthcare agent and power or limitation granted to a person acting as a healthcare agent.</p></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-PADI-ParticipantConsent.html">ADI Participant Consent</a></td>
+        <td style="padding: 7px;"><p>This profile is used to represent a consent for an advance directive participant such as a healthcare agent or advisor and power or limitation granted to such persons.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/consent.html">Consent</a></td>
     </tr>
     <tr>    
@@ -297,13 +297,13 @@ This Guide is divided into several pages which are listed at the top of each pag
     <tr>
         <td style="padding: 7px;">15</td>
         <td style="padding: 7px;"><a href="#">ADI Obligation Instruction</a></td>
-        <td style="padding: 7px;"><p>This profile always expresses activities that care providers have been instructed to perform.</p>
+        <td style="padding: 7px;"><p>This profile always expresses activities that care providers have been instructed to perform.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/consent.html">Consent</a></td>
     </tr>
     <tr>
         <td style="padding: 7px;">16</td>
         <td style="padding: 7px;"><a href="#">ADI Prohibition Instruction</a></td>
-        <td style="padding: 7px;">This profile always expresses activities that care providers have been instructed not to perform.</p></td>
+        <td style="padding: 7px;"><p>This profile always expresses activities that care providers have been instructed not to perform.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/consent.html">Consent</a></td>
     </tr>
     <tr>
