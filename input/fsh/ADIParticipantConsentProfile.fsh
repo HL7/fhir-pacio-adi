@@ -55,6 +55,10 @@ Description: "This profile is used to represent a consent for an advance directi
 * provision.period MS
 //[TODO] do we need to support and require provision.actor for all HCA's?
 * provision.actor 1..* MS
+
+* provision.actor.extension contains
+    padi-clause-extension named ClauseExtension 0..* MS
+    
 * provision.actor.role from PADIParticipantRoleVS (required)
 * provision.actor.reference only Reference(PADIParticipant)
 

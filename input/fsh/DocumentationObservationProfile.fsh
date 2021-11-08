@@ -12,7 +12,9 @@ Description: "This profile is used to indicate if additional advance directive d
 
 // TODO should the code.coding?
 * code MS
-* code from PADIDocumentationTypeVS (extensible)
+* code = $LOINC#75320-2
+
+//* code = from PADIDocumentationTypeVS (extensible)
 
 // What to do about these displayName requirements? With FHIR teh display is in a coding which could have multiple instances (translations).
 //   Do we limit the coding instances? (not preferred).  Do we require display for all of them? Or do we define only the first instance to be exactly as it should be?
@@ -26,7 +28,9 @@ Description: "This profile is used to indicate if additional advance directive d
 
 * value[x] 1..1 MS
 * value[x] only CodeableConcept
-* valueCodeableConcept from PADIPresenceIndicatorVS (required)
+// Remove Presence indicator
+//* valueCodeableConcept from PADIPresenceIndicatorVS (required)
+* valueCodeableConcept from PADIDocumentationTypeVS (extensible)
 
 // need to add derived from documentReference to allow pointing to the actual order
 

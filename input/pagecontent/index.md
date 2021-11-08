@@ -6,7 +6,7 @@ This ADI implementation guide (IG) describes how to use existing HL7 FHIR® stan
 </p>
 
 <p>
-Advance directives can be categorized into <a href="content_types">three types of information</a>. The current version of this guide addresses Type I: Person-Authored Advance Directive Information. Subsequent versions of this guide will address the other two types; Encounter-Centric Instructions and Portable Medical Order for Life-Sustaining Treatment.
+Advance directives can be categorized into <a href="#content_types">three types of information</a>. The current version of this guide addresses Type I: Person-Authored Advance Directive Information. Subsequent versions of this guide will address the other two types; Encounter-Centric Instructions and Portable Medical Order for Life-Sustaining Treatment.
 </p>
 <!-- Removed. Kept for review before ballot
 <p>

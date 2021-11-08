@@ -27,6 +27,7 @@ This ValueSet is managed at the US National Library of Medicine (NLM) Value Set 
 * include $LOINC#75784-9 "First alternate healthcare agent [Reported]"
 * include $LOINC#75785-6 "Second alternate healthcare agent [Reported]"
 * include $LOINC#81335-2 "Patient Healthcare agent"
+* codes from system PADIParticipantRoleCS
 * insert LOINCCopyrightNotice
 
 
@@ -208,15 +209,16 @@ Description: "Type of clause"
 * insert LOINCCopyrightNotice
 
 
+// TODO Rename -  Advance Directive Documentation Types  
 
 ValueSet: PADIDocumentationTypeVS
-Title: "Advance Directive Documentation Types"
-Description: "Types of Advance Directive Documents"
+Title: "Documentation Types"
+Description: "Types of Documents"
 * include $LOINC#81352-7 "Medical Order for Life-Sustaining Treatment, Physician Order for Life-Sustaining Treatment, or a similar medical order is in place [Reported]"
 * include $LOINC#81351-9 "Do Not Resuscitate, Do Not Attempt Resuscitation, or Allow Natural Death order is in place [Reported]"
 * include $LOINC#75320-2 "Advance directive"
-* include $LOINC#81375-8 "Self assessment of health status [Reported]"
-* include $LOINC#81354-3 "Prescribed anticipatory medication [Reported]"
+//* include $LOINC#81375-8 "Self assessment of health status [Reported]"
+//* include $LOINC#81354-3 "Prescribed anticipatory medication [Reported]"
 * include $SNOMEDCT#304253006 "Not for resuscitation"
 * include $SNOMEDCT#714748000 "Has advance care plan"
 * include codes from system $SNOMEDCT where concept is-a #425392003 "Active advance directive"

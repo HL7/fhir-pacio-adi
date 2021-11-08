@@ -1172,12 +1172,12 @@ Usage: #example
 </div>"
 * status = #final
 //* code = $LOINC#81352-7 "Medical Order for Life-Sustaining Treatment, Physician Order for Life-Sustaining Treatment, or a similar medical order is in place [Reported]"
-* code = $SNOMEDCT#697978002 "Provider orders for life-sustaining treatment"
+* code = $LOINC#75320-2 "Advance Directive"
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * performer = Reference(Example-Smith-Johnson-Patient1)
 //* focus = "DocumentReference/Example-Smith-Johnson-Patient1-DocumentReference_PMOLST"
 * effectiveDateTime = "2021-03-29T14:25:34.001-05:00"
-* valueCodeableConcept = $SNOMEDCT#373066001 "Yes"
+* valueCodeableConcept = $SNOMEDCT#697978002 "Provider orders for life-sustaining treatment"
 
 
 // Organization Examples

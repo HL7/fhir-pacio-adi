@@ -19,7 +19,6 @@
 <artifact id="StructureDefinition/PADI-PersonalPrioritiesOrganizer" key="StructureDefinition-PADI-PersonalPrioritiesOrganizer" name="ADI Personal Priorities Organizer"/>
 <artifact id="StructureDefinition/PADI-PreferenceCarePlan" key="StructureDefinition-PADI-PreferenceCarePlan" name="ADI Preference Care Plan"/>
 <artifact id="ValueSet/PADIAdvanceDirectiveCategoriesVS" key="ValueSet-PADIAdvanceDirectiveCategoriesVS" name="Advance Directive Categories"/>
-<artifact id="ValueSet/PADIDocumentationTypeVS" key="ValueSet-PADIDocumentationTypeVS" name="Advance Directive Documentation Types"/>
 <artifact id="StructureDefinition/padi-attestationInformation-extension" key="StructureDefinition-padi-attestationInformation-extension" name="Attestation Information"/>
 <artifact id="ValueSet/PADIAttesterRoleTypeVS" key="ValueSet-PADIAttesterRoleTypeVS" name="Attester Role"/>
 <artifact id="StructureDefinition/padi-authorization-extension" key="StructureDefinition-padi-authorization-extension" name="Authorization"/>
@@ -27,6 +26,7 @@
 <artifact id="StructureDefinition/padi-clause-extension" key="StructureDefinition-padi-clause-extension" name="Clause"/>
 <artifact id="StructureDefinition/padi-contextualValue-extension" key="StructureDefinition-padi-contextualValue-extension" name="Contextual Value"/>
 <artifact id="StructureDefinition/padi-dataEnterer-extension" key="StructureDefinition-padi-dataEnterer-extension" name="Data Enterer"/>
+<artifact id="ValueSet/PADIDocumentationTypeVS" key="ValueSet-PADIDocumentationTypeVS" name="Documentation Types"/>
 <artifact id="StructureDefinition/padi-effective-date-extension" key="StructureDefinition-padi-effective-date-extension" name="Effective Date"/>
 <artifact id="Observation/Example-McBee-AutopsyObservation1" key="Observation-Example-McBee-AutopsyObservation1" name="Example-McBee-AutopsyObservation1"/>
 <artifact id="Bundle/Example-McBee-Bundle1" key="Bundle-Example-McBee-Bundle1" name="Example-McBee-Bundle1"/>
