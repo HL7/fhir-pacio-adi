@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="http://build.fhir.org/ig/HL7/pacio-adi" defaultVersion="current" defaultWorkgroup="" gitUrl="https://github.com/HL7/pacio-adi" url="http://hl7.org/fhir/us/pacio-adi">
-<version code="current" url="http://build.fhir.org/ig/HL7/pacio-adi"/>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="http://build.fhir.org/ig/HL7/fhir-pacio-adi" defaultVersion="current" defaultWorkgroup="" gitUrl="https://github.com/HL7/pacio-adi" url="http://hl7.org/fhir/us/pacio-adi">
+<version code="current" url="http://build.fhir.org/ig/HL7/fhir-pacio-adi"/>
 <version code="0.0.1" url="http://build.fhir.org/ig/HL7/pacio-adi/v0.1.0"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>

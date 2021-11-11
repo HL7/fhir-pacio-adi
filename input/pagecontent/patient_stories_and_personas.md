@@ -10,7 +10,8 @@ She uses a consumer facing tool to create a digital advance directive or upload 
 Angie shares her advance directive information with her medical proxy/healthcare agent and primary care physician so if either are contacted by a treating provider in an emergency, they can make her advance directive accessible to inform treatment.
 
 <img src="./patient_story_1a.png" alt="Patient Story 1a"/>
- <br clear="all" />
+<br clear="all" />
+
 <!-- Future versions
 ### Create in a digital form and make available for sharing and accessing Encounter-Centric Patient Instructions
 <p>

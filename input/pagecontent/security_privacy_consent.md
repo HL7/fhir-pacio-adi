@@ -62,10 +62,12 @@ For the purposes of Advance Directive Interoperability, additional security conf
             7.	user/Patient.read
             8.	user/Bundle.*
             8.	user/DocumentReference.*
+
 <!--  TODO
 #### Individual-Authorized Exchange
 1.	http://hl7.org/fhir/us/davinci-pdex/Member-AuthorizedOAuth2Exchange.html
 -->
+
 #### Privacy Requirement
 For the purposes of Advance Directive Interoperability, privacy conformance requirements are as follows:
 - Implementers **SHOULD** support data sharing policies with use of the Consent resource.
