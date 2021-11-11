@@ -124,7 +124,7 @@
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="downloads" name="Downloads"/>
-<page key="general_guidance" name="General Guidance"/>
+<page key="formal_specification" name="Formal Specification"/>
 <page key="index" name="Home"/>
 <page key="patient_stories_and_personas" name="Patient Stories and Personas"/>
 <page key="security_privacy_consent" name="Security Privacy Consent"/>

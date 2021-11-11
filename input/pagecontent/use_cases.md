@@ -34,9 +34,7 @@ System actors are responsible for ensuring the advance directive information is 
 Use cases in this IG will provide requirements for systems to use FHIR RESTful operations to both share (PUSH) and query & access (PULL) an individual's advance directive content. In addition, it will cover technical requirements to update advance directive content. Finally, the use cases will provide guidance on verification. In this use case, verification addresses situations when you have advance directive information and you use FHIR RESTful operations to determine if what you have is current. The details for these use cases are provided below. 
 
 
-
-<img src="./ADI_use_case_overview.png" alt="ADI Use Case Overview"/>
-<br clear="all" />
+<img src="./ADI_use_case_overview.png" alt="ADI Use Case Overview" style="width: 100%; float: none; align: middle;"/>
 
 #### Use Case 1: Create in Digital Form [Content]
 
@@ -47,9 +45,7 @@ In Use Case 1, the person that wants to create their advance directive informati
 
 
 ##### Use Case 1 Actor Transition Diagram
-<br clear="all" />
-<img src="./use_case_1_1.png" alt="Use Case 21: Diagram 1"/>
-<br clear="all" />
+<img src="./use_case_1_1.png" alt="Use Case 2: Diagram 1" style="width: 100%; float: none; align: middle;"/>
 
 ##### Use Case 1 Processes Steps
 
@@ -57,8 +53,7 @@ In Use Case 1, the process is started by a person wanting to create advance dire
 
 ##### Use Case 1 Sequence Diagram
 
-<img src="./use_case_1_2.png" alt="Use Case 21: Diagram 2"/>
-<br clear="all" />
+<img src="./use_case_1_2.png" alt="Use Case 1: Diagram 2" style="width: 100%; float: none; align: middle;"/>
 
 #### Use Case 2: Share [Content]
 
@@ -69,8 +64,7 @@ In Use Case 2, the Content Creator/Custodian will share advance directive inform
 
 ##### Use Case 2 Actor Transition Diagram
 
-<img src="./use_case_2_1.png" alt="Use Case 2: Diagram 1"/>
-<br clear="all" />
+<img src="./use_case_2_1.png" alt="Use Case 2: Diagram 1" style="width: 100%; float: none; align: middle;"/>
 
 ##### Use Case 2 Processes Steps
 
@@ -78,8 +72,7 @@ In Use Case 2, the process is started when a person wants to share their advance
 
 ##### Use Case 2 Sequence Diagram
 
-<img src="./use_case_2_2.png" alt="Use Case 2: Diagram 2"/>
-<br clear="all" />
+<img src="./use_case_2_2.png" alt="Use Case 2: Diagram 2" style="width: 100%; float: none; align: middle;"/>
  
 #### Use Case 3: Query and Access [Content]
 
@@ -94,21 +87,15 @@ In Use Case 3, there are 3 steps included.
 
 ##### Use Case 3, Part 1 Actor Transition Diagram, Patient Query
 
-<br clear="all" />
-<img src="./use_case_3_1.png" alt="Use Case 3: Diagram 1"/>
-<br clear="all" />
+<img src="./use_case_3_1.png" alt="Use Case 3: Diagram 1" style="width: 100%; float: none; align: middle;"/>
 
 ##### Use Case 3, Part 2 Actor Transition Diagram, DocumentReference Query
 
-<br clear="all" />
-<img src="./use_case_3_2.png" alt="Use Case 3: Diagram 2"/>
-<br clear="all" />
+<img src="./use_case_3_2.png" alt="Use Case 3: Diagram 2" style="width: 100%; float: none; align: middle;"/>
 
 ##### Use Case 3, Part 3 Actor Transition Diagram, Binary Read or Read Composition
 
-<br clear="all" />
-<img src="./use_case_3_3.png" alt="Use Case 3: Diagram 3"/>
-<br clear="all" />
+<img src="./use_case_3_3.png" alt="Use Case 3: Diagram 3" style="width: 100%; float: none; align: middle;"/>
 
 ##### Use Case 3 Processes Steps
 
@@ -117,9 +104,7 @@ In Use Case 3, the process is started when a Practitioner wants a person’s AD 
 
 
 ##### Use Case 3 Sequence Diagram
-<br clear="all" />
-<img src="./use_case_3_4.png" alt="Use Case 3: Diagram 4"/>
-<br clear="all" />
+<img src="./use_case_3_4.png" alt="Use Case 3: Diagram 4" style="width: 100%; float: none; align: middle;"/>
 
 #### Use Case 4: Update [Content]
 
@@ -129,9 +114,7 @@ In Use Case 4, the person that has previously created their advance directive in
 
 
 ##### Use Case 4 Actor Transition Diagram
-<br clear="all" />
- <img src="./use_case_4_1.png" alt="Use Case 4: Diagram 1"/>
- <br clear="all" />
+<img src="./use_case_4_1.png" alt="Use Case 4: Diagram 1" style="width: 100%; float: none; align: middle;"/>
 
 ##### Use Case 4 Processes Steps
 
@@ -143,9 +126,7 @@ Note: FHIR Resource versioning is only used for error corrections.
 
 
 ##### Use Case 4 Sequence Diagram
-<br clear="all" />
-<img src="./use_case_4_2.png" alt="Use Case 4: Diagram 2"/>
-<br clear="all" />
+<img src="./use_case_4_2.png" alt="Use Case 4: Diagram 2" style="width: 100%; float: none; align: middle;"/>
 
 
 #### Use Case 5: Verify current version of AD [Content]
@@ -156,13 +137,9 @@ In Use Case 5, a Content Verifier has advance directive information which it pre
 
 * Step 1 is to retrieve the known DocumentReference. The Content Verifier already has a version of the document and therefore knows the setId identifier for the document. The Content Verifier wants to confirm the information they have is the person’s current advance directive information. To verify that the document they have is the current version (and get the current version if it is not), the Content Verifier queries the Content Custodian to retrieve the current version of the document already in their possession. If the DocumentReference has a status = `current`, the latest document has been retrieved and no further action is needed.
 
-<br clear="all" />
-<img src="./use_case_5_1.png" alt="Use Case 5: Step 1"/>
-<br clear="all" />
+<img src="./use_case_5_1.png" alt="Use Case 5: Diagram 1" style="width: 100%; float: none; align: middle;"/>
 
-* Step 2 is to retrieve newer content if available. If the DocumentReference retrieved by the Content Retriever in Step 1 has a status of `superseded` then the document has been replaced and the Content Verifier, the does a second query for a DocumentReference that has a `relatesto.code` of `repalaces` and a reference to the superseded DocumentReference. The Content Verify can then retrieve the document as described in step 3 of <a hef="#use-case-3-description">Use Case 3</a>.
+* Step 2 is to retrieve newer content if available. If the DocumentReference retrieved by the Content Retriever in Step 1 has a status of `superseded` then the document has been replaced and the Content Verifier, the does a second query for a DocumentReference that has a `relatesto.code` of `replaces` and a reference to the superseded DocumentReference. The Content Verify can then retrieve the document as described in step 3 of <a hef="#use-case-3-description">Use Case 3</a>.
 
-<br clear="all" />
-<img src="./use_case_5_2.png" alt="Use Case 5: Step 2"/>
-<br clear="all" />
+<img src="./use_case_5_2.png" alt="Use Case 5: Diagram 2" style="width: 100%; float: none; align: middle;"/>
 
