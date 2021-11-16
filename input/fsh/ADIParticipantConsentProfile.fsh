@@ -24,7 +24,7 @@ Description: "This profile is used to represent a consent for an advance directi
 //[TODO] need verification that it is active only. Is the authority proposed if the agent is not yet aware or accepted the role?
 * status = #active
 // [TODO], the LOINC code is an observable, which is not meant to express scope. Will need to find another code that could (Follow-up with Dan Vreeman  Liz Umberfield)
-* scope from PADIParticipantConsentTypeVS (required)
+* scope from PADIConsentTypeVS (required)
 
 
 * category = http://terminology.hl7.org/CodeSystem/consentcategorycodes#acd
@@ -56,10 +56,15 @@ Description: "This profile is used to represent a consent for an advance directi
 //[TODO] do we need to support and require provision.actor for all HCA's?
 * provision.actor 1..* MS
 
+
+// TODO Add guidanceexamples from spreadsheet
+// Has communication with your healthcare agent(s) occurred?
+// Health care agent willingness to serve in the HCA role
+
 * provision.actor.extension contains
     padi-clause-extension named ClauseExtension 0..* MS
     
-* provision.actor.role from PADIParticipantRoleVS (required)
+* provision.actor.role from PADIConsentActorRoleVS (required)
 * provision.actor.reference only Reference(PADIParticipant)
 
 // [TODO] we need a valueset defined. Any candidates?

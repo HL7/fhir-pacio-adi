@@ -4,7 +4,20 @@ Id: PADI-PersonalInterventionPreference
 Title: "Personal Intervention Preference"
 Description: "This profile is used to represent a personal preference for a type of medical intervention (treatment) request under certain conditions."
 
+* category ^slicing.discriminator.type = #value 
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category ^slicing.ordered = false   // can be omitted, since false is the default
+* category ^slicing.description = "Slice based on $this value"
+
+
+* category 2..*
 * category from PADIInterventionPreferencesVS (extensible)
+* category contains
+    type 1..1 MS 
+    
+* category[type] = PADIGoalCategoryCS#intervention-preference
+
 
 * obeys value-personal-intervention-preference-ordinal
 

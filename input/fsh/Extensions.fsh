@@ -69,7 +69,7 @@ Description: "The Advance Directive Information Authorization Extension contains
 * valueReference 1..1 MS
 * valueReference only Reference(Consent)
 
-
+/*
 Extension: OrderExtension
 Id: padi-order-extension
 Title: "Order"
@@ -77,7 +77,7 @@ Description: "The Advance Directive Information Order Extension represents order
 * value[x] only Reference
 * valueReference 1..1 MS
 * valueReference only Reference(ServiceRequest)
-
+*/
 
 
 Extension: ContextualValueExtension

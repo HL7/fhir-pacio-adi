@@ -11,7 +11,7 @@ Description: "This profile defines the base requirements for all ADI Goals."
 
 * text 1..1 MS
 
-* category 1..1 MS
+* category MS
 * category.text MS
 * description 1..1 MS
 * description.extension contains
@@ -37,9 +37,21 @@ Profile: PADIPersonalGoal
 Parent: PADIGoal
 Id: PADI-PersonalGoal
 Title: "ADI Personal Goal"
-Description: "This profile is a statement that presents the author's personal health and treatment goals that are pertinent when planning his or her care."
+Description: "This profile is a statement that presents the author's personal health and treatment goals that are pertinent when planning their care."
 
+* category ^slicing.discriminator.type = #value 
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category ^slicing.ordered = false   // can be omitted, since false is the default
+* category ^slicing.description = "Slice based on $this value"
+* category 2..*
 * category from PADIHealthGoalsVS (extensible)
+* category contains
+    type 1..1 MS 
+    
+* category[type] = PADIGoalCategoryCS#personal-goal
+
+
 
 
 

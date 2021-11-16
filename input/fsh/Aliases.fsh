@@ -9,7 +9,7 @@ Alias:   $USCoreEncounter = http://hl7.org/fhir/us/core/StructureDefinition/us-c
 Alias:   $USCoreProvenance = http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance
 
 
-
+Alias: $USCoreDocumentReference = http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
 Alias: $USCoreDocumentReferenceType = http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-type
 Alias: $USCoreDocumentReferenceCategory = http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-category
 

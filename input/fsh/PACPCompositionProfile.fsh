@@ -4,6 +4,9 @@ Id: PADI-PACPComposition
 Title: "ADI Personal Advance Care Plan Composition"
 Description: "This profile encompasses information that makes up the author’s advance care information plan."
 
+
+// TODO add administrative info section 81381-6
+
 * section ^slicing.discriminator.type = #pattern 
 * section ^slicing.discriminator.path = "code"
 * section ^slicing.rules = #open

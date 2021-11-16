@@ -18,16 +18,25 @@ Description: "This value set identifies the relationship an advance directive pa
 * codes from valueset PADIPersonalAndLegalRelationshipRoleTypeVS
 
 
-ValueSet: PADIParticipantRoleVS
-Title: "ADI Participant Role"
+ValueSet: PADIConsentActorRoleVS
+Title: "ADI Consent Actor Role"
 Description: "This value set identifies the role the advance directive participant has, which could include: healthcare agent, proxy, or advisor roles that individuals commonly designate to empower surrogates to make medical treatment and care decisions when the individual is unable to effectively communicate with medical personnel or requires assistance with decision making.
 
 This ValueSet is managed at the US National Library of Medicine (NLM) Value Set Authority Center (VSAC): https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1046.35/expansion"
 * include $LOINC#75783-1 "Primary healthcare agent [Reported]"
 * include $LOINC#75784-9 "First alternate healthcare agent [Reported]"
 * include $LOINC#75785-6 "Second alternate healthcare agent [Reported]"
-* include $LOINC#81335-2 "Patient Healthcare agent"
-* codes from system PADIParticipantRoleCS
+* include $LOINC#81343-6 "Healthcare agent advisor [Reported]"
+* insert LOINCCopyrightNotice
+
+
+ValueSet: PADIConsentTypeVS
+Title: "Consent Type"
+Description: "Codes indicating type of advance directive consents."
+* include $LOINC#81335-2 "Patient Healthcare agent" // "Healthcare agents identified with no powers or limitations specified"
+* include $LOINC#75786-4 "Powers granted to healthcare agent [Reported]" // "Healthcare agents identified with powers granted specified"
+* include $LOINC#81346-9 "Limitations placed on healthcare agent [Reported]" // "Healthcare agents identified with limitations placed specified"
+* include $LOINC#81343-6 "Healthcare agent advisor [Reported]"
 * insert LOINCCopyrightNotice
 
 
@@ -44,6 +53,7 @@ Description: "Clinical Focus: This value set includes concepts representing an i
 This ValueSet is managed at the US National Library of Medicine (NLM) Value Set Authority Center (VSAC): https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.7/expansion"
 * include $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
 * include $LOINC#87528-6 "Personal health goal"
+* include PADIGoalCategoryCS#personal-goal "Personal goal"
 * insert LOINCCopyrightNotice
 
 
@@ -64,6 +74,7 @@ This ValueSet is managed at the US National Library of Medicine (NLM) Value Set 
 * include $LOINC#81364-2 "Religious beliefs [Reported]"
 * include $LOINC#81365-9 "Religious affiliation contact to notify [Reported]"
 * include $LOINC#81366-7 "Unfinished business [Reported]"
+* include PADIGoalCategoryCS#care-experience-preference "Care experience preference"
 * insert LOINCCopyrightNotice
 
 
@@ -74,7 +85,7 @@ Title: "Intervention Preferences"
 Description: "Clinical Focus: This value set includes concepts representing an individual's intervention preferences which can be expressed by the individual in his or her advance care plan.),(Data Element Scope: The intent of this value set is to identify personal intervention preferences that may be relevant and could be considered by clinicians or any person or organization that is providing care, treatment, or performing any other type of act to or on behalf of the individual.)"
 * codes from valueset PADIInterventionPreferencesOrdinalVS
 * codes from valueset PADIInterventionPreferencesNarrativeVS
-//* codes from valueset PADIUponDeathPreferencesVS
+* include PADIGoalCategoryCS#intervention-preference "Intervention preference"
 * insert LOINCCopyrightNotice
 
 
@@ -116,18 +127,6 @@ Description: "Clinical Focus: This value set includes concepts representing an i
 * include $LOINC#81376-6 "Mental health treatment preferences [Reported]"
 * include $LOINC#75779-9 "Thoughts on cardiopulmonary resuscitation (CPR) [Reported]"
 * include $LOINC#81353-5 "Thoughts on hastening death [Reported]"
-* insert LOINCCopyrightNotice
-
-
-
-ValueSet: PADIParticipantConsentTypeVS
-Title: "Healthcare Agent Powers or Limitations Indicator"
-Description: "Codes indicating information is regarding powers or limitations of a healthcare agent."
-* include $LOINC#81335-2 "Patient Healthcare agent" // "Healthcare agents identified with no powers or limitations specified"
-* include $LOINC#75786-4 "Powers granted to healthcare agent [Reported]" // "Healthcare agents identified with powers granted specified"
-* include $LOINC#81346-9 "Limitations placed on healthcare agent [Reported]" // "Healthcare agents identified with limitations placed specified"
-* include $LOINC#81343-6 "Healthcare agent advisor [Reported]"
-* codes from system PADIParticipantRoleCS
 * insert LOINCCopyrightNotice
 
 
@@ -223,10 +222,16 @@ Description: "Types of Documents"
 * include $SNOMEDCT#714748000 "Has advance care plan"
 * include codes from system $SNOMEDCT where concept is-a #425392003 "Active advance directive"
 * include codes from system $SNOMEDCT where concept is-a #423876004 "Clinical document"
-* insert LOINCCopyrightNotice
-* insert SNOMEDCopyrightNotice
+* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.
 
+This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 
+/*
+CodeSystem: PADIGoalCategoryVS
+Title: "ADI Goal Category Value Set"
+Description: "Advance Directive Goal Categories"
+* codes from codesystem PADIGoalCategoryCS
+*/
 
 RuleSet: LOINCCopyrightNotice
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc."
