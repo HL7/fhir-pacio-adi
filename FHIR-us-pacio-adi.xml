@@ -119,13 +119,12 @@
 <artifact id="StructureDefinition/padi-versionNumber-extension" key="StructureDefinition-padi-versionNumber-extension" name="Version Number"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
-<page key="artifacts" name="Artifacts Summary"/>
 <page key="downloads" name="Downloads"/>
+<page key="artifacts" name="FHIR Artifacts"/>
 <page key="formal_specification" name="Formal Specification"/>
 <page key="index" name="Home"/>
 <page key="patient_stories_and_personas" name="Patient Stories and Personas"/>
-<page key="security_privacy_consent" name="Security Privacy Consent"/>
+<page key="security_privacy_consent" name="Security, Privacy, and Consent"/>
 <page key="toc" name="Table of Contents"/>
-<page key="underlying_technologies" name="Underlying Technologies"/>
 <page key="use_cases" name="Use Cases"/>
 </specification>

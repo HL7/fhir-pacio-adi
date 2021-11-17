@@ -56,3 +56,19 @@ menu:
 #    Search Parameters: 6_searchparameters.html
   #Examples: artifacts.html#7
   Downloads: downloads.html
+
+pages:
+  index.md:
+    title: Home
+  patient_stories_and_personas.md:
+    title: Patient Stories and Personas
+  use_cases.md:
+    title: Use Cases
+  formal_specification.md:
+    title: Formal Specification
+  security_privacy_consent.md:
+    title: Security, Privacy, and Consent
+  artifacts.html:
+    title: FHIR Artifacts
+  downloads.md:
+    title: Downloads
