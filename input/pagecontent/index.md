@@ -1,12 +1,15 @@
-The Advance Directive Interoperability (ADI) FHIR implementation guide (IG) explains  how to represent, exchange, and verify a person’s goals, preferences and priorities for treatments and interventions regarding future medical care.
+The Advance Directive Interoperability (ADI) FHIR implementation guide (IG) explains how to represent, exchange, and verify a person’s goals, preferences and priorities for medical treatment and interventions regarding future medical care. 
 
 ### Introduction 
 <p>
-This ADI implementation guide (IG) describes how to use existing HL7 FHIR® standards to create, update, share, verify, and exchange information about an individual's advance medical goals, preferences, and priorities for care in the event the individual is unable to communicate this information to medical teams for himself or herself. Advance directives in this IG includes person-authored advance directives and personal advance care plans, and patient consent information attesting to a patient authorizing a person or persons to serve as a healthcare agent or attesting to permission granted to share advance directive information with others. It also includes practitioner-authored patient instructions (obligation and  prohibitions), and practitioner-authored portable medical orders for life sustaining treatments.
+This ADI implementation guide (IG) describes how to use existing HL7 FHIR® standards to create, update, share, verify, and exchange information about an individual's advance medical goals, preferences, and priorities for care in the event the individual is unable to communicate this information to medical teams for themselves due to a health crisis. The term “advance directive” in this IG does not refer to a specific form, document, or method of memorializing advance healthcare decisions, but is instead an over-arching category.
 </p>
 
 <p>
-Advance directives can be categorized into <a href="#content_types">three types of information</a>. The current version of this guide addresses Type I: Person-Authored Advance Directive Information. Subsequent versions of this guide will address the other two types; Encounter-Centric Instructions and Portable Medical Order for Life-Sustaining Treatment.
+Advance healthcare directives can be categorized into <a href="#content_types">three types of information</a>. The current version of this guide addresses Content Type I: Person-Authored Advance Directive Information. Subsequent versions of this guide will address the other two types; Content Type 2: Encounter-Centric Patient Instructions (obligations and prohibitions) and Content Type 3:  Portable Medical Orders for Life-Sustaining Treatment.
+</p>
+<p>
+Included in the content for this FHIR IG are person-authored advance directives and personal advance care plans which comprise Content Type 1, and also cover patient consent information attesting to their designation of a person, or persons, to serve as their healthcare agent. 
 </p>
 <!-- Removed. Kept for review before ballot
 <p>
@@ -24,7 +27,7 @@ A subsequent version of this IG will define the minimum conformance requirements
 Advance directive interoperability is a complex area that involves many stakeholders. The HL7 workgroup sponsor for this FHIR IG is Patient Empowerment. HL7 co-sponsor workgroups include Patient Care, Community Based Care and Privacy, and Orders & Observations. As part of PACIO’s main goal in improving care transitions, the Post-Acute Care Interoperability (PACIO) Community has adopted this project as a critical use case. The PACIO Community has a strong interest in the topic of advance directive interoperability with FHIR and will support the community engagement and technical FHIR IG development needed for advance directives interoperability. PACIO is supported by MITRE, CMS, ONC and many other stakeholders (clinical, technical, and industry associations).
 </p>
 <p>
-FHIR profiles have been developed for several existing FHIR resources to represent advance directive content such as: living will, durable medical power of attorney, personal health goals at end of life, care experience preferences, end-of-life and emergency intervention preferences under certain circumstances, patient instructions (obligation, prohibitions, and consent), and portable medical orders for life sustaining treatments.
+FHIR profiles have been developed for several existing FHIR resources to represent advance directive Content Type 1 such as: living will, durable medical power of attorney, personal health goals at end of life, care experience preferences, emergency intervention preferences under certain circumstances, and upon death preferences. 
 </p>
 
 <a name="content_types">
@@ -85,7 +88,7 @@ There is a very important distinction for the three types of information that wi
 <img src="./ADI_types_overview.png" alt="ADI Types Overview" width="800"/>
 <br clear="all" />
 
-The current version of this FHIR IG covers the use of RESTful API interactions for creation, sharing, query/access, and verification of advance directive documentation between systems. It is intended to address advance directive interoperability needs for Content Type 1, where the author is the individual that is making medical intervention goals, preferences, priorities known in advance. This IG is not intended to cover medical intervention goals, preferences, priorities for individuals who are not able to make their own wishes known.
+The current version of this FHIR IG covers the use of RESTful API interactions for creation, sharing, query/access, and verification of advance directive information between systems. It is intended to address advance directive interoperability needs for Content Type 1, where the author is the individual that is making medical intervention goals, preferences, priorities known in advance. This IG is not intended to cover medical intervention goals, preferences, priorities for individuals who are not able to create and document their own advance healthcare decisions.
 
 
 Future versions of this FHIR IG will address encounter-centric patient instructions, Content Type 2, and portable medical orders for life-sustaining treatment, Content Type 3.
