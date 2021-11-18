@@ -58,16 +58,44 @@ For the purposes of this implementation guide, it is expected that most implemen
 ### Document Bundles and Constituent Resources
 
 <!--[TODO]--> 
-This guide requires the interoperability of Advance Directive Information through the use of wholly contained documents as part of its use case. While it is required that this data be made interoperable as a collection of Advance Directive Information in document Bundles, systems may decide to make use of the constituent resources as separate resources for additional uses and purposes, such as use in support of Clinical Decision Support 
+This guide requires the interoperability of Advance Directive Information through the use of wholly contained documents as part of its use case. While it is required that this data be made interoperable as a collection of Advance Directive Information in document Bundles, systems may decide to make use of the constituent resources as separate resources for additional uses and purposes, such as use in support of Clinical Decision Support. 
 
 ### Advance Directive Native FHIR Document Structure Requirements
+Advance directive documents may take several forms including scanned PDF documents, CDA documents and native FHIR documents. This guide defines interoperability to support any number of types, though focuses on native FHIR documents.
 
-DocumentReference, Binary, Bundle
+All document content, regardless of format is saved in the Binary resource and is available through the Binary endpoint. FHIR native documents **SHALL** be Bundle resources with `type` = `document` and encoded as a Binary resource. Documents that are communicated **SHALL** have at least one DocumentReference resource that references the Binary though the `DocumentReference.content.attachment.url`.
+
+FHIR native documents **SHOULD** have all content contained within the Bundle with no external references except for the references to external documents in the [DocumentationObservation](StructureDefinition-PADI-DocumentationObservation.html).focus. FHIR native documents have internal references between resources (e.g. the Composition resource referencing entry resources). These references **SHALL** be resolved using the `Bundle.entry.fullUrl`. This URL may be a proper URL, but there **SHOULD** be no expectation that the URL resolves outside of the confines of the Bundle. To avoid confusion, it may be desireable to use UUID (e.g. urn:uuid:53fefa32-fcbb-4ff8-8a92-55ee120877b7) instead of URLs for the fullUrl. 
+
 
 ### Document Digital Signatures
+#### Background
+Digital signatures provide trusted signatures, non-repudiation, and they make the signed document tamper-proof. Digital signatures include several capabilities that distinguish them from basic electronic signatures. In much the same way as other document exchange, the use of digital signatures for advance directive document interoperability will depend on the specific scenario, parties involved, and jurisdictional or organizational requirements. There are challenges and costs to using digital signatures that may present an unnecessary barrier to some applications of this implementation guide. Therefore this guide does not require the use of digital signatures, but instead recommend that systems **SHOULD** support digital signatures where possible.
+
+There are a number of options available for signing documents in FHIR. For context, below is a description of a number that were considered for this guide.
+
+The first option is an embedded signature where a FHIR document bundle is digitally signed.  In this method, the digital signature is saved in Bundle.signature. The result is the content and document bundle are included in a single DocumentReference Resource. This approach works for JSON and xml bundles. 
+
+The second option is a detached signature, in which the Binary Resource is digitally signed and saved as a new DocumentReference.  This option results in two DocumentReferences where one DocumentReference has the content and the other contains the digital signature. The DocumentReference with the signature uses DocumentReference.relatesTo.code were the code is signs and DocumentReference.relatesTo.target points to the DocumentReference that contains the content.  The detached signature option supports FHIR Document Bundle, CDA, pdf, and mp3 content. 
+
+The final option uses an enveloped signature. In this option, the content is wrapped in a FHIR Bundle in a JSON object and then encoded to binary. The binary is then signed using JSON Web Signature.  The enveloped signature described only allows for signing of JSON files.
+
+#### Digital Signatures for Advance Directive Interoperability
+If digital signatures are supported, the method of signatures this guide specifies is the detached signature. The detached signature approach provides the greatest flexibility of document type support (does not have to be a JSON or even a FHIR encoded document) and enables the ability for clients that do not support or require digital signatures to retrieve and use the data unhampered. The detached signature approach is also aligned with the design and workflows of major US health information networks. 
+Systems claiming conformance to this guide that support digital signatures **SHALL** support the detached signature stored in a separate Binary resource and referenced by a DocumentReference resource as described below.
+
+For the detached signature, the digital signature is saved as a new DocumentReference in `DocumentReference.content.attachment.content` and the original content is in a separate DocumentReference Resource.  The DocumentReference that contains the signature links to the original DocumentReference using `DocumentReference.relatesTo.target` and the code `sign` is used in the `DocumentReference.relatesTo.code` field to identify how this DocumentReference Resource relates to the target.  Both `DocumentReference.type` and `DocumentReference.category` are required data elements and should be coded.
+
+The cryptographic digital signature is included in the DocumentReference.content as an attachment. The mimeType for the digital signature is Content.attachment.contentType.application/jws for json signature and Content.attachment.contentType.xml-signature” for xml signature.  The details of the cryptographic digital signature **SHALL** be a referenced Binary Resource using `url`. 
+Below is an example of detached digital signature with the cryptographic digital signature referenced using Binary Resource. 
+
+<img src="./digital_signature_reference_example.png" alt="Digital Signature Reference Example" style="float: none; align: middle;"/>
+
 
 ### Replacing Documents
+At some point it may be necessary for an advance directive document to be replaced or deprecated. The situations and conditions in which a document is replaced or deprecated is dependent on jurisdictional requirements as well as the intent and interests of the actors involved. When a document is replaced or deprecated is beyond the scope of this guide, however, this guide does specify requirements that need to be supported in the event documents need to be replaced or deprecated.
 
+#### Document replacement
+When a document is to be replaced, a new DocumentReference is created. The new document points "backwards" to the documentReference it is replacing through the `DocumentReference.relatesTo.target` and a `DocumentReference.relatesTo.code` with a value of `replaces`. The original document then should be marked as replaced by updating the `DocumentReference.status` to the code `superseded`. Ideally the DocumentReference being replaced and the replacing DocumentReference will have matching business identifiers (`DocumentReference.identifier`) to enable direct searching across multiple versions.
 
-### Deprecating Documents
-
+Documents can be deprecated through a document replacement that includes a new version indicating that the document is deprecated or otherwise no longer in force.

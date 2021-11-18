@@ -85,7 +85,7 @@ There is a very important distinction for the three types of information that wi
     </tr>
 </table>
 
-<img src="./ADI_types_overview.png" alt="ADI Types Overview" width="800"/>
+<img src="./ADI_types_overview.png" alt="ADI Types Overview" style="width: 100%; float: none; align: middle;"/>
 <br clear="all" />
 
 The current version of this FHIR IG covers the use of RESTful API interactions for creation, sharing, query/access, and verification of advance directive information between systems. It is intended to address advance directive interoperability needs for Content Type 1, where the author is the individual that is making medical intervention goals, preferences, priorities known in advance. This IG is not intended to cover medical intervention goals, preferences, priorities for individuals who are not able to create and document their own advance healthcare decisions.

@@ -41,19 +41,7 @@ Use cases in this IG will provide requirements for systems to use FHIR RESTful o
 ##### Use Case 1: Description 
 
 
-In Use Case 1, the person that wants to create their advance directive information in a digital form enters information in a registry repository system. The registry repository system ensures content is created and correctly represented using FHIR resources. The registry repository system acts as the Content Custodian. This Use Case does not specify the interactions between the system acting as the Content Creator and the Content Custodian.
-
-
-##### Use Case 1 Actor Transition Diagram
-<img src="./use_case_1_1.png" alt="Use Case 2: Diagram 1" style="width: 100%; float: none; align: middle;"/>
-
-##### Use Case 1 Processes Steps
-
-In Use Case 1, the process is started by a person wanting to create advance directive information in a digital form. The person creates AD info in a system that can capture the data. This information is saved in a system that can act as the Content Custodian. This advance directive information is stored and indexed by the custodian system responsible for further information exchange. 
-
-##### Use Case 1 Sequence Diagram
-
-<img src="./use_case_1_2.png" alt="Use Case 1: Diagram 2" style="width: 100%; float: none; align: middle;"/>
+In Use Case 1, the person that wants to create their advance directive information in a digital form enters information in a content creator system. The content creator system ensures the information is stored and is available for the steps in the process that are described in the following use cases.
 
 #### Use Case 2: Share [Content]
 
@@ -100,7 +88,7 @@ In Use Case 3, there are 3 steps included.
 ##### Use Case 3 Processes Steps
 
 
-In Use Case 3, the process is started when a Practitioner wants a person’s AD Info for care planning and decision-making. The Content Requester must contact a system that offers a FHIR API for receiving requests for advance directive information. The Practitioner must be authorized to access the person’s AD Info on the Custodian system. First the Content Requester will use a GET Patient request using patient matching information. The Content Custodian server returns all Patient resources to the Content Requester. If more then one Patient resource is returned, the Content Requester will confirm which is the correct patient. Then the Content Requester will use a GET DocumentReference using patient FHIR ID and any additional search parameters as supported and needed. The Content Custodian returns all matched DocumentReference resources to the Content Requester. If more then one DocumentReference is returned, the Content Requester will confirm which DocumentReference(s) are wanted. Finally the Content Requester will read the wanted documents using a GET operation on the uURL included in the DocumentReference and decode the document content if necessary.
+In Use Case 3, the process is started when a Practitioner wants a person’s AD Info for care planning and decision-making. The Content Requester must contact a system that offers a FHIR API for receiving requests for advance directive information. The Practitioner must be authorized to access the person’s AD Info on the Custodian system. First the Content Requester will use a GET Patient request using patient matching information. The Content Custodian server returns all Patient resources to the Content Requester. If more than one Patient resource is returned, the Content Requester will confirm which is the correct patient. Then the Content Requester will use a GET DocumentReference using patient FHIR ID and any additional search parameters as supported and needed. The Content Custodian returns all matched DocumentReference resources to the Content Requester. If more than one DocumentReference is returned, the Content Requester will confirm which DocumentReference(s) are wanted. Finally, the Content Requester will read the wanted documents using a GET operation on the uURL included in the DocumentReference and decode the document content if necessary.
 
 
 ##### Use Case 3 Sequence Diagram

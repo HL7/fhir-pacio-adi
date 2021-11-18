@@ -13,12 +13,15 @@ Usage: #example
 * entry[=].resource = Example-Smith-Johnson-PACPComposition1
 * entry[+].fullUrl = "http://www.example.org/fhir/Patient/Example-Smith-Johnson-Patient1"
 * entry[=].resource = Example-Smith-Johnson-Patient1
+* entry[+].fullUrl = "http://www.example.org/fhir/RelatedPerson/Example-Smith-Johnson-Notary1"
+* entry[=].resource = Example-Smith-Johnson-Notary1
 * entry[+].fullUrl = "http://www.example.org/fhir/RelatedPerson/Example-Smith-Johnson-HealthcareAgent1"
 * entry[=].resource = Example-Smith-Johnson-HealthcareAgent1
 * entry[+].fullUrl = "http://www.example.org/fhir/RelatedPerson/Example-Smith-Johnson-HealthcareAgent2"
 * entry[=].resource = Example-Smith-Johnson-HealthcareAgent2
 * entry[+].fullUrl = "http://www.example.org/fhir/Consent/Example-Smith-Johnson-HealthcareAgentConsent"
 * entry[=].resource = Example-Smith-Johnson-HealthcareAgentConsent
+
 // This Care experience was linked under the end of life section, which is not allowed. The scope of that section may change to support any condition, and if so should also include care experiences. At which point this can be re-added
 //* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference1"
 //* entry[=].resource = Example-Smith-Johnson-CareExperiencePreference1
@@ -157,10 +160,16 @@ Usage: #example
 
 * custodian = Reference(Example-Smith-Johnson-OrganizationCustodian1)
 
+* attester[notary_attester].mode = #professional
+* attester[notary_attester].party = Reference(Example-Smith-Johnson-Notary1)
+* attester[notary_attester].extension[padi-attestationInformation-extension].extension[AttesterRole].valueCodeableConcept = $LOINC#81372-5 "Notary"
+* attester[notary_attester].extension[padi-attestationInformation-extension].extension[NotarySealId].valueIdentifier.value = "notary-1254"
+* attester[notary_attester].extension[padi-attestationInformation-extension].extension[NotaryCommissionExpirationDate].valueDate = "2022-12-31"
+
 
 // TODO Where should the top level note go? <p><b>It is very important for you to discuss your medical treatment goals and wishes with your healthcare agent, your family, and your medical care providers.</b> Keep in mind that advance medical directives are simply expressions of your medical treatment goals and preferences. There is no guarantee that your medical care providers will follow all of your wishes, but one thing is certain: <b>If your advance medical directives cannot be quickly located and retrieved in a time of need, then medical care providers, your family and friends will not be able to take your wishes into consideration when they make critical decisions regarding your treatment.</b></p>
 
-// Need to include attesters
+
 // no legal authenticator in CDA
 
 // Line 202
@@ -440,6 +449,26 @@ Usage: #example
 * telecom[0].system = #email
 * telecom[0].value = "DebraSJ@example.com"
 * telecom[0].use = #home
+
+
+
+Instance: Example-Smith-Johnson-Notary1
+InstanceOf: PADIParticipant
+Description: "Example Patient Smith-Johnson Notary"
+Usage: #example
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>Notary</b></p>
+<p>Charles Xavier</p>
+</div>"
+
+* patient = Reference(Example-Smith-Johnson-Patient1)
+
+* name[0].family = "Xavier"
+* name[0].given[0] = "Charles"
+* telecom[0].system = #email
+* telecom[0].value = "Chales@example.com"
+* telecom[0].use = #work
 
 
 

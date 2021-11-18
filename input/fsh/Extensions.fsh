@@ -100,17 +100,34 @@ Description: "The Attestation Information Extension allows for the capture of in
 * extension contains
 	AttesterRole 1..1 and
     AttestationStatement 0..1 and
+	NotarySealId 0..1 and
+	NotaryCommissionExpirationDate 0..1 and
     Signature 0..1
+
+* obeys notary-information-requires-notary-role
+
 * extension[AttesterRole] ^short = "Attester Role"
 * extension[AttesterRole].value[x] 1..1 MS
 * extension[AttesterRole].value[x] only CodeableConcept
 * extension[AttesterRole].valueCodeableConcept from PADIAttesterRoleTypeVS (extensible)
+
 * extension[AttestationStatement] ^short = "Attestation Statement"
 * extension[AttestationStatement].value[x] 1..1 MS
 * extension[AttestationStatement].value[x] only string or markdown
+
+* extension[NotarySealId] ^short = "Notary seal id"
+* extension[NotarySealId].value[x] 1..1 MS
+* extension[NotarySealId].value[x] only Identifier
+
+* extension[NotaryCommissionExpirationDate] ^short = "Notary commission expiration date"
+* extension[NotaryCommissionExpirationDate].value[x] 1..1 MS
+* extension[NotaryCommissionExpirationDate].value[x] only date
+
 * extension[Signature] ^short = "Attester Signature with Date"
 * extension[Signature].value[x] 1..1 MS
 * extension[Signature].value[x] only Signature
+
+
 
 
 Extension: EffectiveDateExtension
@@ -157,6 +174,16 @@ Description: "Indicates if the goals are ordered in descending priority (Y) or n
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1 MS
 * valueCodeableConcept from $HL7YesNoVS (extensible)
+
+
+Invariant:  notary-information-requires-notary-role
+Description: "If Notary information (seal or commission expiration date exists, then role must be notary"
+Expression: "(extension.where(url = 'NotarySealId').valuerIdentifier.exists() or extension.where(url = 'NotaryCommissionExpirationDate').valueDate.exists()) implies  extension.where(url = 'AttesterRole').valueCodeableConcept.where(coding.code='81372-5').exists()"
+//Expression: "category.coding.where(code.memberOf('http://hl7.org/fhir/us/pacio-adi/ValueSet/PADIInterventionPreferencesOrdinalVS')).exists() implies description.coding.where(code.memberOf('http://terminology.hl7.org/ValueSet/v2-0136')).exists()"
+//Expression: "category.coding.code.memberOf('http://hl7.org/fhir/us/pacio-adi/ValueSet/PADIInterventionPreferencesOrdinalVS').exists()"
+Severity:   #error
+
+
 
 // TODO Could add Invariant for Signature.type matching the attesterRole
 // TODO Notary Expiration Date?

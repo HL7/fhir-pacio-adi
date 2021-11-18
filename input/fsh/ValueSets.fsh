@@ -95,7 +95,6 @@ Description: "Clinical Focus: This value set includes concepts representing an i
 ValueSet: PADIInterventionPreferencesOrdinalVS
 Title: "Intervention Preferences - Ordinal"
 Description: "Clinical Focus: This value set includes concepts representing an individual's intervention preferences which can be expressed by the individual in his or her advance care plan.),(Data Element Scope: The intent of this value set is to identify personal intervention preferences that may be relevant and could be considered by clinicians or any person or organization that is providing care, treatment, or performing any other type of act to or on behalf of the individual.)"
-* include $LOINC#75780-7 "Preferred location to spend final days if possible to choose [Reported]"
 * include $LOINC#75787-2 "Advance directive - request for intubation"
 * include $LOINC#75788-0 "Advance directive - request for tube feeding"
 * include $LOINC#75789-8 "Advance directive - request for life support"
@@ -127,6 +126,7 @@ Description: "Clinical Focus: This value set includes concepts representing an i
 * include $LOINC#81376-6 "Mental health treatment preferences [Reported]"
 * include $LOINC#75779-9 "Thoughts on cardiopulmonary resuscitation (CPR) [Reported]"
 * include $LOINC#81353-5 "Thoughts on hastening death [Reported]"
+* codes from valueset PADIUponDeathPreferencesVS
 * insert LOINCCopyrightNotice
 
 

@@ -44,7 +44,7 @@ menu:
   Guidance:
     Patient Stories and Personas: patient_stories_and_personas.html
     Use Cases: use_cases.html
-    #General Guidance: general_guidance.html
+    General Guidance: general_guidance.html
     Formal Specification: formal_specification.html
     Security, Privacy, and Consent: security_privacy_consent.html
   FHIR Artifacts:
@@ -64,6 +64,8 @@ pages:
     title: Patient Stories and Personas
   use_cases.md:
     title: Use Cases
+  general_guidance.md:
+    title: General Guidance
   formal_specification.md:
     title: Formal Specification
   security_privacy_consent.md:
