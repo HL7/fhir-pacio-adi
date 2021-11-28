@@ -54,7 +54,7 @@ Description: "The Advance Directive Information Participant Extension identifies
 
 Extension: PerformerExtension
 Id: padi-performer-extension
-Title: "Informant"
+Title: "Performer"
 Description: "The Advance Directive Information Performer Extension represents clinicians who actually and principally carry out the clinical services being documented. In a transfer of care this represents the healthcare providers involved in the current or pertinent historical care of the patient. Preferably, the patients key healthcare care team members would be listed, particularly their primary physician and any active consulting physicians, therapists, and counselors."
 * value[x] only Reference
 * valueReference 1..1 MS

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="http://build.fhir.org/ig/HL7/fhir-pacio-adi" defaultVersion="current" defaultWorkgroup="" gitUrl="https://github.com/HL7/pacio-adi" url="http://hl7.org/fhir/us/pacio-adi">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/pacio-adi/2022Jan" ciUrl="http://build.fhir.org/ig/HL7/fhir-pacio-adi" defaultVersion="0.1.0" defaultWorkgroup="pe" gitUrl="https://github.com/HL7/pacio-adi" url="http://hl7.org/fhir/us/pacio-adi">
 <version code="current" url="http://build.fhir.org/ig/HL7/fhir-pacio-adi"/>
-<version code="0.0.1" url="http://build.fhir.org/ig/HL7/pacio-adi/v0.1.0"/>
+<version code="0.1.0" url="http://hl7.org/fhir/us/pacio-adi/2022Jan"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
@@ -96,10 +96,9 @@
 <artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan3" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan3" name="Example-Smith-Johnson-PreferenceCarePlan3"/>
 <artifact id="StructureDefinition/padi-goal-order-by-descending-priority-extension" key="StructureDefinition-padi-goal-order-by-descending-priority-extension" name="Goal Order by Descending Priority"/>
 <artifact id="ValueSet/PADIHealthGoalsVS" key="ValueSet-PADIHealthGoalsVS" name="Health Goals"/>
+<artifact id="CodeSystem/PADIHCADecisionsCS" key="CodeSystem-PADIHCADecisionsCS" name="Healthcare Agent Decision Codes"/>
 <artifact id="ValueSet/PADIHCADecisionsVS" key="ValueSet-PADIHCADecisionsVS" name="Healthcare Agent Decisions"/>
-<artifact id="CodeSystem/PADIHCADecisionsCS" key="CodeSystem-PADIHCADecisionsCS" name="Healthcare Agent Decisions"/>
 <artifact id="StructureDefinition/padi-informant-extension" key="StructureDefinition-padi-informant-extension" name="Informant"/>
-<artifact id="StructureDefinition/padi-performer-extension" key="StructureDefinition-padi-performer-extension" name="Informant"/>
 <artifact id="StructureDefinition/padi-informationRecipient-extension" key="StructureDefinition-padi-informationRecipient-extension" name="Information Recipient"/>
 <artifact id="ValueSet/PADIInterventionPreferencesVS" key="ValueSet-PADIInterventionPreferencesVS" name="Intervention Preferences"/>
 <artifact id="ValueSet/PADIInterventionPreferencesNarrativeVS" key="ValueSet-PADIInterventionPreferencesNarrativeVS" name="Intervention Preferences - Narrative"/>
@@ -112,6 +111,7 @@
 <artifact id="CapabilityStatement/padi" key="CapabilityStatement-padi" name="PADI CapabilityStatement"/>
 <artifact id="StructureDefinition/padi-participant-extension" key="StructureDefinition-padi-participant-extension" name="Participant"/>
 <artifact id="ValueSet/PADIParticipantRelationshipVS" key="ValueSet-PADIParticipantRelationshipVS" name="Participant Relationships"/>
+<artifact id="StructureDefinition/padi-performer-extension" key="StructureDefinition-padi-performer-extension" name="Performer"/>
 <artifact id="ValueSet/PADIPersonalAndLegalRelationshipRoleTypeVS" key="ValueSet-PADIPersonalAndLegalRelationshipRoleTypeVS" name="Personal And Legal Relationship Role Type"/>
 <artifact id="StructureDefinition/PADI-PersonalInterventionPreference" key="StructureDefinition-PADI-PersonalInterventionPreference" name="Personal Intervention Preference"/>
 <artifact id="ValueSet/PADIPresenceIndicatorVS" key="ValueSet-PADIPresenceIndicatorVS" name="Presence Indicator"/>

@@ -520,6 +520,8 @@ Usage: #example
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>status</b>: active</p><p><b>intent</b>: proposal</p><p><b>category</b>: <span title='Codes: {http://snomed.info/sct 736366004}'>Advance care plan</span></p><p><b>subject</b>: <a href='Patient-Example-Smith-Johnson-Patient1.html'>Betsy Smith-Johnson</a> ; BetsySJ@example.com; gender: female; birthDate: 1950-11-15</p><p><b>addresses</b>: </p><ul><li><span>Unconscious, in a coma, or in a persistent vegetative state with little or no chance of recovery</span></li><li><span>Persistent vegetative state (SNOMED CT 24473007)</span></li><li><span>Irreversible coma (SNOMED CT 73453007)</span></li></ul><p><b>goal</b>: </p><ul><li><a href='Goal-Example-Smith-Johnson-PersonalGoal1.html'><span title='Codes: {http://loinc.org 81378-2}'>Goals, preferences, and priorities under certain health conditions [Reported]</span></a>; <span title='Codes: '>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Avoiding prolonged dependence on machines, Not being a physical burden to my family, Dying at home</span></li><li><a href='Goal-Example-Smith-Johnson-PersonalInterventionPreference3.html'><span title='Codes: {http://loinc.org 75778-1}'>Information to tell doctors if I have a severe, irreversible brain injury or illness and can't dress, feed, or bathe myself, or communicate my medical wishes, but can be kept alive [Reported]</span></a>; <span title='Codes: '>If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings, I would like for them to keep trying life-sustaining treatments until my healthcare agent decides it is time to stop and such treatments and let me die gently.</span></li><li><a href='Goal-Example-Smith-Johnson-CareExperiencePreference6.html'><span title='Codes: {http://loinc.org 81365-9}'>Religious affiliation contact to notify [Reported]</span></a>; <span title='Codes: '>Please attempt to notify someone from my religion at the following phone number: If I have included one: Catholic</span></li><li><a href='Goal-Example-Smith-Johnson-CareExperiencePreference5.html'><span title='Codes: {http://loinc.org 81364-2}'>Religious beliefs [Reported]</span></a>; <span title='Codes: '>If I appear to be approaching the end of my life, here are some things that I would like for my caregivers to know about my faith and my religion. Please call Father Mark if my condition warrants the services of a priest.</span></li><li><a href='Goal-Example-Smith-Johnson-CareExperiencePreference1.html'><span title='Codes: {http://loinc.org 75775-7}'>Decision to inform doctors and nurses about the role religion, faith, or spirituality play in my life [Reported]</span></a>; <span title='Codes: '>Here are some thoughts that I would like for my medical care team and my healthcare agent(s) to know about the role that religion, faith or spirituality play in my life: I am Catholic, please call Father Mark at Saint Catherine's on Main Street.</span></li></ul></div>
 "
 
+* extension[padi-goal-order-by-descending-priority-extension].valueCodeableConcept = $HL7YesNoCS#Y
+
 * status = #active
 * intent = #proposal
 
@@ -1294,8 +1296,8 @@ Usage: #example
 //////////////////////////////////////////////////////////////////////////////////////
 
 Instance: Example-Smith-Johnson-DocRef-DocumentReference
-InstanceOf: DocumentReference
-Description: "Example Patient Smith-Johnson DocumentReference DocumentReference"
+InstanceOf: PADI-DocumentReference
+Description: "Example Patient Smith-Johnson DocumentReference"
 Usage: #example
 
 * masterIdentifier.system = "urn:oid:2.16.840.1.113883.3.3208.101.1"
@@ -1324,7 +1326,8 @@ Usage: #example
 
 * date = "2015-11-05T15:52:20.000+00:00"
 
-* author = Reference(Example-Smith-Johnson-DocRef-Device1)
+//* author = Reference(Example-Smith-Johnson-DocRef-Device1)
+* author = Reference(Example-Smith-Johnson-Patient1)
 
 
 * authenticator = Reference(Example-Smith-Johnson-OrganizationCustodian1)
@@ -1344,7 +1347,7 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-DocRef-Bundle
-InstanceOf: DocumentReference
+InstanceOf: PADI-DocumentReference
 Description: "Example Patient Smith-Johnson DocumentReference Bundle"
 Usage: #example
 

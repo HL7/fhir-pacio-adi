@@ -8,13 +8,16 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/pacio-adi/Struc
 
 # Advance Directives Documents are not in the C80 set of document types
 INFORMATION: Bundle/Example-Smith-Johnson-Bundle1: Bundle.entry[3].resource.ofType(RelatedPerson).relationship[0]: None of the codings provided are in the value set http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype (http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype), and a coding is recommended to come from this value set) (codes = http://loinc.org#75784-9)
-INFORMATION: DocumentReference/Example-Smith-Johnson-DocRef-Bundle: DocumentReference.type: None of the codings provided are in the value set http://hl7.org/fhir/ValueSet/c80-doc-typecodes (http://hl7.org/fhir/ValueSet/c80-doc-typecodes), and a coding is recommended to come from this value set) (codes = http://loinc.org#81334-5)
-INFORMATION: DocumentReference/Example-Smith-Johnson-DocRef-DocumentReference: DocumentReference.type: None of the codings provided are in the value set http://hl7.org/fhir/ValueSet/c80-doc-typecodes (http://hl7.org/fhir/ValueSet/c80-doc-typecodes), and a coding is recommended to come from this value set) (codes = http://loinc.org#86533-7)
+INFORMATION: DocumentReference/Example-Smith-Johnson-DocRef-Bundle: DocumentReference.type: None of the codings provided are in the value set 'Document Type Value Set' (http://hl7.org/fhir/ValueSet/c80-doc-typecodes), and a coding is recommended to come from this value set) (codes = http://loinc.org#81334-5)
+INFORMATION: DocumentReference/Example-Smith-Johnson-DocRef-DocumentReference: DocumentReference.type: None of the codings provided are in the value set 'Document Type Value Set' (http://hl7.org/fhir/ValueSet/c80-doc-typecodes), and a coding is recommended to come from this value set) (codes = http://loinc.org#86533-7)
 
-# Organization that does not have an NPI or CLIA number.
+
+# Organization that does not have an NPI or CLIA number. Not a lab or provider
 INFORMATION: Organization/Example-McBee-OrganizationAssembler1: Organization.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
 INFORMATION: Organization/Example-Smith-Johnson-OrganizationAssembler1: Organization.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
 INFORMATION: RelatedPerson/Example-Smith-Johnson-HealthcareAgent2: RelatedPerson.relationship[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/PADI-Participant
+
+# 
 
 
 # Slicing information that codeableConcept repetition did not match a specific slice. This is by design as the slice is designed with a specific code and one more repetition needs to include a code from an extensible valueSet
@@ -45,13 +48,13 @@ INFORMATION: Bundle/Example-Smith-Johnson-Bundle1: Bundle.entry[11].resource.ofT
 INFORMATION: Bundle/Example-Smith-Johnson-Bundle1: Bundle.entry[12].resource.ofType(Goal).category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/PADI-CareExperiencePreference
 INFORMATION: Bundle/Example-Smith-Johnson-Bundle1: Bundle.entry[13].resource.ofType(Goal).category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/PADI-CareExperiencePreference
 INFORMATION: Bundle/Example-Smith-Johnson-Bundle1: Bundle.entry[14].resource.ofType(Goal).category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/PADI-CareExperiencePreference
-INFORMATION: Bundle/Example-Smith-Johnson-Bundle1: Bundle.entry[15].resource.ofType(Goal).category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/PADI-PersonalInterventionPreference
+INFORMATION: Bundle/Example-Smith-Johnson-Bundle1: Bundle.entry[15].resource.ofType(Goal).category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/PADI-CareExperiencePreference
 INFORMATION: Bundle/Example-Smith-Johnson-Bundle1: Bundle.entry[16].resource.ofType(Goal).category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/PADI-PersonalInterventionPreference
 INFORMATION: Bundle/Example-Smith-Johnson-Bundle1: Bundle.entry[17].resource.ofType(Goal).category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/PADI-PersonalInterventionPreference
 INFORMATION: Bundle/Example-Smith-Johnson-Bundle1: Bundle.entry[18].resource.ofType(Goal).category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/PADI-PersonalInterventionPreference
 INFORMATION: Bundle/Example-Smith-Johnson-Bundle1: Bundle.entry[19].resource.ofType(Goal).category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/PADI-PersonalInterventionPreference
 INFORMATION: Bundle/Example-Smith-Johnson-Bundle1: Bundle.entry[19].resource.ofType(Goal).category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/PADI-PersonalGoal
-INFORMATION: Bundle/Example-Smith-Johnson-Bundle1: Bundle.entry[20].resource.ofType(Goal).category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/PADI-PersonalInterventionPreference
+INFORMATION: Bundle/Example-Smith-Johnson-Bundle1: Bundle.entry[20].resource.ofType(Goal).category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/PADI-PersonalGoal
 INFORMATION: Bundle/Example-Smith-Johnson-Bundle1: Bundle.entry[21].resource.ofType(Goal).category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/PADI-PersonalGoal
 
 
@@ -89,11 +92,3 @@ INFORMATION: Goal/Example-Smith-Johnson-PersonalInterventionPreference3: Goal.ca
 INFORMATION: Goal/Example-Smith-Johnson-PersonalInterventionPreference4: Goal.category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/PADI-PersonalInterventionPreference
 INFORMATION: Goal/Example-Smith-Johnson-PersonalInterventionPreference5: Goal.category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/PADI-PersonalInterventionPreference
 INFORMATION: Goal/Example-Smith-Johnson-PersonalInterventionPreference6: Goal.category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/PADI-PersonalInterventionPreference
-
-# The following code systems are external and not supported by terminology server 
-
-# These are actual warnings to surpress, all relating to validation of values from terminologies
-
-#informational -- these examples are in the IG because they are examples of the referenced profiles. 
-
-# Suppress warnings about validation of build-in FHIR resources

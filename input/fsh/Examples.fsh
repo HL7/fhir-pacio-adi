@@ -141,8 +141,23 @@ Usage: #example
 * extension[padi-dataEnterer-extension].valueReference = Reference(Example-McBee-Patient1)
 // witness Sally Bobbins
 
+* extension[padi-authorization-extension].valueReference.display = "Authorization Consent"
+* extension[padi-authorization-extension].valueReference.identifier.value = "123456789"
+* extension[padi-effective-date-extension].valuePeriod.start = "2022-01-01"
+
+
+
+* extension[padi-informant-extension].valueReference = Reference(Example-McBee-HealthcareAgent1)
+* extension[padi-informationRecipient-extension].valueReference = Reference(Example-McBee-HealthcareAgent1)
+* extension[padi-participant-extension].valueReference = Reference(Example-McBee-HealthcareAgent1)
+* extension[padi-performer-extension].valueReference.display = "Advance Directives, Inc."
+
+
+
+
 * identifier.system = "urn:oid:2.16.840.1.113883.4.823.1.7124"
 * identifier.value = "20130607100315-CCDA-CCD"
+
 
 
 * status = #final
@@ -197,6 +212,14 @@ Usage: #example
 <p>Unless I have stated otherwise somewhere else in this uADD™, I understand that my healthcare agent may reconsider my medical treatment choices expressed above in light of my other instructions contained elsewhere in this uADD™ or new medical information.</p>
 
 </div>"
+
+* section[healthcare_agent_appointment].extension[padi-clause-extension].extension[Clause].valueMarkdown = "I am appointing the person or persons below as my healthcare agent and, if applicable, as my
+alternate healthcare agent(s), and I am granting to each of them the legal authority to make
+medical treatment decisions on my behalf and to consult with my physician and others. The
+power to make medical treatment decisions that I am granting to my healthcare agent(s) is
+expressly subject to, and limited by, the choices that I have expressed elsewhere.
+If my medical treatment choices are not clear, I am authorizing and directing my healthcare
+agent to make decisions in my best interests and based on what is known of my wishes."
 
 * section[healthcare_agent_appointment].entry[+] = Reference(Example-McBee-HealthcareAgent1)
 * section[healthcare_agent_appointment].entry[+] = Reference(Example-McBee-HealthcareAgent2)
