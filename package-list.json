@@ -19,7 +19,7 @@
         "status": "ballot",
         "sequence": "STU 1",
         "fhirversion": "4.0.1",
-        "current": true
+        "current": false
       }
     ],
     "category": "Clinical Documents"

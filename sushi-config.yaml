@@ -32,7 +32,7 @@ parameters:
   apply-publisher: true
   path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
 copyrightYear: 2021+
-releaseLabel: STU1
+releaseLabel: STU 1 Ballot
 jurisdiction: urn:iso:std:iso:3166#US
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
