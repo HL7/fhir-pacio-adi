@@ -13,7 +13,7 @@
       },
       {
         "version": "0.1.0",
-        "desc": "PACIO Advance Directive Information Implementation Guide Release 1 - US Realm Pre-ballot",
+        "desc": "PACIO Advance Directive Information Implementation Guide Release 1 - US Realm STU 1 Ballot",
         "path": "http://hl7.org/fhir/us/pacio-adi/2022Jan",
         "date": "2021-06-04",
         "status": "ballot",
