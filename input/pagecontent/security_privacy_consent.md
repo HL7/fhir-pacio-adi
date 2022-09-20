@@ -26,7 +26,7 @@ For the purposes of Advance Directive Interoperability, additional security conf
 4.	Server implementations that expect to support browser-based javascript applications SHOULD enable [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) for REST operations. Many client web-based apps use javascript for API calls which requires CORS. However, CORS could present security concerns if not implemented correctly or is not continually updated as new security issues are found and addressed. Implementers of CORS **SHOULD** consider advice about CORS from sources such as [Enable-CORS](http://enable-cors.org/) and [Moesif blog on Guide to CORS Pitfalls](https://www.moesif.com/blog/technical/cors/Authoritative-Guide-to-CORS-Cross-Origin-Resource-Sharing-for-REST-APIs/)  
 
 ##### Authentication and Authorization Requirements
-1.	Implementations **SHOULD** consider the SMART on FHIR Best Practices in Authorization found [here](https://docs.smarthealthit.org/authorization/best-practices/)
+1.	Implementations **SHOULD** consider the SMART on FHIR Best Practices found [here](http://hl7.org/fhir/smart-app-launch/best-practices.html)
 2.	Server implementations **SHALL** support individual user authentication and **MAY** support system level authentication if access controls of the system are trusted for the scope of use.
 3. Implementation **MAY** support [Health Relationship Trust Profile for User-Managed Access (HEART)](https://openid.net/specs/openid-heart-uma2-1_0.html).
 4.	Implementation **SHALL** utilize OAuth 2.0 compliant authorization protocols.
