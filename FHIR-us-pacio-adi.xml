@@ -12,11 +12,18 @@
 <artifact id="StructureDefinition/PADI-Goal" key="StructureDefinition-PADI-Goal" name="ADI Goal"/>
 <artifact id="CodeSystem/PADIGoalCategoryCS" key="CodeSystem-PADIGoalCategoryCS" name="ADI Goal Category Code System"/>
 <artifact id="StructureDefinition/PADI-OrganDonationObservation" key="StructureDefinition-PADI-OrganDonationObservation" name="ADI Organ Donation"/>
+<artifact id="StructureDefinition/PADI-PMOCPRServiceRequest" key="StructureDefinition-PADI-PMOCPRServiceRequest" name="ADI PMO Cardiopulmonary Resuscitation ServiceRequest"/>
+<artifact id="StructureDefinition/PADI-PMOInitialTreatmentServiceRequest" key="StructureDefinition-PADI-PMOInitialTreatmentServiceRequest" name="ADI PMO Initial Treatment ServiceRequest"/>
+<artifact id="StructureDefinition/PADI-PMOMedicallyAssistedNutritionServiceRequest" key="StructureDefinition-PADI-PMOMedicallyAssistedNutritionServiceRequest" name="ADI PMO Medically Assisted Nutrition ServiceRequest"/>
+<artifact id="StructureDefinition/PADI-PMOParticipantObservation" key="StructureDefinition-PADI-PMOParticipantObservation" name="ADI PMO Participant Observation"/>
+<artifact id="StructureDefinition/PADI-PMOReviewObservation" key="StructureDefinition-PADI-PMOReviewObservation" name="ADI PMO Review Observation"/>
 <artifact id="StructureDefinition/PADI-Participant" key="StructureDefinition-PADI-Participant" name="ADI Participant"/>
 <artifact id="StructureDefinition/PADI-ParticipantConsent" key="StructureDefinition-PADI-ParticipantConsent" name="ADI Participant Consent"/>
 <artifact id="StructureDefinition/PADI-PACPComposition" key="StructureDefinition-PADI-PACPComposition" name="ADI Personal Advance Care Plan Composition"/>
 <artifact id="StructureDefinition/PADI-PersonalGoal" key="StructureDefinition-PADI-PersonalGoal" name="ADI Personal Goal"/>
 <artifact id="StructureDefinition/PADI-PersonalPrioritiesOrganizer" key="StructureDefinition-PADI-PersonalPrioritiesOrganizer" name="ADI Personal Priorities Organizer"/>
+<artifact id="StructureDefinition/PADI-PMOComposition" key="StructureDefinition-PADI-PMOComposition" name="ADI Portable Medical Order Composition"/>
+<artifact id="StructureDefinition/PADI-PMOServiceRequest" key="StructureDefinition-PADI-PMOServiceRequest" name="ADI Portable Medical Order ServiceRequest"/>
 <artifact id="StructureDefinition/PADI-PreferenceCarePlan" key="StructureDefinition-PADI-PreferenceCarePlan" name="ADI Preference Care Plan"/>
 <artifact id="ValueSet/PADIAdvanceDirectiveCategoriesVS" key="ValueSet-PADIAdvanceDirectiveCategoriesVS" name="Advance Directive Categories"/>
 <artifact id="StructureDefinition/padi-attestationInformation-extension" key="StructureDefinition-padi-attestationInformation-extension" name="Attestation Information"/>
@@ -104,6 +111,11 @@
 <artifact id="ValueSet/PADIInterventionPreferencesNarrativeVS" key="ValueSet-PADIInterventionPreferencesNarrativeVS" name="Intervention Preferences - Narrative"/>
 <artifact id="ValueSet/PADIInterventionPreferencesOrdinalVS" key="ValueSet-PADIInterventionPreferencesOrdinalVS" name="Intervention Preferences - Ordinal"/>
 <artifact id="StructureDefinition/padi-jurisdiction-extension" key="StructureDefinition-padi-jurisdiction-extension" name="Jurisdiction"/>
+<artifact id="ValueSet/LOINCPOLSTCPRAnswerList" key="ValueSet-LOINCPOLSTCPRAnswerList" name="LOINC POLST CPR Answer List"/>
+<artifact id="ValueSet/LOINCPOLSTInitialTxAnswerList" key="ValueSet-LOINCPOLSTInitialTxAnswerList" name="LOINC POLST Initial Tx Answer List"/>
+<artifact id="ValueSet/LOINCPOLSTMedAssistNutrAnswerList" key="ValueSet-LOINCPOLSTMedAssistNutrAnswerList" name="LOINC POLST Med assist nutr Answer List"/>
+<artifact id="ValueSet/LOINCPOLSTDiscussPartAnswerList" key="ValueSet-LOINCPOLSTDiscussPartAnswerList" name="LOINC POLST discuss part List"/>
+<artifact id="ValueSet/LOINCPOLSTReviewAnswerList" key="ValueSet-LOINCPOLSTReviewAnswerList" name="LOINC POLST review Answer List"/>
 <artifact id="ValueSet/PADINoHealthcareAgentIncludedReasonVS" key="ValueSet-PADINoHealthcareAgentIncludedReasonVS" name="No Healthcare Agent Included Reason"/>
 <artifact id="StructureDefinition/PADI-DocumentReference" key="StructureDefinition-PADI-DocumentReference" name="PACIO ADI Document Reference"/>
 <artifact id="StructureDefinition/PADI-Header" key="StructureDefinition-PADI-Header" name="PACIO ADI Header"/>
