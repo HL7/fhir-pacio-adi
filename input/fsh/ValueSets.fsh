@@ -10,6 +10,8 @@ This ValueSet is managed at the US National Library of Medicine (NLM) Value Set 
 * include $LOINC#81334-5 "Patient Personal advance care plan"
 * include $LOINC#86533-7 "Patient Living will"
 * include $LOINC#92664-2 "Power of attorney and Living will"
+* include $LOINC#93037-0 "Portable medical order form"
+* include $LOINC#100821-8 "National POLST form: portable medical order panel"
 * insert LOINCCopyrightNotice
 */
 
@@ -197,3 +199,55 @@ RuleSet: LOINCCopyrightNotice
 RuleSet: SNOMEDCopyrightNotice
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 
+
+// LOINC PMO ValueSet lists
+
+ValueSet: LOINCPOLSTCPRAnswerList
+Title: "LOINC POLST CPR Answer List"
+Description: "LOINC POLST CPR Answer List (LL6263-9)"
+
+* ^experimental = false
+* include $LOINC#LA33470-8  "Yes CPR"
+* include $LOINC#LA33471-6  "No CPR: Do Not Attempt Resuscitation"
+
+
+ValueSet: LOINCPOLSTInitialTxAnswerList
+Title: "LOINC POLST Initial Tx Answer List"
+Description: "LOINC POLST Initial Tx Answer List (LL6264-7)"
+
+* ^experimental = false
+* include $LOINC#LA33473-2 "Full Treatments"
+* include $LOINC#LA33474-0 "Selective Treatments"
+* include $LOINC#LA33475-7 "Comfort-focused Treatments"
+
+
+
+ValueSet: LOINCPOLSTMedAssistNutrAnswerList
+Title: "LOINC POLST Med assist nutr Answer List"
+Description: "LOINC POLST Med assist nutr Answer List (LL6267-0)"
+
+* ^experimental = false
+* include $LOINC#LA33489-8 "Provide feeding through new or existing surgically-placed tubes"
+* include $LOINC#LA33490-6 "Trial period for artificial nutrition but no surgically-placed tubes"
+* include $LOINC#LA33491-4 "No artificial means of nutrition desired"
+* include $LOINC#LA33492-2 "Not discussed or no decision made (provide standard of care)"
+
+ValueSet: LOINCPOLSTReviewAnswerList
+Title: "LOINC POLST review Answer List"
+Description: "LOINC POLST review Answer List (LL6265-4)"
+
+* ^experimental = false
+* include $LOINC#LA33476-5 "Yes the document was reviewed"
+* include $LOINC#LA33478-1 "Conflict exists, notified patient"
+* include $LOINC#LA33479-9 "Advance directive not available"
+* include $LOINC#LA33481-5 "No advance directive exists"
+
+ValueSet: LOINCPOLSTDiscussPartAnswerList
+Title: "LOINC POLST discuss part List"
+Description: "LOINC POLST discuss part Answer List (LL6266-2)"
+
+* ^experimental = false
+* include $LOINC#LA33482-3 "Patient with decision-making capacity"
+* include $LOINC#LA33483-1 "Court appointed guardian"
+* include $LOINC#LA33485-6 "Parent of minor"
+* include $LOINC#LA33487-2 "Legal surrogate/health care agentLA46-8 Other"
