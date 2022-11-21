@@ -45,7 +45,7 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[gpp_personal_care_experience].title 1..1 MS
 * section[gpp_personal_care_experience].code 1..1 MS
 * section[gpp_personal_care_experience].code = $LOINC#81338-6
-* section[healthcare_agent_appointment].orderedBy MS
+* section[gpp_personal_care_experience].orderedBy MS
 * section[gpp_personal_care_experience].entry MS
 * section[gpp_personal_care_experience].entry only Reference(PADICareExperiencePreference or PADIPersonalPrioritiesOrganizer or PADIPersonalGoal)
 

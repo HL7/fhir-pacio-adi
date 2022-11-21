@@ -292,4 +292,14 @@ Description: "LOINC POLST discuss part Answer List (LL6266-2)"
 * include $LOINC#LA33482-3 "Patient with decision-making capacity"
 * include $LOINC#LA33483-1 "Court appointed guardian"
 * include $LOINC#LA33485-6 "Parent of minor"
-* include $LOINC#LA33487-2 "Legal surrogate/health care agentLA46-8 Other"
+* include $LOINC#LA33487-2 "Legal surrogate/health care agent"
+* include $LOINC#LA33487-2 "Other"
+
+
+
+ValueSet: PADIPMOConsentCategoriesVS
+Title: "Portable Medical Order Categories"
+Description: "Codes indicating Categories of Portable Medical Orders."
+
+* include $HL7ConsentCategoryCodes#dnr "Do Not Resuscitate"
+* include $HL7ConsentCategoryCodes#polst "POLST"

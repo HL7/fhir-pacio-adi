@@ -62,6 +62,7 @@ LA46-8 Other
     portable_medical_orders 1..1 MS and
     //additional_documentation 0..1 MS and
     //witness_and_notary 0..1 MS and
+    gpp_personal_care_experience 0..1 and
     completion_information 0..1 MS
 
 
@@ -70,7 +71,37 @@ LA46-8 Other
 * section[portable_medical_orders].code 1..1 MS
 * section[portable_medical_orders].code = $LOINC#81337-8
 * section[portable_medical_orders].entry MS
-* section[portable_medical_orders].entry only Reference(PADIPMOServiceRequest)
+* section[portable_medical_orders].entry only Reference(PADIPMOServiceRequest or PADIPMOConsent)
+
+
+* section[portable_medical_orders].entry ^slicing.discriminator.type = #pattern 
+* section[portable_medical_orders].entry ^slicing.discriminator.path = "$this"
+* section[portable_medical_orders].entry ^slicing.rules = #open
+* section[portable_medical_orders].entry ^slicing.ordered = false   // can be omitted, since false is the default
+* section[portable_medical_orders].entry ^slicing.description = "Slice based on $this value"
+* section[portable_medical_orders].entry contains
+    cardiopulmonary_resuscitation_service_request 0..1 MS and
+    cardiopulmonary_resuscitation_consent 0..1 MS and
+    initial_treatment_service_request 0..1 MS and
+    initial_treatment_consent 0..1 MS and
+    medically_assisted_nutrition_service_request 0..1 MS and
+    medically_assisted_nutrition_consent 0..1 MS
+
+* section[portable_medical_orders].entry[cardiopulmonary_resuscitation_service_request] only Reference(PADIPMOCPRServiceRequest)
+* section[portable_medical_orders].entry[cardiopulmonary_resuscitation_consent] only Reference(PADIPMOCPRConsent)
+* section[portable_medical_orders].entry[initial_treatment_service_request] only Reference(PADIPMOInitialTreatmentServiceRequest)
+* section[portable_medical_orders].entry[initial_treatment_consent] only Reference(PADIPMOInitialTreatmentConsent)
+* section[portable_medical_orders].entry[medically_assisted_nutrition_service_request] only Reference(PADIPMOMedicallyAssistedNutritionServiceRequest)
+* section[portable_medical_orders].entry[medically_assisted_nutrition_consent] only Reference(PADIPMOMedicallyAssistedNutritionConsent)
+
+// TODO add longer description that these are not orders, but further definition of Goals the patient has to help inform medical decisions
+* section[gpp_personal_care_experience] ^short = "Quality of Life related personal care experiences, personal goals, and priorities"
+* section[gpp_personal_care_experience].title 1..1 MS
+* section[gpp_personal_care_experience].code 1..1 MS
+* section[gpp_personal_care_experience].code = $LOINC#81338-6
+* section[gpp_personal_care_experience].orderedBy MS
+* section[gpp_personal_care_experience].entry MS
+* section[gpp_personal_care_experience].entry only Reference(PADICareExperiencePreference or PADIPersonalPrioritiesOrganizer or PADIPersonalGoal)
 
 /*
 * section[additional_documentation] ^short = "Observations regarding the existence of other advance directive related information"
@@ -101,11 +132,82 @@ LA46-8 Other
 
 * section[completion_information].entry contains
     orders_review 0..1 and
-    orders_participant 0..1
+    orders_participant 0..* and
+    hospice_observation 0..1 and 
+    hospice_agency 0..1
 
 * section[completion_information].entry[orders_review] only Reference(PADIPMOReviewObservation)
 * section[completion_information].entry[orders_participant] only Reference(PADIPMOParticipantObservation)
+* section[completion_information].entry[hospice_observation] only Reference(PADIPMOHospiceObservation)
+* section[completion_information].entry[hospice_agency] only Reference($USCoreOrganization)
 
+
+// Open for discussion
+// Signature
+// HOw to capture hospice agency
+
+
+
+
+// TODO: May need to add a witness and notary section for the persons signature
+// TODO: Where it physician participants? What are informants in CDA ePOLST? Looks like dataEnterer (from POLST mapping) For Ordering participant, may be done by a PA, so a supervising physician. Physicians should have licensing/cert #s
+// TODO: In CDA ePOLST review •	Legal Authenticator va Authentication. •	Legal Authenticator seems to be for supervising
+// TODO: Part of National POLST - Professional Assisting Health Care Professional w/ Completion (Name) - With role that could include Social Worker, Nurse, Clergy, Other.
+// TODO: CDA ePOLST legalAuthenticator is •	Legal Authenticator: The legalAuthenticator element is the individual who is responsible for the document. For the ePOLST, this is the signer in "Section F. Signature: Health Care Provider" of the National POLST Form (either the "Health Care Provider" or the "Supervising physician"). Only licensed healthcare providers authorized to sign POLST forms in their state or D.C. can sign this form. 
+// TODO: CDA - Difference between License and Cert # - From Howard - Physician Assistants are Certified (PA-C) and it looks like Nurse Practitioners may vary between states as certified or licensed. Certified would have to operate under a medical director or supervising physician, and would likely need that validating signature.
+// TODO: CDA has "Patient is enrolled in hospice" in the mapping to "US Realm Header (V3), participant" How is this to be done in the CDA? Not clear in the templates.
+
+// Practitioner (role supervising (Or is this attending) ) Hospice phone number, Hospice Hospice agency
+// Who can complete the document (http://polst.org/state-signature-requirements-pdf), may need to get roles here, may need to look at forms to see what roles they may have.
+// Need a place to store licenses and certifications (Need to determine the difference) - MD/DO, PA, NP/APRN/ARNP/ND 
+// DAR for supervising physician
+
+
+// TODO the Professional Assisting Health Care Provider w/ Form Completion Maybe should not be an observation, but a related person with a role.
+// Signature date of provide needs to be linked to provider.
+
+
+// Split Orders out into slices with the various types (CPR initial Treatment, etc.)
+// TODO for Connectathon dataEnterer, Practitioner signing, and supervising Practitioner, Sub elements including license number
+// TODO Connectathon Hospice status and agency, Legally designated responsible person.
+//551781000124102 SnowMed code for Under Hospice Team Care (US Edition - Under care of hospice team (finding))
+
+
+
+
+// FOR O&O Service Request
+// How to state preconditions? asNeeded only allows for 1.
+// servicerequest-precondition
+// Trigger extension? Rob Hausam mentioned it.
+// Flag resource to raise the importance http://hl7.org/fhir/R4/valueset-flag-code.html (Maybe not a Flag.)
+// Consider CarePlan
+// Maybe consider consent
+// IPS has done some with Advance Directives - Not much, but should take a look at it.
+// ServiceRequest has a basedOn, but does not include a consent 
+
+
+// Concepts for Connectathon
+// Do not forms of orders
+// Hospice
+// Medically assisted hydration (vs nutrition)
+// Medically assisted nutrition (Will we need to include different types)
+// Patient presence at a healthcare facility - Loinc 78022-1 - (MAYBE/MAYBE NOT)
+// Additional Orders - Captured as free text in form, maybe need to support free and structured
+// Signatures (Practitioner, license#/cert# and phone numbers)
+// Add Patient preference Goals
+
+
+
+// For medically assisted nutrition and hydration (and anti-biotics) trial period. Need a goal and time in the consent (or CarePlan)?
+// Need to have an "if needed" indicator for interventions
+
+
+// Consent 2022-11-17
+
+
+
+
+// Re-assessment timepoints used resources that we may want to consider. Chris P would be the contact
 
 // TODO add entries
 //Orders Review Observation

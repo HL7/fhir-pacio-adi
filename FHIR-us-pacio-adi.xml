@@ -12,8 +12,12 @@
 <artifact id="StructureDefinition/PADI-Goal" key="StructureDefinition-PADI-Goal" name="ADI Goal"/>
 <artifact id="CodeSystem/PADIGoalCategoryCS" key="CodeSystem-PADIGoalCategoryCS" name="ADI Goal Category Code System"/>
 <artifact id="StructureDefinition/PADI-OrganDonationObservation" key="StructureDefinition-PADI-OrganDonationObservation" name="ADI Organ Donation"/>
+<artifact id="StructureDefinition/PADI-PMOCPRConsent" key="StructureDefinition-PADI-PMOCPRConsent" name="ADI PMO Cardiopulmonary Resuscitation Consent"/>
 <artifact id="StructureDefinition/PADI-PMOCPRServiceRequest" key="StructureDefinition-PADI-PMOCPRServiceRequest" name="ADI PMO Cardiopulmonary Resuscitation ServiceRequest"/>
+<artifact id="StructureDefinition/PADI-PMOConsent" key="StructureDefinition-PADI-PMOConsent" name="ADI PMO Consent"/>
+<artifact id="StructureDefinition/PADI-PMOInitialTreatmentConsent" key="StructureDefinition-PADI-PMOInitialTreatmentConsent" name="ADI PMO Initial Treatment Consent"/>
 <artifact id="StructureDefinition/PADI-PMOInitialTreatmentServiceRequest" key="StructureDefinition-PADI-PMOInitialTreatmentServiceRequest" name="ADI PMO Initial Treatment ServiceRequest"/>
+<artifact id="StructureDefinition/PADI-PMOMedicallyAssistedNutritionConsent" key="StructureDefinition-PADI-PMOMedicallyAssistedNutritionConsent" name="ADI PMO Medically Assisted Nutrition Consent"/>
 <artifact id="StructureDefinition/PADI-PMOMedicallyAssistedNutritionServiceRequest" key="StructureDefinition-PADI-PMOMedicallyAssistedNutritionServiceRequest" name="ADI PMO Medically Assisted Nutrition ServiceRequest"/>
 <artifact id="StructureDefinition/PADI-PMOParticipantObservation" key="StructureDefinition-PADI-PMOParticipantObservation" name="ADI PMO Participant Observation"/>
 <artifact id="StructureDefinition/PADI-PMOReviewObservation" key="StructureDefinition-PADI-PMOReviewObservation" name="ADI PMO Review Observation"/>
@@ -23,6 +27,8 @@
 <artifact id="StructureDefinition/PADI-PersonalGoal" key="StructureDefinition-PADI-PersonalGoal" name="ADI Personal Goal"/>
 <artifact id="StructureDefinition/PADI-PersonalPrioritiesOrganizer" key="StructureDefinition-PADI-PersonalPrioritiesOrganizer" name="ADI Personal Priorities Organizer"/>
 <artifact id="StructureDefinition/PADI-PMOComposition" key="StructureDefinition-PADI-PMOComposition" name="ADI Portable Medical Order Composition"/>
+<artifact id="StructureDefinition/PADI-PMOFullServiceRequest" key="StructureDefinition-PADI-PMOFullServiceRequest" name="ADI Portable Medical Order Full ServiceRequest"/>
+<artifact id="StructureDefinition/PADI-PMOHospiceObservation" key="StructureDefinition-PADI-PMOHospiceObservation" name="ADI Portable Medical Order Hospice Observation"/>
 <artifact id="StructureDefinition/PADI-PMOServiceRequest" key="StructureDefinition-PADI-PMOServiceRequest" name="ADI Portable Medical Order ServiceRequest"/>
 <artifact id="StructureDefinition/PADI-PreferenceCarePlan" key="StructureDefinition-PADI-PreferenceCarePlan" name="ADI Preference Care Plan"/>
 <artifact id="ValueSet/PADIAdvanceDirectiveCategoriesVS" key="ValueSet-PADIAdvanceDirectiveCategoriesVS" name="Advance Directive Categories"/>
@@ -126,6 +132,7 @@
 <artifact id="StructureDefinition/padi-performer-extension" key="StructureDefinition-padi-performer-extension" name="Performer"/>
 <artifact id="ValueSet/PADIPersonalAndLegalRelationshipRoleTypeVS" key="ValueSet-PADIPersonalAndLegalRelationshipRoleTypeVS" name="Personal And Legal Relationship Role Type"/>
 <artifact id="StructureDefinition/PADI-PersonalInterventionPreference" key="StructureDefinition-PADI-PersonalInterventionPreference" name="Personal Intervention Preference"/>
+<artifact id="ValueSet/PADIPMOConsentCategoriesVS" key="ValueSet-PADIPMOConsentCategoriesVS" name="Portable Medical Order Categories"/>
 <artifact id="ValueSet/PADIPresenceIndicatorVS" key="ValueSet-PADIPresenceIndicatorVS" name="Presence Indicator"/>
 <artifact id="ValueSet/PADIClauseTypeVS" key="ValueSet-PADIClauseTypeVS" name="Type of clause"/>
 <artifact id="ValueSet/PADIUponDeathPreferencesVS" key="ValueSet-PADIUponDeathPreferencesVS" name="Upon Death Preferences"/>
