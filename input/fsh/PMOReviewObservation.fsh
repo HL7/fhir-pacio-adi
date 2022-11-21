@@ -20,3 +20,5 @@ Description: "This profile is used to represent the review status of the portabl
 * value[x] only CodeableConcept
 * valueCodeableConcept from LOINCPOLSTReviewAnswerList (extensible)
 
+
+

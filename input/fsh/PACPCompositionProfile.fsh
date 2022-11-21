@@ -53,7 +53,6 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[gpp_personal_care_experience].entry 
 * section[gpp_personal_care_experience].entry only Reference(ADICareExperiencePreference or ADIPersonalPrioritiesOrganizer or ADIPersonalGoal)
 
-
 * section[gpp_for_certain_health_condition] ^short = "Preference care plans defined for specific situations and/or conditions"
 * section[gpp_for_certain_health_condition] ^definition = "The section defines Goals, Preferences, and Priorities of the person under certain health conditions.  In this section, the CarePlan resource provides a construct by which the identified personal values and preferences for treatment can be integrated into the plan of care which acts, from a workflow or process perspective, as the roadmap for care delivery and treatment. "
 * section[gpp_for_certain_health_condition].title 1..1 MS
