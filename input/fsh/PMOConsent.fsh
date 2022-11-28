@@ -37,6 +37,8 @@ Description: "This profile is used to represent a practitioner authored portable
 //* provision.period MS
 //[TODO] do we need to support and require provision.actor for all HCA's?
 * provision.actor 1..* MS
+* provision.actor ^short = "Actors involved in the order, including the ordering practitioner"
+// TODO Slice
 
 
 // TODO Add guidanceexamples from spreadsheet
