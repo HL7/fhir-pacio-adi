@@ -51,6 +51,7 @@
 <artifact id="ValueSet/PADIAdvanceDirectiveCategoriesVS" key="ValueSet-PADIAdvanceDirectiveCategoriesVS" name="Advance Directive Categories"/>
 <artifact id="ValueSet/PADIAttesterRoleTypeVS" key="ValueSet-PADIAttesterRoleTypeVS" name="Attester Role"/>
 <artifact id="StructureDefinition/padi-authorization-extension" key="StructureDefinition-padi-authorization-extension" name="Authorization"/>
+<artifact id="StructureDefinition/padi-based-on-consent-extension" key="StructureDefinition-padi-based-on-consent-extension" name="Based On Consent"/>
 <artifact id="ValueSet/PADICareExperiencePreferencesVS" key="ValueSet-PADICareExperiencePreferencesVS" name="Care Experience Preferences"/>
 <artifact id="StructureDefinition/padi-clause-extension" key="StructureDefinition-padi-clause-extension" name="Clause"/>
 <artifact id="Observation/Example-McBee-AutopsyObservation1" key="Observation-Example-McBee-AutopsyObservation1" name="Example-McBee-AutopsyObservation1"/>

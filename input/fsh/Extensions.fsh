@@ -168,6 +168,16 @@ Description: "Indicates if the goals are ordered in descending priority (Y) or n
 * valueCodeableConcept from $HL7YesNoVS (extensible)
 
 
+
+Extension: BasedOnConsentExtension
+Id: padi-based-on-consent-extension
+Title: "Based On Consent"
+Description: "Extension to express a PMO Consent resource a request is based on."
+* value[x] only Reference
+* valueReference 1..1
+* valueReference only Reference(PADIPMOConsent)
+
+
 Invariant:  notary-information-requires-notary-role
 Description: "If Notary information (seal or commission expiration date exists, then role must be notary"
 Expression: "(extension.where(url = 'NotarySealId').valuerIdentifier.exists() or extension.where(url = 'NotaryCommissionExpirationDate').valueDate.exists()) implies  extension.where(url = 'AttesterRole').valueCodeableConcept.where(coding.code='81372-5').exists()"
