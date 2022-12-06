@@ -1,3 +1,4 @@
+/*
 Profile: PADIPMOConsent
 Parent: Consent
 Id: PADI-PMOConsent
@@ -9,7 +10,7 @@ Description: "This profile is used to represent a practitioner authored portable
 * identifier ^example.label = "General"
 * identifier ^example.valueIdentifier.system = "urn:ietf:rfc:3986"
 * identifier ^example.valueIdentifier.value = "urn:oid:2.16.840.1.113883.11.19455"
-*/
+*
 * status MS
 //[TODO] need verification that it is active only. Is the authority proposed if the agent is not yet aware or accepted the role?
 * status = #active
@@ -87,7 +88,7 @@ Description: "This profile is used to represent a practitioner authored portable
 * ^experimental = false
 * provision.action = $LOINC#100825-9 // "Medically assisted nutrition orders"
 * provision.code from LOINCPOLSTMedAssistNutrAnswerList (extensible)
-
+*/
 
 
 

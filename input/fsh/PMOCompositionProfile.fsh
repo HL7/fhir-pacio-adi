@@ -86,11 +86,18 @@ LA46-8 Other
 * section[portable_medical_orders].extension[padi-clause-extension] ^short = "Section clause, additional instructions, or information"
 * section[portable_medical_orders].title 1..1 MS
 * section[portable_medical_orders].code 1..1 MS
+<<<<<<< HEAD
 //* section[portable_medical_orders].code = $LOINC#100821-8 // "National POLST form: portable medical order panel"
 * section[portable_medical_orders].code = $LOINC#59772-4 // "Planned procedure Narrative"
 
 * section[portable_medical_orders].entry MS
 * section[portable_medical_orders].entry only Reference(PADIPMOServiceRequest or PADIPMONoAdditionalRequestObservation)
+=======
+// TODO, need a better code to recognize the section as a PMO. CDA ePOLST does not have a code for this section.
+* section[portable_medical_orders].code = $LOINC#100821-8 // "National POLST form: portable medical order panel"
+* section[portable_medical_orders].entry MS
+* section[portable_medical_orders].entry only Reference(PADIPMOServiceRequest) // or PADIPMOConsent)
+>>>>>>> eb74678 (Removing PMO consent and change of codes)
 
 
 * section[portable_medical_orders].entry ^slicing.discriminator.type = #pattern 
@@ -100,6 +107,7 @@ LA46-8 Other
 * section[portable_medical_orders].entry ^slicing.description = "Slice based on $this value"
 * section[portable_medical_orders].entry contains
     cardiopulmonary_resuscitation_service_request 0..1 MS and
+<<<<<<< HEAD
     initial_treatment_service_request 0..1 MS and
     medically_assisted_nutrition_service_request 0..1 MS and
     additional_request_service_request 0..1 MS and
@@ -115,6 +123,20 @@ LA46-8 Other
 // TODO, should we have an invariant that additional_request_service_request slice and no_additional_request_service_request cannot exist together?
 
 
+=======
+//    cardiopulmonary_resuscitation_consent 0..1 MS and
+    initial_treatment_service_request 0..1 MS and
+//    initial_treatment_consent 0..1 MS and
+    medically_assisted_nutrition_service_request 0..1 MS // and
+//    medically_assisted_nutrition_consent 0..1 MS
+
+* section[portable_medical_orders].entry[cardiopulmonary_resuscitation_service_request] only Reference(PADIPMOCPRServiceRequest)
+//* section[portable_medical_orders].entry[cardiopulmonary_resuscitation_consent] only Reference(PADIPMOCPRConsent)
+* section[portable_medical_orders].entry[initial_treatment_service_request] only Reference(PADIPMOInitialTreatmentServiceRequest)
+//* section[portable_medical_orders].entry[initial_treatment_consent] only Reference(PADIPMOInitialTreatmentConsent)
+* section[portable_medical_orders].entry[medically_assisted_nutrition_service_request] only Reference(PADIPMOMedicallyAssistedNutritionServiceRequest)
+//* section[portable_medical_orders].entry[medically_assisted_nutrition_consent] only Reference(PADIPMOMedicallyAssistedNutritionConsent)
+>>>>>>> eb74678 (Removing PMO consent and change of codes)
 
 // TODO add longer description that these are not orders, but further definition of Goals the patient has to help inform medical decisions
 * section[gpp_personal_care_experience] ^short = "Quality of Life related personal care experiences, personal goals, and priorities"
@@ -247,6 +269,7 @@ LA46-8 Other
 //Orders Review Observation
 //Orders Participants Observation
 //Administrative Information? Is this an observation with code 100828-3 "Portable medical order administrative information" or is this a new section with text?
+//      This is equivalent to the clause. TODO, do we need to create a specialization on the clause to support the code from ePOLST? This would help in reverse transformation.
 
 
 

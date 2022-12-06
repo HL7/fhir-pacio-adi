@@ -20,7 +20,13 @@ Description: "This profile is used to represent a practitioner authored portable
 * category 1..1 MS
 * code 1..1 MS
 
+<<<<<<< HEAD
 
+=======
+/* extension contains
+    padi-based-on-consent-extension named BasedOnConsentExtension 0..1
+*/
+>>>>>>> eb74678 (Removing PMO consent and change of codes)
 //* code = $LOINC#75781-5
 
 * subject 1..1
