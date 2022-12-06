@@ -12,12 +12,8 @@
 <artifact id="StructureDefinition/PADI-Goal" key="StructureDefinition-PADI-Goal" name="ADI Goal"/>
 <artifact id="CodeSystem/PADIGoalCategoryCS" key="CodeSystem-PADIGoalCategoryCS" name="ADI Goal Category Code System"/>
 <artifact id="StructureDefinition/PADI-OrganDonationObservation" key="StructureDefinition-PADI-OrganDonationObservation" name="ADI Organ Donation"/>
-<artifact id="StructureDefinition/PADI-PMOCPRConsent" key="StructureDefinition-PADI-PMOCPRConsent" name="ADI PMO Cardiopulmonary Resuscitation Consent"/>
 <artifact id="StructureDefinition/PADI-PMOCPRServiceRequest" key="StructureDefinition-PADI-PMOCPRServiceRequest" name="ADI PMO Cardiopulmonary Resuscitation ServiceRequest"/>
-<artifact id="StructureDefinition/PADI-PMOConsent" key="StructureDefinition-PADI-PMOConsent" name="ADI PMO Consent"/>
-<artifact id="StructureDefinition/PADI-PMOInitialTreatmentConsent" key="StructureDefinition-PADI-PMOInitialTreatmentConsent" name="ADI PMO Initial Treatment Consent"/>
 <artifact id="StructureDefinition/PADI-PMOInitialTreatmentServiceRequest" key="StructureDefinition-PADI-PMOInitialTreatmentServiceRequest" name="ADI PMO Initial Treatment ServiceRequest"/>
-<artifact id="StructureDefinition/PADI-PMOMedicallyAssistedNutritionConsent" key="StructureDefinition-PADI-PMOMedicallyAssistedNutritionConsent" name="ADI PMO Medically Assisted Nutrition Consent"/>
 <artifact id="StructureDefinition/PADI-PMOMedicallyAssistedNutritionServiceRequest" key="StructureDefinition-PADI-PMOMedicallyAssistedNutritionServiceRequest" name="ADI PMO Medically Assisted Nutrition ServiceRequest"/>
 <artifact id="StructureDefinition/PADI-PMOParticipantObservation" key="StructureDefinition-PADI-PMOParticipantObservation" name="ADI PMO Participant Observation"/>
 <artifact id="StructureDefinition/PADI-PMOReviewObservation" key="StructureDefinition-PADI-PMOReviewObservation" name="ADI PMO Review Observation"/>
@@ -35,7 +31,6 @@
 <artifact id="StructureDefinition/padi-attestationInformation-extension" key="StructureDefinition-padi-attestationInformation-extension" name="Attestation Information"/>
 <artifact id="ValueSet/PADIAttesterRoleTypeVS" key="ValueSet-PADIAttesterRoleTypeVS" name="Attester Role"/>
 <artifact id="StructureDefinition/padi-authorization-extension" key="StructureDefinition-padi-authorization-extension" name="Authorization"/>
-<artifact id="StructureDefinition/padi-based-on-consent-extension" key="StructureDefinition-padi-based-on-consent-extension" name="Based On Consent"/>
 <artifact id="ValueSet/PADICareExperiencePreferencesVS" key="ValueSet-PADICareExperiencePreferencesVS" name="Care Experience Preferences"/>
 <artifact id="StructureDefinition/padi-clause-extension" key="StructureDefinition-padi-clause-extension" name="Clause"/>
 <artifact id="ValueSet/PADIConsentTypeVS" key="ValueSet-PADIConsentTypeVS" name="Consent Type"/>

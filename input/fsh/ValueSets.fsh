@@ -9,7 +9,8 @@ This ValueSet is managed at the US National Library of Medicine (NLM) Value Set 
 * include $LOINC#86533-7 "Patient Living will"
 * include $LOINC#92664-2 "Power of attorney and Living will"
 * include $LOINC#93037-0 "Portable medical order form"
-* include $LOINC#100821-8 "National POLST form: portable medical order panel"
+// TODO address code concern. Need POLST document code
+//* include $LOINC#100821-8 "National POLST form: portable medical order panel"
 * insert LOINCCopyrightNotice
 
 

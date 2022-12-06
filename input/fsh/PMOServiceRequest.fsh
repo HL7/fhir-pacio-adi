@@ -16,9 +16,9 @@ Description: "This profile is used to represent a practitioner authored portable
 * category 1..1 MS
 * code 1..1 MS
 
-* extension contains
+/* extension contains
     padi-based-on-consent-extension named BasedOnConsentExtension 0..1
-
+*/
 //* code = $LOINC#75781-5
 
 * subject 1..1
