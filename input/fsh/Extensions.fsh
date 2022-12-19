@@ -176,7 +176,7 @@ Description: "Indicates if the goals are ordered in descending priority (Y) or n
 * valueCodeableConcept from $HL7YesNoVS (extensible)
 
 
-
+/*
 Extension: BasedOnConsentExtension
 Id: padi-based-on-consent-extension
 Title: "Based On Consent"
@@ -184,6 +184,7 @@ Description: "Extension to express a PMO Consent resource a request is based on.
 * value[x] only Reference
 * valueReference 1..1
 * valueReference only Reference(PADIPMOConsent)
+*/
 
 
 Invariant:  notary-information-requires-notary-role

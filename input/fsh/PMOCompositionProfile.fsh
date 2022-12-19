@@ -247,6 +247,7 @@ LA46-8 Other
 //Orders Review Observation
 //Orders Participants Observation
 //Administrative Information? Is this an observation with code 100828-3 "Portable medical order administrative information" or is this a new section with text?
+//      This is equivalent to the clause. TODO, do we need to create a specialization on the clause to support the code from ePOLST? This would help in reverse transformation.
 
 
 
