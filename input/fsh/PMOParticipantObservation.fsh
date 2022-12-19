@@ -6,7 +6,7 @@ Description: "This profile is used to represent the portable medical orders part
 
 
 // TODO will likely need a variance Request
-* text 1..1 MS
+//* text 1..1 MS
 * status = #final
 
 
