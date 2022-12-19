@@ -4,10 +4,10 @@ Id: PADI-PMOServiceRequest
 Title: "ADI Portable Medical Order ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order."
 
-
+/*
 * extension contains
     padi-based-on-consent-extension named BasedOnConsentExtension 0..1
-
+*/
 //* text 1..1 MS
 
 * status = #active
