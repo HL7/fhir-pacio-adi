@@ -7,6 +7,18 @@ Description: "This profile encompasses information that makes up a practitioner'
 /*
 
 
+
+
+Need observation for no additonal order (Specific profile an documentation on use)
+https://loinc.org/100824-2/
+Some sort of Value of NA or NI.
+
+TODO will need descriptions of using service request for all orders (including additional orders) And the observation for no additional orders
+
+
+
+
+
 CDA sections are:
 US Realm Person Name (PN.US.FIELDED) (required)
 ePOLST Medical Orders Section (required)
@@ -45,6 +57,10 @@ LA33487-2 Legal surrogate/health care agent
 LA46-8 Other
 */
 
+
+// TODO, need a category code
+//* category = $LOINC#81352-7	"Medical Order for Life-Sustaining Treatment, Physician Order for Life-Sustaining Treatment, or a similar medical order is in place [Reported]"
+
 * section ^slicing.discriminator.type = #pattern 
 * section ^slicing.discriminator.path = "code"
 * section ^slicing.rules = #open
@@ -57,7 +73,7 @@ LA46-8 Other
 * section ^slicing.discriminator.path = "code"
 * section ^slicing.rules = #open
 * section ^slicing.ordered = false   // can be omitted, since false is the default
-* section ^slicing.description = "Slice based on $this value"
+* section ^slicing.description = "Slice based on code"
 * section contains
     portable_medical_orders 1..1 MS and
     //additional_documentation 0..1 MS and
@@ -67,11 +83,14 @@ LA46-8 Other
 
 
 * section[portable_medical_orders] ^short = "Portable Medical Orders"
+* section[portable_medical_orders].extension[padi-clause-extension] ^short = "Section clause, additional instructions, or information"
 * section[portable_medical_orders].title 1..1 MS
 * section[portable_medical_orders].code 1..1 MS
-* section[portable_medical_orders].code = $LOINC#81337-8
+//* section[portable_medical_orders].code = $LOINC#100821-8 // "National POLST form: portable medical order panel"
+* section[portable_medical_orders].code = $LOINC#59772-4 // "Planned procedure Narrative"
+
 * section[portable_medical_orders].entry MS
-* section[portable_medical_orders].entry only Reference(PADIPMOServiceRequest or PADIPMOConsent)
+* section[portable_medical_orders].entry only Reference(PADIPMOServiceRequest or PADIPMONoAdditionalRequestObservation)
 
 
 * section[portable_medical_orders].entry ^slicing.discriminator.type = #pattern 
@@ -81,18 +100,21 @@ LA46-8 Other
 * section[portable_medical_orders].entry ^slicing.description = "Slice based on $this value"
 * section[portable_medical_orders].entry contains
     cardiopulmonary_resuscitation_service_request 0..1 MS and
-    cardiopulmonary_resuscitation_consent 0..1 MS and
     initial_treatment_service_request 0..1 MS and
-    initial_treatment_consent 0..1 MS and
     medically_assisted_nutrition_service_request 0..1 MS and
-    medically_assisted_nutrition_consent 0..1 MS
+    additional_request_service_request 0..1 MS and
+    no_additional_request_service_request 0..1 MS
+
 
 * section[portable_medical_orders].entry[cardiopulmonary_resuscitation_service_request] only Reference(PADIPMOCPRServiceRequest)
-* section[portable_medical_orders].entry[cardiopulmonary_resuscitation_consent] only Reference(PADIPMOCPRConsent)
 * section[portable_medical_orders].entry[initial_treatment_service_request] only Reference(PADIPMOInitialTreatmentServiceRequest)
-* section[portable_medical_orders].entry[initial_treatment_consent] only Reference(PADIPMOInitialTreatmentConsent)
 * section[portable_medical_orders].entry[medically_assisted_nutrition_service_request] only Reference(PADIPMOMedicallyAssistedNutritionServiceRequest)
-* section[portable_medical_orders].entry[medically_assisted_nutrition_consent] only Reference(PADIPMOMedicallyAssistedNutritionConsent)
+* section[portable_medical_orders].entry[additional_request_service_request] only Reference(PADIPMOAdditionalRequestServiceRequest)
+* section[portable_medical_orders].entry[no_additional_request_service_request] only Reference(PADIPMONoAdditionalRequestObservation)
+
+// TODO, should we have an invariant that additional_request_service_request slice and no_additional_request_service_request cannot exist together?
+
+
 
 // TODO add longer description that these are not orders, but further definition of Goals the patient has to help inform medical decisions
 * section[gpp_personal_care_experience] ^short = "Quality of Life related personal care experiences, personal goals, and priorities"
@@ -120,9 +142,10 @@ LA46-8 Other
 * section[witness_and_notary].entry only Reference(PADIParticipant)
 */
 * section[completion_information] ^short = "Portable medical order completion information"
+* section[completion_information].extension[padi-clause-extension] ^short = "Administrative, instructional, and/or legal information"
 * section[completion_information].title 1..1 MS
 * section[completion_information].code 1..1 MS
-* section[completion_information].code = $LOINC#100970-3 // Code is LOINC pre-release as on 11/03/2022 - https://loinc.org/prerelease/
+* section[completion_information].code = $LOINC#100970-3 // "Portable medical order completion information" // Code is LOINC pre-release as on 11/03/2022 - https://loinc.org/prerelease/
 // need to slice on entries. OrderReview has a max of 1 and orders participant has a max of 1
 * section[completion_information].entry ^slicing.discriminator.type = #pattern 
 * section[completion_information].entry ^slicing.discriminator.path = "$this"
@@ -131,7 +154,7 @@ LA46-8 Other
 * section[completion_information].entry ^slicing.description = "Slice based on $this value"
 
 * section[completion_information].entry contains
-    orders_review 0..1 and
+    orders_review 0..* and
     orders_participant 0..* and
     hospice_observation 0..1 and 
     hospice_agency 0..1
@@ -140,6 +163,16 @@ LA46-8 Other
 * section[completion_information].entry[orders_participant] only Reference(PADIPMOParticipantObservation)
 * section[completion_information].entry[hospice_observation] only Reference(PADIPMOHospiceObservation)
 * section[completion_information].entry[hospice_agency] only Reference($USCoreOrganization)
+
+
+
+// NEW For Connectathon
+// 
+// ServiceRequest
+// Consent at the document level (not connectathon)
+// For CarePlan, look at MCC to see about CarePLan reconciliation. CarePlan is not part of the guide, we are defining orders that may be integrated into a care plan.
+
+
 
 
 // Open for discussion

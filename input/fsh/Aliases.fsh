@@ -29,6 +29,8 @@ Alias: $HL7ConsentScope = http://terminology.hl7.org/CodeSystem/consentscope
 Alias: $HL7ConsentCategoryCodes = http://terminology.hl7.org/CodeSystem/consentcategorycodes
 Alias: $HL7JurisdictionCodes = http://hl7.org/fhir/ValueSet/jurisdiction
 
+Alias: $HL7IdentifierType = http://terminology.hl7.org/CodeSystem/v2-0203
+
 Alias: $LOINC = http://loinc.org
 Alias: $SNOMEDCT = http://snomed.info/sct
 

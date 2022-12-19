@@ -31,21 +31,20 @@
 <artifact id="StructureDefinition/adi-effective-date-extension" key="StructureDefinition-adi-effective-date-extension" name="Effective Date"/>
 <artifact id="ValueSet/PADIConsentActorRoleVS" key="ValueSet-PADIConsentActorRoleVS" name="ADI Consent Actor Role"/>
 <artifact id="CodeSystem/PADIGoalCategoryCS" key="CodeSystem-PADIGoalCategoryCS" name="ADI Goal Category Code System"/>
-<<<<<<< HEAD
-=======
-<artifact id="StructureDefinition/PADI-OrganDonationObservation" key="StructureDefinition-PADI-OrganDonationObservation" name="ADI Organ Donation"/>
+<artifact id="StructureDefinition/PADI-PMOAdditionalRequestConsent" key="StructureDefinition-PADI-PMOAdditionalRequestConsent" name="ADI PMO Additional Request or Instructions Consent"/>
+<artifact id="StructureDefinition/PADI-PMOAdditionalRequestServiceRequest" key="StructureDefinition-PADI-PMOAdditionalRequestServiceRequest" name="ADI PMO Additional request or instruction ServiceRequest"/>
 <artifact id="StructureDefinition/PADI-PMOCPRConsent" key="StructureDefinition-PADI-PMOCPRConsent" name="ADI PMO Cardiopulmonary Resuscitation Consent"/>
->>>>>>> 0351d58 (PMO Consent and other additions)
 <artifact id="StructureDefinition/PADI-PMOCPRServiceRequest" key="StructureDefinition-PADI-PMOCPRServiceRequest" name="ADI PMO Cardiopulmonary Resuscitation ServiceRequest"/>
 <artifact id="StructureDefinition/PADI-PMOConsent" key="StructureDefinition-PADI-PMOConsent" name="ADI PMO Consent"/>
 <artifact id="StructureDefinition/PADI-PMOInitialTreatmentConsent" key="StructureDefinition-PADI-PMOInitialTreatmentConsent" name="ADI PMO Initial Treatment Consent"/>
 <artifact id="StructureDefinition/PADI-PMOInitialTreatmentServiceRequest" key="StructureDefinition-PADI-PMOInitialTreatmentServiceRequest" name="ADI PMO Initial Treatment ServiceRequest"/>
 <artifact id="StructureDefinition/PADI-PMOMedicallyAssistedNutritionConsent" key="StructureDefinition-PADI-PMOMedicallyAssistedNutritionConsent" name="ADI PMO Medically Assisted Nutrition Consent"/>
 <artifact id="StructureDefinition/PADI-PMOMedicallyAssistedNutritionServiceRequest" key="StructureDefinition-PADI-PMOMedicallyAssistedNutritionServiceRequest" name="ADI PMO Medically Assisted Nutrition ServiceRequest"/>
+<artifact id="StructureDefinition/PADI-PMONoAdditionalRequestObservation" key="StructureDefinition-PADI-PMONoAdditionalRequestObservation" name="ADI PMO No Additional request or instruction Observation"/>
 <artifact id="StructureDefinition/PADI-PMOParticipantObservation" key="StructureDefinition-PADI-PMOParticipantObservation" name="ADI PMO Participant Observation"/>
 <artifact id="StructureDefinition/PADI-PMOReviewObservation" key="StructureDefinition-PADI-PMOReviewObservation" name="ADI PMO Review Observation"/>
+<artifact id="StructureDefinition/PADI-PMOCarePlan" key="StructureDefinition-PADI-PMOCarePlan" name="ADI Portable Medical Order Care Plan"/>
 <artifact id="StructureDefinition/PADI-PMOComposition" key="StructureDefinition-PADI-PMOComposition" name="ADI Portable Medical Order Composition"/>
-<artifact id="StructureDefinition/PADI-PMOFullServiceRequest" key="StructureDefinition-PADI-PMOFullServiceRequest" name="ADI Portable Medical Order Full ServiceRequest"/>
 <artifact id="StructureDefinition/PADI-PMOHospiceObservation" key="StructureDefinition-PADI-PMOHospiceObservation" name="ADI Portable Medical Order Hospice Observation"/>
 <artifact id="StructureDefinition/PADI-PMOServiceRequest" key="StructureDefinition-PADI-PMOServiceRequest" name="ADI Portable Medical Order ServiceRequest"/>
 <artifact id="ValueSet/PADIAdvanceDirectiveCategoriesVS" key="ValueSet-PADIAdvanceDirectiveCategoriesVS" name="Advance Directive Categories"/>
@@ -99,6 +98,7 @@
 <artifact id="DocumentReference/Example-Smith-Johnson-DocRef-Bundle" key="DocumentReference-Example-Smith-Johnson-DocRef-Bundle" name="Example-Smith-Johnson-DocRef-Bundle"/>
 <artifact id="Device/Example-Smith-Johnson-DocRef-Device1" key="Device-Example-Smith-Johnson-DocRef-Device1" name="Example-Smith-Johnson-DocRef-Device1"/>
 <artifact id="DocumentReference/Example-Smith-Johnson-DocRef-DocumentReference" key="DocumentReference-Example-Smith-Johnson-DocRef-DocumentReference" name="Example-Smith-Johnson-DocRef-DocumentReference"/>
+<artifact id="DocumentReference/Example-Smith-Johnson-DocRef-PMOBundle" key="DocumentReference-Example-Smith-Johnson-DocRef-PMOBundle" name="Example-Smith-Johnson-DocRef-PMOBundle"/>
 <artifact id="Observation/Example-Smith-Johnson-DocumentationObservation1" key="Observation-Example-Smith-Johnson-DocumentationObservation1" name="Example-Smith-Johnson-DocumentationObservation1"/>
 <artifact id="RelatedPerson/Example-Smith-Johnson-HealthcareAgent1" key="RelatedPerson-Example-Smith-Johnson-HealthcareAgent1" name="Example-Smith-Johnson-HealthcareAgent1"/>
 <artifact id="RelatedPerson/Example-Smith-Johnson-HealthcareAgent2" key="RelatedPerson-Example-Smith-Johnson-HealthcareAgent2" name="Example-Smith-Johnson-HealthcareAgent2"/>
@@ -109,6 +109,15 @@
 <artifact id="Organization/Example-Smith-Johnson-OrganizationCustodian1" key="Organization-Example-Smith-Johnson-OrganizationCustodian1" name="Example-Smith-Johnson-OrganizationCustodian1"/>
 <artifact id="Composition/Example-Smith-Johnson-PACPComposition1" key="Composition-Example-Smith-Johnson-PACPComposition1" name="Example-Smith-Johnson-PACPComposition1"/>
 <artifact id="Provenance/Example-Smith-Johnson-PACPProvenance1" key="Provenance-Example-Smith-Johnson-PACPProvenance1" name="Example-Smith-Johnson-PACPProvenance1"/>
+<artifact id="Composition/Example-Smith-Johnson-PADIPMOComposition1" key="Composition-Example-Smith-Johnson-PADIPMOComposition1" name="Example-Smith-Johnson-PADIPMOComposition1"/>
+<artifact id="Observation/Example-Smith-Johnson-PADIPMOParticipantObservation1" key="Observation-Example-Smith-Johnson-PADIPMOParticipantObservation1" name="Example-Smith-Johnson-PADIPMOParticipantObservation1"/>
+<artifact id="ServiceRequest/Example-Smith-Johnson-PMOAdditionalRequestServiceRequest1" key="ServiceRequest-Example-Smith-Johnson-PMOAdditionalRequestServiceRequest1" name="Example-Smith-Johnson-PMOAdditionalRequestServiceRequest1"/>
+<artifact id="Bundle/Example-Smith-Johnson-PMOBundle1" key="Bundle-Example-Smith-Johnson-PMOBundle1" name="Example-Smith-Johnson-PMOBundle1"/>
+<artifact id="ServiceRequest/Example-Smith-Johnson-PMOCPRServiceRequest1" key="ServiceRequest-Example-Smith-Johnson-PMOCPRServiceRequest1" name="Example-Smith-Johnson-PMOCPRServiceRequest1"/>
+<artifact id="ServiceRequest/Example-Smith-Johnson-PMOInitialTreatmentServiceRequest1" key="ServiceRequest-Example-Smith-Johnson-PMOInitialTreatmentServiceRequest1" name="Example-Smith-Johnson-PMOInitialTreatmentServiceRequest1"/>
+<artifact id="ServiceRequest/Example-Smith-Johnson-PMOMNutritionServiceRequest1" key="ServiceRequest-Example-Smith-Johnson-PMOMNutritionServiceRequest1" name="Example-Smith-Johnson-PMOMNutritionServiceRequest1"/>
+<artifact id="Observation/Example-Smith-Johnson-PMONoAdditionalRequestObservation1" key="Observation-Example-Smith-Johnson-PMONoAdditionalRequestObservation1" name="Example-Smith-Johnson-PMONoAdditionalRequestObservation1"/>
+<artifact id="Observation/Example-Smith-Johnson-PMOReviewObservation1" key="Observation-Example-Smith-Johnson-PMOReviewObservation1" name="Example-Smith-Johnson-PMOReviewObservation1"/>
 <artifact id="Patient/Example-Smith-Johnson-Patient1" key="Patient-Example-Smith-Johnson-Patient1" name="Example-Smith-Johnson-Patient1"/>
 <artifact id="Goal/Example-Smith-Johnson-PersonalGoal1" key="Goal-Example-Smith-Johnson-PersonalGoal1" name="Example-Smith-Johnson-PersonalGoal1"/>
 <artifact id="Goal/Example-Smith-Johnson-PersonalGoal2" key="Goal-Example-Smith-Johnson-PersonalGoal2" name="Example-Smith-Johnson-PersonalGoal2"/>
@@ -149,14 +158,9 @@
 <artifact id="StructureDefinition/PADI-Header" key="StructureDefinition-PADI-Header" name="PACIO ADI Header"/>
 <artifact id="StructureDefinition/PADI-Provenance" key="StructureDefinition-PADI-Provenance" name="PACIO ADI Provenance"/>
 <artifact id="CapabilityStatement/padi" key="CapabilityStatement-padi" name="PADI CapabilityStatement"/>
+<artifact id="Practitioner/PMOPractitioner1" key="Practitioner-PMOPractitioner1" name="PMOPractitioner1"/>
 <artifact id="ValueSet/PADIParticipantRelationshipVS" key="ValueSet-PADIParticipantRelationshipVS" name="Participant Relationships"/>
-<<<<<<< HEAD
-=======
-<artifact id="StructureDefinition/padi-performer-extension" key="StructureDefinition-padi-performer-extension" name="Performer"/>
-<artifact id="ValueSet/PADIPersonalAndLegalRelationshipRoleTypeVS" key="ValueSet-PADIPersonalAndLegalRelationshipRoleTypeVS" name="Personal And Legal Relationship Role Type"/>
-<artifact id="StructureDefinition/PADI-PersonalInterventionPreference" key="StructureDefinition-PADI-PersonalInterventionPreference" name="Personal Intervention Preference"/>
 <artifact id="ValueSet/PADIPMOConsentCategoriesVS" key="ValueSet-PADIPMOConsentCategoriesVS" name="Portable Medical Order Categories"/>
->>>>>>> 0351d58 (PMO Consent and other additions)
 <artifact id="ValueSet/PADIPresenceIndicatorVS" key="ValueSet-PADIPresenceIndicatorVS" name="Presence Indicator"/>
 <artifact id="ValueSet/PADIClauseTypeVS" key="ValueSet-PADIClauseTypeVS" name="Type of clause"/>
 <artifact id="ValueSet/PADIUponDeathPreferencesVS" key="ValueSet-PADIUponDeathPreferencesVS" name="Upon Death Preferences"/>

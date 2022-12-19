@@ -4,7 +4,11 @@ Id: PADI-PMOServiceRequest
 Title: "ADI Portable Medical Order ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order."
 
-* text 1..1 MS
+
+* extension contains
+    padi-based-on-consent-extension named BasedOnConsentExtension 0..1
+
+//* text 1..1 MS
 
 * status = #active
 * intent = #order
@@ -16,15 +20,16 @@ Description: "This profile is used to represent a practitioner authored portable
 * category 1..1 MS
 * code 1..1 MS
 
-* extension contains
-    padi-based-on-consent-extension named BasedOnConsentExtension 0..1
 
 //* code = $LOINC#75781-5
 
 * subject 1..1
 * subject only Reference($USCorePatient)
 
+* occurrenceTiming ^short = "Used to express a trial or period to conduct the treatment" 
+
 * encounter 0..0 // verify no encounter possible
+* requester 1..1
 * requester only Reference($USCorePractitioner)
 
 
@@ -64,10 +69,36 @@ Description: "This profile is used to represent a practitioner authored portable
 * code from LOINCPOLSTMedAssistNutrAnswerList (extensible)
 
 
+Profile: PADIPMOAdditionalRequestServiceRequest
+Parent: PADIPMOServiceRequest
+Id: PADI-PMOAdditionalRequestServiceRequest
+Title: "ADI PMO Additional request or instruction ServiceRequest"
+Description: "This profile is used to represent a practitioner authored portable medical order additional requests or instructions."
+
+* ^experimental = false
+* category = $LOINC#100824-2 // "Additional portable medical orders or instructions"
+* code 1..1 MS
+
+
+Profile: PADIPMONoAdditionalRequestObservation
+Parent: Observation
+Id: PADI-PMONoAdditionalRequestObservation
+Title: "ADI PMO No Additional request or instruction Observation"
+Description: "This profile is used to represent that there are no other portable medical order additional requests or instructions."
+
+* ^experimental = false
+* status = #final
+* code = $LOINC#100824-2 // "Additional portable medical orders or instructions"
+* value[x] only boolean
+* valueBoolean = false
+* performer 1..1
+* performer only Reference($USCorePractitioner)
+
+
 
 /////////////////////////////////
 // PMO as full service Request
-
+/*
 Profile: PADIPMOFullServiceRequest
 Parent: ServiceRequest
 Id: PADI-PMOFullServiceRequest
@@ -97,3 +128,5 @@ Description: "This profile is used to represent a practitioner authored portable
 * ^experimental = false
 * category = $LOINC#100822-6 // "Cardiopulmonary resuscitation orders"
 * code from LOINCPOLSTCPRAnswerList (extensible)
+
+*/

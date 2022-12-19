@@ -89,3 +89,14 @@ Description: "This profile is used to represent a practitioner authored portable
 * provision.code from LOINCPOLSTMedAssistNutrAnswerList (extensible)
 
 
+
+
+Profile: PADIPMOAdditionalRequestConsent
+Parent: PADIPMOConsent
+Id: PADI-PMOAdditionalRequestConsent
+Title: "ADI PMO Additional Request or Instructions Consent"
+Description: "This profile is used to represent a practitioner authored portable medical order consent for additional requests or instructions."
+
+* ^experimental = false
+* provision.action = $LOINC#100824-2 // "Additional portable medical orders or instructions"
+* provision.code 1..1 
