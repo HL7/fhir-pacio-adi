@@ -13,6 +13,9 @@ Need observation for no additonal order (Specific profile an documentation on us
 https://loinc.org/100824-2/
 Some sort of Value of NA or NI.
 
+
+Connectathon: How to do addtional orders. What code and how to negate. Predefined use a different pattern. Like Yes CPR or No CPR.
+
 TODO will need descriptions of using service request for all orders (including additional orders) And the observation for no additional orders
 
 
@@ -102,7 +105,7 @@ LA46-8 Other
     cardiopulmonary_resuscitation_service_request 0..1 MS and
     initial_treatment_service_request 0..1 MS and
     medically_assisted_nutrition_service_request 0..1 MS and
-    additional_request_service_request 0..1 MS and
+    additional_request_service_request 0..* MS and
     no_additional_request_service_request 0..1 MS
 
 
