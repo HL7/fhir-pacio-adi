@@ -1478,7 +1478,7 @@
     ],
     "status": "active",
     "title": "PADI CapabilityStatement",
-    "url": "https://build.fhir.org/ig/HL7/pacio-adi/CapabilityStatement/padi",
+    "url": "http://hl7.org/fhir/us/pacio-adi/CapabilityStatement/padi",
     "version": "0.0.1",
     "resourceType": "CapabilityStatement"
 }

@@ -10,6 +10,7 @@ Description: "Codes indicating decisions a healthcare agent may or may not make 
 * #cpr "Cardiopulmonary Resuscitation (CPR)" "Request or reject cardiopulmonary Resuscitation (CPR) on behalf of the patient"
 * #resuscitation-non-cpr "Non-CPR Resuscitation" "Request or reject resuscitation that differs from cardiopulmonary resuscitation on behalf of the patient"
 * ^caseSensitive = true
+* ^experimental = false
 * ^copyright = "This CodeSystem is not copyrighted."
 
 CodeSystem: PADIGoalCategoryCS
@@ -19,4 +20,5 @@ Description: "Advance Directive Goal Categories"
 * #care-experience-preference "Care experience preference" "Personal thoughts about something a person feels is relevant to their care experience and may be pertinent when planning their care."
 * #personal-goal "Personal goal" "Personal health and treatment goals that are pertinent when planning their care."
 * ^caseSensitive = true
+* ^experimental = false
 * ^copyright = "This CodeSystem is not copyrighted."
