@@ -102,9 +102,10 @@ LA46-8 Other
 * section[portable_medical_orders].entry only Reference(PADIPMOServiceRequest) // or PADIPMOConsent)
 >>>>>>> eb74678 (Removing PMO consent and change of codes)
 
-
-* section[portable_medical_orders].entry ^slicing.discriminator.type = #pattern 
-* section[portable_medical_orders].entry ^slicing.discriminator.path = "$this"
+// TODO: reconsider slicing entry as profile slicing causes a significant operational cost (see https://chat.fhir.org/#narrow/stream/179166-implementers/topic/Slicing.20Composition.20Entries and 
+// https://www.hl7.org/fhir/profiling.html profile discriminator type)
+* section[portable_medical_orders].entry ^slicing.discriminator.type = #profile 
+* section[portable_medical_orders].entry ^slicing.discriminator.path = "resolve()"
 * section[portable_medical_orders].entry ^slicing.rules = #open
 * section[portable_medical_orders].entry ^slicing.ordered = false   // can be omitted, since false is the default
 * section[portable_medical_orders].entry ^slicing.description = "Slice based on $this value"
@@ -172,8 +173,9 @@ LA46-8 Other
 * section[completion_information].code 1..1 MS
 * section[completion_information].code = $LOINC#100970-3 // "Portable medical order completion information" // Code is LOINC pre-release as on 11/03/2022 - https://loinc.org/prerelease/
 // need to slice on entries. OrderReview has a max of 1 and orders participant has a max of 1
-* section[completion_information].entry ^slicing.discriminator.type = #pattern 
-* section[completion_information].entry ^slicing.discriminator.path = "$this"
+
+* section[completion_information].entry ^slicing.discriminator.type = #profile
+* section[completion_information].entry ^slicing.discriminator.path = "resolve()"
 * section[completion_information].entry ^slicing.rules = #open 
 * section[completion_information].entry ^slicing.ordered = false
 * section[completion_information].entry ^slicing.description = "Slice based on $this value"

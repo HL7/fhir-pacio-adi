@@ -13,6 +13,7 @@ This ValueSet is managed at the US National Library of Medicine (NLM) Value Set 
 * include $LOINC#93037-0 "Portable medical order form"
 // TODO address code concern. Need POLST document code
 //* include $LOINC#100821-8 "National POLST form: portable medical order panel"
+
 * insert LOINCCopyrightNotice
 */
 
@@ -63,7 +64,11 @@ This ValueSet is managed at the US National Library of Medicine (NLM) Value Set 
 * include $LOINC#81362-6 "My dislikes and fears [Reported]"
 * include $LOINC#81363-4 "Things that matter to me [Reported]"
 * include $LOINC#81364-2 "Religious or cultural beliefs [Reported]"
+<<<<<<< HEAD
 * include $LOINC#81365-9 "Religious or cultural affiliation contact to notify [Reported]'"
+=======
+* include $LOINC#81365-9 "Religious or cultural affiliation contact to notify [Reported]"
+>>>>>>> 8b8c01c (Example improvement and error reductions)
 * include $LOINC#81366-7 "Unfinished business [Reported]"
 * include ADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
 * insert LOINCCopyrightNotice
@@ -75,9 +80,15 @@ ValueSet: ADIInterventionPreferencesVS
 Title: "Intervention Preferences"
 Description: "Clinical Focus: This value set includes concepts representing an individual's intervention preferences which can be expressed by the individual in his or her advance care plan.),(Data Element Scope: The intent of this value set is to identify personal intervention preferences that may be relevant and could be considered by clinicians or any person or organization that is providing care, treatment, or performing any other type of act to or on behalf of the individual.)"
 * ^experimental = false
+<<<<<<< HEAD
 // * codes from valueset ADIInterventionPreferencesOrdinalVS
 * codes from valueset $VSACADIInterventionPreferencesEndOfLifeGrouping
 * include ADIPreferenceCategoryCS#intervention-preference "Intervention preference"
+=======
+* codes from valueset PADIInterventionPreferencesOrdinalVS
+* codes from valueset PADIInterventionPreferencesNarrativeVS
+* include PADIGoalCategoryCS#intervention-preference "Intervention preference"
+>>>>>>> 8b8c01c (Example improvement and error reductions)
 * insert LOINCCopyrightNotice
 
 
@@ -132,8 +143,6 @@ Description: "Codes indicating decisions a healthcare agent may or may not make 
 
 * insert LOINCCopyrightNotice
 
-
-
 /*
 ValueSet: ADIAutopsyVS
 Title: "Autopsy Thoughts"
@@ -161,6 +170,15 @@ Description: "Includes data absent reason concepts to express why a Healthcare A
 * include $HL7AdataAbsentReason#not-applicable
 * include $HL7AdataAbsentReason#unsupported
 
+// TODO SNOMED license statement
+ValueSet: PADIPresenceIndicatorVS
+Title: "Presence Indicator"
+Description: "Codes specifying whether the presence of something exists or is unknown to exist."
+* ^experimental = false
+* include $SNOMEDCT#373066001 "Yes"
+* include $SNOMEDCT#373067005 "No"
+* include $SNOMEDCT#373068000 "Undetermined"
+* insert SNOMEDCopyrightNotice
 
 
 ValueSet: ADIAttesterRoleTypeVS
@@ -173,6 +191,16 @@ Description: "Codes indicating a role of an attester."
 * include $LOINC#81371-7 "Third witness"
 * insert LOINCCopyrightNotice
 
+
+
+ValueSet: PADIClauseTypeVS
+Title: "Type of clause"
+Description: "Type of clause"
+* ^experimental = false
+* $LOINC#81382-4 "Statement of document creator"
+* $LOINC#81368-3 "Statement of witness"
+* $LOINC#81381-6 "Administrative information associated with this personal advance care plan [Reported]"
+* insert LOINCCopyrightNotice
 
 
 // TODO Rename -  Advance Directive Documentation Types  
@@ -259,6 +287,6 @@ Description: "LOINC POLST discuss part Answer List (LL6266-2)"
 ValueSet: PADIPMOConsentCategoriesVS
 Title: "Portable Medical Order Categories"
 Description: "Codes indicating Categories of Portable Medical Orders."
-
+* ^experimental = false
 * include $HL7ConsentCategoryCodes#dnr "Do Not Resuscitate"
 * include $HL7ConsentCategoryCodes#polst "POLST"

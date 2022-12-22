@@ -11,7 +11,7 @@ Description: "This profile is used to represent the review status of the portabl
 
 
 * code 1..1 MS
-* code = $LOINC#100826-7 
+* code = $LOINC#100826-7 // "Portable medical order AndOr advance directive review"
 
 * focus 1..1 MS
 * focus only Reference(PADIPMOComposition) // TODO, is this needed, check with O&O
