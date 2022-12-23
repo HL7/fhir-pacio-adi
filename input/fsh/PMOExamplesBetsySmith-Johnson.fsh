@@ -23,7 +23,7 @@ Usage: #example
 
 * subject = Reference(Example-Smith-Johnson-Patient1) "Smith-Johnson, Betsy"
 
-* requester = Reference(PMOPractitioner1)
+* requester = Reference(PMOPractitioner1) "Levin, Henry MD"
 
 
 
@@ -47,7 +47,7 @@ Usage: #example
 
 * subject = Reference(Example-Smith-Johnson-Patient1) "Smith-Johnson, Betsy"
 
-* requester = Reference(PMOPractitioner1)
+* requester = Reference(PMOPractitioner1) "Levin, Henry MD"
 
 
 
@@ -77,7 +77,7 @@ Usage: #example
 
 * subject = Reference(Example-Smith-Johnson-Patient1) "Smith-Johnson, Betsy"
 
-* requester = Reference(PMOPractitioner1)
+* requester = Reference(PMOPractitioner1) "Levin, Henry MD"
 
 
 
@@ -105,7 +105,7 @@ Usage: #example
 
 * subject = Reference(Example-Smith-Johnson-Patient1) "Smith-Johnson, Betsy"
 
-* requester = Reference(PMOPractitioner1)
+* requester = Reference(PMOPractitioner1) "Levin, Henry MD"
 
 
 Instance: Example-Smith-Johnson-PMONoAdditionalRequestObservation1
@@ -125,7 +125,7 @@ Usage: #example
 * code = $LOINC#100824-2 "Additional portable medical orders or instructions"
 * valueBoolean = false
 * subject = Reference(Example-Smith-Johnson-Patient1) "Smith-Johnson, Betsy"
-* performer = Reference(PMOPractitioner1)
+* performer = Reference(PMOPractitioner1) "Levin, Henry MD"
 
 
 
@@ -255,7 +255,7 @@ Usage: #example
 
 * date = "2022-12-12T14:25:34.001-05:00"
 
-* author = Reference(Example-Smith-Johnson-Patient1) "Smith-Johnson, Betsy"
+* author = Reference(PMOPractitioner1) "Levin, Henry MD"
 
 
 
@@ -395,7 +395,7 @@ Usage: #example
 * category = $LOINC#81352-7	"Medical Order for Life-Sustaining Treatment, Physician Order for Life-Sustaining Treatment, or a similar medical order is in place [Reported]"
 * subject = Reference(Example-Smith-Johnson-Patient1) "Smith-Johnson, Betsy"
 * date = "2022-12-12T14:25:34-05:00"
-* author = Reference(Example-Smith-Johnson-Patient1) "Smith-Johnson, Betsy"
+* author = Reference(PMOPractitioner1) "Levin, Henry MD"
 * title = "Portable Medical Order for Life Sustaining Treatment"
 
 * custodian = Reference(Example-Smith-Johnson-OrganizationCustodian1)
