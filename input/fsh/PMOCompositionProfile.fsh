@@ -64,6 +64,8 @@ LA46-8 Other
 // TODO, need a category code
 //* category = $LOINC#81352-7	"Medical Order for Life-Sustaining Treatment, Physician Order for Life-Sustaining Treatment, or a similar medical order is in place [Reported]"
 
+* type = $LOINC#93037-0 // "Portable medical order form"
+
 * section ^slicing.discriminator.type = #pattern 
 * section ^slicing.discriminator.path = "code"
 * section ^slicing.rules = #open
