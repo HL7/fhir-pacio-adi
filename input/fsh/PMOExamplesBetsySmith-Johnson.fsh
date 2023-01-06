@@ -246,7 +246,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 
-* type = $LOINC##93037-0 "Portable medical order form"
+* type = $LOINC#93037-0 "Portable medical order form"
 // TODO, need a better category code
 * category = $LOINC#81352-7	"Medical Order for Life-Sustaining Treatment, Physician Order for Life-Sustaining Treatment, or a similar medical order is in place [Reported]"
 
