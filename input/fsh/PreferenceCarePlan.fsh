@@ -26,6 +26,8 @@ Description: "The Preference Care Plan is a means for an individual to express t
 * addresses 1..* MS
 * addresses ^comment = "The conditions or circumstances in which the stated preferences and goals of the care plan apply. If there are no contained or referenceable resources, the display should be in addresses.display. If no specific circumstances, then the display should indicate something like 'General' or 'All'"
 
+* supportingInfo 0..* MS
+
 * goal ^short = "Patient's preferences and goals for the scope of this care plan."
 * goal 1..* MS
 * goal only Reference(PADIPersonalInterventionPreference or PADIPersonalGoal or PADICareExperiencePreference)

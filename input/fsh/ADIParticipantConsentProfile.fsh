@@ -64,15 +64,23 @@ Description: "This profile is used to represent a consent for an advance directi
 * provision.actor.extension contains
     padi-clause-extension named ClauseExtension 0..* MS
     
-* provision.actor.role from PADIConsentActorRoleVS (required)
+//* provision.actor.role from PADIConsentActorRoleVS (required)  // The HCA position/Priority was determined not tobe a role by CBCP and suggested using an extension
+* provision.actor.role = $HL7RoleClass#AGNT // "agent"
+
+* provision.actor.extension contains
+    padi-hca-priority named HCAPriority 0..1 
+
+
 * provision.actor.reference only Reference(PADIParticipant)
 
 // [TODO] we need a valueset defined. Any candidates?
 * provision.action MS
-* provision.action from PADIHCADecisionsVS (extensible)
+
+//* provision.action from PADIHCADecisionsVS (extensible)
+* provision.action = PADIHCADecisionMakingCS#decision-making //"Healthcare decision making" "Healthcare decisions to accept or reject healthcare interventions"
 * provision.action ^comment = "Actions without a defined code are placed in action.text."
 * provision.purpose = http://terminology.hl7.org/CodeSystem/v3-ActReason#PWATRNY
-
+* provision.code from $USCoreProcedureCode (extensible)
 // [TODO] need to add guidance that first provision is the base set of rules, and the nested ones are exceptions to the rules.
 // This may tke 2 forms, either a permit as a base rule with exceptions stating what is type deny, or vice versa.
 

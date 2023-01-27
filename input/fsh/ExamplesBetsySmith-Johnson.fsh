@@ -495,17 +495,28 @@ Usage: #example
 * provision.type = #permit
 
 //[TODO] do we need to support and require provision.actor for all HCA's?
-* provision.actor[+].role = $LOINC#75783-1 "Primary healthcare agent [Reported]"
+
+//* provision.actor[+].role = $LOINC#75783-1 "Primary healthcare agent [Reported]"
+* provision.actor[+].extension[padi-hca-priority].valueCodeableConcept = $LOINC#75783-1 "Primary healthcare agent [Reported]"
 * provision.actor[=].reference = Reference(Example-Smith-Johnson-HealthcareAgent1)
-* provision.actor[+].role = $LOINC#75784-9 "First alternate healthcare agent [Reported]"
+// AAAHHH
+//* provision.actor[+].role = $LOINC#75784-9 "First alternate healthcare agent [Reported]"
+* provision.actor[+].extension[padi-hca-priority].valueCodeableConcept = $LOINC#75784-9 "First alternate healthcare agent [Reported]"
 * provision.actor[=].reference = Reference(Example-Smith-Johnson-HealthcareAgent2)
 
-* provision.action[+] = PADIHCADecisionsCS#intubation "Intubation"
-* provision.action[+] = PADIHCADecisionsCS#tube-feeding "Tube feeding"
-* provision.action[+] = PADIHCADecisionsCS#life-support "Life support"
-* provision.action[+] = PADIHCADecisionsCS#iv-fluid-and-support "IV fluid and support"
-* provision.action[+] = PADIHCADecisionsCS#antibiotics "Antibiotics"
-* provision.action[+] = PADIHCADecisionsCS#resuscitation-non-cpr "Non-CPR Resuscitation"
+//* provision.action[+] = PADIHCADecisionsCS#intubation "Intubation"
+//* provision.action[+] = PADIHCADecisionsCS#tube-feeding "Tube feeding"
+//* provision.action[+] = PADIHCADecisionsCS#life-support "Life support"
+//* provision.action[+] = PADIHCADecisionsCS#iv-fluid-and-support "IV fluid and support"
+//* provision.action[+] = PADIHCADecisionsCS#antibiotics "Antibiotics"
+//* provision.action[+] = PADIHCADecisionsCS#resuscitation-non-cpr "Non-CPR Resuscitation"
+* provision.code[+] = $SNOMEDCT#52765003 "Intubation (procedure)"
+* provision.code[+] = $SNOMEDCT#61420007 "Tube feeding of patient (regime/therapy)"
+* provision.code[+] = $SNOMEDCT#78823007 "Life support procedure (procedure)"
+* provision.code[+] = $SNOMEDCT#281800008 "Intravenous fluid replacement (procedure)"
+* provision.code[+] = $SNOMEDCT#281789004 "Antibiotic therapy (procedure)"
+* provision.code[+] = $SNOMEDCT#439569004 "Resuscitation (procedure)"
+
 
 * provision.purpose = http://terminology.hl7.org/CodeSystem/v3-ActReason#PWATRNY
 

@@ -11,6 +11,7 @@
 <artifact id="StructureDefinition/PADI-DocumentationObservation" key="StructureDefinition-PADI-DocumentationObservation" name="ADI Documentation Observation"/>
 <artifact id="StructureDefinition/PADI-Goal" key="StructureDefinition-PADI-Goal" name="ADI Goal"/>
 <artifact id="CodeSystem/PADIGoalCategoryCS" key="CodeSystem-PADIGoalCategoryCS" name="ADI Goal Category Code System"/>
+<artifact id="CodeSystem/PADIHCADecisionMakingCS" key="CodeSystem-PADIHCADecisionMakingCS" name="ADI HCA Decision Making"/>
 <artifact id="StructureDefinition/PADI-OrganDonationObservation" key="StructureDefinition-PADI-OrganDonationObservation" name="ADI Organ Donation"/>
 <artifact id="StructureDefinition/PADI-Participant" key="StructureDefinition-PADI-Participant" name="ADI Participant"/>
 <artifact id="StructureDefinition/PADI-ParticipantConsent" key="StructureDefinition-PADI-ParticipantConsent" name="ADI Participant Consent"/>
@@ -116,8 +117,9 @@
 <artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan2" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan2" name="Example-Smith-Johnson-PreferenceCarePlan2"/>
 <artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan3" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan3" name="Example-Smith-Johnson-PreferenceCarePlan3"/>
 <artifact id="StructureDefinition/padi-goal-order-by-descending-priority-extension" key="StructureDefinition-padi-goal-order-by-descending-priority-extension" name="Goal Order by Descending Priority"/>
+<artifact id="StructureDefinition/padi-hca-priority" key="StructureDefinition-padi-hca-priority" name="HCAPriority"/>
 <artifact id="CodeSystem/PADIHCADecisionsCS" key="CodeSystem-PADIHCADecisionsCS" name="Healthcare Agent Decision Codes"/>
-<artifact id="ValueSet/PADIHCADecisionsVS" key="ValueSet-PADIHCADecisionsVS" name="Healthcare Agent Decisions"/>
+<artifact deprecated="true" id="ValueSet/PADIHCADecisionsVS" key="ValueSet-PADIHCADecisionsVS" name="Healthcare Agent Decisions"/>
 <artifact id="ValueSet/PADIHealthGoalsVS" key="ValueSet-PADIHealthGoalsVS" name="Health Goals"/>
 <artifact id="StructureDefinition/padi-informant-extension" key="StructureDefinition-padi-informant-extension" name="Informant"/>
 <artifact id="StructureDefinition/padi-informationRecipient-extension" key="StructureDefinition-padi-informationRecipient-extension" name="Information Recipient"/>

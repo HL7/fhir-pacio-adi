@@ -7,6 +7,7 @@ Alias:   $USCoreOrganization = http://hl7.org/fhir/us/core/StructureDefinition/u
 Alias:   $USCoreGoal = http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal
 Alias:   $USCoreEncounter = http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
 Alias:   $USCoreProvenance = http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance
+Alias:   $USCoreProcedureCode = http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code
 
 
 Alias: $USCoreDocumentReference = http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
