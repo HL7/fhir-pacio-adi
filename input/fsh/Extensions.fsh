@@ -168,6 +168,14 @@ Description: "Indicates if the goals are ordered in descending priority (Y) or n
 * valueCodeableConcept from $HL7YesNoVS (extensible)
 
 
+Extension: HCAPriority
+Id: padi-hca-priority
+Title: "HCAPriority"
+Description: "Healthcare Agent Priority."
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1 MS
+* valueCodeableConcept from PADIConsentActorRoleVS (required)
+
 /*
 Extension: BasedOnConsentExtension
 Id: padi-based-on-consent-extension

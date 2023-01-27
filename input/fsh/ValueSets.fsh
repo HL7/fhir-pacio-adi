@@ -64,11 +64,7 @@ This ValueSet is managed at the US National Library of Medicine (NLM) Value Set 
 * include $LOINC#81362-6 "My dislikes and fears [Reported]"
 * include $LOINC#81363-4 "Things that matter to me [Reported]"
 * include $LOINC#81364-2 "Religious or cultural beliefs [Reported]"
-<<<<<<< HEAD
 * include $LOINC#81365-9 "Religious or cultural affiliation contact to notify [Reported]'"
-=======
-* include $LOINC#81365-9 "Religious or cultural affiliation contact to notify [Reported]"
->>>>>>> 8b8c01c (Example improvement and error reductions)
 * include $LOINC#81366-7 "Unfinished business [Reported]"
 * include ADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
 * insert LOINCCopyrightNotice
@@ -80,15 +76,9 @@ ValueSet: ADIInterventionPreferencesVS
 Title: "Intervention Preferences"
 Description: "Clinical Focus: This value set includes concepts representing an individual's intervention preferences which can be expressed by the individual in his or her advance care plan.),(Data Element Scope: The intent of this value set is to identify personal intervention preferences that may be relevant and could be considered by clinicians or any person or organization that is providing care, treatment, or performing any other type of act to or on behalf of the individual.)"
 * ^experimental = false
-<<<<<<< HEAD
 // * codes from valueset ADIInterventionPreferencesOrdinalVS
 * codes from valueset $VSACADIInterventionPreferencesEndOfLifeGrouping
 * include ADIPreferenceCategoryCS#intervention-preference "Intervention preference"
-=======
-* codes from valueset PADIInterventionPreferencesOrdinalVS
-* codes from valueset PADIInterventionPreferencesNarrativeVS
-* include PADIGoalCategoryCS#intervention-preference "Intervention preference"
->>>>>>> 8b8c01c (Example improvement and error reductions)
 * insert LOINCCopyrightNotice
 
 
@@ -290,3 +280,5 @@ Description: "Codes indicating Categories of Portable Medical Orders."
 * ^experimental = false
 * include $HL7ConsentCategoryCodes#dnr "Do Not Resuscitate"
 * include $HL7ConsentCategoryCodes#polst "POLST"
+
+

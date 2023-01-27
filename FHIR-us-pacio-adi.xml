@@ -31,7 +31,17 @@
 <artifact id="StructureDefinition/adi-effective-date-extension" key="StructureDefinition-adi-effective-date-extension" name="Effective Date"/>
 <artifact id="ValueSet/PADIConsentActorRoleVS" key="ValueSet-PADIConsentActorRoleVS" name="ADI Consent Actor Role"/>
 <artifact id="CodeSystem/PADIGoalCategoryCS" key="CodeSystem-PADIGoalCategoryCS" name="ADI Goal Category Code System"/>
+<<<<<<< HEAD
 <artifact id="StructureDefinition/PADI-PMOAdditionalRequestConsent" key="StructureDefinition-PADI-PMOAdditionalRequestConsent" name="ADI PMO Additional Request or Instructions Consent"/>
+=======
+<artifact id="CodeSystem/PADIHCADecisionMakingCS" key="CodeSystem-PADIHCADecisionMakingCS" name="ADI HCA Decision Making"/>
+<artifact id="StructureDefinition/PADI-OrganDonationObservation" key="StructureDefinition-PADI-OrganDonationObservation" name="ADI Organ Donation"/>
+<artifact id="StructureDefinition/PADI-Participant" key="StructureDefinition-PADI-Participant" name="ADI Participant"/>
+<artifact id="StructureDefinition/PADI-ParticipantConsent" key="StructureDefinition-PADI-ParticipantConsent" name="ADI Participant Consent"/>
+<artifact id="StructureDefinition/PADI-PACPComposition" key="StructureDefinition-PADI-PACPComposition" name="ADI Personal Advance Care Plan Composition"/>
+<artifact id="StructureDefinition/PADI-PersonalGoal" key="StructureDefinition-PADI-PersonalGoal" name="ADI Personal Goal"/>
+<artifact id="StructureDefinition/PADI-PersonalPrioritiesOrganizer" key="StructureDefinition-PADI-PersonalPrioritiesOrganizer" name="ADI Personal Priorities Organizer"/>
+>>>>>>> f0b08b4 (STU2 2023-01 Connectathon changes)
 <artifact id="StructureDefinition/PADI-PMOAdditionalRequestServiceRequest" key="StructureDefinition-PADI-PMOAdditionalRequestServiceRequest" name="ADI PMO Additional request or instruction ServiceRequest"/>
 <artifact id="StructureDefinition/PADI-PMOCPRServiceRequest" key="StructureDefinition-PADI-PMOCPRServiceRequest" name="ADI PMO Cardiopulmonary Resuscitation ServiceRequest"/>
 <artifact id="StructureDefinition/PADI-PMOInitialTreatmentServiceRequest" key="StructureDefinition-PADI-PMOInitialTreatmentServiceRequest" name="ADI PMO Initial Treatment ServiceRequest"/>
@@ -147,6 +157,7 @@
 <artifact id="ValueSet/ADIPersonalAndLegalRelationshipRoleTypeVS" key="ValueSet-ADIPersonalAndLegalRelationshipRoleTypeVS" name="Personal And Legal Relationship Role Type"/>
 <artifact id="StructureDefinition/ADI-PersonalInterventionPreference" key="StructureDefinition-ADI-PersonalInterventionPreference" name="Personal Intervention Preference"/>
 <artifact id="StructureDefinition/adi-versionNumber-extension" key="StructureDefinition-adi-versionNumber-extension" name="Version Number"/>
+<artifact id="StructureDefinition/padi-hca-priority" key="StructureDefinition-padi-hca-priority" name="HCAPriority"/>
 <artifact id="ValueSet/PADIHealthGoalsVS" key="ValueSet-PADIHealthGoalsVS" name="Health Goals"/>
 <artifact id="StructureDefinition/padi-informationRecipient-extension" key="StructureDefinition-padi-informationRecipient-extension" name="Information Recipient"/>
 <artifact id="ValueSet/PADIInterventionPreferencesNarrativeVS" key="ValueSet-PADIInterventionPreferencesNarrativeVS" name="Intervention Preferences - Narrative"/>

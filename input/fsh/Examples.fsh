@@ -457,14 +457,20 @@ Usage: #example
 * provision.type = #permit
 
 //[TODO] do we need to support and require provision.actor for all HCA's?
-* provision.actor[+].role = $LOINC#75783-1 "Primary healthcare agent [Reported]"
+//* provision.actor[+].role = $LOINC#75783-1 "Primary healthcare agent [Reported]"
+* provision.actor[+].role = $HL7RoleClass#AGNT "agent"
+* provision.actor[=].extension[padi-hca-priority].valueCodeableConcept = $LOINC#75783-1 "Primary healthcare agent [Reported]"
 * provision.actor[=].reference = Reference(Example-McBee-HealthcareAgent1)
-* provision.actor[+].role = $LOINC#75784-9 "First alternate healthcare agent [Reported]"
+
+//* provision.actor[+].role = $LOINC#75784-9 "First alternate healthcare agent [Reported]"
+// AAAHHH
+* provision.actor[+].role = $HL7RoleClass#AGNT "agent"
+* provision.actor[=].extension[padi-hca-priority].valueCodeableConcept = $LOINC#75784-9 "First alternate healthcare agent [Reported]"
 * provision.actor[=].reference = Reference(Example-McBee-HealthcareAgent2)
 
-* provision.action[+] = ADIHCADecisionsCS#intubation "Intubation"
-* provision.action[+] = ADIHCADecisionsCS#tube-feeding "Tube feeding"
-* provision.action[+] = ADIHCADecisionsCS#life-support "Life support"
+* provision.code[+] = $SNOMEDCT#52765003 "Intubation (procedure)"
+* provision.code[+] = $SNOMEDCT#61420007 "Tube feeding of patient (regime/therapy)"
+* provision.code[+] = $SNOMEDCT#78823007 "Life support procedure (procedure)"
 
 * provision.purpose = http://terminology.hl7.org/CodeSystem/v3-ActReason#PWATRNY
 
