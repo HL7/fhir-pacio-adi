@@ -2,30 +2,77 @@
 This section defines additional requirements and guidance relevant to this guide as a whole. The conformance verbs - **SHALL**, **SHOULD**, **MAY** - used in this guide are defined in [FHIR Conformance Rules](http://hl7.org/fhir/R4/conformance-rules.html).
 
 
-### Claiming Conformance to a PACIO ADI Profile
-To claim conformance to a profile in this guide, servers **SHALL**:
+### System Role Definitions
 
-- Be able to populate all profile data elements that have a minimum cardinality >= 1 and/or flagged as Must Support as defined by that profile’s StructureDefinition.
-- Conform to the [PACIO ADI Capability Statement](CapabilityStatement-adi.html) expectations for that profile’s type.
-<!-- TODO note about what profiles must be supported?-->
+**Data Sources** are defined as systems that originate advance directive related documents & resources. These systems may be personal health records, clinical records, or even consumer-facing platforms.
+
+**Data Consumers** are defined as systems retrieving or receiving advance directive information for direct use or integration into their application platform (as opposed to acting as a server or intermediary).
+
+**Servers** are defined as systems that make advance directive information available through query or retrieval.
+
+### Claiming Conformance to an ADI Profile
+#### To claim conformance to a profile in this guide;
+
+**_Data Sources:_**
+
+**SHALL** support creating resources that conform to resource and profile requirements included in the [ADI Capability Statement](CapabilityStatement-adi.html) capability expectations (capabilitystatement-expectation extension with valueCode = SHALL).
+
+**SHALL** populate all profile data elements that have a minimum cardinality >= 1 and meet all other basic FHIR conformance requirements (e.g. terminology binding requirements)
+
+**MAY** assert missing information by using an appropriate value set code where allowed or by using a (dataAbsentReason extension)http://hl7.org/fhir/r4/extension-data-absent-reason.html for elements that are not marked as required (cardinality 0..*)
+
+**SHALL** meet the requirements identified in the definition of Must Support elements.
+
+
+**_Data Consumers:_-_**
+
+**SHALL* meet the requirements identified in the definition of Must Support elements.
+
+
+**_Servers:_**
+
+**SHALL** include a CapabilityStatement that has a CapabilityStatement.instantiates value with the canonical URL of the [ADI Capability Statement](CapabilityStatement-adi.html).
+
+**SHALL* meet the [ADI Capability Statement](CapabilityStatement-adi.html) capability expectations.
+
+**SHALL** reliably provide the information completely in the form in which it was received.  
 
 ### Must Support
-The following rules apply to all PACIO ADI Profile elements marked as Must Support. Must Support on any profile data element **SHALL** be interpreted as follows:
 
+Profiles used by or inherited by this guide that are defined in other implementation guides, inherit the definition of Must Support from their respective guides for elements which they define as Must Support.
 
 #### Data Source System Requirements
 
-- Data Sources Systems **SHALL** be capable of populating all data elements as part of the query results as specified by the [PACIO ADI Capability Statement](CapabilityStatement-adi.html).
+Data Sources **SHALL** be capable of populating the data element for profiles the system is claiming conformance to. In other words, the system must be able to demonstrate the population and communication of the element if the profile is supported by that system, but it is acceptable to omit the element if the system doesn't have values in a particular instance. A system that is incapable of ever sharing the element for a required profile, as defined in the [ADI Capability Statement](CapabilityStatement-adi.html) is considered to be non-conformant to this implementation guide.
+For example: If a system only purports to support scanned documents, the system will have to support the Must Support elements for the DocumentReference and other supportive profiles, but would not need to support a FHIR document, which includes the Composition resource, or any related Must Support elements. 
+
+ 
+
+The DataAbsentReason extension **MAY** be used on Must Support elements that are not available, but **SHALL NOT** use them in place of meeting the Must Support requirement (Meaning that the system must be capable of producing the profiled resource with the element.)
+
+ 
 
 #### Data Consumer System Requirements
 
-- Data Consumer Systems **SHALL** be capable of displaying the data elements for human use.
-- Data Consumer Systems **SHOULD** be capable of storing the data elements for other uses (such record keeping of data used for clinical use).
-- Data Consumer Systems **SHALL** be capable of processing resource instances containing the data element without generating an error or causing the application to fail.
-- Data Consumer Systems **SHALL** interpret missing data elements within resources instances as not being present on the Data Sources system’s or as being withheld for privacy or business reasons.
-- Data Consumer Systems **SHALL** be able to process resource instances containing data elements asserting missing information. Data Consumer Systems are not required to process assertions of missing data. Assertion of missing information may be expressed using an appropriate value set code (such as nullFlavor) where available or using a dataAbsentReason extension.
+Data Consumers **SHALL** be capable of rendering the narrative resource level text and Composition.section.text elements marked as Must Support.   
 
-Profiles used by this guide, but defined in other implementation guides inherit the definition of Must Support from their respective guides.
+Data Consumers **SHALL** be capable of processing resource instances containing conformant Must Support data element without generating an error or causing the application to fail.
+
+Data Consumers **SHALL** interpret missing Must Support data elements within resource instances as not being present or not deemed to be shareable with the Data Consumer for privacy or other business reasons.
+
+Data Consumers **SHALL** be able to process resource instances containing data elements asserting missing information. Data Consumers are not required to process assertions of missing data. Assertion of missing information may be expressed using an appropriate value set code where allowed or using a [dataAbsentReason extension](http://hl7.org/fhir/r4/extension-data-absent-reason.html) for elements that are not marked as required (cardinality 1..X).
+
+ 
+
+#### Notable differences from US Core Conformance and Must Support Requirements
+
+Data Sources may assert missing information for data elements without the need of this guide explicitly stating where it is allowed.
+
+Data Consumers must be capable of displaying resource level text elements marked as Must Support.
+
+Servers must be able to reliably provide the information completely in the form in which it was received.
+
+**NOTE:** Elements marked as Must Support are relevant for **the resources/profiles that a system purports to support**. Systems are allowed to include additional data - and receivers (servers and consumers) **SHOULD NOT** reject instances that contain unexpected data elements if those elements are not modifier elements. However, data sources **SHALL NOT** expect data consumers to store, process, or display the data.
 
 ### Must Support of CodeableConcept Text Elements
 
