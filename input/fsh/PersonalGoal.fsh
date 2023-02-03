@@ -20,9 +20,6 @@ Description: "This profile defines the base requirements for all ADI Goals."
 
 * subject 1..1 MS
 * subject only Reference($USCorePatient)
-* target MS
-* target.measure MS
-* target.detail[x] MS
 
 * expressedBy 1..1 MS
 * expressedBy only Reference($USCorePatient)
