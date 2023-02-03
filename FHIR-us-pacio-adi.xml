@@ -75,7 +75,7 @@
 <artifact id="Goal/Example-Smith-Johnson-CareExperiencePreference6" key="Goal-Example-Smith-Johnson-CareExperiencePreference6" name="Example-Smith-Johnson-CareExperiencePreference6"/>
 <artifact id="Goal/Example-Smith-Johnson-CareExperiencePreference7" key="Goal-Example-Smith-Johnson-CareExperiencePreference7" name="Example-Smith-Johnson-CareExperiencePreference7"/>
 <artifact id="Goal/Example-Smith-Johnson-CareExperiencePreference8" key="Goal-Example-Smith-Johnson-CareExperiencePreference8" name="Example-Smith-Johnson-CareExperiencePreference8"/>
-<artifact id="Binary/Example-Smith-Johnson-DocRef-Binary1" key="Binary-Example-Smith-Johnson-DocRef-Binary1" name="Example-Smith-Johnson-DocRef-Binary1"/>
+<artifact deprecated="true" id="Binary/Example-Smith-Johnson-DocRef-Binary1" key="Binary-Example-Smith-Johnson-DocRef-Binary1" name="Example-Smith-Johnson-DocRef-Binary1"/>
 <artifact id="DocumentReference/Example-Smith-Johnson-DocRef-Bundle" key="DocumentReference-Example-Smith-Johnson-DocRef-Bundle" name="Example-Smith-Johnson-DocRef-Bundle"/>
 <artifact id="Device/Example-Smith-Johnson-DocRef-Device1" key="Device-Example-Smith-Johnson-DocRef-Device1" name="Example-Smith-Johnson-DocRef-Device1"/>
 <artifact id="DocumentReference/Example-Smith-Johnson-DocRef-DocumentReference" key="DocumentReference-Example-Smith-Johnson-DocRef-DocumentReference" name="Example-Smith-Johnson-DocRef-DocumentReference"/>
@@ -88,7 +88,7 @@
 <artifact id="Organization/Example-Smith-Johnson-OrganizationAssembler1" key="Organization-Example-Smith-Johnson-OrganizationAssembler1" name="Example-Smith-Johnson-OrganizationAssembler1"/>
 <artifact id="Organization/Example-Smith-Johnson-OrganizationCustodian1" key="Organization-Example-Smith-Johnson-OrganizationCustodian1" name="Example-Smith-Johnson-OrganizationCustodian1"/>
 <artifact id="Composition/Example-Smith-Johnson-PACPComposition1" key="Composition-Example-Smith-Johnson-PACPComposition1" name="Example-Smith-Johnson-PACPComposition1"/>
-<artifact deprecated="true" id="Provenance/Example-Smith-Johnson-PACPProvenance1" key="Provenance-Example-Smith-Johnson-PACPProvenance1" name="Example-Smith-Johnson-PACPProvenance1"/>
+<artifact id="Provenance/Example-Smith-Johnson-PACPProvenance1" key="Provenance-Example-Smith-Johnson-PACPProvenance1" name="Example-Smith-Johnson-PACPProvenance1"/>
 <artifact id="Patient/Example-Smith-Johnson-Patient1" key="Patient-Example-Smith-Johnson-Patient1" name="Example-Smith-Johnson-Patient1"/>
 <artifact id="Goal/Example-Smith-Johnson-PersonalGoal1" key="Goal-Example-Smith-Johnson-PersonalGoal1" name="Example-Smith-Johnson-PersonalGoal1"/>
 <artifact id="Goal/Example-Smith-Johnson-PersonalInterventionPreference1" key="Goal-Example-Smith-Johnson-PersonalInterventionPreference1" name="Example-Smith-Johnson-PersonalInterventionPreference1"/>

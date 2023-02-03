@@ -488,6 +488,7 @@ Usage: #example
 * intent = #proposal
 
 * category[advance_care_planning] = $SNOMEDCT#736366004 "Advance care plan"
+* title = "Care Plan for Unconscious, vegetative state, coma"
 
 * subject = Reference(Example-Smith-Johnson-Patient1)
 
