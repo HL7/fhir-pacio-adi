@@ -20,7 +20,7 @@ All implementers of the Advance Directive Interoperability Implementation Guide 
 For the purposes of Advance Directive Interoperability, additional security conformance requirements are as follows:
 
 ##### Exchange Security
-1.	The exchange of  information **SHOULD** use the current version and **SHALL** use either current or the immediately prior release of Transport Level Security (TLS) as specified by the current release of NIST guidelines (SP 800-52).
+1.	The exchange of  information **SHALL**  support [Transport Layer Security (TLS) Protocol Version 1.2 (RFC5246)](https://www.rfc-editor.org/rfc/rfc5246) or a more recent version of TLS for transport layer security.
 2.	Implementers of this Implementation Guide **SHOULD** support SMART on FHIR Authorization best practices [Transport Security section](https://docs.smarthealthit.org/authorization/best-practices/#11--transport-security).
 
 ##### Authentication and Authorization Requirements
