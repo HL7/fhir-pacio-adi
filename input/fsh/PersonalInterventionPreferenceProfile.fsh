@@ -82,7 +82,7 @@ Description: "This profile is used to represent a personal preference for a type
 * subject 1..1 MS
 * subject only Reference($USCorePatient)
 
-//healthcare_agent_appointment//[TODO] requires guidance
+//healthcare_agent//[TODO] requires guidance
 * asNeeded[x] MS
 * asNeededCodeableConcept.text MS
 

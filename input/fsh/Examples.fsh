@@ -173,10 +173,10 @@ Usage: #example
 // Need to include attesters
 
 // Line 202
-* section[healthcare_agent_appointment].title = "Appointment of a Primary Healthcare Agent and Alternate Healthcare Agents"
-* section[healthcare_agent_appointment].code = $LOINC#81335-2 "Healthcare Agent"
-* section[healthcare_agent_appointment].text.status = #additional
-* section[healthcare_agent_appointment].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+* section[healthcare_agent].title = "Appointment of a Primary Healthcare Agent and Alternate Healthcare Agents"
+* section[healthcare_agent].code = $LOINC#81335-2 "Healthcare Agent"
+* section[healthcare_agent].text.status = #additional
+* section[healthcare_agent].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p><b>It is very important for you to discuss your medical treatment goals and wishes with your healthcare agent, your family, and your medical care providers.</b> Keep in mind that advance medical directives are simply expressions of your medical treatment goals and preferences. There is no guarantee that your medical care providers will follow all of your wishes, but one thing is certain: <b>If your advance medical directives cannot be quickly located and retrieved in a time of need, then medical care providers, your family and friends will not be able to take your wishes into consideration when they make critical decisions regarding your treatment.</b></p>
 
 <p><i>IF THIS PART OF THE uADD™ IS LEFT BLANK, I DO NOT WANT TO DESIGNATE A HEALTHCARE AGENT AT THIS TIME, AND I DO NOT WANT A DEFAULT HEALTHCARE AGENT DESIGNATED FOR ME UNDER APPLICABLE LAW. I TRUST THE DOCTORS AND NURSES TREATING ME TO MAKE MEDICAL TREATMENT DECISIONS REGARDING MY TREATMENT AND CARE.</i></p>
@@ -213,7 +213,7 @@ Usage: #example
 
 </div>"
 
-* section[healthcare_agent_appointment].extension[padi-clause-extension].extension[Clause].valueMarkdown = "I am appointing the person or persons below as my healthcare agent and, if applicable, as my
+* section[healthcare_agent].extension[padi-clause-extension].extension[Clause].valueMarkdown = "I am appointing the person or persons below as my healthcare agent and, if applicable, as my
 alternate healthcare agent(s), and I am granting to each of them the legal authority to make
 medical treatment decisions on my behalf and to consult with my physician and others. The
 power to make medical treatment decisions that I am granting to my healthcare agent(s) is
@@ -221,9 +221,9 @@ expressly subject to, and limited by, the choices that I have expressed elsewher
 If my medical treatment choices are not clear, I am authorizing and directing my healthcare
 agent to make decisions in my best interests and based on what is known of my wishes."
 
-* section[healthcare_agent_appointment].entry[+] = Reference(Example-McBee-HealthcareAgent1)
-* section[healthcare_agent_appointment].entry[+] = Reference(Example-McBee-HealthcareAgent2)
-* section[healthcare_agent_appointment].entry[+] = Reference(Example-McBee-HealthcareAgentConsent)
+* section[healthcare_agent].entry[+] = Reference(Example-McBee-HealthcareAgent1)
+* section[healthcare_agent].entry[+] = Reference(Example-McBee-HealthcareAgent2)
+* section[healthcare_agent].entry[+] = Reference(Example-McBee-HealthcareAgentConsent)
 // will need to add HCA authority when the profile is created
 
 

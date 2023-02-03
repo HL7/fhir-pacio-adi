@@ -173,10 +173,10 @@ Usage: #example
 // no legal authenticator in CDA
 
 // Line 202
-* section[healthcare_agent_appointment].title = "Appointment of a Primary Healthcare Agent and Alternate Healthcare Agents"
-* section[healthcare_agent_appointment].code = $LOINC#81335-2 "Healthcare Agent"
-* section[healthcare_agent_appointment].text.status = #additional
-* section[healthcare_agent_appointment].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+* section[healthcare_agent].title = "Appointment of a Primary Healthcare Agent and Alternate Healthcare Agents"
+* section[healthcare_agent].code = $LOINC#81335-2 "Healthcare Agent"
+* section[healthcare_agent].text.status = #additional
+* section[healthcare_agent].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 
 <p>IF THIS PART OF THE uADD™ IS LEFT BLANK, I DO NOT WANT TO DESIGNATE A HEALTHCARE AGENT AT THIS TIME, AND I DO NOT WANT A DEFAULT HEALTHCARE AGENT DESIGNATED FOR ME UNDER APPLICABLE LAW. I TRUST THE DOCTORS AND NURSES TREATING ME TO MAKE MEDICAL TREATMENT DECISIONS REGARDING MY TREATMENT AND CARE.</p>
 
@@ -212,9 +212,9 @@ Usage: #example
 
 </div>"
 
-* section[healthcare_agent_appointment].entry[+] = Reference(Example-Smith-Johnson-HealthcareAgent1)
-* section[healthcare_agent_appointment].entry[+] = Reference(Example-Smith-Johnson-HealthcareAgent2)
-* section[healthcare_agent_appointment].entry[+] = Reference(Example-Smith-Johnson-HealthcareAgentConsent)
+* section[healthcare_agent].entry[+] = Reference(Example-Smith-Johnson-HealthcareAgent1)
+* section[healthcare_agent].entry[+] = Reference(Example-Smith-Johnson-HealthcareAgent2)
+* section[healthcare_agent].entry[+] = Reference(Example-Smith-Johnson-HealthcareAgentConsent)
 // will need to add HCA authority when the profile is created
 
 

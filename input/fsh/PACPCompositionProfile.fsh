@@ -21,7 +21,7 @@ Description: "This profile encompasses information that makes up the author’s 
 * section ^slicing.ordered = false   // can be omitted, since false is the default
 * section ^slicing.description = "Slice based on $this value"
 * section contains
-    healthcare_agent_appointment 1..1 MS and
+    healthcare_agent 1..1 MS and
     gpp_personal_care_experience 0..1 MS and
     gpp_for_certain_health_condition 0..1 MS and
     gpp_upon_death 0..1 MS and
@@ -29,15 +29,15 @@ Description: "This profile encompasses information that makes up the author’s 
     witness_and_notary 0..1 MS and
     administrative_information 0..1 MS
 
-* section[healthcare_agent_appointment] ^short = "Healthcare agents, healthcare agent advisors, and consent regarding their roles, powers, and limitations"
+* section[healthcare_agent] ^short = "Healthcare agents, healthcare agent advisors, and consent regarding their roles, powers, and limitations"
 
-* section[healthcare_agent_appointment].title 1..1 MS
-* section[healthcare_agent_appointment].code 1..1 MS
-* section[healthcare_agent_appointment].code = $LOINC#81335-2
-* section[healthcare_agent_appointment].entry MS
-* section[healthcare_agent_appointment].entry only Reference(PADIParticipantConsent or PADIParticipant)
-* section[healthcare_agent_appointment].emptyReason from PADINoHealthcareAgentIncludedReasonVS (required)
-* section[healthcare_agent_appointment] obeys HCA-section-entries
+* section[healthcare_agent].title 1..1 MS
+* section[healthcare_agent].code 1..1 MS
+* section[healthcare_agent].code = $LOINC#81335-2
+* section[healthcare_agent].entry MS
+* section[healthcare_agent].entry only Reference(PADIParticipantConsent or PADIParticipant)
+* section[healthcare_agent].emptyReason from PADINoHealthcareAgentIncludedReasonVS (required)
+* section[healthcare_agent] obeys HCA-section-entries
 // TODO add guidance around this emptyReason element
 // TODO add invariant stating that if entry exists, then agent Consent must exist
 
@@ -45,7 +45,7 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[gpp_personal_care_experience].title 1..1 MS
 * section[gpp_personal_care_experience].code 1..1 MS
 * section[gpp_personal_care_experience].code = $LOINC#81338-6
-* section[healthcare_agent_appointment].orderedBy MS
+* section[healthcare_agent].orderedBy MS
 * section[gpp_personal_care_experience].entry MS
 * section[gpp_personal_care_experience].entry only Reference(PADICareExperiencePreference or PADIPersonalPrioritiesOrganizer or PADIPersonalGoal)
 
