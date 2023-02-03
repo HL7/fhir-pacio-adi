@@ -10,8 +10,8 @@
 <artifact id="StructureDefinition/PADI-CareExperiencePreference" key="StructureDefinition-PADI-CareExperiencePreference" name="ADI Care Experience Preference"/>
 <artifact id="StructureDefinition/ADI-Composition-Header" key="StructureDefinition-ADI-Composition-Header" name="ADI Composition Header"/>
 <artifact id="ValueSet/PADIConsentActorRoleVS" key="ValueSet-PADIConsentActorRoleVS" name="ADI Consent Actor Role"/>
-<artifact id="StructureDefinition/PADI-DocumentationObservation" key="StructureDefinition-PADI-DocumentationObservation" name="ADI Documentation Observation"/>
 <artifact id="StructureDefinition/ADI-DocumentReference" key="StructureDefinition-ADI-DocumentReference" name="ADI Document Reference"/>
+<artifact id="StructureDefinition/PADI-DocumentationObservation" key="StructureDefinition-PADI-DocumentationObservation" name="ADI Documentation Observation"/>
 <artifact id="StructureDefinition/PADI-Goal" key="StructureDefinition-PADI-Goal" name="ADI Goal"/>
 <artifact id="CodeSystem/PADIGoalCategoryCS" key="CodeSystem-PADIGoalCategoryCS" name="ADI Goal Category Code System"/>
 <artifact id="StructureDefinition/PADI-OrganDonationObservation" key="StructureDefinition-PADI-OrganDonationObservation" name="ADI Organ Donation"/>
@@ -99,9 +99,9 @@
 <artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan2" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan2" name="Example-Smith-Johnson-PreferenceCarePlan2"/>
 <artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan3" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan3" name="Example-Smith-Johnson-PreferenceCarePlan3"/>
 <artifact id="StructureDefinition/padi-goal-order-by-descending-priority-extension" key="StructureDefinition-padi-goal-order-by-descending-priority-extension" name="Goal Order by Descending Priority"/>
+<artifact id="ValueSet/PADIHealthGoalsVS" key="ValueSet-PADIHealthGoalsVS" name="Health Goals"/>
 <artifact id="CodeSystem/PADIHCADecisionsCS" key="CodeSystem-PADIHCADecisionsCS" name="Healthcare Agent Decision Codes"/>
 <artifact id="ValueSet/PADIHCADecisionsVS" key="ValueSet-PADIHCADecisionsVS" name="Healthcare Agent Decisions"/>
-<artifact id="ValueSet/PADIHealthGoalsVS" key="ValueSet-PADIHealthGoalsVS" name="Health Goals"/>
 <artifact id="StructureDefinition/padi-informant-extension" key="StructureDefinition-padi-informant-extension" name="Informant"/>
 <artifact id="StructureDefinition/padi-informationRecipient-extension" key="StructureDefinition-padi-informationRecipient-extension" name="Information Recipient"/>
 <artifact id="ValueSet/PADIInterventionPreferencesVS" key="ValueSet-PADIInterventionPreferencesVS" name="Intervention Preferences"/>
@@ -120,10 +120,10 @@
 <artifact id="StructureDefinition/PADI-PersonalInterventionPreference" key="StructureDefinition-PADI-PersonalInterventionPreference" name="Personal Intervention Preference"/>
 <artifact deprecated="true" id="ValueSet/PADIPresenceIndicatorVS" key="ValueSet-PADIPresenceIndicatorVS" name="Presence Indicator"/>
 <artifact deprecated="true" id="ValueSet/PADIClauseTypeVS" key="ValueSet-PADIClauseTypeVS" name="Type of clause"/>
-<artifact id="ValueSet/PADIUponDeathPreferencesVS" key="ValueSet-PADIUponDeathPreferencesVS" name="Upon Death Preferences"/>
+<artifact deprecated="true" id="ValueSet/PADIUponDeathPreferencesVS" key="ValueSet-PADIUponDeathPreferencesVS" name="Upon Death Preferences"/>
 <artifact id="StructureDefinition/padi-versionNumber-extension" key="StructureDefinition-padi-versionNumber-extension" name="Version Number"/>
-<page key="many" name="(many)"/>
 <page key="NA" name="(NA)"/>
+<page key="many" name="(many)"/>
 <page key="downloads" name="Downloads"/>
 <page key="artifacts" name="FHIR Artifacts"/>
 <page key="formal_specification" name="Formal Specification"/>
