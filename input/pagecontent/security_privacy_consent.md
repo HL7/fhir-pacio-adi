@@ -66,8 +66,7 @@ For the purposes of Advance Directive Interoperability, additional security conf
 For the purposes of Advance Directive Interoperability, privacy conformance requirements are as follows:
 - Implementers **SHOULD** support data sharing policies with use of the Consent resource.
 
-#### Audit Logging and Provenance
-1.	Server implementations **SHOULD** record all IG related data access using the [AuditEvent](http://hl7.org/fhir/R4/auditevent.html) resource.
+#### Provenance
 1.	Server implementations **SHOULD** support the ability to directly record and/or enable clients to assert (store) provenance associated with advance directive information using the [Provenance](http://hl7.org/fhir/R4/provenance.html) resource.
 
 <!-- TODO Consider US Core requirements
