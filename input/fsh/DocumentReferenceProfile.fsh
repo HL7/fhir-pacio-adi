@@ -1,8 +1,8 @@
-Profile: PADIDocumentReference
+Profile: ADIDocumentReference
 // [TODO] Does this need to derive from US Core DocumentReference? If so, need to review the requirements below and remove incompatible or redundant requirements
 Parent: $USCoreDocumentReference
-Id: PADI-DocumentReference
-Title: "PACIO ADI Document Reference"
+Id: ADI-DocumentReference
+Title: "ADI Document Reference"
 Description: "This profile defines constraints that represent the information needed to register an advance directive information document on a FHIR server."
 
 // Is a last updated required?
@@ -39,10 +39,10 @@ Description: "This profile defines constraints that represent the information ne
 * context.encounter only Reference ($USCoreEncounter)
 * context.period MS
 
-* insert PADIDocumentReferenceShortDescriptions
+* insert ADIDocumentReferenceShortDescriptions
 
 // These are from the mapping document and are likely not the intended final short descriptions
-RuleSet: PADIDocumentReferenceShortDescriptions
+RuleSet: ADIDocumentReferenceShortDescriptions
 * type ^short = "Advance Directive Categories"
 * subject ^short = "Patient"
 * author ^short = "legalAuthenticator"

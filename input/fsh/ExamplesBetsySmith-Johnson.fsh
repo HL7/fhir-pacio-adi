@@ -1281,7 +1281,7 @@ Usage: #example
 // Provenance Examples
 
 Instance: Example-Smith-Johnson-PACPProvenance1
-InstanceOf: PADIProvenance
+InstanceOf: ADIProvenance
 Description: "Example Patient Smith-Johnson Provenance"
 Usage: #example
 
@@ -1299,7 +1299,7 @@ Usage: #example
 //////////////////////////////////////////////////////////////////////////////////////
 
 Instance: Example-Smith-Johnson-DocRef-DocumentReference
-InstanceOf: PADI-DocumentReference
+InstanceOf: ADI-DocumentReference
 Description: "Example Patient Smith-Johnson DocumentReference"
 Usage: #example
 
@@ -1350,7 +1350,7 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-DocRef-Bundle
-InstanceOf: PADI-DocumentReference
+InstanceOf: ADI-DocumentReference
 Description: "Example Patient Smith-Johnson DocumentReference Bundle"
 Usage: #example
 

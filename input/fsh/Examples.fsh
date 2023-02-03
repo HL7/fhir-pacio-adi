@@ -989,7 +989,7 @@ Usage: #example
 // Provenance Examples
 
 Instance: Example-McBee-PACPProvenance1
-InstanceOf: PADIProvenance
+InstanceOf: ADIProvenance
 Description: "Example Patient McBee Provenance"
 Usage: #example
 

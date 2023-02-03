@@ -6,7 +6,7 @@ This section defines additional requirements and guidance relevant to this guide
 To claim conformance to a profile in this guide, servers **SHALL**:
 
 - Be able to populate all profile data elements that have a minimum cardinality >= 1 and/or flagged as Must Support as defined by that profile’s StructureDefinition.
-- Conform to the [PACIO ADI Capability Statement](CapabilityStatement-padi.html) expectations for that profile’s type.
+- Conform to the [PACIO ADI Capability Statement](CapabilityStatement-adi.html) expectations for that profile’s type.
 <!-- TODO note about what profiles must be supported?-->
 
 ### Must Support
@@ -15,7 +15,7 @@ The following rules apply to all PACIO ADI Profile elements marked as Must Suppo
 
 #### Data Source System Requirements
 
-- Data Sources Systems **SHALL** be capable of populating all data elements as part of the query results as specified by the [PACIO ADI Capability Statement](CapabilityStatement-padi.html).
+- Data Sources Systems **SHALL** be capable of populating all data elements as part of the query results as specified by the [PACIO ADI Capability Statement](CapabilityStatement-adi.html).
 
 #### Data Consumer System Requirements
 

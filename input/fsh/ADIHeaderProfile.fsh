@@ -1,7 +1,7 @@
-Profile: PADIHeader
+Profile: ADICompositionHeader
 Parent: clinicaldocument
-Id: PADI-Header
-Title: "PACIO ADI Header"
+Id: ADI-Composition-Header
+Title: "ADI Composition Header"
 Description: "This abstract profile defines constraints that represent common administrative and demographic concepts for advance directives information used in US Realm clinical documents."
 
 * ^abstract = true 
