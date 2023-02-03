@@ -48,7 +48,7 @@ Description: "This profile is used to represent a consent for an advance directi
 * provision 1..1 MS
 
 * provision.extension contains
-    padi-clause-extension named ClauseExtension 0..* MS
+    padi-clause-extension named ClauseExtension 0..*
 
 
 * provision.type 1..1 MS
@@ -62,7 +62,7 @@ Description: "This profile is used to represent a consent for an advance directi
 // Health care agent willingness to serve in the HCA role
 
 * provision.actor.extension contains
-    padi-clause-extension named ClauseExtension 0..* MS
+    padi-clause-extension named ClauseExtension 0..*
     
 * provision.actor.role from PADIConsentActorRoleVS (required)
 * provision.actor.reference only Reference(PADIParticipant)

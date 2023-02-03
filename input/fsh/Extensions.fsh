@@ -138,7 +138,7 @@ Description: "A clause or set of clauses relevant to the resource or element bei
 	Title 0..1 and
 	Type 0..1 and
 	Policy 0..* and
-	Clause 1..* MS
+	Clause 1..*
 
 * extension[Title] ^short = "Section in which clauses are presented."
 * extension[Title].value[x] 1..1

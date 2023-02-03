@@ -31,7 +31,7 @@ Description: "This abstract profile defines constraints that represent common ad
     padi-informationRecipient-extension named InformationRecipientExtension 0..* MS and
     padi-participant-extension named ParticipantExtension 0..* MS and
     padi-performer-extension named PerformerExtension 0..* MS and
-    padi-clause-extension named ClauseExtension 0..* MS
+    padi-clause-extension named ClauseExtension 0..*
 
 * language 1..1 MS
 * identifier 1..1 MS
@@ -79,7 +79,7 @@ Description: "This abstract profile defines constraints that represent common ad
 * custodian only Reference ($USCoreOrganization)
 
 * section.extension contains    
-    padi-clause-extension named ClauseExtension 0..* MS
+    padi-clause-extension named ClauseExtension 0..*
     
 // need to add notes on which attester roles there are. Change name of personal_attester to witness_attester professional_attester to notary_attester
 // Need to add an extension with a code that explains the role, witness or notary. Others?
