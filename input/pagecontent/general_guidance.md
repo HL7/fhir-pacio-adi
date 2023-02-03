@@ -5,7 +5,7 @@ This section provides additional guidance on the relationship between the associ
 
 Advance directive documents may take several forms including scanned PDF documents, CDA documents and native FHIR documents. This guide defines interoperability to support any number of types, though focuses on native FHIR documents.
 
-All documents, regardless of format is saved in the Binary resource and is available through the Binary endpoint. FHIR native documents **SHALL** be Bundle resources with `type` = `document` and encoded as a Binary resource. Documents that are communicated **SHALL** have at least one DocumentReference resource that references the Binary though the `DocumentReference.content.attachment.url`.
+All documents, regardless of format are saved in the Binary resource and are available through the Binary endpoint. FHIR native documents **SHALL** be Bundle resources with `type` = `document` and encoded as a Binary resource. Documents that are communicated **SHALL** have at least one DocumentReference resource that references the Binary though the `DocumentReference.content.attachment.url`.
 
 The DocumentReference is the resource that is used for "indexing" of documents and can be used for searching and finding documents with specific attributes such as type of document, subject, or dates.
 
@@ -15,12 +15,12 @@ Digital signatures are defined as optional in this guide. If supported, the digi
 
 ### Document Structure
 
-ADI FHIR native documents are instances of the Bundle resource with the `type` = `document`. The document should have all content contained within the Bundle with no external references except for the references to external documents in the [DocumentationObservation](StructureDefinition-PADI-DocumentationObservation.html).focus. FHIR Bundle documents consist or multiple entry resources within it, with the first entry being a Composition resource. The Composition resource acts as the header and organizational construct. It contains information about the document such as the category of document, dates, and references to the various participants of the document, as well as document sections used to categorize or organize the contains entries.
+ADI FHIR native documents are instances of the Bundle resource with the `type` = `document`. The document should have all content contained within the Bundle with no external references except for the references to external documents in the [DocumentationObservation](StructureDefinition-PADI-DocumentationObservation.html).focus. FHIR Bundle documents consist of multiple entry resources within it, with the first entry being a Composition resource. The Composition resource acts as the header and organizational construct. It contains information about the document such as the category of document, dates, and references to the various participants of the document, as well as document sections used to categorize or organize the contained entries.
 
 The Advance Directive Interoperability document defines 7 sections:
 1. Healthcare Agent - Healthcare agents, healthcare agent advisors, and consent regarding their roles, powers, and limitations
 2. Quality of Life (Care Experience Preferences) - Quality of Life related personal care experiences, personal goals, and priorities
-3. End of Life/Emergency Intervention Preferences (Under Certain Health Conditions) - Preference CarePlans that contain the persons goals to be considered active under specific situations or conditions
+3. End of Life/Emergency Intervention Preferences (Under Certain Health Conditions) - Preference CarePlans that contain the person's goals to be considered active under specific situations or conditions
 4. Goals, Preferences, and Priorities Upon Death - Goals, preferences, and priorities a person has at the time of or soon after there death
 5. Additional Documentation - Observations regarding the existence of other advance directive related information
 6. Witness & Notary - References and information regarding witnesses and notary

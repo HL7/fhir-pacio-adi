@@ -227,7 +227,7 @@ This Guide is divided into several pages which are listed at the top of each pag
     <tr>
         <td style="padding: 7px;">4</td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-Participant.html">ADI Participant</a></td>
-        <td style="padding: 7px;"><p>This profile represents a person participating in a persons advance directives in some capacity such as healthcare agent or healthcare agent advisor.</p></td>
+        <td style="padding: 7px;"><p>This profile represents a person participating in a person's advance directives in some capacity such as healthcare agent or healthcare agent advisor.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a></td>
     </tr>
     <tr>    

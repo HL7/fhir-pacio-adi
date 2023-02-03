@@ -2,7 +2,7 @@ Profile: PADIParticipant
 Parent: RelatedPerson
 Id: PADI-Participant
 Title: "ADI Participant"
-Description: "This profile represents a person participating in a persons advance directives in some capacity such as healthcare agent or healthcare agent advisor."
+Description: "This profile represents a person participating in a person's advance directives in some capacity such as healthcare agent or healthcare agent advisor."
 
 * text 1..1 // CONF:4445-33393
 
