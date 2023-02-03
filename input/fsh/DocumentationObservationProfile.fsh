@@ -29,7 +29,7 @@ Description: "This profile is used to indicate if additional advance directive d
 * value[x] 1..1 MS
 * value[x] only CodeableConcept
 // Remove Presence indicator
-//* valueCodeableConcept from PADIPresenceIndicatorVS (required)
+
 * valueCodeableConcept from PADIDocumentationTypeVS (extensible)
 
 // need to add derived from documentReference to allow pointing to the actual order
@@ -71,7 +71,7 @@ Description: "This profile is used to indicate if a person has a Do Not Resuscit
 
 * value[x] 1..1 MS
 * value[x] only CodeableConcept
-* valueCodeableConcept from PADIPresenceIndicatorVS (required)
+
 
 // need to add derived from documentReference to allow pointing to the actual order
 
