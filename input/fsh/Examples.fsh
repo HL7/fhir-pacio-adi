@@ -142,10 +142,6 @@ Usage: #example
 * extension[padi-dataEnterer-extension].valueReference = Reference(Example-McBee-Patient1)
 // witness Sally Bobbins
 
-* extension[padi-authorization-extension].valueReference.display = "Authorization Consent"
-* extension[padi-authorization-extension].valueReference.identifier.value = "123456789"
-* extension[padi-effective-date-extension].valuePeriod.start = "2022-01-01"
-
 
 
 * extension[padi-informant-extension].valueReference = Reference(Example-McBee-HealthcareAgent1)
