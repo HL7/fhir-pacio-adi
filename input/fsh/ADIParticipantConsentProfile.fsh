@@ -68,7 +68,7 @@ Description: "This profile is used to represent a consent for an advance directi
 * provision.actor.reference only Reference(PADIParticipant)
 
 // [TODO] we need a valueset defined. Any candidates?
-* provision.action MS
+
 * provision.action from PADIHCADecisionsVS (extensible)
 * provision.action ^comment = "Actions without a defined code are placed in action.text."
 * provision.purpose = http://terminology.hl7.org/CodeSystem/v3-ActReason#PWATRNY
