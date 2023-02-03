@@ -19,7 +19,7 @@ Description: "The Preference Care Plan is a means for an individual to express t
     advance_care_planning 1..1 MS
 
 * category[advance_care_planning] = $SNOMEDCT#736366004 "Advance care plan"
-* title 1..1
+* title 1..1 MS
 
 * subject 1..1 MS
 * subject only Reference($USCorePatient)
