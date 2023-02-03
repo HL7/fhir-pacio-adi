@@ -60,15 +60,6 @@ Description: "The Advance Directive Information Performer Extension represents c
 * valueReference 1..1 MS
 * valueReference only Reference($USCorePractitioner or $USCorePractitionerRole)
 
-
-Extension: AuthorizationExtension
-Id: padi-authorization-extension
-Title: "Authorization"
-Description: "The Advance Directive Information Authorization Extension contains the ADI Consent profile which represents information about a patient’s consents."
-* value[x] only Reference
-* valueReference 1..1 MS
-* valueReference only Reference(Consent)
-
 /*
 Extension: OrderExtension
 Id: padi-order-extension
