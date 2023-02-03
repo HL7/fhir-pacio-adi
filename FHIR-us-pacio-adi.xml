@@ -25,7 +25,7 @@
 <artifact id="ValueSet/PADIAdvanceDirectiveCategoriesVS" key="ValueSet-PADIAdvanceDirectiveCategoriesVS" name="Advance Directive Categories"/>
 <artifact id="StructureDefinition/padi-attestationInformation-extension" key="StructureDefinition-padi-attestationInformation-extension" name="Attestation Information"/>
 <artifact id="ValueSet/PADIAttesterRoleTypeVS" key="ValueSet-PADIAttesterRoleTypeVS" name="Attester Role"/>
-<artifact id="StructureDefinition/padi-authorization-extension" key="StructureDefinition-padi-authorization-extension" name="Authorization"/>
+<artifact deprecated="true" id="StructureDefinition/padi-authorization-extension" key="StructureDefinition-padi-authorization-extension" name="Authorization"/>
 <artifact id="ValueSet/PADICareExperiencePreferencesVS" key="ValueSet-PADICareExperiencePreferencesVS" name="Care Experience Preferences"/>
 <artifact id="StructureDefinition/padi-clause-extension" key="StructureDefinition-padi-clause-extension" name="Clause"/>
 <artifact id="ValueSet/PADIConsentTypeVS" key="ValueSet-PADIConsentTypeVS" name="Consent Type"/>
@@ -88,7 +88,7 @@
 <artifact id="Organization/Example-Smith-Johnson-OrganizationAssembler1" key="Organization-Example-Smith-Johnson-OrganizationAssembler1" name="Example-Smith-Johnson-OrganizationAssembler1"/>
 <artifact id="Organization/Example-Smith-Johnson-OrganizationCustodian1" key="Organization-Example-Smith-Johnson-OrganizationCustodian1" name="Example-Smith-Johnson-OrganizationCustodian1"/>
 <artifact id="Composition/Example-Smith-Johnson-PACPComposition1" key="Composition-Example-Smith-Johnson-PACPComposition1" name="Example-Smith-Johnson-PACPComposition1"/>
-<artifact id="Provenance/Example-Smith-Johnson-PACPProvenance1" key="Provenance-Example-Smith-Johnson-PACPProvenance1" name="Example-Smith-Johnson-PACPProvenance1"/>
+<artifact deprecated="true" id="Provenance/Example-Smith-Johnson-PACPProvenance1" key="Provenance-Example-Smith-Johnson-PACPProvenance1" name="Example-Smith-Johnson-PACPProvenance1"/>
 <artifact id="Patient/Example-Smith-Johnson-Patient1" key="Patient-Example-Smith-Johnson-Patient1" name="Example-Smith-Johnson-Patient1"/>
 <artifact id="Goal/Example-Smith-Johnson-PersonalGoal1" key="Goal-Example-Smith-Johnson-PersonalGoal1" name="Example-Smith-Johnson-PersonalGoal1"/>
 <artifact id="Goal/Example-Smith-Johnson-PersonalInterventionPreference1" key="Goal-Example-Smith-Johnson-PersonalInterventionPreference1" name="Example-Smith-Johnson-PersonalInterventionPreference1"/>
@@ -119,7 +119,7 @@
 <artifact id="ValueSet/PADIPersonalAndLegalRelationshipRoleTypeVS" key="ValueSet-PADIPersonalAndLegalRelationshipRoleTypeVS" name="Personal And Legal Relationship Role Type"/>
 <artifact id="StructureDefinition/PADI-PersonalInterventionPreference" key="StructureDefinition-PADI-PersonalInterventionPreference" name="Personal Intervention Preference"/>
 <artifact deprecated="true" id="ValueSet/PADIPresenceIndicatorVS" key="ValueSet-PADIPresenceIndicatorVS" name="Presence Indicator"/>
-<artifact id="ValueSet/PADIClauseTypeVS" key="ValueSet-PADIClauseTypeVS" name="Type of clause"/>
+<artifact deprecated="true" id="ValueSet/PADIClauseTypeVS" key="ValueSet-PADIClauseTypeVS" name="Type of clause"/>
 <artifact id="ValueSet/PADIUponDeathPreferencesVS" key="ValueSet-PADIUponDeathPreferencesVS" name="Upon Death Preferences"/>
 <artifact id="StructureDefinition/padi-versionNumber-extension" key="StructureDefinition-padi-versionNumber-extension" name="Version Number"/>
 <page key="many" name="(many)"/>

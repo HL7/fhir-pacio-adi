@@ -285,12 +285,6 @@ This Guide is divided into several pages which are listed at the top of each pag
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
     </tr>
     <tr>
-        <td style="padding: 7px;">14</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-Provenance.html">ADI Provenance</a></td>
-        <td style="padding: 7px;"><p>Advance Directive Interoperability Provenance based on US Core to capture, search and fetch provenance information associated with advance directive interoperability data.</p></td>
-        <td style="padding: 7px;"><a href="https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-provenance.html">US Core Provenance</a></td>
-    </tr>
-    <tr>
         <th colspan="4" style="background-color: #9DC3E6; text-align:center; padding: 10px; padding: 10px;"><b>CONTENT TYPE II: Encounter-Centric Patient Instructions</b> <i>(after STU1)</i></th>
     </tr>
     <tr style="background-color: #D9D9D9;">
