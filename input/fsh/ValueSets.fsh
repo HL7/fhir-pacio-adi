@@ -12,12 +12,6 @@ This ValueSet is managed at the US National Library of Medicine (NLM) Value Set 
 
 
 
-ValueSet: PADIParticipantRelationshipVS
-Title: "Participant Relationships"
-Description: "This value set identifies the relationship an advance directive participant has with the person the advance directive is about."
-* codes from valueset PADIPersonalAndLegalRelationshipRoleTypeVS
-
-
 ValueSet: PADIConsentActorRoleVS
 Title: "ADI Consent Actor Role"
 Description: "This value set identifies the role the advance directive participant has, which could include: healthcare agent, proxy, or advisor roles that individuals commonly designate to empower surrogates to make medical treatment and care decisions when the individual is unable to effectively communicate with medical personnel or requires assistance with decision making.

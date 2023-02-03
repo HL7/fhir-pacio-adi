@@ -430,7 +430,7 @@ Usage: #example
 
 * patient = Reference(Example-McBee-Patient1)
 //* relationship[heatlhcare_agent_or_proxy_role] = $LOINC#75784-9 "First Alternate Healthcare Agent [Reported]"
-* relationship[personal_and_legal_relationship_role] = $HL7RoleCode#FRND "unrelated friend"
+* relationship = $HL7RoleCode#FRND "unrelated friend"
 
 * name[0].family = "S. Leonard"
 * name[0].given[0] = "Susskind"

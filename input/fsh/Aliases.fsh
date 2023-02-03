@@ -34,5 +34,6 @@ Alias: $SNOMEDCT = http://snomed.info/sct
 
 Alias: $HL7RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $HL7RoleClass = http://terminology.hl7.org/CodeSystem/v3-RoleClass
+Alias: $HL7RelatedPersonRelationshipType = http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype
 
 Alias: $HL7AdataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason

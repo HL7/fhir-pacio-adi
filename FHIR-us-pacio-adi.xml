@@ -95,9 +95,9 @@
 <artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan2" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan2" name="Example-Smith-Johnson-PreferenceCarePlan2"/>
 <artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan3" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan3" name="Example-Smith-Johnson-PreferenceCarePlan3"/>
 <artifact id="StructureDefinition/padi-goal-order-by-descending-priority-extension" key="StructureDefinition-padi-goal-order-by-descending-priority-extension" name="Goal Order by Descending Priority"/>
-<artifact id="ValueSet/PADIHealthGoalsVS" key="ValueSet-PADIHealthGoalsVS" name="Health Goals"/>
 <artifact id="CodeSystem/PADIHCADecisionsCS" key="CodeSystem-PADIHCADecisionsCS" name="Healthcare Agent Decision Codes"/>
 <artifact id="ValueSet/PADIHCADecisionsVS" key="ValueSet-PADIHCADecisionsVS" name="Healthcare Agent Decisions"/>
+<artifact id="ValueSet/PADIHealthGoalsVS" key="ValueSet-PADIHealthGoalsVS" name="Health Goals"/>
 <artifact id="StructureDefinition/padi-informant-extension" key="StructureDefinition-padi-informant-extension" name="Informant"/>
 <artifact id="StructureDefinition/padi-informationRecipient-extension" key="StructureDefinition-padi-informationRecipient-extension" name="Information Recipient"/>
 <artifact id="ValueSet/PADIInterventionPreferencesVS" key="ValueSet-PADIInterventionPreferencesVS" name="Intervention Preferences"/>
@@ -110,7 +110,7 @@
 <artifact id="StructureDefinition/PADI-Provenance" key="StructureDefinition-PADI-Provenance" name="PACIO ADI Provenance"/>
 <artifact id="CapabilityStatement/padi" key="CapabilityStatement-padi" name="PADI CapabilityStatement"/>
 <artifact id="StructureDefinition/padi-participant-extension" key="StructureDefinition-padi-participant-extension" name="Participant"/>
-<artifact id="ValueSet/PADIParticipantRelationshipVS" key="ValueSet-PADIParticipantRelationshipVS" name="Participant Relationships"/>
+<artifact deprecated="true" id="ValueSet/PADIParticipantRelationshipVS" key="ValueSet-PADIParticipantRelationshipVS" name="Participant Relationships"/>
 <artifact id="StructureDefinition/padi-performer-extension" key="StructureDefinition-padi-performer-extension" name="Performer"/>
 <artifact id="ValueSet/PADIPersonalAndLegalRelationshipRoleTypeVS" key="ValueSet-PADIPersonalAndLegalRelationshipRoleTypeVS" name="Personal And Legal Relationship Role Type"/>
 <artifact id="StructureDefinition/PADI-PersonalInterventionPreference" key="StructureDefinition-PADI-PersonalInterventionPreference" name="Personal Intervention Preference"/>
@@ -118,8 +118,8 @@
 <artifact id="ValueSet/PADIClauseTypeVS" key="ValueSet-PADIClauseTypeVS" name="Type of clause"/>
 <artifact id="ValueSet/PADIUponDeathPreferencesVS" key="ValueSet-PADIUponDeathPreferencesVS" name="Upon Death Preferences"/>
 <artifact id="StructureDefinition/padi-versionNumber-extension" key="StructureDefinition-padi-versionNumber-extension" name="Version Number"/>
-<page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
+<page key="NA" name="(NA)"/>
 <page key="downloads" name="Downloads"/>
 <page key="artifacts" name="FHIR Artifacts"/>
 <page key="formal_specification" name="Formal Specification"/>

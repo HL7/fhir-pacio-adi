@@ -415,7 +415,7 @@ Usage: #example
 </div>"
 
 * patient = Reference(Example-Smith-Johnson-Patient1)
-* relationship[personal_and_legal_relationship_role] = $HL7RoleCode#SON "natural son"
+* relationship = $HL7RoleCode#SON "natural son"
 
 * name[0].family = "Johnson"
 * name[0].given[0] = "Charles"
