@@ -198,16 +198,6 @@ Description: "Codes indicating a role of an attester."
 
 
 
-ValueSet: PADIClauseTypeVS
-Title: "Type of clause"
-Description: "Type of clause"
-* ^experimental = false
-* $LOINC#81382-4 "Statement of document creator"
-* $LOINC#81368-3 "Statement of witness"
-* $LOINC#81381-6 "Administrative information associated with this personal advance care plan [Reported]"
-* insert LOINCCopyrightNotice
-
-
 // TODO Rename -  Advance Directive Documentation Types  
 
 ValueSet: PADIDocumentationTypeVS

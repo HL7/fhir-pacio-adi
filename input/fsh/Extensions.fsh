@@ -147,7 +147,7 @@ Description: "A clause or set of clauses relevant to the resource or element bei
 * extension[Type] ^short = "Type of clause."
 * extension[Type].value[x] 1..1
 * extension[Type].value[x] only CodeableConcept
-* extension[Type].valueCodeableConcept from PADIClauseTypeVS (extensible)
+* extension[Type].valueCodeableConcept from $VSACClauseType (extensible)
 
 * extension[Policy] ^short = "Link to the policies related to the clause"
 * extension[Policy].value[x] 1..1 MS
