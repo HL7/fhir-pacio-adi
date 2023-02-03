@@ -42,7 +42,7 @@ Description: "This abstract profile defines constraints that represent common ad
 * category 1..1 MS
 * subject 1..1 MS
 * subject only Reference($USCorePatient)
-* encounter MS
+
 * encounter only Reference($USCoreEncounter)
 * date MS
 * author MS
