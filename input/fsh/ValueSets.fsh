@@ -172,14 +172,6 @@ Description: "Includes data absent reason concepts to express why a Healthcare A
 * include $HL7AdataAbsentReason#not-applicable
 * include $HL7AdataAbsentReason#unsupported
 
-// TODO SNOMED license statement
-ValueSet: PADIPresenceIndicatorVS
-Title: "Presence Indicator"
-Description: "Codes specifying whether the presence of something exists or is unknown to exist."
-* include $SNOMEDCT#373066001 "Yes"
-* include $SNOMEDCT#373067005 "No"
-* include $SNOMEDCT#373068000 "Undetermined"
-* insert SNOMEDCopyrightNotice
 
 
 ValueSet: PADIAttesterRoleTypeVS
