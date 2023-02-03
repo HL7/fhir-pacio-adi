@@ -24,7 +24,6 @@ Description: "This profile defines the base requirements for all ADI Goals."
 * expressedBy 1..1 MS
 * expressedBy only Reference($USCorePatient)
 
-* note MS
 
 
 
