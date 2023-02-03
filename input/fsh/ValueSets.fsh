@@ -129,7 +129,7 @@ Description: "Clinical Focus: This value set includes concepts representing an i
 * include $LOINC#81376-6 "Mental health treatment preferences [Reported]"
 * include $LOINC#75779-9 "Thoughts on cardiopulmonary resuscitation (CPR) [Reported]"
 * include $LOINC#81353-5 "Thoughts on hastening death [Reported]"
-* codes from valueset PADIUponDeathPreferencesVS
+* codes from valueset $VSACUponDeathPrefernces
 * insert LOINCCopyrightNotice
 
 
@@ -146,17 +146,6 @@ Description: "Codes indicating decisions a healthcare agent may or may not make 
 
 
 
-ValueSet: PADIUponDeathPreferencesVS
-Title: "Upon Death Preferences"
-Description: "This value set includes concepts representing an individual's preferences of treatment."
-* ^experimental = false
-* include $LOINC#81356-8 "Death arrangements [Reported]"
-* include $LOINC#81357-6 "Messages to be delivered after death [Reported]"
-* include $LOINC#81358-4 "Person(s) to notify upon death [Reported]"
-* include $LOINC#81366-7 "Unfinished business [Reported]"
-* include $LOINC#81364-2 "Religious or cultural beliefs [Reported]"
-* include $LOINC#81365-9 "Religious or cultural affiliation contact to notify [Reported]"
-* insert LOINCCopyrightNotice
 /*
 ValueSet: PADIAutopsyVS
 Title: "Autopsy Thoughts"
