@@ -1,9 +1,9 @@
 
 This section provides additional guidance on the relationship between the associated profiles and the structure of the advance directive document.
 
-### Profile & Resource relationships
+### Structure and Resource Relationships
 
-Advance directive documents may take several forms including scanned PDF documents, CDA documents and native FHIR documents. This guide defines interoperability to support any number of types, though focuses on native FHIR documents.
+Advance directive documents may take several forms including scanned PDF documents, CDA documents, other binary documents, and native FHIR documents (using the Composition and other ADI-specific profiled FHIR resources). This guide defines interoperability to support all of these types and other potential document types (through encoding in a Binary resource). Today, most of these documents are shared through scanned images. This implementation guide is designed to allow a range of digitization levels, from scanned documents to fully discrete FHIR documents. Additionally, this guide provides the capability for different types of data to be more digitized than others inside the same document. 
 
 All documents, regardless of format are saved in the Binary resource and are available through the Binary endpoint. FHIR native documents **SHALL** be Bundle resources with `type` = `document` and encoded as a Binary resource. Documents that are communicated **SHALL** have at least one DocumentReference resource that references the Binary though the `DocumentReference.content.attachment.url`.
 
