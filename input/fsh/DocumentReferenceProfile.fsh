@@ -45,4 +45,3 @@ Description: "This profile defines constraints that represent the information ne
 RuleSet: ADIDocumentReferenceShortDescriptions
 * type ^short = "Advance Directive Categories"
 * subject ^short = "Patient"
-* author ^short = "legalAuthenticator"
