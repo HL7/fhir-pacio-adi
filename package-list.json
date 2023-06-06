@@ -1,26 +1,26 @@
-{
-    "package-id": "hl7.fhir.us.pacio-adi",
-    "title": "PACIO Advance Directive Information Implementation Guide",
-    "canonical": "http://hl7.org/fhir/us/pacio-adi",
-    "introduction": "The Advance Directive Interoperability (ADI) FHIR implementation guide (IG) explains how to represent, exchange, and verify a person’s goals, preferences and priorities for medical treatment and interventions regarding future medical care. ",
-    "list": [
-      {
-        "version": "current",
-        "desc": "PACIO Advance Directive Information Implementation Guide CI Build",
-        "path": "http://build.fhir.org/ig/HL7/fhir-pacio-adi",
-        "status": "ci-build",
-        "current": true
-      },
-      {
-        "version": "0.1.0",
-        "desc": "PACIO Advance Directive Information Implementation Guide Release 1 - US Realm STU 1 Ballot",
-        "path": "http://hl7.org/fhir/us/pacio-adi/2022Jan",
-        "date": "2021-06-04",
-        "status": "ballot",
-        "sequence": "STU 1",
-        "fhirversion": "4.0.1",
-        "current": false
-      }
-    ],
-    "category": "Clinical Documents"
-  }
+// {
+//     "package-id": "hl7.fhir.us.pacio-adi",
+//     "title": "PACIO Advance Directive Information Implementation Guide",
+//     "canonical": "http://hl7.org/fhir/us/pacio-adi",
+//     "introduction": "The Advance Directive Interoperability (ADI) FHIR implementation guide (IG) explains how to represent, exchange, and verify a person’s goals, preferences and priorities for medical treatment and interventions regarding future medical care. ",
+//     "list": [
+//       {
+//         "version": "current",
+//         "desc": "PACIO Advance Directive Information Implementation Guide CI Build",
+//         "path": "http://build.fhir.org/ig/HL7/fhir-pacio-adi",
+//         "status": "ci-build",
+//         "current": true
+//       },
+//       {
+//         "version": "0.1.0",
+//         "desc": "PACIO Advance Directive Information Implementation Guide Release 1 - US Realm STU 1 Ballot",
+//         "path": "http://hl7.org/fhir/us/pacio-adi/2022Jan",
+//         "date": "2021-06-04",
+//         "status": "ballot",
+//         "sequence": "STU 1",
+//         "fhirversion": "4.0.1",
+//         "current": false
+//       }
+//     ],
+//     "category": "Clinical Documents"
+//   }
