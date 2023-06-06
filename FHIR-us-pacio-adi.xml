@@ -105,7 +105,7 @@
 <artifact id="StructureDefinition/padi-informant-extension" key="StructureDefinition-padi-informant-extension" name="Informant"/>
 <artifact id="StructureDefinition/padi-informationRecipient-extension" key="StructureDefinition-padi-informationRecipient-extension" name="Information Recipient"/>
 <artifact id="ValueSet/PADIInterventionPreferencesVS" key="ValueSet-PADIInterventionPreferencesVS" name="Intervention Preferences"/>
-<artifact id="ValueSet/PADIInterventionPreferencesNarrativeVS" key="ValueSet-PADIInterventionPreferencesNarrativeVS" name="Intervention Preferences - Narrative"/>
+<artifact deprecated="true" id="ValueSet/PADIInterventionPreferencesNarrativeVS" key="ValueSet-PADIInterventionPreferencesNarrativeVS" name="Intervention Preferences - Narrative"/>
 <artifact id="ValueSet/PADIInterventionPreferencesOrdinalVS" key="ValueSet-PADIInterventionPreferencesOrdinalVS" name="Intervention Preferences - Ordinal"/>
 <artifact id="StructureDefinition/padi-jurisdiction-extension" key="StructureDefinition-padi-jurisdiction-extension" name="Jurisdiction"/>
 <artifact id="ValueSet/PADINoHealthcareAgentIncludedReasonVS" key="ValueSet-PADINoHealthcareAgentIncludedReasonVS" name="No Healthcare Agent Included Reason"/>

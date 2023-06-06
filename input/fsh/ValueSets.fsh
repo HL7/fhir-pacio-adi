@@ -85,11 +85,10 @@ Title: "Intervention Preferences"
 Description: "Clinical Focus: This value set includes concepts representing an individual's intervention preferences which can be expressed by the individual in his or her advance care plan.),(Data Element Scope: The intent of this value set is to identify personal intervention preferences that may be relevant and could be considered by clinicians or any person or organization that is providing care, treatment, or performing any other type of act to or on behalf of the individual.)"
 * ^experimental = false
 * codes from valueset PADIInterventionPreferencesOrdinalVS
-* codes from valueset PADIInterventionPreferencesNarrativeVS
+// * codes from valueset PADIInterventionPreferencesNarrativeVS
+* codes from valueset http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.9 // mlt: replaced with VSAC URL equiv to PADIInterventionPreferencesNarrativeVS - per JIRA FHIR-35566
 * include PADIGoalCategoryCS#intervention-preference "Intervention preference"
 * insert LOINCCopyrightNotice
-
-
 
 
 
@@ -107,11 +106,12 @@ Description: "Clinical Focus: This value set includes concepts representing an i
 
 
 
-
-
+// mlt_20230606 - removed custom VS since this is already available on VSAC per JIRA FHIR-335566
+/*
 ValueSet: PADIInterventionPreferencesNarrativeVS
 Title: "Intervention Preferences - Narrative"
 Description: "Clinical Focus: This value set includes concepts representing an individual's intervention preferences which can be expressed by the individual in his or her advance care plan.),(Data Element Scope: The intent of this value set is to identify personal intervention preferences that may be relevant and could be considered by clinicians or any person or organization that is providing care, treatment, or performing any other type of act to or on behalf of the individual.)"
+* codes from valueset http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.9 // mlt: replaced with VSAC URL per JIRA FHIR-35566
 * ^experimental = false
 * include $LOINC#75776-5 "Preference on consulting a supportive and palliative care team to help treat physical, emotional, and spiritual discomfort and support family [Reported]"
 * include $LOINC#75777-3 "Information to tell doctors if my health deteriorates due to a terminal illness and I am unable to interact meaningfully with family, friends, or surroundings [Reported]"
@@ -131,7 +131,7 @@ Description: "Clinical Focus: This value set includes concepts representing an i
 * include $LOINC#81353-5 "Thoughts on hastening death [Reported]"
 * codes from valueset $VSACUponDeathPrefernces
 * insert LOINCCopyrightNotice
-
+*/
 
 ValueSet: PADIHCADecisionsVS
 Title: "Healthcare Agent Decisions"
