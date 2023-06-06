@@ -12,7 +12,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.us.pacio-adi
 canonical: http://hl7.org/fhir/us/pacio-adi
-version: 0.1.1
+version: 0.5.1
 name: PACIOAdvanceDirectiveInteroperability
 title: PACIO Advance Directive Interoperability Implementation Guide
 status: draft
@@ -31,8 +31,8 @@ parameters:
   apply-jurisdiction: true
   apply-publisher: true
   path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
-copyrightYear: 2021+
-releaseLabel: STU 1 Ballot
+copyrightYear: 2022+
+releaseLabel: STU 2 Draft
 jurisdiction: urn:iso:std:iso:3166#US
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
