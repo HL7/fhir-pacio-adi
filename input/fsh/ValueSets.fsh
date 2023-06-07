@@ -1,4 +1,5 @@
 
+/*
 ValueSet: PADIAdvanceDirectiveCategoriesVS
 Title: "Advance Directive Categories"
 Description: "Kinds of Advance Directives
@@ -10,9 +11,9 @@ This ValueSet is managed at the US National Library of Medicine (NLM) Value Set 
 * include $LOINC#86533-7 "Patient Living will"
 * include $LOINC#92664-2 "Power of attorney and Living will"
 * insert LOINCCopyrightNotice
+*/
 
-
-
+/*
 ValueSet: PADIConsentActorRoleVS
 Title: "ADI Consent Actor Role"
 Description: "This value set identifies the role the advance directive participant has, which could include: healthcare agent, proxy, or advisor roles that individuals commonly designate to empower surrogates to make medical treatment and care decisions when the individual is unable to effectively communicate with medical personnel or requires assistance with decision making.
@@ -24,7 +25,7 @@ This ValueSet is managed at the US National Library of Medicine (NLM) Value Set 
 * include $LOINC#75785-6 "Second alternate healthcare agent [Reported]"
 * include $LOINC#81343-6 "Healthcare agent advisor [Reported]"
 * insert LOINCCopyrightNotice
-
+*/
 
 ValueSet: PADIConsentTypeVS
 Title: "Consent Type"
@@ -56,7 +57,7 @@ This ValueSet is managed at the US National Library of Medicine (NLM) Value Set 
 * insert LOINCCopyrightNotice
 
 
-
+/*
 ValueSet: PADICareExperiencePreferencesVS
 Title: "Care Experience Preferences"
 Description: "This value set includes concepts representing an individual's care experience preferences at end of life which can be expressed by the individual in his or her advance care plan),(Data Element Scope: The intent of this value set is to identify personal care experience preferences that may be relevant and could be considered by clinicians when making a treatment/care plan for the person.
@@ -76,7 +77,7 @@ This ValueSet is managed at the US National Library of Medicine (NLM) Value Set 
 * include $LOINC#81366-7 "Unfinished business [Reported]"
 * include PADIGoalCategoryCS#care-experience-preference "Care experience preference"
 * insert LOINCCopyrightNotice
-
+*/
 
 
 
@@ -86,7 +87,7 @@ Description: "Clinical Focus: This value set includes concepts representing an i
 * ^experimental = false
 * codes from valueset PADIInterventionPreferencesOrdinalVS
 // * codes from valueset PADIInterventionPreferencesNarrativeVS
-* codes from valueset http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.9 // mlt: replaced with VSAC URL equiv to PADIInterventionPreferencesNarrativeVS - per JIRA FHIR-35566
+* codes from valueset $PADIInterventionPreferencesNarrativeVS // mlt: replaced with VSAC URL equiv to PADIInterventionPreferencesNarrativeVS - per JIRA FHIR-35566
 * include PADIGoalCategoryCS#intervention-preference "Intervention preference"
 * insert LOINCCopyrightNotice
 
