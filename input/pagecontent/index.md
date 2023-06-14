@@ -113,16 +113,21 @@ Systems used to create and update patient-generated advance care plans through a
 
 ### External drivers
 <p>
-The aging population receiving healthcare in skilled nursing facilities and assisted living communities have been under forced isolation to reduce the risk of contracting COVID-19. Additionally, due to the pandemic, those requiring medical care have experienced transitions of care without family or a personal advocate to accompany them in order to influence medical care or be at their side; concerns about the viral transmission potential associated with paper advance directive documents further complicate transitions of care. The impact is a sense of disempowerment, isolation, and a disconnection with the world they can no longer safely interact freely with.
+
+The example below is a prime example of a situation where a patient would want their advance directive in place. 
+
+**Note:** The IG, along with the example scenario below, was developed during the beginning of the COVID-19 pandemic. It was before vaccines were available, and many patients were put on ventilators at hospitals. 
+
+The aging population received healthcare in skilled nursing facilities and assisted living communities were under forced isolation to reduce the risk of contracting COVID-19. Additionally, due to the pandemic, those requiring medical care experienced transitions of care without family or a personal advocate to accompany them in order to influence medical care or be at their side; concerns about the viral transmission potential associated with paper advance directive documents further complicated transitions of care. The impact was a sense of disempowerment, isolation, and a disconnection with the world they can no longer safely interact freely with.
 </p>
 <p>
-Never before has the availability of verifiable digital advance directive documents been so essential to delivering care.
+Never before had the availability of verifiable digital advance directive documents been so essential to delivering care.
 </p>
 <p>
-Providers understand that a person’s goals, preferences, and priorities for care are a critical element in a person-centered healthcare system.
+Providers understood that a person’s goals, preferences, and priorities for care were a critical element in a person-centered healthcare system.
 </p>
 <p>
-The role of technology and expanded adoption by the aging population, providers, and care teams has brought to the forefront the expectation of seamless accessibility of advance directive information.
+The role of technology and expanded adoption by the aging population, providers, and care teams brought to the forefront the expectation of seamless accessibility of advance directive information.
 </p>
 
 ### Audience/Expected Users
