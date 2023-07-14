@@ -7,7 +7,7 @@ Description: "Advance Directive Information VersionNumber Extension represents a
 
 Extension: Jurisdiction
 Id: padi-jurisdiction-extension
-Title: "Juristiction"
+Title: "Jurisdiction"
 Description: "Jurisdiction for which content is applicable."
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1 MS
@@ -54,22 +54,13 @@ Description: "The Advance Directive Information Participant Extension identifies
 
 Extension: PerformerExtension
 Id: padi-performer-extension
-Title: "Informant"
+Title: "Performer"
 Description: "The Advance Directive Information Performer Extension represents clinicians who actually and principally carry out the clinical services being documented. In a transfer of care this represents the healthcare providers involved in the current or pertinent historical care of the patient. Preferably, the patients key healthcare care team members would be listed, particularly their primary physician and any active consulting physicians, therapists, and counselors."
 * value[x] only Reference
 * valueReference 1..1 MS
 * valueReference only Reference($USCorePractitioner or $USCorePractitionerRole)
 
-
-Extension: AuthorizationExtension
-Id: padi-authorization-extension
-Title: "Authorization"
-Description: "The Advance Directive Information Authorization Extension contains the ADI Consent profile which represents information about a patient’s consents."
-* value[x] only Reference
-* valueReference 1..1 MS
-* valueReference only Reference(Consent)
-
-
+/*
 Extension: OrderExtension
 Id: padi-order-extension
 Title: "Order"
@@ -77,7 +68,7 @@ Description: "The Advance Directive Information Order Extension represents order
 * value[x] only Reference
 * valueReference 1..1 MS
 * valueReference only Reference(ServiceRequest)
-
+*/
 
 
 Extension: ContextualValueExtension
@@ -100,17 +91,90 @@ Description: "The Attestation Information Extension allows for the capture of in
 * extension contains
 	AttesterRole 1..1 and
     AttestationStatement 0..1 and
+	NotarySealId 0..1 and
+	NotaryCommissionExpirationDate 0..1 and
     Signature 0..1
+
+* obeys notary-information-requires-notary-role
+
 * extension[AttesterRole] ^short = "Attester Role"
 * extension[AttesterRole].value[x] 1..1 MS
 * extension[AttesterRole].value[x] only CodeableConcept
 * extension[AttesterRole].valueCodeableConcept from PADIAttesterRoleTypeVS (extensible)
+
 * extension[AttestationStatement] ^short = "Attestation Statement"
 * extension[AttestationStatement].value[x] 1..1 MS
 * extension[AttestationStatement].value[x] only string or markdown
+
+* extension[NotarySealId] ^short = "Notary seal id"
+* extension[NotarySealId].value[x] 1..1 MS
+* extension[NotarySealId].value[x] only Identifier
+
+* extension[NotaryCommissionExpirationDate] ^short = "Notary commission expiration date"
+* extension[NotaryCommissionExpirationDate].value[x] 1..1 MS
+* extension[NotaryCommissionExpirationDate].value[x] only date
+
 * extension[Signature] ^short = "Attester Signature with Date"
 * extension[Signature].value[x] 1..1 MS
 * extension[Signature].value[x] only Signature
+
+
+
+
+Extension: EffectiveDateExtension
+Id: padi-effective-date-extension
+Title: "Effective Date"
+Description: "The Advance Directive document effective dates."
+* value[x] only Period
+* valuePeriod 1..1 MS
+
+
+Extension: ClauseExtension
+Id: padi-clause-extension
+Title: "Clause"
+Description: "A clause or set of clauses relevant to the resource or element being extended"
+* extension 1..*
+* extension contains
+	Title 0..1 and
+	Type 0..1 and
+	Policy 0..* and
+	Clause 1..*
+
+* extension[Title] ^short = "Section in which clauses are presented."
+* extension[Title].value[x] 1..1
+* extension[Title].value[x] only string
+
+* extension[Type] ^short = "Type of clause."
+* extension[Type].value[x] 1..1
+* extension[Type].value[x] only CodeableConcept
+* extension[Type].valueCodeableConcept from $VSACClauseType (extensible)
+
+* extension[Policy] ^short = "Link to the policies related to the clause"
+* extension[Policy].value[x] 1..1 MS
+* extension[Policy].value[x] only Reference
+
+* extension[Clause] ^short = "A human readable clause."
+* extension[Clause].value[x] 1..1 MS
+* extension[Clause].value[x] only markdown
+
+
+Extension: GoalOrderByDescendingPriority
+Id: padi-goal-order-by-descending-priority-extension
+Title: "Goal Order by Descending Priority"
+Description: "Indicates if the goals are ordered in descending priority (Y) or no specific order (N)."
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1 MS
+* valueCodeableConcept from $HL7YesNoVS (extensible)
+
+
+Invariant:  notary-information-requires-notary-role
+Description: "If Notary information (seal or commission expiration date exists, then role must be notary"
+Expression: "(extension.where(url = 'NotarySealId').valuerIdentifier.exists() or extension.where(url = 'NotaryCommissionExpirationDate').valueDate.exists()) implies  extension.where(url = 'AttesterRole').valueCodeableConcept.where(coding.code='81372-5').exists()"
+//Expression: "category.coding.where(code.memberOf('http://hl7.org/fhir/us/pacio-adi/ValueSet/PADIInterventionPreferencesOrdinalVS')).exists() implies description.coding.where(code.memberOf('http://terminology.hl7.org/ValueSet/v2-0136')).exists()"
+//Expression: "category.coding.code.memberOf('http://hl7.org/fhir/us/pacio-adi/ValueSet/PADIInterventionPreferencesOrdinalVS').exists()"
+Severity:   #error
+
+
 
 // TODO Could add Invariant for Signature.type matching the attesterRole
 // TODO Notary Expiration Date?

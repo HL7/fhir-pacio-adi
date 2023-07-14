@@ -1,61 +1,32 @@
 
-This section defines additional requirements and guidance relevant to this guide as a whole. The conformance verbs - **SHALL**, **SHOULD**, **MAY** - used in this guide are defined in [FHIR Conformance Rules](http://hl7.org/fhir/R4/conformance-rules.html).
+This section provides additional guidance on the relationship between the associated profiles and the structure of the advance directive document.
 
+### Structure and Resource Relationships
 
-### Claiming Conformance to a PACIO ADI Profile
-To claim conformance to a profile in this guide, servers **SHALL**:
+Advance directive documents may take several forms including scanned PDF documents, CDA documents, other binary documents, and native FHIR documents (using the Composition and other ADI-specific profiled FHIR resources). This guide defines interoperability to support all of these types and other potential document types (through encoding in a Binary resource). Today, most of these documents are shared through scanned images. This implementation guide is designed to allow a range of digitization levels, from scanned documents to fully discrete FHIR documents. Additionally, this guide provides the capability for different types of data to be more digitized than others inside the same document. 
 
-- Be able to populate all profile data elements that have a minimum cardinality >= 1 and/or flagged as Must Support as defined by that profile’s StructureDefinition.
-- Conform to the [PACIO ADI Capability Statement](CapabilityStatement-padi.html) expectations for that profile’s type.
-<!-- TODO note about what profiles must be supported?-->
+All documents, regardless of format are saved in the Binary resource and are available through the Binary endpoint. FHIR native documents **SHALL** be Bundle resources with `type` = `document` and encoded as a Binary resource. Documents that are communicated **SHALL** have at least one DocumentReference resource that references the Binary though the `DocumentReference.content.attachment.url`.
 
-### Must Support
-The following rules apply to all PACIO ADI Profile elements marked as Must Support. Must Support on any profile data element **SHALL** be interpreted as follows:
+The DocumentReference is the resource that is used for "indexing" of documents and can be used for searching and finding documents with specific attributes such as type of document, subject, or dates.
 
+<img src="./ADI_profile_resource_relationships.png" alt="Profile & Resource relationships"  style="width: 100%; float: none; align: middle;"/>
 
-#### Data Source System Requirements
+Digital signatures are defined as optional in this guide. If supported, the digital signature will be a captured in a Binary resource that is referenced by an additional DocumentReference resource.
 
-- Data Sources Systems **SHALL** be capable of populating all data elements as part of the query results as specified by the [PACIO ADI Capability Statement](CapabilityStatement-padi.html).
+### Document Structure
 
-#### Data Consumer System Requirements
+ADI FHIR native documents are instances of the Bundle resource with the `type` = `document`. The document should have all content contained within the Bundle with no external references except for the references to external documents in the [DocumentationObservation](StructureDefinition-PADI-DocumentationObservation.html).focus. FHIR Bundle documents consist of multiple entry resources within it, with the first entry being a Composition resource. The Composition resource acts as the header and organizational construct. It contains information about the document such as the category of document, dates, and references to the various participants of the document, as well as document sections used to categorize or organize the contained entries.
 
-- Data Consumer Systems **SHALL** be capable of displaying the data elements for human use.
-- Data Consumer Systems **SHOULD** be capable of storing the data elements for other uses (such record keeping of data used for clinical use).
-- Data Consumer Systems **SHALL** be capable of processing resource instances containing the data element without generating an error or causing the application to fail.
-- Data Consumer Systems **SHALL** interpret missing data elements within resources instances as not being present on the Data Sources system’s or as being withheld for privacy or business reasons.
-- Data Consumer Systems **SHALL** be able to process resource instances containing data elements asserting missing information. Data Consumer Systems are not required to process assertions of missing data. Assertion of missing information may be expressed using an appropriate value set code (such as nullFlavor) where available or using a dataAbsentReason extension.
+The Advance Directive Interoperability document defines 7 sections:
+1. Healthcare Agent - Healthcare agents, healthcare agent advisors, and consent regarding their roles, powers, and limitations
+2. Quality of Life (Care Experience Preferences) - Quality of Life related personal care experiences, personal goals, and priorities
+3. End of Life/Emergency Intervention Preferences (Under Certain Health Conditions) - Preference CarePlans that contain the person's goals to be considered active under specific situations or conditions
+4. Goals, Preferences, and Priorities Upon Death - Goals, preferences, and priorities a person has at the time of or soon after there death
+5. Additional Documentation - Observations regarding the existence of other advance directive related information
+6. Witness & Notary - References and information regarding witnesses and notary
+7. Administrative Information - Administrative information associated with this personal advance care plan
 
-Profiles by this guide, but defined in other implementation guides inherit the definition of Must Support from their respective guides.
+<img src="./ADI_DocumentStructure.png" alt="Advance Directive Document Structure"  style="width: 100%; float: none; align: middle;"/>
 
-### Must Support of CodeableConcept Text Elements
-
-The area of advance directive interoperability is relatively new and codes capturing the concepts related to advance directives are not well established or well known. This implementation guide provides several codes for expressing this information, but specifies extensible bindings to use other code systems where necessary. These code systems may also not be well-known. 
-Additionally, there are not widely accepted universal or national for standards for capturing this information. Different scopes of use and jurisdictions capture and organize this information in different ways. As such, it is important for data sources to capture this information as it is presented and for data consumer systems to be able to present it the same way to users. 
-
-To that end, several `CodeableConcept` `text` data elements are marked as Must Support. 
-
-Per the FHIR Standard for [Using Text in CodeableConcept](https://www.hl7.org/fhir/datatypes.html#CodeableConcept): 
-> The `text` is the representation of the concept as entered or chosen by the user, and which most closely represents the intended meaning of the user or concept. Very often the `text` is the same as a `display` of one of the codings. One or more of the codings may be flagged as the user selected code - the code or concept that the user actually selected directly.
-
-In some cases a code may not exist for a particular concept, in such a case, it is possible to to provide a free text only representation of the concept in the `CodeableConcept` `text` element without any 'coding' elements present.
-
-For example, using text only, the `Goal.category` element would be:
-
-    "valueCodeableConcept": {
-        "text": "Free text concept description"
-    }
-
-### Must Support of Resource Text Elements
-
-Due to the fact that advance directive interoperability is relatively new and there are not any widely accepted universal or national for standards for capturing this information, advance directives may be represented in many different ways. It is important that this information be communicated as it is meant and that it is received and viewable in that same manner. 
-
-To address this need, most of the profiles in this implementation guide require the resource instance's `text` element (cardinality `1..1`).
-
-The `text` element of a resource is a [Narrative](http://hl7.org/fhir/R4/narrative.html#Narrative) data type. The `status` element of this data type indicates whether the text is generated by a system based on the structured data in the resource or if it contains additional information. The `status` element is required. 
-
-For the purposes of this implemention guide, it is expected that most implementations will have resource instances that have additional data in the `text` than is captured in the structured data. When that is the case, the narrative `text.status` **SHALL** be `additional`.
-
-### Document Bundles and Constituent Resources
-
-<!--[TODO]--> 
-This guide requires the interoperability of Advance Directive Information through the use of wholly contained documents as part of its use case. While it is required that this data be made interoperable as a collection of Advance Directive Information in document Bundles, systems may decide to make use of the constituent resources as separate resources for additional uses and purposes, such as use in support of Clinical Decision Support 
+#### Clause Extension
+Advance directives documents often have additional information or clauses related to specific areas of the document. This may include things like additional information about the conditions under which a healthcare agent has been selected, whether a healthcare agent has been notified of or accepted their role as such, or other information that provides context to the data otherwise expressed in the sections or entries of a document. To support this information this guide has defined a [Clause extension](StructureDefinition-padi-clause-extension.html)) to all of the Composition sections and various profiles and elements.
