@@ -180,7 +180,7 @@ This Guide is divided into several pages which are listed at the top of each pag
     </tr>
 </table>
 
-<!-- Old material. Holding temporarily untilinitial final draft.
+<!-- Old material. Holding temporarily until initial final draft.
 ### Advance Directive Interoperability
 <p>[TODO ]
 

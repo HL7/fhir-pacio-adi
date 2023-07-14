@@ -37,7 +37,7 @@ To that end, several `CodeableConcept` `text` data elements are marked as Must S
 Per the FHIR Standard for [Using Text in CodeableConcept](https://www.hl7.org/fhir/datatypes.html#CodeableConcept): 
 > The `text` is the representation of the concept as entered or chosen by the user, and which most closely represents the intended meaning of the user or concept. Very often the `text` is the same as a `display` of one of the codings. One or more of the codings may be flagged as the user selected code - the code or concept that the user actually selected directly.
 
-In some cases a code may not exist for a particular concept, in such a case, it is possible to to provide a free text only representation of the concept in the `CodeableConcept` `text` element without any 'coding' elements present.
+In some cases a code may not exist for a particular concept, in such a case, it is possible to provide a free text only representation of the concept in the `CodeableConcept` `text` element without any 'coding' elements present.
 
 For example, using text only, the `Goal.category` element would be:
 
