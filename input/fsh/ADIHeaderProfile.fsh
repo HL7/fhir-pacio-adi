@@ -36,7 +36,7 @@ Description: "This abstract profile defines constraints that represent common ad
 * language 1..1 MS
 * identifier 1..1 MS
 * type MS
-* type from PADIAdvanceDirectiveCategoriesVS (extensible)
+* type from $PADIAdvanceDirectiveCategories (extensible)
 
 * category 1..1 MS
 * subject 1..1 MS

@@ -64,7 +64,7 @@ Description: "This profile is used to represent a consent for an advance directi
 * provision.actor.extension contains
     padi-clause-extension named ClauseExtension 0..*
     
-* provision.actor.role from PADIConsentActorRoleVS (required)
+* provision.actor.role from $PADIConsentActorRole (required)
 * provision.actor.reference only Reference(PADIParticipant)
 
 // [TODO] we need a valueset defined. Any candidates?
