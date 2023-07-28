@@ -145,7 +145,7 @@ Usage: #example
 
 
 * extension[padi-informant-extension].valueReference = Reference(Example-McBee-HealthcareAgent1)
-* extension[padi-informationRecipient-extension].valueReference = Reference(Example-McBee-HealthcareAgent1)
+// * extension[padi-informationRecipient-extension].valueReference = Reference(Example-McBee-HealthcareAgent1)
 * extension[padi-participant-extension].valueReference = Reference(Example-McBee-HealthcareAgent1)
 * extension[padi-performer-extension].valueReference.display = "Advance Directives, Inc."
 
