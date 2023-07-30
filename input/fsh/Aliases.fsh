@@ -43,6 +43,6 @@ Alias: $VSACUponDeathPreferences = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840
 
 // fix for FHIR-34838
 Alias: $PADIAdvanceDirectiveCategories = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113883.11.20.9.69.4
-Alias: $PADIInterventionPreferencesNarrative = https://cts.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.9
+Alias: $PADIInterventionPreferencesEndOfLifeGrouping = https://cts.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.9
 Alias: $PADIConsentActorRole = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1046.35
 Alias: $PADICareExperiencePreferences = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.11

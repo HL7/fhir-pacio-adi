@@ -85,13 +85,10 @@ ValueSet: PADIInterventionPreferencesVS
 Title: "Intervention Preferences"
 Description: "Clinical Focus: This value set includes concepts representing an individual's intervention preferences which can be expressed by the individual in his or her advance care plan.),(Data Element Scope: The intent of this value set is to identify personal intervention preferences that may be relevant and could be considered by clinicians or any person or organization that is providing care, treatment, or performing any other type of act to or on behalf of the individual.)"
 * ^experimental = false
-* codes from valueset PADIInterventionPreferencesOrdinalVS
-* codes from valueset $PADIInterventionPreferencesNarrative
+// * codes from valueset PADIInterventionPreferencesOrdinalVS
+* codes from valueset $PADIInterventionPreferencesEndOfLifeGrouping
 * include PADIGoalCategoryCS#intervention-preference "Intervention preference"
 * insert LOINCCopyrightNotice
-
-
-
 
 
 ValueSet: PADIInterventionPreferencesOrdinalVS
@@ -110,7 +107,7 @@ Description: "Clinical Focus: This value set includes concepts representing an i
 
 
 /*
-ValueSet: PADIInterventionPreferencesNarrativeVS
+ValueSet: PADIInterventionPreferencesEndOfLifeGroupingVS
 Title: "Intervention Preferences - Narrative"
 Description: "Clinical Focus: This value set includes concepts representing an individual's intervention preferences which can be expressed by the individual in his or her advance care plan.),(Data Element Scope: The intent of this value set is to identify personal intervention preferences that may be relevant and could be considered by clinicians or any person or organization that is providing care, treatment, or performing any other type of act to or on behalf of the individual.)"
 * ^experimental = false
