@@ -33,7 +33,7 @@ Description: "The Advance Directive Information Informant Extension describes an
 * valueReference 1..1 MS
 * valueReference only Reference($USCorePractitioner or $USCorePractitionerRole or $USCorePatient or RelatedPerson)
 
-
+/*
 Extension: InformationRecipientExtension
 Id: padi-informationRecipient-extension
 Title: "Information Recipient"
@@ -41,7 +41,7 @@ Description: "The Information Recipient Extension records the intended recipient
 * value[x] only Reference
 * valueReference 1..1 MS
 * valueReference only Reference($USCorePractitioner or $USCorePractitionerRole or $USCorePatient or RelatedPerson or $USCoreOrganization)
-
+*/
 
 Extension: ParticipantExtension
 Id: padi-participant-extension
