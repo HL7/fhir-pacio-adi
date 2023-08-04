@@ -4,7 +4,7 @@
 Angie has Sickle Cell Disease. She worries that if she contracts COVID-19 and becomes unable to communicate with medical personnel, they won't be familiar with her history and specific treatment needs. 
 
 
-She uses a consumer facing tool to create a digital advance directive or upload a scanned copy of her paper advance directive document. Her interoperable digital advance directive information is made available by being stored in a registry/repository/HIE/QHIN/EHR. 
+She uses a consumer facing tool to create a digital advance directive or upload a scanned copy of her paper advance directive document. This tool may any customer-facing application, including but not limited to an EHR or a specialized care application. Her interoperable digital advance directive information is made available by being stored in a registry/repository/HIE/QHIN/EHR.
 
 
 Angie shares her advance directive information with her medical proxy/healthcare agent and primary care physician so if either are contacted by a treating provider in an emergency, they can make her advance directive accessible to inform treatment.

@@ -39,5 +39,13 @@ Alias: $HL7RelatedPersonRelationshipType = http://hl7.org/fhir/ValueSet/relatedp
 Alias: $HL7AdataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason
 
 Alias: $VSACClauseType = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1115.14
-Alias: $VSACUponDeathPrefernces = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.11
+Alias: $VSACUponDeathPreferences = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.16
 
+// fix for FHIR-34838
+Alias: $PADIClauseTypeVS = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1115.14
+Alias: $PADIParticipantRoleVS = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1046.35
+Alias: $PADIAdvanceDirectiveCategories = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113883.11.20.9.69.4
+Alias: $PADIInterventionPreferencesEndOfLifeGrouping = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1115.9/$expand
+Alias: $PADIConsentActorRole = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1046.35
+Alias: $PADICareExperiencePreferences = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.11
+Alias: $PADIUponDeathPreferencesVS = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.16

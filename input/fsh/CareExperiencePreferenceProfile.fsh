@@ -40,7 +40,7 @@ Description: "Care Experience Preference is a clinical statement that presents t
 * category ^slicing.description = "Slice based on $this value"
 
 * category 2..*
-* category from PADICareExperiencePreferencesVS (extensible)
+* category from $PADICareExperiencePreferences (extensible)
 * category contains
     type 1..1 MS 
     
