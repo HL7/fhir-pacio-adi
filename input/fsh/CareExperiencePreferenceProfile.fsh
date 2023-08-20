@@ -44,4 +44,4 @@ Description: "Care Experience Preference is a clinical statement that presents t
 * category contains
     type 1..1 MS 
     
-* category[type] = PADIGoalCategoryCS#care-experience-preference
+* category[type] = PADIPreferenceCategoryCS#care-experience-preference

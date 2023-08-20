@@ -16,7 +16,7 @@ Description: "This profile is used to represent a personal preference for a type
 * category contains
     type 1..1 MS 
     
-* category[type] = PADIGoalCategoryCS#intervention-preference
+* category[type] = PADIPreferenceCategoryCS#intervention-preference
 
 // TODO Fix invariant
 //* obeys value-personal-intervention-preference-ordinal

@@ -13,7 +13,7 @@
 <artifact id="StructureDefinition/ADI-DocumentReference" key="StructureDefinition-ADI-DocumentReference" name="ADI Document Reference"/>
 <artifact id="StructureDefinition/PADI-DocumentationObservation" key="StructureDefinition-PADI-DocumentationObservation" name="ADI Documentation Observation"/>
 <artifact id="StructureDefinition/PADI-Goal" key="StructureDefinition-PADI-Goal" name="ADI Goal"/>
-<artifact id="CodeSystem/PADIGoalCategoryCS" key="CodeSystem-PADIGoalCategoryCS" name="ADI Goal Category Code System"/>
+<artifact id="CodeSystem/PADIPreferenceCategoryCS" key="CodeSystem-PADIGoalCategoryCS" name="ADI Goal Category Code System"/>
 <artifact id="StructureDefinition/PADI-OrganDonationObservation" key="StructureDefinition-PADI-OrganDonationObservation" name="ADI Organ Donation"/>
 <artifact id="StructureDefinition/PADI-Participant" key="StructureDefinition-PADI-Participant" name="ADI Participant"/>
 <artifact id="StructureDefinition/PADI-ParticipantConsent" key="StructureDefinition-PADI-ParticipantConsent" name="ADI Participant Consent"/>

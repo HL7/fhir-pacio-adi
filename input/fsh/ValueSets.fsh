@@ -53,7 +53,7 @@ This ValueSet is managed at the US National Library of Medicine (NLM) Value Set 
 * ^experimental = false
 * include $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
 * include $LOINC#87528-6 "Personal health goal"
-* include PADIGoalCategoryCS#personal-goal "Personal goal"
+* include PADIPreferenceCategoryCS#personal-goal "Personal goal"
 * insert LOINCCopyrightNotice
 
 
@@ -75,7 +75,7 @@ This ValueSet is managed at the US National Library of Medicine (NLM) Value Set 
 * include $LOINC#81364-2 "Religious or cultural beliefs [Reported]"
 * include $LOINC#81365-9 "Religious or cultural affiliation contact to notify [Reported]'"
 * include $LOINC#81366-7 "Unfinished business [Reported]"
-* include PADIGoalCategoryCS#care-experience-preference "Care experience preference"
+* include PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
 * insert LOINCCopyrightNotice
 */
 
@@ -87,7 +87,7 @@ Description: "Clinical Focus: This value set includes concepts representing an i
 * ^experimental = false
 // * codes from valueset PADIInterventionPreferencesOrdinalVS
 * codes from valueset $PADIInterventionPreferencesEndOfLifeGrouping
-* include PADIGoalCategoryCS#intervention-preference "Intervention preference"
+* include PADIPreferenceCategoryCS#intervention-preference "Intervention preference"
 * insert LOINCCopyrightNotice
 
 
@@ -203,13 +203,6 @@ Description: "Types of Documents"
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc
 
 This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-
-/*
-CodeSystem: PADIGoalCategoryVS
-Title: "ADI Goal Category Value Set"
-Description: "Advance Directive Goal Categories"
-* codes from codesystem PADIGoalCategoryCS
-*/
 
 RuleSet: LOINCCopyrightNotice
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"

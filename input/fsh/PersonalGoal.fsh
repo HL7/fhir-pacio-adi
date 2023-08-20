@@ -45,7 +45,7 @@ Description: "This profile is a statement that presents the author's personal he
 * category contains
     type 1..1 MS 
     
-* category[type] = PADIGoalCategoryCS#personal-goal
+* category[type] = PADIPreferenceCategoryCS#personal-goal
 
 
 

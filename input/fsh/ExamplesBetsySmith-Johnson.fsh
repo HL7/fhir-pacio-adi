@@ -618,7 +618,7 @@ Usage: #example
 <p><i>I am Catholic, please call Father Mark at Saint Catherine's on Main Street.</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
+* category[+] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
 * category[+] = $LOINC#75775-7 "Decision to inform doctors and nurses about the role religion, faith, culture, or spirituality play in my life [Reported]"
 * description.text = "Here are some thoughts that I would like for my medical care team and my healthcare agent(s) to know about the role that religion, faith or spirituality play in my life: I am Catholic, please call Father Mark at Saint Catherine's on Main Street."
 * description.extension[padi-contextualValue-extension].extension[Context].valueString = "Here are some thoughts that I would like for my medical care team and my healthcare agent(s) to know about the role that religion, faith or spirituality play in my life"
@@ -639,7 +639,7 @@ Usage: #example
 <p><i>I love the smell of lavender and the feeling of sunshine on my face.</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
+* category[+] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
 * category[+] = $LOINC#81360-0 "My likes and joys [Reported]"
 * description.text = "Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed: I love the smell of lavender and the feeling of sunshine on my face."
 * description.extension[padi-contextualValue-extension].extension[Context].valueString = "Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed"
@@ -660,7 +660,7 @@ Usage: #example
 <p><i>I do not like my feet to be cold.</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
+* category[+] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
 * category[+] = $LOINC#81362-6 "My dislikes and fears [Reported]"
 * description.text = "Here is a list of things that I would like to avoid if at all possible, people that I don’t wish to see, and concerns I have about particular family members, pets, and so on: I do not like my feet to be cold."
 * description.extension[padi-contextualValue-extension].extension[Context].valueString = "Here is a list of things that I would like to avoid if at all possible, people that I don’t wish to see, and concerns I have about particular family members, pets, and so on"
@@ -681,7 +681,7 @@ Usage: #example
 <p><i>I want photos of my family where I can see them.</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
+* category[+] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
 * category[+] = $LOINC#81380-8 "Goals, preferences, and priorities for care experience [Reported]"
 * description.text = "How to care for me: If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me: I want photos of my family where I can see them."
 * description.extension[padi-contextualValue-extension].extension[Context].valueString = "How to care for me: If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me"
@@ -702,7 +702,7 @@ Usage: #example
 <p><i>Please call Father Mark if my condition warrants the services of a priest.</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
+* category[+] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
 * category[+] = $LOINC#81364-2 "Religious or cultural beliefs [Reported]"
 * description.text = "If I appear to be approaching the end of my life, here are some things that I would like for my caregivers to know about my faith and my religion. Please call Father Mark if my condition warrants the services of a priest."
 * description.extension[padi-contextualValue-extension].extension[Context].valueString = "If I appear to be approaching the end of my life, here are some things that I would like for my caregivers to know about my faith and my religion."
@@ -722,7 +722,7 @@ Usage: #example
 <p><i>Catholic</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
+* category[+] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
 * category[+] = $LOINC#81365-9 "Religious or cultural affiliation contact to notify [Reported]"
 * description.text = "Please attempt to notify someone from my religion at the following phone number: If I have included one: Catholic"
 * description.extension[padi-contextualValue-extension].extension[Context].valueString = "Please attempt to notify someone from my religion at the following phone number If I have included one"
@@ -744,7 +744,7 @@ Usage: #example
 <p><i>I want my sister and I to talk again, and miss her.  I wish we hadn't disagreed all those years ago and regret the time it has cost us.  I'd like to see her face if I were very ill and needed the comfort of family at my side.</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
+* category[+] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
 * category[+] = $LOINC#81366-7 "Unfinished business [Reported]"
 * description.text = "If it appears that I am approaching the end of my life, and I cannot communicate with persons around me, I would want my doctors and nurses, my family, and my friends to know about some unfinished business that I need to address: I want my sister and I to talk again, and miss her.  I wish we hadn't disagreed all those years ago and regret the time it has cost us.  I'd like to see her face if I were very ill and needed the comfort of family at my side."
 * description.extension[padi-contextualValue-extension].extension[Context].valueString = "If it appears that I am approaching the end of my life, and I cannot communicate with persons around me, I would want my doctors and nurses, my family, and my friends to know about some unfinished business that I need to address"
@@ -765,7 +765,7 @@ Usage: #example
 <p><i>My dogs make me laugh when they play together, and my grandchildren make me laugh when they put on plays for me.  They bring me great joy.</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
+* category[+] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
 * category[+] = $LOINC#81361-8 "Things that make me laugh [Reported]"
 * description.text = "These are some of my fondest memories from life that have always brought a smile to my face or made me laugh: My dogs make me laugh when they play together, and my grandchildren make me laugh when they put on plays for me.  They bring me great joy."
 * description.extension[padi-contextualValue-extension].extension[Context].valueString = "These are some of my fondest memories from life that have always brought a smile to my face or made me laugh"
@@ -821,7 +821,7 @@ Usage: #example
 </ul>	
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#personal-goal "Personal goal"
+* category[+] = PADIPreferenceCategoryCS#personal-goal "Personal goal"
 * category[+] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
 * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Avoiding prolonged dependence on machines, Not being a physical burden to my family, Dying at home"
 * description.extension[padi-contextualValue-extension].extension[Context].valueString = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me"
@@ -879,7 +879,7 @@ Usage: #example
 </div>"
 * lifecycleStatus = #proposed
 //* category = $LOINC#75776-5 "Preference on consulting a supportive and palliative care team to help treat physical, emotional, and spiritual discomfort and support family [Reported]"
-* category[+] = PADIGoalCategoryCS#intervention-preference "Intervention preference"
+* category[+] = PADIPreferenceCategoryCS#intervention-preference "Intervention preference"
 * category[+] = $LOINC#75780-7
 * description.text = "If I am having significant pain or suffering, I would like my doctors to consult a Supportive and Palliative Care Team to help treat my physical, emotional and spiritual discomfort, and to support my family."
 * description.extension[padi-contextualValue-extension].extension[Context].valueString = "If I am having significant pain or suffering"
@@ -899,7 +899,7 @@ Usage: #example
 <p>In addition to the general advance care goals provided above, below are specific treatment preferences with respect to certain specific circumstances or situations.</p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#intervention-preference "Intervention preference"
+* category[+] = PADIPreferenceCategoryCS#intervention-preference "Intervention preference"
 * category[+] = $LOINC#75777-3 "Information to tell doctors if my health deteriorates due to a terminal illness and I am unable to interact meaningfully with family, friends, or surroundings [Reported]"
 * description.text = "My Preferences in Specific Circumstances: In addition to the general advance care goals provided above, below are specific treatment preferences with respect to certain specific circumstances or situations."
 * description.extension[padi-contextualValue-extension].extension[Context].valueString = "My Preferences in Specific Circumstances"
@@ -919,7 +919,7 @@ Usage: #example
 <p><i>I would like for them to keep trying life-sustaining treatments until my healthcare agent decides it is time to stop and such treatments and let me die gently.</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#intervention-preference "Intervention preference"
+* category[+] = PADIPreferenceCategoryCS#intervention-preference "Intervention preference"
 * category[+] = $LOINC#75778-1 "Information to tell doctors if I have a severe, irreversible brain injury or illness and can't dress, feed, or bathe myself, or communicate my medical wishes, but can be kept alive [Reported]"
 * description.text = "If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings, I would like for them to keep trying life-sustaining treatments until my healthcare agent decides it is time to stop and such treatments and let me die gently."
 * description.extension[padi-contextualValue-extension].extension[Context].valueString = "If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings"
@@ -939,7 +939,7 @@ Usage: #example
 <p><i>I want my healthcare agent to decide for me.</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#intervention-preference "Intervention preference"
+* category[+] = PADIPreferenceCategoryCS#intervention-preference "Intervention preference"
 * category[+] = $LOINC#75779-9 "Thoughts on cardiopulmonary resuscitation (CPR) [Reported]"
 * description.text = "Although I understand that, depending on the situation and circumstances, medical personnel may not be able to follow my wishes, here are my general thoughts on cardiopulmonary resuscitation (CPR): I want my healthcare agent to decide for me."
 * description.extension[padi-contextualValue-extension].extension[Context].valueString = "Although I understand that, depending on the situation and circumstances, medical personnel may not be able to follow my wishes, here are my general thoughts on cardiopulmonary resuscitation (CPR)"
@@ -959,7 +959,7 @@ Usage: #example
 <p><i>At home.I would like to receive hospice care at home if possible.</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#intervention-preference "Intervention preference"
+* category[+] = PADIPreferenceCategoryCS#intervention-preference "Intervention preference"
 * category[+] = $LOINC#75780-7 "Preferred location to spend final days if possible to choose [Reported]"
 * description.text = "If it were possible to choose, here is where I would like to spend my final days: At home.I would like to receive hospice care at home if possible."
 * description.extension[padi-contextualValue-extension].extension[Context].valueString = "If it were possible to choose, here is where I would like to spend my final days"
@@ -980,7 +980,7 @@ Usage: #example
 <p><i>Please call Jim Houston, my lawyer, for arrangements I have already made.</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#intervention-preference "Intervention preference"
+* category[+] = PADIPreferenceCategoryCS#intervention-preference "Intervention preference"
 * category[+] = $LOINC#81356-8 "Death arrangements [Reported]"
 * description.text = "If I were to pass away: Please call Jim Houston, my lawyer, for arrangements I have already made."
 * description.extension[padi-contextualValue-extension].extension[Context].valueString = "If I were to pass away"
