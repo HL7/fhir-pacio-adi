@@ -41,11 +41,10 @@ Description: "This profile is a statement that presents the author's personal he
 * category ^slicing.ordered = false   // can be omitted, since false is the default
 * category ^slicing.description = "Slice based on $this value"
 * category 2..*
-* category from PADIHealthGoalsVS (extensible)
 * category contains
     type 1..1 MS 
     
-* category[type] = PADIPreferenceCategoryCS#personal-goal
+* category[type] = $LOINC#87528-6
 
 
 

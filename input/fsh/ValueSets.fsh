@@ -44,19 +44,6 @@ Description: "Clinical Focus: A personal or legal relationship records the role 
 * ^experimental = false
 * codes from system $HL7RoleCode
 
-
-ValueSet: PADIHealthGoalsVS
-Title: "Health Goals"
-Description: "Clinical Focus: This value set includes concepts representing an individual's goals at end of life which can be expressed by the individual in his or her advance care plan.),(Data Element Scope: The intent of this value set is to identify personal goals that may be relevant and could be considered by clinicians when making a treatment/care plan for the person.),(Inclusion Criteria: Include member value sets for Health Goals at end of life for LOINC and SNOMED CT.),(Exclusion Criteria: None.
-
-This ValueSet is managed at the US National Library of Medicine (NLM) Value Set Authority Center (VSAC): https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.7/expansion"
-* ^experimental = false
-* include $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
-* include $LOINC#87528-6 "Personal health goal"
-* include PADIPreferenceCategoryCS#personal-goal "Personal goal"
-* insert LOINCCopyrightNotice
-
-
 /*
 ValueSet: PADICareExperiencePreferencesVS
 Title: "Care Experience Preferences"
