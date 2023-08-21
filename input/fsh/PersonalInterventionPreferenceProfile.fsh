@@ -1,5 +1,5 @@
 Profile: PADIPersonalInterventionPreference
-Parent: PADIGoal
+Parent: Observation
 Id: PADI-PersonalInterventionPreference
 Title: "Personal Intervention Preference"
 Description: "This profile is used to represent a personal preference for a type of medical intervention (treatment) request under certain conditions."
