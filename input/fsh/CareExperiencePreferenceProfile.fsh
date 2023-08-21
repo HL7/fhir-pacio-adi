@@ -1,3 +1,23 @@
+Profile: PADICareExperiencePreference
+Parent: Observation
+Id: PADI-CareExperiencePreference
+Title: "ADI Care Experience Preference"
+Description: "Care Experience Preference is a clinical statement that presents the author's personal thoughts about something a person feels is relevant to their care experience and may be pertinent when planning their care."
+
+
+* category ^slicing.discriminator.type = #value 
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category ^slicing.ordered = false   // can be omitted, since false is the default
+* category ^slicing.description = "Slice based on $this value"
+
+* category 2..*
+* category from $PADICareExperiencePreferences (extensible)
+* category contains
+    type 1..1 MS 
+    
+* category[type] = PADIPreferenceCategoryCS#care-experience-preference
+
 /*Profile: PADICareExperiencePreference
 Parent: Observation
 Id: PADI-CareExperiencePreference
@@ -24,24 +44,3 @@ Description: "Care Experience Preference is a clinical statement that presents t
 
 */
 // If we restrict the value type, have guidance about including information in note
-
-
-Profile: PADICareExperiencePreference
-Parent: PADIGoal
-Id: PADI-CareExperiencePreference
-Title: "ADI Care Experience Preference"
-Description: "Care Experience Preference is a clinical statement that presents the author's personal thoughts about something a person feels is relevant to their care experience and may be pertinent when planning their care."
-
-
-* category ^slicing.discriminator.type = #value 
-* category ^slicing.discriminator.path = "$this"
-* category ^slicing.rules = #open
-* category ^slicing.ordered = false   // can be omitted, since false is the default
-* category ^slicing.description = "Slice based on $this value"
-
-* category 2..*
-* category from $PADICareExperiencePreferences (extensible)
-* category contains
-    type 1..1 MS 
-    
-* category[type] = PADIPreferenceCategoryCS#care-experience-preference

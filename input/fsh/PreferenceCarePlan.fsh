@@ -30,11 +30,11 @@ Description: "The Preference Care Plan is a means for an individual to express t
 
 * goal ^short = "Patient's goals for the scope of this care plan."
 * goal 0..* MS
-* goal only Reference(PADIPersonalGoal or PADICareExperiencePreference)
+* goal only Reference(PADIPersonalGoal)
 
 * supportingInfo ^short = "Observations of a patient's preferences for the scope of this care plan."
 * supportingInfo 0..* MS
-* supportingInfo only Reference(PADIPersonalInterventionPreference)
+* supportingInfo only Reference(PADIPersonalInterventionPreference or PADICareExperiencePreference)
 
 * obeys goal-or-supportingInfo-required
 
@@ -43,5 +43,5 @@ Description: "The Preference Care Plan is a means for an individual to express t
 
 Invariant: goal-or-supportingInfo-required
 Description: "Either goal or supportingInfo must exist, ie. goal and supportingInfo cannot both be blank, ie. if goal does not exist then supportingInfo must exist."
-Expression: "!goal.exists() implies supportingInfo.exists()"
+Expression: "goal.empty() implies supportingInfo.exists()"
 Severity:   #error

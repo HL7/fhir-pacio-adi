@@ -10,7 +10,6 @@ Description: "This profile is used to represent a personal preference for a type
 * category ^slicing.ordered = false   // can be omitted, since false is the default
 * category ^slicing.description = "Slice based on $this value"
 
-
 * category 2..*
 * category from PADIInterventionPreferencesVS (extensible)
 * category contains
@@ -20,7 +19,6 @@ Description: "This profile is used to represent a personal preference for a type
 
 // TODO Fix invariant
 //* obeys value-personal-intervention-preference-ordinal
-
 
 Invariant:  value-personal-intervention-preference-ordinal
 Description: "If the Personal Intervention Preference code is from the Personal Intervention Preference Ordinal ValueSet, the value SHALL be 'Y' or 'N'"
