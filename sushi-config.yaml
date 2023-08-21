@@ -53,8 +53,7 @@ menu:
     Terminology: artifacts.html#5
     Capability Statement: CapabilityStatement-adi.html
     Examples: artifacts.html#6
-#    Search Parameters: 6_searchparameters.html
-  #Examples: artifacts.html#7
+  Release Notes: release_notes.html
   Downloads: downloads.html
 
 pages:
@@ -74,3 +73,5 @@ pages:
     title: FHIR Artifacts
   downloads.md:
     title: Downloads
+  release_notes.md:
+    title: Release Notes

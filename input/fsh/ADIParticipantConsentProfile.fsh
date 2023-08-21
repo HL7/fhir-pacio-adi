@@ -52,7 +52,7 @@ Description: "This profile is used to represent a consent for an advance directi
 
 
 * provision.type 1..1 MS
-* provision.period MS
+* provision.period 
 //[TODO] do we need to support and require provision.actor for all HCA's?
 * provision.actor 1..* MS
 

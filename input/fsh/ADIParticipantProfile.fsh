@@ -9,7 +9,7 @@ Description: "This profile represents a person participating in a person's advan
 * patient 1..1 MS
 * patient only Reference($USCorePatient)
 
-* relationship 0..* MS
+* relationship 0..* 
 * relationship from $HL7RelatedPersonRelationshipType (extensible)
 
 
