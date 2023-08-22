@@ -39,7 +39,7 @@ This section defines additional requirements and guidance relevant to this guide
 
 ### Must Support
 
-Profiles used by or inherited by this guide that are defined in other implementation guides, inherit the definition of Must Support from their respective guides for elements which they define as Must Support.
+Profiles used by or inherited by this guide that are defined in other implementation guides, inherit the definition of `Must Support` from their respective guides for elements which they define as Must Support.
 
 #### Data Source System Requirements
 
