@@ -9,6 +9,8 @@ She uses a consumer facing tool to create a digital advance directive or upload 
 
 Angie shares her advance directive information with her medical proxy/healthcare agent and primary care physician so if either are contacted by a treating provider in an emergency, they can make her advance directive accessible to inform treatment.
 
+**NOTE:** This IG makes no comment as to how EHRs should be architected, as this is beyond the scope of a FHIR implementation guide.
+
 <img src="./patient_story_1a.png" alt="Patient Story 1a" style="width: 100%; float: none; align: middle;"/>
 <br clear="all" />
 
