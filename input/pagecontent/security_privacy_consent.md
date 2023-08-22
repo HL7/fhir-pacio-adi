@@ -2,11 +2,11 @@
 
 ### General Considerations
 
-Advance Directive Interoperability (ADI) involves communication of advance directive information across multiple parties including who the information is about, their healthcare agents and identified advisors, and care providers. The author, who is also the person the information is about, needs access to create, modify, remove, and share this information either directly or through an authorized third party. Users of this information are the appointed healthcare agents or advisors, care providers in emergency, intensive, or critical care environments, or others providing longer term care in a skilled nursing or other similar facility.
+Advance Directive Interoperability (ADI) involves communication of advance directive information across multiple parties including who the information is about, their healthcare agents and identified advisors, and care providers. The author, whom is also the person the information is about, needs access to create, modify, remove, and share this information either directly or through an authorized third party. Users of this information, be them the appointed healthcare agents or advisors, care providers in emergency, intensive, or critical care environments, or others providing longer term care in a skilled nursing or other similar facility.
 
 Advance directive information contains patient specific information, which means that it needs to be protected with proper security and privacy protections to avoid malicious or unintentional exposure of such information. All Advance Directive Interoperability exchanges must be appropriately secured in transit and access limited only to authorized individuals.
 
-The ADI IG focuses on providing a structure to share data and information. Policy, legal, and regulatory differences across states and local areas may impact the workflow and requirements associated with Advance Directives Information. Implementors should review the current context for where this IG is expected to be used to ensure those requirements are met.
+The ADI IG focuses on providing a structure to share data and information. Currently policy, legal and regulatory differ across states and local areas impacting the workflow and requirements associated with Advance Directives Information. Implementors should review the current context for where this IG is expected to be used to ensure those requirements are met.
 
 
 #### Security Considerations and Guidance
@@ -20,17 +20,18 @@ All implementers of the Advance Directive Interoperability Implementation Guide 
 For the purposes of Advance Directive Interoperability, additional security conformance requirements are as follows:
 
 ##### Exchange Security
-1.	The exchange of information **SHALL** support [Transport Layer Security (TLS) Protocol Version 1.2 (RFC5246)](https://www.rfc-editor.org/rfc/rfc5246) or a more recent version of TLS for transport layer security.
+1. The exchange of information **SHALL** support [Transport Layer Security (TLS) Protocol Version 1.2 (RFC5246)](https://www.rfc-editor.org/rfc/rfc5246) or a more recent version of TLS for transport layer security.
 2.	Implementers of this Implementation Guide **SHALL** support [SMART on FHIR App Launch Framework](http://hl7.org/fhir/smart-app-launch/index.html) and **MAY** support [SMART on FHIR Backend Services](https://hl7.org/fhir/uv/bulkdata/authorization/index.html).
 3.	Implementers of this Implementation Guide **SHOULD** support mutually authenticated TLS.
-4.	Server implementations that expect to support browser-based javascript applications SHOULD enable [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) for REST operations. Many client web-based apps use javascript for API calls which requires CORS. However, CORS could present security concerns if not implemented correctly or is not continually updated as new security issues are found and addressed. Implementers of CORS **SHOULD** consider advice about CORS from sources such as [Enable-CORS](http://enable-cors.org/) and [Moesif blog on Guide to CORS Pitfalls](https://www.moesif.com/blog/technical/cors/Authoritative-Guide-to-CORS-Cross-Origin-Resource-Sharing-for-REST-APIs/).
+4.	Server implementations that expect to support browser-based javascript applications SHOULD enable [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) for REST operations. Many client web-based apps use javascript for API calls which requires CORS. However, CORS could present security concerns if not implemented correctly or is not continually updated as new security issues are found and addressed. Implementers of CORS **SHOULD** consider advice about CORS from sources such as [Enable-CORS](http://enable-cors.org/) and [Moesif blog on Guide to CORS Pitfalls](https://www.moesif.com/blog/technical/cors/Authoritative-Guide-to-CORS-Cross-Origin-Resource-Sharing-for-REST-APIs/)  
 
 ##### Authentication and Authorization Requirements
-1.	Implementations **SHALL** support the FHIR US Core [Patient Privacy and Security requirements](https://www.hl7.org/fhir/us/core/security.html).
-2.	Server systems **SHALL** publish their authorization and token endpoints for discovery in accordance with the SMART App Launch framework and publicly publish the [Well-Known Uniform Resource Identifiers (URIs)](https://hl7.org/fhir/smart-app-launch/conformance/index.html#using-well-known) JSON file with scopes defined in the `scopes_supported` property.
-3.	Implementations **SHOULD** consider the SMART on FHIR Best Practices in Authorization found [here](http://hl7.org/fhir/smart-app-launch/best-practices.html)
-4.  Implementation **MAY** support [Health Relationship Trust Profile for User-Managed Access (HEART)](https://openid.net/specs/openid-heart-uma2-1_0.html).
-5.  This guide defines the following server requirements for SMART on [FHIR Core Capabilities](https://hl7.org/fhir/smart-app-launch/conformance/index.html#smart-on-fhir-core-capabilities-and-capability-sets)
+1.	Implementations **SHOULD** consider the SMART on FHIR Best Practices found [here](http://hl7.org/fhir/smart-app-launch/best-practices.html)
+2.	Server implementations **SHALL** support individual user authentication and **MAY** support system level authentication if access controls of the system are trusted for the scope of use.
+3. Implementation **MAY** support [Health Relationship Trust Profile for User-Managed Access (HEART)](https://openid.net/specs/openid-heart-uma2-1_0.html).
+4.	Implementation **SHALL** utilize OAuth 2.0 compliant authorization protocols.
+5.	This guide requires SMART on FHIR App Launch Framework which provides guidance on [scopes](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context/index.html)
+6.  This guide defines the following server requirements for SMART on [FHIR Core Capabilities](https://hl7.org/fhir/smart-app-launch/conformance/index.html#smart-on-fhir-core-capabilities-and-capability-sets)
     1.  Launch Modes
         1.  **SHOULD** support `launch-ehr`: support for SMART’s EHR Launch mode
         2.  **SHALL** support `launch-standalone`: support for SMART’s Standalone Launch mode
@@ -54,21 +55,26 @@ For the purposes of Advance Directive Interoperability, additional security conf
             1.  openid
             2.	fhirUser
             3.	launch/patient
-            4.	patient/Patient.read
+            4.	patient/*.read
+            5.	patient/Bundle.*
             6.	patient/DocumentReference.*
             7.	user/Patient.read
+            8.	user/Bundle.*
             8.	user/DocumentReference.*
 
-<!--  TODO
 #### Individual-Authorized Exchange
 1.	http://hl7.org/fhir/us/davinci-pdex/Member-AuthorizedOAuth2Exchange.html
--->
 
 #### Privacy Requirement
 For the purposes of Advance Directive Interoperability, privacy conformance requirements are as follows:
 - Implementers **SHOULD** support data sharing policies with use of the Consent resource.
 
-#### Provenance
+#### Digital Signatures
+In order to validate the authenticity and integrity of advance directive information, document bundles **SHALL** support digital signing of ADI document bundles . See http://hl7.org/fhir/R4/signatures.html 
+http://hl7.org/fhir/R4/secpriv-module.html#signature 
+
+#### Audit Logging and Provenance
+1.	Server implementations **SHOULD** record all IG related data access using the [AuditEvent](http://hl7.org/fhir/R4/auditevent.html) resource.
 1.	Server implementations **SHOULD** support the ability to directly record and/or enable clients to assert (store) provenance associated with advance directive information using the [Provenance](http://hl7.org/fhir/R4/provenance.html) resource.
 
 <!-- TODO Consider US Core requirements

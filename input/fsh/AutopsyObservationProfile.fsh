@@ -13,6 +13,6 @@ Description: "This profile is used to represent the author's thoughts about auto
 
 * value[x] 1..1 MS
 
-* note 
+* note MS
 
 
