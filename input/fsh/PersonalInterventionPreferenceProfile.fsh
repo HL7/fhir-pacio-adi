@@ -4,30 +4,7 @@ Id: PADI-PersonalInterventionPreference
 Title: "Personal Intervention Preference"
 Description: "This profile is used to represent a personal preference for a type of medical intervention (treatment) request under certain conditions."
 
-* category ^slicing.discriminator.type = #value 
-* category ^slicing.discriminator.path = "$this"
-* category ^slicing.rules = #open
-* category ^slicing.ordered = false   // can be omitted, since false is the default
-* category ^slicing.description = "Slice based on $this value"
-
-
-* category 2..*
 * category from PADIInterventionPreferencesVS (extensible)
-* category contains
-    type 1..1 MS 
-    
-* category[type] = PADIGoalCategoryCS#intervention-preference
-
-// TODO Fix invariant
-//* obeys value-personal-intervention-preference-ordinal
-
-
-Invariant:  value-personal-intervention-preference-ordinal
-Description: "If the Personal Intervention Preference code is from the Personal Intervention Preference Ordinal ValueSet, the value SHALL be 'Y' or 'N'"
-Expression: "category.coding.where(code.memberOf('http://hl7.org/fhir/us/pacio-adi/ValueSet/PADIInterventionPreferencesOrdinalVS')).exists() implies (description.coding.code = 'Y' or description.coding.code = 'N')"
-//Expression: "category.coding.where(code.memberOf('http://hl7.org/fhir/us/pacio-adi/ValueSet/PADIInterventionPreferencesOrdinalVS')).exists() implies description.coding.where(code.memberOf('http://terminology.hl7.org/ValueSet/v2-0136')).exists()"
-//Expression: "category.coding.code.memberOf('http://hl7.org/fhir/us/pacio-adi/ValueSet/PADIInterventionPreferencesOrdinalVS').exists()"
-Severity:   #error
 
 /*
 Profile: PADIPersonalInterventionPreference
@@ -82,7 +59,7 @@ Description: "This profile is used to represent a personal preference for a type
 * subject 1..1 MS
 * subject only Reference($USCorePatient)
 
-//healthcare_agent//[TODO] requires guidance
+//healthcare_agent_appointment//[TODO] requires guidance
 * asNeeded[x] MS
 * asNeededCodeableConcept.text MS
 
