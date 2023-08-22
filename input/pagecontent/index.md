@@ -53,7 +53,7 @@ There is a very important distinction for the three types of information that wi
             <ul>
                 <li>Patient-authored information</li>
                 <li>Used as a tool for sharing an individual’s (patient’s) medical treatment and intervention goals, preferences, and priorities (GPP)</li>
-                <li>Provides guidance that a patient would want known  to inform care planning during a potential future medical emergency, in the case where the patient is unable to communicate with caregivers and medical personnel</li>
+                <li>Provides guidance that a patient would want known to inform care planning during a potential future medical emergency, in the case where the patient is unable to communicate with caregivers and medical personnel</li>
                 <li>There is NO “contract” between the author (patient) and any other party involved in the future medical emergency that the GPP is required to be followed (i.e., no offer or acceptance, no consideration, no consequences for failure to follow the patient’s directives)</li>
             </ul>
         </td>
