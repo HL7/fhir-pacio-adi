@@ -1,7 +1,7 @@
-Profile: PADIHeader
+Profile: ADICompositionHeader
 Parent: clinicaldocument
-Id: PADI-Header
-Title: "PACIO ADI Header"
+Id: ADI-Composition-Header
+Title: "ADI Composition Header"
 Description: "This abstract profile defines constraints that represent common administrative and demographic concepts for advance directives information used in US Realm clinical documents."
 
 * ^abstract = true 
@@ -24,24 +24,24 @@ Description: "This abstract profile defines constraints that represent common ad
 
 * extension contains
     padi-versionNumber-extension named VersionNumber 0..1 MS and
+    padi-effective-date-extension named EffectiveDateExtension 0..1 and
     padi-jurisdiction-extension named Jurisdiction 0..* and 
-    padi-dataEnterer-extension named DataEntererExtension 0..1 MS and
-    padi-informant-extension named InformatExtension 0..* MS and
-    padi-informationRecipient-extension named InformationRecipientExtension 0..* MS and
-    padi-participant-extension named ParticipantExtension 0..* MS and
-    padi-performer-extension named PerformerExtension 0..* MS and
-    padi-authorization-extension named AuthorizationExtension 0..* MS and
-    padi-order-extension named OrderExtension 0..* MS
+    padi-dataEnterer-extension named DataEntererExtension 0..1 and
+    padi-informant-extension named InformantExtension 0..* and
+  //  padi-informationRecipient-extension named InformationRecipientExtension 0..* MS and
+    padi-participant-extension named ParticipantExtension 0..* and
+    padi-performer-extension named PerformerExtension 0..* and
+    padi-clause-extension named ClauseExtension 0..*
 
 * language 1..1 MS
 * identifier 1..1 MS
 * type MS
-* type from PADIAdvanceDirectiveCategoriesVS (extensible)
+* type from $PADIAdvanceDirectiveCategories (extensible)
 
 * category 1..1 MS
 * subject 1..1 MS
 * subject only Reference($USCorePatient)
-* encounter MS
+
 * encounter only Reference($USCoreEncounter)
 * date MS
 * author MS
@@ -59,9 +59,9 @@ Description: "This abstract profile defines constraints that represent common ad
 * attester ^slicing.ordered = false   // can be omitted, since false is the default
 * attester ^slicing.description = "Slice based on $this value"
 * attester contains
-    legal_attester 0..1 MS and
-    notary_attester 0..* MS and
-    witness_attester 0..* MS
+    legal_attester 0..1 and
+    notary_attester 0..* and
+    witness_attester 0..* 
 * attester[legal_attester].mode 1..1 MS
 * attester[legal_attester].mode = #legal
 * attester[legal_attester].party 1..1 MS
@@ -78,6 +78,9 @@ Description: "This abstract profile defines constraints that represent common ad
 * custodian 1..1 MS
 * custodian only Reference ($USCoreOrganization)
 
+* section.extension contains    
+    padi-clause-extension named ClauseExtension 0..*
+    
 // need to add notes on which attester roles there are. Change name of personal_attester to witness_attester professional_attester to notary_attester
 // Need to add an extension with a code that explains the role, witness or notary. Others?
 
