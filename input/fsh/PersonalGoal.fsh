@@ -11,8 +11,8 @@ Description: "This profile defines the base requirements for all ADI Goals."
 
 * text 1..1 MS
 
-* category MS
-* category.text MS
+* category 
+* category.text 
 * description 1..1 MS
 * description.extension contains
     padi-contextualValue-extension named ContextualValueExtension 0..1
@@ -23,9 +23,6 @@ Description: "This profile defines the base requirements for all ADI Goals."
 
 * expressedBy 1..1 MS
 * expressedBy only Reference($USCorePatient)
-
-
-
 
 
 

@@ -24,7 +24,7 @@ Description: "This abstract profile defines constraints that represent common ad
 
 * extension contains
     padi-versionNumber-extension named VersionNumber 0..1 MS and
-    padi-effective-date-extension named EffectiveDateExtension 0..1 MS and
+    padi-effective-date-extension named EffectiveDateExtension 0..1 and
     padi-jurisdiction-extension named Jurisdiction 0..* and 
     padi-dataEnterer-extension named DataEntererExtension 0..1 and
     padi-informant-extension named InformantExtension 0..* and
@@ -59,9 +59,9 @@ Description: "This abstract profile defines constraints that represent common ad
 * attester ^slicing.ordered = false   // can be omitted, since false is the default
 * attester ^slicing.description = "Slice based on $this value"
 * attester contains
-    legal_attester 0..1 MS and
-    notary_attester 0..* MS and
-    witness_attester 0..* MS
+    legal_attester 0..1 and
+    notary_attester 0..* and
+    witness_attester 0..* 
 * attester[legal_attester].mode 1..1 MS
 * attester[legal_attester].mode = #legal
 * attester[legal_attester].party 1..1 MS
