@@ -33,7 +33,7 @@ A subsequent version of this IG will define the minimum conformance requirements
 Advance directive interoperability is a complex area that involves many stakeholders. The HL7 workgroup sponsor for this FHIR IG is Patient Empowerment. HL7 co-sponsor workgroups include Patient Care, Community Based Care and Privacy, and Orders & Observations. As part of PACIO’s main goal in improving care transitions, the Post-Acute Care Interoperability (PACIO) Community has adopted this project as a critical use case. The PACIO Community has a strong interest in the topic of advance directive interoperability with FHIR and will support the community engagement and technical FHIR IG development needed for advance directives interoperability. PACIO is supported by MITRE, CMS, ONC and many other stakeholders (clinical, technical, and industry associations).
 </p>
 <p>
-FHIR profiles have been developed for several existing FHIR resources to represent advance directive Content Type 1 such as: living will, durable medical power of attorney, personal health goals at end of life, care experience preferences, emergency intervention preferences under certain circumstances, and upon death preferences.
+FHIR profiles have been developed for several existing FHIR resources to represent advance directive content such as: living will, durable medical power of attorney, personal health goals at end of life, care experience preferences, end-of-life and emergency intervention preferences under certain circumstances, patient instructions (obligation, prohibitions, and consent), and portable medical orders for life sustaining treatments.
 </p>
 
 <a name="content_types">
@@ -116,9 +116,8 @@ Never before had the availability of verifiable digital advance directive docume
 <p>
 Providers understood that a person’s goals, preferences, and priorities for care were a critical element in a person-centered healthcare system.
 </p>
-
 <p>
-The role of technology and expanded adoption by the aging population, providers, and care teams has brought to the forefront the expectation of seamless accessibility of advance directive information.
+The role of technology and expanded adoption by the aging population, providers, and care teams brought to the forefront the expectation of seamless accessibility of advance directive information.
 </p>
 
 ### Audience/Expected Users
