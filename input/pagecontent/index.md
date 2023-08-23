@@ -1,4 +1,4 @@
-The Advance Directive Interoperability (ADI) FHIR implementation guide (IG) explains how to represent, exchange, and verify a person’s goals, preferences and priorities for medical treatment and interventions regarding future medical care.
+The Advance Directive Interoperability (ADI) FHIR implementation guide (IG) explains how to represent, exchange, and verify a person’s goals, preferences and priorities for medical treatment and interventions regarding future medical care. 
 
 <blockquote class="stu-note">
     <p>
@@ -6,7 +6,7 @@ The Advance Directive Interoperability (ADI) FHIR implementation guide (IG) expl
     </p>
 </blockquote>
 
-### Introduction
+### Introduction 
 <p>
 This ADI implementation guide (IG) describes how to use existing HL7 FHIR® standards to create, update, share, verify, and exchange information about an individual's advance medical goals, preferences, and priorities for care in the event the individual is unable to communicate this information to medical teams for themselves due to a health crisis. The term “advance directive” in this IG does not refer to a specific form, document, or method of memorializing advance healthcare decisions, but is instead an over-arching category.
 </p>
@@ -15,7 +15,7 @@ This ADI implementation guide (IG) describes how to use existing HL7 FHIR® stan
 Advance healthcare directives can be categorized into <a href="#content_types">three types of information</a>. The current version of this guide addresses Content Type I: Person-Authored Advance Directive Information. Subsequent versions of this guide will address the other two types; Content Type 2: Encounter-Centric Patient Instructions (obligations and prohibitions) and Content Type 3:  Portable Medical Orders for Life-Sustaining Treatment.
 </p>
 <p>
-Included in the content for this FHIR IG are person-authored advance directives and personal advance care plans which comprise Content Type 1, and also cover patient consent information attesting to their designation of a person, or persons, to serve as their healthcare agent.
+Included in the content for this FHIR IG are person-authored advance directives and personal advance care plans which comprise Content Type 1, and also cover patient consent information attesting to their designation of a person, or persons, to serve as their healthcare agent. 
 </p>
 <!-- Removed. Kept for review before ballot
 <p>
@@ -33,7 +33,7 @@ A subsequent version of this IG will define the minimum conformance requirements
 Advance directive interoperability is a complex area that involves many stakeholders. The HL7 workgroup sponsor for this FHIR IG is Patient Empowerment. HL7 co-sponsor workgroups include Patient Care, Community Based Care and Privacy, and Orders & Observations. As part of PACIO’s main goal in improving care transitions, the Post-Acute Care Interoperability (PACIO) Community has adopted this project as a critical use case. The PACIO Community has a strong interest in the topic of advance directive interoperability with FHIR and will support the community engagement and technical FHIR IG development needed for advance directives interoperability. PACIO is supported by MITRE, CMS, ONC and many other stakeholders (clinical, technical, and industry associations).
 </p>
 <p>
-FHIR profiles have been developed for several existing FHIR resources to represent advance directive content such as: living will, durable medical power of attorney, personal health goals at end of life, care experience preferences, end-of-life and emergency intervention preferences under certain circumstances, patient instructions (obligation, prohibitions, and consent), and portable medical orders for life sustaining treatments.
+FHIR profiles have been developed for several existing FHIR resources to represent advance directive Content Type 1 such as: living will, durable medical power of attorney, personal health goals at end of life, care experience preferences, emergency intervention preferences under certain circumstances, and upon death preferences. 
 </p>
 
 <a name="content_types">
@@ -133,6 +133,7 @@ The PACIO Project is a collaborative effort to advance interoperable health data
 The primary goal of the PACIO Project is to establish a framework for the development of Fast Healthcare Interoperability Resources (FHIR) technical implementation guides and reference implementations that will facilitate health data exchange through standards-based use case-driven application programming interfaces (APIs).
 </p>
 
+
 ### How to read this Guide
 This Guide is divided into several pages which are listed at the top of each page in the menu bar.
 <ul>
@@ -161,7 +162,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 </ul>
 
 
-### Key Terms and Acronyms
+### Key Terms and Acronyms 
 
 <table border="1">
     <tr>
@@ -233,56 +234,56 @@ This Guide is divided into several pages which are listed at the top of each pag
         <td style="padding: 7px;"><p>This profile represents a person participating in a person's advance directives in some capacity such as healthcare agent or healthcare agent advisor.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a></td>
     </tr>
-    <tr>
+    <tr>    
         <td style="padding: 7px;">5</td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-ParticipantConsent.html">ADI Participant Consent</a></td>
         <td style="padding: 7px;"><p>This profile is used to represent a consent for an advance directive participant such as a healthcare agent or advisor and power or limitation granted to such persons.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/consent.html">Consent</a></td>
     </tr>
-    <tr>
+    <tr>    
         <td style="padding: 7px;">6</td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-DocumentationObservation.html">ADI Documentation Observation</a></td>
         <td style="padding: 7px;"><p>This profile is used to indicate if additional advance directive documents, such as physician order for life sustaining treatment (MOLST or POLST) or Do Not Resuscitate Order (DNR) exist and a reference to the document.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
     </tr>
-        <tr>
+    <tr>    
         <td style="padding: 7px;">7</td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-Goal.html">ADI Goal</a></td>
         <td style="padding: 7px;"><p>This profile defines the base requirements for all ADI Goals.</p></td>
         <td style="padding: 7px;"><a href="https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-goal.html">US Core Goal</a></td>
     </tr>
-    <tr>
-        <td style="padding: 7px;">9</td>
+    <tr>    
+        <td style="padding: 7px;">8</td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-PersonalInterventionPreference.html">ADI Personal Intervention Preference</a></td>
         <td style="padding: 7px;"><p>This profile is used to represent a personal preference for a type of medical intervention (treatment).</p></td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-Goal.html">ADI Goal</a></td>
     </tr>
-    <tr>
-        <td style="padding: 7px;">10</td>
+    <tr>    
+        <td style="padding: 7px;">9</td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-CareExperiencePreference.html">ADI Care Experience Preference</a></td>
         <td style="padding: 7px;"><p>This profile is a clinical statement that presents the author's personal thoughts about something he or she feels is relevant to his or her care experience and may be pertinent when planning his or her care.</p></td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-Goal.html">ADI Goal</a></td>
     </tr>
-    <tr>
-        <td style="padding: 7px;">11</td>
+    <tr>    
+        <td style="padding: 7px;">10</td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-PersonalGoal.html">ADI Personal Goal</a></td>
         <td style="padding: 7px;"><p>This profile is a statement that presents the author's personal health and treatment goals that are pertinent when planning his or her care.</p></td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-Goal.html">ADI Goal</a></td>
     </tr>
-    <tr>
-        <td style="padding: 7px;">12</td>
+    <tr>    
+        <td style="padding: 7px;">11</td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-PersonalPrioritiesOrganizer.html">ADI Personal Priorities Organizer</a></td>
         <td style="padding: 7px;"><p>This profile is used to represent a set of personal goals, preferences or care experiences in a preferred ranked order.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/list.html">List</a></td>
     </tr>
-    <tr>
-        <td style="padding: 7px;">13</td>
+    <tr>    
+        <td style="padding: 7px;">12</td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-OrganDonationObservation.html">ADI Organ Donation Observation</a></td>
         <td style="padding: 7px;"><p>This profile is used to represent the author's thoughts about organ donation.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
     </tr>
-    <tr>
-        <td style="padding: 7px;">14</td>
+    <tr>    
+        <td style="padding: 7px;">13</td>
         <td style="padding: 7px;"><a href="StructureDefinition-PADI-AutopsyObservation.html">ADI Autopsy Observation</a></td>
         <td style="padding: 7px;"><p>This profile is used to represent the author's thoughts about autopsy.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
