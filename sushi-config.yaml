@@ -18,7 +18,7 @@ title: PACIO Advance Directive Interoperability Implementation Guide
 status: draft
 publisher:
   name: HL7 Patient Empowerment Working Group
-  url: http://www.hl7.org/Special/committees/patientempowerment/index.cfm
+  url: http://www.hl7.org/Special/committees/patientempowerment
   email: patients@lists.HL7.org
 description: PACIO Advance Directive Interoperability Implementation Guide
 license: CC0-1.0
@@ -30,8 +30,9 @@ parameters:
   show-inherited-invariants: false
   apply-jurisdiction: true
   apply-publisher: true
+  path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
 copyrightYear: 2021+
-releaseLabel: STU1
+releaseLabel: STU 1 Ballot
 jurisdiction: urn:iso:std:iso:3166#US
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
@@ -41,46 +42,33 @@ menu:
   Home: index.html
   Table of Contents: toc.html
   Guidance:
-    Business Case: business_case.html
     Patient Stories and Personas: patient_stories_and_personas.html
     Use Cases: use_cases.html
     General Guidance: general_guidance.html
+    Formal Specification: formal_specification.html
     Security, Privacy, and Consent: security_privacy_consent.html
   FHIR Artifacts:
     Profiles: artifacts.html#2
     Extensions: artifacts.html#4
     Terminology: artifacts.html#5
-    Capability Statement: CapabilityStatement-padi.html
+    Capability Statement: CapabilityStatement-adi.html
     Examples: artifacts.html#6
-#    Search Parameters: 6_searchparameters.html
-  #Examples: artifacts.html#7
   Downloads: downloads.html
 
-# Old menu for reference
-#menu:
-#  Home: index.html
-#    Introduction: introduction.html
-#  How to read this Guide: how_to_read_this_guide.html
-#  ADI Business Case: ADI_business_case.html
-#  Patient Stories and Personas: patient_stories_and_personas.html
-#  ADI Actors: ADI_actors.html
-#  ADI Profiles: ADI_profiles.html
-#  Table of Contents: toc.html
-#  Underlying Technologies: underlying_technologies.html
-#  Use Case Example: advance_directive_use_case.html
-#  Profile Highlights and Guidance: profile_highlights_and_guidance.html
-#  Artifacts Summary: artifacts.html
-#  Other Resources: 
-#    FHIR Spec: http://hl7.org/fhir/R4/index.html
-#    Downloads: downloads.html downloads page is not included in the other PACIO
-
-# ╭───────────────────────────────────────package-list.json────────────────────────────────────────╮
-# │  To control the package-list.json using this config, uncomment and set the "history" property. │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-
-#resources:
-#  Coverage/CoverageEx1:
-#    name: Coverage Example 1
-#    description: Coverage Example 1
-#    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
-
+pages:
+  index.md:
+    title: Home
+  patient_stories_and_personas.md:
+    title: Patient Stories and Personas
+  use_cases.md:
+    title: Use Cases
+  general_guidance.md:
+    title: General Guidance
+  formal_specification.md:
+    title: Formal Specification
+  security_privacy_consent.md:
+    title: Security, Privacy, and Consent
+  artifacts.html:
+    title: FHIR Artifacts
+  downloads.md:
+    title: Downloads

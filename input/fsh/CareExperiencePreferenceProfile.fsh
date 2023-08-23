@@ -30,6 +30,18 @@ Profile: PADICareExperiencePreference
 Parent: PADIGoal
 Id: PADI-CareExperiencePreference
 Title: "ADI Care Experience Preference"
-Description: "Care Experience Preference is a clinical statement that presents the author's personal thoughts about something he or she feels is relevant to his or her care experience and may be pertinent when planning his or her care."
+Description: "Care Experience Preference is a clinical statement that presents the author's personal thoughts about something a person feels is relevant to their care experience and may be pertinent when planning their care."
 
-* category from PADICareExperiencePreferencesVS (extensible)
+
+* category ^slicing.discriminator.type = #value 
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category ^slicing.ordered = false   // can be omitted, since false is the default
+* category ^slicing.description = "Slice based on $this value"
+
+* category 2..*
+* category from $PADICareExperiencePreferences (extensible)
+* category contains
+    type 1..1 MS 
+    
+* category[type] = PADIGoalCategoryCS#care-experience-preference
