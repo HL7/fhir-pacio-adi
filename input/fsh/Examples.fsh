@@ -92,7 +92,6 @@ Usage: #example
 * name[0].family = "McBee"
 * name[0].given[0] = "Roger"
 * name[0].given[1] = "Rienman"
-* name[0].text = "McBee, Roger Rienman"
 
 * telecom[0].system = #phone
 * telecom[0].value = "+1(469)238-2858"
@@ -142,19 +141,8 @@ Usage: #example
 * extension[padi-dataEnterer-extension].valueReference = Reference(Example-McBee-Patient1)
 // witness Sally Bobbins
 
-
-
-* extension[padi-informant-extension].valueReference = Reference(Example-McBee-HealthcareAgent1)
-// * extension[padi-informationRecipient-extension].valueReference = Reference(Example-McBee-HealthcareAgent1)
-* extension[padi-participant-extension].valueReference = Reference(Example-McBee-HealthcareAgent1)
-* extension[padi-performer-extension].valueReference.display = "Advance Directives, Inc."
-
-
-
-
-* identifier.system = "urn:oid:2.16.840.1.113883.4.823.1.7124"
+* identifier.system = "urn:oid:"
 * identifier.value = "20130607100315-CCDA-CCD"
-
 
 
 * status = #final
@@ -170,10 +158,10 @@ Usage: #example
 // Need to include attesters
 
 // Line 202
-* section[healthcare_agent].title = "Appointment of a Primary Healthcare Agent and Alternate Healthcare Agents"
-* section[healthcare_agent].code = $LOINC#81335-2 "Healthcare Agent"
-* section[healthcare_agent].text.status = #additional
-* section[healthcare_agent].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+* section[healthcare_agent_appointment].title = "Appointment of a Primary Healthcare Agent and Alternate Healthcare Agents"
+* section[healthcare_agent_appointment].code = $LOINC#81335-2 "Healthcare Agent"
+* section[healthcare_agent_appointment].text.status = #additional
+* section[healthcare_agent_appointment].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p><b>It is very important for you to discuss your medical treatment goals and wishes with your healthcare agent, your family, and your medical care providers.</b> Keep in mind that advance medical directives are simply expressions of your medical treatment goals and preferences. There is no guarantee that your medical care providers will follow all of your wishes, but one thing is certain: <b>If your advance medical directives cannot be quickly located and retrieved in a time of need, then medical care providers, your family and friends will not be able to take your wishes into consideration when they make critical decisions regarding your treatment.</b></p>
 
 <p><i>IF THIS PART OF THE uADD™ IS LEFT BLANK, I DO NOT WANT TO DESIGNATE A HEALTHCARE AGENT AT THIS TIME, AND I DO NOT WANT A DEFAULT HEALTHCARE AGENT DESIGNATED FOR ME UNDER APPLICABLE LAW. I TRUST THE DOCTORS AND NURSES TREATING ME TO MAKE MEDICAL TREATMENT DECISIONS REGARDING MY TREATMENT AND CARE.</i></p>
@@ -210,17 +198,9 @@ Usage: #example
 
 </div>"
 
-* section[healthcare_agent].extension[padi-clause-extension].extension[Clause].valueMarkdown = "I am appointing the person or persons below as my healthcare agent and, if applicable, as my
-alternate healthcare agent(s), and I am granting to each of them the legal authority to make
-medical treatment decisions on my behalf and to consult with my physician and others. The
-power to make medical treatment decisions that I am granting to my healthcare agent(s) is
-expressly subject to, and limited by, the choices that I have expressed elsewhere.
-If my medical treatment choices are not clear, I am authorizing and directing my healthcare
-agent to make decisions in my best interests and based on what is known of my wishes."
-
-* section[healthcare_agent].entry[+] = Reference(Example-McBee-HealthcareAgent1)
-* section[healthcare_agent].entry[+] = Reference(Example-McBee-HealthcareAgent2)
-* section[healthcare_agent].entry[+] = Reference(Example-McBee-HealthcareAgentConsent)
+* section[healthcare_agent_appointment].entry[+] = Reference(Example-McBee-HealthcareAgent1)
+* section[healthcare_agent_appointment].entry[+] = Reference(Example-McBee-HealthcareAgent2)
+* section[healthcare_agent_appointment].entry[+] = Reference(Example-McBee-HealthcareAgentConsent)
 // will need to add HCA authority when the profile is created
 
 
@@ -250,7 +230,7 @@ agent to make decisions in my best interests and based on what is known of my wi
 * section[gpp_personal_care_experience].entry[+] = Reference(Example-McBee-CareExperiencePreference2)
 * section[gpp_personal_care_experience].entry[+] = Reference(Example-McBee-CareExperiencePreference3)
 * section[gpp_personal_care_experience].entry[+] = Reference(Example-McBee-CareExperiencePreference4)
-* section[gpp_personal_care_experience].entry[+] = Reference(Example-McBee-PersonalPrioritiesOrganizer1)
+
 
 
 // Line 477
@@ -327,10 +307,10 @@ agent to make decisions in my best interests and based on what is known of my wi
 
 
 // Line 1205
-* section[witness_and_notary].title = "Witnesses and Notary"
-* section[witness_and_notary].code = $LOINC#81339-4 "Witness and Notary Document"
-* section[witness_and_notary].text.status = #additional
-* section[witness_and_notary].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+* section[administrative_information].title = "Witnesses and Notary"
+* section[administrative_information].code = $LOINC#81339-4 "Witness and Notary Document"
+* section[administrative_information].text.status = #additional
+* section[administrative_information].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 
 
 <p><b>I am emotionally and mentally competent to make this uADD.  I understand the purpose and effect of this uADD, I agree with everything that is written in this uADD, and I have made this uADD knowingly, willingly and after careful deliberation.</b></p>
@@ -387,7 +367,7 @@ agent to make decisions in my best interests and based on what is known of my wi
 // Healthcare Agent examples
 
 Instance: Example-McBee-HealthcareAgent1
-InstanceOf: PADIParticipant
+InstanceOf: PADIHealthcareAgent
 Description: "Example Patient McBee Healthcare Agent (Sally Bobbins)"
 Usage: #example
 * text.status = #additional
@@ -403,9 +383,8 @@ Usage: #example
 * patient = Reference(Example-McBee-Patient1)
 //* relationship[heatlhcare_agent_or_proxy_role] = $LOINC#75783-1 "Primary healthcare agent [Reported]"
 
-* name[0].family = "Bobbins"
-* name[0].given[0] = "Sally"
-* name[0].text = "Sally, Bobbins"
+* name[0].family = "Sally"
+* name[0].given[0] = "Bobbins"
 * telecom[0].system = #email
 * telecom[0].value = "SallyBobbins@example.com"
 * telecom[0].use = #home
@@ -413,8 +392,8 @@ Usage: #example
 
 
 Instance: Example-McBee-HealthcareAgent2
-InstanceOf: PADIParticipant
-Description: "Example Patient McBee Healthcare Agent (S. Leonard Susskind)"
+InstanceOf: PADIHealthcareAgent
+Description: "Example Patient McBee Healthcare Agent (S. Leaonard Susskind)"
 Usage: #example
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
@@ -428,11 +407,10 @@ Usage: #example
 
 * patient = Reference(Example-McBee-Patient1)
 //* relationship[heatlhcare_agent_or_proxy_role] = $LOINC#75784-9 "First Alternate Healthcare Agent [Reported]"
-* relationship = $HL7RoleCode#FRND "unrelated friend"
+* relationship[personal_and_legal_relationship_role] = $HL7RoleCode#FRND "unrelated friend"
 
 * name[0].family = "S. Leonard"
 * name[0].given[0] = "Susskind"
-* name[0].text = "Susskind, S. Leonard"
 * telecom[0].system = #email
 * telecom[0].value = "ssuskind@example.com"
 * telecom[0].use = #home
@@ -440,7 +418,7 @@ Usage: #example
 
 // TODO update text
 Instance: Example-McBee-HealthcareAgentConsent
-InstanceOf: PADIParticipantConsent
+InstanceOf: PADIHealthcareAgentConsent
 Description: "Example Patient McBee Healthcare Agent Consent"
 Usage: #example
 * text.status = #additional
@@ -462,9 +440,9 @@ Usage: #example
 * provision.actor[+].role = $LOINC#75784-9 "First alternate healthcare agent [Reported]"
 * provision.actor[=].reference = Reference(Example-McBee-HealthcareAgent2)
 
-* provision.action[+] = PADIHCADecisionsCS#intubation "Intubation"
-* provision.action[+] = PADIHCADecisionsCS#tube-feeding "Tube feeding"
-* provision.action[+] = PADIHCADecisionsCS#life-support "Life support"
+* provision.action[+] = $LOINC#75787-2 "Advance directive - request for intubation"
+* provision.action[+] = $LOINC#75788-0 "Advance directive - request for tube feeding"
+* provision.action[+] = $LOINC#75789-8 "Advance directive - request for life support"
 
 * provision.purpose = http://terminology.hl7.org/CodeSystem/v3-ActReason#PWATRNY
 
@@ -481,14 +459,13 @@ Usage: #example
 
 // TODO update text
 //* text.status = #additional
-//* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>status</b>: active</p><p><b>intent</b>: proposal</p><p><b>category</b>: <span title='Codes: {http://snomed.info/sct 736366004}'>Advance care plan</span></p><p><b>subject</b>: <a href='Patient-Example-Smith-Johnson-Patient1.html'>Betsy Smith-Johnson</a> ; BetsySJ@example.com; gender: female; birthDate: 1950-11-15</p><p><b>addresses</b>: </p><ul><li><span>Unconscious, in a coma, or in a persistent vegetative state with little or no chance of recovery</span></li><li><span>Persistent vegetative state (SNOMED CT 24473007)</span></li><li><span>Irreversible coma (SNOMED CT 73453007)</span></li></ul><p><b>goal</b>: </p><ul><li><a href='Goal-Example-Smith-Johnson-PersonalGoal1.html'><span title='Codes: {http://loinc.org 81378-2}'>Goals, preferences, and priorities under certain health conditions [Reported]</span></a>; <span title='Codes: '>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Avoiding prolonged dependence on machines, Not being a physical burden to my family, Dying at home</span></li><li><a href='Goal-Example-Smith-Johnson-PersonalInterventionPreference3.html'><span title='Codes: {http://loinc.org 75778-1}'>Information to tell doctors if I have a severe, irreversible brain injury or illness and can't dress, feed, or bathe myself, or communicate my medical wishes, but can be kept alive [Reported]</span></a>; <span title='Codes: '>If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings, I would like for them to keep trying life-sustaining treatments until my healthcare agent decides it is time to stop and such treatments and let me die gently.</span></li><li><a href='Goal-Example-Smith-Johnson-CareExperiencePreference6.html'><span title='Codes: {http://loinc.org 81365-9}'>Religious or cultural affiliation contact to notify [Reported]</span></a>; <span title='Codes: '>Please attempt to notify someone from my religion at the following phone number: If I have included one: Catholic</span></li><li><a href='Goal-Example-Smith-Johnson-CareExperiencePreference5.html'><span title='Codes: {http://loinc.org 81364-2}'>Religious or cultural beliefs [Reported]</span></a>; <span title='Codes: '>If I appear to be approaching the end of my life, here are some things that I would like for my caregivers to know about my faith and my religion. Please call Father Mark if my condition warrants the services of a priest.</span></li><li><a href='Goal-Example-Smith-Johnson-CareExperiencePreference1.html'><span title='Codes: {http://loinc.org 75775-7}'>Decision to inform doctors and nurses about the role religion, faith, culture, or spirituality play in my life [Reported]</span></a>; <span title='Codes: '>Here are some thoughts that I would like for my medical care team and my healthcare agent(s) to know about the role that religion, faith or spirituality play in my life: I am Catholic, please call Father Mark at Saint Catherine's on Main Street.</span></li></ul></div>
+//* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>status</b>: active</p><p><b>intent</b>: proposal</p><p><b>category</b>: <span title='Codes: {http://snomed.info/sct 736366004}'>Advance care plan</span></p><p><b>subject</b>: <a href='Patient-Example-Smith-Johnson-Patient1.html'>Betsy Smith-Johnson</a> ; BetsySJ@example.com; gender: female; birthDate: 1950-11-15</p><p><b>addresses</b>: </p><ul><li><span>Unconscious, in a coma, or in a persistent vegetative state with little or no chance of recovery</span></li><li><span>Persistent vegetative state (SNOMED CT 24473007)</span></li><li><span>Irreversible coma (SNOMED CT 73453007)</span></li></ul><p><b>goal</b>: </p><ul><li><a href='Goal-Example-Smith-Johnson-PersonalGoal1.html'><span title='Codes: {http://loinc.org 81378-2}'>Goals, preferences, and priorities under certain health conditions [Reported]</span></a>; <span title='Codes: '>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Avoiding prolonged dependence on machines, Not being a physical burden to my family, Dying at home</span></li><li><a href='Goal-Example-Smith-Johnson-PersonalInterventionPreference3.html'><span title='Codes: {http://loinc.org 75778-1}'>Information to tell doctors if I have a severe, irreversible brain injury or illness and can't dress, feed, or bathe myself, or communicate my medical wishes, but can be kept alive [Reported]</span></a>; <span title='Codes: '>If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings, I would like for them to keep trying life-sustaining treatments until my healthcare agent decides it is time to stop and such treatments and let me die gently.</span></li><li><a href='Goal-Example-Smith-Johnson-CareExperiencePreference6.html'><span title='Codes: {http://loinc.org 81365-9}'>Religious affiliation contact to notify [Reported]</span></a>; <span title='Codes: '>Please attempt to notify someone from my religion at the following phone number: If I have included one: Catholic</span></li><li><a href='Goal-Example-Smith-Johnson-CareExperiencePreference5.html'><span title='Codes: {http://loinc.org 81364-2}'>Religious beliefs [Reported]</span></a>; <span title='Codes: '>If I appear to be approaching the end of my life, here are some things that I would like for my caregivers to know about my faith and my religion. Please call Father Mark if my condition warrants the services of a priest.</span></li><li><a href='Goal-Example-Smith-Johnson-CareExperiencePreference1.html'><span title='Codes: {http://loinc.org 75775-7}'>Decision to inform doctors and nurses about the role religion, faith, or spirituality play in my life [Reported]</span></a>; <span title='Codes: '>Here are some thoughts that I would like for my medical care team and my healthcare agent(s) to know about the role that religion, faith or spirituality play in my life: I am Catholic, please call Father Mark at Saint Catherine's on Main Street.</span></li></ul></div>
 
 
 * status = #active
 * intent = #proposal
 
 * category[advance_care_planning] = $SNOMEDCT#736366004 "Advance care plan"
-* title = "Care Plan for Unconscious, vegetative state, coma"
 
 * subject = Reference(Example-Smith-Johnson-Patient1)
 
@@ -519,8 +496,7 @@ Usage: #example
 <p><i>Like Bach, especially the cantatas.  St. Martin in the Fields</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
-* category[+] = $LOINC#81360-0 "My likes and joys [Reported]"
+* category = $LOINC#81360-0 "My likes and joys [Reported]"
 * description.text = "Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed: Like Bach, especially the cantatas.  St. Martin in the Fields"
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -538,8 +514,7 @@ Usage: #example
 <p><i>I don’t like being treated like an object. I would like to be greeted like a person before working on me.</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
-* category[+] = $LOINC#81380-8 "Goals, preferences, and priorities for care experience [Reported]"
+* category = $LOINC#81380-8 "Goals, preferences, and priorities for care experience [Reported]"
 * description.text = "How to care for me: If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me: I don’t like being treated like an object. I would like to be greeted like a person before working on me."
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -557,8 +532,7 @@ Usage: #example
 <p><i>Not Religious</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
-* category[+] = $LOINC#81365-9 "Religious or cultural affiliation contact to notify [Reported]"
+* category = $LOINC#81365-9 "Religious Affiliation Contact to Notify [Reported]"
 * description.text = "Please attempt to notify someone from my religion at the following phone number: If I have included one - Not Religious"
 * description.extension[padi-contextualValue-extension].extension[Context].valueString = "Please attempt to notify someone from my religion at the following phone number"
 * description.extension[padi-contextualValue-extension].extension[Value].valueString = "If I have included one - Not Religious"
@@ -576,8 +550,7 @@ Usage: #example
 <p><i>I am awaiting a message from the Noble Committee. Please keep me alive if I look promising this year.</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
-* category[+] = $LOINC#81366-7 "Unfinished business [Reported]"
+* category = $LOINC#81366-7 "Unfinished business [Reported]"
 * description.text = "If it appears that I am approaching the end of my life, and I cannot communicate with persons around me, I would want my doctors and nurses, my family, and my friends to know about some unfinished business that I need to address: I am awaiting a message from the Noble Committee. Please keep me alive if I look promising this year."
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -635,8 +608,7 @@ Usage: #example
 <p><i>Being at peace with my God</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#personal-goal "Personal Goal"
-* category[+] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
+* category = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
 * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Being at peace with my God"
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -653,8 +625,7 @@ Usage: #example
 <p><i>Dying at home</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#personal-goal "Personal Goal"
-* category[+] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
+* category = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
 * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Dying at home"
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -671,8 +642,7 @@ Usage: #example
 <p><i>Being able to feed, bathe, and take care of myself</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#personal-goal "Personal Goal"
-* category[+] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
+* category = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
 * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:  Being able to feed, bathe, and take care of myself"
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -689,8 +659,7 @@ Usage: #example
 <p><i>Being free from pain</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#personal-goal "Personal Goal"
-* category[+] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
+* category = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
 * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Being free from pain"
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -708,8 +677,7 @@ Usage: #example
 <p><i>Resolving conflicts</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#personal-goal "Personal Goal"
-* category[+] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
+* category = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
 * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Resolving conflicts"
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -727,8 +695,7 @@ Usage: #example
 <p><i>Being with my family</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#personal-goal "Personal Goal"
-* category[+] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
+* category = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
 * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Being with my family"
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -746,8 +713,7 @@ Usage: #example
 <p><i>Not being a financial burden to my family</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#personal-goal "Personal Goal"
-* category[+] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
+* category = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
 * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Not being a financial burden to my family"
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -764,8 +730,7 @@ Usage: #example
 <p>If I am having significant pain or suffering, <i>I would like my doctors to consult a Supportive and Palliative Care Team to help treat my physical, emotional and spiritual discomfort, and to support my family.</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#intervention-preference "Intervention preference"
-* category[+] = $LOINC#75776-5 "Preference on consulting a supportive and palliative care team to help treat physical, emotional, and spiritual discomfort and support family [Reported]"
+* category = $LOINC#75776-5 "Preference on consulting a supportive and palliative care team to help treat physical, emotional, and spiritual discomfort and support family [Reported]"
 * description.text = "If I am having significant pain or suffering, I would like my doctors to consult a Supportive and Palliative Care Team to help treat my physical, emotional and spiritual discomfort, and to support my family."
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -782,8 +747,7 @@ Usage: #example
 <p>If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings, <i>I prefer that they stop all life-sustaining treatments and let me die as gently as possible.  I realize that I will not receive life-sustaining treatments including but not limited to breathing machines, blood transfusions, dialysis, heart machines, and IV drugs to keep my heart working.  I also realize that medical personnel will not attempt cardiopulmonary resuscitation (CPR), and they will allow me to die naturally.</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#intervention-preference "Intervention preference"
-* category[+] = $LOINC#75777-3 "Information to tell doctors if my health deteriorates due to a terminal illness and I am unable to interact meaningfully with family, friends, or surroundings [Reported]"
+* category = $LOINC#75777-3 "Information to tell doctors if my health deteriorates due to a terminal illness and I am unable to interact meaningfully with family, friends, or surroundings [Reported]"
 * description.text = "If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings, I prefer that they stop all life-sustaining treatments and let me die as gently as possible.  I realize that I will not receive life-sustaining treatments including but not limited to breathing machines, blood transfusions, dialysis, heart machines, and IV drugs to keep my heart working.  I also realize that medical personnel will not attempt cardiopulmonary resuscitation (CPR), and they will allow me to die naturally."
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -800,8 +764,7 @@ Usage: #example
 <p>I expressly authorize my attending physician to withhold or withdraw artificial nutrition and hydration and instruct my healthcare agent (or, if I have not designated a healthcare agent, my default surrogate), my family and the doctors and nurses who are taking care of me to respect this request.</p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#intervention-preference "Intervention preference"
-* category[+] = $LOINC#77352-3 "Thoughts on artificial nutrition and hydration [Reported]"
+* category = $LOINC#77352-3 "Thoughts on artificial nutrition and hydration [Reported]"
 * description.text = "If my response above indicates that I do not want life-sustaining treatments, I expressly authorize my attending physician to withhold or withdraw artificial nutrition and hydration and instruct my healthcare agent (or, if I have not designated a healthcare agent, my default surrogate), my family and the doctors and nurses who are taking care of me to respect this request."
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -817,8 +780,7 @@ Usage: #example
 <p>If I have a severe, irreversible brain injury or illness and can’t dress, feed, or bathe myself, or communicate my medical wishes, but doctors can keep me alive in this condition for a long period of time, <i>I would like for them to keep trying life-sustaining treatments for 2 months.</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#intervention-preference "Intervention preference"
-* category[+] = $LOINC#75778-1 "Information to tell doctors if I have a severe, irreversible brain injury or illness and can't dress, feed, or bathe myself, or communicate my medical wishes, but can be kept alive [Reported]"
+* category = $LOINC#75778-1 "Information to tell doctors if I have a severe, irreversible brain injury or illness and can't dress, feed, or bathe myself, or communicate my medical wishes, but can be kept alive [Reported]"
 * description.text = "If I have a severe, irreversible brain injury or illness and can’t dress, feed, or bathe myself, or communicate my medical wishes, but doctors can keep me alive in this condition for a long period of time, I would like for them to keep trying life-sustaining treatments for 2 months."
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -835,8 +797,7 @@ Usage: #example
 <p><i>I want my healthcare agent to make the decision, but if my chances are slim to none that I'll leave the hospital, even if they resuscitate me, then I absolutely do not want CPR.</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#intervention-preference "Intervention preference"
-* category[+] = $LOINC#75779-9 "Thoughts on cardiopulmonary resuscitation (CPR) [Reported]"
+* category = $LOINC#75779-9 "Thoughts on cardiopulmonary resuscitation (CPR) [Reported]"
 * description.text = "Although I understand that, depending on the situation and circumstances, medical personnel may not be able to follow my wishes, here are my general thoughts on cardiopulmonary resuscitation (CPR): I do not want CPR attempted."
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -853,8 +814,7 @@ Usage: #example
 <p><i>I want my healthcare agent to make the decision, but if my chances are slim to none that I'll leave the hospital, even if they resuscitate me, then I absolutely do not want CPR.</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#intervention-preference "Intervention preference"
-* category[+] = $LOINC#75779-9 "Thoughts on cardiopulmonary resuscitation (CPR) [Reported]"
+* category = $LOINC#75779-9 "Thoughts on cardiopulmonary resuscitation (CPR) [Reported]"
 * description.text = "Although I understand that, depending on the situation and circumstances, medical personnel may not be able to follow my wishes, here are my general thoughts on cardiopulmonary resuscitation (CPR): I want my healthcare agent to make the decision, but if my chances are slim to none that I'll leave the hospital, even if they resuscitate me, then I absolutely do not want CPR."
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -871,8 +831,7 @@ Usage: #example
 <p><i>At home.I would like to receive hospice care at home if possible.</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#intervention-preference "Intervention preference"
-* category[+] = $LOINC#75780-7 "Preferred location to spend final days if possible to choose [Reported]"
+* category = $LOINC#75780-7 "Preferred location to spend final days if possible to choose [Reported]"
 * description.text = "If it were possible to choose, here is where I would like to spend my final days: At home.I would like to receive hospice care at home if possible."
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -890,8 +849,7 @@ Usage: #example
 <p>If I were to pass away: <i>I have a plot. My wife has the details, also my secretary, Ms. Williams, will know.</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#intervention-preference "Intervention preference"
-* category[+] = $LOINC#81356-8 "Death arrangements [Reported]"
+* category = $LOINC#81356-8 "Death arrangements [Reported]"
 * description.text = "Here are my thoughts on funeral or burial plans: If I were to pass away:</b> <i>I have a plot. My wife has the details, also my secretary, Ms. Williams, will know."
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -986,7 +944,7 @@ Usage: #example
 // Provenance Examples
 
 Instance: Example-McBee-PACPProvenance1
-InstanceOf: ADIProvenance
+InstanceOf: PADIProvenance
 Description: "Example Patient McBee Provenance"
 Usage: #example
 
