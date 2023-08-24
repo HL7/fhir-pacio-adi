@@ -10,12 +10,27 @@ Description: "This profile is used to represent a personal preference for a type
 * category ^slicing.ordered = false   // can be omitted, since false is the default
 * category ^slicing.description = "Slice based on $this value"
 
-* category 2..*
-* category from PADIInterventionPreferencesVS (extensible)
+* category 1..*
+//* category from PADIInterventionPreferencesVS (extensible) //moved from 'category' to 'code' FHIR-35078 
 * category contains
     type 1..1 MS 
     
 * category[type] = PADIPreferenceCategoryCS#intervention-preference
+
+* code 1..1 MS
+* code from PADIInterventionPreferencesVS (extensible)
+* code.text MS
+
+* text 1..1 MS
+
+* status = #final
+
+* subject 1..1 MS
+* subject only Reference($USCorePatient)
+
+* value[x] 1..1 MS
+
+* extension contains padi-contextualValue-extension named ContextualValueExtension 0..1
 
 // TODO Fix invariant
 //* obeys value-personal-intervention-preference-ordinal
