@@ -19,6 +19,23 @@ Use cases in this IG will provide requirements for systems to use FHIR RESTful o
 
 In Use Case 1, the person that wants to create their advance directive information in a digital form enters information in a content creator system. The content creator system ensures the information is stored and is available for the steps in the process that are described in the following use cases.  
 
+##### Use Case 1 Actor Transition Diagram
+<br clear="all" />
+<img src="./use_case_1_1.png" alt="Use Case 21: Diagram 1"/>
+<br clear="all" />
+
+##### Use Case 1 Processes Steps
+
+<p>
+In Use Case 1, the process is started by a person wanting to create advance directive information in a digital form. The precondition for the process includes the system is able to capture and make the AD Info available in standardized digital format. The person creates AD info in the system or optionally in a different system. AD info is stored and indexed by a custodian system responsible for information exchange. Finally, the AD Info is available in digital form within a Custodian System that can share as a FHIR Client and/or support query as a FHIR Server.
+</p>
+
+##### Use Case 1 Sequence Diagram
+
+<img src="./use_case_1_2.png" alt="Use Case 21: Diagram 2"/>
+<br clear="all" />
+
+
 #### Use Case 2: Share [Content]
 
 ##### Use Case 2 Description
@@ -65,11 +82,8 @@ In Use Case 3, the process is started when a Practitioner wants a person’s AD 
 
 
 ##### Use Case 3 Sequence Diagram
-<img src="./use_case_3_4_1.png" alt="Use Case 3: Diagram 4.1" style="width: 100%; float: none; align: middle;"/>
+<img src="./use_case_3_4.png" alt="Use Case 3: Diagram 4.1" style="width: 100%; float: none; align: middle;"/>
 
-<img src="./use_case_3_4_2.png" alt="Use Case 3: Diagram 4.2" style="width: 100%; float: none; align: middle;"/>
-
-<img src="./use_case_3_4_3.png" alt="Use Case 3: Diagram 4.3" style="width: 100%; float: none; align: middle;"/>
 
 #### Use Case 4: Update [Content]
 
@@ -113,6 +127,7 @@ In Use Case 5, a Content Verifier has advance directive information which it pre
 
 In Use Case 5, the process is started by a content verifier who would like to confirm they have the current version of advance directive information. The precondition for the process is the content verifier has a version of AD information from an earlier time. First, the content verifier performs a GET DocumentReference with known setID to content custodian.  The content custodian returns the DocumentReference.  If the DocumentReference returned has a `status` of `superseded` then the document has been replaced and the Content Verifier does a second query for a DocumentReference based on the `relatesto.code` referenced by the superseded DocumentReference. The content verifier will read the wanted documents using a GET operation on the uURL included in the “current” DocumentReference and decode the document content if necessary.
 
+##### Use Case 5 Sequence Diagram
+
 <img src="./use_case_5_3.png" alt="Use Case 5: Diagram 3" style="width: 100%; float: none; align: middle;"/>
 
-<img src="./use_case_5_4.png" alt="Use Case 5: Diagram 4" style="width: 100%; float: none; align: middle;"/>
