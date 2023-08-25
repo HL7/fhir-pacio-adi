@@ -608,171 +608,158 @@ Usage: #example
 
 // // Observations
 // // Care Experience Preferences
-// Instance: Example-Smith-Johnson-CareExperiencePreference1
-// InstanceOf: PADICareExperiencePreference
-// Description: "Example Patient Smith-Johnson Care Experience Preference (Role of Religion)"
-// Usage: #example
+Instance: Example-Smith-Johnson-CareExperiencePreference1
+InstanceOf: PADICareExperiencePreference
+Description: "Example Patient Smith-Johnson Care Experience Preference (Role of Religion)"
+Usage: #example
 
-// * text.status = #generated
-// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-// <p>Here are some thoughts that I would like for my medical care team and my healthcare agent(s) to know about the role that religion, faith or spirituality play in my life:</p>
-// <p><i>I am Catholic, please call Father Mark at Saint Catherine's on Main Street.</i></p>
-// </div>"
-// * lifecycleStatus = #proposed
-// * category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
-// * category[+] = $LOINC#75775-7 "Decision to inform doctors and nurses about the role religion, faith, culture, or spirituality play in my life [Reported]"
-// * description.text = "Here are some thoughts that I would like for my medical care team and my healthcare agent(s) to know about the role that religion, faith or spirituality play in my life: I am Catholic, please call Father Mark at Saint Catherine's on Main Street."
-// * description.extension[padi-contextualValue-extension].extension[Context].valueString = "Here are some thoughts that I would like for my medical care team and my healthcare agent(s) to know about the role that religion, faith or spirituality play in my life"
-// * description.extension[padi-contextualValue-extension].extension[Value].valueString = "I am Catholic, please call Father Mark at Saint Catherine's on Main Street."
-// * subject = Reference(Example-Smith-Johnson-Patient1)
-// * expressedBy = Reference(Example-Smith-Johnson-Patient1)
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p>Here are some thoughts that I would like for my medical care team and my healthcare agent(s) to know about the role that religion, faith or spirituality play in my life:</p>
+<p><i>I am Catholic, please call Father Mark at Saint Catherine's on Main Street.</i></p>
+</div>"
+* category[type] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
+* code = $LOINC#75775-7 "Decision to inform doctors and nurses about the role religion, faith, culture, or spirituality play in my life [Reported]"
+* valueString = "Here are some thoughts that I would like for my medical care team and my healthcare agent(s) to know about the role that religion, faith or spirituality play in my life: I am Catholic, please call Father Mark at Saint Catherine's on Main Street."
+* extension[padi-contextualValue-extension].extension[Context].valueString = "Here are some thoughts that I would like for my medical care team and my healthcare agent(s) to know about the role that religion, faith or spirituality play in my life"
+* extension[padi-contextualValue-extension].extension[Value].valueString = "I am Catholic, please call Father Mark at Saint Catherine's on Main Street."
+* subject = Reference(Example-Smith-Johnson-Patient1)
 
 
-// Instance: Example-Smith-Johnson-CareExperiencePreference2
-// InstanceOf: PADICareExperiencePreference
-// Description: "Example Patient Smith-Johnson Care Experience Preference (My Likes and Joys)"
-// Usage: #example
+Instance: Example-Smith-Johnson-CareExperiencePreference2
+InstanceOf: PADICareExperiencePreference
+Description: "Example Patient Smith-Johnson Care Experience Preference (My Likes and Joys)"
+Usage: #example
 
-// * text.status = #generated
-// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-// <p><b>My likes / joys:</b></p>
-// <p>Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed:</p>
-// <p><i>I love the smell of lavender and the feeling of sunshine on my face.</i></p>
-// </div>"
-// * lifecycleStatus = #proposed
-// * category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
-// * category[+] = $LOINC#81360-0 "My likes and joys [Reported]"
-// * description.text = "Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed: I love the smell of lavender and the feeling of sunshine on my face."
-// * description.extension[padi-contextualValue-extension].extension[Context].valueString = "Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed"
-// * description.extension[padi-contextualValue-extension].extension[Value].valueString = "I love the smell of lavender and the feeling of sunshine on my face."
-// * subject = Reference(Example-Smith-Johnson-Patient1)
-// * expressedBy = Reference(Example-Smith-Johnson-Patient1)
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>My likes / joys:</b></p>
+<p>Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed:</p>
+<p><i>I love the smell of lavender and the feeling of sunshine on my face.</i></p>
+</div>"
+* category[type] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
+* code = $LOINC#81360-0 "My likes and joys [Reported]"
+* valueString = "Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed: I love the smell of lavender and the feeling of sunshine on my face."
+* extension[padi-contextualValue-extension].extension[Context].valueString = "Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed"
+* extension[padi-contextualValue-extension].extension[Value].valueString = "I love the smell of lavender and the feeling of sunshine on my face."
+* subject = Reference(Example-Smith-Johnson-Patient1)
 
 
-// Instance: Example-Smith-Johnson-CareExperiencePreference3
-// InstanceOf: PADICareExperiencePreference
-// Description: "Example Patient Smith-Johnson Care Experience Preference (My Dislikes and Fears)"
-// Usage: #example
+Instance: Example-Smith-Johnson-CareExperiencePreference3
+InstanceOf: PADICareExperiencePreference
+Description: "Example Patient Smith-Johnson Care Experience Preference (My Dislikes and Fears)"
+Usage: #example
 
-// * text.status = #generated
-// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-// <p><b>My dislikes / fears:</b></p>
-// <p>Here is a list of things that I would like to avoid if at all possible, people that I don’t wish to see, and concerns I have about particular family members, pets, and so on:</p>
-// <p><i>I do not like my feet to be cold.</i></p>
-// </div>"
-// * lifecycleStatus = #proposed
-// * category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
-// * category[+] = $LOINC#81362-6 "My dislikes and fears [Reported]"
-// * description.text = "Here is a list of things that I would like to avoid if at all possible, people that I don’t wish to see, and concerns I have about particular family members, pets, and so on: I do not like my feet to be cold."
-// * description.extension[padi-contextualValue-extension].extension[Context].valueString = "Here is a list of things that I would like to avoid if at all possible, people that I don’t wish to see, and concerns I have about particular family members, pets, and so on"
-// * description.extension[padi-contextualValue-extension].extension[Value].valueString = "I do not like my feet to be cold."
-// * subject = Reference(Example-Smith-Johnson-Patient1)
-// * expressedBy = Reference(Example-Smith-Johnson-Patient1)
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>My dislikes / fears:</b></p>
+<p>Here is a list of things that I would like to avoid if at all possible, people that I don’t wish to see, and concerns I have about particular family members, pets, and so on:</p>
+<p><i>I do not like my feet to be cold.</i></p>
+</div>"
+* category[type] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
+* code = $LOINC#81362-6 "My dislikes and fears [Reported]"
+* valueString = "Here is a list of things that I would like to avoid if at all possible, people that I don’t wish to see, and concerns I have about particular family members, pets, and so on: I do not like my feet to be cold."
+* extension[padi-contextualValue-extension].extension[Context].valueString = "Here is a list of things that I would like to avoid if at all possible, people that I don’t wish to see, and concerns I have about particular family members, pets, and so on"
+* extension[padi-contextualValue-extension].extension[Value].valueString = "I do not like my feet to be cold."
+* subject = Reference(Example-Smith-Johnson-Patient1)
 
 
-// Instance: Example-Smith-Johnson-CareExperiencePreference4
-// InstanceOf: PADICareExperiencePreference
-// Description: "Example Patient Smith-Johnson Care Experience Preference (How to Care for Me)"
-// Usage: #example
+Instance: Example-Smith-Johnson-CareExperiencePreference4
+InstanceOf: PADICareExperiencePreference
+Description: "Example Patient Smith-Johnson Care Experience Preference (How to Care for Me)"
+Usage: #example
 
-// * text.status = #generated
-// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-// <p><b>How to care for me:</b></p>
-// <p>If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me:</p>
-// <p><i>I want photos of my family where I can see them.</i></p>
-// </div>"
-// * lifecycleStatus = #proposed
-// * category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
-// * category[+] = $LOINC#81380-8 "Goals, preferences, and priorities for care experience [Reported]"
-// * description.text = "How to care for me: If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me: I want photos of my family where I can see them."
-// * description.extension[padi-contextualValue-extension].extension[Context].valueString = "How to care for me: If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me"
-// * description.extension[padi-contextualValue-extension].extension[Value].valueString = "I want photos of my family where I can see them."
-// * subject = Reference(Example-Smith-Johnson-Patient1)
-// * expressedBy = Reference(Example-Smith-Johnson-Patient1)
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>How to care for me:</b></p>
+<p>If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me:</p>
+<p><i>I want photos of my family where I can see them.</i></p>
+</div>"
+* category[type] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
+* code = $LOINC#81380-8 "Goals, preferences, and priorities for care experience [Reported]"
+* valueString = "How to care for me: If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me: I want photos of my family where I can see them."
+* extension[padi-contextualValue-extension].extension[Context].valueString = "How to care for me: If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me"
+* extension[padi-contextualValue-extension].extension[Value].valueString = "I want photos of my family where I can see them."
+* subject = Reference(Example-Smith-Johnson-Patient1)
 
 
-// Instance: Example-Smith-Johnson-CareExperiencePreference5
-// InstanceOf: PADICareExperiencePreference
-// Description: "Example Patient Smith-Johnson Care Experience Preference (My Religion)"
-// Usage: #example
+Instance: Example-Smith-Johnson-CareExperiencePreference5
+InstanceOf: PADICareExperiencePreference
+Description: "Example Patient Smith-Johnson Care Experience Preference (My Religion)"
+Usage: #example
 
-// * text.status = #generated
-// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-// <p><b>My religion:</b></p>
-// <p>If I appear to be approaching the end of my life, here are some things that I would like for my caregivers to know about my faith and my religion.</p>
-// <p><i>Please call Father Mark if my condition warrants the services of a priest.</i></p>
-// </div>"
-// * lifecycleStatus = #proposed
-// * category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
-// * category[+] = $LOINC#81364-2 "Religious or cultural beliefs [Reported]"
-// * description.text = "If I appear to be approaching the end of my life, here are some things that I would like for my caregivers to know about my faith and my religion. Please call Father Mark if my condition warrants the services of a priest."
-// * description.extension[padi-contextualValue-extension].extension[Context].valueString = "If I appear to be approaching the end of my life, here are some things that I would like for my caregivers to know about my faith and my religion."
-// * description.extension[padi-contextualValue-extension].extension[Value].valueString = "Please call Father Mark if my condition warrants the services of a priest."
-// * subject = Reference(Example-Smith-Johnson-Patient1)
-// * expressedBy = Reference(Example-Smith-Johnson-Patient1)
-
-// Instance: Example-Smith-Johnson-CareExperiencePreference6
-// InstanceOf: PADICareExperiencePreference
-// Description: "Example Patient Smith-Johnson Care Experience Preference (Religious Contact)"
-// Usage: #example
-
-// * text.status = #generated
-// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-// <p><b>Please attempt to notify someone from my religion at the following phone number:</b></p>
-// <p>If I have included one</p>
-// <p><i>Catholic</i></p>
-// </div>"
-// * lifecycleStatus = #proposed
-// * category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
-// * category[+] = $LOINC#81365-9 "Religious or cultural affiliation contact to notify [Reported]"
-// * description.text = "Please attempt to notify someone from my religion at the following phone number: If I have included one: Catholic"
-// * description.extension[padi-contextualValue-extension].extension[Context].valueString = "Please attempt to notify someone from my religion at the following phone number If I have included one"
-// * description.extension[padi-contextualValue-extension].extension[Value].valueString = "Catholic"
-// * subject = Reference(Example-Smith-Johnson-Patient1)
-// * expressedBy = Reference(Example-Smith-Johnson-Patient1)
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>My religion:</b></p>
+<p>If I appear to be approaching the end of my life, here are some things that I would like for my caregivers to know about my faith and my religion.</p>
+<p><i>Please call Father Mark if my condition warrants the services of a priest.</i></p>
+</div>"
+* category[type] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
+* code = $LOINC#81364-2 "Religious or cultural beliefs [Reported]"
+* valueString = "If I appear to be approaching the end of my life, here are some things that I would like for my caregivers to know about my faith and my religion. Please call Father Mark if my condition warrants the services of a priest."
+* extension[padi-contextualValue-extension].extension[Context].valueString = "If I appear to be approaching the end of my life, here are some things that I would like for my caregivers to know about my faith and my religion."
+* extension[padi-contextualValue-extension].extension[Value].valueString = "Please call Father Mark if my condition warrants the services of a priest."
+* subject = Reference(Example-Smith-Johnson-Patient1)
 
 
 
-// Instance: Example-Smith-Johnson-CareExperiencePreference7
-// InstanceOf: PADICareExperiencePreference
-// Description: "Example Patient Smith-Johnson Care Experience Preference (Religious Contact)"
-// Usage: #example
+Instance: Example-Smith-Johnson-CareExperiencePreference6
+InstanceOf: PADICareExperiencePreference
+Description: "Example Patient Smith-Johnson Care Experience Preference (Religious Contact)"
+Usage: #example
 
-// * text.status = #generated
-// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-// <p><b>My unfinished business:</b></p>
-// <p>If it appears that I am approaching the end of my life, and I cannot communicate with persons around me, I would want my doctors and nurses, my family, and my friends to know about some unfinished business that I need to address:</p>
-// <p><i>I want my sister and I to talk again, and miss her.  I wish we hadn't disagreed all those years ago and regret the time it has cost us.  I'd like to see her face if I were very ill and needed the comfort of family at my side.</i></p>
-// </div>"
-// * lifecycleStatus = #proposed
-// * category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
-// * category[+] = $LOINC#81366-7 "Unfinished business [Reported]"
-// * description.text = "If it appears that I am approaching the end of my life, and I cannot communicate with persons around me, I would want my doctors and nurses, my family, and my friends to know about some unfinished business that I need to address: I want my sister and I to talk again, and miss her.  I wish we hadn't disagreed all those years ago and regret the time it has cost us.  I'd like to see her face if I were very ill and needed the comfort of family at my side."
-// * description.extension[padi-contextualValue-extension].extension[Context].valueString = "If it appears that I am approaching the end of my life, and I cannot communicate with persons around me, I would want my doctors and nurses, my family, and my friends to know about some unfinished business that I need to address"
-// * description.extension[padi-contextualValue-extension].extension[Value].valueString = "I want my sister and I to talk again, and miss her.  I wish we hadn't disagreed all those years ago and regret the time it has cost us.  I'd like to see her face if I were very ill and needed the comfort of family at my side."
-// * subject = Reference(Example-Smith-Johnson-Patient1)
-// * expressedBy = Reference(Example-Smith-Johnson-Patient1)
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>Please attempt to notify someone from my religion at the following phone number:</b></p>
+<p>If I have included one</p>
+<p><i>Catholic</i></p>
+</div>"
+* category[type] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
+* code = $LOINC#81365-9 "Religious or cultural affiliation contact to notify [Reported]"
+* valueString = "Please attempt to notify someone from my religion at the following phone number: If I have included one: Catholic"
+* extension[padi-contextualValue-extension].extension[Context].valueString = "Please attempt to notify someone from my religion at the following phone number If I have included one"
+* extension[padi-contextualValue-extension].extension[Value].valueString = "Catholic"
+* subject = Reference(Example-Smith-Johnson-Patient1)
 
 
-// Instance: Example-Smith-Johnson-CareExperiencePreference8
-// InstanceOf: PADICareExperiencePreference
-// Description: "Example Patient Smith-Johnson Care Experience Preference (Religious Contact)"
-// Usage: #example
 
-// * text.status = #generated
-// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-// <p><b>Laughter:</b></p>
-// <p>These are some of my fondest memories from life that have always brought a smile to my face or made me laugh:</p>
-// <p><i>My dogs make me laugh when they play together, and my grandchildren make me laugh when they put on plays for me.  They bring me great joy.</i></p>
-// </div>"
-// * lifecycleStatus = #proposed
-// * category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
-// * category[+] = $LOINC#81361-8 "Things that make me laugh [Reported]"
-// * description.text = "These are some of my fondest memories from life that have always brought a smile to my face or made me laugh: My dogs make me laugh when they play together, and my grandchildren make me laugh when they put on plays for me.  They bring me great joy."
-// * description.extension[padi-contextualValue-extension].extension[Context].valueString = "These are some of my fondest memories from life that have always brought a smile to my face or made me laugh"
-// * description.extension[padi-contextualValue-extension].extension[Value].valueString = "My dogs make me laugh when they play together, and my grandchildren make me laugh when they put on plays for me.  They bring me great joy."
-// * subject = Reference(Example-Smith-Johnson-Patient1)
-// * expressedBy = Reference(Example-Smith-Johnson-Patient1)
+Instance: Example-Smith-Johnson-CareExperiencePreference7
+InstanceOf: PADICareExperiencePreference
+Description: "Example Patient Smith-Johnson Care Experience Preference (Religious Contact)"
+Usage: #example
+
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>My unfinished business:</b></p>
+<p>If it appears that I am approaching the end of my life, and I cannot communicate with persons around me, I would want my doctors and nurses, my family, and my friends to know about some unfinished business that I need to address:</p>
+<p><i>I want my sister and I to talk again, and miss her.  I wish we hadn't disagreed all those years ago and regret the time it has cost us.  I'd like to see her face if I were very ill and needed the comfort of family at my side.</i></p>
+</div>"
+* category[type] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
+* code = $LOINC#81366-7 "Unfinished business [Reported]"
+* valueString = "If it appears that I am approaching the end of my life, and I cannot communicate with persons around me, I would want my doctors and nurses, my family, and my friends to know about some unfinished business that I need to address: I want my sister and I to talk again, and miss her.  I wish we hadn't disagreed all those years ago and regret the time it has cost us.  I'd like to see her face if I were very ill and needed the comfort of family at my side."
+* extension[padi-contextualValue-extension].extension[Context].valueString = "If it appears that I am approaching the end of my life, and I cannot communicate with persons around me, I would want my doctors and nurses, my family, and my friends to know about some unfinished business that I need to address"
+* extension[padi-contextualValue-extension].extension[Value].valueString = "I want my sister and I to talk again, and miss her.  I wish we hadn't disagreed all those years ago and regret the time it has cost us.  I'd like to see her face if I were very ill and needed the comfort of family at my side."
+* subject = Reference(Example-Smith-Johnson-Patient1)
+
+
+
+Instance: Example-Smith-Johnson-CareExperiencePreference8
+InstanceOf: PADICareExperiencePreference
+Description: "Example Patient Smith-Johnson Care Experience Preference (Religious Contact)"
+Usage: #example
+
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>Laughter:</b></p>
+<p>These are some of my fondest memories from life that have always brought a smile to my face or made me laugh:</p>
+<p><i>My dogs make me laugh when they play together, and my grandchildren make me laugh when they put on plays for me.  They bring me great joy.</i></p>
+</div>"
+* category[type] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
+* code = $LOINC#81361-8 "Things that make me laugh [Reported]"
+* valueString = "These are some of my fondest memories from life that have always brought a smile to my face or made me laugh: My dogs make me laugh when they play together, and my grandchildren make me laugh when they put on plays for me.  They bring me great joy."
+* extension[padi-contextualValue-extension].extension[Context].valueString = "These are some of my fondest memories from life that have always brought a smile to my face or made me laugh"
+* extension[padi-contextualValue-extension].extension[Value].valueString = "My dogs make me laugh when they play together, and my grandchildren make me laugh when they put on plays for me.  They bring me great joy."
+* subject = Reference(Example-Smith-Johnson-Patient1)
 
 
 
@@ -806,64 +793,62 @@ Usage: #example
 // */
 
 // // Health Goal Examples
-// Instance: Example-Smith-Johnson-PersonalGoal1
-// InstanceOf: PADIPersonalGoal
-// Description: "Example Patient Smith-Johnson Personal Goal 1"
-// Usage: #example
+Instance: Example-Smith-Johnson-PersonalGoal1
+InstanceOf: PADIPersonalGoal
+Description: "Example Patient Smith-Johnson Personal Goal 1"
+Usage: #example
 
-// * text.status = #generated
-// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-// <p><b>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:</b></p>
-// <p></p>
-// <ul>
-// 	<li><i>Avoiding prolonged dependence on machines</i></li>
-// 	<li><i>Not being a physical burden to my family</i></li>
-// 	<li><i>Dying at home</i></li>
-// </ul>	
-// </div>"
-// * lifecycleStatus = #proposed
-// * category[+] = PADIGoalCategoryCS#personal-goal "Personal goal"
-// * category[+] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
-// * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Avoiding prolonged dependence on machines, Not being a physical burden to my family, Dying at home"
-// * description.extension[padi-contextualValue-extension].extension[Context].valueString = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me"
-// * description.extension[padi-contextualValue-extension].extension[Value][+].valueString = "Avoiding prolonged dependence on machines"
-// * description.extension[padi-contextualValue-extension].extension[Value][+].valueString = "Not being a physical burden to my family"
-// * description.extension[padi-contextualValue-extension].extension[Value][+].valueString = "Dying at home"
-// * subject = Reference(Example-Smith-Johnson-Patient1)
-// * expressedBy = Reference(Example-Smith-Johnson-Patient1)
-
-// /*
-// Instance: Example-Smith-Johnson-PersonalGoal2
-// InstanceOf: PADIPersonalGoal
-// Description: "Example Patient Smith-Johnson Personal Goal 2"
-
-// * text.status = #additional
-// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-// <p><b>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:</b></p>
-// <p><i>Not being a physical burden to my family</i></p>
-// </div>"
-// * lifecycleStatus = #proposed
-// * category = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
-// * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Not being a physical burden to my family"
-// * subject = Reference(Example-Smith-Johnson-Patient1)
-// * expressedBy = Reference(Example-Smith-Johnson-Patient1)
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:</b></p>
+<p></p>
+<ul>
+	<li><i>Avoiding prolonged dependence on machines</i></li>
+	<li><i>Not being a physical burden to my family</i></li>
+	<li><i>Dying at home</i></li>
+</ul>	
+</div>"
+* lifecycleStatus = #proposed
+* category[type] = $LOINC#87528-6 "Personal health goal"
+* description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Avoiding prolonged dependence on machines, Not being a physical burden to my family, Dying at home"
+* description.extension[padi-contextualValue-extension].extension[Context].valueString = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me"
+* description.extension[padi-contextualValue-extension].extension[Value][+].valueString = "Avoiding prolonged dependence on machines"
+* description.extension[padi-contextualValue-extension].extension[Value][+].valueString = "Not being a physical burden to my family"
+* description.extension[padi-contextualValue-extension].extension[Value][+].valueString = "Dying at home"
+* subject = Reference(Example-Smith-Johnson-Patient1)
+* expressedBy = Reference(Example-Smith-Johnson-Patient1)
 
 
-// Instance: Example-Smith-Johnson-PersonalGoal3
-// InstanceOf: PADIPersonalGoal
-// Description: "Example Patient Smith-Johnson Personal Goal 3"
+Instance: Example-Smith-Johnson-PersonalGoal2
+InstanceOf: PADIPersonalGoal
+Description: "Example Patient Smith-Johnson Personal Goal 2"
 
-// * text.status = #additional
-// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-// <p><b>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:</b></p>
-// <p><i>Dying at home</i></p>
-// </div>"
-// * lifecycleStatus = #proposed
-// * category = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
-// * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:  Dying at home"
-// * subject = Reference(Example-Smith-Johnson-Patient1)
-// * expressedBy = Reference(Example-Smith-Johnson-Patient1)
-// */
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:</b></p>
+<p><i>Not being a physical burden to my family</i></p>
+</div>"
+* lifecycleStatus = #proposed
+* category[type] = $LOINC#87528-6 "Personal health goal"
+* description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Not being a physical burden to my family"
+* subject = Reference(Example-Smith-Johnson-Patient1)
+* expressedBy = Reference(Example-Smith-Johnson-Patient1)
+
+
+Instance: Example-Smith-Johnson-PersonalGoal3
+InstanceOf: PADIPersonalGoal
+Description: "Example Patient Smith-Johnson Personal Goal 3"
+
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:</b></p>
+<p><i>Dying at home</i></p>
+</div>"
+* lifecycleStatus = #proposed
+* category[type] = $LOINC#87528-6 "Personal health goal"
+* description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:  Dying at home"
+* subject = Reference(Example-Smith-Johnson-Patient1)
+* expressedBy = Reference(Example-Smith-Johnson-Patient1)
 
 
 // // Personal Intervention Preferences
