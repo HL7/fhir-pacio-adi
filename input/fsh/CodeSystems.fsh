@@ -13,12 +13,11 @@ Description: "Codes indicating decisions a healthcare agent may or may not make 
 * ^experimental = false
 * ^copyright = "This CodeSystem is not copyrighted."
 
-CodeSystem: PADIGoalCategoryCS
+CodeSystem: PADIPreferenceCategoryCS
 Title: "ADI Goal Category Code System"
-Description: "Advance Directive Goal Categories"
+Description: "Advance Directive Preference Category"
 * #intervention-preference "Intervention preference" "A personal preference for a type of medical intervention (treatment) request under certain conditions."
 * #care-experience-preference "Care experience preference" "Personal thoughts about something a person feels is relevant to their care experience and may be pertinent when planning their care."
-* #personal-goal "Personal goal" "Personal health and treatment goals that are pertinent when planning their care."
 * ^caseSensitive = true
 * ^experimental = false
 * ^copyright = "This CodeSystem is not copyrighted."

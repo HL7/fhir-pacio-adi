@@ -1,3 +1,38 @@
+Profile: PADICareExperiencePreference
+Parent: Observation
+Id: PADI-CareExperiencePreference
+Title: "ADI Care Experience Preference"
+Description: "Care Experience Preference is a clinical statement that presents the author's personal thoughts about something a person feels is relevant to their care experience and may be pertinent when planning their care."
+
+
+* category ^slicing.discriminator.type = #value 
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category ^slicing.ordered = false   // can be omitted, since false is the default
+* category ^slicing.description = "Slice based on $this value"
+
+* category 1..*
+//* category from $PADICareExperiencePreferences (extensible) //moved from 'category' to 'code' FHIR-35078
+* category contains
+    type 1..1 MS 
+    
+* category[type] = PADIPreferenceCategoryCS#care-experience-preference
+
+* code 1..1 MS
+* code from $PADICareExperiencePreferences (extensible)
+* code.text MS
+
+* text 1..1 MS
+
+* status = #final
+
+* subject 1..1 MS
+* subject only Reference($USCorePatient)
+
+* value[x] 1..1 MS
+
+* extension contains padi-contextualValue-extension named ContextualValueExtension 0..1
+
 /*Profile: PADICareExperiencePreference
 Parent: Observation
 Id: PADI-CareExperiencePreference
@@ -24,24 +59,3 @@ Description: "Care Experience Preference is a clinical statement that presents t
 
 */
 // If we restrict the value type, have guidance about including information in note
-
-
-Profile: PADICareExperiencePreference
-Parent: PADIGoal
-Id: PADI-CareExperiencePreference
-Title: "ADI Care Experience Preference"
-Description: "Care Experience Preference is a clinical statement that presents the author's personal thoughts about something a person feels is relevant to their care experience and may be pertinent when planning their care."
-
-
-* category ^slicing.discriminator.type = #value 
-* category ^slicing.discriminator.path = "$this"
-* category ^slicing.rules = #open
-* category ^slicing.ordered = false   // can be omitted, since false is the default
-* category ^slicing.description = "Slice based on $this value"
-
-* category 2..*
-* category from $PADICareExperiencePreferences (extensible)
-* category contains
-    type 1..1 MS 
-    
-* category[type] = PADIGoalCategoryCS#care-experience-preference

@@ -1,4 +1,4 @@
-// Bundle Examples
+// // Bundle Examples
 Instance: Example-McBee-Bundle1
 InstanceOf: Bundle
 Description: "Example Patient McBee ADI Document Bundle McBee 1"
@@ -77,7 +77,7 @@ Usage: #example
 
 
 
-// Patient Examples
+// // Patient Examples
 
 Instance: Example-McBee-Patient1
 InstanceOf: $USCorePatient
@@ -128,7 +128,7 @@ Usage: #example
 * identifier[1].system = "urn:oid:2.16.840.1.113883.4.3.12"
 
 
-//Composition Examples
+// //Composition Examples
 
 Instance: Example-McBee-PACPComposition1
 InstanceOf: PADIPACPComposition
@@ -383,8 +383,8 @@ agent to make decisions in my best interests and based on what is known of my wi
 </div>"
 
 
-// Participant examples
-// Healthcare Agent examples
+// // Participant examples
+// // Healthcare Agent examples
 
 Instance: Example-McBee-HealthcareAgent1
 InstanceOf: PADIParticipant
@@ -438,7 +438,7 @@ Usage: #example
 * telecom[0].use = #home
 
 
-// TODO update text
+// // TODO update text
 Instance: Example-McBee-HealthcareAgentConsent
 InstanceOf: PADIParticipantConsent
 Description: "Example Patient McBee Healthcare Agent Consent"
@@ -472,8 +472,8 @@ Usage: #example
 
 
 
-// CarePlan
-// Preference Care Plan
+// // CarePlan
+// // Preference Care Plan
 Instance: Example-McBee-PreferenceCarePlan1
 InstanceOf: PADIPreferenceCarePlan
 Description: "Example Patient McBee Preference Care Plan 1"
@@ -495,13 +495,13 @@ Usage: #example
 * addresses[+].display = "Unconscious, in a coma, or in a persistent vegetative state with little or no chance of recovery"
 * addresses[+].display = "Persistent vegetative state (SNOMED CT 24473007)"
 * addresses[+].display = "Irreversible coma (SNOMED CT 73453007)"
-* goal[+] = Reference(Example-McBee-PersonalInterventionPreference1)
-* goal[+] = Reference(Example-McBee-PersonalInterventionPreference2)
-* goal[+] = Reference(Example-McBee-PersonalInterventionPreference3)
-* goal[+] = Reference(Example-McBee-PersonalInterventionPreference4)
-* goal[+] = Reference(Example-McBee-PersonalInterventionPreference5)
-* goal[+] = Reference(Example-McBee-PersonalInterventionPreference6)
-* goal[+] = Reference(Example-McBee-PersonalInterventionPreference7)
+* supportingInfo[+] = Reference(Example-McBee-PersonalInterventionPreference1)
+* supportingInfo[+] = Reference(Example-McBee-PersonalInterventionPreference2)
+* supportingInfo[+] = Reference(Example-McBee-PersonalInterventionPreference3)
+* supportingInfo[+] = Reference(Example-McBee-PersonalInterventionPreference4)
+* supportingInfo[+] = Reference(Example-McBee-PersonalInterventionPreference5)
+* supportingInfo[+] = Reference(Example-McBee-PersonalInterventionPreference6)
+* supportingInfo[+] = Reference(Example-McBee-PersonalInterventionPreference7)
 
 
 
@@ -518,12 +518,10 @@ Usage: #example
 <p><b>My likes / joys:</b> Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed:</p>
 <p><i>Like Bach, especially the cantatas.  St. Martin in the Fields</i></p>
 </div>"
-* lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
-* category[+] = $LOINC#81360-0 "My likes and joys [Reported]"
-* description.text = "Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed: Like Bach, especially the cantatas.  St. Martin in the Fields"
+* category[type] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
+* code = $LOINC#81360-0 "My likes and joys [Reported]"
+* valueString = "Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed: Like Bach, especially the cantatas.  St. Martin in the Fields"
 * subject = Reference(Example-McBee-Patient1)
-* expressedBy = Reference(Example-McBee-Patient1)
 
 
 
@@ -537,12 +535,10 @@ Usage: #example
 <p><b>How to care for me:</b> If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me:</p>
 <p><i>I don’t like being treated like an object. I would like to be greeted like a person before working on me.</i></p>
 </div>"
-* lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
-* category[+] = $LOINC#81380-8 "Goals, preferences, and priorities for care experience [Reported]"
-* description.text = "How to care for me: If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me: I don’t like being treated like an object. I would like to be greeted like a person before working on me."
+* category[type] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
+* code = $LOINC#81380-8 "Goals, preferences, and priorities for care experience [Reported]"
+* valueString = "How to care for me: If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me: I don’t like being treated like an object. I would like to be greeted like a person before working on me."
 * subject = Reference(Example-McBee-Patient1)
-* expressedBy = Reference(Example-McBee-Patient1)
 
 
 Instance: Example-McBee-CareExperiencePreference3
@@ -556,14 +552,14 @@ Usage: #example
 <p><b>Please attempt to notify someone from my religion at the following phone number:</b> (If I have included one)</p>
 <p><i>Not Religious</i></p>
 </div>"
-* lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
-* category[+] = $LOINC#81365-9 "Religious or cultural affiliation contact to notify [Reported]"
-* description.text = "Please attempt to notify someone from my religion at the following phone number: If I have included one - Not Religious"
-* description.extension[padi-contextualValue-extension].extension[Context].valueString = "Please attempt to notify someone from my religion at the following phone number"
-* description.extension[padi-contextualValue-extension].extension[Value].valueString = "If I have included one - Not Religious"
+* category[type] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
+* code = $LOINC#81365-9 "Religious or cultural affiliation contact to notify [Reported]"
+* valueString = "Please attempt to notify someone from my religion at the following phone number: If I have included one - Not Religious"
+* extension[padi-contextualValue-extension].extension[Context].valueString = "Please attempt to notify someone from my religion at the following phone number"
+* extension[padi-contextualValue-extension].extension[Value].valueString = "If I have included one - Not Religious"
 * subject = Reference(Example-McBee-Patient1)
-* expressedBy = Reference(Example-McBee-Patient1)
+
+
 
 Instance: Example-McBee-CareExperiencePreference4
 InstanceOf: PADICareExperiencePreference
@@ -575,19 +571,17 @@ Usage: #example
 <p><b>My unfinished business:</b> If it appears that I am approaching the end of my life, and I cannot communicate with persons around me, I would want my doctors and nurses, my family, and my friends to know about some unfinished business that I need to address:</p>
 <p><i>I am awaiting a message from the Noble Committee. Please keep me alive if I look promising this year.</i></p>
 </div>"
-* lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
-* category[+] = $LOINC#81366-7 "Unfinished business [Reported]"
-* description.text = "If it appears that I am approaching the end of my life, and I cannot communicate with persons around me, I would want my doctors and nurses, my family, and my friends to know about some unfinished business that I need to address: I am awaiting a message from the Noble Committee. Please keep me alive if I look promising this year."
+* category[type] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
+* code = $LOINC#81366-7 "Unfinished business [Reported]"
+* valueString = "If it appears that I am approaching the end of my life, and I cannot communicate with persons around me, I would want my doctors and nurses, my family, and my friends to know about some unfinished business that I need to address: I am awaiting a message from the Noble Committee. Please keep me alive if I look promising this year."
 * subject = Reference(Example-McBee-Patient1)
-* expressedBy = Reference(Example-McBee-Patient1)
 
 
 
 
 
 
-// Personal Priorities Organizer
+// // Personal Priorities Organizer
 
 Instance: Example-McBee-PersonalPrioritiesOrganizer1
 InstanceOf: PADIPersonalPrioritiesOrganizer
@@ -623,7 +617,7 @@ Usage: #example
 * entry[6].item = Reference(Example-McBee-PersonalGoal7)
 
 
-// Health Goal Examples
+// // Health Goal Examples
 Instance: Example-McBee-PersonalGoal1
 InstanceOf: PADIPersonalGoal
 Description: "Example Patient McBee Personal Goal 1"
@@ -635,8 +629,7 @@ Usage: #example
 <p><i>Being at peace with my God</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#personal-goal "Personal Goal"
-* category[+] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
+* category[type] = $LOINC#87528-6 "Personal health goal"
 * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Being at peace with my God"
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -653,8 +646,7 @@ Usage: #example
 <p><i>Dying at home</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#personal-goal "Personal Goal"
-* category[+] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
+* category[type] = $LOINC#87528-6 "Personal health goal"
 * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Dying at home"
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -671,8 +663,7 @@ Usage: #example
 <p><i>Being able to feed, bathe, and take care of myself</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#personal-goal "Personal Goal"
-* category[+] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
+* category[type] = $LOINC#87528-6 "Personal health goal"
 * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:  Being able to feed, bathe, and take care of myself"
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -689,8 +680,7 @@ Usage: #example
 <p><i>Being free from pain</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#personal-goal "Personal Goal"
-* category[+] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
+* category[type] = $LOINC#87528-6 "Personal health goal"
 * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Being free from pain"
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -708,8 +698,7 @@ Usage: #example
 <p><i>Resolving conflicts</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#personal-goal "Personal Goal"
-* category[+] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
+* category[type] = $LOINC#87528-6 "Personal health goal"
 * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Resolving conflicts"
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -727,8 +716,7 @@ Usage: #example
 <p><i>Being with my family</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#personal-goal "Personal Goal"
-* category[+] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
+* category[type] = $LOINC#87528-6 "Personal health goal"
 * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Being with my family"
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -746,14 +734,13 @@ Usage: #example
 <p><i>Not being a financial burden to my family</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#personal-goal "Personal Goal"
-* category[+] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
+* category[type] = $LOINC#87528-6 "Personal health goal"
 * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Not being a financial burden to my family"
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
 
 
-// Personal Intervention Preferences
+// // Personal Intervention Preferences
 Instance: Example-McBee-PersonalInterventionPreference1
 InstanceOf: PADIPersonalInterventionPreference
 Description: "Example Patient McBee Personal Intervention Preference (Palliative Care)"
@@ -763,12 +750,10 @@ Usage: #example
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p>If I am having significant pain or suffering, <i>I would like my doctors to consult a Supportive and Palliative Care Team to help treat my physical, emotional and spiritual discomfort, and to support my family.</i></p>
 </div>"
-* lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#intervention-preference "Intervention preference"
-* category[+] = $LOINC#75776-5 "Preference on consulting a supportive and palliative care team to help treat physical, emotional, and spiritual discomfort and support family [Reported]"
-* description.text = "If I am having significant pain or suffering, I would like my doctors to consult a Supportive and Palliative Care Team to help treat my physical, emotional and spiritual discomfort, and to support my family."
+* category[type] = PADIPreferenceCategoryCS#intervention-preference "Intervention preference"
+* code = $LOINC#75776-5 "Preference on consulting a supportive and palliative care team to help treat physical, emotional, and spiritual discomfort and support family [Reported]"
+* valueString = "If I am having significant pain or suffering, I would like my doctors to consult a Supportive and Palliative Care Team to help treat my physical, emotional and spiritual discomfort, and to support my family."
 * subject = Reference(Example-McBee-Patient1)
-* expressedBy = Reference(Example-McBee-Patient1)
 
 
 
@@ -781,12 +766,10 @@ Usage: #example
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p>If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings, <i>I prefer that they stop all life-sustaining treatments and let me die as gently as possible.  I realize that I will not receive life-sustaining treatments including but not limited to breathing machines, blood transfusions, dialysis, heart machines, and IV drugs to keep my heart working.  I also realize that medical personnel will not attempt cardiopulmonary resuscitation (CPR), and they will allow me to die naturally.</i></p>
 </div>"
-* lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#intervention-preference "Intervention preference"
-* category[+] = $LOINC#75777-3 "Information to tell doctors if my health deteriorates due to a terminal illness and I am unable to interact meaningfully with family, friends, or surroundings [Reported]"
-* description.text = "If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings, I prefer that they stop all life-sustaining treatments and let me die as gently as possible.  I realize that I will not receive life-sustaining treatments including but not limited to breathing machines, blood transfusions, dialysis, heart machines, and IV drugs to keep my heart working.  I also realize that medical personnel will not attempt cardiopulmonary resuscitation (CPR), and they will allow me to die naturally."
+* category[type] = PADIPreferenceCategoryCS#intervention-preference "Intervention preference"
+* code = $LOINC#75777-3 "Information to tell doctors if my health deteriorates due to a terminal illness and I am unable to interact meaningfully with family, friends, or surroundings [Reported]"
+* valueString = "If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings, I prefer that they stop all life-sustaining treatments and let me die as gently as possible.  I realize that I will not receive life-sustaining treatments including but not limited to breathing machines, blood transfusions, dialysis, heart machines, and IV drugs to keep my heart working.  I also realize that medical personnel will not attempt cardiopulmonary resuscitation (CPR), and they will allow me to die naturally."
 * subject = Reference(Example-McBee-Patient1)
-* expressedBy = Reference(Example-McBee-Patient1)
 
 
 Instance: Example-McBee-PersonalInterventionPreference3
@@ -799,12 +782,10 @@ Usage: #example
 <p>If my response above indicates that I do not want life-sustaining treatments,</p>
 <p>I expressly authorize my attending physician to withhold or withdraw artificial nutrition and hydration and instruct my healthcare agent (or, if I have not designated a healthcare agent, my default surrogate), my family and the doctors and nurses who are taking care of me to respect this request.</p>
 </div>"
-* lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#intervention-preference "Intervention preference"
-* category[+] = $LOINC#77352-3 "Thoughts on artificial nutrition and hydration [Reported]"
-* description.text = "If my response above indicates that I do not want life-sustaining treatments, I expressly authorize my attending physician to withhold or withdraw artificial nutrition and hydration and instruct my healthcare agent (or, if I have not designated a healthcare agent, my default surrogate), my family and the doctors and nurses who are taking care of me to respect this request."
+* category[type] = PADIPreferenceCategoryCS#intervention-preference "Intervention preference"
+* code = $LOINC#77352-3 "Thoughts on artificial nutrition and hydration [Reported]"
+* valueString = "If my response above indicates that I do not want life-sustaining treatments, I expressly authorize my attending physician to withhold or withdraw artificial nutrition and hydration and instruct my healthcare agent (or, if I have not designated a healthcare agent, my default surrogate), my family and the doctors and nurses who are taking care of me to respect this request."
 * subject = Reference(Example-McBee-Patient1)
-* expressedBy = Reference(Example-McBee-Patient1)
 
 
 Instance: Example-McBee-PersonalInterventionPreference4
@@ -816,12 +797,10 @@ Usage: #example
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p>If I have a severe, irreversible brain injury or illness and can’t dress, feed, or bathe myself, or communicate my medical wishes, but doctors can keep me alive in this condition for a long period of time, <i>I would like for them to keep trying life-sustaining treatments for 2 months.</i></p>
 </div>"
-* lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#intervention-preference "Intervention preference"
-* category[+] = $LOINC#75778-1 "Information to tell doctors if I have a severe, irreversible brain injury or illness and can't dress, feed, or bathe myself, or communicate my medical wishes, but can be kept alive [Reported]"
-* description.text = "If I have a severe, irreversible brain injury or illness and can’t dress, feed, or bathe myself, or communicate my medical wishes, but doctors can keep me alive in this condition for a long period of time, I would like for them to keep trying life-sustaining treatments for 2 months."
+* category[type] = PADIPreferenceCategoryCS#intervention-preference "Intervention preference"
+* code = $LOINC#75778-1 "Information to tell doctors if I have a severe, irreversible brain injury or illness and can't dress, feed, or bathe myself, or communicate my medical wishes, but can be kept alive [Reported]"
+* valueString = "If I have a severe, irreversible brain injury or illness and can’t dress, feed, or bathe myself, or communicate my medical wishes, but doctors can keep me alive in this condition for a long period of time, I would like for them to keep trying life-sustaining treatments for 2 months."
 * subject = Reference(Example-McBee-Patient1)
-* expressedBy = Reference(Example-McBee-Patient1)
 
 
 Instance: Example-McBee-PersonalInterventionPreference5
@@ -834,12 +813,10 @@ Usage: #example
 <p>Although I understand that, depending on the situation and circumstances, medical personnel may not be able to follow my wishes, here are my general thoughts on cardiopulmonary resuscitation (CPR):</p>
 <p><i>I want my healthcare agent to make the decision, but if my chances are slim to none that I'll leave the hospital, even if they resuscitate me, then I absolutely do not want CPR.</i></p>
 </div>"
-* lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#intervention-preference "Intervention preference"
-* category[+] = $LOINC#75779-9 "Thoughts on cardiopulmonary resuscitation (CPR) [Reported]"
-* description.text = "Although I understand that, depending on the situation and circumstances, medical personnel may not be able to follow my wishes, here are my general thoughts on cardiopulmonary resuscitation (CPR): I do not want CPR attempted."
+* category[type] = PADIPreferenceCategoryCS#intervention-preference "Intervention preference"
+* code = $LOINC#75779-9 "Thoughts on cardiopulmonary resuscitation (CPR) [Reported]"
+* valueString = "Although I understand that, depending on the situation and circumstances, medical personnel may not be able to follow my wishes, here are my general thoughts on cardiopulmonary resuscitation (CPR): I do not want CPR attempted."
 * subject = Reference(Example-McBee-Patient1)
-* expressedBy = Reference(Example-McBee-Patient1)
 
 
 Instance: Example-McBee-PersonalInterventionPreference6
@@ -852,12 +829,10 @@ Usage: #example
 <p>Although I understand that, depending on the situation and circumstances, medical personnel may not be able to follow my wishes, here are my general thoughts on cardiopulmonary resuscitation (CPR):</p>
 <p><i>I want my healthcare agent to make the decision, but if my chances are slim to none that I'll leave the hospital, even if they resuscitate me, then I absolutely do not want CPR.</i></p>
 </div>"
-* lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#intervention-preference "Intervention preference"
-* category[+] = $LOINC#75779-9 "Thoughts on cardiopulmonary resuscitation (CPR) [Reported]"
-* description.text = "Although I understand that, depending on the situation and circumstances, medical personnel may not be able to follow my wishes, here are my general thoughts on cardiopulmonary resuscitation (CPR): I want my healthcare agent to make the decision, but if my chances are slim to none that I'll leave the hospital, even if they resuscitate me, then I absolutely do not want CPR."
+* category[type] = PADIPreferenceCategoryCS#intervention-preference "Intervention preference"
+* code = $LOINC#75779-9 "Thoughts on cardiopulmonary resuscitation (CPR) [Reported]"
+* valueString = "Although I understand that, depending on the situation and circumstances, medical personnel may not be able to follow my wishes, here are my general thoughts on cardiopulmonary resuscitation (CPR): I want my healthcare agent to make the decision, but if my chances are slim to none that I'll leave the hospital, even if they resuscitate me, then I absolutely do not want CPR."
 * subject = Reference(Example-McBee-Patient1)
-* expressedBy = Reference(Example-McBee-Patient1)
 
 
 Instance: Example-McBee-PersonalInterventionPreference7
@@ -870,12 +845,10 @@ Usage: #example
 <p>If it were possible to choose, here is where I would like to spend my final days:</p>
 <p><i>At home.I would like to receive hospice care at home if possible.</i></p>
 </div>"
-* lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#intervention-preference "Intervention preference"
-* category[+] = $LOINC#75780-7 "Preferred location to spend final days if possible to choose [Reported]"
-* description.text = "If it were possible to choose, here is where I would like to spend my final days: At home.I would like to receive hospice care at home if possible."
+* category[type] = PADIPreferenceCategoryCS#intervention-preference "Intervention preference"
+* code = $LOINC#75780-7 "Preferred location to spend final days if possible to choose [Reported]"
+* valueString = "If it were possible to choose, here is where I would like to spend my final days: At home.I would like to receive hospice care at home if possible."
 * subject = Reference(Example-McBee-Patient1)
-* expressedBy = Reference(Example-McBee-Patient1)
 
 
 
@@ -889,15 +862,13 @@ Usage: #example
 <p><b>Here are my thoughts on funeral or burial plans:</b></p>
 <p>If I were to pass away: <i>I have a plot. My wife has the details, also my secretary, Ms. Williams, will know.</i></p>
 </div>"
-* lifecycleStatus = #proposed
-* category[+] = PADIGoalCategoryCS#intervention-preference "Intervention preference"
-* category[+] = $LOINC#81356-8 "Death arrangements [Reported]"
-* description.text = "Here are my thoughts on funeral or burial plans: If I were to pass away:</b> <i>I have a plot. My wife has the details, also my secretary, Ms. Williams, will know."
+* category[type] = PADIPreferenceCategoryCS#intervention-preference "Intervention preference"
+* code = $LOINC#81356-8 "Death arrangements [Reported]"
+* valueString = "Here are my thoughts on funeral or burial plans: If I were to pass away:</b> <i>I have a plot. My wife has the details, also my secretary, Ms. Williams, will know."
 * subject = Reference(Example-McBee-Patient1)
-* expressedBy = Reference(Example-McBee-Patient1)
 
 
-//Organ Donation Observation examples
+// //Organ Donation Observation examples
 
 
 Instance: Example-McBee-OrganDonationObservation1
@@ -916,7 +887,7 @@ Usage: #example
 * valueString = "Consent to Donate: I don’t want to donate my organs."
 
 
-// Autopsy Observation examples
+// // Autopsy Observation examples
 
 Instance: Example-McBee-AutopsyObservation1
 InstanceOf: PADIAutopsyObservation
@@ -934,7 +905,7 @@ Usage: #example
 * valueString = "Autopsy: I want an autopsy if my doctor thinks it will help others."
 
 
-// Organization Examples
+// // Organization Examples
 
 Instance: Example-McBee-OrganizationCustodian1
 InstanceOf: $USCoreOrganization
@@ -983,7 +954,7 @@ Usage: #example
 
 
 
-// Provenance Examples
+// // Provenance Examples
 
 Instance: Example-McBee-PACPProvenance1
 InstanceOf: ADIProvenance
