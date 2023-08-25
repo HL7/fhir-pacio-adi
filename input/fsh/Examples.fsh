@@ -79,53 +79,53 @@
 
 // // Patient Examples
 
-// Instance: Example-McBee-Patient1
-// InstanceOf: $USCorePatient
-// Description: "Example Patient McBee Patient Example 1"
-// Usage: #example
-// //* id = "1234-234-1243-12345678901"
-// //* meta.profile = Canonical(C4BBPatient)
-// * meta.lastUpdated = "2021-04-07T19:55:22+00:00"
-// * language = #en-US
-// * id = "Example-McBee-Patient1"
-// * active = true
-// * name[0].family = "McBee"
-// * name[0].given[0] = "Roger"
-// * name[0].given[1] = "Rienman"
-// * name[0].text = "McBee, Roger Rienman"
+Instance: Example-McBee-Patient1
+InstanceOf: $USCorePatient
+Description: "Example Patient McBee Patient Example 1"
+Usage: #example
+//* id = "1234-234-1243-12345678901"
+//* meta.profile = Canonical(C4BBPatient)
+* meta.lastUpdated = "2021-04-07T19:55:22+00:00"
+* language = #en-US
+* id = "Example-McBee-Patient1"
+* active = true
+* name[0].family = "McBee"
+* name[0].given[0] = "Roger"
+* name[0].given[1] = "Rienman"
+* name[0].text = "McBee, Roger Rienman"
 
-// * telecom[0].system = #phone
-// * telecom[0].value = "+1(469)238-2858"
-// * telecom[0].use = #home
-// * telecom[0].rank = 1
+* telecom[0].system = #phone
+* telecom[0].value = "+1(469)238-2858"
+* telecom[0].use = #home
+* telecom[0].rank = 1
 
-// * telecom[1].system = #phone
-// * telecom[1].value = "+1(214)497-9529"
-// * telecom[1].use = #mobile
-// * telecom[1].rank = 2
+* telecom[1].system = #phone
+* telecom[1].value = "+1(214)497-9529"
+* telecom[1].use = #mobile
+* telecom[1].rank = 2
 
-// * telecom[2].system = #email
-// * telecom[2].value = "rogerb@example.com"
-// * telecom[2].use = #mobile
-// * telecom[2].rank = 3
+* telecom[2].system = #email
+* telecom[2].value = "rogerb@example.com"
+* telecom[2].use = #mobile
+* telecom[2].rank = 3
 
 
 
-// * gender = #male
-// * birthDate = "1945-04-01"
-// * address[0].type = http://hl7.org/fhir/address-type#physical
-// * address[0].line[0] = "12345 Main Street"
-// * address[0].city = "Orlando"
-// * address[0].state = "FL"
-// * address[0].postalCode = "75219"
-// * address[0].country = "US"
-// * maritalStatus = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#NI
-// * identifier[0].type = 	http://terminology.hl7.org/CodeSystem/v2-0203#SB "Social Beneficiary Identifier"
-// * identifier[0].value = "555-12-1246"
-// * identifier[0].system = "http://hl7.org/fhir/sid/us-ssn"
-// * identifier[1].type = http://terminology.hl7.org/CodeSystem/v2-0203#DL "Driver's License Number"
-// * identifier[1].value = "33487"
-// * identifier[1].system = "urn:oid:2.16.840.1.113883.4.3.12"
+* gender = #male
+* birthDate = "1945-04-01"
+* address[0].type = http://hl7.org/fhir/address-type#physical
+* address[0].line[0] = "12345 Main Street"
+* address[0].city = "Orlando"
+* address[0].state = "FL"
+* address[0].postalCode = "75219"
+* address[0].country = "US"
+* maritalStatus = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#NI
+* identifier[0].type = 	http://terminology.hl7.org/CodeSystem/v2-0203#SB "Social Beneficiary Identifier"
+* identifier[0].value = "555-12-1246"
+* identifier[0].system = "http://hl7.org/fhir/sid/us-ssn"
+* identifier[1].type = http://terminology.hl7.org/CodeSystem/v2-0203#DL "Driver's License Number"
+* identifier[1].value = "33487"
+* identifier[1].system = "urn:oid:2.16.840.1.113883.4.3.12"
 
 
 // //Composition Examples
@@ -386,87 +386,87 @@
 // // Participant examples
 // // Healthcare Agent examples
 
-// Instance: Example-McBee-HealthcareAgent1
-// InstanceOf: PADIParticipant
-// Description: "Example Patient McBee Healthcare Agent (Sally Bobbins)"
-// Usage: #example
-// * text.status = #additional
-// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-// <p><b>Primary Healthcare Agent</b></p>
-// <p>The person I choose as my Primary Healthcare Agent is:</p>
-// <p><i>Sally Bobbins</i></p>
-// <p><i>SallyBobbins@example.com</i></p>
-// <p><i>[SELECTED to act as a healthcare agent on 3/23/2018, at 9:13 AM CST]</i></p>
-// <p><i>[As of 12/6/2019, at 1:11 AM CDT, a response is still PENDING]</i></p>
-// </div>"
+Instance: Example-McBee-HealthcareAgent1
+InstanceOf: PADIParticipant
+Description: "Example Patient McBee Healthcare Agent (Sally Bobbins)"
+Usage: #example
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>Primary Healthcare Agent</b></p>
+<p>The person I choose as my Primary Healthcare Agent is:</p>
+<p><i>Sally Bobbins</i></p>
+<p><i>SallyBobbins@example.com</i></p>
+<p><i>[SELECTED to act as a healthcare agent on 3/23/2018, at 9:13 AM CST]</i></p>
+<p><i>[As of 12/6/2019, at 1:11 AM CDT, a response is still PENDING]</i></p>
+</div>"
 
-// * patient = Reference(Example-McBee-Patient1)
-// //* relationship[heatlhcare_agent_or_proxy_role] = $LOINC#75783-1 "Primary healthcare agent [Reported]"
+* patient = Reference(Example-McBee-Patient1)
+//* relationship[heatlhcare_agent_or_proxy_role] = $LOINC#75783-1 "Primary healthcare agent [Reported]"
 
-// * name[0].family = "Bobbins"
-// * name[0].given[0] = "Sally"
-// * name[0].text = "Sally, Bobbins"
-// * telecom[0].system = #email
-// * telecom[0].value = "SallyBobbins@example.com"
-// * telecom[0].use = #home
+* name[0].family = "Bobbins"
+* name[0].given[0] = "Sally"
+* name[0].text = "Sally, Bobbins"
+* telecom[0].system = #email
+* telecom[0].value = "SallyBobbins@example.com"
+* telecom[0].use = #home
 
 
 
-// Instance: Example-McBee-HealthcareAgent2
-// InstanceOf: PADIParticipant
-// Description: "Example Patient McBee Healthcare Agent (S. Leonard Susskind)"
-// Usage: #example
-// * text.status = #additional
-// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-// <p><b>First Alternate Healthcare Agent</b></p>
-// <p>If this healthcare agent is unable or unwilling to make medical treatment decisions for me, or if my spouse is designated as my primary healthcare agent and our marriage is annulled, or we are divorced or legally separated, then my next choice for a healthcare agent is:</p>
-// <p><i>S. Leonard Susskind (Friend)</i></p>
-// <p><i>ssuskind@example.com</i></p>
-// <p><i>[SELECTED to act as a healthcare agent on 3/23/2018, at 9:13 AM CST]</i></p>
-// <p><i>[ACCEPTED to act as a healthcare agent on 3/23/2018, at 9:14 AM CST]</i></p>
-// </div>"
+Instance: Example-McBee-HealthcareAgent2
+InstanceOf: PADIParticipant
+Description: "Example Patient McBee Healthcare Agent (S. Leonard Susskind)"
+Usage: #example
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>First Alternate Healthcare Agent</b></p>
+<p>If this healthcare agent is unable or unwilling to make medical treatment decisions for me, or if my spouse is designated as my primary healthcare agent and our marriage is annulled, or we are divorced or legally separated, then my next choice for a healthcare agent is:</p>
+<p><i>S. Leonard Susskind (Friend)</i></p>
+<p><i>ssuskind@example.com</i></p>
+<p><i>[SELECTED to act as a healthcare agent on 3/23/2018, at 9:13 AM CST]</i></p>
+<p><i>[ACCEPTED to act as a healthcare agent on 3/23/2018, at 9:14 AM CST]</i></p>
+</div>"
 
-// * patient = Reference(Example-McBee-Patient1)
-// //* relationship[heatlhcare_agent_or_proxy_role] = $LOINC#75784-9 "First Alternate Healthcare Agent [Reported]"
-// * relationship = $HL7RoleCode#FRND "unrelated friend"
+* patient = Reference(Example-McBee-Patient1)
+//* relationship[heatlhcare_agent_or_proxy_role] = $LOINC#75784-9 "First Alternate Healthcare Agent [Reported]"
+* relationship = $HL7RoleCode#FRND "unrelated friend"
 
-// * name[0].family = "S. Leonard"
-// * name[0].given[0] = "Susskind"
-// * name[0].text = "Susskind, S. Leonard"
-// * telecom[0].system = #email
-// * telecom[0].value = "ssuskind@example.com"
-// * telecom[0].use = #home
+* name[0].family = "S. Leonard"
+* name[0].given[0] = "Susskind"
+* name[0].text = "Susskind, S. Leonard"
+* telecom[0].system = #email
+* telecom[0].value = "ssuskind@example.com"
+* telecom[0].use = #home
 
 
 // // TODO update text
-// Instance: Example-McBee-HealthcareAgentConsent
-// InstanceOf: PADIParticipantConsent
-// Description: "Example Patient McBee Healthcare Agent Consent"
-// Usage: #example
-// * text.status = #additional
-// * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>status</b>: active</p><p><b>scope</b>: <span title='Codes: {http://loinc.org 75786-4}'>Powers granted to healthcare agent [Reported]</span></p><p><b>category</b>: <span title='Codes: {http://terminology.hl7.org/CodeSystem/consentcategorycodes acd}'>Advance Directive</span></p><p><b>patient</b>: <a href='Patient-Example-McBee-Patient1.html'>Social Beneficiary Identifier: 555-12-1246, Roger Rienman McBee; Phone: +1(469)238-2858, Phone: +1(214)497-9529, rogerb@example.com; gender: male; birthDate: 1945-04-01</a></p><p><b>dateTime</b>: 2020-08-03</p><h3>Policies</h3><table class='grid'><tr><td>-</td><td><b>Authority</b></td><td><b>Uri</b></td></tr><tr><td>*</td><td><a href='https://www.michigan.gov/'>https://www.michigan.gov/</a></td><td><a href='http://www.legislature.mi.gov/(S(tpnclc1ofteerx2x2dppcmdz))/mileg.aspx?page=GetObject&amp;objectname=mcl-386-1998-V-5'>http://www.legislature.mi.gov/(S(tpnclc1ofteerx2x2dppcmdz))/mileg.aspx?page=GetObject&amp;objectname=mcl-386-1998-V-5</a></td></tr></table><blockquote><p><b>provision</b></p><p><b>type</b>: permit</p><blockquote><p><b>actor</b></p><p><b>role</b>: <span title='Codes: {http://loinc.org 75783-1}'>Primary healthcare agent [Reported]</span></p><p><b>reference</b>: <a href='RelatedPerson-Example-McBee-HealthcareAgent1.html'>Bobbins Sally ; SallyBobbins@example.com</a></p></blockquote><blockquote><p><b>actor</b></p><p><b>role</b>: <span title='Codes: {http://loinc.org 75784-9}'>First alternate healthcare agent [Reported]</span></p><p><b>reference</b>: <a href='RelatedPerson-Example-McBee-HealthcareAgent2.html'><span title='Codes: {http://terminology.hl7.org/CodeSystem/v3-RoleCode FRND}'>unrelated friend</span>; Susskind S. Leonard ; ssuskind@example.com</a></p></blockquote><p><b>action</b>: <span title='Codes: {http://loinc.org 75787-2}'>Advance directive - request for intubation</span>, <span title='Codes: {http://loinc.org 75788-0}'>Advance directive - request for tube feeding</span>, <span title='Codes: {http://loinc.org 75789-8}'>Advance directive - request for life support</span></p><p><b>purpose</b>: <span title='{http://terminology.hl7.org/CodeSystem/v3-ActReason PWATRNY}'>power of attorney</span></p></blockquote></div>"
+Instance: Example-McBee-HealthcareAgentConsent
+InstanceOf: PADIParticipantConsent
+Description: "Example Patient McBee Healthcare Agent Consent"
+Usage: #example
+* text.status = #additional
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>status</b>: active</p><p><b>scope</b>: <span title='Codes: {http://loinc.org 75786-4}'>Powers granted to healthcare agent [Reported]</span></p><p><b>category</b>: <span title='Codes: {http://terminology.hl7.org/CodeSystem/consentcategorycodes acd}'>Advance Directive</span></p><p><b>patient</b>: <a href='Patient-Example-McBee-Patient1.html'>Social Beneficiary Identifier: 555-12-1246, Roger Rienman McBee; Phone: +1(469)238-2858, Phone: +1(214)497-9529, rogerb@example.com; gender: male; birthDate: 1945-04-01</a></p><p><b>dateTime</b>: 2020-08-03</p><h3>Policies</h3><table class='grid'><tr><td>-</td><td><b>Authority</b></td><td><b>Uri</b></td></tr><tr><td>*</td><td><a href='https://www.michigan.gov/'>https://www.michigan.gov/</a></td><td><a href='http://www.legislature.mi.gov/(S(tpnclc1ofteerx2x2dppcmdz))/mileg.aspx?page=GetObject&amp;objectname=mcl-386-1998-V-5'>http://www.legislature.mi.gov/(S(tpnclc1ofteerx2x2dppcmdz))/mileg.aspx?page=GetObject&amp;objectname=mcl-386-1998-V-5</a></td></tr></table><blockquote><p><b>provision</b></p><p><b>type</b>: permit</p><blockquote><p><b>actor</b></p><p><b>role</b>: <span title='Codes: {http://loinc.org 75783-1}'>Primary healthcare agent [Reported]</span></p><p><b>reference</b>: <a href='RelatedPerson-Example-McBee-HealthcareAgent1.html'>Bobbins Sally ; SallyBobbins@example.com</a></p></blockquote><blockquote><p><b>actor</b></p><p><b>role</b>: <span title='Codes: {http://loinc.org 75784-9}'>First alternate healthcare agent [Reported]</span></p><p><b>reference</b>: <a href='RelatedPerson-Example-McBee-HealthcareAgent2.html'><span title='Codes: {http://terminology.hl7.org/CodeSystem/v3-RoleCode FRND}'>unrelated friend</span>; Susskind S. Leonard ; ssuskind@example.com</a></p></blockquote><p><b>action</b>: <span title='Codes: {http://loinc.org 75787-2}'>Advance directive - request for intubation</span>, <span title='Codes: {http://loinc.org 75788-0}'>Advance directive - request for tube feeding</span>, <span title='Codes: {http://loinc.org 75789-8}'>Advance directive - request for life support</span></p><p><b>purpose</b>: <span title='{http://terminology.hl7.org/CodeSystem/v3-ActReason PWATRNY}'>power of attorney</span></p></blockquote></div>"
 
-// * status = #active
-// * scope = $LOINC#75786-4 "Powers granted to healthcare agent [Reported]"
-// * patient = Reference(Example-McBee-Patient1)
-// * dateTime = "2020-08-03"
+* status = #active
+* scope = $LOINC#75786-4 "Powers granted to healthcare agent [Reported]"
+* patient = Reference(Example-McBee-Patient1)
+* dateTime = "2020-08-03"
 
-// * policy.authority = "https://www.michigan.gov/"
-// * policy.uri = "http://www.legislature.mi.gov/(S(tpnclc1ofteerx2x2dppcmdz))/mileg.aspx?page=GetObject&objectname=mcl-386-1998-V-5"
+* policy.authority = "https://www.michigan.gov/"
+* policy.uri = "http://www.legislature.mi.gov/(S(tpnclc1ofteerx2x2dppcmdz))/mileg.aspx?page=GetObject&objectname=mcl-386-1998-V-5"
 
-// * provision.type = #permit
+* provision.type = #permit
 
-// //[TODO] do we need to support and require provision.actor for all HCA's?
-// * provision.actor[+].role = $LOINC#75783-1 "Primary healthcare agent [Reported]"
-// * provision.actor[=].reference = Reference(Example-McBee-HealthcareAgent1)
-// * provision.actor[+].role = $LOINC#75784-9 "First alternate healthcare agent [Reported]"
-// * provision.actor[=].reference = Reference(Example-McBee-HealthcareAgent2)
+//[TODO] do we need to support and require provision.actor for all HCA's?
+* provision.actor[+].role = $LOINC#75783-1 "Primary healthcare agent [Reported]"
+* provision.actor[=].reference = Reference(Example-McBee-HealthcareAgent1)
+* provision.actor[+].role = $LOINC#75784-9 "First alternate healthcare agent [Reported]"
+* provision.actor[=].reference = Reference(Example-McBee-HealthcareAgent2)
 
-// * provision.action[+] = PADIHCADecisionsCS#intubation "Intubation"
-// * provision.action[+] = PADIHCADecisionsCS#tube-feeding "Tube feeding"
-// * provision.action[+] = PADIHCADecisionsCS#life-support "Life support"
+* provision.action[+] = PADIHCADecisionsCS#intubation "Intubation"
+* provision.action[+] = PADIHCADecisionsCS#tube-feeding "Tube feeding"
+* provision.action[+] = PADIHCADecisionsCS#life-support "Life support"
 
-// * provision.purpose = http://terminology.hl7.org/CodeSystem/v3-ActReason#PWATRNY
+* provision.purpose = http://terminology.hl7.org/CodeSystem/v3-ActReason#PWATRNY
 
 
 
@@ -506,81 +506,75 @@
 
 
 
-// // Observations
-// // Care Experience Preferences
-// Instance: Example-McBee-CareExperiencePreference1
-// InstanceOf: PADICareExperiencePreference
-// Description: "Example Patient McBee Care Experience Preference (My Joys)"
-// Usage: #example
+// Observations
+// Care Experience Preferences
+Instance: Example-McBee-CareExperiencePreference1
+InstanceOf: PADICareExperiencePreference
+Description: "Example Patient McBee Care Experience Preference (My Joys)"
+Usage: #example
 
-// * text.status = #additional
-// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-// <p><b>My likes / joys:</b> Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed:</p>
-// <p><i>Like Bach, especially the cantatas.  St. Martin in the Fields</i></p>
-// </div>"
-// * lifecycleStatus = #proposed
-// * category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
-// * category[+] = $LOINC#81360-0 "My likes and joys [Reported]"
-// * description.text = "Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed: Like Bach, especially the cantatas.  St. Martin in the Fields"
-// * subject = Reference(Example-McBee-Patient1)
-// * expressedBy = Reference(Example-McBee-Patient1)
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>My likes / joys:</b> Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed:</p>
+<p><i>Like Bach, especially the cantatas.  St. Martin in the Fields</i></p>
+</div>"
+* category[type] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
+* code = $LOINC#81360-0 "My likes and joys [Reported]"
+* valueString = "Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed: Like Bach, especially the cantatas.  St. Martin in the Fields"
+* subject = Reference(Example-McBee-Patient1)
 
 
 
-// Instance: Example-McBee-CareExperiencePreference2
-// InstanceOf: PADICareExperiencePreference
-// Description: "Example Patient McBee Care Experience Preference (How to care for me)"
-// Usage: #example
+Instance: Example-McBee-CareExperiencePreference2
+InstanceOf: PADICareExperiencePreference
+Description: "Example Patient McBee Care Experience Preference (How to care for me)"
+Usage: #example
 
-// * text.status = #additional
-// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-// <p><b>How to care for me:</b> If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me:</p>
-// <p><i>I don’t like being treated like an object. I would like to be greeted like a person before working on me.</i></p>
-// </div>"
-// * lifecycleStatus = #proposed
-// * category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
-// * category[+] = $LOINC#81380-8 "Goals, preferences, and priorities for care experience [Reported]"
-// * description.text = "How to care for me: If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me: I don’t like being treated like an object. I would like to be greeted like a person before working on me."
-// * subject = Reference(Example-McBee-Patient1)
-// * expressedBy = Reference(Example-McBee-Patient1)
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>How to care for me:</b> If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me:</p>
+<p><i>I don’t like being treated like an object. I would like to be greeted like a person before working on me.</i></p>
+</div>"
+* category[type] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
+* code = $LOINC#81380-8 "Goals, preferences, and priorities for care experience [Reported]"
+* valueString = "How to care for me: If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me: I don’t like being treated like an object. I would like to be greeted like a person before working on me."
+* subject = Reference(Example-McBee-Patient1)
 
 
-// Instance: Example-McBee-CareExperiencePreference3
-// InstanceOf: PADICareExperiencePreference
-// Description: "Example Patient McBee Care Experience Preference (Religious affiliation contact)"
-// Usage: #example
+Instance: Example-McBee-CareExperiencePreference3
+InstanceOf: PADICareExperiencePreference
+Description: "Example Patient McBee Care Experience Preference (Religious affiliation contact)"
+Usage: #example
 
-// * text.status = #additional
-// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-// <p> </p>
-// <p><b>Please attempt to notify someone from my religion at the following phone number:</b> (If I have included one)</p>
-// <p><i>Not Religious</i></p>
-// </div>"
-// * lifecycleStatus = #proposed
-// * category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
-// * category[+] = $LOINC#81365-9 "Religious or cultural affiliation contact to notify [Reported]"
-// * description.text = "Please attempt to notify someone from my religion at the following phone number: If I have included one - Not Religious"
-// * description.extension[padi-contextualValue-extension].extension[Context].valueString = "Please attempt to notify someone from my religion at the following phone number"
-// * description.extension[padi-contextualValue-extension].extension[Value].valueString = "If I have included one - Not Religious"
-// * subject = Reference(Example-McBee-Patient1)
-// * expressedBy = Reference(Example-McBee-Patient1)
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p> </p>
+<p><b>Please attempt to notify someone from my religion at the following phone number:</b> (If I have included one)</p>
+<p><i>Not Religious</i></p>
+</div>"
+* category[type] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
+* code = $LOINC#81365-9 "Religious or cultural affiliation contact to notify [Reported]"
+* valueString = "Please attempt to notify someone from my religion at the following phone number: If I have included one - Not Religious"
+* extension[padi-contextualValue-extension].extension[Context].valueString = "Please attempt to notify someone from my religion at the following phone number"
+* extension[padi-contextualValue-extension].extension[Value].valueString = "If I have included one - Not Religious"
+* subject = Reference(Example-McBee-Patient1)
 
-// Instance: Example-McBee-CareExperiencePreference4
-// InstanceOf: PADICareExperiencePreference
-// Description: "Example Patient McBee Care Experience Preference (My unfinished business)"
-// Usage: #example
 
-// * text.status = #additional
-// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-// <p><b>My unfinished business:</b> If it appears that I am approaching the end of my life, and I cannot communicate with persons around me, I would want my doctors and nurses, my family, and my friends to know about some unfinished business that I need to address:</p>
-// <p><i>I am awaiting a message from the Noble Committee. Please keep me alive if I look promising this year.</i></p>
-// </div>"
-// * lifecycleStatus = #proposed
-// * category[+] = PADIGoalCategoryCS#care-experience-preference "Care experience preference"
-// * category[+] = $LOINC#81366-7 "Unfinished business [Reported]"
-// * description.text = "If it appears that I am approaching the end of my life, and I cannot communicate with persons around me, I would want my doctors and nurses, my family, and my friends to know about some unfinished business that I need to address: I am awaiting a message from the Noble Committee. Please keep me alive if I look promising this year."
-// * subject = Reference(Example-McBee-Patient1)
-// * expressedBy = Reference(Example-McBee-Patient1)
+
+Instance: Example-McBee-CareExperiencePreference4
+InstanceOf: PADICareExperiencePreference
+Description: "Example Patient McBee Care Experience Preference (My unfinished business)"
+Usage: #example
+
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>My unfinished business:</b> If it appears that I am approaching the end of my life, and I cannot communicate with persons around me, I would want my doctors and nurses, my family, and my friends to know about some unfinished business that I need to address:</p>
+<p><i>I am awaiting a message from the Noble Committee. Please keep me alive if I look promising this year.</i></p>
+</div>"
+* category[type] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
+* code = $LOINC#81366-7 "Unfinished business [Reported]"
+* valueString = "If it appears that I am approaching the end of my life, and I cannot communicate with persons around me, I would want my doctors and nurses, my family, and my friends to know about some unfinished business that I need to address: I am awaiting a message from the Noble Committee. Please keep me alive if I look promising this year."
+* subject = Reference(Example-McBee-Patient1)
 
 
 
@@ -624,133 +618,126 @@
 
 
 // // Health Goal Examples
-// Instance: Example-McBee-PersonalGoal1
-// InstanceOf: PADIPersonalGoal
-// Description: "Example Patient McBee Personal Goal 1"
-// Usage: #example
+Instance: Example-McBee-PersonalGoal1
+InstanceOf: PADIPersonalGoal
+Description: "Example Patient McBee Personal Goal 1"
+Usage: #example
 
-// * text.status = #additional
-// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-// <p><b>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:</b></p>
-// <p><i>Being at peace with my God</i></p>
-// </div>"
-// * lifecycleStatus = #proposed
-// * category[+] = PADIGoalCategoryCS#personal-goal "Personal Goal"
-// * category[+] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
-// * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Being at peace with my God"
-// * subject = Reference(Example-McBee-Patient1)
-// * expressedBy = Reference(Example-McBee-Patient1)
-
-
-// Instance: Example-McBee-PersonalGoal2
-// InstanceOf: PADIPersonalGoal
-// Description: "Example Patient McBee Personal Goal 2"
-// Usage: #example
-
-// * text.status = #additional
-// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-// <p><b>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:</b></p>
-// <p><i>Dying at home</i></p>
-// </div>"
-// * lifecycleStatus = #proposed
-// * category[+] = PADIGoalCategoryCS#personal-goal "Personal Goal"
-// * category[+] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
-// * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Dying at home"
-// * subject = Reference(Example-McBee-Patient1)
-// * expressedBy = Reference(Example-McBee-Patient1)
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:</b></p>
+<p><i>Being at peace with my God</i></p>
+</div>"
+* lifecycleStatus = #proposed
+* category[type] = $LOINC#87528-6 "Personal health goal"
+* description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Being at peace with my God"
+* subject = Reference(Example-McBee-Patient1)
+* expressedBy = Reference(Example-McBee-Patient1)
 
 
-// Instance: Example-McBee-PersonalGoal3
-// InstanceOf: PADIPersonalGoal
-// Description: "Example Patient McBee Personal Goal 3"
-// Usage: #example
+Instance: Example-McBee-PersonalGoal2
+InstanceOf: PADIPersonalGoal
+Description: "Example Patient McBee Personal Goal 2"
+Usage: #example
 
-// * text.status = #additional
-// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-// <p><b>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:</b></p>
-// <p><i>Being able to feed, bathe, and take care of myself</i></p>
-// </div>"
-// * lifecycleStatus = #proposed
-// * category[+] = PADIGoalCategoryCS#personal-goal "Personal Goal"
-// * category[+] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
-// * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:  Being able to feed, bathe, and take care of myself"
-// * subject = Reference(Example-McBee-Patient1)
-// * expressedBy = Reference(Example-McBee-Patient1)
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:</b></p>
+<p><i>Dying at home</i></p>
+</div>"
+* lifecycleStatus = #proposed
+* category[type] = $LOINC#87528-6 "Personal health goal"
+* description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Dying at home"
+* subject = Reference(Example-McBee-Patient1)
+* expressedBy = Reference(Example-McBee-Patient1)
 
 
-// Instance: Example-McBee-PersonalGoal4
-// InstanceOf: PADIPersonalGoal
-// Description: "Example Patient McBee Personal Goal 4"
-// Usage: #example
+Instance: Example-McBee-PersonalGoal3
+InstanceOf: PADIPersonalGoal
+Description: "Example Patient McBee Personal Goal 3"
+Usage: #example
 
-// * text.status = #additional
-// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-// <p><b>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:</b></p>
-// <p><i>Being free from pain</i></p>
-// </div>"
-// * lifecycleStatus = #proposed
-// * category[+] = PADIGoalCategoryCS#personal-goal "Personal Goal"
-// * category[+] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
-// * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Being free from pain"
-// * subject = Reference(Example-McBee-Patient1)
-// * expressedBy = Reference(Example-McBee-Patient1)
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:</b></p>
+<p><i>Being able to feed, bathe, and take care of myself</i></p>
+</div>"
+* lifecycleStatus = #proposed
+* category[type] = $LOINC#87528-6 "Personal health goal"
+* description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:  Being able to feed, bathe, and take care of myself"
+* subject = Reference(Example-McBee-Patient1)
+* expressedBy = Reference(Example-McBee-Patient1)
+
+
+Instance: Example-McBee-PersonalGoal4
+InstanceOf: PADIPersonalGoal
+Description: "Example Patient McBee Personal Goal 4"
+Usage: #example
+
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:</b></p>
+<p><i>Being free from pain</i></p>
+</div>"
+* lifecycleStatus = #proposed
+* category[type] = $LOINC#87528-6 "Personal health goal"
+* description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Being free from pain"
+* subject = Reference(Example-McBee-Patient1)
+* expressedBy = Reference(Example-McBee-Patient1)
 
 
 
-// Instance: Example-McBee-PersonalGoal5
-// InstanceOf: PADIPersonalGoal
-// Description: "Example Patient McBee Personal Goal 5"
-// Usage: #example
+Instance: Example-McBee-PersonalGoal5
+InstanceOf: PADIPersonalGoal
+Description: "Example Patient McBee Personal Goal 5"
+Usage: #example
 
-// * text.status = #additional
-// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-// <p><b>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:</b></p>
-// <p><i>Resolving conflicts</i></p>
-// </div>"
-// * lifecycleStatus = #proposed
-// * category[+] = PADIGoalCategoryCS#personal-goal "Personal Goal"
-// * category[+] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
-// * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Resolving conflicts"
-// * subject = Reference(Example-McBee-Patient1)
-// * expressedBy = Reference(Example-McBee-Patient1)
-
-
-
-// Instance: Example-McBee-PersonalGoal6
-// InstanceOf: PADIPersonalGoal
-// Description: "Example Patient McBee Personal Goal 6"
-// Usage: #example
-
-// * text.status = #additional
-// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-// <p><b>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:</b></p>
-// <p><i>Being with my family</i></p>
-// </div>"
-// * lifecycleStatus = #proposed
-// * category[+] = PADIGoalCategoryCS#personal-goal "Personal Goal"
-// * category[+] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
-// * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Being with my family"
-// * subject = Reference(Example-McBee-Patient1)
-// * expressedBy = Reference(Example-McBee-Patient1)
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:</b></p>
+<p><i>Resolving conflicts</i></p>
+</div>"
+* lifecycleStatus = #proposed
+* category[type] = $LOINC#87528-6 "Personal health goal"
+* description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Resolving conflicts"
+* subject = Reference(Example-McBee-Patient1)
+* expressedBy = Reference(Example-McBee-Patient1)
 
 
 
-// Instance: Example-McBee-PersonalGoal7
-// InstanceOf: PADIPersonalGoal
-// Description: "Example Patient McBee Personal Goal 7"
-// Usage: #example
+Instance: Example-McBee-PersonalGoal6
+InstanceOf: PADIPersonalGoal
+Description: "Example Patient McBee Personal Goal 6"
+Usage: #example
 
-// * text.status = #additional
-// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-// <p><b>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:</b></p>
-// <p><i>Not being a financial burden to my family</i></p>
-// </div>"
-// * lifecycleStatus = #proposed
-// * category[+] = PADIGoalCategoryCS#personal-goal "Personal Goal"
-// * category[+] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
-// * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Not being a financial burden to my family"
-// * subject = Reference(Example-McBee-Patient1)
-// * expressedBy = Reference(Example-McBee-Patient1)
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:</b></p>
+<p><i>Being with my family</i></p>
+</div>"
+* lifecycleStatus = #proposed
+* category[type] = $LOINC#87528-6 "Personal health goal"
+* description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Being with my family"
+* subject = Reference(Example-McBee-Patient1)
+* expressedBy = Reference(Example-McBee-Patient1)
+
+
+
+Instance: Example-McBee-PersonalGoal7
+InstanceOf: PADIPersonalGoal
+Description: "Example Patient McBee Personal Goal 7"
+Usage: #example
+
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:</b></p>
+<p><i>Not being a financial burden to my family</i></p>
+</div>"
+* lifecycleStatus = #proposed
+* category[type] = $LOINC#87528-6 "Personal health goal"
+* description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Not being a financial burden to my family"
+* subject = Reference(Example-McBee-Patient1)
+* expressedBy = Reference(Example-McBee-Patient1)
 
 
 // // Personal Intervention Preferences
@@ -900,84 +887,84 @@
 // //Organ Donation Observation examples
 
 
-// Instance: Example-McBee-OrganDonationObservation1
-// InstanceOf: PADIOrganDonationObservation
-// Description: "Example Patient McBee Organ Donation Observation 1"
-// Usage: #example
+Instance: Example-McBee-OrganDonationObservation1
+InstanceOf: PADIOrganDonationObservation
+Description: "Example Patient McBee Organ Donation Observation 1"
+Usage: #example
 
-// * text.status = #additional
-// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-// <p><b>Consent to Donate</b></p>
-// <p><i>I don’t want to donate my organs.</i></p>
-// </div>"
-// * status = #final
-// * code = $LOINC#75781-5 "Thoughts on organ and tissue donations [Reported]"
-// * subject = Reference(Example-McBee-Patient1)
-// * valueString = "Consent to Donate: I don’t want to donate my organs."
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>Consent to Donate</b></p>
+<p><i>I don’t want to donate my organs.</i></p>
+</div>"
+* status = #final
+* code = $LOINC#75781-5 "Thoughts on organ and tissue donations [Reported]"
+* subject = Reference(Example-McBee-Patient1)
+* valueString = "Consent to Donate: I don’t want to donate my organs."
 
 
 // // Autopsy Observation examples
 
-// Instance: Example-McBee-AutopsyObservation1
-// InstanceOf: PADIAutopsyObservation
-// Description: "Example Patient McBee Autopsy Observation (Thoughts Regarding Autopsy)"
-// Usage: #example
+Instance: Example-McBee-AutopsyObservation1
+InstanceOf: PADIAutopsyObservation
+Description: "Example Patient McBee Autopsy Observation (Thoughts Regarding Autopsy)"
+Usage: #example
 
-// * text.status = #additional
-// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-// <p><b>Autopsy</b></p>
-// <p><i>I want an autopsy if my doctor thinks it will help others.</i></p>
-// </div>"
-// * status = #final
-// * code = $LOINC#75782-3 "Thoughts regarding autopsy [Reported]"
-// * subject = Reference(Example-McBee-Patient1)
-// * valueString = "Autopsy: I want an autopsy if my doctor thinks it will help others."
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>Autopsy</b></p>
+<p><i>I want an autopsy if my doctor thinks it will help others.</i></p>
+</div>"
+* status = #final
+* code = $LOINC#75782-3 "Thoughts regarding autopsy [Reported]"
+* subject = Reference(Example-McBee-Patient1)
+* valueString = "Autopsy: I want an autopsy if my doctor thinks it will help others."
 
 
 // // Organization Examples
 
-// Instance: Example-McBee-OrganizationCustodian1
-// InstanceOf: $USCoreOrganization
-// Description: "Example Patient McBee Custodian Organization"
-// Usage: #example
+Instance: Example-McBee-OrganizationCustodian1
+InstanceOf: $USCoreOrganization
+Description: "Example Patient McBee Custodian Organization"
+Usage: #example
 
-// * identifier.system = "http://hl7.org/fhir/sid/us-npi"
-// * identifier.value = "44444"
-// * active = true
-// * name = "MyDirectives.com"
+* identifier.system = "http://hl7.org/fhir/sid/us-npi"
+* identifier.value = "44444"
+* active = true
+* name = "MyDirectives.com"
 
-// * telecom[0].system = #phone
-// * telecom[0].value = "+1(202)776-7700"
-// * telecom[0].use = #work
+* telecom[0].system = #phone
+* telecom[0].value = "+1(202)776-7700"
+* telecom[0].use = #work
 
-// * address[0].type = http://hl7.org/fhir/address-type#physical
-// * address[0].line[0] = "740 E. Campbell Rd. Suite 825"
-// * address[0].city = "Richardson"
-// * address[0].state = "TX"
-// * address[0].postalCode = "75081"
-// * address[0].country = "US"
+* address[0].type = http://hl7.org/fhir/address-type#physical
+* address[0].line[0] = "740 E. Campbell Rd. Suite 825"
+* address[0].city = "Richardson"
+* address[0].state = "TX"
+* address[0].postalCode = "75081"
+* address[0].country = "US"
 
-// // TODO where does assembler or provenance get referenced to by the Composition (or doesn't it)?
-// Instance: Example-McBee-OrganizationAssembler1
-// InstanceOf: $USCoreOrganization
-// Description: "Example Patient McBee Assembler Organization"
-// Usage: #example
+// TODO where does assembler or provenance get referenced to by the Composition (or doesn't it)?
+Instance: Example-McBee-OrganizationAssembler1
+InstanceOf: $USCoreOrganization
+Description: "Example Patient McBee Assembler Organization"
+Usage: #example
 
-// * identifier.system = "urn:oid:1.3.6.1.4.1.42424242.4.99930.4"
-// * identifier.value = "4"
-// * active = true
-// * name = "ADVault, Inc."
+* identifier.system = "urn:oid:1.3.6.1.4.1.42424242.4.99930.4"
+* identifier.value = "4"
+* active = true
+* name = "ADVault, Inc."
 
-// * telecom[0].system = #phone
-// * telecom[0].value = "+1(202)776-7700"
-// * telecom[0].use = #work
+* telecom[0].system = #phone
+* telecom[0].value = "+1(202)776-7700"
+* telecom[0].use = #work
 
-// * address[0].type = http://hl7.org/fhir/address-type#physical
-// * address[0].line[0] = "740 E. Campbell Rd. Suite 825"
-// * address[0].city = "Richardson"
-// * address[0].state = "TX"
-// * address[0].postalCode = "75081"
-// * address[0].country = "US"
+* address[0].type = http://hl7.org/fhir/address-type#physical
+* address[0].line[0] = "740 E. Campbell Rd. Suite 825"
+* address[0].city = "Richardson"
+* address[0].state = "TX"
+* address[0].postalCode = "75081"
+* address[0].country = "US"
 
 
 
@@ -985,14 +972,14 @@
 
 // // Provenance Examples
 
-// Instance: Example-McBee-PACPProvenance1
-// InstanceOf: ADIProvenance
-// Description: "Example Patient McBee Provenance"
-// Usage: #example
+Instance: Example-McBee-PACPProvenance1
+InstanceOf: ADIProvenance
+Description: "Example Patient McBee Provenance"
+Usage: #example
 
-// * target = Reference(Example-McBee-PACPComposition1)
-// * recorded = "2019-12-06T10:11:30.001-04:00"
+* target = Reference(Example-McBee-PACPComposition1)
+* recorded = "2019-12-06T10:11:30.001-04:00"
 
-// * agent[assembler].type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#assembler "Assembler"
-// * agent[assembler].who = Reference(Example-McBee-OrganizationAssembler1)
+* agent[assembler].type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#assembler "Assembler"
+* agent[assembler].who = Reference(Example-McBee-OrganizationAssembler1)
 
