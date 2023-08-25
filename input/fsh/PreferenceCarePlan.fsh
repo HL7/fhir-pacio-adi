@@ -4,7 +4,7 @@ Id: PADI-PreferenceCarePlan
 Title: "ADI Preference Care Plan"
 Description: "The Preference Care Plan is a means for an individual to express their goals and preferences under certain circumstances that may be pertinent when planning his or her care."
 
-//* text 1..1 MS
+* text 0..1 MS
 
 * status = #active
 * intent = #proposal
