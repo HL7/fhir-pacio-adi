@@ -1,3 +1,109 @@
+ValueSet: ADIConsentTypeVS
+Title: "Consent Type"
+Description: "Codes indicating type of advance directive consents."
+* ^experimental = false
+* include $LOINC#81335-2 "Patient Healthcare agent" // "Healthcare agents identified with no powers or limitations specified"
+* include $LOINC#75786-4 "Powers granted to healthcare agent [Reported]" // "Healthcare agents identified with powers granted specified"
+* include $LOINC#81346-9 "Limitations placed on healthcare agent [Reported]" // "Healthcare agents identified with limitations placed specified"
+* include $LOINC#81343-6 "Healthcare agent advisor [Reported]"
+* insert LOINCCopyrightNotice
+
+// fix for FHIR-34506
+ValueSet: ADIConsentCategoryVS
+Title: "Consent Category"
+Description: "Codes indicating category of advance directive consents."
+* ^experimental = false
+* codes from system ADIConsentCategoryCS
+
+ValueSet: ADIPersonalAndLegalRelationshipRoleTypeVS
+Title: "Personal And Legal Relationship Role Type"
+Description: "Clinical Focus: A personal or legal relationship records the role of a person in relation to another person, or a person to himself or herself. This value set is to be used when recording relationships based on personal or family ties or through legal assignment of responsibility."
+* ^experimental = false
+* codes from system $HL7RoleCode
+
+
+ValueSet: ADIInterventionPreferencesVS
+Title: "Intervention Preferences"
+Description: "Clinical Focus: This value set includes concepts representing an individual's intervention preferences which can be expressed by the individual in his or her advance care plan.),(Data Element Scope: The intent of this value set is to identify personal intervention preferences that may be relevant and could be considered by clinicians or any person or organization that is providing care, treatment, or performing any other type of act to or on behalf of the individual.)"
+* ^experimental = false
+// * codes from valueset ADIInterventionPreferencesOrdinalVS
+* codes from valueset $ADIInterventionPreferencesEndOfLifeGrouping
+* include ADIPreferenceCategoryCS#intervention-preference "Intervention preference"
+* insert LOINCCopyrightNotice
+
+
+ValueSet: ADIInterventionPreferencesOrdinalVS
+Title: "Intervention Preferences - Ordinal"
+Description: "Clinical Focus: This value set includes concepts representing an individual's intervention preferences which can be expressed by the individual in his or her advance care plan.),(Data Element Scope: The intent of this value set is to identify personal intervention preferences that may be relevant and could be considered by clinicians or any person or organization that is providing care, treatment, or performing any other type of act to or on behalf of the individual.)"
+* ^experimental = false
+* include $LOINC#75787-2 "Advance directive - request for intubation"
+* include $LOINC#75788-0 "Advance directive - request for tube feeding"
+* include $LOINC#75789-8 "Advance directive - request for life support"
+* include $LOINC#75790-6 "Advance directive - request for IV fluid and support"
+* include $LOINC#75791-4 "Advance directive - request for antibiotics"
+* include $LOINC#75792-2 "Advance directive - request for resuscitation that differs from cardiopulmonary resuscitation"
+* insert LOINCCopyrightNotice
+
+
+ValueSet: ADIHCADecisionsVS
+Title: "Healthcare Agent Decisions"
+Description: "Codes indicating decisions a healthcare agent may or may not make on behalf of an individual."
+* ^experimental = false
+* codes from system ADIHCADecisionsCS
+* include $LOINC#81347-7 "Consent for healthcare agent to deviate from stated goals, preferences and priorities [Reported]"
+* include $LOINC#81344-4 "Healthcare agent authority to inspect and disclose mental and physical health information [Reported]"
+* include $LOINC#81345-1 "Healthcare agent authority to inspect and disclose specially protected health information [Reported]"
+
+* insert LOINCCopyrightNotice
+
+
+ValueSet: ADINoHealthcareAgentIncludedReasonVS
+Title: "No Healthcare Agent Included Reason"
+Description: "Includes data absent reason concepts to express why a Healthcare Agent is not included."
+* ^experimental = false
+* include $HL7AdataAbsentReason#unknown
+* include $HL7AdataAbsentReason#asked-unknown
+* include $HL7AdataAbsentReason#temp-unknown
+* include $HL7AdataAbsentReason#not-asked
+* include $HL7AdataAbsentReason#asked-declined
+* include $HL7AdataAbsentReason#not-applicable
+* include $HL7AdataAbsentReason#unsupported
+
+
+
+ValueSet: ADIAttesterRoleTypeVS
+Title: "Attester Role"
+Description: "Codes indicating a role of an attester."
+* ^experimental = false
+* include $LOINC#81372-5 "Notary"
+* include $LOINC#81369-1 "First witness"
+* include $LOINC#81370-9 "Second witness"
+* include $LOINC#81371-7 "Third witness"
+* insert LOINCCopyrightNotice
+
+
+ValueSet: ADIDocumentationTypeVS
+Title: "Documentation Types"
+Description: "Types of Documents"
+* ^experimental = false
+* include $LOINC#81352-7 "Medical Order for Life-Sustaining Treatment, Physician Order for Life-Sustaining Treatment, or a similar medical order is in place [Reported]"
+* include $LOINC#81351-9 "Do Not Resuscitate, Do Not Attempt Resuscitation, or Allow Natural Death order is in place [Reported]"
+* include $LOINC#42348-3 "Advance directives"
+//* include $LOINC#81375-8 "Self assessment of health status [Reported]"
+//* include $LOINC#81354-3 "Prescribed anticipatory medication [Reported]"
+* include $SNOMEDCT#304253006 "Not for resuscitation"
+* include $SNOMEDCT#714748000 "Has advance care plan"
+* include codes from system $SNOMEDCT where concept is-a #425392003 "Active advance directive"
+* include codes from system $SNOMEDCT where concept is-a #423876004 "Clinical document"
+* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc
+
+This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+
+RuleSet: LOINCCopyrightNotice
+* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
+
+RuleSet: SNOMEDCopyrightNotice
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 
 /*
 ValueSet: ADIAdvanceDirectiveCategoriesVS
@@ -27,22 +133,6 @@ This ValueSet is managed at the US National Library of Medicine (NLM) Value Set 
 * insert LOINCCopyrightNotice
 */
 
-ValueSet: ADIConsentTypeVS
-Title: "Consent Type"
-Description: "Codes indicating type of advance directive consents."
-* ^experimental = false
-* include $LOINC#81335-2 "Patient Healthcare agent" // "Healthcare agents identified with no powers or limitations specified"
-* include $LOINC#75786-4 "Powers granted to healthcare agent [Reported]" // "Healthcare agents identified with powers granted specified"
-* include $LOINC#81346-9 "Limitations placed on healthcare agent [Reported]" // "Healthcare agents identified with limitations placed specified"
-* include $LOINC#81343-6 "Healthcare agent advisor [Reported]"
-* insert LOINCCopyrightNotice
-
-
-ValueSet: ADIPersonalAndLegalRelationshipRoleTypeVS
-Title: "Personal And Legal Relationship Role Type"
-Description: "Clinical Focus: A personal or legal relationship records the role of a person in relation to another person, or a person to himself or herself. This value set is to be used when recording relationships based on personal or family ties or through legal assignment of responsibility."
-* ^experimental = false
-* codes from system $HL7RoleCode
 
 /*
 ValueSet: ADICareExperiencePreferencesVS
@@ -65,32 +155,6 @@ This ValueSet is managed at the US National Library of Medicine (NLM) Value Set 
 * include ADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
 * insert LOINCCopyrightNotice
 */
-
-
-
-ValueSet: ADIInterventionPreferencesVS
-Title: "Intervention Preferences"
-Description: "Clinical Focus: This value set includes concepts representing an individual's intervention preferences which can be expressed by the individual in his or her advance care plan.),(Data Element Scope: The intent of this value set is to identify personal intervention preferences that may be relevant and could be considered by clinicians or any person or organization that is providing care, treatment, or performing any other type of act to or on behalf of the individual.)"
-* ^experimental = false
-// * codes from valueset ADIInterventionPreferencesOrdinalVS
-* codes from valueset $ADIInterventionPreferencesEndOfLifeGrouping
-* include ADIPreferenceCategoryCS#intervention-preference "Intervention preference"
-* insert LOINCCopyrightNotice
-
-
-ValueSet: ADIInterventionPreferencesOrdinalVS
-Title: "Intervention Preferences - Ordinal"
-Description: "Clinical Focus: This value set includes concepts representing an individual's intervention preferences which can be expressed by the individual in his or her advance care plan.),(Data Element Scope: The intent of this value set is to identify personal intervention preferences that may be relevant and could be considered by clinicians or any person or organization that is providing care, treatment, or performing any other type of act to or on behalf of the individual.)"
-* ^experimental = false
-* include $LOINC#75787-2 "Advance directive - request for intubation"
-* include $LOINC#75788-0 "Advance directive - request for tube feeding"
-* include $LOINC#75789-8 "Advance directive - request for life support"
-* include $LOINC#75790-6 "Advance directive - request for IV fluid and support"
-* include $LOINC#75791-4 "Advance directive - request for antibiotics"
-* include $LOINC#75792-2 "Advance directive - request for resuscitation that differs from cardiopulmonary resuscitation"
-* insert LOINCCopyrightNotice
-
-
 
 
 /*
@@ -118,19 +182,6 @@ Description: "Clinical Focus: This value set includes concepts representing an i
 * insert LOINCCopyrightNotice
 */
 
-ValueSet: ADIHCADecisionsVS
-Title: "Healthcare Agent Decisions"
-Description: "Codes indicating decisions a healthcare agent may or may not make on behalf of an individual."
-* ^experimental = false
-* codes from system ADIHCADecisionsCS
-* include $LOINC#81347-7 "Consent for healthcare agent to deviate from stated goals, preferences and priorities [Reported]"
-* include $LOINC#81344-4 "Healthcare agent authority to inspect and disclose mental and physical health information [Reported]"
-* include $LOINC#81345-1 "Healthcare agent authority to inspect and disclose specially protected health information [Reported]"
-
-* insert LOINCCopyrightNotice
-
-
-
 /*
 ValueSet: ADIAutopsyVS
 Title: "Autopsy Thoughts"
@@ -145,55 +196,3 @@ Description: "This value set includes the concept representing an individual's t
 * include $LOINC#75781-5 "Thoughts on organ and tissue donations [Reported]"
 * insert LOINCCopyrightNotice
 */
-
-ValueSet: ADINoHealthcareAgentIncludedReasonVS
-Title: "No Healthcare Agent Included Reason"
-Description: "Includes data absent reason concepts to express why a Healthcare Agent is not included."
-* ^experimental = false
-* include $HL7AdataAbsentReason#unknown
-* include $HL7AdataAbsentReason#asked-unknown
-* include $HL7AdataAbsentReason#temp-unknown
-* include $HL7AdataAbsentReason#not-asked
-* include $HL7AdataAbsentReason#asked-declined
-* include $HL7AdataAbsentReason#not-applicable
-* include $HL7AdataAbsentReason#unsupported
-
-
-
-ValueSet: ADIAttesterRoleTypeVS
-Title: "Attester Role"
-Description: "Codes indicating a role of an attester."
-* ^experimental = false
-* include $LOINC#81372-5 "Notary"
-* include $LOINC#81369-1 "First witness"
-* include $LOINC#81370-9 "Second witness"
-* include $LOINC#81371-7 "Third witness"
-* insert LOINCCopyrightNotice
-
-
-
-// TODO Rename -  Advance Directive Documentation Types  
-
-ValueSet: ADIDocumentationTypeVS
-Title: "Documentation Types"
-Description: "Types of Documents"
-* ^experimental = false
-* include $LOINC#81352-7 "Medical Order for Life-Sustaining Treatment, Physician Order for Life-Sustaining Treatment, or a similar medical order is in place [Reported]"
-* include $LOINC#81351-9 "Do Not Resuscitate, Do Not Attempt Resuscitation, or Allow Natural Death order is in place [Reported]"
-* include $LOINC#42348-3 "Advance directives"
-//* include $LOINC#81375-8 "Self assessment of health status [Reported]"
-//* include $LOINC#81354-3 "Prescribed anticipatory medication [Reported]"
-* include $SNOMEDCT#304253006 "Not for resuscitation"
-* include $SNOMEDCT#714748000 "Has advance care plan"
-* include codes from system $SNOMEDCT where concept is-a #425392003 "Active advance directive"
-* include codes from system $SNOMEDCT where concept is-a #423876004 "Clinical document"
-* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc
-
-This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-
-RuleSet: LOINCCopyrightNotice
-* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
-
-RuleSet: SNOMEDCopyrightNotice
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-

@@ -26,8 +26,9 @@ Description: "This profile is used to represent a consent for an advance directi
 // [TODO], the LOINC code is an observable, which is not meant to express scope. Will need to find another code that could (Follow-up with Dan Vreeman  Liz Umberfield)
 * scope from ADIConsentTypeVS (required)
 
-
-* category = http://terminology.hl7.org/CodeSystem/consentcategorycodes#acd
+// mlt_20230826: direct link to HTO consent category rolled back because UP-413 did not reach quorum for votes. Reverting back to a local value set until then.
+// * category = http://terminology.hl7.org/CodeSystem/consentcategorycodes#acd
+* category from ADIConsentCategoryVS (extensible)
 
 // [TODO] there seems to be an issue with consent scope. The url http://terminology.hl7.org/CodeSystem/consentscope forwards to https://terminology.hl7.org/2.1.0/CodeSystem-consentscope.html
 // But the version we are using is the R4 version http://hl7.org/fhir/codesystem-consent-scope.html#consent-scope-adr
