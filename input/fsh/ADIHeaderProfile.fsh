@@ -23,20 +23,20 @@ Description: "This abstract profile defines constraints that represent common ad
     */
 
 * extension contains
-    padi-versionNumber-extension named VersionNumber 0..1 MS and
-    padi-effective-date-extension named EffectiveDateExtension 0..1 and
-    padi-jurisdiction-extension named Jurisdiction 0..* and 
-    padi-dataEnterer-extension named DataEntererExtension 0..1 and
-    padi-informant-extension named InformantExtension 0..* and
-  //  padi-informationRecipient-extension named InformationRecipientExtension 0..* MS and
-    padi-participant-extension named ParticipantExtension 0..* and
-    padi-performer-extension named PerformerExtension 0..* and
-    padi-clause-extension named ClauseExtension 0..*
+    adi-versionNumber-extension named VersionNumber 0..1 MS and
+    adi-effective-date-extension named EffectiveDateExtension 0..1 and
+    adi-jurisdiction-extension named Jurisdiction 0..* and 
+    adi-dataEnterer-extension named DataEntererExtension 0..1 and
+    adi-informant-extension named InformantExtension 0..* and
+  //  adi-informationRecipient-extension named InformationRecipientExtension 0..* MS and
+    adi-participant-extension named ParticipantExtension 0..* and
+    adi-performer-extension named PerformerExtension 0..* and
+    adi-clause-extension named ClauseExtension 0..*
 
 * language 1..1 MS
 * identifier 1..1 MS
 * type MS
-* type from $PADIAdvanceDirectiveCategories (extensible)
+* type from $ADIAdvanceDirectiveCategories (extensible)
 
 * category 1..1 MS
 * subject 1..1 MS
@@ -50,7 +50,7 @@ Description: "This abstract profile defines constraints that represent common ad
 * confidentiality 0..0
 
 * attester.extension contains
-    padi-attestationInformation-extension named AttestationInformationExtension 1..1
+    adi-attestationInformation-extension named AttestationInformationExtension 1..1
 
 * attester ^slicing.discriminator.type = #value 
 * attester ^slicing.discriminator.path = "mode"
@@ -79,7 +79,7 @@ Description: "This abstract profile defines constraints that represent common ad
 * custodian only Reference ($USCoreOrganization)
 
 * section.extension contains    
-    padi-clause-extension named ClauseExtension 0..*
+    adi-clause-extension named ClauseExtension 0..*
     
 // need to add notes on which attester roles there are. Change name of personal_attester to witness_attester professional_attester to notary_attester
 // Need to add an extension with a code that explains the role, witness or notary. Others?

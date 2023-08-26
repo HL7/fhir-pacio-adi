@@ -1,6 +1,6 @@
-Profile: PADIPACPComposition
+Profile: ADIPACPComposition
 Parent: ADICompositionHeader
-Id: PADI-PACPComposition
+Id: ADI-PACPComposition
 Title: "ADI Personal Advance Care Plan Composition"
 Description: "This profile encompasses information that makes up the author’s advance care information plan."
 
@@ -37,8 +37,8 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[healthcare_agent].code 1..1 
 * section[healthcare_agent].code = $LOINC#81335-2
 * section[healthcare_agent].entry 
-* section[healthcare_agent].entry only Reference(PADIParticipantConsent or PADIParticipant)
-* section[healthcare_agent].emptyReason from PADINoHealthcareAgentIncludedReasonVS (required)
+* section[healthcare_agent].entry only Reference(ADIParticipantConsent or ADIParticipant)
+* section[healthcare_agent].emptyReason from ADINoHealthcareAgentIncludedReasonVS (required)
 * section[healthcare_agent] obeys HCA-section-entries
 // TODO add guidance around this emptyReason element
 // TODO add invariant stating that if entry exists, then agent Consent must exist
@@ -49,7 +49,7 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[gpp_personal_care_experience].code = $LOINC#81338-6
 * section[healthcare_agent].orderedBy 
 * section[gpp_personal_care_experience].entry 
-* section[gpp_personal_care_experience].entry only Reference(PADICareExperiencePreference or PADIPersonalPrioritiesOrganizer or PADIPersonalGoal)
+* section[gpp_personal_care_experience].entry only Reference(ADICareExperiencePreference or ADIPersonalPrioritiesOrganizer or ADIPersonalGoal)
 
 
 * section[gpp_for_certain_health_condition] ^short = "Preference care plans defined for specific situations and/or conditions"
@@ -58,16 +58,16 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[gpp_for_certain_health_condition].code 1..1 
 * section[gpp_for_certain_health_condition].code = $LOINC#81336-0
 * section[gpp_for_certain_health_condition].entry 
-//* section[gpp_for_certain_health_condition].entry only Reference(PADIPreferenceCarePlan or PADIPersonalInterventionPreference or PADIPersonalInterventionRequestPreference or PADIPersonalPrioritiesOrganizer or PADIPersonalGoal)
-* section[gpp_for_certain_health_condition].entry only Reference(PADIPreferenceCarePlan)
+//* section[gpp_for_certain_health_condition].entry only Reference(ADIPreferenceCarePlan or ADIPersonalInterventionPreference or ADIPersonalInterventionRequestPreference or ADIPersonalPrioritiesOrganizer or ADIPersonalGoal)
+* section[gpp_for_certain_health_condition].entry only Reference(ADIPreferenceCarePlan)
 
 * section[gpp_upon_death] ^short = "Goals, preferences, and priorities upon death"
 * section[gpp_upon_death].title 1..1 MS
 * section[gpp_upon_death].code 1..1 
 * section[gpp_upon_death].code = $LOINC#81337-8
 * section[gpp_upon_death].entry 
-//* section[gpp_upon_death].entry only Reference(PADIPreferenceCarePlan or PADIPersonalInterventionPreference or PADIPersonalInterventionRequestPreference or PADIPersonalPrioritiesOrganizer or PADIAutopsyObservation or PADIOrganDonationObservation or PADIPersonalGoal)
-* section[gpp_upon_death].entry only Reference(PADIPreferenceCarePlan or PADIPersonalInterventionPreference or PADIPersonalPrioritiesOrganizer or PADIAutopsyObservation or PADIOrganDonationObservation or PADIPersonalGoal)
+//* section[gpp_upon_death].entry only Reference(ADIPreferenceCarePlan or ADIPersonalInterventionPreference or ADIPersonalInterventionRequestPreference or ADIPersonalPrioritiesOrganizer or ADIAutopsyObservation or ADIOrganDonationObservation or ADIPersonalGoal)
+* section[gpp_upon_death].entry only Reference(ADIPreferenceCarePlan or ADIPersonalInterventionPreference or ADIPersonalPrioritiesOrganizer or ADIAutopsyObservation or ADIOrganDonationObservation or ADIPersonalGoal)
 
 
 * section[additional_documentation] ^short = "Observations regarding the existence of other advance directive related information"
@@ -75,7 +75,7 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[additional_documentation].code 1..1 
 * section[additional_documentation].code = $LOINC#77599-9
 
-* section[additional_documentation].entry only Reference(PADIDocumentationObservation)
+* section[additional_documentation].entry only Reference(ADIDocumentationObservation)
 
 
 * section[witness_and_notary] ^short = "Witness and notary information"
@@ -84,7 +84,7 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[witness_and_notary].code 1..1 
 * section[witness_and_notary].code = $LOINC#81339-4
 
-* section[witness_and_notary].entry only Reference(PADIParticipant)
+* section[witness_and_notary].entry only Reference(ADIParticipant)
 
 * section[administrative_information] ^short = "Administrative information associated with this personal advance care plan"
 * section[administrative_information].title 1..1 MS

@@ -1,12 +1,12 @@
 Extension: VersionNumber
-Id: padi-versionNumber-extension
+Id: adi-versionNumber-extension
 Title: "Version Number"
 Description: "Advance Directive Information VersionNumber Extension represents a numeric value used to version successive replacement documents."
 * valueInteger 0..1 MS
 * value[x] only integer
 
 Extension: Jurisdiction
-Id: padi-jurisdiction-extension
+Id: adi-jurisdiction-extension
 Title: "Jurisdiction"
 Description: "Jurisdiction for which content is applicable."
 * value[x] only CodeableConcept
@@ -17,7 +17,7 @@ Description: "Jurisdiction for which content is applicable."
 //[TODO get clarification on the extension descriptions and constraints. ]
 
 Extension: DataEntererExtension
-Id: padi-dataEnterer-extension
+Id: adi-dataEnterer-extension
 Title: "Data Enterer"
 Description: "Data Enterer Extension represents the person who transferred the content, written or dictated, into the Advance Directive document. To clarify, an author provides the content, subject to their own interpretation; a dataEnterer adds an author’s information to the electronic system."
 * value[x] only Reference
@@ -26,7 +26,7 @@ Description: "Data Enterer Extension represents the person who transferred the c
 
 
 Extension: InformantExtension
-Id: padi-informant-extension
+Id: adi-informant-extension
 Title: "Informant"
 Description: "The Advance Directive Information Informant Extension describes an information source for any content within the Advance Directive document. This informant is constrained for use when the source of information is an assigned health care provider for the patient."
 * value[x] only Reference
@@ -35,7 +35,7 @@ Description: "The Advance Directive Information Informant Extension describes an
 
 /*
 Extension: InformationRecipientExtension
-Id: padi-informationRecipient-extension
+Id: adi-informationRecipient-extension
 Title: "Information Recipient"
 Description: "The Information Recipient Extension records the intended recipient of the advance directive information at the time the document was created."
 * value[x] only Reference
@@ -44,7 +44,7 @@ Description: "The Information Recipient Extension records the intended recipient
 */
 
 Extension: ParticipantExtension
-Id: padi-participant-extension
+Id: adi-participant-extension
 Title: "Participant"
 Description: "The Advance Directive Information Participant Extension identifies supporting entities, including parents, relatives, caregivers, insurance policyholders, guarantors, and others related in some way to the patient. A supporting person or organization is an individual or an organization with a relationship to the patient. A supporting person who is playing multiple roles would be recorded in multiple participants (e.g., emergency contact and next-of-kin)."
 * value[x] only Reference
@@ -53,7 +53,7 @@ Description: "The Advance Directive Information Participant Extension identifies
 
 
 Extension: PerformerExtension
-Id: padi-performer-extension
+Id: adi-performer-extension
 Title: "Performer"
 Description: "The Advance Directive Information Performer Extension represents clinicians who actually and principally carry out the clinical services being documented. In a transfer of care this represents the healthcare providers involved in the current or pertinent historical care of the patient. Preferably, the patients key healthcare care team members would be listed, particularly their primary physician and any active consulting physicians, therapists, and counselors."
 * value[x] only Reference
@@ -62,7 +62,7 @@ Description: "The Advance Directive Information Performer Extension represents c
 
 /*
 Extension: OrderExtension
-Id: padi-order-extension
+Id: adi-order-extension
 Title: "Order"
 Description: "The Advance Directive Information Order Extension represents orders that are fulfilled by this document such as a radiologists report of an x-ray."
 * value[x] only Reference
@@ -72,7 +72,7 @@ Description: "The Advance Directive Information Order Extension represents order
 
 
 Extension: ContextualValueExtension
-Id: padi-contextualValue-extension
+Id: adi-contextualValue-extension
 Title: "Contextual Value"
 Description: "The Contextual Value Extension represents one or more values with a singular context."
 * extension contains
@@ -85,7 +85,7 @@ Description: "The Contextual Value Extension represents one or more values with 
 
 
 Extension: AttestationInformationExtension
-Id: padi-attestationInformation-extension
+Id: adi-attestationInformation-extension
 Title: "Attestation Information"
 Description: "The Attestation Information Extension allows for the capture of information relevant to the attestation."
 * extension contains
@@ -100,7 +100,7 @@ Description: "The Attestation Information Extension allows for the capture of in
 * extension[AttesterRole] ^short = "Attester Role"
 * extension[AttesterRole].value[x] 1..1 MS
 * extension[AttesterRole].value[x] only CodeableConcept
-* extension[AttesterRole].valueCodeableConcept from PADIAttesterRoleTypeVS (extensible)
+* extension[AttesterRole].valueCodeableConcept from ADIAttesterRoleTypeVS (extensible)
 
 * extension[AttestationStatement] ^short = "Attestation Statement"
 * extension[AttestationStatement].value[x] 1..1 MS
@@ -122,7 +122,7 @@ Description: "The Attestation Information Extension allows for the capture of in
 
 
 Extension: EffectiveDateExtension
-Id: padi-effective-date-extension
+Id: adi-effective-date-extension
 Title: "Effective Date"
 Description: "The Advance Directive document effective dates."
 * value[x] only Period
@@ -130,7 +130,7 @@ Description: "The Advance Directive document effective dates."
 
 
 Extension: ClauseExtension
-Id: padi-clause-extension
+Id: adi-clause-extension
 Title: "Clause"
 Description: "A clause or set of clauses relevant to the resource or element being extended"
 * extension 1..*
@@ -159,7 +159,7 @@ Description: "A clause or set of clauses relevant to the resource or element bei
 
 
 Extension: GoalOrderByDescendingPriority
-Id: padi-goal-order-by-descending-priority-extension
+Id: adi-goal-order-by-descending-priority-extension
 Title: "Goal Order by Descending Priority"
 Description: "Indicates if the goals are ordered in descending priority (Y) or no specific order (N)."
 * value[x] only CodeableConcept
@@ -170,8 +170,8 @@ Description: "Indicates if the goals are ordered in descending priority (Y) or n
 Invariant:  notary-information-requires-notary-role
 Description: "If Notary information (seal or commission expiration date exists, then role must be notary"
 Expression: "(extension.where(url = 'NotarySealId').valuerIdentifier.exists() or extension.where(url = 'NotaryCommissionExpirationDate').valueDate.exists()) implies  extension.where(url = 'AttesterRole').valueCodeableConcept.where(coding.code='81372-5').exists()"
-//Expression: "category.coding.where(code.memberOf('http://hl7.org/fhir/us/pacio-adi/ValueSet/PADIInterventionPreferencesOrdinalVS')).exists() implies description.coding.where(code.memberOf('http://terminology.hl7.org/ValueSet/v2-0136')).exists()"
-//Expression: "category.coding.code.memberOf('http://hl7.org/fhir/us/pacio-adi/ValueSet/PADIInterventionPreferencesOrdinalVS').exists()"
+//Expression: "category.coding.where(code.memberOf('http://hl7.org/fhir/us/pacio-adi/ValueSet/ADIInterventionPreferencesOrdinalVS')).exists() implies description.coding.where(code.memberOf('http://terminology.hl7.org/ValueSet/v2-0136')).exists()"
+//Expression: "category.coding.code.memberOf('http://hl7.org/fhir/us/pacio-adi/ValueSet/ADIInterventionPreferencesOrdinalVS').exists()"
 Severity:   #error
 
 

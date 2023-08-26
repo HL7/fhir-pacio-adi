@@ -1,6 +1,6 @@
-Profile: PADIDocumentationObservation
+Profile: ADIDocumentationObservation
 Parent: Observation
-Id: PADI-DocumentationObservation
+Id: ADI-DocumentationObservation
 Title: "ADI Documentation Observation"
 Description: "This profile is used to indicate if additional advance directive documents, such as physician order for life sustaining treatment (MOLST or POLST) or Do Not Resuscitate Order (DNR) exist and a reference to the document."
 
@@ -14,7 +14,7 @@ Description: "This profile is used to indicate if additional advance directive d
 * code MS
 * code = $LOINC#75320-2
 
-//* code = from PADIDocumentationTypeVS (extensible)
+//* code = from ADIDocumentationTypeVS (extensible)
 
 // What to do about these displayName requirements? With FHIR teh display is in a coding which could have multiple instances (translations).
 //   Do we limit the coding instances? (not preferred).  Do we require display for all of them? Or do we define only the first instance to be exactly as it should be?
@@ -30,7 +30,7 @@ Description: "This profile is used to indicate if additional advance directive d
 * value[x] only CodeableConcept
 // Remove Presence indicator
 
-* valueCodeableConcept from PADIDocumentationTypeVS (extensible)
+* valueCodeableConcept from ADIDocumentationTypeVS (extensible)
 
 // need to add derived from documentReference to allow pointing to the actual order
 
@@ -45,9 +45,9 @@ Description: "This profile is used to indicate if additional advance directive d
 
 
 /*
-Profile: PADIDNROrderObservation
+Profile: ADIDNROrderObservation
 Parent: Observation
-Id: PADI-DNROrderObservation
+Id: ADI-DNROrderObservation
 Title: "ADI DNR Order Observation"
 Description: "This profile is used to indicate if a person has a Do Not Resuscitate, Do Not Attempt Resuscitation, or Allow Natural Death order is in place."
 

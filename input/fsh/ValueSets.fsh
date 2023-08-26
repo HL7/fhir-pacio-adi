@@ -1,6 +1,6 @@
 
 /*
-ValueSet: PADIAdvanceDirectiveCategoriesVS
+ValueSet: ADIAdvanceDirectiveCategoriesVS
 Title: "Advance Directive Categories"
 Description: "Kinds of Advance Directives
 
@@ -14,7 +14,7 @@ This ValueSet is managed at the US National Library of Medicine (NLM) Value Set 
 */
 
 /*
-ValueSet: PADIConsentActorRoleVS
+ValueSet: ADIConsentActorRoleVS
 Title: "ADI Consent Actor Role"
 Description: "This value set identifies the role the advance directive participant has, which could include: healthcare agent, proxy, or advisor roles that individuals commonly designate to empower surrogates to make medical treatment and care decisions when the individual is unable to effectively communicate with medical personnel or requires assistance with decision making.
 
@@ -27,7 +27,7 @@ This ValueSet is managed at the US National Library of Medicine (NLM) Value Set 
 * insert LOINCCopyrightNotice
 */
 
-ValueSet: PADIConsentTypeVS
+ValueSet: ADIConsentTypeVS
 Title: "Consent Type"
 Description: "Codes indicating type of advance directive consents."
 * ^experimental = false
@@ -38,14 +38,14 @@ Description: "Codes indicating type of advance directive consents."
 * insert LOINCCopyrightNotice
 
 
-ValueSet: PADIPersonalAndLegalRelationshipRoleTypeVS
+ValueSet: ADIPersonalAndLegalRelationshipRoleTypeVS
 Title: "Personal And Legal Relationship Role Type"
 Description: "Clinical Focus: A personal or legal relationship records the role of a person in relation to another person, or a person to himself or herself. This value set is to be used when recording relationships based on personal or family ties or through legal assignment of responsibility."
 * ^experimental = false
 * codes from system $HL7RoleCode
 
 /*
-ValueSet: PADICareExperiencePreferencesVS
+ValueSet: ADICareExperiencePreferencesVS
 Title: "Care Experience Preferences"
 Description: "This value set includes concepts representing an individual's care experience preferences at end of life which can be expressed by the individual in his or her advance care plan),(Data Element Scope: The intent of this value set is to identify personal care experience preferences that may be relevant and could be considered by clinicians when making a treatment/care plan for the person.
 
@@ -62,23 +62,23 @@ This ValueSet is managed at the US National Library of Medicine (NLM) Value Set 
 * include $LOINC#81364-2 "Religious or cultural beliefs [Reported]"
 * include $LOINC#81365-9 "Religious or cultural affiliation contact to notify [Reported]'"
 * include $LOINC#81366-7 "Unfinished business [Reported]"
-* include PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
+* include ADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
 * insert LOINCCopyrightNotice
 */
 
 
 
-ValueSet: PADIInterventionPreferencesVS
+ValueSet: ADIInterventionPreferencesVS
 Title: "Intervention Preferences"
 Description: "Clinical Focus: This value set includes concepts representing an individual's intervention preferences which can be expressed by the individual in his or her advance care plan.),(Data Element Scope: The intent of this value set is to identify personal intervention preferences that may be relevant and could be considered by clinicians or any person or organization that is providing care, treatment, or performing any other type of act to or on behalf of the individual.)"
 * ^experimental = false
-// * codes from valueset PADIInterventionPreferencesOrdinalVS
-* codes from valueset $PADIInterventionPreferencesEndOfLifeGrouping
-* include PADIPreferenceCategoryCS#intervention-preference "Intervention preference"
+// * codes from valueset ADIInterventionPreferencesOrdinalVS
+* codes from valueset $ADIInterventionPreferencesEndOfLifeGrouping
+* include ADIPreferenceCategoryCS#intervention-preference "Intervention preference"
 * insert LOINCCopyrightNotice
 
 
-ValueSet: PADIInterventionPreferencesOrdinalVS
+ValueSet: ADIInterventionPreferencesOrdinalVS
 Title: "Intervention Preferences - Ordinal"
 Description: "Clinical Focus: This value set includes concepts representing an individual's intervention preferences which can be expressed by the individual in his or her advance care plan.),(Data Element Scope: The intent of this value set is to identify personal intervention preferences that may be relevant and could be considered by clinicians or any person or organization that is providing care, treatment, or performing any other type of act to or on behalf of the individual.)"
 * ^experimental = false
@@ -94,7 +94,7 @@ Description: "Clinical Focus: This value set includes concepts representing an i
 
 
 /*
-ValueSet: PADIInterventionPreferencesEndOfLifeGroupingVS
+ValueSet: ADIInterventionPreferencesEndOfLifeGroupingVS
 Title: "Intervention Preferences - Narrative"
 Description: "Clinical Focus: This value set includes concepts representing an individual's intervention preferences which can be expressed by the individual in his or her advance care plan.),(Data Element Scope: The intent of this value set is to identify personal intervention preferences that may be relevant and could be considered by clinicians or any person or organization that is providing care, treatment, or performing any other type of act to or on behalf of the individual.)"
 * ^experimental = false
@@ -118,11 +118,11 @@ Description: "Clinical Focus: This value set includes concepts representing an i
 * insert LOINCCopyrightNotice
 */
 
-ValueSet: PADIHCADecisionsVS
+ValueSet: ADIHCADecisionsVS
 Title: "Healthcare Agent Decisions"
 Description: "Codes indicating decisions a healthcare agent may or may not make on behalf of an individual."
 * ^experimental = false
-* codes from system PADIHCADecisionsCS
+* codes from system ADIHCADecisionsCS
 * include $LOINC#81347-7 "Consent for healthcare agent to deviate from stated goals, preferences and priorities [Reported]"
 * include $LOINC#81344-4 "Healthcare agent authority to inspect and disclose mental and physical health information [Reported]"
 * include $LOINC#81345-1 "Healthcare agent authority to inspect and disclose specially protected health information [Reported]"
@@ -132,21 +132,21 @@ Description: "Codes indicating decisions a healthcare agent may or may not make 
 
 
 /*
-ValueSet: PADIAutopsyVS
+ValueSet: ADIAutopsyVS
 Title: "Autopsy Thoughts"
 Description: "This value set includes the concept representing an individual's thoughts on autopsy after death."
 * include $LOINC#75782-3 "Thoughts regarding autopsy [Reported]"
 * insert LOINCCopyrightNotice
 
 
-ValueSet: PADIOrganDonationVS
+ValueSet: ADIOrganDonationVS
 Title: "Organ Donation"
 Description: "This value set includes the concept representing an individual's thoughts on organ and tissue donation after death."
 * include $LOINC#75781-5 "Thoughts on organ and tissue donations [Reported]"
 * insert LOINCCopyrightNotice
 */
 
-ValueSet: PADINoHealthcareAgentIncludedReasonVS
+ValueSet: ADINoHealthcareAgentIncludedReasonVS
 Title: "No Healthcare Agent Included Reason"
 Description: "Includes data absent reason concepts to express why a Healthcare Agent is not included."
 * ^experimental = false
@@ -160,7 +160,7 @@ Description: "Includes data absent reason concepts to express why a Healthcare A
 
 
 
-ValueSet: PADIAttesterRoleTypeVS
+ValueSet: ADIAttesterRoleTypeVS
 Title: "Attester Role"
 Description: "Codes indicating a role of an attester."
 * ^experimental = false
@@ -174,7 +174,7 @@ Description: "Codes indicating a role of an attester."
 
 // TODO Rename -  Advance Directive Documentation Types  
 
-ValueSet: PADIDocumentationTypeVS
+ValueSet: ADIDocumentationTypeVS
 Title: "Documentation Types"
 Description: "Types of Documents"
 * ^experimental = false

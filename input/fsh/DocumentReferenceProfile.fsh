@@ -17,7 +17,7 @@ Description: "This profile defines constraints that represent the information ne
 * include $LOINC#86533-7 "Patient Living will"
 * include $LOINC#92664-2 "Power of attorney and Living will"
 */
-//* type from PADIAdvanceDirectiveCategoriesVS (extensible)
+//* type from ADIAdvanceDirectiveCategoriesVS (extensible)
 //* type short name "Advance Directives Categories"
 * category 1..* MS
 * category from $USCoreDocumentReferenceCategory (extensible)

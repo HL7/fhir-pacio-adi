@@ -1,5 +1,5 @@
 
-CodeSystem: PADIHCADecisionsCS
+CodeSystem: ADIHCADecisionsCS
 Title: "Healthcare Agent Decision Codes"
 Description: "Codes indicating decisions a healthcare agent may or may not make on behalf of an individual."
 * #intubation "Intubation" "Request or reject intubation on behalf of the patient"
@@ -13,7 +13,7 @@ Description: "Codes indicating decisions a healthcare agent may or may not make 
 * ^experimental = false
 * ^copyright = "This CodeSystem is not copyrighted."
 
-CodeSystem: PADIPreferenceCategoryCS
+CodeSystem: ADIPreferenceCategoryCS
 Title: "ADI Goal Category Code System"
 Description: "Advance Directive Preference Category"
 * #intervention-preference "Intervention preference" "A personal preference for a type of medical intervention (treatment) request under certain conditions."

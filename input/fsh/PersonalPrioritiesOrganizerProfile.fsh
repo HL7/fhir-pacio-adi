@@ -1,6 +1,6 @@
-Profile: PADIPersonalPrioritiesOrganizer
+Profile: ADIPersonalPrioritiesOrganizer
 Parent: List
-Id: PADI-PersonalPrioritiesOrganizer
+Id: ADI-PersonalPrioritiesOrganizer
 Title: "ADI Personal Priorities Organizer"
 Description: "Personal Priorities Organizer is used to represent a set of personal goals, preferences or care experiences in a preferred ranked order."
 
@@ -20,4 +20,4 @@ Description: "Personal Priorities Organizer is used to represent a set of person
 * orderedBy = http://terminology.hl7.org/CodeSystem/list-order#priority
 
 
-* entry.item only Reference(PADIPersonalGoal or PADIPersonalInterventionPreference)
+* entry.item only Reference(ADIPersonalGoal or ADIPersonalInterventionPreference)
