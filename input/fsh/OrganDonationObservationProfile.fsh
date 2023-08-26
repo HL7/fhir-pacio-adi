@@ -1,6 +1,6 @@
-Profile: PADIOrganDonationObservation
+Profile: ADIOrganDonationObservation
 Parent: Observation
-Id: PADI-OrganDonationObservation
+Id: ADI-OrganDonationObservation
 Title: "ADI Organ Donation"
 Description: "This profile is used to represent the author's thoughts about organ donation."
 
@@ -9,7 +9,7 @@ Description: "This profile is used to represent the author's thoughts about orga
 
 
 * code 1..1 MS
-//* code from PADIOrganDonationVS (required)
+//* code from ADIOrganDonationVS (required)
 * code = $LOINC#75781-5
 * code.text 
 * subject 1..1 MS

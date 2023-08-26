@@ -1,6 +1,6 @@
-Profile: PADIParticipantConsent
+Profile: ADIParticipantConsent
 Parent: Consent
-Id: PADI-ParticipantConsent
+Id: ADI-ParticipantConsent
 Title: "ADI Participant Consent"
 Description: "This profile is used to represent a consent for an advance directive participant such as a healthcare agent or advisor and power or limitation granted to such persons."
 
@@ -24,7 +24,7 @@ Description: "This profile is used to represent a consent for an advance directi
 //[TODO] need verification that it is active only. Is the authority proposed if the agent is not yet aware or accepted the role?
 * status = #active
 // [TODO], the LOINC code is an observable, which is not meant to express scope. Will need to find another code that could (Follow-up with Dan Vreeman  Liz Umberfield)
-* scope from PADIConsentTypeVS (required)
+* scope from ADIConsentTypeVS (required)
 
 
 * category = http://terminology.hl7.org/CodeSystem/consentcategorycodes#acd
@@ -48,7 +48,7 @@ Description: "This profile is used to represent a consent for an advance directi
 * provision 1..1 MS
 
 * provision.extension contains
-    padi-clause-extension named ClauseExtension 0..*
+    adi-clause-extension named ClauseExtension 0..*
 
 
 * provision.type 1..1 MS
@@ -62,14 +62,14 @@ Description: "This profile is used to represent a consent for an advance directi
 // Health care agent willingness to serve in the HCA role
 
 * provision.actor.extension contains
-    padi-clause-extension named ClauseExtension 0..*
+    adi-clause-extension named ClauseExtension 0..*
     
-* provision.actor.role from $PADIConsentActorRole (required)
-* provision.actor.reference only Reference(PADIParticipant)
+* provision.actor.role from $ADIConsentActorRole (required)
+* provision.actor.reference only Reference(ADIParticipant)
 
 // [TODO] we need a valueset defined. Any candidates?
 
-* provision.action from PADIHCADecisionsVS (extensible)
+* provision.action from ADIHCADecisionsVS (extensible)
 * provision.action ^comment = "Actions without a defined code are placed in action.text."
 * provision.purpose = http://terminology.hl7.org/CodeSystem/v3-ActReason#PWATRNY
 

@@ -131,23 +131,23 @@ Usage: #example
 // //Composition Examples
 
 Instance: Example-McBee-PACPComposition1
-InstanceOf: PADIPACPComposition
+InstanceOf: ADIPACPComposition
 Description: "Example Patient McBee Personal Advance Care Plan Composition Example 1"
 Usage: #example
 
 * language = #en-US
 
 // Need to add extensions (mostly participants)
-* extension[padi-versionNumber-extension].valueInteger = 1
-* extension[padi-dataEnterer-extension].valueReference = Reference(Example-McBee-Patient1)
+* extension[adi-versionNumber-extension].valueInteger = 1
+* extension[adi-dataEnterer-extension].valueReference = Reference(Example-McBee-Patient1)
 // witness Sally Bobbins
 
 
 
-* extension[padi-informant-extension].valueReference = Reference(Example-McBee-HealthcareAgent1)
-// * extension[padi-informationRecipient-extension].valueReference = Reference(Example-McBee-HealthcareAgent1)
-* extension[padi-participant-extension].valueReference = Reference(Example-McBee-HealthcareAgent1)
-* extension[padi-performer-extension].valueReference.display = "Advance Directives, Inc."
+* extension[adi-informant-extension].valueReference = Reference(Example-McBee-HealthcareAgent1)
+// * extension[adi-informationRecipient-extension].valueReference = Reference(Example-McBee-HealthcareAgent1)
+* extension[adi-participant-extension].valueReference = Reference(Example-McBee-HealthcareAgent1)
+* extension[adi-performer-extension].valueReference.display = "Advance Directives, Inc."
 
 
 
@@ -210,7 +210,7 @@ Usage: #example
 
 </div>"
 
-* section[healthcare_agent].extension[padi-clause-extension].extension[Clause].valueMarkdown = "I am appointing the person or persons below as my healthcare agent and, if applicable, as my
+* section[healthcare_agent].extension[adi-clause-extension].extension[Clause].valueMarkdown = "I am appointing the person or persons below as my healthcare agent and, if applicable, as my
 alternate healthcare agent(s), and I am granting to each of them the legal authority to make
 medical treatment decisions on my behalf and to consult with my physician and others. The
 power to make medical treatment decisions that I am granting to my healthcare agent(s) is
@@ -387,7 +387,7 @@ agent to make decisions in my best interests and based on what is known of my wi
 // // Healthcare Agent examples
 
 Instance: Example-McBee-HealthcareAgent1
-InstanceOf: PADIParticipant
+InstanceOf: ADIParticipant
 Description: "Example Patient McBee Healthcare Agent (Sally Bobbins)"
 Usage: #example
 * text.status = #additional
@@ -413,7 +413,7 @@ Usage: #example
 
 
 Instance: Example-McBee-HealthcareAgent2
-InstanceOf: PADIParticipant
+InstanceOf: ADIParticipant
 Description: "Example Patient McBee Healthcare Agent (S. Leonard Susskind)"
 Usage: #example
 * text.status = #additional
@@ -440,7 +440,7 @@ Usage: #example
 
 // // TODO update text
 Instance: Example-McBee-HealthcareAgentConsent
-InstanceOf: PADIParticipantConsent
+InstanceOf: ADIParticipantConsent
 Description: "Example Patient McBee Healthcare Agent Consent"
 Usage: #example
 * text.status = #additional
@@ -462,9 +462,9 @@ Usage: #example
 * provision.actor[+].role = $LOINC#75784-9 "First alternate healthcare agent [Reported]"
 * provision.actor[=].reference = Reference(Example-McBee-HealthcareAgent2)
 
-* provision.action[+] = PADIHCADecisionsCS#intubation "Intubation"
-* provision.action[+] = PADIHCADecisionsCS#tube-feeding "Tube feeding"
-* provision.action[+] = PADIHCADecisionsCS#life-support "Life support"
+* provision.action[+] = ADIHCADecisionsCS#intubation "Intubation"
+* provision.action[+] = ADIHCADecisionsCS#tube-feeding "Tube feeding"
+* provision.action[+] = ADIHCADecisionsCS#life-support "Life support"
 
 * provision.purpose = http://terminology.hl7.org/CodeSystem/v3-ActReason#PWATRNY
 
@@ -475,7 +475,7 @@ Usage: #example
 // // CarePlan
 // // Preference Care Plan
 Instance: Example-McBee-PreferenceCarePlan1
-InstanceOf: PADIPreferenceCarePlan
+InstanceOf: ADIPreferenceCarePlan
 Description: "Example Patient McBee Preference Care Plan 1"
 Usage: #example
 
@@ -509,7 +509,7 @@ Usage: #example
 // Observations
 // Care Experience Preferences
 Instance: Example-McBee-CareExperiencePreference1
-InstanceOf: PADICareExperiencePreference
+InstanceOf: ADICareExperiencePreference
 Description: "Example Patient McBee Care Experience Preference (My Joys)"
 Usage: #example
 
@@ -518,7 +518,7 @@ Usage: #example
 <p><b>My likes / joys:</b> Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed:</p>
 <p><i>Like Bach, especially the cantatas.  St. Martin in the Fields</i></p>
 </div>"
-* category[type] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
+* category[type] = ADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
 * code = $LOINC#81360-0 "My likes and joys [Reported]"
 * valueString = "Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed: Like Bach, especially the cantatas.  St. Martin in the Fields"
 * subject = Reference(Example-McBee-Patient1)
@@ -526,7 +526,7 @@ Usage: #example
 
 
 Instance: Example-McBee-CareExperiencePreference2
-InstanceOf: PADICareExperiencePreference
+InstanceOf: ADICareExperiencePreference
 Description: "Example Patient McBee Care Experience Preference (How to care for me)"
 Usage: #example
 
@@ -535,14 +535,14 @@ Usage: #example
 <p><b>How to care for me:</b> If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me:</p>
 <p><i>I don’t like being treated like an object. I would like to be greeted like a person before working on me.</i></p>
 </div>"
-* category[type] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
+* category[type] = ADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
 * code = $LOINC#81380-8 "Goals, preferences, and priorities for care experience [Reported]"
 * valueString = "How to care for me: If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me: I don’t like being treated like an object. I would like to be greeted like a person before working on me."
 * subject = Reference(Example-McBee-Patient1)
 
 
 Instance: Example-McBee-CareExperiencePreference3
-InstanceOf: PADICareExperiencePreference
+InstanceOf: ADICareExperiencePreference
 Description: "Example Patient McBee Care Experience Preference (Religious affiliation contact)"
 Usage: #example
 
@@ -552,17 +552,17 @@ Usage: #example
 <p><b>Please attempt to notify someone from my religion at the following phone number:</b> (If I have included one)</p>
 <p><i>Not Religious</i></p>
 </div>"
-* category[type] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
+* category[type] = ADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
 * code = $LOINC#81365-9 "Religious or cultural affiliation contact to notify [Reported]"
 * valueString = "Please attempt to notify someone from my religion at the following phone number: If I have included one - Not Religious"
-* extension[padi-contextualValue-extension].extension[Context].valueString = "Please attempt to notify someone from my religion at the following phone number"
-* extension[padi-contextualValue-extension].extension[Value].valueString = "If I have included one - Not Religious"
+* extension[adi-contextualValue-extension].extension[Context].valueString = "Please attempt to notify someone from my religion at the following phone number"
+* extension[adi-contextualValue-extension].extension[Value].valueString = "If I have included one - Not Religious"
 * subject = Reference(Example-McBee-Patient1)
 
 
 
 Instance: Example-McBee-CareExperiencePreference4
-InstanceOf: PADICareExperiencePreference
+InstanceOf: ADICareExperiencePreference
 Description: "Example Patient McBee Care Experience Preference (My unfinished business)"
 Usage: #example
 
@@ -571,7 +571,7 @@ Usage: #example
 <p><b>My unfinished business:</b> If it appears that I am approaching the end of my life, and I cannot communicate with persons around me, I would want my doctors and nurses, my family, and my friends to know about some unfinished business that I need to address:</p>
 <p><i>I am awaiting a message from the Noble Committee. Please keep me alive if I look promising this year.</i></p>
 </div>"
-* category[type] = PADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
+* category[type] = ADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
 * code = $LOINC#81366-7 "Unfinished business [Reported]"
 * valueString = "If it appears that I am approaching the end of my life, and I cannot communicate with persons around me, I would want my doctors and nurses, my family, and my friends to know about some unfinished business that I need to address: I am awaiting a message from the Noble Committee. Please keep me alive if I look promising this year."
 * subject = Reference(Example-McBee-Patient1)
@@ -584,7 +584,7 @@ Usage: #example
 // // Personal Priorities Organizer
 
 Instance: Example-McBee-PersonalPrioritiesOrganizer1
-InstanceOf: PADIPersonalPrioritiesOrganizer
+InstanceOf: ADIPersonalPrioritiesOrganizer
 Description: "Example Patient McBee Personal Priorities Organizer"
 Usage: #example
 
@@ -619,7 +619,7 @@ Usage: #example
 
 // // Health Goal Examples
 Instance: Example-McBee-PersonalGoal1
-InstanceOf: PADIPersonalGoal
+InstanceOf: ADIPersonalGoal
 Description: "Example Patient McBee Personal Goal 1"
 Usage: #example
 
@@ -636,7 +636,7 @@ Usage: #example
 
 
 Instance: Example-McBee-PersonalGoal2
-InstanceOf: PADIPersonalGoal
+InstanceOf: ADIPersonalGoal
 Description: "Example Patient McBee Personal Goal 2"
 Usage: #example
 
@@ -653,7 +653,7 @@ Usage: #example
 
 
 Instance: Example-McBee-PersonalGoal3
-InstanceOf: PADIPersonalGoal
+InstanceOf: ADIPersonalGoal
 Description: "Example Patient McBee Personal Goal 3"
 Usage: #example
 
@@ -670,7 +670,7 @@ Usage: #example
 
 
 Instance: Example-McBee-PersonalGoal4
-InstanceOf: PADIPersonalGoal
+InstanceOf: ADIPersonalGoal
 Description: "Example Patient McBee Personal Goal 4"
 Usage: #example
 
@@ -688,7 +688,7 @@ Usage: #example
 
 
 Instance: Example-McBee-PersonalGoal5
-InstanceOf: PADIPersonalGoal
+InstanceOf: ADIPersonalGoal
 Description: "Example Patient McBee Personal Goal 5"
 Usage: #example
 
@@ -706,7 +706,7 @@ Usage: #example
 
 
 Instance: Example-McBee-PersonalGoal6
-InstanceOf: PADIPersonalGoal
+InstanceOf: ADIPersonalGoal
 Description: "Example Patient McBee Personal Goal 6"
 Usage: #example
 
@@ -724,7 +724,7 @@ Usage: #example
 
 
 Instance: Example-McBee-PersonalGoal7
-InstanceOf: PADIPersonalGoal
+InstanceOf: ADIPersonalGoal
 Description: "Example Patient McBee Personal Goal 7"
 Usage: #example
 
@@ -742,7 +742,7 @@ Usage: #example
 
 // // Personal Intervention Preferences
 Instance: Example-McBee-PersonalInterventionPreference1
-InstanceOf: PADIPersonalInterventionPreference
+InstanceOf: ADIPersonalInterventionPreference
 Description: "Example Patient McBee Personal Intervention Preference (Palliative Care)"
 Usage: #example
 
@@ -750,7 +750,7 @@ Usage: #example
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p>If I am having significant pain or suffering, <i>I would like my doctors to consult a Supportive and Palliative Care Team to help treat my physical, emotional and spiritual discomfort, and to support my family.</i></p>
 </div>"
-* category[type] = PADIPreferenceCategoryCS#intervention-preference "Intervention preference"
+* category[type] = ADIPreferenceCategoryCS#intervention-preference "Intervention preference"
 * code = $LOINC#75776-5 "Preference on consulting a supportive and palliative care team to help treat physical, emotional, and spiritual discomfort and support family [Reported]"
 * valueString = "If I am having significant pain or suffering, I would like my doctors to consult a Supportive and Palliative Care Team to help treat my physical, emotional and spiritual discomfort, and to support my family."
 * subject = Reference(Example-McBee-Patient1)
@@ -758,7 +758,7 @@ Usage: #example
 
 
 Instance: Example-McBee-PersonalInterventionPreference2
-InstanceOf: PADIPersonalInterventionPreference
+InstanceOf: ADIPersonalInterventionPreference
 Description: "Example Patient McBee Personal Intervention Preference (Terminal Illness Health Deterioration)"
 Usage: #example
 
@@ -766,14 +766,14 @@ Usage: #example
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p>If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings, <i>I prefer that they stop all life-sustaining treatments and let me die as gently as possible.  I realize that I will not receive life-sustaining treatments including but not limited to breathing machines, blood transfusions, dialysis, heart machines, and IV drugs to keep my heart working.  I also realize that medical personnel will not attempt cardiopulmonary resuscitation (CPR), and they will allow me to die naturally.</i></p>
 </div>"
-* category[type] = PADIPreferenceCategoryCS#intervention-preference "Intervention preference"
+* category[type] = ADIPreferenceCategoryCS#intervention-preference "Intervention preference"
 * code = $LOINC#75777-3 "Information to tell doctors if my health deteriorates due to a terminal illness and I am unable to interact meaningfully with family, friends, or surroundings [Reported]"
 * valueString = "If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings, I prefer that they stop all life-sustaining treatments and let me die as gently as possible.  I realize that I will not receive life-sustaining treatments including but not limited to breathing machines, blood transfusions, dialysis, heart machines, and IV drugs to keep my heart working.  I also realize that medical personnel will not attempt cardiopulmonary resuscitation (CPR), and they will allow me to die naturally."
 * subject = Reference(Example-McBee-Patient1)
 
 
 Instance: Example-McBee-PersonalInterventionPreference3
-InstanceOf: PADIPersonalInterventionPreference
+InstanceOf: ADIPersonalInterventionPreference
 Description: "Example Patient McBee Personal Intervention Preference (Artificial Nutrition and Hydration)"
 Usage: #example
 
@@ -782,14 +782,14 @@ Usage: #example
 <p>If my response above indicates that I do not want life-sustaining treatments,</p>
 <p>I expressly authorize my attending physician to withhold or withdraw artificial nutrition and hydration and instruct my healthcare agent (or, if I have not designated a healthcare agent, my default surrogate), my family and the doctors and nurses who are taking care of me to respect this request.</p>
 </div>"
-* category[type] = PADIPreferenceCategoryCS#intervention-preference "Intervention preference"
+* category[type] = ADIPreferenceCategoryCS#intervention-preference "Intervention preference"
 * code = $LOINC#77352-3 "Thoughts on artificial nutrition and hydration [Reported]"
 * valueString = "If my response above indicates that I do not want life-sustaining treatments, I expressly authorize my attending physician to withhold or withdraw artificial nutrition and hydration and instruct my healthcare agent (or, if I have not designated a healthcare agent, my default surrogate), my family and the doctors and nurses who are taking care of me to respect this request."
 * subject = Reference(Example-McBee-Patient1)
 
 
 Instance: Example-McBee-PersonalInterventionPreference4
-InstanceOf: PADIPersonalInterventionPreference
+InstanceOf: ADIPersonalInterventionPreference
 Description: "Example Patient McBee Personal Intervention Preference (Severe Illness or Injury)"
 Usage: #example
 
@@ -797,14 +797,14 @@ Usage: #example
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p>If I have a severe, irreversible brain injury or illness and can’t dress, feed, or bathe myself, or communicate my medical wishes, but doctors can keep me alive in this condition for a long period of time, <i>I would like for them to keep trying life-sustaining treatments for 2 months.</i></p>
 </div>"
-* category[type] = PADIPreferenceCategoryCS#intervention-preference "Intervention preference"
+* category[type] = ADIPreferenceCategoryCS#intervention-preference "Intervention preference"
 * code = $LOINC#75778-1 "Information to tell doctors if I have a severe, irreversible brain injury or illness and can't dress, feed, or bathe myself, or communicate my medical wishes, but can be kept alive [Reported]"
 * valueString = "If I have a severe, irreversible brain injury or illness and can’t dress, feed, or bathe myself, or communicate my medical wishes, but doctors can keep me alive in this condition for a long period of time, I would like for them to keep trying life-sustaining treatments for 2 months."
 * subject = Reference(Example-McBee-Patient1)
 
 
 Instance: Example-McBee-PersonalInterventionPreference5
-InstanceOf: PADIPersonalInterventionPreference
+InstanceOf: ADIPersonalInterventionPreference
 Description: "Example Patient McBee Personal Intervention Preference (Thoughts on CPR 1)"
 Usage: #example
 
@@ -813,14 +813,14 @@ Usage: #example
 <p>Although I understand that, depending on the situation and circumstances, medical personnel may not be able to follow my wishes, here are my general thoughts on cardiopulmonary resuscitation (CPR):</p>
 <p><i>I want my healthcare agent to make the decision, but if my chances are slim to none that I'll leave the hospital, even if they resuscitate me, then I absolutely do not want CPR.</i></p>
 </div>"
-* category[type] = PADIPreferenceCategoryCS#intervention-preference "Intervention preference"
+* category[type] = ADIPreferenceCategoryCS#intervention-preference "Intervention preference"
 * code = $LOINC#75779-9 "Thoughts on cardiopulmonary resuscitation (CPR) [Reported]"
 * valueString = "Although I understand that, depending on the situation and circumstances, medical personnel may not be able to follow my wishes, here are my general thoughts on cardiopulmonary resuscitation (CPR): I do not want CPR attempted."
 * subject = Reference(Example-McBee-Patient1)
 
 
 Instance: Example-McBee-PersonalInterventionPreference6
-InstanceOf: PADIPersonalInterventionPreference
+InstanceOf: ADIPersonalInterventionPreference
 Description: "Example Patient McBee Personal Intervention Preference (THoughts on CPR 2)"
 Usage: #example
 
@@ -829,14 +829,14 @@ Usage: #example
 <p>Although I understand that, depending on the situation and circumstances, medical personnel may not be able to follow my wishes, here are my general thoughts on cardiopulmonary resuscitation (CPR):</p>
 <p><i>I want my healthcare agent to make the decision, but if my chances are slim to none that I'll leave the hospital, even if they resuscitate me, then I absolutely do not want CPR.</i></p>
 </div>"
-* category[type] = PADIPreferenceCategoryCS#intervention-preference "Intervention preference"
+* category[type] = ADIPreferenceCategoryCS#intervention-preference "Intervention preference"
 * code = $LOINC#75779-9 "Thoughts on cardiopulmonary resuscitation (CPR) [Reported]"
 * valueString = "Although I understand that, depending on the situation and circumstances, medical personnel may not be able to follow my wishes, here are my general thoughts on cardiopulmonary resuscitation (CPR): I want my healthcare agent to make the decision, but if my chances are slim to none that I'll leave the hospital, even if they resuscitate me, then I absolutely do not want CPR."
 * subject = Reference(Example-McBee-Patient1)
 
 
 Instance: Example-McBee-PersonalInterventionPreference7
-InstanceOf: PADIPersonalInterventionPreference
+InstanceOf: ADIPersonalInterventionPreference
 Description: "Example Patient McBee Personal Intervention Preference (Preferred Location for Last Days)"
 Usage: #example
 
@@ -845,7 +845,7 @@ Usage: #example
 <p>If it were possible to choose, here is where I would like to spend my final days:</p>
 <p><i>At home.I would like to receive hospice care at home if possible.</i></p>
 </div>"
-* category[type] = PADIPreferenceCategoryCS#intervention-preference "Intervention preference"
+* category[type] = ADIPreferenceCategoryCS#intervention-preference "Intervention preference"
 * code = $LOINC#75780-7 "Preferred location to spend final days if possible to choose [Reported]"
 * valueString = "If it were possible to choose, here is where I would like to spend my final days: At home.I would like to receive hospice care at home if possible."
 * subject = Reference(Example-McBee-Patient1)
@@ -853,7 +853,7 @@ Usage: #example
 
 
 Instance: Example-McBee-PersonalInterventionPreference8
-InstanceOf: PADIPersonalInterventionPreference
+InstanceOf: ADIPersonalInterventionPreference
 Description: "Example Patient McBee Personal Intervention Preference (Death arrangements)"
 Usage: #example
 
@@ -862,7 +862,7 @@ Usage: #example
 <p><b>Here are my thoughts on funeral or burial plans:</b></p>
 <p>If I were to pass away: <i>I have a plot. My wife has the details, also my secretary, Ms. Williams, will know.</i></p>
 </div>"
-* category[type] = PADIPreferenceCategoryCS#intervention-preference "Intervention preference"
+* category[type] = ADIPreferenceCategoryCS#intervention-preference "Intervention preference"
 * code = $LOINC#81356-8 "Death arrangements [Reported]"
 * valueString = "Here are my thoughts on funeral or burial plans: If I were to pass away:</b> <i>I have a plot. My wife has the details, also my secretary, Ms. Williams, will know."
 * subject = Reference(Example-McBee-Patient1)
@@ -872,7 +872,7 @@ Usage: #example
 
 
 Instance: Example-McBee-OrganDonationObservation1
-InstanceOf: PADIOrganDonationObservation
+InstanceOf: ADIOrganDonationObservation
 Description: "Example Patient McBee Organ Donation Observation 1"
 Usage: #example
 
@@ -890,7 +890,7 @@ Usage: #example
 // // Autopsy Observation examples
 
 Instance: Example-McBee-AutopsyObservation1
-InstanceOf: PADIAutopsyObservation
+InstanceOf: ADIAutopsyObservation
 Description: "Example Patient McBee Autopsy Observation (Thoughts Regarding Autopsy)"
 Usage: #example
 

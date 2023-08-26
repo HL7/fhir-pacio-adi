@@ -123,7 +123,7 @@ def main():
     #div = re.sub('https://paciowg.github.io/advance-directives-ig/StructureDefinition-', 'SSSSSSSSSSSSSSSSS', div)
     # replace all of the supported profile urls in link text with just the profile name from inside the cononical url
     div = re.sub('">\(https?://.*/StructureDefinition-(.*)\.html\)</a>', '">\\1</a>', div)
-    #div = re.sub('">\(https://paciowg.github.io/advance-directives-ig/StructureDefinition-PADI-(PersonalGoal.html)</a>', '\\1', div)
+    #div = re.sub('">\(https://paciowg.github.io/advance-directives-ig/StructureDefinition-ADI-(PersonalGoal.html)</a>', '\\1', div)
     narr.div = div
 
     #print(dumps(narr.div, indent=3))    # %% [markdown]

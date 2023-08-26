@@ -224,67 +224,67 @@ This Guide is divided into several pages which are listed at the top of each pag
     </tr>
     <tr>
         <td style="padding: 7px;">3</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-PACPComposition.html">ADI Personal Advance Care Plan Composition</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PACPComposition.html">ADI Personal Advance Care Plan Composition</a></td>
         <td style="padding: 7px;"><p>This profile encompasses information that makes up the author’s advance care information plan.</p></td>
         <td style="padding: 7px;"><a href="StructureDefinition-ADI-Composition-Header.html">ADI Header</a></td>
     </tr>
     <tr>
         <td style="padding: 7px;">4</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-Participant.html">ADI Participant</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-Participant.html">ADI Participant</a></td>
         <td style="padding: 7px;"><p>This profile represents a person participating in a person's advance directives in some capacity such as healthcare agent or healthcare agent advisor.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">5</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-ParticipantConsent.html">ADI Participant Consent</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-ParticipantConsent.html">ADI Participant Consent</a></td>
         <td style="padding: 7px;"><p>This profile is used to represent a consent for an advance directive participant such as a healthcare agent or advisor and power or limitation granted to such persons.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/consent.html">Consent</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">6</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-DocumentationObservation.html">ADI Documentation Observation</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-DocumentationObservation.html">ADI Documentation Observation</a></td>
         <td style="padding: 7px;"><p>This profile is used to indicate if additional advance directive documents, such as physician order for life sustaining treatment (MOLST or POLST) or Do Not Resuscitate Order (DNR) exist and a reference to the document.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">7</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-Goal.html">ADI Goal</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-Goal.html">ADI Goal</a></td>
         <td style="padding: 7px;"><p>This profile defines the base requirements for all ADI Goals.</p></td>
         <td style="padding: 7px;"><a href="https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-goal.html">US Core Goal</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">8</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-PersonalInterventionPreference.html">ADI Personal Intervention Preference</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PersonalInterventionPreference.html">ADI Personal Intervention Preference</a></td>
         <td style="padding: 7px;"><p>This profile is used to represent a personal preference for a type of medical intervention (treatment).</p></td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-Goal.html">ADI Goal</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-Goal.html">ADI Goal</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">9</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-CareExperiencePreference.html">ADI Care Experience Preference</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-CareExperiencePreference.html">ADI Care Experience Preference</a></td>
         <td style="padding: 7px;"><p>This profile is a clinical statement that presents the author's personal thoughts about something he or she feels is relevant to his or her care experience and may be pertinent when planning his or her care.</p></td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-Goal.html">ADI Goal</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-Goal.html">ADI Goal</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">10</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-PersonalGoal.html">ADI Personal Goal</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PersonalGoal.html">ADI Personal Goal</a></td>
         <td style="padding: 7px;"><p>This profile is a statement that presents the author's personal health and treatment goals that are pertinent when planning his or her care.</p></td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-Goal.html">ADI Goal</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-Goal.html">ADI Goal</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">11</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-PersonalPrioritiesOrganizer.html">ADI Personal Priorities Organizer</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PersonalPrioritiesOrganizer.html">ADI Personal Priorities Organizer</a></td>
         <td style="padding: 7px;"><p>This profile is used to represent a set of personal goals, preferences or care experiences in a preferred ranked order.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/list.html">List</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">12</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-OrganDonationObservation.html">ADI Organ Donation Observation</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-OrganDonationObservation.html">ADI Organ Donation Observation</a></td>
         <td style="padding: 7px;"><p>This profile is used to represent the author's thoughts about organ donation.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">13</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-PADI-AutopsyObservation.html">ADI Autopsy Observation</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-AutopsyObservation.html">ADI Autopsy Observation</a></td>
         <td style="padding: 7px;"><p>This profile is used to represent the author's thoughts about autopsy.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
     </tr>
