@@ -154,7 +154,7 @@ Usage: #example
 
 * status = #final
 * type = $LOINC#81334-5 "Patient Personal advance care plan"
-* category = $LOINC#75320-2 "Advance Directive"
+* category = $LOINC#42348-3 "Advance directives"
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * date = "2021-03-29T14:25:34-05:00"
 * author = Reference(Example-Smith-Johnson-Patient1)
@@ -1204,7 +1204,7 @@ Usage: #example
 </div>"
 * status = #final
 //* code = $LOINC#81352-7 "Medical Order for Life-Sustaining Treatment, Physician Order for Life-Sustaining Treatment, or a similar medical order is in place [Reported]"
-* code = $LOINC#75320-2 "Advance Directive"
+* code = $LOINC#42348-3 "Advance directives"
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * performer = Reference(Example-Smith-Johnson-Patient1)
 //* focus = "DocumentReference/Example-Smith-Johnson-Patient1-DocumentReference_PMOLST"
@@ -1351,7 +1351,7 @@ Usage: #example
 * type.coding[0] = $LOINC#81334-5 "Patient Personal advance care plan"
 
 
-* category.coding[0] = $LOINC#75320-2 "Advance directive"
+* category.coding[0] = $LOINC#42348-3 "Advance directives"
 
 
 * subject = Reference(Example-Smith-Johnson-Patient1)

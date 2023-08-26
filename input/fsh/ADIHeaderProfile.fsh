@@ -38,7 +38,8 @@ Description: "This abstract profile defines constraints that represent common ad
 * type MS
 * type from $ADIAdvanceDirectiveCategories (extensible)
 
-* category 1..1 MS
+* category 0..1 MS
+* category = $LOINC#42348-3
 * subject 1..1 MS
 * subject only Reference($USCorePatient)
 

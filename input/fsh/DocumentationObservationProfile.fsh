@@ -12,7 +12,7 @@ Description: "This profile is used to indicate if additional advance directive d
 
 // TODO should the code.coding?
 * code MS
-* code = $LOINC#75320-2
+* code = $LOINC#42348-3
 
 //* code = from ADIDocumentationTypeVS (extensible)
 

@@ -180,7 +180,7 @@ Description: "Types of Documents"
 * ^experimental = false
 * include $LOINC#81352-7 "Medical Order for Life-Sustaining Treatment, Physician Order for Life-Sustaining Treatment, or a similar medical order is in place [Reported]"
 * include $LOINC#81351-9 "Do Not Resuscitate, Do Not Attempt Resuscitation, or Allow Natural Death order is in place [Reported]"
-* include $LOINC#75320-2 "Advance directive"
+* include $LOINC#42348-3 "Advance directives"
 //* include $LOINC#81375-8 "Self assessment of health status [Reported]"
 //* include $LOINC#81354-3 "Prescribed anticipatory medication [Reported]"
 * include $SNOMEDCT#304253006 "Not for resuscitation"
