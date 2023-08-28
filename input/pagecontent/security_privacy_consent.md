@@ -10,6 +10,7 @@ The ADI IG focuses on providing a structure to share data and information. Polic
 
 
 #### Security Considerations and Guidance
+
 All implementers of the Advance Directive Interoperability Implementation Guide (IG) **SHOULD** follow the FHIR Security guidance, Security and Privacy Module, and the FHIR Implementer’s Safety Checklist guidance as defined in the FHIR standard where applicable and not otherwise superseded by this Section of the ADI IG.
 
 1.	The FHIR Security specification provides guidance related to communication security, authentication, authorization/access control, audit, digital signatures, attachments, labels, narrative, and input validation. The FHIR security specification is available [here](http://hl7.org/fhir/R4/security.html).
@@ -17,18 +18,21 @@ All implementers of the Advance Directive Interoperability Implementation Guide 
 3.	The FHIR Implementer’s Safety Checklist helps implementers be sure that they have considered all the parts of FHIR that impact their system design regarding safety. The FHIR safety check list is available [here](http://hl7.org/fhir/R4/safety.html).
 
 #### Security Requirements
+
 For the purposes of Advance Directive Interoperability, additional security conformance requirements are as follows:
 
 ##### Exchange Security
+
 1.	The exchange of information **SHALL** support [Transport Layer Security (TLS) Protocol Version 1.2 (RFC5246)](https://www.rfc-editor.org/rfc/rfc5246) or a more recent version of TLS for transport layer security.
-2.	Implementers of this Implementation Guide **SHALL** support [SMART on FHIR App Launch Framework](http://hl7.org/fhir/smart-app-launch/index.html) and **MAY** support [SMART on FHIR Backend Services](https://hl7.org/fhir/uv/bulkdata/authorization/index.html).
+2.	Implementers of this Implementation Guide **SHALL** support [SMART on FHIR STU2 App Launch Framework](http://hl7.org/fhir/smart-app-launch/index.html) and **MAY** support [SMART on FHIR STU2 Backend Services](https://hl7.org/fhir/uv/bulkdata/authorization/index.html).
 3.	Implementers of this Implementation Guide **SHOULD** support mutually authenticated TLS.
 4.	Server implementations that expect to support browser-based javascript applications SHOULD enable [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) for REST operations. Many client web-based apps use javascript for API calls which requires CORS. However, CORS could present security concerns if not implemented correctly or is not continually updated as new security issues are found and addressed. Implementers of CORS **SHOULD** consider advice about CORS from sources such as [Enable-CORS](http://enable-cors.org/) and [Moesif blog on Guide to CORS Pitfalls](https://www.moesif.com/blog/technical/cors/Authoritative-Guide-to-CORS-Cross-Origin-Resource-Sharing-for-REST-APIs/).
 
 ##### Authentication and Authorization Requirements
+
 1.	Implementations **SHALL** support the FHIR US Core [Patient Privacy and Security requirements](https://www.hl7.org/fhir/us/core/security.html).
-2.	Server systems **SHALL** publish their authorization and token endpoints for discovery in accordance with the SMART App Launch framework and publicly publish the [Well-Known Uniform Resource Identifiers (URIs)](https://hl7.org/fhir/smart-app-launch/conformance/index.html#using-well-known) JSON file with scopes defined in the `scopes_supported` property.
-3.	Implementations **SHOULD** consider the SMART on FHIR Best Practices in Authorization found [here](http://hl7.org/fhir/smart-app-launch/best-practices.html)
+2.	Server systems **SHALL** publish their authorization and token endpoints for discovery in accordance with the SMART App Launch STU2 framework and publicly publish the [Well-Known Uniform Resource Identifiers (URIs)](https://hl7.org/fhir/smart-app-launch/conformance/index.html#using-well-known) JSON file with scopes defined in the `scopes_supported` property.
+3.	Implementations **SHOULD** consider the SMART on FHIR STU2 Best Practices in Authorization found [here](http://hl7.org/fhir/smart-app-launch/best-practices.html)
 4.  Implementation **MAY** support [Health Relationship Trust Profile for User-Managed Access (HEART)](https://openid.net/specs/openid-heart-uma2-1_0.html).
 5.  This guide defines the following server requirements for SMART on [FHIR Core Capabilities](https://hl7.org/fhir/smart-app-launch/conformance/index.html#smart-on-fhir-core-capabilities-and-capability-sets)
     1.  Launch Modes
@@ -65,10 +69,12 @@ For the purposes of Advance Directive Interoperability, additional security conf
 -->
 
 #### Privacy Requirement
+
 For the purposes of Advance Directive Interoperability, privacy conformance requirements are as follows:
 - Implementers **SHOULD** support data sharing policies with use of the Consent resource.
 
 #### Provenance
+
 1.	Server implementations **SHOULD** support the ability to directly record and/or enable clients to assert (store) provenance associated with advance directive information using the [Provenance](http://hl7.org/fhir/R4/provenance.html) resource.
 
 <!-- TODO Consider US Core requirements
