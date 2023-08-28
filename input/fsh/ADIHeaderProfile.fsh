@@ -50,32 +50,6 @@ Description: "This abstract profile defines constraints that represent common ad
 * title MS
 * confidentiality 0..0
 
-* attester.extension contains
-    adi-attestationInformation-extension named AttestationInformationExtension 1..1
-
-* attester ^slicing.discriminator.type = #value 
-* attester ^slicing.discriminator.path = "mode"
-// Should the pattern be open or closed?
-* attester ^slicing.rules = #open
-* attester ^slicing.ordered = false   // can be omitted, since false is the default
-* attester ^slicing.description = "Slice based on $this value"
-* attester contains
-    legal_attester 0..1 and
-    notary_attester 0..* and
-    witness_attester 0..* 
-* attester[legal_attester].mode 1..1 MS
-* attester[legal_attester].mode = #legal
-* attester[legal_attester].party 1..1 MS
-* attester[legal_attester].party  only Reference ($USCorePractitioner or $USCorePractitionerRole or RelatedPerson or $USCoreOrganization)
-* attester[notary_attester].mode 1..1 MS
-* attester[notary_attester].mode = #professional
-* attester[notary_attester].party 1..1 MS
-* attester[notary_attester].party  only Reference (RelatedPerson)
-* attester[witness_attester].mode 1..1 MS
-* attester[witness_attester].mode = #personal
-* attester[witness_attester].party 1..1 MS
-* attester[witness_attester].party  only Reference ($USCorePatient or RelatedPerson)
-
 * custodian 1..1 MS
 * custodian only Reference ($USCoreOrganization)
 

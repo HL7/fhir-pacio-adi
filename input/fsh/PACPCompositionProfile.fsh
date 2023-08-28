@@ -83,8 +83,9 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[witness_and_notary].title 1..1 MS
 * section[witness_and_notary].code 1..1 
 * section[witness_and_notary].code = $LOINC#81339-4
+// TODO DWH - Add short description "Witness and notary statement" to ClauseExtension
 
-* section[witness_and_notary].entry only Reference(ADIParticipant)
+* section[witness_and_notary].entry only Reference(ADIWitness or ADINotary)
 
 * section[administrative_information] ^short = "Administrative information associated with this personal advance care plan"
 * section[administrative_information].title 1..1 MS
