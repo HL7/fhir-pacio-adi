@@ -36,7 +36,7 @@ Description: "This abstract profile defines constraints that represent common ad
 * language 1..1 MS
 * identifier 1..1 MS
 * type MS
-* type from $ADIAdvanceDirectiveCategories (extensible)
+* type from $VSACADIAdvanceDirectiveCategories (extensible)
 
 * category 0..1 MS
 * category = $LOINC#42348-3

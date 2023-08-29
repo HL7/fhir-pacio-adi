@@ -42,10 +42,8 @@ Alias: $VSACClauseType = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.11
 Alias: $VSACUponDeathPreferences = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.16
 
 // fix for FHIR-34838
-Alias: $ADIClauseType = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1115.14
-Alias: $ADIParticipantRole = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1046.35
-Alias: $ADIAdvanceDirectiveCategories = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113883.11.20.9.69.4
-Alias: $ADIInterventionPreferencesEndOfLifeGrouping = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1115.9/$expand
-Alias: $ADIConsentActorRole = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1046.35
-Alias: $ADICareExperiencePreferences = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.11
-Alias: $ADIUponDeathPreferences = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.16
+Alias: $VSACADIParticipantRole = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1046.35
+Alias: $VSACADIAdvanceDirectiveCategories = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113883.11.20.9.69.4
+Alias: $VSACADIInterventionPreferencesEndOfLifeGrouping = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1115.9
+Alias: $VSACADIConsentActorRole = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1046.35
+Alias: $VSACADICareExperiencePreferences = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.11

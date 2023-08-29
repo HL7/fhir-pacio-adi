@@ -12,14 +12,14 @@ Description: "Care Experience Preference is a clinical statement that presents t
 * category ^slicing.description = "Slice based on $this value"
 
 * category 1..*
-//* category from $ADICareExperiencePreferences (extensible) //moved from 'category' to 'code' FHIR-35078
+//* category from $VSACADICareExperiencePreferences (extensible) //moved from 'category' to 'code' FHIR-35078
 * category contains
     type 1..1 MS 
     
 * category[type] = ADIPreferenceCategoryCS#care-experience-preference
 
 * code 1..1 MS
-* code from $ADICareExperiencePreferences (extensible)
+* code from $VSACADICareExperiencePreferences (extensible)
 * code.text MS
 
 * text 1..1 MS

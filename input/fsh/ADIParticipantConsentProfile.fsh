@@ -7,24 +7,19 @@ Description: "This profile is used to represent a consent for an advance directi
 * obeys HCA-authority-scope-provisionType
 * text 1..1 MS
 
-// TODO add guidance on the use of these codes and what is expected
-//* include $LOINC#81335-2 "Patient Healthcare agent" // "Healthcare agents identified with no powers or limitations specified"
-//* include $LOINC#75786-4 "Powers granted to healthcare agent [Reported]" // "Healthcare agents identified with powers granted specified"
-//* include $LOINC#75788-0 "Limitations placed on healthcare agent [Reported]" // "Healthcare agents identified with limitations placed specified"
-
-
-
-/*  Removed, this does not seem to resolve the issue. It just adds another example (albeit correct example)
-// Identifier included to address R4 Base Consent Resource invalid example that generates errors in the 
-* identifier ^example.label = "General"
-* identifier ^example.valueIdentifier.system = "urn:ietf:rfc:3986"
-* identifier ^example.valueIdentifier.value = "urn:oid:2.16.840.1.113883.11.19455"
-*/
 * status MS
 //[TODO] need verification that it is active only. Is the authority proposed if the agent is not yet aware or accepted the role?
 * status = #active
 // [TODO], the LOINC code is an observable, which is not meant to express scope. Will need to find another code that could (Follow-up with Dan Vreeman  Liz Umberfield)
 * scope from ADIConsentTypeVS (required)
+
+// Fix for FHIR_34506 - meeting on 2023-08-28: re-point to http://terminology.hl7.org/CodeSystem/consentcategorycodes
+/*
+	* Create a fixed value of acd for the consent type.
+	* Write in narrative what our interpretation of the existing code.
+*/
+
+* category = http://terminology.hl7.org/CodeSystem/consentcategorycodes#acd
 
 // [TODO] there seems to be an issue with consent scope. The url http://terminology.hl7.org/CodeSystem/consentscope forwards to https://terminology.hl7.org/2.1.0/CodeSystem-consentscope.html
 // But the version we are using is the R4 version http://hl7.org/fhir/codesystem-consent-scope.html#consent-scope-adr
@@ -62,7 +57,7 @@ Description: "This profile is used to represent a consent for an advance directi
 * provision.actor.extension contains
     adi-clause-extension named ClauseExtension 0..*
     
-* provision.actor.role from $ADIConsentActorRole (required)
+* provision.actor.role from $VSACADIConsentActorRole (required)
 * provision.actor.reference only Reference(ADIParticipant)
 
 // [TODO] we need a valueset defined. Any candidates?
