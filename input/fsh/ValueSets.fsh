@@ -8,13 +8,6 @@ Description: "Codes indicating type of advance directive consents."
 * include $LOINC#81343-6 "Healthcare agent advisor [Reported]"
 * insert LOINCCopyrightNotice
 
-// fix for FHIR-34506
-ValueSet: ADIConsentCategoryVS
-Title: "Consent Category"
-Description: "Codes indicating category of advance directive consents."
-* ^experimental = false
-* codes from system ADIConsentCategoryCS
-
 ValueSet: ADIPersonalAndLegalRelationshipRoleTypeVS
 Title: "Personal And Legal Relationship Role Type"
 Description: "Clinical Focus: A personal or legal relationship records the role of a person in relation to another person, or a person to himself or herself. This value set is to be used when recording relationships based on personal or family ties or through legal assignment of responsibility."
@@ -104,20 +97,6 @@ RuleSet: LOINCCopyrightNotice
 
 RuleSet: SNOMEDCopyrightNotice
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-
-/*
-ValueSet: ADIAdvanceDirectiveCategoriesVS
-Title: "Advance Directive Categories"
-Description: "Kinds of Advance Directives
-
-This ValueSet is managed at the US National Library of Medicine (NLM) Value Set Authority Center (VSAC): https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.69.4/expansion"
-* ^experimental = false
-* include $LOINC#64298-3 "Power of attorney"
-* include $LOINC#81334-5 "Patient Personal advance care plan"
-* include $LOINC#86533-7 "Patient Living will"
-* include $LOINC#92664-2 "Power of attorney and Living will"
-* insert LOINCCopyrightNotice
-*/
 
 /*
 ValueSet: ADIConsentActorRoleVS

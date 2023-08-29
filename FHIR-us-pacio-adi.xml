@@ -9,7 +9,6 @@
 <artifact id="CapabilityStatement/adi" key="CapabilityStatement-adi" name="ADI CapabilityStatement"/>
 <artifact id="StructureDefinition/ADI-CareExperiencePreference" key="StructureDefinition-ADI-CareExperiencePreference" name="ADI Care Experience Preference"/>
 <artifact id="StructureDefinition/ADI-Composition-Header" key="StructureDefinition-ADI-Composition-Header" name="ADI Composition Header"/>
-<artifact id="CodeSystem/ADIConsentCategoryCS" key="CodeSystem-ADIConsentCategoryCS" name="ADI Consent Category Code System"/>
 <artifact id="StructureDefinition/ADI-DocumentReference" key="StructureDefinition-ADI-DocumentReference" name="ADI Document Reference"/>
 <artifact id="StructureDefinition/ADI-DocumentationObservation" key="StructureDefinition-ADI-DocumentationObservation" name="ADI Documentation Observation"/>
 <artifact id="CodeSystem/ADIPreferenceCategoryCS" key="CodeSystem-ADIPreferenceCategoryCS" name="ADI Goal Category Code System"/>
@@ -24,7 +23,6 @@
 <artifact id="StructureDefinition/adi-attestationInformation-extension" key="StructureDefinition-adi-attestationInformation-extension" name="Attestation Information"/>
 <artifact id="ValueSet/ADIAttesterRoleTypeVS" key="ValueSet-ADIAttesterRoleTypeVS" name="Attester Role"/>
 <artifact id="StructureDefinition/adi-clause-extension" key="StructureDefinition-adi-clause-extension" name="Clause"/>
-<artifact id="ValueSet/ADIConsentCategoryVS" key="ValueSet-ADIConsentCategoryVS" name="Consent Category"/>
 <artifact id="ValueSet/ADIConsentTypeVS" key="ValueSet-ADIConsentTypeVS" name="Consent Type"/>
 <artifact id="StructureDefinition/adi-contextualValue-extension" key="StructureDefinition-adi-contextualValue-extension" name="Contextual Value"/>
 <artifact id="StructureDefinition/adi-dataEnterer-extension" key="StructureDefinition-adi-dataEnterer-extension" name="Data Enterer"/>

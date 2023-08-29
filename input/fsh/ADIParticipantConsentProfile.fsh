@@ -26,16 +26,13 @@ Description: "This profile is used to represent a consent for an advance directi
 // [TODO], the LOINC code is an observable, which is not meant to express scope. Will need to find another code that could (Follow-up with Dan Vreeman  Liz Umberfield)
 * scope from ADIConsentTypeVS (required)
 
-// mlt_20230826: direct link to HTO consent category rolled back because UP-413 did not reach quorum for votes. Reverting back to a local value set until then.
-// * category = http://terminology.hl7.org/CodeSystem/consentcategorycodes#acd
-* category from ADIConsentCategoryVS (extensible)
-
 // [TODO] there seems to be an issue with consent scope. The url http://terminology.hl7.org/CodeSystem/consentscope forwards to https://terminology.hl7.org/2.1.0/CodeSystem-consentscope.html
 // But the version we are using is the R4 version http://hl7.org/fhir/codesystem-consent-scope.html#consent-scope-adr
 //* scope = $HL7ConsentScope#adr
 
 //[TODO] What is the proper category. This is not an advance directive category because this is the consent given to the agent to make the decisions, not to clinician, right?
-//*category = $HL7ConsentCategoryCodes#acd
+// mlt20230829: fix for fhir-34506. Consensus to keep this a fixed code and provide narrative guidance that this definition applies to both type 1 and type 2 ADI content types.
+* category = $HL7ConsentCategoryCodes#acd
 
 * patient 1..1 MS
 * patient only Reference($USCorePatient)
