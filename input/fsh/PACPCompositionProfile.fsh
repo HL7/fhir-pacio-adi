@@ -78,7 +78,7 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[additional_documentation].entry only Reference(ADIDocumentationObservation)
 
 
-* section[witness_and_notary] ^short = "Witness and notary information"
+* section[witness_and_notary] ^short = "Witness and notary information.  The first witness should be the author of the document"
 * section[witness_and_notary] ^definition = "A participant who has assumed the role of Notary and attested to the authenticity of the signers and accuracy of the composition/document."
 * section[witness_and_notary].title 1..1 MS
 * section[witness_and_notary].code 1..1 
