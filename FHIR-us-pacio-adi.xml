@@ -12,6 +12,7 @@
 <artifact id="StructureDefinition/ADI-DocumentReference" key="StructureDefinition-ADI-DocumentReference" name="ADI Document Reference"/>
 <artifact id="StructureDefinition/ADI-DocumentationObservation" key="StructureDefinition-ADI-DocumentationObservation" name="ADI Documentation Observation"/>
 <artifact id="CodeSystem/ADIPreferenceCategoryCS" key="CodeSystem-ADIPreferenceCategoryCS" name="ADI Goal Category Code System"/>
+<artifact id="StructureDefinition/ADI-Notary" key="StructureDefinition-ADI-Notary" name="ADI Notary"/>
 <artifact id="StructureDefinition/ADI-OrganDonationObservation" key="StructureDefinition-ADI-OrganDonationObservation" name="ADI Organ Donation"/>
 <artifact id="StructureDefinition/ADI-Participant" key="StructureDefinition-ADI-Participant" name="ADI Participant"/>
 <artifact id="StructureDefinition/ADI-ParticipantConsent" key="StructureDefinition-ADI-ParticipantConsent" name="ADI Participant Consent"/>
@@ -20,7 +21,7 @@
 <artifact id="StructureDefinition/ADI-PersonalPrioritiesOrganizer" key="StructureDefinition-ADI-PersonalPrioritiesOrganizer" name="ADI Personal Priorities Organizer"/>
 <artifact id="StructureDefinition/ADI-PreferenceCarePlan" key="StructureDefinition-ADI-PreferenceCarePlan" name="ADI Preference Care Plan"/>
 <artifact id="StructureDefinition/ADI-Provenance" key="StructureDefinition-ADI-Provenance" name="ADI Provenance"/>
-<artifact id="StructureDefinition/adi-attestationInformation-extension" key="StructureDefinition-adi-attestationInformation-extension" name="Attestation Information"/>
+<artifact id="StructureDefinition/ADI-Witness" key="StructureDefinition-ADI-Witness" name="ADI Witness"/>
 <artifact id="ValueSet/ADIAttesterRoleTypeVS" key="ValueSet-ADIAttesterRoleTypeVS" name="Attester Role"/>
 <artifact id="StructureDefinition/adi-clause-extension" key="StructureDefinition-adi-clause-extension" name="Clause"/>
 <artifact id="ValueSet/ADIConsentTypeVS" key="ValueSet-ADIConsentTypeVS" name="Consent Type"/>
@@ -105,6 +106,7 @@
 <artifact id="ValueSet/ADIInterventionPreferencesOrdinalVS" key="ValueSet-ADIInterventionPreferencesOrdinalVS" name="Intervention Preferences - Ordinal"/>
 <artifact id="StructureDefinition/adi-jurisdiction-extension" key="StructureDefinition-adi-jurisdiction-extension" name="Jurisdiction"/>
 <artifact id="ValueSet/ADINoHealthcareAgentIncludedReasonVS" key="ValueSet-ADINoHealthcareAgentIncludedReasonVS" name="No Healthcare Agent Included Reason"/>
+<artifact id="StructureDefinition/adi-notaryInformation-extension" key="StructureDefinition-adi-notaryInformation-extension" name="Notary Information"/>
 <artifact id="StructureDefinition/adi-participant-extension" key="StructureDefinition-adi-participant-extension" name="Participant"/>
 <artifact id="StructureDefinition/adi-performer-extension" key="StructureDefinition-adi-performer-extension" name="Performer"/>
 <artifact id="ValueSet/ADIPersonalAndLegalRelationshipRoleTypeVS" key="ValueSet-ADIPersonalAndLegalRelationshipRoleTypeVS" name="Personal And Legal Relationship Role Type"/>
