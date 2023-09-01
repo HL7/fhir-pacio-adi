@@ -40,6 +40,7 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[healthcare_agent].entry 
 * section[healthcare_agent].entry only Reference(ADIParticipantConsent or ADIParticipant)
 * section[healthcare_agent].emptyReason from ADINoHealthcareAgentIncludedReasonVS (required)
+* section[healthcare_agent].emptyReason ^short = "Only MS if the document types are supported."
 * section[healthcare_agent] obeys HCA-section-entries
 // TODO add guidance around this emptyReason element
 // TODO add invariant stating that if entry exists, then agent Consent must exist
