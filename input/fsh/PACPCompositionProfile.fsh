@@ -40,8 +40,8 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[healthcare_agent].entry 
 * section[healthcare_agent].entry only Reference(ADIParticipantConsent or ADIParticipant)
 * section[healthcare_agent].emptyReason from ADINoHealthcareAgentIncludedReasonVS (required)
-* section[healthcare_agent].emptyReason ^short = "Only MS if the document types are supported."
-* section[healthcare_agent] obeys HCA-section-entries
+* section[healthcare_agent].emptyReason ^short = "This is only MS (must support) if the document types are supported."
+* section[healthcare_agent] obeys HCA-section-entries and HCA-section-emptyReason-required
 // TODO add guidance around this emptyReason element
 // TODO add invariant stating that if entry exists, then agent Consent must exist
 
@@ -135,3 +135,7 @@ Description: "If the PACP Composition document type is equal to Power of attorne
 Expression: "((type != $LOINC#64298-3) and (type != $LOINC#81334-5) and (type != $LOINC#92664-2)) or section[healthcare_agent].exists()"
 Severity:   #error
 
+Invariant: HCA-section-emptyReason-required
+Description: "section[healthcare_agent].emptyReason is required if there are no entries."
+Expression: "entry.exists() or emptyReason.exists()"
+Severity:   #error
