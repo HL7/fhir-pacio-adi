@@ -4,7 +4,6 @@ Id: ADI-PACPComposition
 Title: "ADI Personal Advance Care Plan Composition"
 Description: "This profile encompasses information that makes up the author’s advance care information plan."
 
-
 // TODO add administrative info section 81381-6
 
 * author only Reference($USCorePatient)
@@ -23,7 +22,7 @@ Description: "This profile encompasses information that makes up the author’s 
 * section ^slicing.ordered = false   // can be omitted, since false is the default
 * section ^slicing.description = "Slice based on $this value"
 * section contains
-    healthcare_agent 1..1 and
+    healthcare_agent 0..1 and
     gpp_for_certain_health_condition 0..1 MS and
     gpp_personal_care_experience 0..1 MS and
     gpp_upon_death 0..1 MS and
@@ -32,6 +31,8 @@ Description: "This profile encompasses information that makes up the author’s 
     administrative_information 0..1 MS
 
 * section[healthcare_agent] ^short = "Healthcare agents, healthcare agent advisors, and consent regarding their roles, powers, and limitations"
+
+* obeys HCA-section-cardinality
 
 * section[healthcare_agent].title 1..1 MS
 * section[healthcare_agent].code 1..1 
@@ -126,5 +127,10 @@ Invariant:  HCA-section-entries
 Description: "If healthcare agent section entry exists, then the HCA consent entry and HCA relatedPerson entry must exist"
 //Expression: "entry.exists() implies (entry.where($this is Consent).exists() and entry.where($this is RelatedPerson).exists())"
 Expression: "entry.exists().not() or (entry.where($this.resolve() is Consent).exists() and entry.where($this.resolve() is relatedPerson).exists())"
+Severity:   #error
+
+Invariant: HCA-section-cardinality
+Description: "If the PACP Composition document type is equal to Power of attorney (64298-3), Patient Personal advance care plan (81334-5), or Power of attorney and Living will (92664-2), then the PACP Composition requires one and only one section slice with code = 81335-2"
+Expression: "((type != $LOINC#64298-3) and (type != $LOINC#81334-5) and (type != $LOINC#92664-2)) or section[healthcare_agent].exists()"
 Severity:   #error
 
