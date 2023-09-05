@@ -32,7 +32,7 @@ Description: "This profile encompasses information that makes up the author’s 
 
 * section[healthcare_agent] ^short = "Healthcare agents, healthcare agent advisors, and consent regarding their roles, powers, and limitations"
 
-* obeys HCA-section-cardinality
+* obeys HCA-section-cardinality and HCA-section-emptyReason-required
 
 * section[healthcare_agent].title 1..1 MS
 * section[healthcare_agent].code 1..1 
@@ -41,7 +41,7 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[healthcare_agent].entry only Reference(ADIParticipantConsent or ADIParticipant)
 * section[healthcare_agent].emptyReason from ADINoHealthcareAgentIncludedReasonVS (required)
 * section[healthcare_agent].emptyReason ^short = "This is only MS (must support) if the document types are supported."
-* section[healthcare_agent] obeys HCA-section-entries and HCA-section-emptyReason-required
+* section[healthcare_agent] obeys HCA-section-entries
 // TODO add guidance around this emptyReason element
 // TODO add invariant stating that if entry exists, then agent Consent must exist
 
@@ -136,6 +136,6 @@ Expression: "((type != $LOINC#64298-3) and (type != $LOINC#81334-5) and (type !=
 Severity:   #error
 
 Invariant: HCA-section-emptyReason-required
-Description: "section[healthcare_agent].emptyReason is required if there are no entries."
-Expression: "entry.exists() or emptyReason.exists()"
+Description: "section[healthcare_agent].emptyReason is required if section[healthcare_agent] is present and there are no entries."
+Expression: "section[healthcare_agent].exists().not() or section[healthcare_agent].entry.exists() or section[healthcare_agent].emptyReason.exists()"
 Severity:   #error
