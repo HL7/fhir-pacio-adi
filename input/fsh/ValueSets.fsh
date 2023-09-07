@@ -17,7 +17,7 @@ This ValueSet is managed at the US National Library of Medicine (NLM) Value Set 
 * insert LOINCCopyrightNotice
 */
 
-/*
+
 ValueSet: ADIConsentActorRoleVS
 Title: "ADI Consent Actor Role"
 Description: "This value set identifies the role the advance directive participant has, which could include: healthcare agent, proxy, or advisor roles that individuals commonly designate to empower surrogates to make medical treatment and care decisions when the individual is unable to effectively communicate with medical personnel or requires assistance with decision making.
@@ -29,7 +29,7 @@ This ValueSet is managed at the US National Library of Medicine (NLM) Value Set 
 * include $LOINC#75785-6 "Second alternate healthcare agent [Reported]"
 * include $LOINC#81343-6 "Healthcare agent advisor [Reported]"
 * insert LOINCCopyrightNotice
-*/
+
 
 ValueSet: ADIConsentTypeVS
 Title: "Consent Type"
