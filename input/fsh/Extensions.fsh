@@ -84,27 +84,33 @@ Description: "The Contextual Value Extension represents one or more values with 
 * extension[Value].value[x] 1..1
 
 
-Extension: AttestationInformationExtension
-Id: adi-attestationInformation-extension
-Title: "Attestation Information"
-Description: "The Attestation Information Extension allows for the capture of information relevant to the attestation."
+Extension: NotaryInformationExtension
+Id: adi-notaryInformation-extension
+Title: "Notary Information"
+Description: "The Notary Information Extension allows for the capture of information relevant to the notary."
 * extension contains
 	AttesterRole 1..1 and
     AttestationStatement 0..1 and
+    Signature 0..1 and
 	NotarySealId 0..1 and
 	NotaryCommissionExpirationDate 0..1 and
-    Signature 0..1
+	adi-jurisdiction-extension named NotaryCommissionJurisdiction 0..1
 
 * obeys notary-information-requires-notary-role
 
 * extension[AttesterRole] ^short = "Attester Role"
 * extension[AttesterRole].value[x] 1..1 MS
 * extension[AttesterRole].value[x] only CodeableConcept
-* extension[AttesterRole].valueCodeableConcept from ADIAttesterRoleTypeVS (extensible)
+//* extension[AttesterRole].system = $LOINC
+//* extension[AttesterRole].code = $LOINC#81372-5 "Notary"
 
 * extension[AttestationStatement] ^short = "Attestation Statement"
 * extension[AttestationStatement].value[x] 1..1 MS
 * extension[AttestationStatement].value[x] only string or markdown
+
+* extension[Signature] ^short = "Attester Signature with Date"
+* extension[Signature].value[x] 1..1 MS
+* extension[Signature].value[x] only Signature
 
 * extension[NotarySealId] ^short = "Notary seal id"
 * extension[NotarySealId].value[x] 1..1 MS
@@ -113,11 +119,6 @@ Description: "The Attestation Information Extension allows for the capture of in
 * extension[NotaryCommissionExpirationDate] ^short = "Notary commission expiration date"
 * extension[NotaryCommissionExpirationDate].value[x] 1..1 MS
 * extension[NotaryCommissionExpirationDate].value[x] only date
-
-* extension[Signature] ^short = "Attester Signature with Date"
-* extension[Signature].value[x] 1..1 MS
-* extension[Signature].value[x] only Signature
-
 
 
 

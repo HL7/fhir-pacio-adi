@@ -162,13 +162,6 @@ Usage: #example
 
 * custodian = Reference(Example-Smith-Johnson-OrganizationCustodian1)
 
-* attester[notary_attester].mode = #professional
-* attester[notary_attester].party = Reference(Example-Smith-Johnson-Notary1)
-* attester[notary_attester].extension[adi-attestationInformation-extension].extension[AttesterRole].valueCodeableConcept = $LOINC#81372-5 "Notary"
-* attester[notary_attester].extension[adi-attestationInformation-extension].extension[NotarySealId].valueIdentifier.value = "notary-1254"
-* attester[notary_attester].extension[adi-attestationInformation-extension].extension[NotaryCommissionExpirationDate].valueDate = "2022-12-31"
-
-
 // TODO Where should the top level note go? <p><b>It is very important for you to discuss your medical treatment goals and wishes with your healthcare agent, your family, and your medical care providers.</b> Keep in mind that advance medical directives are simply expressions of your medical treatment goals and preferences. There is no guarantee that your medical care providers will follow all of your wishes, but one thing is certain: <b>If your advance medical directives cannot be quickly located and retrieved in a time of need, then medical care providers, your family and friends will not be able to take your wishes into consideration when they make critical decisions regarding your treatment.</b></p>
 
 

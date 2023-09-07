@@ -4,7 +4,6 @@ Id: ADI-PACPComposition
 Title: "ADI Personal Advance Care Plan Composition"
 Description: "This profile encompasses information that makes up the author’s advance care information plan."
 
-
 // TODO add administrative info section 81381-6
 
 * author only Reference($USCorePatient)
@@ -23,7 +22,7 @@ Description: "This profile encompasses information that makes up the author’s 
 * section ^slicing.ordered = false   // can be omitted, since false is the default
 * section ^slicing.description = "Slice based on $this value"
 * section contains
-    healthcare_agent 1..1 and
+    healthcare_agent 0..1 and
     gpp_for_certain_health_condition 0..1 MS and
     gpp_personal_care_experience 0..1 MS and
     gpp_upon_death 0..1 MS and
@@ -33,12 +32,15 @@ Description: "This profile encompasses information that makes up the author’s 
 
 * section[healthcare_agent] ^short = "Healthcare agents, healthcare agent advisors, and consent regarding their roles, powers, and limitations"
 
+* obeys HCA-section-cardinality and HCA-section-emptyReason-required
+
 * section[healthcare_agent].title 1..1 MS
 * section[healthcare_agent].code 1..1 
 * section[healthcare_agent].code = $LOINC#81335-2
 * section[healthcare_agent].entry 
 * section[healthcare_agent].entry only Reference(ADIParticipantConsent or ADIParticipant)
 * section[healthcare_agent].emptyReason from ADINoHealthcareAgentIncludedReasonVS (required)
+* section[healthcare_agent].emptyReason ^short = "This is only MS (must support) if the document types are supported."
 * section[healthcare_agent] obeys HCA-section-entries
 // TODO add guidance around this emptyReason element
 // TODO add invariant stating that if entry exists, then agent Consent must exist
@@ -78,13 +80,14 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[additional_documentation].entry only Reference(ADIDocumentationObservation)
 
 
-* section[witness_and_notary] ^short = "Witness and notary information"
+* section[witness_and_notary] ^short = "Witness and notary information.  The first witness should be the author of the document"
 * section[witness_and_notary] ^definition = "A participant who has assumed the role of Notary and attested to the authenticity of the signers and accuracy of the composition/document."
 * section[witness_and_notary].title 1..1 MS
 * section[witness_and_notary].code 1..1 
 * section[witness_and_notary].code = $LOINC#81339-4
+// TODO DWH - Add short description "Witness and notary statement" to ClauseExtension
 
-* section[witness_and_notary].entry only Reference(ADIParticipant)
+* section[witness_and_notary].entry only Reference(ADIWitness or ADINotary)
 
 * section[administrative_information] ^short = "Administrative information associated with this personal advance care plan"
 * section[administrative_information].title 1..1 MS
@@ -127,3 +130,12 @@ Description: "If healthcare agent section entry exists, then the HCA consent ent
 Expression: "entry.exists().not() or (entry.where($this.resolve() is Consent).exists() and entry.where($this.resolve() is relatedPerson).exists())"
 Severity:   #error
 
+Invariant: HCA-section-cardinality
+Description: "If the PACP Composition document type is equal to Power of attorney (64298-3), Patient Personal advance care plan (81334-5), or Power of attorney and Living will (92664-2), then the PACP Composition requires one and only one section slice with code = 81335-2"
+Expression: "((type != $LOINC#64298-3) and (type != $LOINC#81334-5) and (type != $LOINC#92664-2)) or section[healthcare_agent].exists()"
+Severity:   #error
+
+Invariant: HCA-section-emptyReason-required
+Description: "section[healthcare_agent].emptyReason is required if section[healthcare_agent] is present and there are no entries."
+Expression: "section[healthcare_agent].exists().not() or section[healthcare_agent].entry.exists() or section[healthcare_agent].emptyReason.exists()"
+Severity:   #error

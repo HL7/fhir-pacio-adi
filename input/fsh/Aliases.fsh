@@ -39,7 +39,7 @@ Alias: $HL7RelatedPersonRelationshipType = http://hl7.org/fhir/ValueSet/relatedp
 Alias: $HL7AdataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason
 
 Alias: $VSACClauseType = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1115.14
-Alias: $VSACUponDeathPreferences = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.16
+Alias: $VSACUponDeathPreferences = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.15
 
 // fix for FHIR-34838
 Alias: $VSACADIParticipantRole = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1046.35
