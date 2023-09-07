@@ -26,7 +26,8 @@ Description: "This profile is used to represent a consent for an advance directi
 //* scope = $HL7ConsentScope#adr
 
 //[TODO] What is the proper category. This is not an advance directive category because this is the consent given to the agent to make the decisions, not to clinician, right?
-//*category = $HL7ConsentCategoryCodes#acd
+// mlt20230829: fix for fhir-34506. Consensus to keep this a fixed code and provide narrative guidance that this definition applies to both type 1 and type 2 ADI content types.
+* category = $HL7ConsentCategoryCodes#acd
 
 * patient 1..1 MS
 * patient only Reference($USCorePatient)

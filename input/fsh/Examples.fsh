@@ -451,6 +451,8 @@ Usage: #example
 * patient = Reference(Example-McBee-Patient1)
 * dateTime = "2020-08-03"
 
+* category = $HL7ConsentCategoryCodes#acd
+
 * policy.authority = "https://www.michigan.gov/"
 * policy.uri = "http://www.legislature.mi.gov/(S(tpnclc1ofteerx2x2dppcmdz))/mileg.aspx?page=GetObject&objectname=mcl-386-1998-V-5"
 
