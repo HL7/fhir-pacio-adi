@@ -1,12 +1,12 @@
-Profile: PADIPMOServiceRequest
+Profile: ADIPMOServiceRequest
 Parent: ServiceRequest
-Id: PADI-PMOServiceRequest
+Id: ADI-PMOServiceRequest
 Title: "ADI Portable Medical Order ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order."
 
 /*
 * extension contains
-    padi-based-on-consent-extension named BasedOnConsentExtension 0..1
+    adi-based-on-consent-extension named BasedOnConsentExtension 0..1
 */
 //* text 1..1 MS
 
@@ -20,13 +20,9 @@ Description: "This profile is used to represent a practitioner authored portable
 * category 1..1 MS
 * code 1..1 MS
 
-<<<<<<< HEAD
-
-=======
 /* extension contains
-    padi-based-on-consent-extension named BasedOnConsentExtension 0..1
+    adi-based-on-consent-extension named BasedOnConsentExtension 0..1
 */
->>>>>>> eb74678 (Removing PMO consent and change of codes)
 //* code = $LOINC#75781-5
 
 * subject 1..1
@@ -41,9 +37,9 @@ Description: "This profile is used to represent a practitioner authored portable
 
 
 
-Profile: PADIPMOCPRServiceRequest
-Parent: PADIPMOServiceRequest
-Id: PADI-PMOCPRServiceRequest
+Profile: ADIPMOCPRServiceRequest
+Parent: ADIPMOServiceRequest
+Id: ADI-PMOCPRServiceRequest
 Title: "ADI PMO Cardiopulmonary Resuscitation ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order for cardiopulmonary resuscitation."
 
@@ -53,9 +49,9 @@ Description: "This profile is used to represent a practitioner authored portable
 
 
 
-Profile: PADIPMOInitialTreatmentServiceRequest
-Parent: PADIPMOServiceRequest
-Id: PADI-PMOInitialTreatmentServiceRequest
+Profile: ADIPMOInitialTreatmentServiceRequest
+Parent: ADIPMOServiceRequest
+Id: ADI-PMOInitialTreatmentServiceRequest
 Title: "ADI PMO Initial Treatment ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order for initial treatment."
 
@@ -64,9 +60,9 @@ Description: "This profile is used to represent a practitioner authored portable
 * code from LOINCPOLSTInitialTxAnswerList (extensible)
 
 
-Profile: PADIPMOMedicallyAssistedNutritionServiceRequest
-Parent: PADIPMOServiceRequest
-Id: PADI-PMOMedicallyAssistedNutritionServiceRequest
+Profile: ADIPMOMedicallyAssistedNutritionServiceRequest
+Parent: ADIPMOServiceRequest
+Id: ADI-PMOMedicallyAssistedNutritionServiceRequest
 Title: "ADI PMO Medically Assisted Nutrition ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order for medically assisted nutrition."
 
@@ -75,9 +71,9 @@ Description: "This profile is used to represent a practitioner authored portable
 * code from LOINCPOLSTMedAssistNutrAnswerList (extensible)
 
 
-Profile: PADIPMOAdditionalRequestServiceRequest
-Parent: PADIPMOServiceRequest
-Id: PADI-PMOAdditionalRequestServiceRequest
+Profile: ADIPMOAdditionalRequestServiceRequest
+Parent: ADIPMOServiceRequest
+Id: ADI-PMOAdditionalRequestServiceRequest
 Title: "ADI PMO Additional request or instruction ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order additional requests or instructions."
 
@@ -86,9 +82,9 @@ Description: "This profile is used to represent a practitioner authored portable
 * code 1..1 MS
 
 
-Profile: PADIPMONoAdditionalRequestObservation
+Profile: ADIPMONoAdditionalRequestObservation
 Parent: Observation
-Id: PADI-PMONoAdditionalRequestObservation
+Id: ADI-PMONoAdditionalRequestObservation
 Title: "ADI PMO No Additional request or instruction Observation"
 Description: "This profile is used to represent that there are no other portable medical order additional requests or instructions."
 
@@ -105,9 +101,9 @@ Description: "This profile is used to represent that there are no other portable
 /////////////////////////////////
 // PMO as full service Request
 /*
-Profile: PADIPMOFullServiceRequest
+Profile: ADIPMOFullServiceRequest
 Parent: ServiceRequest
-Id: PADI-PMOFullServiceRequest
+Id: ADI-PMOFullServiceRequest
 Title: "ADI Portable Medical Order Full ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order."
 

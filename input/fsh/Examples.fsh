@@ -459,13 +459,13 @@ Usage: #example
 //[TODO] do we need to support and require provision.actor for all HCA's?
 //* provision.actor[+].role = $LOINC#75783-1 "Primary healthcare agent [Reported]"
 * provision.actor[+].role = $HL7RoleClass#AGNT "agent"
-* provision.actor[=].extension[padi-hca-priority].valueCodeableConcept = $LOINC#75783-1 "Primary healthcare agent [Reported]"
+* provision.actor[=].extension[adi-hca-priority].valueCodeableConcept = $LOINC#75783-1 "Primary healthcare agent [Reported]"
 * provision.actor[=].reference = Reference(Example-McBee-HealthcareAgent1)
 
 //* provision.actor[+].role = $LOINC#75784-9 "First alternate healthcare agent [Reported]"
 // AAAHHH
 * provision.actor[+].role = $HL7RoleClass#AGNT "agent"
-* provision.actor[=].extension[padi-hca-priority].valueCodeableConcept = $LOINC#75784-9 "First alternate healthcare agent [Reported]"
+* provision.actor[=].extension[adi-hca-priority].valueCodeableConcept = $LOINC#75784-9 "First alternate healthcare agent [Reported]"
 * provision.actor[=].reference = Reference(Example-McBee-HealthcareAgent2)
 
 * provision.code[+] = $SNOMEDCT#52765003 "Intubation (procedure)"

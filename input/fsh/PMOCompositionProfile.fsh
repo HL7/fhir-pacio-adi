@@ -1,6 +1,6 @@
-Profile: PADIPMOComposition
-Parent: PADIHeader
-Id: PADI-PMOComposition
+Profile: ADIPMOComposition
+Parent: ADICompositionHeader
+Id: ADI-PMOComposition
 Title: "ADI Portable Medical Order Composition"
 Description: "This profile encompasses information that makes up a practitioner's portable medical order."
 
@@ -88,21 +88,13 @@ LA46-8 Other
 
 
 * section[portable_medical_orders] ^short = "Portable Medical Orders"
-* section[portable_medical_orders].extension[padi-clause-extension] ^short = "Section clause, additional instructions, or information"
+* section[portable_medical_orders].extension[adi-clause-extension] ^short = "Section clause, additional instructions, or information"
 * section[portable_medical_orders].title 1..1 MS
 * section[portable_medical_orders].code 1..1 MS
-<<<<<<< HEAD
-//* section[portable_medical_orders].code = $LOINC#100821-8 // "National POLST form: portable medical order panel"
-* section[portable_medical_orders].code = $LOINC#59772-4 // "Planned procedure Narrative"
-
-* section[portable_medical_orders].entry MS
-* section[portable_medical_orders].entry only Reference(PADIPMOServiceRequest or PADIPMONoAdditionalRequestObservation)
-=======
 // TODO, need a better code to recognize the section as a PMO. CDA ePOLST does not have a code for this section.
 * section[portable_medical_orders].code = $LOINC#100821-8 // "National POLST form: portable medical order panel"
 * section[portable_medical_orders].entry MS
-* section[portable_medical_orders].entry only Reference(PADIPMOServiceRequest) // or PADIPMOConsent)
->>>>>>> eb74678 (Removing PMO consent and change of codes)
+* section[portable_medical_orders].entry only Reference(ADIPMOServiceRequest) // or ADIPMOConsent)
 
 // TODO: reconsider slicing entry as profile slicing causes a significant operational cost (see https://chat.fhir.org/#narrow/stream/179166-implementers/topic/Slicing.20Composition.20Entries and 
 // https://www.hl7.org/fhir/profiling.html profile discriminator type)
@@ -113,36 +105,18 @@ LA46-8 Other
 * section[portable_medical_orders].entry ^slicing.description = "Slice based on $this value"
 * section[portable_medical_orders].entry contains
     cardiopulmonary_resuscitation_service_request 0..1 MS and
-<<<<<<< HEAD
-    initial_treatment_service_request 0..1 MS and
-    medically_assisted_nutrition_service_request 0..1 MS and
-    additional_request_service_request 0..* MS and
-    no_additional_request_service_request 0..1 MS
-
-
-* section[portable_medical_orders].entry[cardiopulmonary_resuscitation_service_request] only Reference(PADIPMOCPRServiceRequest)
-* section[portable_medical_orders].entry[initial_treatment_service_request] only Reference(PADIPMOInitialTreatmentServiceRequest)
-* section[portable_medical_orders].entry[medically_assisted_nutrition_service_request] only Reference(PADIPMOMedicallyAssistedNutritionServiceRequest)
-* section[portable_medical_orders].entry[additional_request_service_request] only Reference(PADIPMOAdditionalRequestServiceRequest)
-* section[portable_medical_orders].entry[no_additional_request_service_request] only Reference(PADIPMONoAdditionalRequestObservation)
-
-// TODO, should we have an invariant that additional_request_service_request slice and no_additional_request_service_request cannot exist together?
-
-
-=======
 //    cardiopulmonary_resuscitation_consent 0..1 MS and
     initial_treatment_service_request 0..1 MS and
 //    initial_treatment_consent 0..1 MS and
     medically_assisted_nutrition_service_request 0..1 MS // and
 //    medically_assisted_nutrition_consent 0..1 MS
 
-* section[portable_medical_orders].entry[cardiopulmonary_resuscitation_service_request] only Reference(PADIPMOCPRServiceRequest)
-//* section[portable_medical_orders].entry[cardiopulmonary_resuscitation_consent] only Reference(PADIPMOCPRConsent)
-* section[portable_medical_orders].entry[initial_treatment_service_request] only Reference(PADIPMOInitialTreatmentServiceRequest)
-//* section[portable_medical_orders].entry[initial_treatment_consent] only Reference(PADIPMOInitialTreatmentConsent)
-* section[portable_medical_orders].entry[medically_assisted_nutrition_service_request] only Reference(PADIPMOMedicallyAssistedNutritionServiceRequest)
-//* section[portable_medical_orders].entry[medically_assisted_nutrition_consent] only Reference(PADIPMOMedicallyAssistedNutritionConsent)
->>>>>>> eb74678 (Removing PMO consent and change of codes)
+* section[portable_medical_orders].entry[cardiopulmonary_resuscitation_service_request] only Reference(ADIPMOCPRServiceRequest)
+//* section[portable_medical_orders].entry[cardiopulmonary_resuscitation_consent] only Reference(ADIPMOCPRConsent)
+* section[portable_medical_orders].entry[initial_treatment_service_request] only Reference(ADIPMOInitialTreatmentServiceRequest)
+//* section[portable_medical_orders].entry[initial_treatment_consent] only Reference(ADIPMOInitialTreatmentConsent)
+* section[portable_medical_orders].entry[medically_assisted_nutrition_service_request] only Reference(ADIPMOMedicallyAssistedNutritionServiceRequest)
+//* section[portable_medical_orders].entry[medically_assisted_nutrition_consent] only Reference(ADIPMOMedicallyAssistedNutritionConsent)
 
 // TODO add longer description that these are not orders, but further definition of Goals the patient has to help inform medical decisions
 * section[gpp_personal_care_experience] ^short = "Quality of Life related personal care experiences, personal goals, and priorities"
@@ -151,7 +125,7 @@ LA46-8 Other
 * section[gpp_personal_care_experience].code = $LOINC#81338-6
 * section[gpp_personal_care_experience].orderedBy MS
 * section[gpp_personal_care_experience].entry MS
-* section[gpp_personal_care_experience].entry only Reference(PADICareExperiencePreference or PADIPersonalPrioritiesOrganizer or PADIPersonalGoal)
+* section[gpp_personal_care_experience].entry only Reference(ADICareExperiencePreference or ADIPersonalPrioritiesOrganizer or ADIPersonalGoal)
 
 /*
 * section[additional_documentation] ^short = "Observations regarding the existence of other advance directive related information"
@@ -159,7 +133,7 @@ LA46-8 Other
 * section[additional_documentation].code 1..1 MS
 * section[additional_documentation].code = $LOINC#77599-9
 
-* section[additional_documentation].entry only Reference(PADIDocumentationObservation)
+* section[additional_documentation].entry only Reference(ADIDocumentationObservation)
 
 
 * section[witness_and_notary] ^short = "Witness and notary information"
@@ -167,10 +141,10 @@ LA46-8 Other
 * section[witness_and_notary].code 1..1 MS
 * section[witness_and_notary].code = $LOINC#81339-4
 
-* section[witness_and_notary].entry only Reference(PADIParticipant)
+* section[witness_and_notary].entry only Reference(ADIParticipant)
 */
 * section[completion_information] ^short = "Portable medical order completion information"
-* section[completion_information].extension[padi-clause-extension] ^short = "Administrative, instructional, and/or legal information"
+* section[completion_information].extension[adi-clause-extension] ^short = "Administrative, instructional, and/or legal information"
 * section[completion_information].title 1..1 MS
 * section[completion_information].code 1..1 MS
 * section[completion_information].code = $LOINC#100970-3 // "Portable medical order completion information" // Code is LOINC pre-release as on 11/03/2022 - https://loinc.org/prerelease/
@@ -188,9 +162,9 @@ LA46-8 Other
     hospice_observation 0..1 and 
     hospice_agency 0..1
 
-* section[completion_information].entry[orders_review] only Reference(PADIPMOReviewObservation)
-* section[completion_information].entry[orders_participant] only Reference(PADIPMOParticipantObservation)
-* section[completion_information].entry[hospice_observation] only Reference(PADIPMOHospiceObservation)
+* section[completion_information].entry[orders_review] only Reference(ADIPMOReviewObservation)
+* section[completion_information].entry[orders_participant] only Reference(ADIPMOParticipantObservation)
+* section[completion_information].entry[hospice_observation] only Reference(ADIPMOHospiceObservation)
 * section[completion_information].entry[hospice_agency] only Reference($USCoreOrganization)
 
 

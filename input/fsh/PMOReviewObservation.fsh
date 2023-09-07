@@ -1,6 +1,6 @@
-Profile: PADIPMOReviewObservation
+Profile: ADIPMOReviewObservation
 Parent: Observation
-Id: PADI-PMOReviewObservation
+Id: ADI-PMOReviewObservation
 Title: "ADI PMO Review Observation"
 Description: "This profile is used to represent the review status of the portable medical order."
 
@@ -14,7 +14,7 @@ Description: "This profile is used to represent the review status of the portabl
 * code = $LOINC#100826-7 // "Portable medical order AndOr advance directive review"
 
 * focus 1..1 MS
-* focus only Reference(PADIPMOComposition) // TODO, is this needed, check with O&O
+* focus only Reference(ADIPMOComposition) // TODO, is this needed, check with O&O
 
 * value[x] 1..1 MS
 * value[x] only CodeableConcept

@@ -56,7 +56,6 @@ Description: "This profile is used to represent a consent for an advance directi
 * provision.actor.extension contains
     adi-clause-extension named ClauseExtension 0..*
     
-<<<<<<< HEAD
 * provision.actor.role from $VSACADIConsentActorRole (required)
 * provision.actor.reference only Reference(ADIParticipant)
 * provision.actor.role = $HL7RoleClass#AGNT // "agent"
@@ -66,16 +65,16 @@ Description: "This profile is used to represent a consent for an advance directi
 * provision.action from ADIHCADecisionsVS (extensible)
 
 * provision.actor.extension contains
-    padi-hca-priority named HCAPriority 0..1 
+    adi-hca-priority named HCAPriority 0..1 
 
 
-* provision.actor.reference only Reference(PADIParticipant)
+* provision.actor.reference only Reference(ADIParticipant)
 
 // [TODO] we need a valueset defined. Any candidates?
 * provision.action MS
 
-//* provision.action from PADIHCADecisionsVS (extensible)
-* provision.action = PADIHCADecisionMakingCS#decision-making //"Healthcare decision making" "Healthcare decisions to accept or reject healthcare interventions"
+//* provision.action from ADIHCADecisionsVS (extensible)
+* provision.action = ADIHCADecisionMakingCS#decision-making //"Healthcare decision making" "Healthcare decisions to accept or reject healthcare interventions"
 * provision.action ^comment = "Actions without a defined code are placed in action.text."
 * provision.purpose = http://terminology.hl7.org/CodeSystem/v3-ActReason#PWATRNY
 * provision.code from $USCoreProcedureCode (extensible)

@@ -1,7 +1,7 @@
 /*
-Profile: PADIPMOConsent
+Profile: ADIPMOConsent
 Parent: Consent
-Id: PADI-PMOConsent
+Id: ADI-PMOConsent
 Title: "ADI PMO Consent"
 Description: "This profile is used to represent a practitioner authored portable medical order."
 
@@ -18,7 +18,7 @@ Description: "This profile is used to represent a practitioner authored portable
 * scope = $HL7ConsentScope#treatment
 
 
-* category from PADIPMOConsentCategoriesVS (extensible)
+* category from ADIPMOConsentCategoriesVS (extensible)
 
 * patient 1..1 MS
 * patient only Reference($USCorePatient)
@@ -31,7 +31,7 @@ Description: "This profile is used to represent a practitioner authored portable
 //* provision 1..1 MS
 
 * provision.extension contains
-    padi-clause-extension named ClauseExtension 0..* MS
+    adi-clause-extension named ClauseExtension 0..* MS
 
 
 //* provision.type 1..1 MS
@@ -47,7 +47,7 @@ Description: "This profile is used to represent a practitioner authored portable
 // Health care agent willingness to serve in the HCA role
 
 //* provision.actor.extension contains
-//    padi-clause-extension named ClauseExtension 0..* MS
+//    adi-clause-extension named ClauseExtension 0..* MS
     
 
 // [TODO] we need a valueset defined. Any candidates?
@@ -56,9 +56,9 @@ Description: "This profile is used to represent a practitioner authored portable
 
 
 
-Profile: PADIPMOCPRConsent
-Parent: PADIPMOConsent
-Id: PADI-PMOCPRConsent
+Profile: ADIPMOCPRConsent
+Parent: ADIPMOConsent
+Id: ADI-PMOCPRConsent
 Title: "ADI PMO Cardiopulmonary Resuscitation Consent"
 Description: "This profile is used to represent a practitioner authored portable medical order consent for cardiopulmonary resuscitation."
 
@@ -68,9 +68,9 @@ Description: "This profile is used to represent a practitioner authored portable
 
 
 
-Profile: PADIPMOInitialTreatmentConsent
-Parent: PADIPMOConsent
-Id: PADI-PMOInitialTreatmentConsent
+Profile: ADIPMOInitialTreatmentConsent
+Parent: ADIPMOConsent
+Id: ADI-PMOInitialTreatmentConsent
 Title: "ADI PMO Initial Treatment Consent"
 Description: "This profile is used to represent a practitioner authored portable medical order consent for initial treatment."
 
@@ -79,9 +79,9 @@ Description: "This profile is used to represent a practitioner authored portable
 * provision.code from LOINCPOLSTInitialTxAnswerList (extensible)
 
 
-Profile: PADIPMOMedicallyAssistedNutritionConsent
-Parent: PADIPMOConsent
-Id: PADI-PMOMedicallyAssistedNutritionConsent
+Profile: ADIPMOMedicallyAssistedNutritionConsent
+Parent: ADIPMOConsent
+Id: ADI-PMOMedicallyAssistedNutritionConsent
 Title: "ADI PMO Medically Assisted Nutrition Consent"
 Description: "This profile is used to represent a practitioner authored portable medical order consent for medically assisted nutrition."
 
@@ -92,9 +92,9 @@ Description: "This profile is used to represent a practitioner authored portable
 
 
 
-Profile: PADIPMOAdditionalRequestConsent
-Parent: PADIPMOConsent
-Id: PADI-PMOAdditionalRequestConsent
+Profile: ADIPMOAdditionalRequestConsent
+Parent: ADIPMOConsent
+Id: ADI-PMOAdditionalRequestConsent
 Title: "ADI PMO Additional Request or Instructions Consent"
 Description: "This profile is used to represent a practitioner authored portable medical order consent for additional requests or instructions."
 

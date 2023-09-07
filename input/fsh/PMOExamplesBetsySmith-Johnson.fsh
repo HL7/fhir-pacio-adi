@@ -1,5 +1,5 @@
 Instance: Example-Smith-Johnson-PMOCPRServiceRequest1
-InstanceOf: PADIPMOCPRServiceRequest
+InstanceOf: ADIPMOCPRServiceRequest
 Description: "Example Patient Smith-Johnson PMO CPR ServiceRequest Smith-Johnson 1"
 Usage: #example
 
@@ -7,11 +7,11 @@ Usage: #example
 //* text.status = #empty // TODO change when there is a text value
 //* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Test</div>"
 * text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ServiceRequest</b><a name=\"Example-Smith-Johnson-PMOCPRServiceRequest1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ServiceRequest &quot;Example-Smith-Johnson-PMOCPRServiceRequest1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-PADI-PMOCPRServiceRequest.html\">ADI PMO Cardiopulmonary Resuscitation ServiceRequest</a></p></div><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>category</b>: Cardiopulmonary resuscitation orders <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#100822-6)</span></p><p><b>code</b>: YES CPR <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#LA33470-8)</span></p><p><b>subject</b>: <a href=\"Patient-Example-Smith-Johnson-Patient1.html\">Patient/Example-Smith-Johnson-Patient1</a> &quot; SMITH-JOHNSON&quot;</p><p><b>requester</b>: <a href=\"Practitioner-PMOPractitioner1.html\">Practitioner/PMOPractitioner1</a> &quot; LEVIN&quot;</p></div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ServiceRequest</b><a name=\"Example-Smith-Johnson-PMOCPRServiceRequest1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ServiceRequest &quot;Example-Smith-Johnson-PMOCPRServiceRequest1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ADI-PMOCPRServiceRequest.html\">ADI PMO Cardiopulmonary Resuscitation ServiceRequest</a></p></div><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>category</b>: Cardiopulmonary resuscitation orders <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#100822-6)</span></p><p><b>code</b>: YES CPR <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#LA33470-8)</span></p><p><b>subject</b>: <a href=\"Patient-Example-Smith-Johnson-Patient1.html\">Patient/Example-Smith-Johnson-Patient1</a> &quot; SMITH-JOHNSON&quot;</p><p><b>requester</b>: <a href=\"Practitioner-PMOPractitioner1.html\">Practitioner/PMOPractitioner1</a> &quot; LEVIN&quot;</p></div>"
 
 
 //* extension contains
-//    padi-based-on-consent-extension named BasedOnConsentExtension 0..1
+//    adi-based-on-consent-extension named BasedOnConsentExtension 0..1
 
 * status = #active
 * intent = #order
@@ -28,7 +28,7 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-PMOInitialTreatmentServiceRequest1
-InstanceOf: PADIPMOInitialTreatmentServiceRequest
+InstanceOf: ADIPMOInitialTreatmentServiceRequest
 Description: "Example Patient Smith-Johnson PMO Initial Treatment ServiceRequest Smith-Johnson 1"
 Usage: #example
 
@@ -37,7 +37,7 @@ Usage: #example
 //* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Test</div>"
 
 //* extension contains
-//    padi-based-on-consent-extension named BasedOnConsentExtension 0..1
+//    adi-based-on-consent-extension named BasedOnConsentExtension 0..1
 
 * status = #active
 * intent = #order
@@ -56,7 +56,7 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-PMOMNutritionServiceRequest1
-InstanceOf: PADIPMOMedicallyAssistedNutritionServiceRequest
+InstanceOf: ADIPMOMedicallyAssistedNutritionServiceRequest
 Description: "Example Patient Smith-Johnson PMO Medically Assisted Nutrition ServiceRequest Smith-Johnson 1"
 Usage: #example
 
@@ -65,7 +65,7 @@ Usage: #example
 //* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Test</div>"
 
 //* extension contains
-//    padi-based-on-consent-extension named BasedOnConsentExtension 0..1
+//    adi-based-on-consent-extension named BasedOnConsentExtension 0..1
 
 * status = #active
 * intent = #order
@@ -84,7 +84,7 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-PMOAdditionalRequestServiceRequest1
-InstanceOf: PADIPMOAdditionalRequestServiceRequest
+InstanceOf: ADIPMOAdditionalRequestServiceRequest
 Description: "Example Patient Smith-Johnson PMO Additional ServiceRequest Smith-Johnson 1"
 Usage: #example
 
@@ -93,7 +93,7 @@ Usage: #example
 //* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Test</div>"
 
 //* extension contains
-//    padi-based-on-consent-extension named BasedOnConsentExtension 0..1
+//    adi-based-on-consent-extension named BasedOnConsentExtension 0..1
 
 * status = #active
 * intent = #order
@@ -109,7 +109,7 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-PMONoAdditionalRequestObservation1
-InstanceOf: PADIPMONoAdditionalRequestObservation
+InstanceOf: ADIPMONoAdditionalRequestObservation
 Description: "Example Patient Smith-Johnson PMO No Additional ServiceRequest Observation Smith-Johnson 1"
 Usage: #example
 
@@ -118,7 +118,7 @@ Usage: #example
 //* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Test</div>"
 
 //* extension contains
-//    padi-based-on-consent-extension named BasedOnConsentExtension 0..1
+//    adi-based-on-consent-extension named BasedOnConsentExtension 0..1
 
 * status = #final
 
@@ -131,7 +131,7 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-PMOReviewObservation1
-InstanceOf: PADIPMOReviewObservation
+InstanceOf: ADIPMOReviewObservation
 Description: "Example Patient Smith-Johnson PMO Advance Directive Review Smith-Johnson 1"
 Usage: #example
 
@@ -143,14 +143,14 @@ Usage: #example
 
 * code = $LOINC#100826-7 "Portable medical order AndOr advance directive review"
 
-* focus = Reference(Example-Smith-Johnson-PADIPMOComposition1) 
+* focus = Reference(Example-Smith-Johnson-ADIPMOComposition1) 
 * valueCodeableConcept = $LOINC#LA33478-1 "Conflict exists, notified patient"
 
 
 
 
-Instance: Example-Smith-Johnson-PADIPMOParticipantObservation1
-InstanceOf: PADIPMOParticipantObservation
+Instance: Example-Smith-Johnson-ADIPMOParticipantObservation1
+InstanceOf: ADIPMOParticipantObservation
 Description: "Example Patient Smith-Johnson PMO Participant Observation Smith-Johnson 1"
 Usage: #example
 
@@ -162,16 +162,16 @@ Usage: #example
 
 * code = $LOINC#100827-5 "Portable medical order discussion participants"
 
-* focus = Reference(Example-Smith-Johnson-PADIPMOComposition1) 
+* focus = Reference(Example-Smith-Johnson-ADIPMOComposition1) 
 * valueCodeableConcept = $LOINC#LA33482-3 "Patient with decision-making capacity"
 
 
 
 /*
 
-Profile: PADIPMOCPRServiceRequest
-Parent: PADIPMOServiceRequest
-Id: PADI-PMOCPRServiceRequest
+Profile: ADIPMOCPRServiceRequest
+Parent: ADIPMOServiceRequest
+Id: ADI-PMOCPRServiceRequest
 Title: "ADI PMO Cardiopulmonary Resuscitation ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order for cardiopulmonary resuscitation."
 
@@ -181,9 +181,9 @@ Description: "This profile is used to represent a practitioner authored portable
 
 
 
-Profile: PADIPMOInitialTreatmentServiceRequest
-Parent: PADIPMOServiceRequest
-Id: PADI-PMOInitialTreatmentServiceRequest
+Profile: ADIPMOInitialTreatmentServiceRequest
+Parent: ADIPMOServiceRequest
+Id: ADI-PMOInitialTreatmentServiceRequest
 Title: "ADI PMO Initial Treatment ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order for initial treatment."
 
@@ -192,9 +192,9 @@ Description: "This profile is used to represent a practitioner authored portable
 * code from LOINCPOLSTInitialTxAnswerList (extensible)
 
 
-Profile: PADIPMOMedicallyAssistedNutritionServiceRequest
-Parent: PADIPMOServiceRequest
-Id: PADI-PMOMedicallyAssistedNutritionServiceRequest
+Profile: ADIPMOMedicallyAssistedNutritionServiceRequest
+Parent: ADIPMOServiceRequest
+Id: ADI-PMOMedicallyAssistedNutritionServiceRequest
 Title: "ADI PMO Medically Assisted Nutrition ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order for medically assisted nutrition."
 
@@ -203,9 +203,9 @@ Description: "This profile is used to represent a practitioner authored portable
 * code from LOINCPOLSTMedAssistNutrAnswerList (extensible)
 
 
-Profile: PADIPMOAdditionalRequestServiceRequest
-Parent: PADIPMOServiceRequest
-Id: PADI-PMOAdditionalRequestServiceRequest
+Profile: ADIPMOAdditionalRequestServiceRequest
+Parent: ADIPMOServiceRequest
+Id: ADI-PMOAdditionalRequestServiceRequest
 Title: "ADI PMO Additional request or instruction ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order additional requests or instructions."
 
@@ -232,7 +232,7 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-DocRef-PMOBundle
-InstanceOf: PADI-DocumentReference
+InstanceOf: ADI-DocumentReference
 Description: "Example Patient Smith-Johnson DocumentReference Bundle"
 Usage: #example
 
@@ -283,8 +283,8 @@ Usage: #example
 * type = #document
 * timestamp = "2021-03-29T14:25:34.001-05:00"
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Composition/Example-Smith-Johnson-PADIPMOComposition1"
-* entry[=].resource = Example-Smith-Johnson-PADIPMOComposition1
+* entry[+].fullUrl = "http://www.example.org/fhir/Composition/Example-Smith-Johnson-ADIPMOComposition1"
+* entry[=].resource = Example-Smith-Johnson-ADIPMOComposition1
 
 * entry[+].fullUrl = "http://www.example.org/fhir/Patient/Example-Smith-Johnson-Patient1"
 * entry[=].resource = Example-Smith-Johnson-Patient1
@@ -326,8 +326,8 @@ Usage: #example
 
 * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-PMOReviewObservation1"
 * entry[=].resource = Example-Smith-Johnson-PMOReviewObservation1
-* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-PADIPMOParticipantObservation1"
-* entry[=].resource = Example-Smith-Johnson-PADIPMOParticipantObservation1
+* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-ADIPMOParticipantObservation1"
+* entry[=].resource = Example-Smith-Johnson-ADIPMOParticipantObservation1
 
 /*
 
@@ -372,17 +372,17 @@ Usage: #example
 */
 //Composition Examples
 
-Instance: Example-Smith-Johnson-PADIPMOComposition1
-InstanceOf: PADIPMOComposition
+Instance: Example-Smith-Johnson-ADIPMOComposition1
+InstanceOf: ADIPMOComposition
 Description: "Example Patient Smith-Johnson Portable Medical Order Composition Example 1"
 Usage: #example
 
 * language = #en-US
 
 // Need to add extensions (mostly participants)
-* extension[padi-versionNumber-extension].valueInteger = 1
-* extension[padi-jurisdiction-extension].valueCodeableConcept = urn:iso:std:iso:3166:-2#US-MI
-* extension[padi-dataEnterer-extension].valueReference = Reference(Example-Smith-Johnson-Patient1) "Smith-Johnson, Betsy"
+* extension[adi-versionNumber-extension].valueInteger = 1
+* extension[adi-jurisdiction-extension].valueCodeableConcept = urn:iso:std:iso:3166:-2#US-MI
+* extension[adi-dataEnterer-extension].valueReference = Reference(Example-Smith-Johnson-Patient1) "Smith-Johnson, Betsy"
 // witness Sally Bobbins
 
 * identifier.system = "urn:oid:2.16.840.1.113883.4.823.1.7124"
@@ -403,9 +403,9 @@ Usage: #example
 
 * attester[notary_attester].mode = #professional
 * attester[notary_attester].party = Reference(Example-Smith-Johnson-Notary1) "Xavier, Charles"
-* attester[notary_attester].extension[padi-attestationInformation-extension].extension[AttesterRole].valueCodeableConcept = $LOINC#81372-5 "Notary"
-* attester[notary_attester].extension[padi-attestationInformation-extension].extension[NotarySealId].valueIdentifier.value = "notary-1254"
-* attester[notary_attester].extension[padi-attestationInformation-extension].extension[NotaryCommissionExpirationDate].valueDate = "2022-12-31"
+* attester[notary_attester].extension[adi-attestationInformation-extension].extension[AttesterRole].valueCodeableConcept = $LOINC#81372-5 "Notary"
+* attester[notary_attester].extension[adi-attestationInformation-extension].extension[NotarySealId].valueIdentifier.value = "notary-1254"
+* attester[notary_attester].extension[adi-attestationInformation-extension].extension[NotaryCommissionExpirationDate].valueDate = "2022-12-31"
 
 
 // TODO Where should the top level note go? <p><b>It is very important for you to discuss your medical treatment goals and wishes with your healthcare agent, your family, and your medical care providers.</b> Keep in mind that advance medical directives are simply expressions of your medical treatment goals and preferences. There is no guarantee that your medical care providers will follow all of your wishes, but one thing is certain: <b>If your advance medical directives cannot be quickly located and retrieved in a time of need, then medical care providers, your family and friends will not be able to take your wishes into consideration when they make critical decisions regarding your treatment.</b></p>
@@ -460,7 +460,7 @@ Usage: #example
 
 
 * section[completion_information].entry[+] = Reference(Example-Smith-Johnson-PMOReviewObservation1)
-* section[completion_information].entry[+] = Reference(Example-Smith-Johnson-PADIPMOParticipantObservation1)
+* section[completion_information].entry[+] = Reference(Example-Smith-Johnson-ADIPMOParticipantObservation1)
 
 
 /*
@@ -469,7 +469,7 @@ Usage: #example
 // Healthcare Agent examples
 
 Instance: Example-Smith-Johnson-HealthcareAgent1
-InstanceOf: PADIParticipant
+InstanceOf: ADIParticipant
 Description: "Example Patient Smith-Johnson Healthcare Agent (Charles Johnson)"
 Usage: #example
 * text.status = #additional
@@ -495,7 +495,7 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-HealthcareAgent2
-InstanceOf: PADIParticipant
+InstanceOf: ADIParticipant
 Description: "Example Patient Smith-Johnson Healthcare Agent (Debra Johnson)"
 Usage: #example
 * text.status = #additional
@@ -522,7 +522,7 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-Notary1
-InstanceOf: PADIParticipant
+InstanceOf: ADIParticipant
 Description: "Example Patient Smith-Johnson Notary"
 Usage: #example
 * text.status = #additional
@@ -543,7 +543,7 @@ Usage: #example
 
 // TODO update text
 Instance: Example-Smith-Johnson-HealthcareAgentConsent
-InstanceOf: PADIParticipantConsent
+InstanceOf: ADIParticipantConsent
 Description: "Example Patient Smith-Johnson Healthcare Agent Consent"
 Usage: #example
 * text.status = #additional
@@ -565,12 +565,12 @@ Usage: #example
 * provision.actor[+].role = $LOINC#75784-9 "First alternate healthcare agent [Reported]"
 * provision.actor[=].reference = Reference(Example-Smith-Johnson-HealthcareAgent2)
 
-* provision.action[+] = PADIHCADecisionsCS#intubation "Intubation"
-* provision.action[+] = PADIHCADecisionsCS#tube-feeding "Tube feeding"
-* provision.action[+] = PADIHCADecisionsCS#life-support "Life support"
-* provision.action[+] = PADIHCADecisionsCS#iv-fluid-and-support "IV fluid and support"
-* provision.action[+] = PADIHCADecisionsCS#antibiotics "Antibiotics"
-* provision.action[+] = PADIHCADecisionsCS#resuscitation-non-cpr "Non-CPR Resuscitation"
+* provision.action[+] = ADIHCADecisionsCS#intubation "Intubation"
+* provision.action[+] = ADIHCADecisionsCS#tube-feeding "Tube feeding"
+* provision.action[+] = ADIHCADecisionsCS#life-support "Life support"
+* provision.action[+] = ADIHCADecisionsCS#iv-fluid-and-support "IV fluid and support"
+* provision.action[+] = ADIHCADecisionsCS#antibiotics "Antibiotics"
+* provision.action[+] = ADIHCADecisionsCS#resuscitation-non-cpr "Non-CPR Resuscitation"
 
 * provision.purpose = http://terminology.hl7.org/CodeSystem/v3-ActReason#PWATRNY
 
@@ -580,7 +580,7 @@ Usage: #example
 // CarePlan
 // Preference Care Plan
 Instance: Example-Smith-Johnson-PreferenceCarePlan1
-InstanceOf: PADIPreferenceCarePlan
+InstanceOf: ADIPreferenceCarePlan
 Description: "Example Patient Smith-Johnson Preference Care Plan 1"
 Usage: #example
 
@@ -589,7 +589,7 @@ Usage: #example
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>status</b>: active</p><p><b>intent</b>: proposal</p><p><b>category</b>: <span title='Codes: {http://snomed.info/sct 736366004}'>Advance care plan</span></p><p><b>subject</b>: <a href='Patient-Example-Smith-Johnson-Patient1.html'>Betsy Smith-Johnson</a> ; BetsySJ@example.com; gender: female; birthDate: 1950-11-15</p><p><b>addresses</b>: </p><ul><li><span>Unconscious, in a coma, or in a persistent vegetative state with little or no chance of recovery</span></li><li><span>Persistent vegetative state (SNOMED CT 24473007)</span></li><li><span>Irreversible coma (SNOMED CT 73453007)</span></li></ul><p><b>goal</b>: </p><ul><li><a href='Goal-Example-Smith-Johnson-PersonalGoal1.html'><span title='Codes: {http://loinc.org 81378-2}'>Goals, preferences, and priorities under certain health conditions [Reported]</span></a>; <span title='Codes: '>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Avoiding prolonged dependence on machines, Not being a physical burden to my family, Dying at home</span></li><li><a href='Goal-Example-Smith-Johnson-PersonalInterventionPreference3.html'><span title='Codes: {http://loinc.org 75778-1}'>Information to tell doctors if I have a severe, irreversible brain injury or illness and can't dress, feed, or bathe myself, or communicate my medical wishes, but can be kept alive [Reported]</span></a>; <span title='Codes: '>If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings, I would like for them to keep trying life-sustaining treatments until my healthcare agent decides it is time to stop and such treatments and let me die gently.</span></li><li><a href='Goal-Example-Smith-Johnson-CareExperiencePreference6.html'><span title='Codes: {http://loinc.org 81365-9}'>Religious or cultural affiliation contact to notify [Reported]</span></a>; <span title='Codes: '>Please attempt to notify someone from my religion at the following phone number: If I have included one: Catholic</span></li><li><a href='Goal-Example-Smith-Johnson-CareExperiencePreference5.html'><span title='Codes: {http://loinc.org 81364-2}'>Religious or cultural beliefs [Reported]</span></a>; <span title='Codes: '>If I appear to be approaching the end of my life, here are some things that I would like for my caregivers to know about my faith and my religion. Please call Father Mark if my condition warrants the services of a priest.</span></li><li><a href='Goal-Example-Smith-Johnson-CareExperiencePreference1.html'><span title='Codes: {http://loinc.org 75775-7}'>Decision to inform doctors and nurses about the role religion, faith, culture, or spirituality play in my life [Reported]</span></a>; <span title='Codes: '>Here are some thoughts that I would like for my medical care team and my healthcare agent(s) to know about the role that religion, faith or spirituality play in my life: I am Catholic, please call Father Mark at Saint Catherine's on Main Street.</span></li></ul></div>
 "
 
-* extension[padi-goal-order-by-descending-priority-extension].valueCodeableConcept = $HL7YesNoCS#Y
+* extension[adi-goal-order-by-descending-priority-extension].valueCodeableConcept = $HL7YesNoCS#Y
 
 * status = #active
 * intent = #proposal
@@ -610,7 +610,7 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-PreferenceCarePlan2
-InstanceOf: PADIPreferenceCarePlan
+InstanceOf: ADIPreferenceCarePlan
 Description: "Example Patient Smith-Johnson Preference Care Plan 2"
 Usage: #example
 
@@ -633,7 +633,7 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-PreferenceCarePlan3
-InstanceOf: PADIPreferenceCarePlan
+InstanceOf: ADIPreferenceCarePlan
 Description: "Example Patient Smith-Johnson Preference Care Plan 3"
 Usage: #example
 

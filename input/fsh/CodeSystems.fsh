@@ -22,7 +22,7 @@ Description: "Advance Directive Preference Category"
 * ^experimental = false
 * ^copyright = "This CodeSystem is not copyrighted."
 
-CodeSystem: PADIHCADecisionMakingCS
+CodeSystem: ADIHCADecisionMakingCS
 Title: "ADI HCA Decision Making"
 Description: "Advance Directive Healthcare Agent Decision Making Actions"
 * #decision-making "Healthcare decision making" "Healthcare decisions to accept or reject healthcare interventions"

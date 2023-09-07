@@ -1,6 +1,6 @@
-Profile: PADIPMOParticipantObservation
+Profile: ADIPMOParticipantObservation
 Parent: Observation
-Id: PADI-PMOParticipantObservation
+Id: ADI-PMOParticipantObservation
 Title: "ADI PMO Participant Observation"
 Description: "This profile is used to represent the portable medical orders participant observation."
 
@@ -14,7 +14,7 @@ Description: "This profile is used to represent the portable medical orders part
 * code = $LOINC#100827-5
 
 * focus 1..1 MS
-* focus only Reference(PADIPMOComposition) // TODO, is this needed, check with O&O
+* focus only Reference(ADIPMOComposition) // TODO, is this needed, check with O&O
 
 * value[x] 1..1 MS
 * value[x] only CodeableConcept

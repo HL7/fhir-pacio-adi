@@ -1,6 +1,6 @@
-Profile: PADIPMOCarePlan
+Profile: ADIPMOCarePlan
 Parent: CarePlan
-Id: PADI-PMOCarePlan
+Id: ADI-PMOCarePlan
 Title: "ADI Portable Medical Order Care Plan"
 Description: "The Portable Medical Order Care Plan."
 
@@ -28,11 +28,11 @@ Description: "The Portable Medical Order Care Plan."
 * addresses 1..* MS
 * addresses ^comment = "TODO"
 
-* activity.reference only Reference(PADIPMOServiceRequest)
+* activity.reference only Reference(ADIPMOServiceRequest)
 
 //* goal ^short = "Patient's preferences and goals for the scope of this care plan."
 //* goal 1..* MS
-//* goal only Reference(PADIPersonalInterventionPreference or PADIPersonalGoal or PADICareExperiencePreference)
+//* goal only Reference(ADIPersonalInterventionPreference or ADIPersonalGoal or ADICareExperiencePreference)
 
 //* extension contains
-    //padi-goal-order-by-descending-priority-extension named GoalOrderByDescendingPriority 0..1 
+    //adi-goal-order-by-descending-priority-extension named GoalOrderByDescendingPriority 0..1 

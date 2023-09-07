@@ -2,9 +2,9 @@
 /////////////////////////////////
 // PMO as Observation
 
-Profile: PADIPMOHospiceObservation
+Profile: ADIPMOHospiceObservation
 Parent: Observation
-Id: PADI-PMOHospiceObservation
+Id: ADI-PMOHospiceObservation
 Title: "ADI Portable Medical Order Hospice Observation"
 Description: "This profile is used to represent a finding that the individual is under hospice care."
 * ^experimental = false

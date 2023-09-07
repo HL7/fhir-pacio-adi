@@ -161,7 +161,7 @@ Description: "Includes data absent reason concepts to express why a Healthcare A
 * include $HL7AdataAbsentReason#unsupported
 
 // TODO SNOMED license statement
-ValueSet: PADIPresenceIndicatorVS
+ValueSet: ADIPresenceIndicatorVS
 Title: "Presence Indicator"
 Description: "Codes specifying whether the presence of something exists or is unknown to exist."
 * ^experimental = false
@@ -183,7 +183,7 @@ Description: "Codes indicating a role of an attester."
 
 
 
-ValueSet: PADIClauseTypeVS
+ValueSet: ADIClauseTypeVS
 Title: "Type of clause"
 Description: "Type of clause"
 * ^experimental = false
@@ -274,7 +274,7 @@ Description: "LOINC POLST discuss part Answer List (LL6266-2)"
 
 
 
-ValueSet: PADIPMOConsentCategoriesVS
+ValueSet: ADIPMOConsentCategoriesVS
 Title: "Portable Medical Order Categories"
 Description: "Codes indicating Categories of Portable Medical Orders."
 * ^experimental = false

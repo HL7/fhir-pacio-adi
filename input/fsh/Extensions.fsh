@@ -169,21 +169,21 @@ Description: "Indicates if the goals are ordered in descending priority (Y) or n
 
 
 Extension: HCAPriority
-Id: padi-hca-priority
+Id: adi-hca-priority
 Title: "HCAPriority"
 Description: "Healthcare Agent Priority."
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1 MS
-* valueCodeableConcept from PADIConsentActorRoleVS (required)
+* valueCodeableConcept from ADIConsentActorRoleVS (required)
 
 /*
 Extension: BasedOnConsentExtension
-Id: padi-based-on-consent-extension
+Id: adi-based-on-consent-extension
 Title: "Based On Consent"
 Description: "Extension to express a PMO Consent resource a request is based on."
 * value[x] only Reference
 * valueReference 1..1
-* valueReference only Reference(PADIPMOConsent)
+* valueReference only Reference(ADIPMOConsent)
 */
 
 
