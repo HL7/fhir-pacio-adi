@@ -270,7 +270,7 @@ Description: "LOINC POLST discuss part Answer List (LL6266-2)"
 * include $LOINC#LA33483-1 "Court appointed guardian"
 * include $LOINC#LA33485-6 "Parent of minor"
 * include $LOINC#LA33487-2 "Legal surrogate/health care agent"
-* include $LOINC#LA33487-2 "Other"
+* include $LOINC#LA46-8 "Other"
 
 
 
