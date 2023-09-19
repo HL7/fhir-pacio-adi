@@ -9,8 +9,7 @@ Description: "Personal Priorities Organizer is used to represent a set of person
 
 * title 1..1 // Should this be required?
 * code 1..1
-// TODO how do we change the binding for a fixed value? THe binding is still showing the FHIR standard VS. Can't add loinc directly as it is a codeSystem
-//* code from $LOINC (extensible)
+
 * code = $LOINC#81340-2 // CONF:4445-33374
 
 * subject 1..1 MS
@@ -20,4 +19,4 @@ Description: "Personal Priorities Organizer is used to represent a set of person
 * orderedBy = http://terminology.hl7.org/CodeSystem/list-order#priority
 
 
-* entry.item only Reference(ADIPersonalGoal or ADIPersonalInterventionPreference)
+* entry.item only Reference(ADIPersonalGoal or ADIPersonalInterventionPreference or ADICareExperiencePreference)
