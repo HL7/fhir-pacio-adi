@@ -89,7 +89,7 @@ ADI FHIR native documents are instances of the `Bundle` resource with the `type`
 The ADI Content Type 1 document defines 7 sections:
 1. Healthcare Agent - Healthcare agents, healthcare agent advisors, and consent regarding their roles, powers, and limitations
 2. Goals, Preferences, and Priorities for Certain Healthcare Conditions - Preference care plans that contain the person's goals to be considered active under specific situations or conditions.
-3. Goals, Preferences, and Priorities Personal Care Experience - Quality of Life related personal care experiences, personal goals, and priorities.
+3. Goals, Preferences, and Priorities Personal Care Experience - Consist of quality of Life related personal care experiences, personal goals, and priorities which can be further grouped and prioritized in a Personal Priorities Organizer.
 4. Goals, Preferences, and Priorities Upon Death - Goals, preferences, and priorities a person has at the time of or soon after their death.
 5. Additional Documentation - Observations regarding the existence of other advance directive related information.
 6. Witness & Notary - References and information regarding witnesses and notary.
