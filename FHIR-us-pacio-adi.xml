@@ -23,6 +23,10 @@
 <artifact id="StructureDefinition/ADI-Provenance" key="StructureDefinition-ADI-Provenance" name="ADI Provenance"/>
 <artifact id="StructureDefinition/ADI-Witness" key="StructureDefinition-ADI-Witness" name="ADI Witness"/>
 <artifact id="ValueSet/ADIAttesterRoleTypeVS" key="ValueSet-ADIAttesterRoleTypeVS" name="Attester Role"/>
+<artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan2" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan2" name="Care Plan for Permanent, sever brain damage"/>
+<artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan3" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan3" name="Care Plan for Terminal illness, lack of meaningful interaction"/>
+<artifact id="CarePlan/Example-McBee-PreferenceCarePlan1" key="CarePlan-Example-McBee-PreferenceCarePlan1" name="Care Plan for Unconscious, vegetative state, coma"/>
+<artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan1" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan1" name="Care Plan for Unconscious, vegetative state, coma"/>
 <artifact id="StructureDefinition/adi-clause-extension" key="StructureDefinition-adi-clause-extension" name="Clause"/>
 <artifact id="ValueSet/ADIConsentTypeVS" key="ValueSet-ADIConsentTypeVS" name="Consent Type"/>
 <artifact id="StructureDefinition/adi-contextualValue-extension" key="StructureDefinition-adi-contextualValue-extension" name="Contextual Value"/>
@@ -41,7 +45,6 @@
 <artifact id="Observation/Example-McBee-OrganDonationObservation1" key="Observation-Example-McBee-OrganDonationObservation1" name="Example-McBee-OrganDonationObservation1"/>
 <artifact id="Organization/Example-McBee-OrganizationAssembler1" key="Organization-Example-McBee-OrganizationAssembler1" name="Example-McBee-OrganizationAssembler1"/>
 <artifact id="Organization/Example-McBee-OrganizationCustodian1" key="Organization-Example-McBee-OrganizationCustodian1" name="Example-McBee-OrganizationCustodian1"/>
-<artifact id="Composition/Example-McBee-PACPComposition1" key="Composition-Example-McBee-PACPComposition1" name="Example-McBee-PACPComposition1"/>
 <artifact id="Provenance/Example-McBee-PACPProvenance1" key="Provenance-Example-McBee-PACPProvenance1" name="Example-McBee-PACPProvenance1"/>
 <artifact id="Patient/Example-McBee-Patient1" key="Patient-Example-McBee-Patient1" name="Example-McBee-Patient1"/>
 <artifact id="Goal/Example-McBee-PersonalGoal1" key="Goal-Example-McBee-PersonalGoal1" name="Example-McBee-PersonalGoal1"/>
@@ -59,8 +62,6 @@
 <artifact id="Observation/Example-McBee-PersonalInterventionPreference6" key="Observation-Example-McBee-PersonalInterventionPreference6" name="Example-McBee-PersonalInterventionPreference6"/>
 <artifact id="Observation/Example-McBee-PersonalInterventionPreference7" key="Observation-Example-McBee-PersonalInterventionPreference7" name="Example-McBee-PersonalInterventionPreference7"/>
 <artifact id="Observation/Example-McBee-PersonalInterventionPreference8" key="Observation-Example-McBee-PersonalInterventionPreference8" name="Example-McBee-PersonalInterventionPreference8"/>
-<artifact id="List/Example-McBee-PersonalPrioritiesOrganizer1" key="List-Example-McBee-PersonalPrioritiesOrganizer1" name="Example-McBee-PersonalPrioritiesOrganizer1"/>
-<artifact id="CarePlan/Example-McBee-PreferenceCarePlan1" key="CarePlan-Example-McBee-PreferenceCarePlan1" name="Example-McBee-PreferenceCarePlan1"/>
 <artifact id="Observation/Example-Smith-Johnson-AutopsyObservation1" key="Observation-Example-Smith-Johnson-AutopsyObservation1" name="Example-Smith-Johnson-AutopsyObservation1"/>
 <artifact id="Bundle/Example-Smith-Johnson-Bundle1" key="Bundle-Example-Smith-Johnson-Bundle1" name="Example-Smith-Johnson-Bundle1"/>
 <artifact id="Observation/Example-Smith-Johnson-CareExperiencePreference1" key="Observation-Example-Smith-Johnson-CareExperiencePreference1" name="Example-Smith-Johnson-CareExperiencePreference1"/>
@@ -82,7 +83,6 @@
 <artifact id="Observation/Example-Smith-Johnson-OrganDonationObservation1" key="Observation-Example-Smith-Johnson-OrganDonationObservation1" name="Example-Smith-Johnson-OrganDonationObservation1"/>
 <artifact id="Organization/Example-Smith-Johnson-OrganizationAssembler1" key="Organization-Example-Smith-Johnson-OrganizationAssembler1" name="Example-Smith-Johnson-OrganizationAssembler1"/>
 <artifact id="Organization/Example-Smith-Johnson-OrganizationCustodian1" key="Organization-Example-Smith-Johnson-OrganizationCustodian1" name="Example-Smith-Johnson-OrganizationCustodian1"/>
-<artifact id="Composition/Example-Smith-Johnson-PACPComposition1" key="Composition-Example-Smith-Johnson-PACPComposition1" name="Example-Smith-Johnson-PACPComposition1"/>
 <artifact id="Provenance/Example-Smith-Johnson-PACPProvenance1" key="Provenance-Example-Smith-Johnson-PACPProvenance1" name="Example-Smith-Johnson-PACPProvenance1"/>
 <artifact id="Patient/Example-Smith-Johnson-Patient1" key="Patient-Example-Smith-Johnson-Patient1" name="Example-Smith-Johnson-Patient1"/>
 <artifact id="Goal/Example-Smith-Johnson-PersonalGoal1" key="Goal-Example-Smith-Johnson-PersonalGoal1" name="Example-Smith-Johnson-PersonalGoal1"/>
@@ -94,10 +94,6 @@
 <artifact id="Observation/Example-Smith-Johnson-PersonalInterventionPreference4" key="Observation-Example-Smith-Johnson-PersonalInterventionPreference4" name="Example-Smith-Johnson-PersonalInterventionPreference4"/>
 <artifact id="Observation/Example-Smith-Johnson-PersonalInterventionPreference5" key="Observation-Example-Smith-Johnson-PersonalInterventionPreference5" name="Example-Smith-Johnson-PersonalInterventionPreference5"/>
 <artifact id="Observation/Example-Smith-Johnson-PersonalInterventionPreference6" key="Observation-Example-Smith-Johnson-PersonalInterventionPreference6" name="Example-Smith-Johnson-PersonalInterventionPreference6"/>
-<artifact id="List/Example-Smith-Johnson-PersonalPrioritiesOrganizer1" key="List-Example-Smith-Johnson-PersonalPrioritiesOrganizer1" name="Example-Smith-Johnson-PersonalPrioritiesOrganizer1"/>
-<artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan1" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan1" name="Example-Smith-Johnson-PreferenceCarePlan1"/>
-<artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan2" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan2" name="Example-Smith-Johnson-PreferenceCarePlan2"/>
-<artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan3" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan3" name="Example-Smith-Johnson-PreferenceCarePlan3"/>
 <artifact id="StructureDefinition/adi-goal-order-by-descending-priority-extension" key="StructureDefinition-adi-goal-order-by-descending-priority-extension" name="Goal Order by Descending Priority"/>
 <artifact id="CodeSystem/ADIHCADecisionsCS" key="CodeSystem-ADIHCADecisionsCS" name="Healthcare Agent Decision Codes"/>
 <artifact id="ValueSet/ADIHCADecisionsVS" key="ValueSet-ADIHCADecisionsVS" name="Healthcare Agent Decisions"/>
@@ -105,12 +101,16 @@
 <artifact id="ValueSet/ADIInterventionPreferencesVS" key="ValueSet-ADIInterventionPreferencesVS" name="Intervention Preferences"/>
 <artifact id="ValueSet/ADIInterventionPreferencesOrdinalVS" key="ValueSet-ADIInterventionPreferencesOrdinalVS" name="Intervention Preferences - Ordinal"/>
 <artifact id="StructureDefinition/adi-jurisdiction-extension" key="StructureDefinition-adi-jurisdiction-extension" name="Jurisdiction"/>
+<artifact id="List/Example-McBee-PersonalPrioritiesOrganizer1" key="List-Example-McBee-PersonalPrioritiesOrganizer1" name="My Advance Care Goals"/>
 <artifact id="ValueSet/ADINoHealthcareAgentIncludedReasonVS" key="ValueSet-ADINoHealthcareAgentIncludedReasonVS" name="No Healthcare Agent Included Reason"/>
 <artifact id="StructureDefinition/adi-notaryInformation-extension" key="StructureDefinition-adi-notaryInformation-extension" name="Notary Information"/>
 <artifact id="StructureDefinition/adi-participant-extension" key="StructureDefinition-adi-participant-extension" name="Participant"/>
 <artifact id="StructureDefinition/adi-performer-extension" key="StructureDefinition-adi-performer-extension" name="Performer"/>
+<artifact id="Composition/Example-Smith-Johnson-PACPComposition1" key="Composition-Example-Smith-Johnson-PACPComposition1" name="Personal Advance Care Plan"/>
+<artifact id="Composition/Example-McBee-PACPComposition1" key="Composition-Example-McBee-PACPComposition1" name="Personal Advance Care Plan Document for Roger McBee"/>
 <artifact id="ValueSet/ADIPersonalAndLegalRelationshipRoleTypeVS" key="ValueSet-ADIPersonalAndLegalRelationshipRoleTypeVS" name="Personal And Legal Relationship Role Type"/>
 <artifact id="StructureDefinition/ADI-PersonalInterventionPreference" key="StructureDefinition-ADI-PersonalInterventionPreference" name="Personal Intervention Preference"/>
+<artifact id="List/Example-Smith-Johnson-PersonalPrioritiesOrganizer1" key="List-Example-Smith-Johnson-PersonalPrioritiesOrganizer1" name="Priorities for Goals and Preferences"/>
 <artifact id="StructureDefinition/adi-versionNumber-extension" key="StructureDefinition-adi-versionNumber-extension" name="Version Number"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
