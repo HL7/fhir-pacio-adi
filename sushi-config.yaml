@@ -47,6 +47,7 @@ menu:
     General Guidance: general_guidance.html
     Formal Specification: formal_specification.html
     Security, Privacy, and Consent: security_privacy_consent.html
+    Signatures: signatures.html
     Key Terms and Acronyms: key_terms_and_acronyms.html
   FHIR Artifacts:
     Profiles: artifacts.html#2
@@ -69,6 +70,8 @@ pages:
     title: Formal Specification
   security_privacy_consent.md:
     title: Security, Privacy, and Consent
+  signatures.md:
+    title: Signatures
   key_terms_and_acronyms.md:
     title: Key Terms and Acronyms
   artifacts.html:
