@@ -24,44 +24,92 @@ For the purposes of Advance Directive Interoperability, additional security conf
 ##### Exchange Security
 
 1.	The exchange of information **SHALL** support [Transport Layer Security (TLS) Protocol Version 1.2 (RFC5246)](https://www.rfc-editor.org/rfc/rfc5246) or a more recent version of TLS for transport layer security.
-2.	Implementers of this Implementation Guide **SHALL** support [SMART on FHIR STU2 App Launch Framework](http://hl7.org/fhir/smart-app-launch/index.html) and **MAY** support [SMART on FHIR STU2 Backend Services](https://hl7.org/fhir/uv/bulkdata/authorization/index.html).
+2.	Implementers of this Implementation Guide **SHALL** support [SMART on FHIR STU 2.1 App Launch Framework](http://hl7.org/fhir/smart-app-launch/STU2.1/index.html) and **MAY** support [SMART on FHIR STU 2.1 Backend Services](https://www.hl7.org/fhir/smart-app-launch/STU2.1/backend-services.html).
 3.	Implementers of this Implementation Guide **SHOULD** support mutually authenticated TLS.
 4.	Server implementations that expect to support browser-based javascript applications SHOULD enable [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) for REST operations. Many client web-based apps use javascript for API calls which requires CORS. However, CORS could present security concerns if not implemented correctly or is not continually updated as new security issues are found and addressed. Implementers of CORS **SHOULD** consider advice about CORS from sources such as [Enable-CORS](http://enable-cors.org/) and [Moesif blog on Guide to CORS Pitfalls](https://www.moesif.com/blog/technical/cors/Authoritative-Guide-to-CORS-Cross-Origin-Resource-Sharing-for-REST-APIs/).
 
 ##### Authentication and Authorization Requirements
 
-1.	Implementations **SHALL** support the FHIR US Core [Patient Privacy and Security requirements](https://www.hl7.org/fhir/us/core/security.html).
-2.	Server systems **SHALL** publish their authorization and token endpoints for discovery in accordance with the SMART App Launch STU2 framework and publicly publish the [Well-Known Uniform Resource Identifiers (URIs)](https://hl7.org/fhir/smart-app-launch/conformance/index.html#using-well-known) JSON file with scopes defined in the `scopes_supported` property.
-3.	Implementations **SHOULD** consider the SMART on FHIR STU2 Best Practices in Authorization found [here](http://hl7.org/fhir/smart-app-launch/best-practices.html)
+###### SMART App Launch
+
+The following only applies to servers supporting app launch:
+
+1.	Implementations **SHALL** support the FHIR US Core [Patient Privacy and Security requirements](https://hl7.org/fhir/us/core/STU6.1/security.html).
+2.	Server systems **SHALL** publish their authorization and token endpoints for discovery in accordance with the SMART App Launch STU2 framework and publicly publish the [Well-Known Uniform Resource Identifiers (URIs)](http://hl7.org/fhir/smart-app-launch/STU2.1/conformance.html) JSON file with scopes defined in the `scopes_supported` property.
+3.	Implementations **SHOULD** consider the [SMART on FHIR STU2 Best Practices in Authorization](https://hl7.org/fhir/smart-app-launch/STU2.1/best-practices.html)
 4.  Implementation **MAY** support [Health Relationship Trust Profile for User-Managed Access (HEART)](https://openid.net/specs/openid-heart-uma2-1_0.html).
-5.  This guide defines the following server requirements for SMART on [FHIR Core Capabilities](https://hl7.org/fhir/smart-app-launch/conformance/index.html#smart-on-fhir-core-capabilities-and-capability-sets)
-    1.  Launch Modes
-        1.  **SHOULD** support `launch-ehr`: support for SMART’s EHR Launch mode
-        2.  **SHALL** support `launch-standalone`: support for SMART’s Standalone Launch mode
-    2.  Client Types
-        1.  **SHALL** support `client-public`: support for SMART’s public client profile (no client authentication)
-        2.  **SHALL** support `client-confidential-symmetric`: support for SMART’s confidential client profile (symmetric client secret authentication)
-    3.  Single Sign-on
-        1.  **SHALL** support `sso-openid-connect`: support for SMART’s OpenID Connect profile
-    4.  Launch Context
-        1.  **SHOULD** support `context-banner`: support for “need patient banner” launch context (conveyed via need_patient_banner token parameter)
-        2.  **MAY** support `context-style`: support for “SMART style URL” launch context (conveyed via smart_style_url token parameter)
-    5.  Launch Context for EHR Launch, if `launch-ehr` is supported
-        1.  **SHALL** support `context-ehr-patient`: support for patient-level launch context (requested by launch/patient scope, conveyed via patient token parameter)
-        2.  **SHALL** support `context-ehr-encounter`: support for encounter-level launch context (requested by launch/encounter scope, conveyed via encounter token parameter)
-    6.  Launch Context for Standalone Launch
-        1.  **SHALL** support `context-standalone-patient`: support for patient-level launch context (requested by launch/patient scope, conveyed via patient token parameter)
-        2.  **MAY** support `context-standalone-encounter`: support for encounter-level launch context (requested by launch/encounter scope, conveyed via encounter token 
-    7.  Permissions 
-        1.  **SHOULD** support `permission-offline`: support for refresh tokens (requested by `offline_access` scope)
-        2.  **SHALL** support, at a minimum, the following granted authorization [scopes](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context/index.html):
-            1.  openid
-            2.	fhirUser
-            3.	launch/patient
-            4.	patient/Patient.read
-            6.	patient/DocumentReference.*
-            7.	user/Patient.read
-            8.	user/DocumentReference.*
+5.  This guide defines the following server requirements for [SMART on FHIR Core Capabilities](https://hl7.org/fhir/smart-app-launch/STU2.1/conformance.html#capability-sets):
+
+    1.  **SHALL** support [Patient Access for Standalone Apps](http://hl7.org/fhir/smart-app-launch/STU2.1/conformance.html#patient-access-for-standalone-apps)
+    2.  **SHOULD** support [Patient Access for EHR Launch](http://hl7.org/fhir/smart-app-launch/STU2.1/conformance.html#patient-access-for-ehr-launch-ie-from-portal)
+    3.  **SHALL** support [Clinician Access for Standalone Apps](http://hl7.org/fhir/smart-app-launch/STU2.1/conformance.html#clinician-access-for-standalone)
+    4.  **SHOULD** support: [Clinician Access for EHR Launch](http://hl7.org/fhir/smart-app-launch/STU2.1/conformance.html#clinician-access-for-ehr-launch)
+    5.  In addition to the guidance above, there are additional requirements for other SMART on FHIR capabilities not included above, including:
+        <br />
+        <table>
+            <tr>
+                <th style="margin-left: 5px; margin-right: 5px;">Element</th>
+                <th style="margin-left: 5px; margin-right: 5px;">Requirement</th>
+                <th style="margin-left: 5px; margin-right: 5xpx;">Reason</th>
+            </tr>
+            <tr>
+                <td>sso-openid-connect</td>
+                <td>SHALL</td>
+                <td>Advance directive information is sensitive information, so authorization using SMART's OpenID Connect profile is required</td>
+            </tr>
+            <tr>
+                <td>scopes</td>
+                <td>SHALL</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>openid:</td>
+                            <td>Permission to retrieve information about the current logged-in user</td>
+                        </tr>
+                        <tr>
+                            <td>fhirUser:</td>
+                            <td>Permission to retrieve information about the current logged-in user</td>
+                        </tr>
+                        <tr>
+                            <td>launch/patient:</td>
+                            <td>When launching outside EHR, ask for patient to be selected at launch time</td>
+                        </tr>
+                        <tr>
+                            <td>patient/Patient.read:</td>
+                            <td>Permission to read any resource for the current patient</td>
+                        </tr>
+                        <tr>
+                            <td>patient/DocumentReference.*:</td>
+                            <td>Permission to access document references for the current patient</td>
+                        </tr>
+                        <tr>
+                            <td>user/Patient.read:</td>
+                            <td>Allows the client app to select the patient</td>
+                        </tr>
+                        <tr>
+                            <td>user/DocumentReference.*:</td>
+                            <td>Allows the client app to select a document reference</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>context-banner</td>
+                <td>SHOULD</td>
+                <td>The banner helps provides the patient context for the data</td>
+            </tr>
+            <tr>
+                <td>permission-offline</td>
+                <td>SHOULD</td>
+                <td>Support for refresh tokens, which allow a session to be extended without repeated logins</td>
+            </tr>
+        </table>
+
+###### SMART Backend Systems
+
+The following applies to servers that support backend services:
+
+1.  Implementations **SHALL** support the [SMART Backend Services: Authorization Guide](http://hl7.org/fhir/uv/bulkdata/STU1.0.1/authorization/index.html)
 
 <!--  TODO
 #### Individual-Authorized Exchange
