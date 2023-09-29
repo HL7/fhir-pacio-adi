@@ -23,10 +23,41 @@
 <artifact id="StructureDefinition/ADI-Provenance" key="StructureDefinition-ADI-Provenance" name="ADI Provenance"/>
 <artifact id="StructureDefinition/ADI-Witness" key="StructureDefinition-ADI-Witness" name="ADI Witness"/>
 <artifact id="ValueSet/ADIAttesterRoleTypeVS" key="ValueSet-ADIAttesterRoleTypeVS" name="Attester Role"/>
+<artifact id="SearchParameter/Bundle-composition" key="SearchParameter-Bundle-composition" name="Bundle-composition"/>
+<artifact id="SearchParameter/Bundle-identifier" key="SearchParameter-Bundle-identifier" name="Bundle-identifier"/>
+<artifact id="SearchParameter/Bundle-timestamp" key="SearchParameter-Bundle-timestamp" name="Bundle-timestamp"/>
+<artifact id="SearchParameter/Bundle-type" key="SearchParameter-Bundle-type" name="Bundle-type"/>
 <artifact id="StructureDefinition/adi-clause-extension" key="StructureDefinition-adi-clause-extension" name="Clause"/>
 <artifact id="ValueSet/ADIConsentTypeVS" key="ValueSet-ADIConsentTypeVS" name="Consent Type"/>
+<artifact id="SearchParameter/Consent-id" key="SearchParameter-Consent-id" name="Consent-id"/>
 <artifact id="StructureDefinition/adi-contextualValue-extension" key="StructureDefinition-adi-contextualValue-extension" name="Contextual Value"/>
 <artifact id="StructureDefinition/adi-dataEnterer-extension" key="StructureDefinition-adi-dataEnterer-extension" name="Data Enterer"/>
+<artifact id="SearchParameter/DocumentReference-authenticator" key="SearchParameter-DocumentReference-authenticator" name="DocumentReference-authenticator"/>
+<artifact id="SearchParameter/DocumentReference-author" key="SearchParameter-DocumentReference-author" name="DocumentReference-author"/>
+<artifact id="SearchParameter/DocumentReference-category" key="SearchParameter-DocumentReference-category" name="DocumentReference-category"/>
+<artifact id="SearchParameter/DocumentReference-contenttype" key="SearchParameter-DocumentReference-contenttype" name="DocumentReference-contenttype"/>
+<artifact id="SearchParameter/DocumentReference-custodian" key="SearchParameter-DocumentReference-custodian" name="DocumentReference-custodian"/>
+<artifact id="SearchParameter/DocumentReference-date" key="SearchParameter-DocumentReference-date" name="DocumentReference-date"/>
+<artifact id="SearchParameter/DocumentReference-description" key="SearchParameter-DocumentReference-description" name="DocumentReference-description"/>
+<artifact id="SearchParameter/DocumentReference-encounter" key="SearchParameter-DocumentReference-encounter" name="DocumentReference-encounter"/>
+<artifact id="SearchParameter/DocumentReference-event" key="SearchParameter-DocumentReference-event" name="DocumentReference-event"/>
+<artifact id="SearchParameter/DocumentReference-facility" key="SearchParameter-DocumentReference-facility" name="DocumentReference-facility"/>
+<artifact id="SearchParameter/DocumentReference-format" key="SearchParameter-DocumentReference-format" name="DocumentReference-format"/>
+<artifact id="SearchParameter/DocumentReference-id" key="SearchParameter-DocumentReference-id" name="DocumentReference-id"/>
+<artifact id="SearchParameter/DocumentReference-identifier" key="SearchParameter-DocumentReference-identifier" name="DocumentReference-identifier"/>
+<artifact id="SearchParameter/DocumentReference-language" key="SearchParameter-DocumentReference-language" name="DocumentReference-language"/>
+<artifact id="SearchParameter/DocumentReference-location" key="SearchParameter-DocumentReference-location" name="DocumentReference-location"/>
+<artifact id="SearchParameter/DocumentReference-patient" key="SearchParameter-DocumentReference-patient" name="DocumentReference-patient"/>
+<artifact id="SearchParameter/DocumentReference-period" key="SearchParameter-DocumentReference-period" name="DocumentReference-period"/>
+<artifact id="SearchParameter/DocumentReference-related" key="SearchParameter-DocumentReference-related" name="DocumentReference-related"/>
+<artifact id="SearchParameter/DocumentReference-relatesto" key="SearchParameter-DocumentReference-relatesto" name="DocumentReference-relatesto"/>
+<artifact id="SearchParameter/DocumentReference-relation" key="SearchParameter-DocumentReference-relation" name="DocumentReference-relation"/>
+<artifact id="SearchParameter/DocumentReference-relationship" key="SearchParameter-DocumentReference-relationship" name="DocumentReference-relationship"/>
+<artifact id="SearchParameter/DocumentReference-security-label" key="SearchParameter-DocumentReference-security-label" name="DocumentReference-security-label"/>
+<artifact id="SearchParameter/DocumentReference-setting" key="SearchParameter-DocumentReference-setting" name="DocumentReference-setting"/>
+<artifact id="SearchParameter/DocumentReference-status" key="SearchParameter-DocumentReference-status" name="DocumentReference-status"/>
+<artifact id="SearchParameter/DocumentReference-subject" key="SearchParameter-DocumentReference-subject" name="DocumentReference-subject"/>
+<artifact id="SearchParameter/DocumentReference-type" key="SearchParameter-DocumentReference-type" name="DocumentReference-type"/>
 <artifact id="ValueSet/ADIDocumentationTypeVS" key="ValueSet-ADIDocumentationTypeVS" name="Documentation Types"/>
 <artifact id="StructureDefinition/adi-effective-date-extension" key="StructureDefinition-adi-effective-date-extension" name="Effective Date"/>
 <artifact id="Observation/Example-McBee-AutopsyObservation1" key="Observation-Example-McBee-AutopsyObservation1" name="Example-McBee-AutopsyObservation1"/>
@@ -121,6 +152,7 @@
 <page key="index" name="Home"/>
 <page key="key_terms_and_acronyms" name="Key Terms and Acronyms"/>
 <page key="patient_stories_and_personas" name="Patient Stories and Personas"/>
+<page key="search_parameters" name="Search Parameters Required By This Implementation Guide"/>
 <page key="security_privacy_consent" name="Security, Privacy, and Consent"/>
 <page key="signatures" name="Signatures"/>
 <page key="toc" name="Table of Contents"/>

@@ -53,6 +53,7 @@ menu:
     Profiles: artifacts.html#2
     Extensions: artifacts.html#4
     Terminology: artifacts.html#5
+    Search Parameters: search_parameters.html
     Capability Statement: CapabilityStatement-adi.html
     Examples: artifacts.html#6
   Downloads: downloads.html
@@ -72,6 +73,8 @@ pages:
     title: Security, Privacy, and Consent
   signatures.md:
     title: Signatures
+  search_parameters.md:
+    title: Search Parameters Required By This Implementation Guide
   key_terms_and_acronyms.md:
     title: Key Terms and Acronyms
   artifacts.html:
