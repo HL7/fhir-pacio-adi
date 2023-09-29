@@ -107,10 +107,59 @@ For the purposes of this implementation guide, it is expected that most implemen
 <!--[TODO]--> 
 This guide requires the interoperability of Advance Directive Information through the use of wholly contained documents as part of its use case. While it is required that this data be made interoperable as a collection of Advance Directive Information in document Bundles, systems may decide to make use of the constituent resources as separate resources for additional uses and purposes, such as use in support of Clinical Decision Support. 
 
-### Advance Directive Native FHIR Document Structure Requirements
+### Advance Directive Document Structure Requirements
+
 Advance directive documents may take several forms including scanned PDF documents, CDA documents and native FHIR documents. This guide defines interoperability to support any number of types.
 
-All document content, regardless of format is saved in the Binary resource and is available through the Binary endpoint. FHIR native documents **SHALL** be Bundle resources with `type` = `document` and encoded as a Binary resource. Documents that are communicated **SHALL** have at least one DocumentReference resource that references the Binary though the `DocumentReference.content.attachment.url`.
+All documents, regardless of format are saved in the `Binary` resource and are available through the `Binary` endpoint. Further guidance on representing each document attachment type is provided below.
+
+#### Advance Directive Scanned PDF Structure Requirements
+
+Scanned PDF documents are represented as a base64 encoded attachment with `DocumentReference.content.attachment.contentType` set to "application/pdf".
+
+An example of this representation is shown in the resource snippet below:
+
+```
+"content": [{
+    "attachment": {
+        "contentType": "application/pdf",
+        "data" : "JVBERi0xLjcKJeLjz9MKNSAwIG9i....etc"
+    }
+}]
+```
+
+#### Advance Directive CDA Document Structure Requirements
+
+CDA attachments **SHALL** align with the [HL7 CDA® R2 Implementation Guide: Personal Advance Care Plan (PACP) Document, Release 1 STU3 - US Realm](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=434) specification:
+
+* Set the FHIR `DocumentReference.content.attachment.format.system` element to "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem" 
+* Set the FHIR `DocumentReference.content.attachment.format.code` element to one of two options depending on the CDA format:
+
+| Format              | DocumentReference.content.format.code               |
+| ------------------- | --------------------------------------------------- |
+| Structured Body     | urn:hl7-org:sdwg:pacp-structuredBody:1.3.1          |
+| Non-structured Body | urn:hl7-org:sdwg:pacp-nonXMLBody:1.3.1              |
+{: .grid }
+
+An example of this representation is shown in the resource snippet below:
+
+```
+"content": [{
+    "attachment": {
+        "contentType": "text/xml",
+        "url": "Binary/03fdcd6b-4e0f-406e-86ac-6b56bf9ce575"
+    },
+    "format": {
+        "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "code": "urn:hl7-org:sdwg:pacp-structuredBody:1.3.1",
+        "display": "PACP C-CDA"
+    }
+}]
+```
+
+#### Advance Directive Native FHIR Document Structure Requirements
+
+FHIR native documents **SHALL** be Bundle resources with `type` = `document` and encoded as a `Binary` resource. Documents that are communicated **SHALL** have at least one DocumentReference resource that references the Binary though the `DocumentReference.content.attachment.url` element.
 
 FHIR native documents **SHOULD** have all content contained within the Bundle with no external references except for the references to external documents in the [DocumentationObservation](StructureDefinition-ADI-DocumentationObservation.html).focus. FHIR native documents have internal references between resources (e.g. the Composition resource referencing entry resources). These references **SHALL** be resolved using the `Bundle.entry.fullUrl`. This URL may be a proper URL, but there **SHOULD** be no expectation that the URL resolves outside of the confines of the Bundle. To avoid confusion, it may be desirable to use UUID (e.g. urn:uuid:53fefa32-fcbb-4ff8-8a92-55ee120877b7) instead of URLs for the fullUrl. 
 
