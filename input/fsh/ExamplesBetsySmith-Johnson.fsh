@@ -555,11 +555,11 @@ Usage: #example
 
 * category[advance_care_planning] = $SNOMEDCT#736366004 "Advance care plan"
 
-* title = "Care Plan for Permanent, sever brain damage"
+* title = "Care Plan for Permanent, severe brain damage"
 
 * subject = Reference(Example-Smith-Johnson-Patient1)
 
-* addresses[+].display = "Permanent, sever brain damage and I am unable to recognize my family and friends"
+* addresses[+].display = "Permanent, severe brain damage and I am unable to recognize my family and friends"
 
 * goal[+] = Reference(Example-Smith-Johnson-PersonalGoal1)
 * supportingInfo[+] = Reference(Example-Smith-Johnson-PersonalInterventionPreference3)
