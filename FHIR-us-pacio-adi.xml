@@ -23,7 +23,7 @@
 <artifact id="StructureDefinition/ADI-Provenance" key="StructureDefinition-ADI-Provenance" name="ADI Provenance"/>
 <artifact id="StructureDefinition/ADI-Witness" key="StructureDefinition-ADI-Witness" name="ADI Witness"/>
 <artifact id="ValueSet/ADIAttesterRoleTypeVS" key="ValueSet-ADIAttesterRoleTypeVS" name="Attester Role"/>
-<artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan2" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan2" name="Care Plan for Permanent, sever brain damage"/>
+<artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan2" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan2" name="Care Plan for Permanent, severe brain damage"/>
 <artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan3" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan3" name="Care Plan for Terminal illness, lack of meaningful interaction"/>
 <artifact id="CarePlan/Example-McBee-PreferenceCarePlan1" key="CarePlan-Example-McBee-PreferenceCarePlan1" name="Care Plan for Unconscious, vegetative state, coma"/>
 <artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan1" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan1" name="Care Plan for Unconscious, vegetative state, coma"/>
