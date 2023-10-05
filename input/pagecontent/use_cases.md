@@ -85,13 +85,7 @@ Use-case 3 aims to enable provider access to advance directive information. It i
 ##### Use Case 3 Processes Steps
 
 
-The Use Case 3 process describes message interactions between a Content Requester, such as SMART on FHIR application, and a backend server. 
-
-<blockquote class="stu-note">
-    <p>
-    Specification requirements for the backend server are out of scope in STU1 and will be covered in the STU2 release.
-    </p>
-</blockquote> 
+The Use Case 3 process describes message interactions between a Content Requester, such as SMART on FHIR application, and a backend server. Note that while backend servers are supported by this IG, more specification requirement details will be coming in STU2.
 
 The process is started when a Practitioner wants a person’s advance directive information for care planning and decision-making.  The Content Requester must contact a system that offers a FHIR API for receiving requests for advance directive information. The Practitioner must be authorized to access the person’s AD Info on the Custodian system. The Content Custodian may be documented in a SMART Health Card or record endpoint in their card. 
 
