@@ -48,6 +48,7 @@ menu:
     Formal Specification: formal_specification.html
     Security, Privacy, and Consent: security_privacy_consent.html
     Signatures: signatures.html
+    Search Parameters: search_parameters.html
     Key Terms and Acronyms: key_terms_and_acronyms.html
   FHIR Artifacts:
     Profiles: artifacts.html#2
