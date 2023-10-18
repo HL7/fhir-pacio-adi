@@ -1,12 +1,4 @@
 
-##### Use Case 3 Description
-
-Use-case 3 aims to enable provider access to advance directive information. It includes 3 steps: 
-
-* Step 1 is a Patient Query where a human actor such as a practitioner performs an activity in their system, acting as the Content Requester, to search for the patient of interest in the Content Custodian system in order to retrieve the appropriate Patient FHIR ID in which to perform the subsequent actions. This is a common FHIR behavior and is not further specified in this guide.
-* Step 2 is a `DocumentReference` query, where the Content Requester performs a `GET DocumentReference` request using the retrieved patient ID and additional search parameters like date, to the Content Custodian. The Content Custodian returns all matching `DocumentReference` information that has been authorized. This step returns a `DocumentReference` FHIR resource, which may or may not contain a binary-encoded document. Systems claiming conformance to this guide will not encode the document in the `DocumentReference` resource. Instead, the `DocumentReference` resource will reference a base64 binary attachment that contains the content.
-* Step 3 involves retrieving the document content. The Content Retriever performs a GET operation using the URL specified in `DocumentReference`. This operation should be available using the same authentication and authorization that was used to retrieve the DocumentReference. Depending on the capabilities of the Content Custodian or the format of the content, the retrieved Binary resource may need to be decoded. If the Content Custodian supports it and if the document content is in xml or json formatting, a request with an HTTP Accept Header of application/xml, text/xml, or application/json may retrieve the decoded document (which may be a FHIR Bundle with type = document).
-
 ##### Use Case 3, Part 1 Actor Transition Diagram, Patient Query
 
 <img src="./use_case_3_1.png" alt="Use Case 3: Diagram 1" style="width: 100%; float: none; align: middle;"/>

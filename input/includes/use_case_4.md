@@ -1,9 +1,4 @@
 
-##### Use Case 4 Description
-
-In Use Case 4, the person that has previously created their advance directive information in a digital form wants to make updates to their information. The Custodian system ensures content is updated and correctly represented using FHIR resources.
-
-
 ##### Use Case 4 Actor Transition Diagram
 <img src="./use_case_4_1.png" alt="Use Case 4: Diagram 1" style="float: none; align: middle;"/>
 

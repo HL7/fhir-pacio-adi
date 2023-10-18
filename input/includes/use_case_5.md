@@ -1,11 +1,4 @@
 
-##### Use Case 5 Description
-
-In Use Case 5, a Content Verifier has advance directive information which it previously received or retrieved.
-* Step 1 is to retrieve the known DocumentReference. The Content Verifier already has a version of the document and therefore knows the setId identifier for the document. The Content Verifier wants to confirm the information they have is the person’s current advance directive information. To verify that the document they have is the current version (and get the current version if it is not), the Content Verifier queries the Content Custodian to retrieve the current version of the document already in their possession. If the DocumentReference has a status = current, the latest document has been retrieved and no further action is needed.
- * Step 2 is to retrieve newer content if available. If the `DocumentReference` resource retrieved by the Content Retriever in Step 1 has a status of `superseded` then the document has been replaced and the Content Verifier, the does a second query for a `DocumentReference` resource that has a `relatesto.code` of `replaces` and a reference to the superseded `DocumentReference` resource. The Content Verifier can then retrieve the document as described in step 3 of <a hef="#use-case-3-description">Use Case 3</a>.
-
-
 <img src="./use_case_5_1.png" alt="Use Case 5: Diagram 1" style="width: 100%; float: none; align: middle;"/>
 
 

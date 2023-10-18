@@ -1,10 +1,4 @@
 
-##### Use Case 1: Description 
-
-<p>
-In Use Case 1, the person that wants to create their advance directive information in a digital form enters information in a content creator system. The content creator system ensures the information is stored and is available for the steps in the process that are described in the following use cases.  
-</p>
-
 ##### Use Case 1 Actor Transition Diagram
 <br clear="all" />
 <img src="./use_case_1_1.png" alt="Use Case 21: Diagram 1"/>
