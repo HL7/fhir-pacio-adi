@@ -22,13 +22,11 @@ Use cases in this IG will provide requirements for systems to use FHIR RESTful o
 
 ##### Use Case 1: Description 
 
-
 In Use Case 1, the person that wants to create their advance directive information in a digital form enters information in a content creator system. The content creator system ensures the information is stored and is available for the steps in the process that are described in the following use cases.  
 
 ##### Use Case 1 Actor Transition Diagram
-<br clear="all" />
-<img src="./use_case_1_1.png" alt="Use Case 21: Diagram 1"/>
-<br clear="all" />
+
+{% include examplebutton_default.html example="use_case_1_actor_transition.md" b_title = "Click Here To See Use Case 1 Actor Transition Diagram" %}
 
 ##### Use Case 1 Processes Steps
 
@@ -38,9 +36,7 @@ In Use Case 1, the process is started by a person wanting to create advance dire
 
 ##### Use Case 1 Sequence Diagram
 
-<img src="./use_case_1_2.png" alt="Use Case 21: Diagram 2"/>
-<br clear="all" />
-
+{% include examplebutton_default.html example="use_case_1_sequence.md" b_title = "Click Here To See Use Case 1 Sequence Diagram" %}
 
 #### Use Case 2: Share [Content]
 
@@ -50,7 +46,7 @@ In Use Case 2, the Content Creator will share the person-authored advance direct
 
 ##### Use Case 2 Actor Transition Diagram
 
-<img src="./use_case_2_1.png" alt="Use Case 2: Diagram 1" style="width: 100%; float: none; align: middle;"/>
+{% include examplebutton_default.html example="use_case_2_actor_transition.md" b_title = "Click Here To See Use Case 2 Actor Transition Diagram" %}
 
 ##### Use Case 2 Processes Steps
 
@@ -58,7 +54,7 @@ In Use Case 2, the process is started when a person wants to share their advance
 
 ##### Use Case 2 Sequence Diagram
 
-<img src="./use_case_2_2.png" alt="Use Case 2: Diagram 2" style="width: 100%; float: none; align: middle;"/>
+{% include examplebutton_default.html example="use_case_2_sequence.md" b_title = "Click Here To See Use Case 2 Sequence Diagram" %}
  
 #### Use Case 3: Query and Access [Content]
 
@@ -72,18 +68,17 @@ Use-case 3 aims to enable provider access to advance directive information. It i
 
 ##### Use Case 3, Part 1 Actor Transition Diagram, Patient Query
 
-<img src="./use_case_3_1.png" alt="Use Case 3: Diagram 1" style="width: 100%; float: none; align: middle;"/>
+{% include examplebutton_default.html example="use_case_3_actor_transition_1.md" b_title = "Click Here To See Use Case 3 Actor Transition Diagram Part 1" %}
 
 ##### Use Case 3, Part 2 Actor Transition Diagram, DocumentReference Query
 
-<img src="./use_case_3_2.png" alt="Use Case 3: Diagram 2" style="width: 100%; float: none; align: middle;"/>
+{% include examplebutton_default.html example="use_case_3_actor_transition_2.md" b_title = "Click Here To See Use Case 3 Actor Transition Diagram Part 2" %}
 
 ##### Use Case 3, Part 3 Actor Transition Diagram, Binary Read or Read Composition
 
-<img src="./use_case_3_3.png" alt="Use Case 3: Diagram 3" style="width: 100%; float: none; align: middle;"/>
+{% include examplebutton_default.html example="use_case_3_actor_transition_3.md" b_title = "Click Here To See Use Case 3 Actor Transition Diagram Part 3" %}
 
 ##### Use Case 3 Processes Steps
-
 
 The Use Case 3 process describes message interactions between a Content Requester, such as SMART on FHIR application, and a backend server. Note that while backend servers are supported by this IG, more specification requirement details will be coming in STU2.
 
@@ -98,8 +93,7 @@ First, the Content Requester SHOULD use the FHIR operation [$match](https://hl7.
 </blockquote> 
 
 ##### Use Case 3 Sequence Diagram
-<img src="./use_case_3_4.png" alt="Use Case 3: Diagram 4.1" style="width: 100%; float: none; align: middle;"/>
-
+{% include examplebutton_default.html example="use_case_3_sequence.md" b_title = "Click Here To See Use Case 3 Sequence Diagram" %}
 
 #### Use Case 4: Update [Content]
 
@@ -107,9 +101,8 @@ First, the Content Requester SHOULD use the FHIR operation [$match](https://hl7.
 
 In Use Case 4, the person that has previously created their advance directive information in a digital form wants to make updates to their information. The Custodian system ensures content is updated and correctly represented using FHIR resources.
 
-
 ##### Use Case 4 Actor Transition Diagram
-<img src="./use_case_4_1.png" alt="Use Case 4: Diagram 1" style="float: none; align: middle;"/>
+{% include examplebutton_default.html example="use_case_4_actor_transition.md" b_title = "Click Here To See Use Case 4 Actor Transition Diagram" %}
 
 ##### Use Case 4 Processes Steps
 
@@ -121,7 +114,7 @@ In Use Case 4, the process is started by a person wanting to update previously c
 
 
 ##### Use Case 4 Sequence Diagram
-<img src="./use_case_4_2.png" alt="Use Case 4: Diagram 2" style="width: 100%; float: none; align: middle;"/>
+{% include examplebutton_default.html example="use_case_4_sequence.md" b_title = "Click Here To See Use Case 4 Sequence Diagram" %}
 
 
 #### Use Case 5: Verify current version of AD [Content]
@@ -132,12 +125,13 @@ In Use Case 5, a Content Verifier has advance directive information which it pre
 * Step 1 is to retrieve the known DocumentReference. The Content Verifier already has a version of the document and therefore knows the setId identifier for the document. The Content Verifier wants to confirm the information they have is the person’s current advance directive information. To verify that the document they have is the current version (and get the current version if it is not), the Content Verifier queries the Content Custodian to retrieve the current version of the document already in their possession. If the DocumentReference has a status = current, the latest document has been retrieved and no further action is needed.
  * Step 2 is to retrieve newer content if available. If the `DocumentReference` resource retrieved by the Content Retriever in Step 1 has a status of `superseded` then the document has been replaced and the Content Verifier, the does a second query for a `DocumentReference` resource that has a `relatesto.code` of `replaces` and a reference to the superseded `DocumentReference` resource. The Content Verifier can then retrieve the document as described in step 3 of <a hef="#use-case-3-description">Use Case 3</a>.
 
+##### Use Case 5, Part 1 Actor Transition Diagram, DocumentReference Query
 
-<img src="./use_case_5_1.png" alt="Use Case 5: Diagram 1" style="width: 100%; float: none; align: middle;"/>
+{% include examplebutton_default.html example="use_case_5_actor_transition_1.md" b_title = "Click Here To See Use Case 5 Actor Transition Diagram Part 1" %}
 
+##### Use Case 5, Part 2 Actor Transition Diagram, Binary Read or Read Composition
 
-
-<img src="./use_case_5_2.png" alt="Use Case 5: Diagram 2" style="width: 100%; float: none; align: middle;"/>
+{% include examplebutton_default.html example="use_case_5_actor_transition_2.md" b_title = "Click Here To See Use Case 5 Actor Transition Diagram Part 2" %}
 
 #### Use Case 5 Processes Steps
 
@@ -145,5 +139,5 @@ In Use Case 5, the process is started by a content verifier who would like to co
 
 ##### Use Case 5 Sequence Diagram
 
-<img src="./use_case_5_3.png" alt="Use Case 5: Diagram 3" style="width: 100%; float: none; align: middle;"/>
+{% include examplebutton_default.html example="use_case_5_sequence.md" b_title = "Click Here To See Use Case 5 Sequence Diagram" %}
 
