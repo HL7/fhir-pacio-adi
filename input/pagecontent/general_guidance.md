@@ -58,7 +58,7 @@ There is a very important distinction for the three types of information that wi
     </tr>
 </table>
 
-<img src="./ADI_types_overview.png" alt="ADI Types Overview" style="width: 100%; float: none; align: middle;"/>
+<img src="./ADI_types_overview.png" alt="ADI Types Overview" style="width: 80%; float: none; vertical-align: middle; margin: auto"/>
 <br clear="all" />
 
 The current version of this FHIR IG covers the use of RESTful API interactions for creation, sharing, query/access, and verification of advance directive information between systems. It is intended to address advance directive interoperability needs for Content Type 1, where the author is the individual that is making medical intervention goals, preferences, priorities known in advance. This IG is not intended to cover medical intervention goals, preferences, priorities for individuals who are not able to create and document their own advance healthcare decisions.
@@ -76,9 +76,15 @@ Advance directive documents may take several forms including scanned PDF documen
 
 The DocumentReference is the resource that is used for "indexing" of documents and can be used for searching and finding documents with specific attributes such as type of document, subject, or dates.
 
-<img src="./ADI_profile_resource_relationships.png" alt="Structure and Resource Relationships"  style="width: 100%; float: none; align: middle;"/>
+<img src="./ADI_profile_resource_relationships.png" alt="Structure and Resource Relationships"  style="width: 70%; float: none; vertical-align: middle; margin: auto"/>
 
 Digital signatures are defined as optional in this guide. If supported, the digital signature will be a captured in a `Binary` resource that is referenced by an additional `DocumentReference` resource.
+
+<blockquote class="stu-note">
+    <p>
+    There is movement within the FHIR community to move towards using the Provenance resource as a way to apply a digital signature to a document in FHIR.  The signature within the Provenance resource would be used to encrypt the binary (the actual document itself), not the DocumentReference.
+    </p>
+</blockquote>
 
 ### ADI FHIR Document Structure
 
