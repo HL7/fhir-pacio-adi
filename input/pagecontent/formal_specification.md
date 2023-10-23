@@ -176,6 +176,12 @@ The second option is a detached signature, in which the Binary Resource is digit
 
 The final option uses an enveloped signature. In this option, the content is wrapped in a FHIR Bundle in a JSON object and then encoded to binary. The binary is then signed using JSON Web Signature.  The enveloped signature described only allows for signing of JSON files.
 
+<blockquote class="stu-note">
+    <p>
+    There is movement within the FHIR community to move towards using the Provenance resource as a standard way to apply a digital signature to a document in FHIR.  The signature within the Provenance resource would be used to encrypt the binary (the actual document itself), not the DocumentReference.  A future version of the implementation guide will be updated to follow the standard FHIR guidance on signatures when it is finalized.
+    </p>
+</blockquote>
+
 #### Digital Signatures for Advance Directive Interoperability
 If digital signatures are supported, the method of signatures this guide specifies is the detached signature. The detached signature approach provides the greatest flexibility of document type support (does not have to be a JSON or even a FHIR encoded document) and enables the ability for clients that do not support or require digital signatures to retrieve and use the data unhampered. The detached signature approach is also aligned with the design and workflows of major US health information networks. 
 Systems claiming conformance to this guide that support digital signatures **SHALL** support the detached signature stored in a separate Binary resource and referenced by a DocumentReference resource as described below.
@@ -186,6 +192,8 @@ The cryptographic digital signature is included in the DocumentReference.content
 Below is an example of detached digital signature with the cryptographic digital signature referenced using Binary Resource. 
 
 <img src="./digital_signature_reference_example.png" alt="Digital Signature Reference Example" style="float: none; align: middle;"/>
+
+For further information on signatures, the technology basis behind them, and implementation requirements, please see the section on [Signatures](signatures.html).
 
 
 ### Replacing Documents
