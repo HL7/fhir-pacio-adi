@@ -74,7 +74,7 @@ Description: "The Advance Directive Information Order Extension represents order
 Extension: EnclosedPreconditionExtension
 Id: adi-enclosedPrecondition-extension
 Title: "Enclosed Precondition"
-Description: "The Enclosed Precondition Extension allows for a precondition to be applied to advance directive observation or goal.  For example: 'If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me' or 'Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed'"
+Description: "The Enclosed Precondition Extension allows for a precondition to be applied to an advance directive observation or goal.  For example, the precondition 'If I am so sick or seriously injured that I cannot express my own medical treatment preferences' could be applied to the patient's goal of 'Avoiding prolonged dependence on machines'.  Another example might be applying the precondition 'If I am nearing end of life' to the preference 'Please attempt to notify someone from my religion at the following number...'."
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1 MS	
 
