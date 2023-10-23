@@ -615,9 +615,8 @@ Usage: #example
 </div>"
 * category[type] = ADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
 * code = $LOINC#75775-7 "Decision to inform doctors and nurses about the role religion, faith, culture, or spirituality play in my life [Reported]"
-* valueString = "Here are some thoughts that I would like for my medical care team and my healthcare agent(s) to know about the role that religion, faith or spirituality play in my life: I am Catholic, please call Father Mark at Saint Catherine's on Main Street."
-* extension[adi-contextualValue-extension].extension[Context].valueString = "Here are some thoughts that I would like for my medical care team and my healthcare agent(s) to know about the role that religion, faith or spirituality play in my life"
-* extension[adi-contextualValue-extension].extension[Value].valueString = "I am Catholic, please call Father Mark at Saint Catherine's on Main Street."
+* extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "Here are some thoughts that I would like for my medical care team and my healthcare agent(s) to know about the role that religion, faith or spirituality play in my life"
+* valueString = "I am Catholic, please call Father Mark at Saint Catherine's on Main Street."
 * subject = Reference(Example-Smith-Johnson-Patient1)
 
 
@@ -634,9 +633,8 @@ Usage: #example
 </div>"
 * category[type] = ADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
 * code = $LOINC#81360-0 "My likes and joys [Reported]"
-* valueString = "Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed: I love the smell of lavender and the feeling of sunshine on my face."
-* extension[adi-contextualValue-extension].extension[Context].valueString = "Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed"
-* extension[adi-contextualValue-extension].extension[Value].valueString = "I love the smell of lavender and the feeling of sunshine on my face."
+* extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed"
+* valueString = "I love the smell of lavender and the feeling of sunshine on my face."
 * subject = Reference(Example-Smith-Johnson-Patient1)
 
 
@@ -653,9 +651,8 @@ Usage: #example
 </div>"
 * category[type] = ADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
 * code = $LOINC#81362-6 "My dislikes and fears [Reported]"
-* valueString = "Here is a list of things that I would like to avoid if at all possible, people that I don’t wish to see, and concerns I have about particular family members, pets, and so on: I do not like my feet to be cold."
-* extension[adi-contextualValue-extension].extension[Context].valueString = "Here is a list of things that I would like to avoid if at all possible, people that I don’t wish to see, and concerns I have about particular family members, pets, and so on"
-* extension[adi-contextualValue-extension].extension[Value].valueString = "I do not like my feet to be cold."
+* extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "Here is a list of things that I would like to avoid if at all possible, people that I don’t wish to see, and concerns I have about particular family members, pets, and so on"
+* valueString = "I do not like my feet to be cold."
 * subject = Reference(Example-Smith-Johnson-Patient1)
 
 
@@ -672,9 +669,8 @@ Usage: #example
 </div>"
 * category[type] = ADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
 * code = $LOINC#81380-8 "Goals, preferences, and priorities for care experience [Reported]"
-* valueString = "How to care for me: If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me: I want photos of my family where I can see them."
-* extension[adi-contextualValue-extension].extension[Context].valueString = "How to care for me: If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me"
-* extension[adi-contextualValue-extension].extension[Value].valueString = "I want photos of my family where I can see them."
+* extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "How to care for me: If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me"
+* valueString = "I want photos of my family where I can see them."
 * subject = Reference(Example-Smith-Johnson-Patient1)
 
 
@@ -691,9 +687,8 @@ Usage: #example
 </div>"
 * category[type] = ADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
 * code = $LOINC#81364-2 "Religious or cultural beliefs [Reported]"
-* valueString = "If I appear to be approaching the end of my life, here are some things that I would like for my caregivers to know about my faith and my religion. Please call Father Mark if my condition warrants the services of a priest."
-* extension[adi-contextualValue-extension].extension[Context].valueString = "If I appear to be approaching the end of my life, here are some things that I would like for my caregivers to know about my faith and my religion."
-* extension[adi-contextualValue-extension].extension[Value].valueString = "Please call Father Mark if my condition warrants the services of a priest."
+* extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "If I appear to be approaching the end of my life, here are some things that I would like for my caregivers to know about my faith and my religion."
+* valueString = "Please call Father Mark if my condition warrants the services of a priest."
 * subject = Reference(Example-Smith-Johnson-Patient1)
 
 
@@ -711,9 +706,8 @@ Usage: #example
 </div>"
 * category[type] = ADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
 * code = $LOINC#81365-9 "Religious or cultural affiliation contact to notify [Reported]"
-* valueString = "Please attempt to notify someone from my religion at the following phone number: If I have included one: Catholic"
-* extension[adi-contextualValue-extension].extension[Context].valueString = "Please attempt to notify someone from my religion at the following phone number If I have included one"
-* extension[adi-contextualValue-extension].extension[Value].valueString = "Catholic"
+* extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "Please attempt to notify someone from my religion at the following phone number If I have included one"
+* valueString = "Catholic"
 * subject = Reference(Example-Smith-Johnson-Patient1)
 
 
@@ -731,9 +725,8 @@ Usage: #example
 </div>"
 * category[type] = ADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
 * code = $LOINC#81366-7 "Unfinished business [Reported]"
-* valueString = "If it appears that I am approaching the end of my life, and I cannot communicate with persons around me, I would want my doctors and nurses, my family, and my friends to know about some unfinished business that I need to address: I want my sister and I to talk again, and miss her.  I wish we hadn't disagreed all those years ago and regret the time it has cost us.  I'd like to see her face if I were very ill and needed the comfort of family at my side."
-* extension[adi-contextualValue-extension].extension[Context].valueString = "If it appears that I am approaching the end of my life, and I cannot communicate with persons around me, I would want my doctors and nurses, my family, and my friends to know about some unfinished business that I need to address"
-* extension[adi-contextualValue-extension].extension[Value].valueString = "I want my sister and I to talk again, and miss her.  I wish we hadn't disagreed all those years ago and regret the time it has cost us.  I'd like to see her face if I were very ill and needed the comfort of family at my side."
+* extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "If it appears that I am approaching the end of my life, and I cannot communicate with persons around me, I would want my doctors and nurses, my family, and my friends to know about some unfinished business that I need to address"
+* valueString = "I want my sister and I to talk again, and miss her.  I wish we hadn't disagreed all those years ago and regret the time it has cost us.  I'd like to see her face if I were very ill and needed the comfort of family at my side."
 * subject = Reference(Example-Smith-Johnson-Patient1)
 
 
@@ -751,9 +744,8 @@ Usage: #example
 </div>"
 * category[type] = ADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
 * code = $LOINC#81361-8 "Things that make me laugh [Reported]"
-* valueString = "These are some of my fondest memories from life that have always brought a smile to my face or made me laugh: My dogs make me laugh when they play together, and my grandchildren make me laugh when they put on plays for me.  They bring me great joy."
-* extension[adi-contextualValue-extension].extension[Context].valueString = "These are some of my fondest memories from life that have always brought a smile to my face or made me laugh"
-* extension[adi-contextualValue-extension].extension[Value].valueString = "My dogs make me laugh when they play together, and my grandchildren make me laugh when they put on plays for me.  They bring me great joy."
+* extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "These are some of my fondest memories from life that have always brought a smile to my face or made me laugh"
+* valueString = "My dogs make me laugh when they play together, and my grandchildren make me laugh when they put on plays for me.  They bring me great joy."
 * subject = Reference(Example-Smith-Johnson-Patient1)
 
 
@@ -803,11 +795,8 @@ Usage: #example
 </div>"
 * lifecycleStatus = #proposed
 * category[type] = $LOINC#87528-6 "Personal health goal"
-* description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Avoiding prolonged dependence on machines, Not being a physical burden to my family, Dying at home"
-* description.extension[adi-contextualValue-extension].extension[Context].valueString = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me"
-* description.extension[adi-contextualValue-extension].extension[Value][+].valueString = "Avoiding prolonged dependence on machines"
-* description.extension[adi-contextualValue-extension].extension[Value][+].valueString = "Not being a physical burden to my family"
-* description.extension[adi-contextualValue-extension].extension[Value][+].valueString = "Dying at home"
+* description.extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me"
+* description.text = "Avoiding prolonged dependence on machines, Not being a physical burden to my family, Dying at home"
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * expressedBy = Reference(Example-Smith-Johnson-Patient1)
 
@@ -823,7 +812,8 @@ Description: "Example Patient Smith-Johnson Personal Goal 2"
 </div>"
 * lifecycleStatus = #proposed
 * category[type] = $LOINC#87528-6 "Personal health goal"
-* description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Not being a physical burden to my family"
+* description.extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me"
+* description.text = "Not being a physical burden to my family"
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * expressedBy = Reference(Example-Smith-Johnson-Patient1)
 
@@ -839,7 +829,8 @@ Description: "Example Patient Smith-Johnson Personal Goal 3"
 </div>"
 * lifecycleStatus = #proposed
 * category[type] = $LOINC#87528-6 "Personal health goal"
-* description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:  Dying at home"
+* description.extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me"
+* description.text = "Dying at home"
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * expressedBy = Reference(Example-Smith-Johnson-Patient1)
 
@@ -856,12 +847,10 @@ Usage: #example
 <p>If I am having significant pain or suffering,</p>
 <p><i>I would like my doctors to consult a Supportive and Palliative Care Team to help treat my physical, emotional and spiritual discomfort, and to support my family.</i></p>
 </div>"
-
 * category[type] = ADIPreferenceCategoryCS#intervention-preference "Intervention preference"
 * code = $LOINC#75780-7
-* valueString = "If I am having significant pain or suffering, I would like my doctors to consult a Supportive and Palliative Care Team to help treat my physical, emotional and spiritual discomfort, and to support my family."
-* extension[adi-contextualValue-extension].extension[Context].valueString = "If I am having significant pain or suffering"
-* extension[adi-contextualValue-extension].extension[Value].valueString = "I would like my doctors to consult a Supportive and Palliative Care Team to help treat my physical, emotional and spiritual discomfort, and to support my family."
+* extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "If I am having significant pain or suffering"
+* valueString = "I would like my doctors to consult a Supportive and Palliative Care Team to help treat my physical, emotional and spiritual discomfort, and to support my family."
 * subject = Reference(Example-Smith-Johnson-Patient1)
 
 
@@ -875,12 +864,10 @@ Usage: #example
 <p><b>My Preferences in Specific Circumstances</b></p>
 <p>In addition to the general advance care goals provided above, below are specific treatment preferences with respect to certain specific circumstances or situations.</p>
 </div>"
-
 * category[type] = ADIPreferenceCategoryCS#intervention-preference "Intervention preference"
 * code = $LOINC#75777-3 "Information to tell doctors if my health deteriorates due to a terminal illness and I am unable to interact meaningfully with family, friends, or surroundings [Reported]"
-* valueString = "My Preferences in Specific Circumstances: In addition to the general advance care goals provided above, below are specific treatment preferences with respect to certain specific circumstances or situations."
-* extension[adi-contextualValue-extension].extension[Context].valueString = "My Preferences in Specific Circumstances"
-* extension[adi-contextualValue-extension].extension[Value].valueString = "In addition to the general advance care goals provided above, below are specific treatment preferences with respect to certain specific circumstances or situations."
+* extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "My Preferences in Specific Circumstances"
+* valueString = "In addition to the general advance care goals provided above, below are specific treatment preferences with respect to certain specific circumstances or situations."
 * subject = Reference(Example-Smith-Johnson-Patient1)
 
 
@@ -895,12 +882,10 @@ Usage: #example
 <p>If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings,</p>
 <p><i>I would like for them to keep trying life-sustaining treatments until my healthcare agent decides it is time to stop and such treatments and let me die gently.</i></p>
 </div>"
-
 * category[type] = ADIPreferenceCategoryCS#intervention-preference "Intervention preference"
 * code = $LOINC#75778-1 "Information to tell doctors if I have a severe, irreversible brain injury or illness and can't dress, feed, or bathe myself, or communicate my medical wishes, but can be kept alive [Reported]"
-* valueString = "If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings, I would like for them to keep trying life-sustaining treatments until my healthcare agent decides it is time to stop and such treatments and let me die gently."
-* extension[adi-contextualValue-extension].extension[Context].valueString = "If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings"
-* extension[adi-contextualValue-extension].extension[Value].valueString = "I would like for them to keep trying life-sustaining treatments until my healthcare agent decides it is time to stop and such treatments and let me die gently."
+* extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings"
+* valueString = "I would like for them to keep trying life-sustaining treatments until my healthcare agent decides it is time to stop and such treatments and let me die gently."
 * subject = Reference(Example-Smith-Johnson-Patient1)
 
 
@@ -915,12 +900,10 @@ Usage: #example
 <p>Although I understand that, depending on the situation and circumstances, medical personnel may not be able to follow my wishes, here are my general thoughts on cardiopulmonary resuscitation (CPR):</p>
 <p><i>I want my healthcare agent to decide for me.</i></p>
 </div>"
-
 * category[type] = ADIPreferenceCategoryCS#intervention-preference "Intervention preference"
 * code = $LOINC#75779-9 "Thoughts on cardiopulmonary resuscitation (CPR) [Reported]"
-* valueString = "Although I understand that, depending on the situation and circumstances, medical personnel may not be able to follow my wishes, here are my general thoughts on cardiopulmonary resuscitation (CPR): I want my healthcare agent to decide for me."
-* extension[adi-contextualValue-extension].extension[Context].valueString = "Although I understand that, depending on the situation and circumstances, medical personnel may not be able to follow my wishes, here are my general thoughts on cardiopulmonary resuscitation (CPR)"
-* extension[adi-contextualValue-extension].extension[Value].valueString = "I want my healthcare agent to decide for me."
+* extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "Although I understand that, depending on the situation and circumstances, medical personnel may not be able to follow my wishes, here are my general thoughts on cardiopulmonary resuscitation (CPR)"
+* valueString = "I want my healthcare agent to decide for me."
 * subject = Reference(Example-Smith-Johnson-Patient1)
 
 
@@ -938,9 +921,8 @@ Usage: #example
 
 * category[type] = ADIPreferenceCategoryCS#intervention-preference "Intervention preference"
 * code = $LOINC#75780-7 "Preferred location to spend final days if possible to choose [Reported]"
-* valueString = "If it were possible to choose, here is where I would like to spend my final days: At home.I would like to receive hospice care at home if possible."
-* extension[adi-contextualValue-extension].extension[Context].valueString = "If it were possible to choose, here is where I would like to spend my final days"
-* extension[adi-contextualValue-extension].extension[Value].valueString = "At home.I would like to receive hospice care at home if possible."
+* extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "If it were possible to choose, here is where I would like to spend my final days"
+* valueString = "At home.I would like to receive hospice care at home if possible."
 * subject = Reference(Example-Smith-Johnson-Patient1)
 
 
@@ -959,9 +941,8 @@ Usage: #example
 
 * category[type] = ADIPreferenceCategoryCS#intervention-preference "Intervention preference"
 * code = $LOINC#81356-8 "Death arrangements [Reported]"
-* valueString = "If I were to pass away: Please call Jim Houston, my lawyer, for arrangements I have already made."
-* extension[adi-contextualValue-extension].extension[Context].valueString = "If I were to pass away"
-* extension[adi-contextualValue-extension].extension[Value].valueString = "Please call Jim Houston, my lawyer, for arrangements I have already made."
+* extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "If I were to pass away"
+* valueString = "Please call Jim Houston, my lawyer, for arrangements I have already made."
 * subject = Reference(Example-Smith-Johnson-Patient1)
 
 
