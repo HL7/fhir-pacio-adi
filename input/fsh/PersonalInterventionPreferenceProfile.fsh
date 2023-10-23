@@ -30,7 +30,7 @@ Description: "This profile is used to represent a personal preference for a type
 
 * value[x] 1..1 MS
 
-* extension contains adi-contextualValue-extension named ContextualValueExtension 0..1
+* extension contains adi-enclosedPrecondition-extension named EnclosedPreconditionExtension 0..1
 
 // TODO Fix invariant
 //* obeys value-personal-intervention-preference-ordinal
@@ -57,8 +57,8 @@ Description: "This profile is used to represent a personal preference for a type
 
 * value[x] 1..1 MS
 * value[x].extension contains
-    adi-contextualValue-extension named ContextualValueExtension 0..1
-* value[x].extension[adi-contextualValue-extension] ^comment = "Contextual Value contains the components that make up the Actual Value for use by systems for rendering or other purposes. It must not include additional information."
+    adi-enclosedPrecondition-extension named EnclosedPreconditionExtension 0..1
+* value[x].extension[adi-enclosedPrecondition-extension] ^comment = "Contextual Value contains the components that make up the Actual Value for use by systems for rendering or other purposes. It must not include additional information."
 
 * note MS
 

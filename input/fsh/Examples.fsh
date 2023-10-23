@@ -556,9 +556,8 @@ Usage: #example
 </div>"
 * category[type] = ADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
 * code = $LOINC#81365-9 "Religious or cultural affiliation contact to notify [Reported]"
-* valueString = "Please attempt to notify someone from my religion at the following phone number: If I have included one - Not Religious"
-* extension[adi-contextualValue-extension].extension[Context].valueString = "Please attempt to notify someone from my religion at the following phone number"
-* extension[adi-contextualValue-extension].extension[Value].valueString = "If I have included one - Not Religious"
+* extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "Please attempt to notify someone from my religion at the following phone number"
+* valueString = "If I have included one - Not Religious"
 * subject = Reference(Example-McBee-Patient1)
 
 

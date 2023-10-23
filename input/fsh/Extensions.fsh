@@ -71,17 +71,12 @@ Description: "The Advance Directive Information Order Extension represents order
 */
 
 
-Extension: ContextualValueExtension
-Id: adi-contextualValue-extension
-Title: "Contextual Value"
-Description: "The Contextual Value Extension represents one or more values with a singular context."
-* extension contains
-	Context 1..1 and
-	Value 1..*
-* extension[Context] ^short = "Context the value is provided within"
-* extension[Context].value[x] 1..1
-* extension[Value] ^short = "Value"
-* extension[Value].value[x] 1..1
+Extension: EnclosedPreconditionExtension
+Id: adi-enclosedPrecondition-extension
+Title: "Enclosed Precondition"
+Description: "The Enclosed Precondition Extension allows for a precondition to be applied to advance directive observation or goal.  For example: 'If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me' or 'Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed'"
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1 MS	
 
 
 Extension: NotaryInformationExtension

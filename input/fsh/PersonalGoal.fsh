@@ -19,8 +19,8 @@ Description: "This profile is a statement that presents the author's personal he
 
 * description 1..1 MS
 * description.extension contains
-    adi-contextualValue-extension named ContextualValueExtension 0..1
-* description.extension[adi-contextualValue-extension] ^comment = "Contextual Value contains the components that make up the Actual Value for use by systems for rendering or other purposes. It must not include additional information."
+    adi-enclosedPrecondition-extension named EnclosedPreconditionExtension 0..1
+* description.extension[adi-enclosedPrecondition-extension] ^comment = "Contextual Value contains the components that make up the Actual Value for use by systems for rendering or other purposes. It must not include additional information."
 
 * subject 1..1 MS
 * subject only Reference($USCorePatient)
