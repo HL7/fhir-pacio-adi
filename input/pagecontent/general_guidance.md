@@ -72,9 +72,11 @@ The current version of this FHIR IG covers the use of RESTful API interactions f
 
 ### Structure and Resource Relationships
 
-Advance directive documents may take several forms including scanned PDF documents, CDA documents, other binary documents, and native FHIR documents (using the `Composition` and other ADI-specific profiled FHIR resources). This guide defines interoperability to support all of these types and other potential document types (through encoding in a `Binary` resource). Today, most of these documents are shared through scanned images. This implementation guide is designed to allow a range of digitization levels, from scanned documents to fully discrete FHIR documents. Additionally, this guide provides the capability for different types of data to be more digitized than others inside the same document. 
+Advance directive documents may take several forms including scanned PDF documents, CDA documents, other binary documents, and native FHIR documents (using the `Composition` and other ADI-specific profiled FHIR resources). This guide defines interoperability to support all of these types and other potential document types (through encoding in a `Binary` resource). Today, most of these documents are shared through scanned images. 
 
-The DocumentReference is the resource that is used for "indexing" of documents and can be used for searching and finding documents with specific attributes such as type of document, subject, or dates.
+This implementation guide is designed to allow a range of digitization levels, from scanned documents to fully discrete FHIR documents. Additionally, this guide provides the capability for different types of data to be more digitized than others inside the same document, which is structured as a FHIR Composition, described in more detail in the [ADI FHIR Document Structure](general_guidance.html#adi-fhir-document-structure) section.
+
+The DocumentReference is the resource that is used for "indexing" of documents, similar to the way a library uses a card catalog to index books based on different search criteria, for example, by title, author, date, or classification code.  The DocumentReference can be used in the same way for searching and finding documents with specific attributes such as type of document, subject (e.g., patient), author, dates.  These attributes are provided in the metadata of the DocumentReference so that the actual documents do not have to be accessed for most common searches.  A complete list of search capabilities on DocumentReference can be found in the [Search Parameters](search_parameters.html#adi-documentreference-documentreference) section.
 
 <img src="./ADI_profile_resource_relationships.png" alt="Structure and Resource Relationships"  style="width: 70%; float: none; vertical-align: middle; margin: auto"/>
 
@@ -82,7 +84,7 @@ Digital signatures are defined as optional in this guide. If supported, the digi
 
 <blockquote class="stu-note">
     <p>
-    There is movement within the FHIR community to move towards using the Provenance resource as a way to apply a digital signature to a document in FHIR.  The signature within the Provenance resource would be used to encrypt the binary (the actual document itself), not the DocumentReference.
+    There is movement within the FHIR community to move towards using the Provenance resource as a standard way to apply a digital signature to a document in FHIR.  The signature within the Provenance resource would be used to encrypt the binary (the actual document itself), not the DocumentReference.  A future version of the implementation guide will be updated to follow the standard FHIR guidance on signatures when it is finalized.
     </p>
 </blockquote>
 
