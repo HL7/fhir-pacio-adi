@@ -190,28 +190,22 @@ The table below describes the FHIR profiles relevant to each of the ADI Content 
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
     </tr>
     <tr>    
-        <td style="padding: 7px;">7</td>
-        <td style="padding: 7px;"><a href="StructureDefinition-ADI-Goal.html">ADI Goal</a></td>
-        <td style="padding: 7px;"><p>This profile defines the base requirements for all ADI Goals.</p></td>
-        <td style="padding: 7px;"><a href="https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-goal.html">US Core Goal</a></td>
-    </tr>
-    <tr>    
         <td style="padding: 7px;">8</td>
         <td style="padding: 7px;"><a href="StructureDefinition-ADI-PersonalInterventionPreference.html">ADI Personal Intervention Preference</a></td>
         <td style="padding: 7px;"><p>This profile is used to represent a personal preference for a type of medical intervention (treatment).</p></td>
-        <td style="padding: 7px;"><a href="StructureDefinition-ADI-Goal.html">ADI Goal</a></td>
+        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">9</td>
         <td style="padding: 7px;"><a href="StructureDefinition-ADI-CareExperiencePreference.html">ADI Care Experience Preference</a></td>
         <td style="padding: 7px;"><p>This profile is a clinical statement that presents the author's personal thoughts about something he or she feels is relevant to his or her care experience and may be pertinent when planning his or her care.</p></td>
-        <td style="padding: 7px;"><a href="StructureDefinition-ADI-Goal.html">ADI Goal</a></td>
+        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">10</td>
         <td style="padding: 7px;"><a href="StructureDefinition-ADI-PersonalGoal.html">ADI Personal Goal</a></td>
         <td style="padding: 7px;"><p>This profile is a statement that presents the author's personal health and treatment goals that are pertinent when planning his or her care.</p></td>
-        <td style="padding: 7px;"><a href="StructureDefinition-ADI-Goal.html">ADI Goal</a></td>
+        <td style="padding: 7px;"><a href="https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-goal.html">US Core Goal</a></td>
     </tr>
     <tr>    
         <td style="padding: 7px;">11</td>
