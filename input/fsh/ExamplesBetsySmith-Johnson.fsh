@@ -32,36 +32,36 @@ Usage: #example
 * entry[+].fullUrl = "http://www.example.org/fhir/CarePlan/Example-Smith-Johnson-PreferenceCarePlan3"
 * entry[=].resource = Example-Smith-Johnson-PreferenceCarePlan3
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-CareExperiencePreference2"
+* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference2"
 * entry[=].resource = Example-Smith-Johnson-CareExperiencePreference2
-* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-CareExperiencePreference3"
+* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference3"
 * entry[=].resource = Example-Smith-Johnson-CareExperiencePreference3
-* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-CareExperiencePreference4"
+* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference4"
 * entry[=].resource = Example-Smith-Johnson-CareExperiencePreference4
-* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-CareExperiencePreference5"
+* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference5"
 * entry[=].resource = Example-Smith-Johnson-CareExperiencePreference5
-* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-CareExperiencePreference6"
+* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference6"
 * entry[=].resource = Example-Smith-Johnson-CareExperiencePreference6
-* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-CareExperiencePreference7"
+* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference7"
 * entry[=].resource = Example-Smith-Johnson-CareExperiencePreference7
-* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-CareExperiencePreference8"
+* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference8"
 * entry[=].resource = Example-Smith-Johnson-CareExperiencePreference8
 
 
 //* entry[+].fullUrl = "http://www.example.org/fhir/List/Example-Smith-Johnson-PersonalPrioritiesOrganizer1"
 //* entry[=].resource = Example-Smith-Johnson-PersonalPrioritiesOrganizer1
 
-* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-PersonalInterventionPreference1"
+* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-PersonalInterventionPreference1"
 * entry[=].resource = Example-Smith-Johnson-PersonalInterventionPreference1
 //* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-PersonalInterventionPreference2"
 //* entry[=].resource = Example-Smith-Johnson-PersonalInterventionPreference2
-* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-PersonalInterventionPreference3"
+* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-PersonalInterventionPreference3"
 * entry[=].resource = Example-Smith-Johnson-PersonalInterventionPreference3
 //* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-PersonalInterventionPreference4"
 //* entry[=].resource = Example-Smith-Johnson-PersonalInterventionPreference4
-* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-PersonalInterventionPreference5"
+* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-PersonalInterventionPreference5"
 * entry[=].resource = Example-Smith-Johnson-PersonalInterventionPreference5
-* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-PersonalInterventionPreference6"
+* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-PersonalInterventionPreference6"
 * entry[=].resource = Example-Smith-Johnson-PersonalInterventionPreference6
 
 
