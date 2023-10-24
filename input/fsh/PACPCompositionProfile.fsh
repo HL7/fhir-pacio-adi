@@ -132,7 +132,7 @@ Severity:   #error
 
 Invariant: HCA-section-cardinality
 Description: "If the PACP Composition document type is equal to Power of attorney (64298-3), Patient Personal advance care plan (81334-5), or Power of attorney and Living will (92664-2), then the PACP Composition requires one and only one section slice with code = 81335-2"
-Expression: "((type != $LOINC#64298-3) and (type != $LOINC#81334-5) and (type != $LOINC#92664-2)) or section[healthcare_agent].exists()"
+Expression: "((type != 64298-3) and (type != 81334-5) and (type != 92664-2)) or section[healthcare_agent].exists()"
 Severity:   #error
 
 Invariant: HCA-section-emptyReason-required
