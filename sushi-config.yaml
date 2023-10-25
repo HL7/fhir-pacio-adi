@@ -16,21 +16,24 @@ version: 0.1.1
 name: PACIOAdvanceDirectiveInteroperability
 title: PACIO Advance Directive Interoperability Implementation Guide
 status: draft
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg  
+    valueCode: pe
 publisher:
-  name: HL7 Patient Empowerment Working Group
+  name: HL7 International / Patient Empowerment
   url: http://www.hl7.org/Special/committees/patientempowerment
   email: patients@lists.HL7.org
 description: PACIO Advance Directive Interoperability Implementation Guide
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.us.core: 4.0.0  # updated from 3.1.0 on 9/23/20
-#  hl7.fhir.us.ccda: 1.1.0   # US Realm Header for DocumentReference
+  hl7.fhir.us.core: 4.0.0 
+  hl7.fhir.uv.extensions: current
 parameters:
   show-inherited-invariants: false
   apply-jurisdiction: true
   apply-publisher: true
-  path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
+  path-expansion-params: '../../exp-params.json' 
 copyrightYear: 2021+
 releaseLabel: STU 1 Ballot
 jurisdiction: urn:iso:std:iso:3166#US
