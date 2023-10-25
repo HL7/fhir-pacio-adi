@@ -524,6 +524,8 @@ Usage: #example
 * code = $LOINC#81360-0 "My likes and joys [Reported]"
 * valueString = "Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed: Like Bach, especially the cantatas.  St. Martin in the Fields"
 * subject = Reference(Example-McBee-Patient1)
+* performer = Reference(Example-McBee-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 
@@ -541,6 +543,8 @@ Usage: #example
 * code = $LOINC#81380-8 "Goals, preferences, and priorities for care experience [Reported]"
 * valueString = "How to care for me: If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me: I don’t like being treated like an object. I would like to be greeted like a person before working on me."
 * subject = Reference(Example-McBee-Patient1)
+* performer = Reference(Example-McBee-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 Instance: Example-McBee-CareExperiencePreference3
@@ -559,6 +563,8 @@ Usage: #example
 * extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "Please attempt to notify someone from my religion at the following phone number"
 * valueString = "If I have included one - Not Religious"
 * subject = Reference(Example-McBee-Patient1)
+* performer = Reference(Example-McBee-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 
@@ -576,9 +582,8 @@ Usage: #example
 * code = $LOINC#81366-7 "Unfinished business [Reported]"
 * valueString = "If it appears that I am approaching the end of my life, and I cannot communicate with persons around me, I would want my doctors and nurses, my family, and my friends to know about some unfinished business that I need to address: I am awaiting a message from the Noble Committee. Please keep me alive if I look promising this year."
 * subject = Reference(Example-McBee-Patient1)
-
-
-
+* performer = Reference(Example-McBee-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 
@@ -755,6 +760,8 @@ Usage: #example
 * code = $LOINC#75776-5 "Preference on consulting a supportive and palliative care team to help treat physical, emotional, and spiritual discomfort and support family [Reported]"
 * valueString = "If I am having significant pain or suffering, I would like my doctors to consult a Supportive and Palliative Care Team to help treat my physical, emotional and spiritual discomfort, and to support my family."
 * subject = Reference(Example-McBee-Patient1)
+* performer = Reference(Example-McBee-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 
@@ -771,6 +778,8 @@ Usage: #example
 * code = $LOINC#75777-3 "Information to tell doctors if my health deteriorates due to a terminal illness and I am unable to interact meaningfully with family, friends, or surroundings [Reported]"
 * valueString = "If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings, I prefer that they stop all life-sustaining treatments and let me die as gently as possible.  I realize that I will not receive life-sustaining treatments including but not limited to breathing machines, blood transfusions, dialysis, heart machines, and IV drugs to keep my heart working.  I also realize that medical personnel will not attempt cardiopulmonary resuscitation (CPR), and they will allow me to die naturally."
 * subject = Reference(Example-McBee-Patient1)
+* performer = Reference(Example-McBee-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 Instance: Example-McBee-PersonalInterventionPreference3
@@ -787,6 +796,8 @@ Usage: #example
 * code = $LOINC#77352-3 "Thoughts on artificial nutrition and hydration [Reported]"
 * valueString = "If my response above indicates that I do not want life-sustaining treatments, I expressly authorize my attending physician to withhold or withdraw artificial nutrition and hydration and instruct my healthcare agent (or, if I have not designated a healthcare agent, my default surrogate), my family and the doctors and nurses who are taking care of me to respect this request."
 * subject = Reference(Example-McBee-Patient1)
+* performer = Reference(Example-McBee-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 Instance: Example-McBee-PersonalInterventionPreference4
@@ -802,6 +813,8 @@ Usage: #example
 * code = $LOINC#75778-1 "Information to tell doctors if I have a severe, irreversible brain injury or illness and can't dress, feed, or bathe myself, or communicate my medical wishes, but can be kept alive [Reported]"
 * valueString = "If I have a severe, irreversible brain injury or illness and can’t dress, feed, or bathe myself, or communicate my medical wishes, but doctors can keep me alive in this condition for a long period of time, I would like for them to keep trying life-sustaining treatments for 2 months."
 * subject = Reference(Example-McBee-Patient1)
+* performer = Reference(Example-McBee-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 Instance: Example-McBee-PersonalInterventionPreference5
@@ -818,6 +831,8 @@ Usage: #example
 * code = $LOINC#75779-9 "Thoughts on cardiopulmonary resuscitation (CPR) [Reported]"
 * valueString = "Although I understand that, depending on the situation and circumstances, medical personnel may not be able to follow my wishes, here are my general thoughts on cardiopulmonary resuscitation (CPR): I do not want CPR attempted."
 * subject = Reference(Example-McBee-Patient1)
+* performer = Reference(Example-McBee-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 Instance: Example-McBee-PersonalInterventionPreference6
@@ -834,6 +849,8 @@ Usage: #example
 * code = $LOINC#75779-9 "Thoughts on cardiopulmonary resuscitation (CPR) [Reported]"
 * valueString = "Although I understand that, depending on the situation and circumstances, medical personnel may not be able to follow my wishes, here are my general thoughts on cardiopulmonary resuscitation (CPR): I want my healthcare agent to make the decision, but if my chances are slim to none that I'll leave the hospital, even if they resuscitate me, then I absolutely do not want CPR."
 * subject = Reference(Example-McBee-Patient1)
+* performer = Reference(Example-McBee-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 Instance: Example-McBee-PersonalInterventionPreference7
@@ -850,6 +867,8 @@ Usage: #example
 * code = $LOINC#75780-7 "Preferred location to spend final days if possible to choose [Reported]"
 * valueString = "If it were possible to choose, here is where I would like to spend my final days: At home.I would like to receive hospice care at home if possible."
 * subject = Reference(Example-McBee-Patient1)
+* performer = Reference(Example-McBee-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 
@@ -867,6 +886,8 @@ Usage: #example
 * code = $LOINC#81356-8 "Death arrangements [Reported]"
 * valueString = "Here are my thoughts on funeral or burial plans: If I were to pass away:</b> <i>I have a plot. My wife has the details, also my secretary, Ms. Williams, will know."
 * subject = Reference(Example-McBee-Patient1)
+* performer = Reference(Example-McBee-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 // //Organ Donation Observation examples
@@ -886,6 +907,8 @@ Usage: #example
 * code = $LOINC#75781-5 "Thoughts on organ and tissue donations [Reported]"
 * subject = Reference(Example-McBee-Patient1)
 * valueString = "Consent to Donate: I don’t want to donate my organs."
+* performer = Reference(Example-McBee-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 // // Autopsy Observation examples
@@ -904,6 +927,8 @@ Usage: #example
 * code = $LOINC#75782-3 "Thoughts regarding autopsy [Reported]"
 * subject = Reference(Example-McBee-Patient1)
 * valueString = "Autopsy: I want an autopsy if my doctor thinks it will help others."
+* performer = Reference(Example-McBee-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 // // Organization Examples
@@ -928,6 +953,7 @@ Usage: #example
 * address[0].state = "TX"
 * address[0].postalCode = "75081"
 * address[0].country = "US"
+
 
 // TODO where does assembler or provenance get referenced to by the Composition (or doesn't it)?
 Instance: Example-McBee-OrganizationAssembler1
