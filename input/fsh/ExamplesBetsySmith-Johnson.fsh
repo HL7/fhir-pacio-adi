@@ -93,7 +93,6 @@ Usage: #example
 
 
 
-
 // Patient Examples
 
 Instance: Example-Smith-Johnson-Patient1
@@ -618,6 +617,8 @@ Usage: #example
 * extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "Here are some thoughts that I would like for my medical care team and my healthcare agent(s) to know about the role that religion, faith or spirituality play in my life"
 * valueString = "I am Catholic, please call Father Mark at Saint Catherine's on Main Street."
 * subject = Reference(Example-Smith-Johnson-Patient1)
+* performer = Reference(Example-Smith-Johnson-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 Instance: Example-Smith-Johnson-CareExperiencePreference2
@@ -636,6 +637,8 @@ Usage: #example
 * extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed"
 * valueString = "I love the smell of lavender and the feeling of sunshine on my face."
 * subject = Reference(Example-Smith-Johnson-Patient1)
+* performer = Reference(Example-Smith-Johnson-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 Instance: Example-Smith-Johnson-CareExperiencePreference3
@@ -654,6 +657,8 @@ Usage: #example
 * extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "Here is a list of things that I would like to avoid if at all possible, people that I don’t wish to see, and concerns I have about particular family members, pets, and so on"
 * valueString = "I do not like my feet to be cold."
 * subject = Reference(Example-Smith-Johnson-Patient1)
+* performer = Reference(Example-Smith-Johnson-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 Instance: Example-Smith-Johnson-CareExperiencePreference4
@@ -672,6 +677,8 @@ Usage: #example
 * extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "How to care for me: If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me"
 * valueString = "I want photos of my family where I can see them."
 * subject = Reference(Example-Smith-Johnson-Patient1)
+* performer = Reference(Example-Smith-Johnson-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 Instance: Example-Smith-Johnson-CareExperiencePreference5
@@ -690,6 +697,8 @@ Usage: #example
 * extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "If I appear to be approaching the end of my life, here are some things that I would like for my caregivers to know about my faith and my religion."
 * valueString = "Please call Father Mark if my condition warrants the services of a priest."
 * subject = Reference(Example-Smith-Johnson-Patient1)
+* performer = Reference(Example-Smith-Johnson-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 
@@ -709,6 +718,8 @@ Usage: #example
 * extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "Please attempt to notify someone from my religion at the following phone number If I have included one"
 * valueString = "Catholic"
 * subject = Reference(Example-Smith-Johnson-Patient1)
+* performer = Reference(Example-Smith-Johnson-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 
@@ -728,6 +739,8 @@ Usage: #example
 * extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "If it appears that I am approaching the end of my life, and I cannot communicate with persons around me, I would want my doctors and nurses, my family, and my friends to know about some unfinished business that I need to address"
 * valueString = "I want my sister and I to talk again, and miss her.  I wish we hadn't disagreed all those years ago and regret the time it has cost us.  I'd like to see her face if I were very ill and needed the comfort of family at my side."
 * subject = Reference(Example-Smith-Johnson-Patient1)
+* performer = Reference(Example-Smith-Johnson-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 
@@ -747,6 +760,8 @@ Usage: #example
 * extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "These are some of my fondest memories from life that have always brought a smile to my face or made me laugh"
 * valueString = "My dogs make me laugh when they play together, and my grandchildren make me laugh when they put on plays for me.  They bring me great joy."
 * subject = Reference(Example-Smith-Johnson-Patient1)
+* performer = Reference(Example-Smith-Johnson-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 
@@ -852,6 +867,8 @@ Usage: #example
 * extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "If I am having significant pain or suffering"
 * valueString = "I would like my doctors to consult a Supportive and Palliative Care Team to help treat my physical, emotional and spiritual discomfort, and to support my family."
 * subject = Reference(Example-Smith-Johnson-Patient1)
+* performer = Reference(Example-Smith-Johnson-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 Instance: Example-Smith-Johnson-PersonalInterventionPreference2
@@ -869,6 +886,8 @@ Usage: #example
 * extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "My Preferences in Specific Circumstances"
 * valueString = "In addition to the general advance care goals provided above, below are specific treatment preferences with respect to certain specific circumstances or situations."
 * subject = Reference(Example-Smith-Johnson-Patient1)
+* performer = Reference(Example-Smith-Johnson-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 
@@ -887,6 +906,8 @@ Usage: #example
 * extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings"
 * valueString = "I would like for them to keep trying life-sustaining treatments until my healthcare agent decides it is time to stop and such treatments and let me die gently."
 * subject = Reference(Example-Smith-Johnson-Patient1)
+* performer = Reference(Example-Smith-Johnson-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 
@@ -905,6 +926,8 @@ Usage: #example
 * extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "Although I understand that, depending on the situation and circumstances, medical personnel may not be able to follow my wishes, here are my general thoughts on cardiopulmonary resuscitation (CPR)"
 * valueString = "I want my healthcare agent to decide for me."
 * subject = Reference(Example-Smith-Johnson-Patient1)
+* performer = Reference(Example-Smith-Johnson-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 
@@ -924,6 +947,8 @@ Usage: #example
 * extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "If it were possible to choose, here is where I would like to spend my final days"
 * valueString = "At home.I would like to receive hospice care at home if possible."
 * subject = Reference(Example-Smith-Johnson-Patient1)
+* performer = Reference(Example-Smith-Johnson-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 
@@ -944,6 +969,8 @@ Usage: #example
 * extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "If I were to pass away"
 * valueString = "Please call Jim Houston, my lawyer, for arrangements I have already made."
 * subject = Reference(Example-Smith-Johnson-Patient1)
+* performer = Reference(Example-Smith-Johnson-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 /*
@@ -1147,6 +1174,8 @@ Usage: #example
 * code = $LOINC#75781-5 "Thoughts on organ and tissue donations [Reported]"
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * valueString = "Consent to Donate: I consent to donate all organs and tissues."
+* performer = Reference(Example-Smith-Johnson-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 // Autopsy Observation examples
@@ -1166,6 +1195,8 @@ Usage: #example
 * code = $LOINC#75782-3 "Thoughts regarding autopsy [Reported]"
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * valueString = "Autopsy: I want an autopsy: only if there are questions about my death."
+* performer = Reference(Example-Smith-Johnson-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 Instance: Example-Smith-Johnson-DocumentationObservation1
@@ -1186,6 +1217,8 @@ Usage: #example
 //* focus = "DocumentReference/Example-Smith-Johnson-Patient1-DocumentReference_PMOLST"
 * effectiveDateTime = "2021-03-29T14:25:34.001-05:00"
 * valueCodeableConcept = $SNOMEDCT#697978002 "Provider orders for life-sustaining treatment"
+* performer = Reference(Example-Smith-Johnson-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
 
 
 // Organization Examples
@@ -1210,6 +1243,8 @@ Usage: #example
 * address[0].state = "TX"
 * address[0].postalCode = "75081"
 * address[0].country = "US"
+
+
 
 // TODO where does assembler or provenance get referenced to by the Composition (or doesn't it)?
 Instance: Example-Smith-Johnson-OrganizationAssembler1
