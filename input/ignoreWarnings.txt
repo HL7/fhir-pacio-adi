@@ -6,7 +6,11 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/pacio-adi/Struc
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-DocumentationObservation').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-OrganDonationObservation').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 %US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles.%
+%This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|4.0.0%
 
 # Existing observation category codes are not suitable for capturing care experience preferences or intervention preferences
 None of the codings provided are in the value set 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), and a coding is recommended to come from this value set) (codes = http://hl7.org/fhir/us/pacio-adi/CodeSystem/ADIPreferenceCategoryCS#care-experience-preference)
 None of the codings provided are in the value set 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), and a coding is recommended to come from this value set) (codes = http://hl7.org/fhir/us/pacio-adi/CodeSystem/ADIPreferenceCategoryCS#intervention-preference)
+
+# Patient Empowerment ('pe') is not included in HL7 Work Groups for FHIR R4, a Required binding, so we are referencing http://hl7.org/fhir/hl7-work-group|5.1.0-cibuild which includes the 'pe' value
+Reference to draft item http://hl7.org/fhir/hl7-work-group|5.1.0-cibuild
