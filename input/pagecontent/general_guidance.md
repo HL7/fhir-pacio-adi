@@ -312,9 +312,13 @@ The table below describes the FHIR profiles relevant to each of the ADI Content 
 </table>
 
 
-### Dependencies
-<p>This implementation guide relies on the following other specifications:</p>
-<ul>
-  <li><a href="http://hl7.org/fhir/R4/">FHIR R4</a> - The version of FHIR used as the base for this implementation guide.</li>
-  <li><a href="https://hl7.org/fhir/us/core/STU4/index.html">US Core STU4.0.0</a> - The version of US Core based on FHIR R4.</li>
-</ul>
+#### Globals Profiles
+
+{% include globals-table.xhtml %}
+
+### Package Dependencies
+
+This Implemention Guide is based on [FHIR R4](http://hl7.org/fhir/R4/).
+
+{% include dependency-table.xhtml %}
+
