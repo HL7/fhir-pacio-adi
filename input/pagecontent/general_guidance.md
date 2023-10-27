@@ -58,7 +58,10 @@ There is a very important distinction for the three types of information that wi
     </tr>
 </table>
 
-<img src="./ADI_types_overview.png" alt="ADI Types Overview" style="width: 80%; float: none; vertical-align: middle; margin: auto"/>
+<p align="center">
+    <img src="./ADI_types_overview.png" alt="ADI Types Overview" style="width: 80%; float: none; vertical-align: middle;"/>
+</p>
+
 <br clear="all" />
 
 The current version of this FHIR IG covers the use of RESTful API interactions for creation, sharing, query/access, and verification of advance directive information between systems. It is intended to address advance directive interoperability needs for Content Type 1, where the author is the individual that is making medical intervention goals, preferences, priorities known in advance. This IG is not intended to cover medical intervention goals, preferences, priorities for individuals who are not able to create and document their own advance healthcare decisions.
@@ -78,7 +81,9 @@ This implementation guide is designed to allow a range of digitization levels, f
 
 The DocumentReference is the resource that is used for "indexing" of documents, similar to the way a library uses a card catalog to index books based on different search criteria, for example, by title, author, date, or classification code.  The DocumentReference can be used in the same way for searching and finding documents with specific attributes such as type of document, subject (e.g., patient), author, dates.  These attributes are provided in the metadata of the DocumentReference so that the actual documents do not have to be accessed for most common searches.  A complete list of search capabilities on DocumentReference can be found in the [Search Parameters](search_parameters.html#adi-documentreference-documentreference) section.
 
-<img src="./ADI_profile_resource_relationships.png" alt="Structure and Resource Relationships"  style="width: 70%; float: none; vertical-align: middle; margin: auto"/>
+<p align="center">
+    <img src="./ADI_profile_resource_relationships.png" alt="Structure and Resource Relationships"  style="width: 70%; float: none; vertical-align: middle;"/>
+</p>
 
 Digital signatures are defined as optional in this guide. If supported, the digital signature will be a captured in a `Binary` resource that is referenced by an additional `DocumentReference` resource.
 
