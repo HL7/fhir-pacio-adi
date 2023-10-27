@@ -14,3 +14,6 @@ None of the codings provided are in the value set 'Observation Category Codes' (
 
 # Patient Empowerment ('pe') is not included in HL7 Work Groups for FHIR R4, a Required binding, so we are referencing http://hl7.org/fhir/hl7-work-group|5.1.0-cibuild which includes the 'pe' value
 Reference to draft item http://hl7.org/fhir/hl7-work-group|5.1.0-cibuild
+
+# US Core 4.0.0, which this IG is based on, does not have a profile for RelatedPerson
+%US FHIR Usage rules require that all profiles on RelatedPerson derive from the core US profile.%
