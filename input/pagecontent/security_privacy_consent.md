@@ -109,7 +109,7 @@ The following only applies to servers supporting app launch:
 
 The following applies to servers that support backend services:
 
-1.  Implementations **SHALL** support the [SMART Backend Services: Authorization Guide](http://hl7.org/fhir/uv/bulkdata/STU1.0.1/authorization/index.html)
+1.  Implementations **SHALL** support the [SMART Backend Services: Authorization Guide](https://hl7.org/fhir/uv/bulkdata/STU1.0.1/authorization/index.html)
 
 <!--  TODO
 #### Individual-Authorized Exchange

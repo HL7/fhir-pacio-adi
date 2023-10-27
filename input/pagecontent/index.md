@@ -12,7 +12,7 @@ This ADI implementation guide (IG) describes how to use existing HL7 FHIR® stan
 </p>
 
 <p>
-Advance healthcare directives can be categorized into <a href="#content_types">three types of information</a>. The current version of this guide addresses Content Type I: Person-Authored Advance Directive Information. Subsequent versions of this guide will address the other two types; Content Type 2: Encounter-Centric Patient Instructions (obligations and prohibitions) and Content Type 3:  Portable Medical Orders for Life-Sustaining Treatment.
+Advance healthcare directives can be categorized into <a href="general_guidance.html#adi-content-types">three types of information</a>. The current version of this guide addresses Content Type I: Person-Authored Advance Directive Information. Subsequent versions of this guide will address the other two types; Content Type 2: Encounter-Centric Patient Instructions (obligations and prohibitions) and Content Type 3:  Portable Medical Orders for Life-Sustaining Treatment.
 </p>
 <p>
 Included in the content for this FHIR IG are person-authored advance directives and personal advance care plans which comprise Content Type 1, and also cover patient consent information attesting to their designation of a person, or persons, to serve as their healthcare agent. 
@@ -62,7 +62,7 @@ The role of technology and expanded adoption by the aging population, providers,
 The audience for this IG includes architects and developers of healthcare information technology (HIT) systems in the US Realm that exchange clinical and non-clinical data. Business analysts and policy managers can also benefit from a basic understanding of the use of FHIR profiles across multiple implementation use cases. Finally, Quality Reporting Agencies, Standards Development Organizations (SDOs), Payors, Providers and Patients will benefit from this IG.
 </p>
 
-### About PACIO
+### About the PACIO Project
 <p>
 The PACIO Project is a collaborative effort to advance interoperable health data exchange between post-acute care (PAC) and other providers, patients, and key stakeholders across health care and to promote health data exchange in collaboration with policy makers, standards organizations, and industry through a consensus-based approach.
 </p>
@@ -100,5 +100,10 @@ This Guide is divided into several pages which are listed at the top of each pag
     <li>Downloads: This page provides links to downloadable artifacts.</li>
 </ul>
 
+### Cross Version Analysis
 
+{% include cross-version-analysis.xhtml %}
 
+### Intellectual Property Considerations
+
+{% include ip-statements.xhtml %}
