@@ -2,6 +2,7 @@ Extension: VersionNumber
 Id: adi-versionNumber-extension
 Title: "Version Number"
 Description: "Advance Directive Information VersionNumber Extension represents a numeric value used to version successive replacement documents."
+Context: Composition
 * valueInteger 0..1 MS
 * value[x] only integer
 
@@ -9,6 +10,7 @@ Extension: Jurisdiction
 Id: adi-jurisdiction-extension
 Title: "Jurisdiction"
 Description: "Jurisdiction for which content is applicable."
+Context: Composition, Extension
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1 MS
 * valueCodeableConcept from $HL7JurisdictionCodes (extensible)
@@ -20,6 +22,7 @@ Extension: DataEntererExtension
 Id: adi-dataEnterer-extension
 Title: "Data Enterer"
 Description: "Data Enterer Extension represents the person who transferred the content, written or dictated, into the Advance Directive document. To clarify, an author provides the content, subject to their own interpretation; a dataEnterer adds an author’s information to the electronic system."
+Context: Composition
 * value[x] only Reference
 * valueReference 1..1 MS
 * valueReference only Reference($USCorePractitioner or $USCorePractitionerRole or $USCorePatient or RelatedPerson)
@@ -29,6 +32,7 @@ Extension: InformantExtension
 Id: adi-informant-extension
 Title: "Informant"
 Description: "The Advance Directive Information Informant Extension describes an information source for any content within the Advance Directive document. This informant is constrained for use when the source of information is an assigned health care provider for the patient."
+Context: Composition
 * value[x] only Reference
 * valueReference 1..1 MS
 * valueReference only Reference($USCorePractitioner or $USCorePractitionerRole or $USCorePatient or RelatedPerson)
@@ -47,6 +51,7 @@ Extension: ParticipantExtension
 Id: adi-participant-extension
 Title: "Participant"
 Description: "The Advance Directive Information Participant Extension identifies supporting entities, including parents, relatives, caregivers, insurance policyholders, guarantors, and others related in some way to the patient. A supporting person or organization is an individual or an organization with a relationship to the patient. A supporting person who is playing multiple roles would be recorded in multiple participants (e.g., emergency contact and next-of-kin)."
+Context: Composition
 * value[x] only Reference
 * valueReference 1..1 MS
 * valueReference only Reference($USCorePractitioner or $USCorePractitionerRole or RelatedPerson)
@@ -56,6 +61,7 @@ Extension: PerformerExtension
 Id: adi-performer-extension
 Title: "Performer"
 Description: "The Advance Directive Information Performer Extension represents clinicians who actually and principally carry out the clinical services being documented. In a transfer of care this represents the healthcare providers involved in the current or pertinent historical care of the patient. Preferably, the patients key healthcare care team members would be listed, particularly their primary physician and any active consulting physicians, therapists, and counselors."
+Context: Composition
 * value[x] only Reference
 * valueReference 1..1 MS
 * valueReference only Reference($USCorePractitioner or $USCorePractitionerRole)
@@ -83,6 +89,7 @@ Extension: NotaryInformationExtension
 Id: adi-notaryInformation-extension
 Title: "Notary Information"
 Description: "The Notary Information Extension allows for the capture of information relevant to the notary."
+Context: RelatedPerson
 * extension contains
 	AttesterRole 1..1 and
     AttestationStatement 0..1 and
@@ -121,6 +128,7 @@ Extension: EffectiveDateExtension
 Id: adi-effective-date-extension
 Title: "Effective Date"
 Description: "The Advance Directive document effective dates."
+Context: Composition
 * value[x] only Period
 * valuePeriod 1..1 MS
 
@@ -129,6 +137,7 @@ Extension: ClauseExtension
 Id: adi-clause-extension
 Title: "Clause"
 Description: "A clause or set of clauses relevant to the resource or element being extended"
+Context: Composition, Consent
 * extension 1..*
 * extension contains
 	Title 0..1 and
@@ -158,6 +167,7 @@ Extension: GoalOrderByDescendingPriority
 Id: adi-goal-order-by-descending-priority-extension
 Title: "Goal Order by Descending Priority"
 Description: "Indicates if the goals are ordered in descending priority (Y) or no specific order (N)."
+Context: CarePlan
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1 MS
 * valueCodeableConcept from $HL7YesNoVS (extensible)
