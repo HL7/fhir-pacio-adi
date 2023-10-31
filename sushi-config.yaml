@@ -78,7 +78,7 @@ pages:
   signatures.md:
     title: Signatures
   search_parameters.md:
-    title: Search Parameters Required By This Implementation Guide
+    title: Recommended Search Parameters
   key_terms_and_acronyms.md:
     title: Key Terms and Acronyms
   artifacts.html:

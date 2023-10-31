@@ -293,6 +293,7 @@
 
 ### Patient
 <p>
+	We strongly recommend using the $match operation in performing a system-to-system query to ensure that the right patient is selected. The Patient.search parameters below may be generally used for subsequent queries once the patient is selected.
 	Search parameter requirements for Patient under this IG match those for <a href="https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-patient.html#mandatory-search-parameters">US Core Patient search requirements</a>
 </p>
 <p>&nbsp;</p>
