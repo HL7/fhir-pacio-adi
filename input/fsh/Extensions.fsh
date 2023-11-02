@@ -29,6 +29,7 @@ Extension: InformantExtension
 Id: adi-informant-extension
 Title: "Informant"
 Description: "The Advance Directive Information Informant Extension describes an information source for any content within the Advance Directive document. This informant is constrained for use when the source of information is an assigned health care provider for the patient."
+// * insert ExtensionContext(DomainResource)
 * value[x] only Reference
 * valueReference 1..1 MS
 * valueReference only Reference($USCorePractitioner or $USCorePractitionerRole or $USCorePatient or RelatedPerson)

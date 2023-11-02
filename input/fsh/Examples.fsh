@@ -977,10 +977,6 @@ Usage: #example
 * address[0].postalCode = "75081"
 * address[0].country = "US"
 
-
-
-
-
 // // Provenance Examples
 
 Instance: Example-McBee-PACPProvenance1
@@ -994,3 +990,26 @@ Usage: #example
 * agent[assembler].type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#assembler "Assembler"
 * agent[assembler].who = Reference(Example-McBee-OrganizationAssembler1)
 
+// ADI Notary example
+Instance: Example-McBee-ADINotary
+InstanceOf: ADINotary
+Description: "Example Patient McBee Care ADI Notary"
+Usage: #example
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"> Notary contact name: Jim Chalmers </div>"
+* patient = Reference(Example-McBee-Patient1)
+* name.text = "Jim Chalmers"
+* telecom.system = #phone
+* telecom.value = "410-555-1212"
+
+// ADI Witness example
+Instance: Example-McBee-ADIWitness
+InstanceOf: ADIWitness
+Description: "Example Patient McBee Care ADI Witness"
+Usage: #example
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"> Notary contact name: Mary Chalmers </div>"
+* patient = Reference(Example-McBee-Patient1)
+* name.text = "Mary Chalmers"
+* telecom.system = #phone
+* telecom.value = "410-555-4321"
