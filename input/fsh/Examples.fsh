@@ -996,7 +996,7 @@ InstanceOf: ADINotary
 Description: "Example Patient McBee Care ADI Notary"
 Usage: #example
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"> Notary contact name: Jim Chalmers </div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"> Notary contact name: Jim Chalmers</div>"
 * patient = Reference(Example-McBee-Patient1)
 * name.text = "Jim Chalmers"
 * telecom.system = #phone
@@ -1008,7 +1008,7 @@ InstanceOf: ADIWitness
 Description: "Example Patient McBee Care ADI Witness"
 Usage: #example
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"> Notary contact name: Mary Chalmers </div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"> Notary contact name: Mary Chalmers</div>"
 * patient = Reference(Example-McBee-Patient1)
 * name.text = "Mary Chalmers"
 * telecom.system = #phone
