@@ -141,7 +141,7 @@ Usage: #example
 * extension[adi-versionNumber-extension].valueInteger = 1
 * extension[adi-dataEnterer-extension].valueReference = Reference(Example-McBee-Patient1)
 // witness Sally Bobbins
-
+* extension[adi-effective-date-extension].valuePeriod.start = "2018-08-28T08:49:58.313-04:00"
 
 
 * extension[adi-informant-extension].valueReference = Reference(Example-McBee-HealthcareAgent1)

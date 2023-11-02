@@ -154,7 +154,7 @@
 <page key="index" name="Home"/>
 <page key="key_terms_and_acronyms" name="Key Terms and Acronyms"/>
 <page key="patient_stories_and_personas" name="Patient Stories and Personas"/>
-<page key="search_parameters" name="Search Parameters Required By This Implementation Guide"/>
+<page key="search_parameters" name="Recommended Search Parameters"/>
 <page key="security_privacy_consent" name="Security, Privacy, and Consent"/>
 <page key="signatures" name="Signatures"/>
 <page key="toc" name="Table of Contents"/>
