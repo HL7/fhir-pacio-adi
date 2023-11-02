@@ -64,6 +64,8 @@
 <artifact id="ValueSet/ADIDocumentationTypeVS" key="ValueSet-ADIDocumentationTypeVS" name="Documentation Types"/>
 <artifact id="StructureDefinition/adi-effective-date-extension" key="StructureDefinition-adi-effective-date-extension" name="Effective Date"/>
 <artifact id="StructureDefinition/adi-enclosedPrecondition-extension" key="StructureDefinition-adi-enclosedPrecondition-extension" name="Enclosed Precondition"/>
+<artifact id="RelatedPerson/Example-McBee-ADINotary" key="RelatedPerson-Example-McBee-ADINotary" name="Example-McBee-ADINotary"/>
+<artifact id="RelatedPerson/Example-McBee-ADIWitness" key="RelatedPerson-Example-McBee-ADIWitness" name="Example-McBee-ADIWitness"/>
 <artifact id="Observation/Example-McBee-AutopsyObservation1" key="Observation-Example-McBee-AutopsyObservation1" name="Example-McBee-AutopsyObservation1"/>
 <artifact id="Bundle/Example-McBee-Bundle1" key="Bundle-Example-McBee-Bundle1" name="Example-McBee-Bundle1"/>
 <artifact id="Observation/Example-McBee-CareExperiencePreference1" key="Observation-Example-McBee-CareExperiencePreference1" name="Example-McBee-CareExperiencePreference1"/>
