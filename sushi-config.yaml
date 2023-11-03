@@ -58,12 +58,12 @@ menu:
     Search Parameters: search_parameters.html
     Key Terms and Acronyms: key_terms_and_acronyms.html
   FHIR Artifacts:
-    Profiles: artifacts.html#2
-    Extensions: artifacts.html#4
-    Terminology: artifacts.html#5
+    Profiles: artifacts.html#3
+    Extensions: artifacts.html#5
+    Terminology: artifacts.html#6
     Search Parameters: search_parameters.html
     Capability Statement: CapabilityStatement-adi.html
-    Examples: artifacts.html#6
+    Examples: artifacts.html#8
   Downloads: downloads.html
 
 pages:

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="2325"
+   height="1961"
+   viewBox="0 0 2325 1961"
+   sodipodi:docname="ADI_profile_resource_relationships2.svg"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.50370786"
+     inkscape:cx="1741.0886"
+     inkscape:cy="632.31096"
+     inkscape:window-width="1792"
+     inkscape:window-height="988"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g1" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g1">
+    <image
+       width="2325"
+       height="1961"
+       preserveAspectRatio="none"
+       href="ADI_profile_resource_relationships.png" 
+       id="image1" />
+    <a xlink:href="StructureDefinition-ADI-DocumentReference.html" target="_blank">
+      <path id="DocRef" d="M -19.653248,-11.230427 H 926.5102 V 755.24626 H -19.653248 Z" fill="#ffffff" fill-opacity="0" />
+    </a>
+    <a xlink:href="https://hl7.org/fhir/R4/datatypes.html#Attachment" target="_blank">
+      <path id="Attachment" d="M 63.528889,1357.9299 H 865.58107 v 470.5109 H 63.528889 Z" fill="#ffffff" fill-opacity="0" />
+    </a>
+    <a xlink:href="https://hl7.org/fhir/R4/datatypes.html#base64Binary" target="_blank">
+      <path id="Binary" d="M -13.896944,986.68304 H 923.15414 V 1876.0875 H -13.896944 Z" fill="#ffffff" fill-opacity="0" />
+    </a>
+    <a xlink:href="formal_specification.html#document-digital-signatures" target="_blank">
+      <path id="DigSigDocRef" d="m 1405.5767,129.04306 h 919.1836 V 623.3772 h -919.1836 z" fill="#ffffff" fill-opacity="0" />
+    </a>
+    <a xlink:href="signatures.html" target="_blank">
+      <path id="DigSig" d="m 1399.6208,813.96387 h 927.1247 v 381.17333 h -927.1247 z" fill="#ffffff" fill-opacity="0" />
+    </a>
+  </g>
+</svg>
