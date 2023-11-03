@@ -191,7 +191,9 @@ For the detached signature, the digital signature is saved in a Binary resource 
 The cryptographic digital signature is included in the DocumentReference.content as an attachment. The mimeType for the digital signature is Content.attachment.contentType.application/jws for JSON signature and Content.attachment.contentType.xml-signature” for xml signature.  The details of the cryptographic digital signature **SHALL** be a referenced Binary Resource using `url`. 
 Below is an example of detached digital signature with the cryptographic digital signature referenced using Binary Resource. 
 
-<img src="./digital_signature_reference_example.png" alt="Digital Signature Reference Example" style="float: none; align: middle;"/>
+<p align="center">
+    <img src="./digital_signature_reference_example.png" alt="Digital Signature Reference Example" style="float: none; align: middle;"/>
+</p>
 
 For further information on signatures, the technology basis behind them, and implementation requirements, please see the section on [Signatures](signatures.html).
 
