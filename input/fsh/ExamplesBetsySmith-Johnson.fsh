@@ -145,6 +145,7 @@ Usage: #example
 * extension[adi-versionNumber-extension].valueInteger = 1
 * extension[adi-jurisdiction-extension].valueCodeableConcept = urn:iso:std:iso:3166:-2#US-MI
 * extension[adi-dataEnterer-extension].valueReference = Reference(Example-Smith-Johnson-Patient1)
+* extension[adi-effective-date-extension].valuePeriod.start = "2021-03-29T14:25:34-05:00"
 // witness Sally Bobbins
 
 * identifier.system = "urn:oid:2.16.840.1.113883.4.823.1.7124"

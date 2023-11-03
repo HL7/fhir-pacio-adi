@@ -131,11 +131,11 @@ Expression: "entry.exists().not() or (entry.where($this.resolve() is Consent).ex
 Severity:   #error
 
 Invariant: HCA-section-cardinality
-Description: "If the PACP Composition document type is equal to Power of attorney (64298-3), Patient Personal advance care plan (81334-5), or Power of attorney and Living will (92664-2), then the PACP Composition requires one and only one section slice with code = 81335-2"
-Expression: "((type != 64298-3) and (type != 81334-5) and (type != 92664-2)) or section[healthcare_agent].exists()"
+Description: "If the PACP Composition document type is equal to Power of attorney (64298-3), Patient Personal advance care plan (81334-5), or Power of attorney and Living will (92664-2), then the PACP Composition requires one and only one healthcare agent section slice with code = 81335-2 (Patient Healthcare agent)"
+Expression: "(type.coding.where(code = '64298-3').exists().not() and type.coding.where(code = '81334-5').exists().not() and type.coding.where(code = '92664-2').exists().not()) or section.where(code.coding.where(code = '81335-2')).count() = 1"
 Severity:   #error
 
 Invariant: HCA-section-emptyReason-required
 Description: "section[healthcare_agent].emptyReason is required if section[healthcare_agent] is present and there are no entries."
-Expression: "section[healthcare_agent].exists().not() or section[healthcare_agent].entry.exists() or section[healthcare_agent].emptyReason.exists()"
+Expression: "section.where(code.coding.where(code = '81335-2')).exists().not() or section.where(code.coding.where(code = '81335-2')).entry.count() > 0 or section.where(code.coding.where(code = '81335-2')).emptyReason.exists()"
 Severity:   #error

@@ -174,8 +174,8 @@ Context: CarePlan
 
 
 Invariant:  notary-information-requires-notary-role
-Description: "If Notary information (seal or commission expiration date exists, then role must be notary"
-Expression: "(extension.where(url = 'NotarySealId').valuerIdentifier.exists() or extension.where(url = 'NotaryCommissionExpirationDate').valueDate.exists()) implies  extension.where(url = 'AttesterRole').valueCodeableConcept.where(coding.code='81372-5').exists()"
+Description: "If Notary information (seal or commission expiration date) exists, then role must be notary"
+Expression: "(extension.where(url = 'NotarySealId').valueIdentifier.exists() or extension.where(url = 'NotaryCommissionExpirationDate').valueDate.exists()) implies extension.where(url = 'AttesterRole').valueCodeableConcept.where(coding.code='81372-5').exists()"
 //Expression: "category.coding.where(code.memberOf('http://hl7.org/fhir/us/pacio-adi/ValueSet/ADIInterventionPreferencesOrdinalVS')).exists() implies description.coding.where(code.memberOf('http://terminology.hl7.org/ValueSet/v2-0136')).exists()"
 //Expression: "category.coding.code.memberOf('http://hl7.org/fhir/us/pacio-adi/ValueSet/ADIInterventionPreferencesOrdinalVS').exists()"
 Severity:   #error

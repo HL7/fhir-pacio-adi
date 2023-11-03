@@ -29,6 +29,10 @@ fhirVersion: 4.0.1
 dependencies:
   hl7.fhir.us.core: 4.0.0 
   hl7.fhir.uv.extensions: current
+  us.nlm.vsac:
+    uri: 'http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac'
+    version: 0.13.0
+    id: vsac
 parameters:
   show-inherited-invariants: false
   apply-jurisdiction: true
@@ -78,7 +82,7 @@ pages:
   signatures.md:
     title: Signatures
   search_parameters.md:
-    title: Search Parameters Required By This Implementation Guide
+    title: Recommended Search Parameters
   key_terms_and_acronyms.md:
     title: Key Terms and Acronyms
   artifacts.html:
