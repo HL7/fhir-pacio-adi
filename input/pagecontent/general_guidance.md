@@ -82,7 +82,7 @@ This implementation guide is designed to allow a range of digitization levels, f
 The DocumentReference is the resource that is used for "indexing" of documents, similar to the way a library uses a card catalog to index books based on different search criteria, for example, by title, author, date, or classification code.  The DocumentReference can be used in the same way for searching and finding documents with specific attributes such as type of document, subject (e.g., patient), author, dates.  These attributes are provided in the metadata of the DocumentReference so that the actual documents do not have to be accessed for most common searches.  A complete list of search capabilities on DocumentReference can be found in the [Search Parameters](search_parameters.html#adi-documentreference-documentreference) section.
 
 <p align="center">
-    <img src="./ADI_profile_resource_relationships.png" alt="Structure and Resource Relationships"  style="width: 70%; float: none; vertical-align: middle;"/>
+    <object data="ADI_profile_resource_relationships2.svg" type="image/svg+xml" width="70%"></object>
 </p>
 
 Digital signatures are defined as optional in this guide. If supported, the digital signature will be a captured in a `Binary` resource that is referenced by an additional `DocumentReference` resource.
