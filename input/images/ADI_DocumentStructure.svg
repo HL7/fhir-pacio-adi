@@ -10,10 +10,13 @@
 		<path d="m 0,1394 h 481.15 v 309.78 h -481.15 z" fill="#ffffff" fill-opacity="0" />
 	</a>
 	<!-- GPPs for Certain Conditions -->
-    <a xlink:href="StructureDefinition-ADI-PreferenceCarePlan.html" target="_blank">
-		<path d="m 487.74,435.02 h 461.38 v 982.08 h -461.38 z" fill="#ffffff" fill-opacity="0" />
- 	</a>
-   <a xlink:href="StructureDefinition-ADI-PersonalGoal.html" target="_blank">
+	<a xlink:href="StructureDefinition-ADI-PreferenceCarePlan.html" target="_blank">
+     	<rect width="457.13" height="565.73" x="487.43" y="431.87" fill="#ffffff" fill-opacity="0" />
+	</a>
+	<a xlink:href="StructureDefinition-ADI-PersonalInterventionPreference.html" target="_blank">
+  		<rect width="459.65" height="414.19" x="484.91" y="1002.65" fill="#ffffff" fill-opacity="0" />
+	</a>
+    <a xlink:href="StructureDefinition-ADI-PersonalGoal.html" target="_blank">
 		<path d="m 487.74,1427 h 461.38 v 121.94 h -461.38 z" fill="#ffffff" fill-opacity="0" />
 	</a>
     <a xlink:href="StructureDefinition-ADI-PersonalPrioritiesOrganizer.html" target="_blank">
@@ -57,10 +60,10 @@
 		<path d="m 2372.9,1291.4 h 465.87 v 122.6 h -465.87 z" fill="#ffffff" fill-opacity="0" />
 	</a>
 	<!-- Administrative Information -->
-    <a xlink:href="StructureDefinition-ADI-Provenance.html" target="_blank">
+    <a xlink:href="StructureDefinition-ADI-DocumentationObservation.html" target="_blank">
 		<path d="m 2841.5,441.35 h 463.15 v 577.57 h -463.15 z" fill="#ffffff" fill-opacity="0" />
 	</a>
-    <a xlink:href="StructureDefinition-ADI-Witness.html" target="_blank">
+    <a xlink:href="StructureDefinition-ADI-DocumentationObservation.html" target="_blank">
 		<path d="m 2844.3,1018.9 h 463.15 v 217.95 h -463.15 z" fill="#ffffff" fill-opacity="0" />
 	</a>
 	<!-- Section Clauses-->
