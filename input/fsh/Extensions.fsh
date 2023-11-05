@@ -103,8 +103,7 @@ Context: RelatedPerson
 * extension[AttesterRole] ^short = "Attester Role"
 * extension[AttesterRole].value[x] 1..1 MS
 * extension[AttesterRole].value[x] only CodeableConcept
-//* extension[AttesterRole].system = $LOINC
-//* extension[AttesterRole].code = $LOINC#81372-5 "Notary"
+* extension[AttesterRole].valueCodeableConcept from ADIAttesterRoleTypeVS (extensible)
 
 * extension[AttestationStatement] ^short = "Attestation Statement"
 * extension[AttestationStatement].value[x] 1..1 MS
@@ -175,7 +174,14 @@ Context: CarePlan
 
 Invariant:  notary-information-requires-notary-role
 Description: "If Notary information (seal or commission expiration date) exists, then role must be notary"
-Expression: "(extension.where(url = 'NotarySealId').valueIdentifier.exists() or extension.where(url = 'NotaryCommissionExpirationDate').valueDate.exists()) implies extension.where(url = 'AttesterRole').valueCodeableConcept.where(coding.code='81372-5').exists()"
+Expression: 
+	"extension.where(url = 'NotarySealId').value.exists() or 
+	extension.where(url = 'NotaryCommissionExpirationDate').value.exists() 
+	implies extension.where(url = 'AttesterRole').value.coding.exists(code='81372-5')"
+
+// mlt_20231105: line below commented out for troubleshooting Invariant.
+// Expression: "(extension.where(url = 'NotarySealId').valueIdentifier.exists() or extension.where(url = 'NotaryCommissionExpirationDate').valueDate.exists()) implies extension.where(url = 'AttesterRole').valueCodeableConcept.where(coding.code='81372-5').exists()"
+
 //Expression: "category.coding.where(code.memberOf('http://hl7.org/fhir/us/pacio-adi/ValueSet/ADIInterventionPreferencesOrdinalVS')).exists() implies description.coding.where(code.memberOf('http://terminology.hl7.org/ValueSet/v2-0136')).exists()"
 //Expression: "category.coding.code.memberOf('http://hl7.org/fhir/us/pacio-adi/ValueSet/ADIInterventionPreferencesOrdinalVS').exists()"
 Severity:   #error
