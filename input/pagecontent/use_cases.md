@@ -33,7 +33,7 @@ In Use Case 1, the person that wants to create their advance directive informati
 ##### Use Case 1 Process Steps
 
 <p>
-In Use Case 1, the process is started by a person seeking to create advance directive information in a digital form. The precondition for the process includes the system is able to capture and make the ADI available in standard-based digital format. The person creates ADI in the creator system, or optionally in a different system. ADI is then stored and indexed by a custodian system responsible for information exchange. Finally, the ADI is made available in digital form within a Custodian System that can share the documents or information as a FHIR Client and/or support query as a FHIR Server.
+In Use Case 1, the process is started by a person seeking to create advance directive information in a digital form. The precondition for the process includes the system is able to capture and make the advance directive information available in standard-based digital format. The person creates advance directive information in the creator system, or optionally in a different system. Advance directive information is then stored and indexed by a custodian system responsible for information exchange. Finally, the advance directive information is made available in digital form within a Custodian System that can share the documents or information as a FHIR Client and/or support query as a FHIR Server.
 </p>
 
 {% include examplebutton_default.html example="use_case_1_sequence.md" b_title = "Click Here To See Use Case 1 Sequence Diagram" %}
@@ -42,7 +42,7 @@ In Use Case 1, the process is started by a person seeking to create advance dire
 
 ##### Use Case 2 Description
 
-In Use Case 2, the Content Creator system makes the person-authored ADI available via a Content Receiver system using a FHIR API. The Content Receiver system may be an end system or may be another Content Custodian system.
+In Use Case 2, the Content Creator system makes the person-authored advance directive information available via a Content Receiver system using a FHIR API. The Content Receiver system may be an end system or may be another Content Custodian system.
 
 ##### Use Case 2 Processes Steps
 
@@ -70,9 +70,9 @@ Use-case 3 aims to enable provider access to advance directive information. It i
 
 The Use Case 3 process describes message interactions between a Content Requester system, such as SMART on FHIR application, and a backend server. Note that while backend servers are supported by this IG, more specification requirement details related to backend server guidance will be coming in STU2.
 
-This process is started when a care team member of an organization wants a person’s advance directive information for treatment planning and decision-making. The Content Requester system must contact a Content Custodian system that offers a FHIR API for receiving requests for advance directive information. The care team member or human actor requesting the ADI must be authorized to access the person’s ADI on the Content Custodian system. The Content Custodian system may be accessed via a SMART Health Card or record endpoint in their digital insurance card.
+This process is started when a care team member of an organization wants a person’s advance directive information for treatment planning and decision-making. The Content Requester system must contact a Content Custodian system that offers a FHIR API for receiving requests for advance directive information. The care team member or human actor requesting the advance directive information must be authorized to access the person’s advance directive information on the Content Custodian system. The Content Custodian system may be accessed via a SMART Health Card or record endpoint in their digital insurance card.
 
-The Content Requester system SHOULD use the FHIR operation [$match](https://hl7.org/fhir/r4/patient-operation-match.html) for system-to-system patient querying, preferably with an enterprise master patient index (EMPI) to ensure a high threshold match and so that the right individual's ADI is selected. An example of using the $match operation is shown [here](https://hl7.org/fhir/R4/patient-operation-match.html#examples). The Content Custodian server returns all matched Patient resources to the Content Requester system. If more than one Patient resource is returned, the Content Requester will confirm which is the correct patient. The Content Requester will then send a `GET DocumentReference query` using patient FHIR ID and any additional search parameters as supported and needed. The Content Custodian returns all matched `DocumentReference` resources to the Content Requester. If more than one DocumentReference is returned, the Content Requester system will confirm which `DocumentReference`(s) are wanted. Finally, the Content Requester system will retrieve the wanted documents using a GET operation on the URL included in the `DocumentReference` resource and decode the document content if necessary.
+The Content Requester system SHOULD use the FHIR operation [$match](https://hl7.org/fhir/r4/patient-operation-match.html) for system-to-system patient querying, preferably with an enterprise master patient index (EMPI) to ensure a high threshold match and so that the right individual's advance directive information is selected. An example of using the $match operation is shown [here](https://hl7.org/fhir/R4/patient-operation-match.html#examples). The Content Custodian server returns all matched Patient resources to the Content Requester system. If more than one Patient resource is returned, the Content Requester will confirm which is the correct patient. The Content Requester system will then send a `GET DocumentReference query` using patient FHIR ID and any additional search parameters as supported and needed. The Content Custodian returns all matched `DocumentReference` resources to the Content Requester system. If more than one DocumentReference is returned, the Content Requester system will confirm which `DocumentReference`(s) are wanted. Finally, the Content Requester system will retrieve the wanted documents using a GET operation on the URL included in the `DocumentReference` resource and decode the document content if necessary.
 
 <blockquote class="stu-note">
     <p>
@@ -91,7 +91,7 @@ In Use Case 4, the process is started by a person wanting to update previously c
 
 In Use Case 4, the process is started by a person wanting to update previously created advance directive information. The precondition for the process is that the Content Creator and Content Custodian systems are able to associate a new version of the ADI information and/or document(s) as active and possess the ability to mark prior ADI information and/or document(s) version as inactive.
 
-* First, the person creates an updated version of their ADI which is stored in a Content Custodian system responsible for information exchange, using the same setID identifier as the replaced document and with status = “current”, relatesTo.code = “replaces”, and relatesTo.target –> prior version.
+* First, the person creates an updated version of their advance directive information which is stored in a Content Custodian system responsible for information exchange, using the same setID identifier as the replaced document and with status = “current”, relatesTo.code = “replaces”, and relatesTo.target –> prior version.
 * Then, the prior version of AD information documentReference.status is changed to superseded.
 * Finally, the person consents to share updated AD information. At the end of the process, the updated version is now the current active version and prior version is inactive and a relationship to the prior version of AD Info is maintained through DocumentReference.relatesTo.code (replaces).
 
@@ -105,7 +105,7 @@ In Use Case 4, the process is started by a person wanting to update previously c
 
 In Use Case 5, a Content Verifier has advance directive information which it previously received or retrieved.
 
-* Step 1 is to retrieval of the known DocumentReference. The Content Verifier system already has a version of the document and therefore knows the setId identifier for the document. The Content Verifier seeks to confirm the information they have is the person’s current advance directive information. To verify that the document they have is the current version (and get the current version if it is not), the Content Verifier queries the Content Custodian system to retrieve the current version of the document already in their possession. If the DocumentReference has a status = current, the latest document has been verified as retrieved and no further action is needed.
+* Step 1 is the retrieval of the known DocumentReference. The Content Verifier system already has a version of the document and therefore knows the setId identifier for the document. The Content Verifier seeks to confirm the information they have is the person’s current advance directive information. To verify that the document they have is the current version (and get the current version if it is not), the Content Verifier queries the Content Custodian system to retrieve the current version of the document already in their possession. If the DocumentReference has a status = current, the latest document has been verified as retrieved and no further action is needed.
 
 {% include examplebutton_default.html example="use_case_5_actor_transition_1.md" b_title = "Click Here To See Use Case 5 Actor Transaction Diagram Step 1" %}
 
@@ -115,7 +115,7 @@ In Use Case 5, a Content Verifier has advance directive information which it pre
 
 #### Use Case 5 Processes Steps
 
-In Use Case 5, the process is started by a Content Verifier system that would like to confirm the current version of ADI is already stored, or not. The precondition for the process is the Content Verifier system has a version of ADI from an earlier time.
+In Use Case 5, the process is started by a Content Verifier system that would like to confirm the current version of advance directive information is already stored, or not. The precondition for the process is the Content Verifier system has a version of advance directive information from an earlier time.
 
 * First, the Content Verifier system performs a GET DocumentReference with known setID to content custodian. The Content Custodian system returns the `DocumentReference`.
 * If the `DocumentReference` returned contains a `status` of `superseded` then the document has been replaced and the Content Verifier system will perform a second query for a `DocumentReference` resource based on the `relatesto.code` referenced by the superseded `DocumentReference` resource. 
