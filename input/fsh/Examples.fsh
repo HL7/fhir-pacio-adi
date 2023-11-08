@@ -1001,6 +1001,7 @@ Usage: #example
 * name.text = "Jim Chalmers"
 * telecom.system = #phone
 * telecom.value = "410-555-1212"
+* extension[adi-notaryInformation-extension].extension[AttesterRole].valueCodeableConcept = $LOINC#81369-1 "First witness"
 
 // ADI Witness example
 Instance: Example-McBee-ADIWitness
