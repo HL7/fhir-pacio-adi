@@ -136,7 +136,7 @@ Extension: ClauseExtension
 Id: adi-clause-extension
 Title: "Clause"
 Description: "A clause or set of clauses relevant to the resource or element being extended"
-Context: Composition, Consent
+Context: BackboneElement, Bundle, Composition, Consent
 * extension 1..*
 * extension contains
 	Title 0..1 and

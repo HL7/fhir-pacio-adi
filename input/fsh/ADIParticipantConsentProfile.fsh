@@ -92,5 +92,5 @@ Description: "This profile is used to represent a consent for an advance directi
 
 Invariant:  HCA-authority-scope-provisionType
 Description: "Scope indicates powers granted and provision type is permit or scope indicates limitations placed and provision type is deny or scope indicates no powers/limitations and no provisions type and no action exist"
-Expression: "(scope.where(coding.code = '75786-4').exists() and provision.type = 'permit') or (scope.where(coding.code = '81346-9').exists() and provision.type = 'deny') or (scope.where(coding.code = '81335-2').exists() and provision.type.exists().not() and provision.action.exists().not() and provision.provision.exists().not())"
+Expression: "(scope.coding.where(code = '75786-4').exists() and provision.type = 'permit') or (scope.coding.where(code = '81346-9').exists() and provision.type = 'deny') or (scope.coding.where(code = '81335-2').exists() and provision.type.exists().not() and provision.action.exists().not() and provision.provision.exists().not())"
 Severity:   #error
