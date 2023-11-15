@@ -207,6 +207,7 @@ Usage: #example
 
 </div>"
 
+* section[healthcare_agent].entry[+] = Reference(Example-Smith-Johnson-Notary1)
 * section[healthcare_agent].entry[+] = Reference(Example-Smith-Johnson-HealthcareAgent1)
 * section[healthcare_agent].entry[+] = Reference(Example-Smith-Johnson-HealthcareAgent2)
 * section[healthcare_agent].entry[+] = Reference(Example-Smith-Johnson-HealthcareAgentConsent)

@@ -37,7 +37,8 @@ parameters:
   show-inherited-invariants: false
   apply-jurisdiction: true
   apply-publisher: true
-  path-expansion-params: '../../exp-params.json' 
+  path-expansion-params: '../../exp-params.json'
+  path-liquid: liquid
 copyrightYear: 2021+
 releaseLabel: STU 1 Ballot
 jurisdiction: urn:iso:std:iso:3166#US
