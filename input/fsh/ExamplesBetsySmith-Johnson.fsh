@@ -31,7 +31,8 @@ Usage: #example
 * entry[=].resource = Example-Smith-Johnson-PreferenceCarePlan2
 * entry[+].fullUrl = "http://www.example.org/fhir/CarePlan/Example-Smith-Johnson-PreferenceCarePlan3"
 * entry[=].resource = Example-Smith-Johnson-PreferenceCarePlan3
-
+* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference1"
+* entry[=].resource = Example-Smith-Johnson-CareExperiencePreference1
 * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference2"
 * entry[=].resource = Example-Smith-Johnson-CareExperiencePreference2
 * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference3"
@@ -207,6 +208,7 @@ Usage: #example
 
 </div>"
 
+* section[healthcare_agent].entry[+] = Reference(Example-Smith-Johnson-Notary1)
 * section[healthcare_agent].entry[+] = Reference(Example-Smith-Johnson-HealthcareAgent1)
 * section[healthcare_agent].entry[+] = Reference(Example-Smith-Johnson-HealthcareAgent2)
 * section[healthcare_agent].entry[+] = Reference(Example-Smith-Johnson-HealthcareAgentConsent)

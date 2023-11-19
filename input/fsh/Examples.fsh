@@ -492,7 +492,7 @@ Usage: #example
 * category[advance_care_planning] = $SNOMEDCT#736366004 "Advance care plan"
 * title = "Care Plan for Unconscious, vegetative state, coma"
 
-* subject = Reference(Example-Smith-Johnson-Patient1)
+* subject = Reference(Example-McBee-Patient1)
 
 * addresses[+].display = "Unconscious, in a coma, or in a persistent vegetative state with little or no chance of recovery"
 * addresses[+].display = "Persistent vegetative state (SNOMED CT 24473007)"
