@@ -18,3 +18,6 @@ None of the codings provided are in the value set 'Observation Category Codes' (
 # The USCoreProvenance profile, from which the ADIProvenance profile is based, has the following warnings
 provenance-1: The left side is inherently a collection, and so the expression '%resource.agent.who.resolve() is Practitioner' may fail or return false if there is more than one item in the content being evaluated
 provenance-1: The left side is inherently a collection, and so the expression '%resource.agent.who.resolve() is Device' may fail or return false if there is more than one item in the content being evaluated
+
+# This extension could be potentially included in the extension registry that can be used anywhere with any resource that requires a precondition
+Review the extension type for adi-enclosedPrecondition-extension: extensions should not have a context of Element unless it's really intended that they can be used anywhere
