@@ -14,3 +14,7 @@ None of the codings provided are in the value set 'Observation Category Codes' (
 
 # US Core 4.0.0, which this IG is based on, does not have a profile for RelatedPerson
 %US FHIR Usage rules require that all profiles on RelatedPerson derive from the core US profile.%
+
+# The USCoreProvenance profile, from which the ADIProvenance profile is based, has the following warnings
+provenance-1: The left side is inherently a collection, and so the expression '%resource.agent.who.resolve() is Practitioner' may fail or return false if there is more than one item in the content being evaluated
+provenance-1: The left side is inherently a collection, and so the expression '%resource.agent.who.resolve() is Device' may fail or return false if there is more than one item in the content being evaluated
