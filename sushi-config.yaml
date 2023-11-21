@@ -12,10 +12,10 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.us.pacio-adi
 canonical: http://hl7.org/fhir/us/pacio-adi
-version: 0.1.1
+version: 1.0.0
 name: PACIOAdvanceDirectiveInteroperability
 title: PACIO Advance Directive Interoperability Implementation Guide
-status: draft
+status: active
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg  
     valueCode: pe
@@ -40,7 +40,7 @@ parameters:
   path-expansion-params: '../../exp-params.json'
   path-liquid: liquid
 copyrightYear: 2021+
-releaseLabel: STU 1 Ballot
+releaseLabel: STU 1
 jurisdiction: urn:iso:std:iso:3166#US
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
