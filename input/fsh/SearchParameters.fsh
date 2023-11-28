@@ -531,7 +531,7 @@ Usage: #definition
 * url = "http://hl7.org/fhir/us/pacio-adi/SearchParameter/DocumentReference-relationship"
 * base[0] = #DocumentReference
 
-* type = #composite
+* type = #reference
 
 * expression = "DocumentReference.relatesTo"
 
