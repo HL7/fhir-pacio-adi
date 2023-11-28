@@ -19,9 +19,6 @@ None of the codings provided are in the value set 'Observation Category Codes' (
 provenance-1: The left side is inherently a collection, and so the expression '%resource.agent.who.resolve() is Practitioner' may fail or return false if there is more than one item in the content being evaluated
 provenance-1: The left side is inherently a collection, and so the expression '%resource.agent.who.resolve() is Device' may fail or return false if there is more than one item in the content being evaluated
 
-# This extension could be potentially included in the extension registry that can be used anywhere with any resource that requires a precondition
-Review the extension type for adi-enclosedPrecondition-extension: extensions should not have a context of Element unless it's really intended that they can be used anywhere
-
 # Advance directive consents need to reference a jurisdiction for applicable policies.  Ultimately, the jurisdiction that controls the policy is external to the bundle.
 %Can't find 'https://www.michigan.gov/' in the bundle%
 %Can't find 'http://www.legislature.mi.gov/(S(tpnclc1ofteerx2x2dppcmdz))/mileg.aspx?page=GetObject&objectname=mcl-386-1998-V-5' in the bundle%
