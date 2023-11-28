@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/pacio-adi/2022Jan" ciUrl="http://build.fhir.org/ig/HL7/fhir-pacio-adi" defaultVersion="0.1.0" defaultWorkgroup="pe" gitUrl="https://github.com/HL7/pacio-adi" url="http://hl7.org/fhir/us/pacio-adi">
 <version code="current" url="http://build.fhir.org/ig/HL7/fhir-pacio-adi"/>
+<version code="1.0.0" url="http://hl7.org/fhir/us/pacio-adi/STU1"/>
 <version code="0.1.0" url="http://hl7.org/fhir/us/pacio-adi/2022Jan"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
@@ -81,7 +82,6 @@
 <artifact id="Observation/Example-McBee-OrganDonationObservation1" key="Observation-Example-McBee-OrganDonationObservation1" name="Example-McBee-OrganDonationObservation1"/>
 <artifact id="Organization/Example-McBee-OrganizationAssembler1" key="Organization-Example-McBee-OrganizationAssembler1" name="Example-McBee-OrganizationAssembler1"/>
 <artifact id="Organization/Example-McBee-OrganizationCustodian1" key="Organization-Example-McBee-OrganizationCustodian1" name="Example-McBee-OrganizationCustodian1"/>
-<artifact id="Composition/Example-McBee-PACPComposition1" key="Composition-Example-McBee-PACPComposition1" name="Example-McBee-PACPComposition1"/>
 <artifact id="Provenance/Example-McBee-PACPProvenance1" key="Provenance-Example-McBee-PACPProvenance1" name="Example-McBee-PACPProvenance1"/>
 <artifact id="Patient/Example-McBee-Patient1" key="Patient-Example-McBee-Patient1" name="Example-McBee-Patient1"/>
 <artifact id="Goal/Example-McBee-PersonalGoal1" key="Goal-Example-McBee-PersonalGoal1" name="Example-McBee-PersonalGoal1"/>
@@ -123,7 +123,6 @@
 <artifact id="Observation/Example-Smith-Johnson-OrganDonationObservation1" key="Observation-Example-Smith-Johnson-OrganDonationObservation1" name="Example-Smith-Johnson-OrganDonationObservation1"/>
 <artifact id="Organization/Example-Smith-Johnson-OrganizationAssembler1" key="Organization-Example-Smith-Johnson-OrganizationAssembler1" name="Example-Smith-Johnson-OrganizationAssembler1"/>
 <artifact id="Organization/Example-Smith-Johnson-OrganizationCustodian1" key="Organization-Example-Smith-Johnson-OrganizationCustodian1" name="Example-Smith-Johnson-OrganizationCustodian1"/>
-<artifact id="Composition/Example-Smith-Johnson-PACPComposition1" key="Composition-Example-Smith-Johnson-PACPComposition1" name="Example-Smith-Johnson-PACPComposition1"/>
 <artifact id="Provenance/Example-Smith-Johnson-PACPProvenance1" key="Provenance-Example-Smith-Johnson-PACPProvenance1" name="Example-Smith-Johnson-PACPProvenance1"/>
 <artifact id="Patient/Example-Smith-Johnson-Patient1" key="Patient-Example-Smith-Johnson-Patient1" name="Example-Smith-Johnson-Patient1"/>
 <artifact id="Goal/Example-Smith-Johnson-PersonalGoal1" key="Goal-Example-Smith-Johnson-PersonalGoal1" name="Example-Smith-Johnson-PersonalGoal1"/>

@@ -1,0 +1,12 @@
+{
+    "package-id" : "hl7.fhir.us.pacio-adi",
+    "version" : "1.0.0",
+    "path" : "http://hl7.org/fhir/us/pacio-adi/STU1",
+    "status" : "trial-use",
+    "sequence" : "STU 1",
+    "milestone": true,
+    "desc" : "STU1 Release",
+    "descmd" : "STU1 Release",
+    "changes" : "change_log.html",
+    "mode" : "milestone"
+  }
