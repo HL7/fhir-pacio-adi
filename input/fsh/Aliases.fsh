@@ -27,6 +27,7 @@ Alias: $HL7YesNoCS = http://terminology.hl7.org/CodeSystem/v2-0532
 Alias: $HL7CompositionAttestation = http://hl7.org/fhir/ValueSet/composition-attestation-mode
 Alias: $HL7ConsentScope = http://terminology.hl7.org/CodeSystem/consentscope
 Alias: $HL7ConsentCategoryCodes = http://terminology.hl7.org/CodeSystem/consentcategorycodes
+Alias: $HL7ConsentCategoryVS = http://hl7.org/fhir/ValueSet/consent-category
 Alias: $HL7JurisdictionCodes = http://hl7.org/fhir/ValueSet/jurisdiction
 
 Alias: $LOINC = http://loinc.org
