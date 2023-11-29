@@ -137,5 +137,6 @@ Severity:   #error
 
 Invariant: HCA-section-emptyReason-required
 Description: "section[healthcare_agent].emptyReason is required if section[healthcare_agent] is present and there are no entries."
-Expression: "section.where(code.coding.where(code = '81335-2')).exists().not() or section.where(code.coding.where(code = '81335-2')).entry.count() > 0 or section.where(code.coding.where(code = '81335-2')).emptyReason.exists()"
+// Expression: "section.where(code.coding.where(code = '81335-2')).exists().not() or section.where(code.coding.where(code = '81335-2')).entry.count() > 0 or section.where(code.coding.where(code = '81335-2')).emptyReason.exists()"
+Expression: "section.code.coding.where(code = '81335-2').exists().not() or section.code.coding.where(code = '81335-2').count() > 0 or section.emptyReason.exists()"
 Severity:   #error
