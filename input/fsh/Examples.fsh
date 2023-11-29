@@ -448,10 +448,10 @@ Usage: #example
 
 * status = #active
 * scope = $LOINC#75786-4 "Powers granted to healthcare agent [Reported]"
+* category = $HL7ConsentCategoryCodes#acd "Advance Directive"
+//* category[AdvanceDirective] = $HL7ConsentCategoryCodes#acd "Advance Directive"
 * patient = Reference(Example-McBee-Patient1)
 * dateTime = "2020-08-03"
-
-* category = $HL7ConsentCategoryCodes#acd
 
 * policy.authority = "https://www.michigan.gov/"
 * policy.uri = "http://www.legislature.mi.gov/(S(tpnclc1ofteerx2x2dppcmdz))/mileg.aspx?page=GetObject&objectname=mcl-386-1998-V-5"
