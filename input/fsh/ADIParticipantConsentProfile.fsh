@@ -5,6 +5,9 @@ Title: "ADI Participant Consent"
 Description: "This profile is used to represent a consent for an advance directive participant such as a healthcare agent or advisor and power or limitation granted to such persons."
 
 * obeys HCA-authority-scope-provisionType
+* obeys HCA-consent-category
+* obeys HCA-provision-purpose
+
 * text 1..1 MS
 
 * status MS
@@ -19,15 +22,26 @@ Description: "This profile is used to represent a consent for an advance directi
 	* Write in narrative what our interpretation of the existing code.
 */
 
-* category = http://terminology.hl7.org/CodeSystem/consentcategorycodes#acd
+* category from $HL7ConsentCategoryVS (extensible)
+
+// Attempt at slicing category
+// * category ^slicing.discriminator.type = #pattern
+// * category ^slicing.discriminator.path = "$this"
+// * category ^slicing.rules = #open
+// * category ^slicing.ordered = true
+// * category ^slicing.description = "Description"
+
+// * category contains AdvanceDirective 1..1
+// * category[AdvanceDirective] = $HL7ConsentCategoryCodes#acd "Advance Directive"
+// * category[AdvanceDirective] ^requirements = "Used to identify that this is a consent related to an advance directive."
+
+// * category contains ConsentCategory 0..*
+// * category[ConsentCategory] from $HL7ConsentCategoryVS (extensible)
+// * category[ConsentCategory] ^requirements = "Indicates other categories this consent is related to."
 
 // [TODO] there seems to be an issue with consent scope. The url http://terminology.hl7.org/CodeSystem/consentscope forwards to https://terminology.hl7.org/2.1.0/CodeSystem-consentscope.html
 // But the version we are using is the R4 version http://hl7.org/fhir/codesystem-consent-scope.html#consent-scope-adr
 //* scope = $HL7ConsentScope#adr
-
-//[TODO] What is the proper category. This is not an advance directive category because this is the consent given to the agent to make the decisions, not to clinician, right?
-// mlt20230829: fix for fhir-34506. Consensus to keep this a fixed code and provide narrative guidance that this definition applies to both type 1 and type 2 ADI content types.
-* category = $HL7ConsentCategoryCodes#acd
 
 * patient 1..1 MS
 * patient only Reference($USCorePatient)
@@ -64,7 +78,7 @@ Description: "This profile is used to represent a consent for an advance directi
 
 * provision.action from ADIHCADecisionsVS (extensible)
 * provision.action ^comment = "Actions without a defined code are placed in action.text."
-* provision.purpose = http://terminology.hl7.org/CodeSystem/v3-ActReason#PWATRNY
+* provision.purpose from http://terminology.hl7.org/ValueSet/v3-ActReason (required)
 
 // [TODO] need to add guidance that first provision is the base set of rules, and the nested ones are exceptions to the rules.
 // This may tke 2 forms, either a permit as a base rule with exceptions stating what is type deny, or vice versa.
@@ -93,4 +107,14 @@ Description: "This profile is used to represent a consent for an advance directi
 Invariant:  HCA-authority-scope-provisionType
 Description: "Scope indicates powers granted and provision type is permit or scope indicates limitations placed and provision type is deny or scope indicates no powers/limitations and no provisions type and no action exist"
 Expression: "(scope.coding.where(code = '75786-4').exists() and provision.type = 'permit') or (scope.coding.where(code = '81346-9').exists() and provision.type = 'deny') or (scope.coding.where(code = '81335-2').exists() and provision.type.exists().not() and provision.action.exists().not() and provision.provision.exists().not())"
+Severity:   #error
+
+Invariant: HCA-consent-category
+Description: "Category must have a ConsentCategory of 'acd'"
+Expression: "category.coding.where(code = 'acd').exists()"
+Severity:   #error
+
+Invariant: HCA-provision-purpose
+Description: "Provision purpose must have a purpose of 'PWATRNY'"
+Expression: "provision.purpose.exists().not() or provision.purpose.where(code = 'PWATRNY').exists()"
 Severity:   #error
