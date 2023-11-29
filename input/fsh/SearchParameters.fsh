@@ -519,7 +519,7 @@ Usage: #definition
 * multipleAnd = true
 
 
-
+/*
 Instance: DocumentReference-relationship
 InstanceOf: SearchParameter
 Usage: #definition
@@ -538,7 +538,7 @@ Usage: #definition
 * multipleOr = true
 * multipleAnd = true
 
-
+*/
 
 Instance: DocumentReference-security-label
 InstanceOf: SearchParameter

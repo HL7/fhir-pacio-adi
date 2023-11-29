@@ -63,7 +63,6 @@
 <artifact id="SearchParameter/DocumentReference-related" key="SearchParameter-DocumentReference-related" name="DocumentReference-related"/>
 <artifact id="SearchParameter/DocumentReference-relatesto" key="SearchParameter-DocumentReference-relatesto" name="DocumentReference-relatesto"/>
 <artifact id="SearchParameter/DocumentReference-relation" key="SearchParameter-DocumentReference-relation" name="DocumentReference-relation"/>
-<artifact id="SearchParameter/DocumentReference-relationship" key="SearchParameter-DocumentReference-relationship" name="DocumentReference-relationship"/>
 <artifact id="SearchParameter/DocumentReference-security-label" key="SearchParameter-DocumentReference-security-label" name="DocumentReference-security-label"/>
 <artifact id="SearchParameter/DocumentReference-setting" key="SearchParameter-DocumentReference-setting" name="DocumentReference-setting"/>
 <artifact id="SearchParameter/DocumentReference-status" key="SearchParameter-DocumentReference-status" name="DocumentReference-status"/>
