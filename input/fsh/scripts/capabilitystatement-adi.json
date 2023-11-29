@@ -611,7 +611,7 @@
                             ],
                             "definition": "http://hl7.org/fhir/SearchParameter/DocumentReference-relationship",
                             "name": "relationship",
-                            "type": "composite"
+                            "type": "reference"
                         },
                         {
                             "extension": [

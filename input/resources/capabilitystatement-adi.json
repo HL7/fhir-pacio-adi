@@ -609,17 +609,6 @@
                                     "valueCode": "MAY"
                                 }
                             ],
-                            "definition": "http://hl7.org/fhir/SearchParameter/DocumentReference-relationship",
-                            "name": "relationship",
-                            "type": "composite"
-                        },
-                        {
-                            "extension": [
-                                {
-                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                                    "valueCode": "MAY"
-                                }
-                            ],
                             "definition": "http://hl7.org/fhir/SearchParameter/DocumentReference-security-label",
                             "name": "security-label",
                             "type": "token"

@@ -6,7 +6,7 @@
     </tr>
     <tr>
         <td>Advance directives</td>
-        <td>A general term that encompasses all of the following: Living will (what you want), medical power of attorney (who speaks), combined living will and medical power of attorney. These documents have several names depending on where you are. “Advance directives” is the general term that people use to refer to all of these documents as a concept.</td>
+        <td>An individual's advance medical goals, preferences, and priorities for care in the event the individual is unable to communicate this information to medical teams for themselves due to a health crisis. An advance directive may encompass all of the following: living will, medical power of attorney, combined living will and medical power of attorney.</td>
     </tr>
     <tr>
         <td>ADI</td>

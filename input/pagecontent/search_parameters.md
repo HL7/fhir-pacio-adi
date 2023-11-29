@@ -246,13 +246,6 @@
 			<td><code class="highlighter-rouge">GET [base]/DocumentReference?relation=[system]|[code]</code></td>
 		</tr>
 		<tr>
-			<td><a href="SearchParameter-DocumentReference-relationship.html">relationship</a></td>
-			<td><a href="{{site.data.fhir.path}}search.html#composite">composite</a></td>
-			<td><strong>MAY</strong></td>
-			<td>Search by relationship code and value (combination of relation and relatesTo)</td>
-			<td><code class="highlighter-rouge">GET [base]/DocumentReference?relationship=[code]&[value]</code></td>
-		</tr>
-		<tr>
 			<td><a href="SearchParameter-DocumentReference-security-label.html">security-label</a></td>
 			<td><a href="{{site.data.fhir.path}}search.html#token">token</a></td>
 			<td><strong>MAY</strong></td>

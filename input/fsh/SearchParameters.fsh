@@ -519,7 +519,7 @@ Usage: #definition
 * multipleAnd = true
 
 
-
+/*
 Instance: DocumentReference-relationship
 InstanceOf: SearchParameter
 Usage: #definition
@@ -531,14 +531,14 @@ Usage: #definition
 * url = "http://hl7.org/fhir/us/pacio-adi/SearchParameter/DocumentReference-relationship"
 * base[0] = #DocumentReference
 
-* type = #composite
+* type = #reference
 
 * expression = "DocumentReference.relatesTo"
 
 * multipleOr = true
 * multipleAnd = true
 
-
+*/
 
 Instance: DocumentReference-security-label
 InstanceOf: SearchParameter
