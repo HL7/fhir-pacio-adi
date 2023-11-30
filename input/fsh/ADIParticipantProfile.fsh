@@ -4,12 +4,13 @@ Id: ADI-Participant
 Title: "ADI Participant"
 Description: "This profile represents a person participating in a person's advance directives in some capacity such as healthcare agent or healthcare agent advisor."
 
+* active MS
 * text 1..1 // CONF:4445-33393
 
 * patient 1..1 MS
 * patient only Reference($USCorePatient)
 
-* relationship 0..* 
+* relationship 0..* MS
 * relationship from $HL7RelatedPersonRelationshipType (extensible)
 
 
@@ -24,8 +25,9 @@ Description: "This profile represents a person participating in a person's advan
 * relationship ^slicing.description = "Slice based on $this pattern"
 
 
-* name 1..1 // CONF:4445-33420
-* telecom 1..* // CONF:4445-33417
+* name 1..1 MS // CONF:4445-33420
+* telecom 1..* MS // CONF:4445-33417
+* address MS
 
 
 // HOW About references to external documents????

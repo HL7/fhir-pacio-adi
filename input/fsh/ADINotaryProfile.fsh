@@ -4,12 +4,13 @@ Id: ADI-Notary
 Title: "ADI Notary"
 Description: "This profile represents a person participating as a notary for a person's advance directives."
 
+* active MS
 * text 1..1 // CONF:4445-33393
 
 * patient 1..1 MS
 * patient only Reference($USCorePatient)
 
-* relationship 1..* 
+* relationship 1..* MS
 * relationship from $HL7RelatedPersonRelationshipType (extensible)
 
 
@@ -27,8 +28,9 @@ Description: "This profile represents a person participating as a notary for a p
 * relationship[notary] = v3-ParticipationType#NOTARY
 * relationship[notary] ^requirements = "Indicates the relationship is as a notary for the advance directive."
 
-* name 1..1 // CONF:4445-33420
-* telecom 1..* // CONF:4445-33417
+* name 1..1 MS // CONF:4445-33420
+* telecom 1..* MS // CONF:4445-33417
+* address MS
 
 * extension contains
     adi-notaryInformation-extension named NotaryInformationExtension 0..1
