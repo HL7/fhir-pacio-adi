@@ -4,12 +4,13 @@ Id: ADI-Witness
 Title: "ADI Witness"
 Description: "This profile represents a person participating as a witness for a person's advance directives."
 
+* active MS
 * text 1..1 // CONF:4445-33393
 
 * patient 1..1 MS
 * patient only Reference($USCorePatient)
 
-* relationship 1..* 
+* relationship 1..* MS
 * relationship from $HL7RelatedPersonRelationshipType (extensible)
 
 
@@ -27,8 +28,9 @@ Description: "This profile represents a person participating as a witness for a 
 * relationship[witness] = v3-ParticipationType#WIT
 * relationship[witness] ^requirements = "Indicates the relationship is as a witness to the advance directive."
 
-* name 1..1 // CONF:4445-33420
-* telecom 1..* // CONF:4445-33417
+* name 1..1 MS // CONF:4445-33420
+* telecom 1..* MS // CONF:4445-33417
+* address MS
 
 
 // HOW About references to external documents????
