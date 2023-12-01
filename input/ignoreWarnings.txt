@@ -12,7 +12,7 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/pacio-adi/Struc
 None of the codings provided are in the value set 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), and a coding is recommended to come from this value set) (codes = http://hl7.org/fhir/us/pacio-adi/CodeSystem/ADIPreferenceCategoryCS#care-experience-preference)
 None of the codings provided are in the value set 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), and a coding is recommended to come from this value set) (codes = http://hl7.org/fhir/us/pacio-adi/CodeSystem/ADIPreferenceCategoryCS#intervention-preference)
 
-# US Core 4.0.0, which this IG is based on, does not have a profile for RelatedPerson
+# Approved US Core Variance for RelatedPerson profiles - https://jira.hl7.org/browse/FHIR-43304
 %US FHIR Usage rules require that all profiles on RelatedPerson derive from the core US profile.%
 
 # The USCoreProvenance profile, from which the ADIProvenance profile is based, has the following warnings
