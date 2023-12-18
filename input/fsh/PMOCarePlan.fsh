@@ -19,7 +19,7 @@ Description: "The Portable Medical Order Care Plan."
     portable_medical_order 1..1 MS
 
 // TODO find a proper code 
-* category[portable_medical_order] = $SNOMEDCT#100821-8 //"Advance care plan"
+* category[portable_medical_order] = $LOINC#100821-8 //"Advance care plan"
 
 
 * subject 1..1 MS
