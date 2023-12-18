@@ -2,7 +2,7 @@ The Advance Directive Interoperability (ADI) FHIR implementation guide (IG) expl
 
 <blockquote class="stu-note">
     <p>
-    STU1 supports only Person-authored Advance Directives (ADI Content Type 1) documents. Future versions of this FHIR IG will address encounter-centric patient instructions, Content Type 2, and portable medical orders for life-sustaining treatment, Content Type 3.
+    This is a preliminary draft of STU2, which includes support for portable medical orders for life-sustaining treatment, Content Type 3. This builds upon STU1, which supported only Person-authored Advance Directives (ADI Content Type 1) documents. Future versions of this FHIR IG will address encounter-centric patient instructions, Content Type 2.
     </p>
 </blockquote>
 
