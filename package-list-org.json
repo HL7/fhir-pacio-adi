@@ -6,9 +6,9 @@
     "list": [
       {
         "version": "current",
-        "desc": "PACIO Advance Directive Interoperability Implementation Guide CI Build",
+        "desc": "PACIO Advance Directive Interoperability Implementation Guide STU2 Preliminary",
         "path": "http://build.fhir.org/ig/HL7/fhir-pacio-adi",
-        "status": "ci-build",
+        "status": "draft",
         "current": true
       },
       {
@@ -19,7 +19,7 @@
         "status": "trial-use",
         "sequence": "STU 1",
         "fhirversion": "4.0.1",
-        "current": true
+        "current": false
       },
       {
         "version": "0.1.1",

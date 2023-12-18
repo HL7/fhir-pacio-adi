@@ -12,7 +12,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.us.pacio-adi
 canonical: http://hl7.org/fhir/us/pacio-adi
-version: 1.0.0
+version: 2.0.0
 name: PACIOAdvanceDirectiveInteroperability
 title: PACIO Advance Directive Interoperability Implementation Guide
 status: active
@@ -27,7 +27,7 @@ description: PACIO Advance Directive Interoperability Implementation Guide
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.us.core: 4.0.0 
+  hl7.fhir.us.core: 6.1.0 
   hl7.fhir.uv.extensions: current
   hl7.terminology: 5.4.0
   us.nlm.vsac:
@@ -41,7 +41,7 @@ parameters:
   path-expansion-params: '../../exp-params.json'
   path-liquid: liquid
 copyrightYear: 2021+
-releaseLabel: STU 1
+releaseLabel: STU 2
 jurisdiction: urn:iso:std:iso:3166#US
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮

@@ -939,7 +939,7 @@ Description: "Example Patient McBee Custodian Organization"
 Usage: #example
 
 * identifier.system = "http://hl7.org/fhir/sid/us-npi"
-* identifier.value = "44444"
+* identifier.value = "1234567893"
 * active = true
 * name = "MyDirectives.com"
 
