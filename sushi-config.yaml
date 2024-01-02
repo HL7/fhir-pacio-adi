@@ -12,7 +12,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.us.pacio-adi
 canonical: http://hl7.org/fhir/us/pacio-adi
-version: 2.0.0
+version: 2.1.0
 name: PACIOAdvanceDirectiveInteroperability
 title: PACIO Advance Directive Interoperability Implementation Guide
 status: active
@@ -50,15 +50,18 @@ jurisdiction: urn:iso:std:iso:3166#US
 menu:
   Home: index.html
   Table of Contents: toc.html
-  Guidance:
-    Patient Stories and Personas: patient_stories_and_personas.html
-    Use Cases: use_cases.html
-    General Guidance: general_guidance.html
+  General Guidance:
+    Content Type Overview: content_type_overview.html
     Formal Specification: formal_specification.html
     Security, Privacy, and Consent: security_privacy_consent.html
     Signatures: signatures.html
     Search Parameters: search_parameters.html
     Key Terms and Acronyms: key_terms_and_acronyms.html
+  Patient-Authored:
+    Patient Stories and Personas: type1_patient_stories_and_personas.html
+    Use Cases: use_cases.html
+  Portable Medical Orders:
+    Type 3 AD Overview: type3_portable_medical_orders.html
   FHIR Artifacts:
     Profiles: artifacts.html#3
     Extensions: artifacts.html#5
@@ -72,11 +75,11 @@ menu:
 pages:
   index.md:
     title: Home
-  patient_stories_and_personas.md:
+  type1_patient_stories_and_personas.md:
     title: Patient Stories and Personas
   use_cases.md:
     title: Use Cases
-  general_guidance.md:
+  content_type_overview.md:
     title: General Guidance
   formal_specification.md:
     title: Formal Specification
@@ -94,3 +97,5 @@ pages:
     title: Release Notes
   downloads.md:
     title: Downloads
+  type3_portable_medical_orders.md:
+    title: Portable Medical Orders Overview
