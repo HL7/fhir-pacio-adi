@@ -1,10 +1,7 @@
 == Suppressed Messages ==
 
 # Approved US Core Variance for CarePlan and Observation profiles - https://jira.hl7.org/browse/FHIR-34110
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-PreferenceCarePlan').baseDefinition: US FHIR Usage rules require that all profiles on CarePlan derive from the core US profile
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-AutopsyObservation').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-DocumentationObservation').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-OrganDonationObservation').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+%US FHIR Usage rules require that all profiles on CarePlan derive from the core US profile%
 %US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles.%
 %This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|4.0.0%
 
