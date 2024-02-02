@@ -52,14 +52,14 @@ menu:
   Table of Contents: toc.html
   General Guidance:
     Content Type Overview: content_type_overview.html
+    System Use Cases: system_use_cases.html
     Formal Specification: formal_specification.html
     Security, Privacy, and Consent: security_privacy_consent.html
     Signatures: signatures.html
     Search Parameters: search_parameters.html
     Key Terms and Acronyms: key_terms_and_acronyms.html
   Patient-Authored:
-    Patient Stories and Personas: type1_patient_stories_and_personas.html
-    Use Cases: use_cases.html
+    User Stories and Personas: type1_user_stories_and_personas.html
   Portable Medical Orders:
     Type 3 AD Overview: type3_portable_medical_orders.html
   FHIR Artifacts:
@@ -75,10 +75,10 @@ menu:
 pages:
   index.md:
     title: Home
-  type1_patient_stories_and_personas.md:
-    title: Patient Stories and Personas
-  use_cases.md:
-    title: Use Cases
+  type1_user_stories_and_personas.md:
+    title: User Stories and Personas
+  system_use_cases.md:
+    title: System Use Cases
   content_type_overview.md:
     title: General Guidance
   formal_specification.md:
@@ -98,4 +98,4 @@ pages:
   downloads.md:
     title: Downloads
   type3_portable_medical_orders.md:
-    title: Portable Medical Orders Overview
+    title: User Stories and Personas

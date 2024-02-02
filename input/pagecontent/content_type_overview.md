@@ -97,6 +97,8 @@ Digital signatures are defined as optional in this guide, for a myriad of factor
 
 ADI native documents using FHIR are instances of the `Bundle` resource with the `type` = `document`. The document should have all content contained within the Bundle with no external references except for the references to external documents in the [DocumentationObservation](StructureDefinition-ADI-DocumentationObservation.html) through the focus data element. FHIR `Bundle` documents consist of multiple entry resources within it, with the first entry being a `Composition` resource. The `Composition` resource acts as the header and organizational construct. It contains information about the document such as the category of document, dates, and references to the various participants of the document, as well as document sections used to categorize or organize the contained entries.
 
+#### ADI Content Type 1 Document Structure
+
 The ADI Content Type 1 document defines 7 sections:
 1. Healthcare Agent - Healthcare agents, healthcare agent advisors, and consent by the subject regarding the stated designees’ roles, powers, and limitations.
 2. Goals, Preferences, and Priorities for Certain Conditions – Preferences to be used in treatment or care planning that express a person’s goals, preferences, and priorities for care to be considered under specific situations or conditions.
@@ -127,7 +129,17 @@ The content in these categories of advance directive could include, but are not 
 
 Content type 1 also includes identifying the presence of any type of Portable Medical Order (PMO) such as a POLST or MOLST, and orders such as Do Not Resuscitate (DNR) orders. It also includes identifying other types of person-authored ADI that might exist outside of the document being reviewed.  It does not include the specifics of the structured information content of other PMO and/or DNR documents, but instead creates awareness as to the presence of the documents.
 
+#### ADI Content Type 2 Document Structure
+
+<blockquote class="stu-note">
+    <p>
+    Content Type 2 is out of scope for the PACIO ADI STU2 publication. A brief description is provided for completeness.
+    </p>
+</blockquote>
+
 Content Type 2, Episode-Centric Patient Instructions, are used when a person is about to undergo a medical procedure during which there is the potential need to deploy life-sustaining treatments. This type of ADI information can also be used when a person is about to have an inpatient stay, or a stay at a nursing or rehab care facility, where the care delivery team asks the individual to make decisions about medical treatments they do or do not want, should circumstances arise when these decisions need to be made and the individual’s choices would need to be taken into consideration. A person may make these decisions for his or her self, and is sometimes the case if the person cannot make these decisions, the healthcare agent may decide. These medical treatment decisions are made in the present and ONLY apply to the current episode of care. They are instructions provided by the person or their surrogate decision-maker. These instructions are closely related to advance directives, in that they say, if x happens, then do y. Or, if x happens, do not do y. For this reason, these kinds of instructions and prohibitions are often recorded with a person’s advance directives. However, they are not advance directives because they represent treatment instructions that ONLY apply to the current episode of care. These instructions are considered obligation or prohibition instructions, provided by the person or their surrogate decision-maker, and authored by a practitioner.
+
+#### ADI Content Type 3 Document Structure
 
 Content Type 3, are Portable Medical Orders (such as a DNR and/or POLST/MOLST orders). These documents tell other healthcare professionals what the treatment intervention preferences are for a person, and are usually intended to be created when there is an expectation of a limited life-expectancy.  Portable medical order documents are authored by practitioners, not patients, and are legal physician orders. They do not document goals, preferences, and priorities that a patient intends to be referenced as guidance when making care decisions but instead focus on medical treatment intervention decisions that already have been made so as to guide treatment interventions.
 

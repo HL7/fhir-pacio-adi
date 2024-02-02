@@ -24,7 +24,7 @@ This section defines additional requirements and guidance relevant to this guide
 **SHALL** meet the requirements identified in the definition of Must Support elements.
 
 
-**_Data Consumers:_-_**
+**_Data Consumers:_**
 
 **SHALL* meet the requirements identified in the definition of Must Support elements.
 

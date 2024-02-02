@@ -189,12 +189,14 @@
 <page key="general_guidance" name="General Guidance"/>
 <page key="index" name="Home"/>
 <page key="key_terms_and_acronyms" name="Key Terms and Acronyms"/>
-<page key="patient_stories_and_personas" name="Patient Stories and Personas"/>
-<page key="type3_portable_medical_orders" name="Portable Medical Orders Overview"/>
+<page deprecated="true" key="patient_stories_and_personas" name="Patient Stories and Personas"/>
 <page key="search_parameters" name="Recommended Search Parameters"/>
 <page key="change_log" name="Release Notes"/>
 <page key="security_privacy_consent" name="Security, Privacy, and Consent"/>
 <page key="signatures" name="Signatures"/>
+<page key="system_use_cases" name="System Use Cases"/>
 <page key="toc" name="Table of Contents"/>
-<page key="use_cases" name="Use Cases"/>
+<page deprecated="true" key="use_cases" name="Use Cases"/>
+<page key="type1_user_stories_and_personas" name="User Stories and Personas"/>
+<page key="type3_portable_medical_orders" name="User Stories and Personas"/>
 </specification>
