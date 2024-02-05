@@ -61,7 +61,7 @@ menu:
   Patient-Authored:
     User Stories and Personas: type1_user_stories_and_personas.html
   Portable Medical Orders:
-    Type 3 AD Overview: type3_portable_medical_orders.html
+    User Stories and Personas: type3_user_stories_and_personas.html
   FHIR Artifacts:
     Profiles: artifacts.html#3
     Extensions: artifacts.html#5
@@ -97,5 +97,5 @@ pages:
     title: Release Notes
   downloads.md:
     title: Downloads
-  type3_portable_medical_orders.md:
+  type3_user_stories_and_personas.md:
     title: User Stories and Personas

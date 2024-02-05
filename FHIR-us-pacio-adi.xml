@@ -198,5 +198,5 @@
 <page key="toc" name="Table of Contents"/>
 <page deprecated="true" key="use_cases" name="Use Cases"/>
 <page key="type1_user_stories_and_personas" name="User Stories and Personas"/>
-<page key="type3_portable_medical_orders" name="User Stories and Personas"/>
+<page key="type3_user_stories_and_personas" name="User Stories and Personas"/>
 </specification>
