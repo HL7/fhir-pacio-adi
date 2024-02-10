@@ -394,7 +394,7 @@ Usage: #example
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p><b>Primary Healthcare Agent</b></p>
 <p>The person I choose as my Primary Healthcare Agent is:</p>
-<p><i>Sally Bobbins</i></p>
+<p><i>Sally Bobbins (daughter)</i></p>
 <p><i>SallyBobbins@example.com</i></p>
 <p><i>[SELECTED to act as a healthcare agent on 3/23/2018, at 9:13 AM CST]</i></p>
 <p><i>[As of 12/6/2019, at 1:11 AM CDT, a response is still PENDING]</i></p>
@@ -402,6 +402,7 @@ Usage: #example
 
 * patient = Reference(Example-McBee-Patient1)
 //* relationship[heatlhcare_agent_or_proxy_role] = $LOINC#75783-1 "Primary healthcare agent [Reported]"
+* relationship = $HL7RoleCode#DAUC "daughter"
 
 * name[0].family = "Bobbins"
 * name[0].given[0] = "Sally"

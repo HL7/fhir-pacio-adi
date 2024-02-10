@@ -77,7 +77,7 @@ The current version, STU1, of this ADI with FHIR IG covers the use of RESTful AP
 
 Advance healthcare decision documents may take several forms, including scanned PDF documents, CDA documents, other binary documents, as well as native FHIR documents (using the `Composition` and other ADI-specific profiled FHIR resources). This guide defines the interoperable guidance necessary to support creation, update, query, and access to all of these types and other potential ADI document types (through encoding in a `Binary` resource). Today, most of these documents are shared through scanned images housed in EMRs, EHRs and other systems.
 
-This implementation guide is designed to guide a range of digitization levels, ranging from scanned documents to fully discrete FHIR documents. Additionally, this guide provides the capability for different types of ADI data to be more interoperably digitized than others inside the same document, which is structured as a FHIR Composition, and is described in more detail in the [ADI FHIR Document Structure](general_guidance.html#adi-fhir-document-structure) section.
+This implementation guide is designed to guide a range of digitization levels, ranging from scanned documents to fully discrete FHIR documents. Additionally, this guide provides the capability for different types of ADI data to be more interoperably digitized than others inside the same document, which is structured as a FHIR Composition, and is described in more detail in the [ADI FHIR Document Structure](content_type_overview.html#adi-fhir-document-structure) section.
 
 The DocumentReference is the resource that is used for "indexing" of documents, similar to the way a library uses a card catalog to index books based on different search criteria, for example, by title, author, date, or classification code.  The DocumentReference can be used in the same way for searching and finding documents with specific attributes such as type of document, subject (e.g., patient), author, dates.  These attributes are provided in the metadata of the DocumentReference so that the actual documents do not have to be accessed for most common searches.  A complete list of search capabilities on DocumentReference can be found in the [Search Parameters](search_parameters.html#adi-documentreference-documentreference) section.
 
@@ -96,6 +96,8 @@ Digital signatures are defined as optional in this guide, for a myriad of factor
 ### ADI FHIR Document Structure
 
 ADI native documents using FHIR are instances of the `Bundle` resource with the `type` = `document`. The document should have all content contained within the Bundle with no external references except for the references to external documents in the [DocumentationObservation](StructureDefinition-ADI-DocumentationObservation.html) through the focus data element. FHIR `Bundle` documents consist of multiple entry resources within it, with the first entry being a `Composition` resource. The `Composition` resource acts as the header and organizational construct. It contains information about the document such as the category of document, dates, and references to the various participants of the document, as well as document sections used to categorize or organize the contained entries.
+
+#### ADI Content Type 1 Document Structure
 
 The ADI Content Type 1 document defines 7 sections:
 1. Healthcare Agent - Healthcare agents, healthcare agent advisors, and consent by the subject regarding the stated designees’ roles, powers, and limitations.
@@ -127,7 +129,17 @@ The content in these categories of advance directive could include, but are not 
 
 Content type 1 also includes identifying the presence of any type of Portable Medical Order (PMO) such as a POLST or MOLST, and orders such as Do Not Resuscitate (DNR) orders. It also includes identifying other types of person-authored ADI that might exist outside of the document being reviewed.  It does not include the specifics of the structured information content of other PMO and/or DNR documents, but instead creates awareness as to the presence of the documents.
 
+#### ADI Content Type 2 Document Structure
+
+<blockquote class="stu-note">
+    <p>
+    Content Type 2 is out of scope for the PACIO ADI STU2 publication. A brief description is provided for completeness.
+    </p>
+</blockquote>
+
 Content Type 2, Episode-Centric Patient Instructions, are used when a person is about to undergo a medical procedure during which there is the potential need to deploy life-sustaining treatments. This type of ADI information can also be used when a person is about to have an inpatient stay, or a stay at a nursing or rehab care facility, where the care delivery team asks the individual to make decisions about medical treatments they do or do not want, should circumstances arise when these decisions need to be made and the individual’s choices would need to be taken into consideration. A person may make these decisions for his or her self, and is sometimes the case if the person cannot make these decisions, the healthcare agent may decide. These medical treatment decisions are made in the present and ONLY apply to the current episode of care. They are instructions provided by the person or their surrogate decision-maker. These instructions are closely related to advance directives, in that they say, if x happens, then do y. Or, if x happens, do not do y. For this reason, these kinds of instructions and prohibitions are often recorded with a person’s advance directives. However, they are not advance directives because they represent treatment instructions that ONLY apply to the current episode of care. These instructions are considered obligation or prohibition instructions, provided by the person or their surrogate decision-maker, and authored by a practitioner.
+
+#### ADI Content Type 3 Document Structure
 
 Content Type 3, are Portable Medical Orders (such as a DNR and/or POLST/MOLST orders). These documents tell other healthcare professionals what the treatment intervention preferences are for a person, and are usually intended to be created when there is an expectation of a limited life-expectancy.  Portable medical order documents are authored by practitioners, not patients, and are legal physician orders. They do not document goals, preferences, and priorities that a patient intends to be referenced as guidance when making care decisions but instead focus on medical treatment intervention decisions that already have been made so as to guide treatment interventions.
 
@@ -252,7 +264,7 @@ The table below describes the FHIR profiles relevant to each of the ADI Content 
         <td style="padding: 7px;"><a href="https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-provenance.html">US Core Provenance</a></td>
     </tr>
     <tr>
-        <th colspan="4" style="background-color: #9DC3E6; text-align:center; padding: 10px; padding: 10px;"><b>CONTENT TYPE II: Encounter-Centric Patient Instructions</b> <i>(after STU1)</i></th>
+        <th colspan="4" style="background-color: #9DC3E6; text-align:center; padding: 10px; padding: 10px;"><b>CONTENT TYPE II: Encounter-Centric Patient Instructions</b> <i>(after STU2)</i></th>
     </tr>
     <tr style="background-color: #D9D9D9;">
         <th style="padding: 10px;" colspan="2"><b>Name of Profile to be developed</b></th>
@@ -290,7 +302,7 @@ The table below describes the FHIR profiles relevant to each of the ADI Content 
         <td style="padding: 7px;"><a href="https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-procedure.html">US Core Procedure</a></td>
     </tr>
     <tr>
-        <th colspan="4" style="background-color: #478FD1; text-align:center; padding: 10px; padding: 10px;"><b>CONTENT Type III: P/MOLST</b> <i>(after STU1)</i></th>
+        <th colspan="4" style="background-color: #478FD1; text-align:center; padding: 10px; padding: 10px;"><b>CONTENT Type III: Portable Medical Orders (PMO)</b> <i>(STU2)</i></th>
     </tr>
     <tr style="background-color: #D9D9D9;">
         <th style="padding: 10px;" colspan="2"><b>Name of Profile to be developed</b></th>
@@ -299,12 +311,48 @@ The table below describes the FHIR profiles relevant to each of the ADI Content 
     </tr>
     <tr>
         <td style="padding: 7px;">20</td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PMOComposition.html">ADI Portable Medical Order Composition</a></td>
+        <td style="padding: 7px;"><p>This profile encompasses information that makes up a practitioner's portable medical order.</p></td>
+        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/composition.html">Composition</a></td>
+    </tr>
+    <tr>
+        <td style="padding: 7px;">21</td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PMOCarePlan.html">ADI Portable Medical Order Care Plan</a></td>
+        <td style="padding: 7px;"><p>This profile is used to specify the plan of care that represents the persons wishes, preferences, and experiences as documented in the PMO.</p></td>
+        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/careplan.html">Care Plan</a></td>
+    </tr>
+    <tr>
+        <td style="padding: 7px;">22</td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PMOServiceRequest.html">ADI Portable Medical Order ServiceRequest</a></td>
+        <td style="padding: 7px;"><p>This profile is used to represent a practitioner authored portable medical order.</p></td>
+        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/servicerequest.html">Care Plan</a></td>
+    </tr>
+    <tr>
+        <td style="padding: 7px;">23</td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PMOHospiceObservation.html">ADI Portable Medical Order Hospice Observation</a></td>
+        <td style="padding: 7px;"><p>This profile is used to represent a finding that the individual is under hospice care.</p></td>
+        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
+    </tr>
+    <tr>
+        <td style="padding: 7px;">24</td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PMOParticipantObservation.html">ADI PMO Participant Observation</a></td>
+        <td style="padding: 7px;"><p>This profile is used to represent the portable medical orders participant observation.</p></td>
+        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
+    </tr>
+    <tr>
+        <td style="padding: 7px;">25</td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PMOReviewObservation.html">ADI PMO Review Observation</a></td>
+        <td style="padding: 7px;"><p>This profile is used to represent the review status of the portable medical order.</p></td>
+        <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
+    </tr>  
+    <tr>
+        <td style="padding: 7px;">26</td>
         <td style="padding: 7px;">ADI Consent for Portable Medical Orders</td>
         <td style="padding: 7px;"><p>This profile is used to express the person, or their healthcare agent’s, consent that is not bound by an encounter.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/consent.html">Consent</a></td>
     </tr>
     <tr>
-        <td style="padding: 7px;">21</td>
+        <td style="padding: 7px;">27</td>
         <td style="padding: 7px;">ADI Consent for DNR Orders</td>
         <td style="padding: 7px;"><p>This profile is used to express the patient’s or healthcare agent consent that is not bound by an encounter.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/consent.html">Consent</a></td>
@@ -318,7 +366,7 @@ The table below describes the FHIR profiles relevant to each of the ADI Content 
         <th style="padding: 10px;"><b>Based On</b></th>
     </tr>
     <tr>
-        <td style="padding: 7px;">22</td>
+        <td style="padding: 7px;">28</td>
         <td style="padding: 7px;"><a href="#">ADI Consent to Share</a></td>
         <td style="padding: 7px;"><p>This profile is used to enable someone else to act on their behalf if they are unable to do so themselves.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/consent.html">Consent</a></td>
