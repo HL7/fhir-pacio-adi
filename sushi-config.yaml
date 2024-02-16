@@ -60,8 +60,10 @@ menu:
     Key Terms and Acronyms: key_terms_and_acronyms.html
   Patient-Authored:
     User Stories and Personas: type1_user_stories_and_personas.html
+    Specification Guidance: content_type1_guidance.html
   Portable Medical Orders:
     User Stories and Personas: type3_user_stories_and_personas.html
+    Specification Guidance: content_type3_guidance.html
   FHIR Artifacts:
     Profiles: artifacts.html#3
     Extensions: artifacts.html#5
@@ -81,6 +83,10 @@ pages:
     title: System Use Cases
   content_type_overview.md:
     title: General Guidance
+  content_type1_guidance.md:
+    title: Content Type 1 (PACP) Guidance
+  content_type3_guidance.md:
+    title: Content Type 3 (PMO) Guidance
   formal_specification.md:
     title: Formal Specification
   security_privacy_consent.md:

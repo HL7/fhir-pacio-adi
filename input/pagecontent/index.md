@@ -12,7 +12,7 @@ This ADI implementation guide (IG) describes how to use existing HL7 FHIR® stan
 </p>
 
 <p>
-Advance healthcare directives can be categorized into <a href="content_type_overview.html#adi-content-types">three types of information</a>. The current version of this guide addresses Content Type I: Person-Authored Advance Directive Information. Subsequent versions of this guide will address the other two types; Content Type 2: Encounter-Centric Patient Instructions (obligations and prohibitions) and Content Type 3:  Portable Medical Orders for Life-Sustaining Treatment.
+Advance healthcare directives can be categorized into <a href="content_type_overview.html#adi-content-types">three types of information</a>. The current version of this guide addresses Content Type I: Person-Authored Advance Directive Information and Content Type 3:  Portable Medical Orders for Life-Sustaining Treatment. Subsequent versions of this guide will address the other two types; Content Type 2: Encounter-Centric Patient Instructions (obligations and prohibitions).
 </p>
 <p>
 Included in the content for this FHIR IG are person-authored advance directives and personal advance care plans which comprise Content Type 1, and also cover patient consent information attesting to their designation of a person, or persons, to serve as their healthcare agent. 
@@ -75,16 +75,28 @@ The primary goal of the PACIO Project is to establish a framework for the develo
 This Guide is divided into several pages which are listed at the top of each page in the menu bar.
 <ul>
     <li>Home: The home page provides the introduction and background information to set context for the use of the HL7 FHIR® ADI Implementation Guide.</li>
-    <li>Guidance: These pages provide overall guidance in using the profiles and transactions defined in this guide by detailing the patient stories and personas and use cases.
+    <li>Table of Contents: A list of the narrative pages and FHIR artifacts in the IG.</li>
+    <li>General Guidance: These pages provide overall guidance in using the profiles and transactions common to all ADI content types. 
         <ul>
-            <li>Content Type: Content types provide a clear distinction for the three types of advance directive information. A detailed description of each type is provided.</li>
+            <li>Content Type Overview: Content types provide a clear distinction for the three types of advance directive information. A detailed description of each type is provided.</li>
             <li>Patient Stories and Personas: Patient stories and personas give context to the data exchange standards detailed in the technical areas of the IG. They allow the non-technical reader to envision situations in which the IGs provisions would apply, and ensure that the IG meets the intended needs for exchange of this type of information.</li>
             <li>Use Cases: A use case is a list of technical actions or event steps typically defining the interactions between a role and a system to achieve a goal. The actor can be a human or other external system. Technical scenarios that describe systems interactions between technical actors to implement the use case.</li>
             <li>General Guidance: Information about the structure and relationships between the profiles in this guide.</li>
             <li>Formal Specification: Information about conformance to the guide including Must Support requirements, document signatures, and document workflow.</li>
             <li>Security: General security requirements and recommendations for HL7 FHIR® ADI Implementation Guide actors, including authentication, authorization, and logging requirements and guidance.</li>
             <li>Key Terms and Acronyms: A glossary of relevant terms described in advance directives.</li>
-            <!-- TODO <li>About ADI Examples: Descriptive examples that demonstrate the use of ADI profiles and exchange mechanisms.</li>-->
+        </ul>
+    </li>
+    <li>Patient-Authored: These sections provide the use cases, personas, and additional guidance specific to patient-authored care preferences (PACP).
+        <ul>
+            <li>Use Cases and Persona Examples</li>
+            <li>PACP-specific guidance</li>
+        </ul>
+    </li>
+    <li>Portable Medical Orders: These sections provide the use cases, personas, and additional guidance specific to portable medical orders (PMO).
+        <ul>
+            <li>Use Cases and Persona Examples</li>
+            <li>PMO-specific guidance</li>
         </ul>
     </li>
     <li>FHIR Artifacts: These sections provide detailed descriptions and formal definitions for all the FHIR artifacts defined in this guide.
@@ -97,6 +109,7 @@ This Guide is divided into several pages which are listed at the top of each pag
             <li>Examples: The section that contains examples of advance directive information that is conformant to the profiles of this guide.</li>
         </ul>
     </li>
+    <li>Release Notes: A summary of changes from the PACIO ADI STU1 release.</li>
     <li>Downloads: This page provides links to downloadable artifacts.</li>
 </ul>
 

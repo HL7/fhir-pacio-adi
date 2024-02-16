@@ -69,7 +69,7 @@ The current version, STU1, of this ADI with FHIR IG covers the use of RESTful AP
 
 <blockquote class="stu-note">
     <p>
-    STU1 supports only Person-authored Advance Directives (ADI Content Type 1) documents. Future versions of this FHIR IG will address encounter-centric patient instructions, Content Type 2, and portable medical orders for life-sustaining treatment, Content Type 3.
+    STU1 supports only Person-authored Advance Directives (ADI Content Type 1) and Portable Medical Order (ADI Content Type 3) documents. Future versions of this FHIR IG will address encounter-centric patient instructions, Content Type 2.
     </p>
 </blockquote>
 
@@ -97,38 +97,7 @@ Digital signatures are defined as optional in this guide, for a myriad of factor
 
 ADI native documents using FHIR are instances of the `Bundle` resource with the `type` = `document`. The document should have all content contained within the Bundle with no external references except for the references to external documents in the [DocumentationObservation](StructureDefinition-ADI-DocumentationObservation.html) through the focus data element. FHIR `Bundle` documents consist of multiple entry resources within it, with the first entry being a `Composition` resource. The `Composition` resource acts as the header and organizational construct. It contains information about the document such as the category of document, dates, and references to the various participants of the document, as well as document sections used to categorize or organize the contained entries.
 
-#### ADI Content Type 1 Document Structure
-
-The ADI Content Type 1 document defines 7 sections:
-1. Healthcare Agent - Healthcare agents, healthcare agent advisors, and consent by the subject regarding the stated designees’ roles, powers, and limitations.
-2. Goals, Preferences, and Priorities for Certain Conditions – Preferences to be used in treatment or care planning that express a person’s goals, preferences, and priorities for care to be considered under specific situations or conditions.
-3. Goals, Preferences, and Priorities Personal Care Experience – Characteristically these concepts express a person’s priorities for Quality of Life and the related care delivery experiences, personal goals, and preferences for that experience, which can be further grouped and placed into a Personal Priorities Organizer.
-4. Goals, Preferences, and Priorities Upon Death - Goals, preferences, and priorities a person expresses for those events that occur at the time of, or soon after, their death.
-5. Additional Documentation - Observations regarding the existence of other advance directive related information.
-6. Witness & Notary - References and information regarding witnesses and notary.
-7. Administrative Information - Administrative information associated with the personal advance care plan and/or advance directive information.
-
-<p align="center" style="margin-top: 30px; margin-bottom:30px;">
-    <b><i>Click a block to see the corresponding profile definition</i></b>
-    <object data="ADI_DocumentStructure.svg" type="image/svg+xml" width="100%" style="margin-top: 10px;"></object>
-</p>
-
-The content in these categories of advance directive could include, but are not limited to:
-* Healthcare agent designation
-* Antibiotics administration preference
-* Artificial nutrition and hydration administration preference
-* Intubation and ventilation procedure preference
-* Resuscitation procedure preference
-* Diagnostic testing procedure preference
-* Preferences relating to palliative and supportive care
-* Preferences relating to hospice care at the end of life
-* Organ donation preference
-* Death arrangement preference
-* Religious, spiritual, cultural or faith-based values that are important to the individual receiving care
-* Specific individuals or contacts to notify, likes & joys, dislikes & fears, and various messages or information to be made available
-
-Content type 1 also includes identifying the presence of any type of Portable Medical Order (PMO) such as a POLST or MOLST, and orders such as Do Not Resuscitate (DNR) orders. It also includes identifying other types of person-authored ADI that might exist outside of the document being reviewed.  It does not include the specifics of the structured information content of other PMO and/or DNR documents, but instead creates awareness as to the presence of the documents.
-
+<!-- 
 #### ADI Content Type 2 Document Structure
 
 <blockquote class="stu-note">
@@ -138,30 +107,7 @@ Content type 1 also includes identifying the presence of any type of Portable Me
 </blockquote>
 
 Content Type 2, Episode-Centric Patient Instructions, are used when a person is about to undergo a medical procedure during which there is the potential need to deploy life-sustaining treatments. This type of ADI information can also be used when a person is about to have an inpatient stay, or a stay at a nursing or rehab care facility, where the care delivery team asks the individual to make decisions about medical treatments they do or do not want, should circumstances arise when these decisions need to be made and the individual’s choices would need to be taken into consideration. A person may make these decisions for his or her self, and is sometimes the case if the person cannot make these decisions, the healthcare agent may decide. These medical treatment decisions are made in the present and ONLY apply to the current episode of care. They are instructions provided by the person or their surrogate decision-maker. These instructions are closely related to advance directives, in that they say, if x happens, then do y. Or, if x happens, do not do y. For this reason, these kinds of instructions and prohibitions are often recorded with a person’s advance directives. However, they are not advance directives because they represent treatment instructions that ONLY apply to the current episode of care. These instructions are considered obligation or prohibition instructions, provided by the person or their surrogate decision-maker, and authored by a practitioner.
-
-#### ADI Content Type 3 Document Structure
-
-Content Type 3, are Portable Medical Orders (such as a DNR and/or POLST/MOLST orders). These documents tell other healthcare professionals what the treatment intervention preferences are for a person, and are usually intended to be created when there is an expectation of a limited life-expectancy.  Portable medical order documents are authored by practitioners, not patients, and are legal physician orders. They do not document goals, preferences, and priorities that a patient intends to be referenced as guidance when making care decisions but instead focus on medical treatment intervention decisions that already have been made so as to guide treatment interventions.
-
-All doctors, emergency medical professionals, and other healthcare professionals, must follow these portable medical orders as the person moves from one location to another (hospital, care facility, home, etc.), unless another practitioner examines the person, reviews the orders with the person or their healthcare agent, and a decision is reached that changes to the orders are warranted or desired. In an emergency situation, life-sustaining procedures that are normally required of emergency response personnel will be overridden by the contents of portable medical orders.
-
-Depending on the state, portable medical orders may be known by any of the following names:
-* MOLST (Medical Orders for Life Sustaining Treatment)
-* POLST (Physician Orders for Life Sustaining Treatment)
-* MOST (Medical Orders for Scope of Treatment)
-* POST (Physician Orders for Scope of Treatment)
-* TPOPP (Transportable Physician Orders for Patient Preferences)
-* Out-of-hospital Do Not Resuscitate (DNR) Orders
-* DNAR (Do Not Attempt Resuscitation) or AND (Allow Natural Death) Orders
-
-Portable medical orders are not advance directives and should not be confused with them:
-
-1. PMOs are treatment orders written by practitioners.
-2. Episode-centric obligation and prohibition instructions written by clinicians and practitioners, not people like advance directives are.
-3. PMOs are instructions given by the person or their healthcare agent to a practitioner, who then creates legal orders to carry out those treatment decisions.
-
-These are important distinctions to understand.
-
+ -->
 
 #### Clause Extension
 Advance directive documents often contain additional information, or clauses, related to specific areas of the document. This may include things like additional observations about which named healthcare agent is to be primary versus back-up, or a healthcare agent has been selected, or a statement by the author of the document that is felt to be important to the overall contents, and other information that provides context to the data otherwise expressed in the sections or entries of an ADI document. To support this information this guide has defined a [Clause extension](StructureDefinition-adi-clause-extension.html) to all of the Composition sections and various profiles and elements.

@@ -183,6 +183,8 @@
 <artifact id="StructureDefinition/adi-versionNumber-extension" key="StructureDefinition-padi-versionNumber-extension" name="Version Number"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
+<page key="content_type1_guidance" name="Content Type 1 (PACP) Guidance"/>
+<page key="content_type3_guidance" name="Content Type 3 (PMO) Guidance"/>
 <page key="downloads" name="Downloads"/>
 <page key="artifacts" name="FHIR Artifacts"/>
 <page key="formal_specification" name="Formal Specification"/>
