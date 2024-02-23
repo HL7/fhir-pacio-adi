@@ -48,6 +48,8 @@ In Use Case 2, the Content Creator system makes the person-authored advance dire
 
 In Use Case 2, the process is started when a person wants to share their advance directive information with a human or system Content Receiver system. The person directs the Content Creator system to send the advance directive information to the Content Receiver through a FHIR based POST transaction. The Content Receiver will receive, store and process the advance directive information in their system.
 
+On first creation, the DocumentReference SetID is set to 1 and the status set to *current*.
+
 #### Use Case 3: Query and Access [Content]
 
 ##### Use Case 3 Description
@@ -91,9 +93,11 @@ In Use Case 4, the process is started by a person wanting to update previously c
 
 In Use Case 4, the process is started by a person wanting to update previously created advance directive information. The precondition for the process is that the Content Creator and Content Custodian systems are able to associate a new version of the ADI information and/or document(s) as active and possess the ability to mark prior ADI information and/or document(s) version as inactive.
 
-* First, the person creates an updated version of their advance directive information which is stored in a Content Custodian system responsible for information exchange, using the same setID identifier as the replaced document and with status = “current”, relatesTo.code = “replaces”, and relatesTo.target –> prior version.
-* Then, the prior version of AD information documentReference.status is changed to superseded.
-* Finally, the person consents to share updated AD information. At the end of the process, the updated version is now the current active version and prior version is inactive and a relationship to the prior version of AD Info is maintained through DocumentReference.relatesTo.code (replaces).
+* First, The person consents to share updated AD information. The person creates an updated version of their advance directive information which is stored in a Content Custodian system responsible for information exchange, using the same setID identifier as the replaced document and with status = “current”, relatesTo.code = “replaces”, and relatesTo.target –> prior version.
+* Then, the DocumentReference for the prior version of AD information is updated so that its documentReference.status is changed to superseded.
+* At the end of the process, the `DocumentReference` for the updated version of the document has a status of *current* and the the DocumentReference for the previous version of the document is a status of *superceded*. The relationship between the new and previous version of the document is preserved through the current `DocumentReference` `relatesTo.code` (*replaces*).
+
+It is the responsibility of the Content Custodian of the AD documents to maintain versioning of AD documents.
 
 
 **Note:** FHIR Resource versioning is only used for error corrections. 
