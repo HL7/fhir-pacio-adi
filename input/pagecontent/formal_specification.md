@@ -146,7 +146,7 @@ An example of this representation is shown in the resource snippet below:
 ```
 "content": [{
     "attachment": {
-        "contentType": "text/xml",
+        "contentType": "application/cda+xml",
         "url": "Binary/03fdcd6b-4e0f-406e-86ac-6b56bf9ce575"
     },
     "format": {

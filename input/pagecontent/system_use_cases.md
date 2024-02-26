@@ -48,7 +48,7 @@ In Use Case 2, the Content Creator system makes the person-authored advance dire
 
 In Use Case 2, the process is started when a person wants to share their advance directive information with a human or system Content Receiver system. The person directs the Content Creator system to send the advance directive information to the Content Receiver through a FHIR based POST transaction. The Content Receiver will receive, store and process the advance directive information in their system.
 
-On first creation, the DocumentReference SetID is set to 1 and the status set to *current*.
+On first creation, the DocumentReference version number is set to 1 and the status set to *current*.
 
 #### Use Case 3: Query and Access [Content]
 
