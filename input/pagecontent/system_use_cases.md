@@ -91,14 +91,17 @@ In Use Case 4, the process is started by a person wanting to update previously c
 ##### Use Case 4 Processes Steps
 
 
-In Use Case 4, the process is started by a person wanting to update previously created advance directive information. The precondition for the process is that the Content Creator and Content Custodian systems are able to associate a new version of the ADI information and/or document(s) as active and possess the ability to mark prior ADI information and/or document(s) version as inactive.
+Use Case 4 continues Use Case 2 which created the initial document. The process is started by a person wanting to update previously created advance directive information. The precondition for the process is that the Content Creator and Content Custodian systems are able to associate a new version of the ADI information and/or document(s) as active and possess the ability to mark prior ADI information and/or document(s) version as inactive.
 
 * First, The person consents to share updated AD information. The person creates an updated version of their advance directive information which is stored in a Content Custodian system responsible for information exchange, using the same setID identifier as the replaced document and with status = “current”, relatesTo.code = “replaces”, and relatesTo.target –> prior version.
 * Then, the DocumentReference for the prior version of AD information is updated so that its documentReference.status is changed to superseded.
 * At the end of the process, the `DocumentReference` for the updated version of the document has a status of *current* and the the DocumentReference for the previous version of the document is a status of *superceded*. The relationship between the new and previous version of the document is preserved through the current `DocumentReference` `relatesTo.code` (*replaces*).
 
+<blockquote class="stu-note">
+<p>
 It is the responsibility of the Content Custodian of the AD documents to maintain versioning of AD documents.
-
+</p>
+</blockquote
 
 **Note:** FHIR Resource versioning is only used for error corrections. 
 
