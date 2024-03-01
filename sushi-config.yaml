@@ -12,7 +12,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.us.pacio-adi
 canonical: http://hl7.org/fhir/us/pacio-adi
-version: 1.0.0
+version: 2.1.0
 name: PACIOAdvanceDirectiveInteroperability
 title: PACIO Advance Directive Interoperability Implementation Guide
 status: active
@@ -27,8 +27,8 @@ description: PACIO Advance Directive Interoperability Implementation Guide
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.us.core: 4.0.0 
-  hl7.fhir.uv.extensions: 1.0.0
+  hl7.fhir.us.core: 4.0.0
+  hl7.fhir.uv.extensions: current
   hl7.terminology: 5.4.0
   us.nlm.vsac:
     uri: 'http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac'
@@ -41,7 +41,7 @@ parameters:
   path-expansion-params: '../../exp-params.json'
   path-liquid: liquid
 copyrightYear: 2021+
-releaseLabel: STU 1
+releaseLabel: STU 2
 jurisdiction: urn:iso:std:iso:3166#US
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
@@ -50,15 +50,20 @@ jurisdiction: urn:iso:std:iso:3166#US
 menu:
   Home: index.html
   Table of Contents: toc.html
-  Guidance:
-    Patient Stories and Personas: patient_stories_and_personas.html
-    Use Cases: use_cases.html
-    General Guidance: general_guidance.html
+  General Guidance:
+    Content Type Overview: content_type_overview.html
+    System Use Cases: system_use_cases.html
     Formal Specification: formal_specification.html
     Security, Privacy, and Consent: security_privacy_consent.html
     Signatures: signatures.html
     Search Parameters: search_parameters.html
     Key Terms and Acronyms: key_terms_and_acronyms.html
+  Patient-Authored:
+    User Stories and Personas: type1_user_stories_and_personas.html
+    Specification Guidance: content_type1_guidance.html
+  Portable Medical Orders:
+    User Stories and Personas: type3_user_stories_and_personas.html
+    Specification Guidance: content_type3_guidance.html
   FHIR Artifacts:
     Profiles: artifacts.html#3
     Extensions: artifacts.html#5
@@ -66,17 +71,22 @@ menu:
     Search Parameters: search_parameters.html
     Capability Statement: CapabilityStatement-adi.html
     Examples: artifacts.html#8
+  Release Notes: change_log.html
   Downloads: downloads.html
 
 pages:
   index.md:
     title: Home
-  patient_stories_and_personas.md:
-    title: Patient Stories and Personas
-  use_cases.md:
-    title: Use Cases
-  general_guidance.md:
+  type1_user_stories_and_personas.md:
+    title: User Stories and Personas
+  system_use_cases.md:
+    title: System Use Cases
+  content_type_overview.md:
     title: General Guidance
+  content_type1_guidance.md:
+    title: Content Type 1 (PACP) Guidance
+  content_type3_guidance.md:
+    title: Content Type 3 (PMO) Guidance
   formal_specification.md:
     title: Formal Specification
   security_privacy_consent.md:
@@ -89,5 +99,9 @@ pages:
     title: Key Terms and Acronyms
   artifacts.html:
     title: FHIR Artifacts
+  change_log.md:
+    title: Release Notes
   downloads.md:
     title: Downloads
+  type3_user_stories_and_personas.md:
+    title: User Stories and Personas
