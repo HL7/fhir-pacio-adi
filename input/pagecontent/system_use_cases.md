@@ -50,6 +50,8 @@ In Use Case 2, the process is started when a person wants to share their advance
 
 On first creation, the DocumentReference version number is set to 1 and the status set to *current*.
 
+{% include examplebutton_default.html example="use_case_2_actor_transition.md" b_title = "Click Here To See Use Case 2 ADI Document Diagram" %}
+
 #### Use Case 3: Query and Access [Content]
 
 ##### Use Case 3 Description
@@ -96,6 +98,8 @@ Use Case 4 continues Use Case 2 (and Use Case 3) which created the initial docum
 * First, The person consents to share updated AD information. The person creates an updated version of their advance directive information which is stored in a Content Custodian system responsible for information exchange, using the same setID identifier as the replaced document and with status = “current”, relatesTo.code = “replaces”, and relatesTo.target –> prior version.
 * Then, the DocumentReference for the prior version of AD information is updated so that its documentReference.status is changed to superseded.
 * At the end of the process, the `DocumentReference` for the updated version of the document has a status of *current* and the the DocumentReference for the previous version of the document is a status of *superceded*. The relationship between the new and previous version of the document is preserved through the current `DocumentReference` `relatesTo.code` (*replaces*).
+
+{% include examplebutton_default.html example="use_case_4_actor_transition.md" b_title = "Click Here To See Use Case 4 ADI Document Diagram" %}
 
 <blockquote class="stu-note">
 <p>
