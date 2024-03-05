@@ -64,6 +64,7 @@ menu:
   Portable Medical Orders:
     User Stories and Personas: type3_user_stories_and_personas.html
     Specification Guidance: content_type3_guidance.html
+  Mental Health: content_mhad.html
   FHIR Artifacts:
     Profiles: artifacts.html#3
     Extensions: artifacts.html#5
@@ -81,6 +82,8 @@ pages:
     title: User Stories and Personas
   system_use_cases.md:
     title: System Use Cases
+  content_mhad.md:
+    title: Mental Health Advance Directives
   content_type_overview.md:
     title: General Guidance
   content_type1_guidance.md:
