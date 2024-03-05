@@ -27,7 +27,7 @@ description: PACIO Advance Directive Interoperability Implementation Guide
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.us.core: 4.0.0
+  hl7.fhir.us.core: 6.1.0
   hl7.fhir.uv.extensions: current
   hl7.terminology: 5.4.0
   us.nlm.vsac:

@@ -490,7 +490,7 @@ Usage: #example
 * status = #active
 * intent = #proposal
 
-* category[advance_care_planning] = $SNOMEDCT#736366004 "Advance care plan"
+* category[advance_care_planning] = $LOINC#81378-2 "Goals, Preferences and priorities under certain health conditions [Reported]"
 * title = "Care Plan for Unconscious, vegetative state, coma for McBee"
 
 * subject = Reference(Example-McBee-Patient1)
