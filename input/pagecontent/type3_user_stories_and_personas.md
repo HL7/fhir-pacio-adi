@@ -1,5 +1,9 @@
 ### Introduction 
 
+Structurally, the portable medical order (PMO) shares the same ADI header as the PACP document. 
+<img src="./adi_pmo.png" alt="Portable Medical Order Document Structure"/>
+<br clear="all" />
+
 #### Example Persona
 
 The following story continues the <a href="type1_user_stories_and_personas.html">Content Type 1 user story</a> for patient-authored advance directive.
