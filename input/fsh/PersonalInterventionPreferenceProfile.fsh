@@ -18,7 +18,7 @@ Description: "This profile is used to represent a personal preference for a type
 * category[type] = ADIPreferenceCategoryCS#intervention-preference
 
 * code 1..1 MS
-* code from ADIInterventionPreferencesVS (extensible)
+* code from $VSACADIInterventionPreferencesEndOfLifeGrouping (extensible) // ADIInterventionPreferencesVS (extensible)
 * code.text MS
 
 * text 1..1 MS
@@ -52,7 +52,7 @@ Description: "This profile is used to represent a personal preference for a type
 * text 1..1 MS
 * status = #final
 * code MS
-* code from ADIInterventionPreferencesVS (extensible)
+* code from $VSACADIInterventionPreferencesEndOfLifeGrouping (extensible) // ADIInterventionPreferencesVS (extensible)
 * code.text MS
 
 * value[x] 1..1 MS
@@ -84,7 +84,7 @@ Description: "This profile is used to represent a personal preference for a type
 
 //[TODO] Guidance that if code is not available that there would be text. Could this be a valueset that includes LOINC and Snomed examples (extensible)?
 * code 1..1 MS
-* code from ADIInterventionPreferencesVS (extensible)
+* code from $VSACADIInterventionPreferencesEndOfLifeGrouping (extensible) //ADIInterventionPreferencesVS (extensible)
 * code.text MS
 
 // [TODO] How do we handle items where there is more expected information (e.g. [Reported]). Perhaps Order detail. That needs guidance and or/binding

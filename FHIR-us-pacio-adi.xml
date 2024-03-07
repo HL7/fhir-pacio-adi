@@ -152,7 +152,7 @@
 <artifact id="ValueSet/ADIHCADecisionsVS" key="ValueSet-PADIHCADecisionsVS" name="Healthcare Agent Decisions"/>
 <artifact id="StructureDefinition/adi-informant-extension" key="StructureDefinition-padi-informant-extension" name="Informant"/>
 <artifact deprecated="true" id="StructureDefinition/padi-informationRecipient-extension" key="StructureDefinition-padi-informationRecipient-extension" name="Information Recipient"/>
-<artifact id="ValueSet/ADIInterventionPreferencesVS" key="ValueSet-PADIInterventionPreferencesVS" name="Intervention Preferences"/>
+<artifact deprecated="true" id="ValueSet/ADIInterventionPreferencesVS" key="ValueSet-PADIInterventionPreferencesVS" name="Intervention Preferences"/>
 <artifact deprecated="true" id="ValueSet/PADIInterventionPreferencesNarrativeVS" key="ValueSet-PADIInterventionPreferencesNarrativeVS" name="Intervention Preferences - Narrative"/>
 <artifact id="ValueSet/ADIInterventionPreferencesOrdinalVS" key="ValueSet-PADIInterventionPreferencesOrdinalVS" name="Intervention Preferences - Ordinal"/>
 <artifact id="StructureDefinition/adi-jurisdiction-extension" key="StructureDefinition-padi-jurisdiction-extension" name="Jurisdiction"/>
