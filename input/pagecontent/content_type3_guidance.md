@@ -20,3 +20,12 @@ Portable medical orders are not advance directives and should not be confused wi
 3. PMOs are instructions given by the person or their healthcare agent to a practitioner, who then creates legal orders to carry out those treatment decisions.
 
 These are important distinctions to understand.
+
+Structurally, the document structure shares the same ADI header as the PACP document and includes sections specific to the portable medical order (PMO):
+
+
+<p align="center">
+    <img src="./adi_pmo.png" alt="Portable Medical Order Document Structure" style="width: 80%; float: none; vertical-align: middle;"/>
+</p>
+
+<br clear="all" />
