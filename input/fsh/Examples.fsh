@@ -162,7 +162,8 @@ Usage: #example
 * category = $LOINC#42348-3 "Advance directives"
 * subject = Reference(Example-McBee-Patient1)
 * date = "2018-08-28T08:49:58.313-04:00"
-* author = Reference(Example-McBee-Patient1)
+* author.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* author.extension.valueCode = #as-text
 * title = "Personal Advance Care Plan Document for Roger McBee"
 
 * custodian = Reference(Example-McBee-OrganizationCustodian1)
@@ -490,7 +491,7 @@ Usage: #example
 * status = #active
 * intent = #proposal
 
-* category[advance_care_planning] = $LOINC#81378-2 "Goals, Preferences and priorities under certain health conditions [Reported]"
+* category[advance_care_planning] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
 * title = "Care Plan for Unconscious, vegetative state, coma for McBee"
 
 * subject = Reference(Example-McBee-Patient1)

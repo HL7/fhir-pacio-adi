@@ -38,19 +38,20 @@ In Use Case 1, the process is started by a person seeking to create advance dire
 
 {% include examplebutton_default.html example="use_case_1_sequence.md" b_title = "Click Here To See Use Case 1 Sequence Diagram" %}
 
+On first creation, the DocumentReference version number is set to 1 and the status set to *current*.
+
+{% include examplebutton_default.html example="use_case_1_document_structure.md" b_title = "Click Here to See the initial ADI Document Diagram" %}
+
 #### Use Case 2: Share [Content]
 
 ##### Use Case 2 Description
 
 In Use Case 2, the Content Creator system makes the person-authored advance directive information available via a Content Receiver system using a FHIR API. The Content Receiver system may be an end system or may be another Content Custodian system.
 
-##### Use Case 2 Processes Steps
+##### Use Case 2 Process Steps
 
 In Use Case 2, the process is started when a person wants to share their advance directive information with a human or system Content Receiver system. The person directs the Content Creator system to send the advance directive information to the Content Receiver through a FHIR based POST transaction. The Content Receiver will receive, store and process the advance directive information in their system.
 
-On first creation, the DocumentReference version number is set to 1 and the status set to *current*.
-
-{% include examplebutton_default.html example="use_case_2_actor_transition.md" b_title = "Click Here To See Use Case 2 ADI Document Diagram" %}
 
 #### Use Case 3: Query and Access [Content]
 
@@ -70,7 +71,7 @@ Use-case 3 aims to enable provider access to advance directive information. It i
 
 {% include examplebutton_default.html example="use_case_3_actor_transition_3.md" b_title = "Click Here To See Use Case 3 Actor Transaction Diagram Step 3" %}
 
-##### Use Case 3 Processes Steps
+##### Use Case 3 Process Steps
 
 The Use Case 3 process describes message interactions between a Content Requester system, such as SMART on FHIR application, and a backend server. Note that while backend servers are supported by this IG, more specification requirement details related to backend server guidance will be coming in STU2.
 
@@ -90,7 +91,7 @@ The Content Requester system SHOULD use the FHIR operation [$match](https://hl7.
 
 In Use Case 4, the process is started by a person wanting to update previously created advance directive information. The precondition for the process is that the Content Creator and Content Custodian systems are able to associate a new version of the ADI information and/or document(s) as active and possess the ability to mark prior ADI information and/or document(s) version as inactive.
 
-##### Use Case 4 Processes Steps
+##### Use Case 4 Process Steps
 
 
 Use Case 4 continues Use Case 2 (and Use Case 3) which created the initial document to handle updated document versions. The process is started by a person wanting to update previously created advance directive information. The precondition for the process is that the Content Creator and Content Custodian systems are able to associate a new version of the ADI information and/or document(s) as active and possess the ability to mark prior ADI information and/or document(s) version as inactive.
