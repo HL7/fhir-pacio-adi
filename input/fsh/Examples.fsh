@@ -142,20 +142,13 @@ Usage: #example
 * extension[adi-dataEnterer-extension].valueReference = Reference(Example-McBee-Patient1)
 // witness Sally Bobbins
 * extension[adi-effective-date-extension].valuePeriod.start = "2018-08-28T08:49:58.313-04:00"
-
-
 * extension[adi-informant-extension].valueReference = Reference(Example-McBee-HealthcareAgent1)
 // * extension[adi-informationRecipient-extension].valueReference = Reference(Example-McBee-HealthcareAgent1)
 * extension[adi-participant-extension].valueReference = Reference(Example-McBee-HealthcareAgent1)
 * extension[adi-performer-extension].valueReference.display = "Advance Directives, Inc."
 
-
-
-
 * identifier.system = "urn:oid:2.16.840.1.113883.4.823.1.7124"
 * identifier.value = "20130607100315-CCDA-CCD"
-
-
 
 * status = #final
 * type = $LOINC#81334-5 "Patient Personal advance care plan"
@@ -164,6 +157,7 @@ Usage: #example
 * date = "2018-08-28T08:49:58.313-04:00"
 * author.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * author.extension.valueCode = #as-text
+* author[0].display = "author name in PDF attachment"
 * title = "Personal Advance Care Plan Document for Roger McBee"
 
 * custodian = Reference(Example-McBee-OrganizationCustodian1)
@@ -326,13 +320,10 @@ agent to make decisions in my best interests and based on what is known of my wi
 * section[gpp_upon_death].entry[+] = Reference(Example-McBee-PersonalInterventionPreference8)
 
 
-
-// Line 1205
 * section[witness_and_notary].title = "Witnesses and Notary"
 * section[witness_and_notary].code = $LOINC#81339-4 "Witness and Notary Document"
 * section[witness_and_notary].text.status = #additional
 * section[witness_and_notary].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-
 
 <p><b>I am emotionally and mentally competent to make this uADD.  I understand the purpose and effect of this uADD, I agree with everything that is written in this uADD, and I have made this uADD knowingly, willingly and after careful deliberation.</b></p>
 
@@ -638,6 +629,10 @@ Usage: #example
 </div>"
 * lifecycleStatus = #proposed
 * category[type] = $LOINC#87528-6 "Personal health goal"
+// * description.coding.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+// * description.coding.extension.valueCode = #as-text
+* description.coding[0].code.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* description.coding[0].code.extension.valueCode = #as-text
 * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Being at peace with my God"
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
