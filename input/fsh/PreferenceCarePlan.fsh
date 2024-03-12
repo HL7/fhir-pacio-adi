@@ -18,7 +18,7 @@ Description: "The Preference Care Plan is a means for an individual to express t
 * category contains
     advance_care_planning 1..1 MS
 
-* category[advance_care_planning] = $LOINC#81378-2 "Goals, Preferences and priorities under certain health conditions [Reported]"
+* category[advance_care_planning] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
 * title 1..1 MS
 
 * subject 1..1 MS

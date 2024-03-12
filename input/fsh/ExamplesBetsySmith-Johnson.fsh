@@ -527,7 +527,7 @@ Usage: #example
 * status = #active
 * intent = #proposal
 
-* category[advance_care_planning] = $LOINC#81378-2 "Goals, Preferences and priorities under certain health conditions [Reported]"
+* category[advance_care_planning] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
 * title = "Care Plan for Unconscious, vegetative state, coma for Smith-Johnson"
 
 * subject = Reference(Example-Smith-Johnson-Patient1)
@@ -555,7 +555,7 @@ Usage: #example
 * status = #active
 * intent = #proposal
 
-* category[advance_care_planning] = $LOINC#81378-2 "Goals, Preferences and priorities under certain health conditions [Reported]"
+* category[advance_care_planning] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
 
 * title = "Care Plan for Permanent, severe brain damage"
 
@@ -581,7 +581,7 @@ Usage: #example
 * status = #active
 * intent = #proposal
 
-* category[advance_care_planning] = $LOINC#81378-2 "Goals, Preferences and priorities under certain health conditions [Reported]"
+* category[advance_care_planning] = $LOINC#81378-2 "Goals, preferences, and priorities under certain health conditions [Reported]"
 * title = "Care Plan for Terminal illness, lack of meaningful interaction"
 
 * subject = Reference(Example-Smith-Johnson-Patient1)
