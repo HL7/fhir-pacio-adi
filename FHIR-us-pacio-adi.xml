@@ -181,6 +181,7 @@
 <artifact deprecated="true" id="ValueSet/PADIClauseTypeVS" key="ValueSet-PADIClauseTypeVS" name="Type of clause"/>
 <artifact deprecated="true" id="ValueSet/PADIUponDeathPreferencesVS" key="ValueSet-PADIUponDeathPreferencesVS" name="Upon Death Preferences"/>
 <artifact id="StructureDefinition/adi-versionNumber-extension" key="StructureDefinition-padi-versionNumber-extension" name="Version Number"/>
+<artifact id="Practitioner/us-core-practitioner-kyle-anydoc" key="Practitioner-us-core-practitioner-kyle-anydoc" name="us-core-practitioner-kyle-anydoc"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="content_type1_guidance" name="Content Type 1 (PACP) Guidance"/>
