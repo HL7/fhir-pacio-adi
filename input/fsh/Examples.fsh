@@ -670,6 +670,7 @@ Usage: #example
 * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:  Being able to feed, bathe, and take care of myself"
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
+// * extension[goal-acceptance].individual.valueReference = Reference(us-core-practitioner-kyle-anydoc)
 
 
 Instance: Example-McBee-PersonalGoal4
@@ -1011,3 +1012,20 @@ Usage: #example
 * name.text = "Mary Chalmers"
 * telecom.system = #phone
 * telecom.value = "410-555-4321"
+
+Instance: us-core-practitioner-kyle-anydoc
+InstanceOf: $USCorePractitioner
+Description: "Extended example: example practitioner"
+* identifier[NPI].value = "9988776655"
+* name.family = "Anydoc"
+* name.given[0] = "Kyle"
+* name.prefix[0] = "Dr."
+* address.use = #work
+* address.line[0] = "123 Corporate Drive"
+* address.city = "Anytown"
+* address.state = "TX"
+* address.postalCode = "12345"
+* address.country = "US"
+* gender = #male
+* qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360#MD
+* qualification.code.coding[0].version = "2.7"

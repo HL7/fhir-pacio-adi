@@ -52,4 +52,6 @@ Alias: $VSACADIInterventionPreferencesEndOfLifeGrouping = http://cts.nlm.nih.gov
 Alias: $VSACADIConsentActorRole = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1046.35
 Alias: $VSACADICareExperiencePreferences = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.11
 
+// Standard extension aliases
 Alias: $data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason
+Alias: $GoalAcceptance = http://hl7.org/fhir/StructureDefinition/goal-acceptance 
