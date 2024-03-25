@@ -8,6 +8,7 @@ Alias:   $USCoreGoal = http://hl7.org/fhir/us/core/StructureDefinition/us-core-g
 Alias:   $USCoreEncounter = http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
 Alias:   $USCoreProvenance = http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance
 Alias:   $USCoreCarePlan = http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan
+Alias:   $USCoreServiceRequest = http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest 
 
 
 Alias: $USCoreDocumentReference = http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
@@ -54,4 +55,3 @@ Alias: $VSACADICareExperiencePreferences = http://cts.nlm.nih.gov/fhir/ValueSet/
 
 // Standard extension aliases
 Alias: $data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason
-Alias: $GoalAcceptance = http://hl7.org/fhir/StructureDefinition/goal-acceptance 

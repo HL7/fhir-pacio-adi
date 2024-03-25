@@ -1,5 +1,5 @@
 Profile: ADIPMOServiceRequest
-Parent: ServiceRequest
+Parent: $USCoreServiceRequest
 Id: ADI-PMOServiceRequest
 Title: "ADI Portable Medical Order ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order."
