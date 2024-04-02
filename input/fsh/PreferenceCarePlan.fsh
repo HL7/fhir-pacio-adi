@@ -34,7 +34,7 @@ Description: "The Preference Care Plan is a means for an individual to express t
 
 * supportingInfo ^short = "Observations of a patient's preferences for the scope of this care plan."
 * supportingInfo 0..* MS
-* supportingInfo only Reference(ADIPersonalInterventionPreference or ADICareExperiencePreference)
+* supportingInfo only Reference(ADICareExperiencePreference)
 
 * activity.reference only Reference($USCoreServiceRequest)
 

@@ -95,7 +95,7 @@ LA46-8 Other
 * section[portable_medical_orders].code = $LOINC#93037-0 "Portable medical order form" 
 
 * section[portable_medical_orders].entry MS
-* section[portable_medical_orders].entry only Reference(ADIPMOServiceRequest or ADIPMONoAdditionalRequestObservation)
+* section[portable_medical_orders].entry only Reference(ADIServiceRequest or ADIPMONoAdditionalRequestObservation)
 
 // TODO: reconsider slicing entry as profile slicing causes a significant operational cost (see https://chat.fhir.org/#narrow/stream/179166-implementers/topic/Slicing.20Composition.20Entries and 
 // https://www.hl7.org/fhir/profiling.html profile discriminator type)
