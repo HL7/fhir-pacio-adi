@@ -650,6 +650,7 @@ Usage: #example
 </div>"
 * lifecycleStatus = #proposed
 * category[type] = $LOINC#87528-6 "Personal health goal"
+* description.extension[adi-enclosedPrecondition-extension].valueCodeableConcept = $data-absent-reason#as-text
 * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Dying at home"
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -667,6 +668,7 @@ Usage: #example
 </div>"
 * lifecycleStatus = #proposed
 * category[type] = $LOINC#87528-6 "Personal health goal"
+* description.extension[adi-enclosedPrecondition-extension].valueCodeableConcept = $data-absent-reason#as-text
 * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me:  Being able to feed, bathe, and take care of myself"
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -685,6 +687,7 @@ Usage: #example
 </div>"
 * lifecycleStatus = #proposed
 * category[type] = $LOINC#87528-6 "Personal health goal"
+* description.extension[adi-enclosedPrecondition-extension].valueCodeableConcept = $data-absent-reason#as-text
 * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Being free from pain"
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -703,6 +706,7 @@ Usage: #example
 </div>"
 * lifecycleStatus = #proposed
 * category[type] = $LOINC#87528-6 "Personal health goal"
+* description.extension[adi-enclosedPrecondition-extension].valueCodeableConcept = $data-absent-reason#as-text
 * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Resolving conflicts"
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -721,6 +725,7 @@ Usage: #example
 </div>"
 * lifecycleStatus = #proposed
 * category[type] = $LOINC#87528-6 "Personal health goal"
+* description.extension[adi-enclosedPrecondition-extension].valueCodeableConcept = $data-absent-reason#as-text
 * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Being with my family"
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -739,6 +744,7 @@ Usage: #example
 </div>"
 * lifecycleStatus = #proposed
 * category[type] = $LOINC#87528-6 "Personal health goal"
+* description.extension[adi-enclosedPrecondition-extension].valueCodeableConcept = $data-absent-reason#as-text
 * description.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Not being a financial burden to my family"
 * subject = Reference(Example-McBee-Patient1)
 * expressedBy = Reference(Example-McBee-Patient1)
@@ -1016,7 +1022,7 @@ Usage: #example
 Instance: us-core-practitioner-kyle-anydoc
 InstanceOf: $USCorePractitioner
 Description: "Extended example: example practitioner"
-* identifier[NPI].value = "9988776655"
+* identifier[NPI].value = "1234567893"
 * name.family = "Anydoc"
 * name.given[0] = "Kyle"
 * name.prefix[0] = "Dr."

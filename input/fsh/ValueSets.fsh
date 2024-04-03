@@ -46,7 +46,6 @@ Description: "Codes indicating decisions a healthcare agent may or may not make 
 * include $LOINC#81347-7 "Consent for healthcare agent to deviate from stated goals, preferences and priorities [Reported]"
 * include $LOINC#81344-4 "Healthcare agent authority to inspect and disclose mental and physical health information [Reported]"
 * include $LOINC#81345-1 "Healthcare agent authority to inspect and disclose specially protected health information [Reported]"
-
 * insert LOINCCopyrightNotice
 
 
@@ -88,9 +87,8 @@ Description: "Types of Documents"
 * include $SNOMEDCT#714748000 "Has advance care plan"
 * include codes from system $SNOMEDCT where concept is-a #425392003 "Active advance directive"
 * include codes from system $SNOMEDCT where concept is-a #423876004 "Clinical document"
-* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc
-
-This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert LOINCCopyrightNotice
+// * insert SNOMEDCopyrightNotice
 
 // LOINC PMO ValueSet lists
 
@@ -101,6 +99,7 @@ Description: "LOINC POLST CPR Answer List (LL6263-9)"
 * ^experimental = false
 * include $LOINC#LA33470-8  "Yes CPR"
 * include $LOINC#LA33471-6  "No CPR: Do Not Attempt Resuscitation"
+* insert LOINCCopyrightNotice
 
 
 ValueSet: LOINCPOLSTInitialTxAnswerList
@@ -111,7 +110,7 @@ Description: "LOINC POLST Initial Tx Answer List (LL6264-7)"
 * include $LOINC#LA33473-2 "Full Treatments"
 * include $LOINC#LA33474-0 "Selective Treatments"
 * include $LOINC#LA33475-7 "Comfort-focused Treatments"
-
+* insert LOINCCopyrightNotice
 
 
 ValueSet: LOINCPOLSTMedAssistNutrAnswerList
@@ -123,6 +122,7 @@ Description: "LOINC POLST Med assist nutr Answer List (LL6267-0)"
 * include $LOINC#LA33490-6 "Trial period for artificial nutrition but no surgically-placed tubes"
 * include $LOINC#LA33491-4 "No artificial means of nutrition desired"
 * include $LOINC#LA33492-2 "Not discussed or no decision made (provide standard of care)"
+* insert LOINCCopyrightNotice
 
 ValueSet: LOINCPOLSTReviewAnswerList
 Title: "LOINC POLST review Answer List"
@@ -133,6 +133,7 @@ Description: "LOINC POLST review Answer List (LL6265-4)"
 * include $LOINC#LA33478-1 "Conflict exists, notified patient"
 * include $LOINC#LA33479-9 "Advance directive not available"
 * include $LOINC#LA33481-5 "No advance directive exists"
+* insert LOINCCopyrightNotice
 
 ValueSet: LOINCPOLSTDiscussPartAnswerList
 Title: "LOINC POLST discuss part List"
@@ -144,7 +145,7 @@ Description: "LOINC POLST discuss part Answer List (LL6266-2)"
 * include $LOINC#LA33485-6 "Parent of minor"
 * include $LOINC#LA33487-2 "Legal surrogate/health care agent"
 * include $LOINC#LA46-8 "Other"
-
+* insert LOINCCopyrightNotice
 
 
 ValueSet: ADIPMOConsentCategoriesVS

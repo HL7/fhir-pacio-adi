@@ -22,9 +22,6 @@ Usage: #example
 * entry[+].fullUrl = "http://www.example.org/fhir/Consent/Example-Smith-Johnson-HealthcareAgentConsent"
 * entry[=].resource = Example-Smith-Johnson-HealthcareAgentConsent
 
-// This Care experience was linked under the end of life section, which is not allowed. The scope of that section may change to support any condition, and if so should also include care experiences. At which point this can be re-added
-//* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference1"
-//* entry[=].resource = Example-Smith-Johnson-CareExperiencePreference1
 * entry[+].fullUrl = "http://www.example.org/fhir/CarePlan/Example-Smith-Johnson-PreferenceCarePlan1"
 * entry[=].resource = Example-Smith-Johnson-PreferenceCarePlan1
 * entry[+].fullUrl = "http://www.example.org/fhir/CarePlan/Example-Smith-Johnson-PreferenceCarePlan2"
@@ -47,6 +44,10 @@ Usage: #example
 * entry[=].resource = Example-Smith-Johnson-CareExperiencePreference7
 * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference8"
 * entry[=].resource = Example-Smith-Johnson-CareExperiencePreference8
+
+// This Care experience was linked under the end of life section, which is not allowed. The scope of that section may change to support any condition, and if so should also include care experiences. At which point this can be re-added
+//* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference1"
+//* entry[=].resource = Example-Smith-Johnson-CareExperiencePreference1
 
 
 //* entry[+].fullUrl = "http://www.example.org/fhir/List/Example-Smith-Johnson-PersonalPrioritiesOrganizer1"
@@ -259,6 +260,7 @@ Usage: #example
 <p>These are some of my fondest memories from life that have always brought a smile to my face or made me laugh:</p>
 <p><i>My dogs make me laugh when they play together, and my grandchildren make me laugh when they put on plays for me.  They bring me great joy.</i></p>
 </div>"
+* section[gpp_personal_care_experience].entry[+] = Reference(Example-Smith-Johnson-CareExperiencePreference1)
 * section[gpp_personal_care_experience].entry[+] = Reference(Example-Smith-Johnson-CareExperiencePreference2)
 * section[gpp_personal_care_experience].entry[+] = Reference(Example-Smith-Johnson-CareExperiencePreference3)
 * section[gpp_personal_care_experience].entry[+] = Reference(Example-Smith-Johnson-CareExperiencePreference4)
