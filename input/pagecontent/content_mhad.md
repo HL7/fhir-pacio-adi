@@ -11,4 +11,3 @@ Structurally, MHAD shares the same ADI header as the PACP document. It differs i
 
 ADI Personal Goal profile description to use the goal-acceptance standard extension to represent  a shared goal between the patient (as noted in expressedBy) and the practitioner (as noted in goal-acceptance.individual:Reference(Practitioner))
 
-**TO DO:**: Make goal-acceptance (as a standard extension) MS in the ADI Personal Goals profile.
