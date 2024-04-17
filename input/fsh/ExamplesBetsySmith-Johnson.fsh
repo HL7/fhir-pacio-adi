@@ -104,9 +104,13 @@ Usage: #example
 
 * meta.lastUpdated = "2021-03-29T14:25:34.001-05:00"
 * language = #en-US
-
-* identifier[0].system = "urn:oid:2.16.840.1.113883.4.823.1"
-* identifier[0].value = "047e62ccf09d4b39a8add708a69b7f38"
+* identifier[0].use = #usual
+* identifier[=].type = $HL7IdentifierType#MR "Medical Record Number"
+* identifier[=].type.text = "Medical Record Number"
+* identifier[=].system = "http://hospital.smarthealthit.org"
+* identifier[=].value = "1032702"
+* identifier[+].system = "http://hl7.org/fhir/sid/us-medicare"
+* identifier[=].value = "10A3D58WH1600"
 
 * active = true
 * name[0].use = #usual
@@ -114,13 +118,16 @@ Usage: #example
 * name[0].given[0] = "Betsy"
 * name[0].text = "Smith-Johnson, Betsy"
 
+* gender = #female
+* birthDate = "1950-11-15"
+
+* extension[race].extension[ombCategory].valueCoding = $OmbRaceCat#2106-3 "White"
+* extension[race].extension[text].valueString = "White"
 
 * telecom[0].system = #email
 * telecom[0].value = "BetsySJ@example.com"
 * telecom[0].use = #home
 
-* gender = #female
-* birthDate = "1950-11-15"
 * address[0].use = #home
 * address[0].type = http://hl7.org/fhir/address-type#physical
 * address[0].line[0] = "111 Maple Court"
@@ -130,9 +137,19 @@ Usage: #example
 * address[0].country = "US"
 * maritalStatus = $HL7NullFlavor#UNK
 
-
 * communication[0].language = urn:ietf:bcp:47#en "English"
 * communication[0].preferred = true
+
+* contact[0].name.text = "Charles Johnson"
+* contact[=].relationship = $HL7RoleCode#SONC/Hl7V2TBL0131#C/Hl7V3ROLE#GUARD
+* contact[=].address.text = "111 Maple Ct, Grand Rapids, MI 49503"
+* contact[=].telecom.system = #phone
+* contact[=].telecom.value = "(210) 222-3333"
+* contact[+].name.text = "Debra Johnson"
+* contact[=].relationship = $HL7RoleCode#DAUC
+* contact[=].address.text = "333 W. Camden St., Baltimore, MD 21201"
+* contact[=].telecom.system = #phone
+* contact[=].telecom.value = "(410) 444-5555"
 
 //Composition Examples
 
@@ -145,7 +162,7 @@ Usage: #example
 
 // Need to add extensions (mostly participants)
 * extension[adi-versionNumber-extension].valueInteger = 1
-* extension[adi-jurisdiction-extension].valueCodeableConcept = urn:iso:std:iso:3166:-2|2021#US-MI
+* extension[adi-jurisdiction-extension].valueCodeableConcept = urn:iso:std:iso:3166#US-MI
 * extension[adi-dataEnterer-extension].valueReference = Reference(Example-Smith-Johnson-Patient1)
 * extension[adi-effective-date-extension].valuePeriod.start = "2021-03-29T14:25:34-05:00"
 // witness Sally Bobbins
@@ -1287,7 +1304,7 @@ Usage: #example
 * target = Reference(Example-Smith-Johnson-PACPComposition1)
 * recorded = "2021-03-29T14:25:34.001-05:00"
 
-* agent[assembler].type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#assembler "Assembler"
+* agent[assembler].type = $HL7ProvenanceParticipantType#assembler "Assembler"
 * agent[assembler].who = Reference(Example-Smith-Johnson-OrganizationAssembler1)
 
 

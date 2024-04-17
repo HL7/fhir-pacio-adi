@@ -5,10 +5,13 @@ Alias:   $USCorePractitioner = http://hl7.org/fhir/us/core/StructureDefinition/u
 Alias:   $USCorePractitionerRole = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole
 Alias:   $USCoreOrganization = http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
 Alias:   $USCoreGoal = http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal
+Alias:   $USCoreGoalDescription = http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description|6.1.0
 Alias:   $USCoreEncounter = http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
 Alias:   $USCoreProvenance = http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance
 Alias:   $USCoreCarePlan = http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan
 Alias:   $USCoreServiceRequest = http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest 
+Alias:   $USCoreRace = http://hl7.org/fhir/us/core/StructureDefinition/us-core-race
+Alias:   $USCoreEthnicity = http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity
 
 
 Alias: $USCoreDocumentReference = http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
@@ -18,8 +21,8 @@ Alias: $USCoreDocumentReferenceCategory = http://hl7.org/fhir/us/core/ValueSet/u
 Alias: $USRealmHeader = http://hl7.org/fhir/us/ccda/StructureDefinition/US-Realm-Header
 
 
-
-Alias: $HL7ProvenanceParticipantType = http://terminology.hl7.org/CodeSystem/provenance-participant-type
+Alias: $HL7IdentifierType = http://terminology.hl7.org/CodeSystem/v2-0203
+Alias: $HL7ProvenanceParticipantType = http://terminology.hl7.org/CodeSystem/provenance-participant-type|1.0.0
 Alias: $HL7NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 Alias: $HL7YesNoVS = http://terminology.hl7.org/ValueSet/v2-0136
 Alias: $HL7YesNoCS = http://terminology.hl7.org/CodeSystem/v2-0532
@@ -34,6 +37,7 @@ Alias: $HL7JurisdictionCodes = http://hl7.org/fhir/ValueSet/jurisdiction
 
 Alias: $LOINC = http://loinc.org
 Alias: $SNOMEDCT = http://snomed.info/sct
+Alias: $OmbRaceCat = urn:oid:2.16.840.1.113883.6.238
 
 Alias: $HL7RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $HL7RoleClass = http://terminology.hl7.org/CodeSystem/v3-RoleClass

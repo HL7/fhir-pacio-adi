@@ -42,7 +42,7 @@ parameters:
   path-liquid: liquid
 copyrightYear: 2021+
 releaseLabel: STU 2
-jurisdiction: urn:iso:std:iso:3166:-2#US "United States of America"
+jurisdiction: urn:iso:std:iso:3166#US "United States of America"
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To control the menu.xml using this config, uncomment and set the "menu" property.             │

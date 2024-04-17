@@ -991,7 +991,7 @@ Usage: #example
 * target = Reference(Example-McBee-PACPComposition1)
 * recorded = "2019-12-06T10:11:30.001-04:00"
 
-* agent[assembler].type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#assembler "Assembler"
+* agent[assembler].type = $HL7ProvenanceParticipantType#assembler "Assembler"
 * agent[assembler].who = Reference(Example-McBee-OrganizationAssembler1)
 
 // ADI Notary example
