@@ -141,7 +141,7 @@ Usage: #example
 * communication[0].preferred = true
 
 * contact[0].name.text = "Charles Johnson"
-* contact[=].relationship = $HL7RoleCode#SONC/Hl7V2TBL0131#C/Hl7V3ROLE#GUARD
+* contact[=].relationship = $HL7RoleCode#SONC
 * contact[=].address.text = "111 Maple Ct, Grand Rapids, MI 49503"
 * contact[=].telecom.system = #phone
 * contact[=].telecom.value = "(210) 222-3333"
