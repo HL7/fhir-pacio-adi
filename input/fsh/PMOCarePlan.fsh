@@ -28,7 +28,7 @@ Description: "The Portable Medical Order Care Plan."
 * addresses 0..* MS
 * addresses ^comment = "TODO"
 
-* activity.reference only Reference(ADIServiceRequest)
+* activity.reference only Reference(ADIPMOServiceRequest)
 
 //* goal ^short = "Patient's preferences and goals for the scope of this care plan."
 //* goal 1..* MS

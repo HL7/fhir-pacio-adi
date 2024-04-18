@@ -28,6 +28,7 @@ Usage: #example
 * entry[=].resource = Example-Smith-Johnson-PreferenceCarePlan2
 * entry[+].fullUrl = "http://www.example.org/fhir/CarePlan/Example-Smith-Johnson-PreferenceCarePlan3"
 * entry[=].resource = Example-Smith-Johnson-PreferenceCarePlan3
+
 * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference1"
 * entry[=].resource = Example-Smith-Johnson-CareExperiencePreference1
 * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference2"
@@ -162,7 +163,7 @@ Usage: #example
 
 // Need to add extensions (mostly participants)
 * extension[adi-versionNumber-extension].valueInteger = 1
-* extension[adi-jurisdiction-extension].valueCodeableConcept = urn:iso:std:iso:3166#US-MI
+* extension[adi-jurisdiction-extension].valueCodeableConcept = urn:iso:std:iso:3166:-2#US-MI
 * extension[adi-dataEnterer-extension].valueReference = Reference(Example-Smith-Johnson-Patient1)
 * extension[adi-effective-date-extension].valuePeriod.start = "2021-03-29T14:25:34-05:00"
 // witness Sally Bobbins
@@ -309,19 +310,11 @@ Usage: #example
 </div>"
 
 
-
 * section[gpp_for_certain_health_condition].entry[+] = Reference(Example-Smith-Johnson-PreferenceCarePlan1)
 * section[gpp_for_certain_health_condition].entry[+] = Reference(Example-Smith-Johnson-PreferenceCarePlan2)
 * section[gpp_for_certain_health_condition].entry[+] = Reference(Example-Smith-Johnson-PreferenceCarePlan3)
-//* section[gpp_for_certain_health_condition].entry[+] = Reference(Example-Smith-Johnson-PersonalPrioritiesOrganizer1)
-//* section[gpp_for_certain_health_condition].entry[+] = Reference(Example-Smith-Johnson-PersonalInterventionPreference2)
-//* section[gpp_for_certain_health_condition].entry[+] = Reference(Example-Smith-Johnson-PersonalInterventionPreference4)
 
 
-
-
-
-// Line 477
 * section[gpp_upon_death].title = "Goals, Preferences and Priorities Upon Death"
 * section[gpp_upon_death].code = $LOINC#81337-8 "Patient Goals, Preferences, and Priorities Upon Death"
 * section[gpp_upon_death].text.status = #additional
@@ -527,10 +520,9 @@ Usage: #example
 * provision.purpose = http://terminology.hl7.org/CodeSystem/v3-ActReason#PWATRNY
 
 
-
-
 // CarePlan
 // Preference Care Plan
+
 Instance: Example-Smith-Johnson-PreferenceCarePlan1
 InstanceOf: ADIPreferenceCarePlan
 Description: "Example Patient Smith-Johnson Preference Care Plan 1"
@@ -617,9 +609,6 @@ Usage: #example
 * supportingInfo[+] = Reference(Example-Smith-Johnson-PersonalInterventionPreference1)
 * supportingInfo[+] = Reference(Example-Smith-Johnson-PersonalInterventionPreference3)
 * supportingInfo[+] = Reference(Example-Smith-Johnson-PersonalInterventionPreference5)
-
-
-
 
 
 // // Observations

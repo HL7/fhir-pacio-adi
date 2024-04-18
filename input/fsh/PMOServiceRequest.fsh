@@ -1,4 +1,4 @@
-Profile: ADIServiceRequest
+Profile: ADIPMOServiceRequest
 Parent: $USCoreServiceRequest
 Id: ADI-PMOServiceRequest
 Title: "ADI ServiceRequest"
@@ -39,7 +39,7 @@ Description: "This profile is used to represent both a patient authored care pla
 
 
 Profile: ADIPMOCPRServiceRequest
-Parent: ADIServiceRequest
+Parent: ADIPMOServiceRequest
 Id: ADI-PMOCPRServiceRequest
 Title: "ADI PMO Cardiopulmonary Resuscitation ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order for cardiopulmonary resuscitation."
@@ -51,7 +51,7 @@ Description: "This profile is used to represent a practitioner authored portable
 
 
 Profile: ADIPMOInitialTreatmentServiceRequest
-Parent: ADIServiceRequest
+Parent: ADIPMOServiceRequest
 Id: ADI-PMOInitialTreatmentServiceRequest
 Title: "ADI PMO Initial Treatment ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order for initial treatment."
@@ -62,7 +62,7 @@ Description: "This profile is used to represent a practitioner authored portable
 
 
 Profile: ADIPMOMedicallyAssistedNutritionServiceRequest
-Parent: ADIServiceRequest
+Parent: ADIPMOServiceRequest
 Id: ADI-PMOMedicallyAssistedNutritionServiceRequest
 Title: "ADI PMO Medically Assisted Nutrition ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order for medically assisted nutrition."
@@ -73,7 +73,7 @@ Description: "This profile is used to represent a practitioner authored portable
 
 
 Profile: ADIPMOAdditionalRequestServiceRequest
-Parent: ADIServiceRequest
+Parent: ADIPMOServiceRequest
 Id: ADI-PMOAdditionalRequestServiceRequest
 Title: "ADI PMO Additional request or instruction ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order additional requests or instructions."
