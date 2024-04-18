@@ -1,8 +1,8 @@
 Profile: ADIPMOServiceRequest
-Parent: ServiceRequest
+Parent: $USCoreServiceRequest
 Id: ADI-PMOServiceRequest
-Title: "ADI Portable Medical Order ServiceRequest"
-Description: "This profile is used to represent a practitioner authored portable medical order."
+Title: "ADI ServiceRequest"
+Description: "This profile is used to represent both a patient authored care plan (PACP) and a practitioner authored portable medical order (PMO)."
 
 /*
 * extension contains
@@ -17,7 +17,7 @@ Description: "This profile is used to represent a practitioner authored portable
 // TODO may need to get a variance request from us core ServiceRequest. In different version and also do any of the categories fit?
 // http://hl7.org/fhir/us/core/STU5.0.1/ValueSet-us-core-servicerequest-category.html
 
-* category 1..1 MS
+* category 1..* MS
 * code 1..1 MS
 
 

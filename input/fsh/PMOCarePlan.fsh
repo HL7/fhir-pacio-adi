@@ -1,5 +1,5 @@
 Profile: ADIPMOCarePlan
-Parent: CarePlan
+Parent: $USCoreCarePlan
 Id: ADI-PMOCarePlan
 Title: "ADI Portable Medical Order Care Plan"
 Description: "The Portable Medical Order Care Plan."
@@ -25,7 +25,7 @@ Description: "The Portable Medical Order Care Plan."
 * subject 1..1 MS
 * subject only Reference($USCorePatient)
 
-* addresses 1..* MS
+* addresses 0..* MS
 * addresses ^comment = "TODO"
 
 * activity.reference only Reference(ADIPMOServiceRequest)

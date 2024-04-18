@@ -28,9 +28,6 @@ Description: "This profile is a statement that presents the author's personal he
 * expressedBy 1..1 MS
 * expressedBy only Reference($USCorePatient)
 
-// Declare the extension as must-support
-* extension contains $GoalAcceptance named goal-acceptance 0..1 MS
-
 * obeys goal-subject-expressedby
 
 Invariant:  goal-subject-expressedby

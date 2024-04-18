@@ -32,9 +32,9 @@
 <artifact id="StructureDefinition/ADI-PMOCarePlan" key="StructureDefinition-ADI-PMOCarePlan" name="ADI Portable Medical Order Care Plan"/>
 <artifact id="StructureDefinition/ADI-PMOComposition" key="StructureDefinition-ADI-PMOComposition" name="ADI Portable Medical Order Composition"/>
 <artifact id="StructureDefinition/ADI-PMOHospiceObservation" key="StructureDefinition-ADI-PMOHospiceObservation" name="ADI Portable Medical Order Hospice Observation"/>
-<artifact id="StructureDefinition/ADI-PMOServiceRequest" key="StructureDefinition-ADI-PMOServiceRequest" name="ADI Portable Medical Order ServiceRequest"/>
 <artifact id="StructureDefinition/ADI-PreferenceCarePlan" key="StructureDefinition-PADI-PreferenceCarePlan" name="ADI Preference Care Plan"/>
 <artifact id="StructureDefinition/ADI-Provenance" key="StructureDefinition-ADI-Provenance" name="ADI Provenance"/>
+<artifact id="StructureDefinition/ADI-PMOServiceRequest" key="StructureDefinition-ADI-PMOServiceRequest" name="ADI ServiceRequest"/>
 <artifact id="StructureDefinition/ADI-Witness" key="StructureDefinition-ADI-Witness" name="ADI Witness"/>
 <artifact deprecated="true" id="ValueSet/PADIAdvanceDirectiveCategoriesVS" key="ValueSet-PADIAdvanceDirectiveCategoriesVS" name="Advance Directive Categories"/>
 <artifact deprecated="true" id="StructureDefinition/padi-attestationInformation-extension" key="StructureDefinition-padi-attestationInformation-extension" name="Attestation Information"/>

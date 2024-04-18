@@ -92,7 +92,7 @@ LA46-8 Other
 * section[portable_medical_orders].title 1..1 MS
 * section[portable_medical_orders].code 1..1 MS
 //* section[portable_medical_orders].code = $LOINC#100821-8 // "National POLST form: portable medical order panel"
-* section[portable_medical_orders].code = $LOINC#59772-4 // "Planned procedure Narrative"
+* section[portable_medical_orders].code = $LOINC#93037-0 "Portable medical order form" 
 
 * section[portable_medical_orders].entry MS
 * section[portable_medical_orders].entry only Reference(ADIPMOServiceRequest or ADIPMONoAdditionalRequestObservation)

@@ -59,7 +59,6 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[gpp_for_certain_health_condition].title 1..1 MS
 * section[gpp_for_certain_health_condition].code 1..1 
 * section[gpp_for_certain_health_condition].code = $LOINC#81336-0
-* section[gpp_for_certain_health_condition].entry 
 //* section[gpp_for_certain_health_condition].entry only Reference(ADIPreferenceCarePlan or ADIPersonalInterventionPreference or ADIPersonalInterventionRequestPreference or ADIPersonalPrioritiesOrganizer or ADIPersonalGoal)
 * section[gpp_for_certain_health_condition].entry only Reference(ADIPreferenceCarePlan)
 
