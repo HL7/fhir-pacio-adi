@@ -24,8 +24,6 @@ Use cases in this IG will provide requirements for systems to use FHIR RESTful o
 
 #### Use Case 1: Create in Digital Form [Content]
 
-##### Use Case 1: Description 
-
 In Use Case 1, the person that wants to create their advance directive information in a digital form enters information in a content creator system. The content creator system ensures the information is stored and is available for the steps in the process that are described in the following use cases.  
 
 {% include examplebutton_default.html example="use_case_1_actor_transition.md" b_title = "Click Here To See Use Case 1 Actor Transaction Diagram" %}
@@ -44,8 +42,6 @@ On first creation, the DocumentReference version number is set to 1 and the stat
 
 #### Use Case 2: Share [Content]
 
-##### Use Case 2 Description
-
 In Use Case 2, the Content Creator system makes the person-authored advance directive information available via a Content Receiver system using a FHIR API. The Content Receiver system may be an end system or may be another Content Custodian system.
 
 ##### Use Case 2 Process Steps
@@ -54,8 +50,6 @@ In Use Case 2, the process is started when a person wants to share their advance
 
 
 #### Use Case 3: Query and Access [Content]
-
-##### Use Case 3 Description
 
 Use-case 3 aims to enable provider access to advance directive information. It includes 3 steps: 
 
@@ -87,8 +81,6 @@ The Content Requester system SHOULD use the FHIR operation [$match](https://hl7.
 
 #### Use Case 4: Update [Content]
 
-##### Use Case 4 Description
-
 In Use Case 4, the process is started by a person wanting to update previously created advance directive information. The precondition for the process is that the Content Creator and Content Custodian systems are able to associate a new version of the ADI information and/or document(s) as active and possess the ability to mark prior ADI information and/or document(s) version as inactive.
 
 ##### Use Case 4 Process Steps
@@ -110,28 +102,41 @@ It is the responsibility of the Content Custodian of the AD documents to maintai
 
 **Note:** FHIR Resource versioning is only used for error corrections. 
 
+#### Use Case 5: Revoke [Content]
 
-#### Use Case 5: Verify current version of AD [Content]
+In Use Case 5, the person decides to withdraw the Advance Directive document. Revoke is more complex than the Update use case in that the status depends on situation or reason for revoking the document.
+* scenario 1: User decides to revoke advance directive entirely; there is only one version of the document.
+* scenario 2: User decides to revoke only the current version of the document because it was entered in error. A prior version of the document exists.
 
-##### Use Case 5 Description
+##### Use Case 5 Process Steps
 
-In Use Case 5, a Content Verifier has advance directive information which it previously received or retrieved.
+**Scenario: 1: Revoke the advance directive entirely**
+
+* Step 1 sets the `DocumentReference.docStatus` code to *cancelled*
+
+**Scenario: 2: Revoke the advance directive because it was entered in error - prior version exists**
+
+This scenario could be addressed as an update (Use Case 4), except that we describe that the reason (element name??) was entered-in-error.
+
+#### Use Case 6: Verify current version of AD [Content]
+
+In Use Case 6, a Content Verifier has advance directive information which it previously received or retrieved.
 
 * Step 1 is the retrieval of the known DocumentReference. The Content Verifier system already has a version of the document and therefore knows the setId identifier for the document. The Content Verifier seeks to confirm the information they have is the person’s current advance directive information. To verify that the document they have is the current version (and get the current version if it is not), the Content Verifier queries the Content Custodian system to retrieve the current version of the document already in their possession. If the DocumentReference has a status = current, the latest document has been verified as retrieved and no further action is needed.
 
-{% include examplebutton_default.html example="use_case_5_actor_transition_1.md" b_title = "Click Here To See Use Case 5 Actor Transaction Diagram Step 1" %}
+{% include examplebutton_default.html example="use_case_6_actor_transition_1.md" b_title = "Click Here To See Use Case 6 Actor Transaction Diagram Step 1" %}
 
  * Step 2 is to retrieve newer content if available. If the `DocumentReference` resource retrieved by the Content Retriever system in Step 1 has a status of `superseded` then the document that the Content Custodian system already knows of has been replaced, necessitating that the Content Verifier system perform a second query for a `DocumentReference` resource that has a `relatesto.code` of `replaces` and a reference to the superseded `DocumentReference` resource. The Content Verifier can then retrieve the document as described in step 3 of <a hef="#use-case-3-description">Use Case 3</a>.
 
-{% include examplebutton_default.html example="use_case_5_actor_transition_2.md" b_title = "Click Here To See Use Case 5 Actor Transaction Diagram Step 2" %}
+{% include examplebutton_default.html example="use_case_6_actor_transition_2.md" b_title = "Click Here To See Use Case 5 Actor Transaction Diagram Step 2" %}
 
-#### Use Case 5 Processes Steps
+#### Use Case 6 Processes Steps
 
-In Use Case 5, the process is started by a Content Verifier system that would like to confirm the current version of advance directive information is already stored, or not. The precondition for the process is the Content Verifier system has a version of advance directive information from an earlier time.
+In Use Case 6, the process is started by a Content Verifier system that would like to confirm the current version of advance directive information is already stored, or not. The precondition for the process is the Content Verifier system has a version of advance directive information from an earlier time.
 
 * First, the Content Verifier system performs a GET DocumentReference with known setID to content custodian. The Content Custodian system returns the `DocumentReference`.
 * If the `DocumentReference` returned contains a `status` of `superseded` then the document has been replaced and the Content Verifier system will perform a second query for a `DocumentReference` resource based on the `relatesto.code` referenced by the superseded `DocumentReference` resource. 
 * The Content Verifier system will read the wanted documents using a GET operation on the URL included in the “current” `DocumentReference` resource and decode the document content if necessary.
 
-{% include examplebutton_default.html example="use_case_5_sequence.md" b_title = "Click Here To See Use Case 5 Sequence Diagram" %}
+{% include examplebutton_default.html example="use_case_6_sequence.md" b_title = "Click Here To See Use Case 6 Sequence Diagram" %}
 

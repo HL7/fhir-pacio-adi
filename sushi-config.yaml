@@ -59,12 +59,14 @@ menu:
     Search Parameters: search_parameters.html
     Key Terms and Acronyms: key_terms_and_acronyms.html
   Patient-Authored:
-    User Stories and Personas: type1_user_stories_and_personas.html
-    Specification Guidance: content_type1_guidance.html
+    User Stories and Personas: content_type1_pacp_user_stories.html
+    Specification Guidance: content_type1_pacp_guidance.html
   Portable Medical Orders:
-    User Stories and Personas: type3_user_stories_and_personas.html
-    Specification Guidance: content_type3_guidance.html
-  Mental Health: content_mhad.html
+    User Stories and Personas: content_type3_pmo_user_stories.html
+    Specification Guidance: content_type3_pmo_guidance.html
+  Mental Health: 
+    User Stories and Personas: content_type1_mhad_user_stories.html
+    Specification Guidance: content_type1_mhad_guidance.html
   FHIR Artifacts:
     Profiles: artifacts.html#3
     Extensions: artifacts.html#5
@@ -78,24 +80,28 @@ menu:
 pages:
   index.md:
     title: Home
-  type1_user_stories_and_personas.md:
-    title: User Stories and Personas
-  system_use_cases.md:
-    title: System Use Cases
-  content_mhad.md:
-    title: Mental Health Advance Directives
   content_type_overview.md:
     title: General Guidance
-  content_type1_guidance.md:
-    title: Content Type 1 (PACP) Guidance
-  content_type3_guidance.md:
-    title: Content Type 3 (PMO) Guidance
+  content_type1_pacp_user_stories.md:
+    title: User Stories and Personas
+  content_type1_mhad_user_stories.md:
+    title: User Stories and Personas
+  content_type1_mhad_guidance.md:
+    title: MHAD Guidance
+  content_type1_pacp_guidance.md:
+    title: PACP Guidance
+  content_type3_pmo_user_stories.md:
+    title: User Stories and Personas
+  content_type3_pmo_guidance.md:
+    title: PMO Guidance
   formal_specification.md:
     title: Formal Specification
   security_privacy_consent.md:
     title: Security, Privacy, and Consent
   signatures.md:
     title: Signatures
+  system_use_cases.md:
+    title: System Use Cases
   search_parameters.md:
     title: Recommended Search Parameters
   key_terms_and_acronyms.md:
@@ -106,5 +112,3 @@ pages:
     title: Release Notes
   downloads.md:
     title: Downloads
-  type3_user_stories_and_personas.md:
-    title: User Stories and Personas

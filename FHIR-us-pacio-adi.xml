@@ -184,15 +184,15 @@
 <artifact id="Practitioner/us-core-practitioner-kyle-anydoc" key="Practitioner-us-core-practitioner-kyle-anydoc" name="us-core-practitioner-kyle-anydoc"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
-<page key="content_type1_guidance" name="Content Type 1 (PACP) Guidance"/>
-<page key="content_type3_guidance" name="Content Type 3 (PMO) Guidance"/>
 <page key="downloads" name="Downloads"/>
 <page key="artifacts" name="FHIR Artifacts"/>
 <page key="formal_specification" name="Formal Specification"/>
 <page key="general_guidance" name="General Guidance"/>
 <page key="index" name="Home"/>
 <page key="key_terms_and_acronyms" name="Key Terms and Acronyms"/>
-<page key="content_mhad" name="Mental Health Advance Directives"/>
+<page key="content_type1_mhad_guidance" name="MHAD Guidance"/>
+<page key="content_type1_pacp_guidance" name="PACP Guidance"/>
+<page key="content_type3_pmo_guidance" name="PMO Guidance"/>
 <page deprecated="true" key="patient_stories_and_personas" name="Patient Stories and Personas"/>
 <page key="search_parameters" name="Recommended Search Parameters"/>
 <page key="change_log" name="Release Notes"/>
@@ -201,6 +201,7 @@
 <page key="system_use_cases" name="System Use Cases"/>
 <page key="toc" name="Table of Contents"/>
 <page deprecated="true" key="use_cases" name="Use Cases"/>
-<page key="type1_user_stories_and_personas" name="User Stories and Personas"/>
-<page key="type3_user_stories_and_personas" name="User Stories and Personas"/>
+<page key="content_type1_pacp_user_stories" name="User Stories and Personas"/>
+<page key="content_type1_mhad_user_stories" name="User Stories and Personas"/>
+<page key="content_type3_pmo_user_stories" name="User Stories and Personas"/>
 </specification>
