@@ -68,12 +68,8 @@ menu:
     User Stories and Personas: content_type1_mhad_user_stories.html
     Specification Guidance: content_type1_mhad_guidance.html
   FHIR Artifacts:
-    Profiles: artifacts.html#3
-    Extensions: artifacts.html#5
-    Terminology: artifacts.html#6
-    Search Parameters: search_parameters.html
-    Capability Statement: CapabilityStatement-adi.html
-    Examples: artifacts.html#8
+    Profiles: artifact_adi.html
+    Package Dependencies: package_dependencies.html
   Release Notes: change_log.html
   Downloads: downloads.html
 
@@ -96,6 +92,8 @@ pages:
     title: PMO Guidance
   formal_specification.md:
     title: Formal Specification
+  package_dependencies.md:
+    title: Package Dependencies
   security_privacy_consent.md:
     title: Security, Privacy, and Consent
   signatures.md:
@@ -106,7 +104,7 @@ pages:
     title: Recommended Search Parameters
   key_terms_and_acronyms.md:
     title: Key Terms and Acronyms
-  artifacts.html:
+  artifact_adi.md:
     title: FHIR Artifacts
   change_log.md:
     title: Release Notes
