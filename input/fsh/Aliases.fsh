@@ -59,3 +59,6 @@ Alias: $VSACADICareExperiencePreferences = http://cts.nlm.nih.gov/fhir/ValueSet/
 
 // Standard extension aliases
 Alias: $data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason
+
+// fix for FHIR-46149
+Alias: $VSACADIAdvanceDirectiveCategoriesGrouper = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.25

@@ -10,6 +10,9 @@ Description: "This profile defines constraints that represent the information ne
 * identifier MS
 * status MS
 * type 1..1 MS
+* type from $VSACADIAdvanceDirectiveCategoriesGrouper
+* insert ADIDocumentReferenceShortDescriptions // adds ruleset for short descriptions
+
 // TODO add page guidance on the different document types
 /*
 * include $LOINC#64298-3 "Power of attorney"
@@ -17,10 +20,8 @@ Description: "This profile defines constraints that represent the information ne
 * include $LOINC#86533-7 "Patient Living will"
 * include $LOINC#92664-2 "Power of attorney and Living will"
 */
-//* type from ADIAdvanceDirectiveCategoriesVS (extensible)
-//* type short name "Advance Directives Categories"
-* category 1..* MS
-* category from $USCoreDocumentReferenceCategory (extensible)
+* category 1..* MS // constraint 1..* made in US Core dependency.
+* category = $LOINC#42348-3
 * subject 1..1 MS
 * subject only Reference($USCorePatient)
 * date MS
@@ -38,8 +39,6 @@ Description: "This profile defines constraints that represent the information ne
 * context.encounter MS
 * context.encounter only Reference ($USCoreEncounter)
 * context.period MS
-
-* insert ADIDocumentReferenceShortDescriptions
 
 // These are from the mapping document and are likely not the intended final short descriptions
 RuleSet: ADIDocumentReferenceShortDescriptions
