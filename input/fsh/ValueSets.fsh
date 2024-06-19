@@ -88,7 +88,7 @@ Description: "Types of Documents"
 * include codes from system $SNOMEDCT where concept is-a #425392003 "Active advance directive"
 * include codes from system $SNOMEDCT where concept is-a #423876004 "Clinical document"
 * insert LOINCCopyrightNotice
-// * insert SNOMEDCopyrightNotice
+* insert SNOMEDCopyrightNotice
 
 // LOINC PMO ValueSet lists
 
