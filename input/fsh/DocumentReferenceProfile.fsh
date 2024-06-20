@@ -10,15 +10,7 @@ Description: "This profile defines constraints that represent the information ne
 * identifier MS
 * status MS
 * type 1..1 MS
-// TODO add page guidance on the different document types
-/*
-* include $LOINC#64298-3 "Power of attorney"
-* include $LOINC#81334-5 "Patient Personal advance care plan"
-* include $LOINC#86533-7 "Patient Living will"
-* include $LOINC#92664-2 "Power of attorney and Living will"
-*/
-//* type from ADIAdvanceDirectiveCategoriesVS (extensible)
-//* type short name "Advance Directives Categories"
+* date 1..1 MS
 * category 1..* MS
 * category from $USCoreDocumentReferenceCategory (extensible)
 * subject 1..1 MS
@@ -33,6 +25,7 @@ Description: "This profile defines constraints that represent the information ne
 * content.attachment.contentType 1..1 MS
 * content.attachment.data MS
 * content.attachment.url MS
+* content.attachment.creation 1..1 MS
 * content.format MS
 * context MS
 * context.encounter MS
@@ -45,3 +38,13 @@ Description: "This profile defines constraints that represent the information ne
 RuleSet: ADIDocumentReferenceShortDescriptions
 * type ^short = "Advance Directive Categories"
 * subject ^short = "Patient"
+
+// TODO add page guidance on the different document types
+/*
+* include $LOINC#64298-3 "Power of attorney"
+* include $LOINC#81334-5 "Patient Personal advance care plan"
+* include $LOINC#86533-7 "Patient Living will"
+* include $LOINC#92664-2 "Power of attorney and Living will"
+*/
+//* type from ADIAdvanceDirectiveCategoriesVS (extensible)
+//* type short name "Advance Directives Categories"
