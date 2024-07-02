@@ -25,7 +25,7 @@ Structurally, the document structure shares the same ADI header as the PACP docu
 
 
 <p align="center">
-    <img src="./adi_pmo.png" alt="Portable Medical Order Document Structure" style="width: 80%; float: none; vertical-align: middle;"/>
+    <img src="./document_structure_adi_pmo.png" alt="Portable Medical Order Document Structure" style="width: 100%; float: none; vertical-align: middle;"/>
 </p>
 
 <br clear="all" />

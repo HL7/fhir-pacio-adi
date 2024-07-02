@@ -488,8 +488,8 @@ Usage: #example
 * subject = Reference(Example-McBee-Patient1)
 
 * addresses[+].display = "Unconscious, in a coma, or in a persistent vegetative state with little or no chance of recovery"
-* addresses[+].display = "Persistent vegetative state (SNOMED CT 24473007)"
-* addresses[+].display = "Irreversible coma (SNOMED CT 73453007)"
+// * addresses[+].display = "Persistent vegetative state (SNOMED CT 24473007)"
+// * addresses[+].display = "Irreversible coma (SNOMED CT 73453007)"
 * supportingInfo[+] = Reference(Example-McBee-PersonalInterventionPreference1)
 * supportingInfo[+] = Reference(Example-McBee-PersonalInterventionPreference2)
 * supportingInfo[+] = Reference(Example-McBee-PersonalInterventionPreference3)

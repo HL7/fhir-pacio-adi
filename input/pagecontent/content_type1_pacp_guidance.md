@@ -9,9 +9,8 @@ The ADI Content Type 1 document defines 7 sections:
 6. Witness & Notary - References and information regarding witnesses and notary.
 7. Administrative Information - Administrative information associated with the personal advance care plan and/or advance directive information.
 
-<p align="center" style="margin-top: 30px; margin-bottom:30px;">
-    <b><i>Click a block to see the corresponding profile definition</i></b>
-    <object data="ADI_DocumentStructure.svg" type="image/svg+xml" width="100%" style="margin-top: 10px;"></object>
+<p align="center">
+    <img src="./document_structure_adi_pacp.png" alt="Person-authored Advance Directive Document Structure" style="width: 100%; float: none; vertical-align: middle;"/>
 </p>
 
 The content in these categories of advance directive could include, but are not limited to:
