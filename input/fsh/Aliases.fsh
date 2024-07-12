@@ -44,7 +44,7 @@ Alias: $HL7RoleClass = http://terminology.hl7.org/CodeSystem/v3-RoleClass
 Alias: $HL7RelatedPersonRelationshipType = http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype
 
 Alias: $HL7ObservationCategory = http://terminology.hl7.org/CodeSystem/observation-category
-
+Alias: $HL7CompositionStatusR5 = http://hl7.org/fhir/composition-status|5.0.0
 Alias: $HL7AdataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason
 
 Alias: $VSACClauseType = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.14
@@ -59,3 +59,5 @@ Alias: $VSACADICareExperiencePreferences = http://cts.nlm.nih.gov/fhir/ValueSet/
 
 // Standard extension aliases
 Alias: $data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason
+
+// 
