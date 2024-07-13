@@ -155,6 +155,14 @@ Description: "Codes indicating Categories of Portable Medical Orders."
 * include $HL7ConsentCategoryCodes#dnr "Do Not Resuscitate"
 * include $HL7ConsentCategoryCodes#polst "POLST"
 
+ValueSet: ADIDocumentRevokeStatusVS
+Title: "ADI Document Revoke Status"
+Description: "a document status backported from the FHIR R5 Composition status version which supports the revoked document use case."
+* ^experimental = false
+// * codes from system $HL7CompositionStatusR5  // mlt: updated to the valueset for FHIR R5 composition status.
+* include $HL7CompositionStatusR5#preliminary
+* include $HL7CompositionStatusR5#final
+* include $HL7CompositionStatusR5#amended
 
 /* ********** RuleSets *********/
 
