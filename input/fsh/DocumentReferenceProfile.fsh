@@ -32,8 +32,6 @@ Description: "This profile defines constraints that represent the information ne
 * context.encounter only Reference ($USCoreEncounter)
 * context.period MS
 
-* insert ADIDocumentReferenceShortDescriptions
-
 // These are from the mapping document and are likely not the intended final short descriptions
 RuleSet: ADIDocumentReferenceShortDescriptions
 * type ^short = "Advance Directive Categories"

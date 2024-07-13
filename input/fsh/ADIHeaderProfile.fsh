@@ -31,7 +31,8 @@ Description: "This abstract profile defines constraints that represent common ad
   //  adi-informationRecipient-extension named InformationRecipientExtension 0..* MS and
     adi-participant-extension named ParticipantExtension 0..* and
     adi-performer-extension named PerformerExtension 0..* and
-    adi-clause-extension named ClauseExtension 0..*
+    adi-clause-extension named ClauseExtension 0..* and
+    adi-document-revoke-status-extension named DocumentRevokeStatus 0..1 MS
 
 * language 1..1 MS
 * identifier 1..1 MS
@@ -39,7 +40,7 @@ Description: "This abstract profile defines constraints that represent common ad
 * type from $VSACADIAdvanceDirectiveCategories (extensible)
 
 * category 0..1 MS
-* category = $LOINC#42348-3
+* category = $LOINC#42348-3 "Advance directives"
 * subject 1..1 MS
 * subject only Reference($USCorePatient)
 

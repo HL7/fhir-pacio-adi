@@ -12,6 +12,7 @@
 <artifact id="StructureDefinition/ADI-Composition-Header" key="StructureDefinition-ADI-Composition-Header" name="ADI Composition Header"/>
 <artifact deprecated="true" id="ValueSet/PADIConsentActorRoleVS" key="ValueSet-PADIConsentActorRoleVS" name="ADI Consent Actor Role"/>
 <artifact id="StructureDefinition/ADI-DocumentReference" key="StructureDefinition-ADI-DocumentReference" name="ADI Document Reference"/>
+<artifact id="ValueSet/ADIDocumentRevokeStatusVS" key="ValueSet-ADIDocumentRevokeStatusVS" name="ADI Document Revoke Status"/>
 <artifact id="StructureDefinition/ADI-DocumentationObservation" key="StructureDefinition-PADI-DocumentationObservation" name="ADI Documentation Observation"/>
 <artifact deprecated="true" id="StructureDefinition/PADI-Goal" key="StructureDefinition-PADI-Goal" name="ADI Goal"/>
 <artifact id="CodeSystem/ADIPreferenceCategoryCS" key="CodeSystem-PADIGoalCategoryCS" name="ADI Goal Category Code System"/>
@@ -35,6 +36,7 @@
 <artifact id="StructureDefinition/ADI-PreferenceCarePlan" key="StructureDefinition-PADI-PreferenceCarePlan" name="ADI Preference Care Plan"/>
 <artifact id="StructureDefinition/ADI-Provenance" key="StructureDefinition-ADI-Provenance" name="ADI Provenance"/>
 <artifact id="StructureDefinition/ADI-PMOServiceRequest" key="StructureDefinition-ADI-PMOServiceRequest" name="ADI ServiceRequest"/>
+<artifact id="CodeSystem/ADITempCS" key="CodeSystem-ADITempCS" name="ADI Temporary Code System"/>
 <artifact id="StructureDefinition/ADI-Witness" key="StructureDefinition-ADI-Witness" name="ADI Witness"/>
 <artifact deprecated="true" id="ValueSet/PADIAdvanceDirectiveCategoriesVS" key="ValueSet-PADIAdvanceDirectiveCategoriesVS" name="Advance Directive Categories"/>
 <artifact deprecated="true" id="StructureDefinition/padi-attestationInformation-extension" key="StructureDefinition-padi-attestationInformation-extension" name="Attestation Information"/>
@@ -80,6 +82,7 @@
 <artifact id="SearchParameter/DocumentReference-subject" key="SearchParameter-DocumentReference-subject" name="DocumentReference-subject"/>
 <artifact id="SearchParameter/DocumentReference-type" key="SearchParameter-DocumentReference-type" name="DocumentReference-type"/>
 <artifact id="ValueSet/ADIDocumentationTypeVS" key="ValueSet-PADIDocumentationTypeVS" name="Documentation Types"/>
+<artifact id="StructureDefinition/adi-document-revoke-status-extension" key="StructureDefinition-padi-effective-date-extension" name="Effective Date"/>
 <artifact id="StructureDefinition/adi-effective-date-extension" key="StructureDefinition-padi-effective-date-extension" name="Effective Date"/>
 <artifact id="StructureDefinition/adi-enclosedPrecondition-extension" key="StructureDefinition-adi-enclosedPrecondition-extension" name="Enclosed Precondition"/>
 <artifact id="RelatedPerson/Example-McBee-ADINotary" key="RelatedPerson-Example-McBee-ADINotary" name="Example-McBee-ADINotary"/>
