@@ -1348,10 +1348,7 @@ Usage: #example
 
 * content[0].attachment.contentType = #text/xml
 * content[0].attachment.url = "Binary/Example-Smith-Johnson-DocRef-Binary1"
-
-
-
-
+* content[0].attachment.creation = "2015-11-05T15:52:20.000+00:00"
 
 
 Instance: Example-Smith-Johnson-DocRef-Bundle
@@ -1393,10 +1390,7 @@ Usage: #example
 
 * content[0].attachment.contentType = #application/fhir+json
 * content[0].attachment.url = "Bundle/Example-Smith-Johnson-Bundle1"
-
-
-
-
+* content[0].attachment.creation = "2021-03-29T14:25:34.001-05:00"
 
 
 Instance: Example-Smith-Johnson-DocRef-Device1
