@@ -32,7 +32,7 @@ Description: "This abstract profile defines constraints that represent common ad
     adi-participant-extension named ParticipantExtension 0..* and
     adi-performer-extension named PerformerExtension 0..* and
     adi-clause-extension named ClauseExtension 0..* and
-    adi-document-revoke-status-extension named DocumentRevokeStatus 0..1 MS
+    adi-document-revoke-status-extension named ADIDocumentRevokeStatusVS 0..1 MS
 
 * language 1..1 MS
 * identifier 1..1 MS
@@ -53,6 +53,8 @@ Description: "This abstract profile defines constraints that represent common ad
 
 * custodian 1..1 MS
 * custodian only Reference ($USCoreOrganization)
+
+*  status from ADICompositionStatusVS (required) // fix for FHIR-46153
 
 * section.extension contains    
     adi-clause-extension named ClauseExtension 0..*

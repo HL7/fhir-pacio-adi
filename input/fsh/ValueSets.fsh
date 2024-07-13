@@ -155,14 +155,32 @@ Description: "Codes indicating Categories of Portable Medical Orders."
 * include $HL7ConsentCategoryCodes#dnr "Do Not Resuscitate"
 * include $HL7ConsentCategoryCodes#polst "POLST"
 
-ValueSet: ADIDocumentRevokeStatusVS
-Title: "ADI Document Revoke Status"
-Description: "a document status backported from the FHIR R5 Composition status version which supports the revoked document use case."
+ValueSet: ADICompositionStatusVS
+Title: "ADI Composition Status"
+Description: "a document status backported from the FHIR R5 Composition status."
 * ^experimental = false
 // * codes from system $HL7CompositionStatusR5  // mlt: updated to the valueset for FHIR R5 composition status.
 * include $HL7CompositionStatusR5#preliminary
 * include $HL7CompositionStatusR5#final
 * include $HL7CompositionStatusR5#amended
+
+ValueSet: ADIDocumentReferenceStatusVS
+Title: "ADI Document Reference Status"
+Description: "a document status backported from the FHIR R5 Document Reference Status."
+* ^experimental = false
+// * codes from system $HL7CompositionStatusR5  // mlt: updated to the valueset for FHIR R5 composition status.
+* include $HL7CompositionStatusR5#current
+* include $HL7CompositionStatusR5#superceded
+* include $HL7CompositionStatusR5#entered-in-error
+
+ValueSet: ADIDocumentRevokeStatusVS
+Title: "ADI Document Revoke Status"
+Description: "a document status backported from the FHIR R5 Composition status version which supports the revoked document use case."
+* ^experimental = false
+// * codes from system $HL7CompositionStatusR5  // mlt: updated to the valueset for FHIR R5 composition status.
+* include $HL7CompositionStatusR5#cancelled
+* include $HL7CompositionStatusR5#entered-in-error
+* include $HL7CompositionStatusR5#deprecated
 
 /* ********** RuleSets *********/
 
