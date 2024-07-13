@@ -37,16 +37,6 @@ Context: Composition
 * valueReference 1..1 MS
 * valueReference only Reference($USCorePractitioner or $USCorePractitionerRole or $USCorePatient or RelatedPerson)
 
-/*
-Extension: InformationRecipientExtension
-Id: adi-informationRecipient-extension
-Title: "Information Recipient"
-Description: "The Information Recipient Extension records the intended recipient of the advance directive information at the time the document was created."
-* value[x] only Reference
-* valueReference 1..1 MS
-* valueReference only Reference($USCorePractitioner or $USCorePractitionerRole or $USCorePatient or RelatedPerson or $USCoreOrganization)
-*/
-
 Extension: ParticipantExtension
 Id: adi-participant-extension
 Title: "Participant"
