@@ -10,8 +10,18 @@ Description: "This profile defines constraints that represent the information ne
 * identifier MS
 * status MS
 * type 1..1 MS
-* category 1..* MS
-* category from $USCoreDocumentReferenceCategory (extensible)
+* type from $VSACADIAdvanceDirectiveCategoriesGrouper
+* insert ADIDocumentReferenceShortDescriptions // adds ruleset for short descriptions
+
+// TODO add page guidance on the different document types
+/*
+* include $LOINC#64298-3 "Power of attorney"
+* include $LOINC#81334-5 "Patient Personal advance care plan"
+* include $LOINC#86533-7 "Patient Living will"
+* include $LOINC#92664-2 "Power of attorney and Living will"
+*/
+* category 1..* MS // constraint 1..* made in US Core dependency.
+* category = $LOINC#42348-3
 * subject 1..1 MS
 * subject only Reference($USCorePatient)
 * date MS
@@ -29,11 +39,6 @@ Description: "This profile defines constraints that represent the information ne
 * context.encounter MS
 * context.encounter only Reference ($USCoreEncounter)
 * context.period MS
-
-* extension contains
-    adi-document-revoke-status-extension named DocumentRevokeStatus 0..1 MS
-
-* insert ADIDocumentReferenceShortDescriptions
 
 // These are from the mapping document and are likely not the intended final short descriptions
 RuleSet: ADIDocumentReferenceShortDescriptions
