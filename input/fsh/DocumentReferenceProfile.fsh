@@ -5,8 +5,6 @@ Id: ADI-DocumentReference
 Title: "ADI Document Reference"
 Description: "This profile defines constraints that represent the information needed to register an advance directive information document on a FHIR server."
 
-// Is a last updated required?
-//* meta.lastUpdated 1..1 MS
 * identifier MS
 * status MS
 * type 1..1 MS
@@ -31,6 +29,11 @@ Description: "This profile defines constraints that represent the information ne
 * context.encounter MS
 * context.encounter only Reference ($USCoreEncounter)
 * context.period MS
+
+* docStatus from ADIDocumentReferenceStatusVS (required) // fix for FHIR-46153
+
+* extension contains
+    adi-document-revoke-status-extension named ADIDocumentRevokeStatusVS 0..1 MS
 
 // These are from the mapping document and are likely not the intended final short descriptions
 RuleSet: ADIDocumentReferenceShortDescriptions
