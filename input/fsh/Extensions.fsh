@@ -181,8 +181,8 @@ Severity:   #error
 
 Extension: DocumentRevokeStatusExtension
 Id: adi-document-revoke-status-extension
-Title: "Effective Date"
-Description: "The Advance Directive document effective dates."
+Title: "Revoke Status"
+Description: "The Advance Directive document revoke status."
 Context: Composition, DocumentReference
 * value[x] only code
 * value[x] 0..1 MS

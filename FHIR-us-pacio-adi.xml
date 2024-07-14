@@ -37,6 +37,7 @@
 <artifact id="StructureDefinition/ADI-PMOHospiceObservation" key="StructureDefinition-ADI-PMOHospiceObservation" name="ADI Portable Medical Order Hospice Observation"/>
 <artifact id="StructureDefinition/ADI-PreferenceCarePlan" key="StructureDefinition-PADI-PreferenceCarePlan" name="ADI Preference Care Plan"/>
 <artifact id="StructureDefinition/ADI-Provenance" key="StructureDefinition-ADI-Provenance" name="ADI Provenance"/>
+<artifact id="CodeSystem/ADIRevokeStatusCS" key="CodeSystem-ADIRevokeStatusCS" name="ADI Revoke Status Code System"/>
 <artifact id="StructureDefinition/ADI-PMOServiceRequest" key="StructureDefinition-ADI-PMOServiceRequest" name="ADI ServiceRequest"/>
 <artifact id="CodeSystem/ADITempCS" key="CodeSystem-ADITempCS" name="ADI Temporary Code System"/>
 <artifact id="StructureDefinition/ADI-Witness" key="StructureDefinition-ADI-Witness" name="ADI Witness"/>
@@ -84,7 +85,6 @@
 <artifact id="SearchParameter/DocumentReference-subject" key="SearchParameter-DocumentReference-subject" name="DocumentReference-subject"/>
 <artifact id="SearchParameter/DocumentReference-type" key="SearchParameter-DocumentReference-type" name="DocumentReference-type"/>
 <artifact id="ValueSet/ADIDocumentationTypeVS" key="ValueSet-PADIDocumentationTypeVS" name="Documentation Types"/>
-<artifact id="StructureDefinition/adi-document-revoke-status-extension" key="StructureDefinition-padi-effective-date-extension" name="Effective Date"/>
 <artifact id="StructureDefinition/adi-effective-date-extension" key="StructureDefinition-padi-effective-date-extension" name="Effective Date"/>
 <artifact id="StructureDefinition/adi-enclosedPrecondition-extension" key="StructureDefinition-adi-enclosedPrecondition-extension" name="Enclosed Precondition"/>
 <artifact id="RelatedPerson/Example-McBee-ADINotary" key="RelatedPerson-Example-McBee-ADINotary" name="Example-McBee-ADINotary"/>
@@ -183,6 +183,7 @@
 <artifact id="ValueSet/ADIPMOConsentCategoriesVS" key="ValueSet-ADIPMOConsentCategoriesVS" name="Portable Medical Order Categories"/>
 <artifact deprecated="true" id="ValueSet/PADIPresenceIndicatorVS" key="ValueSet-PADIPresenceIndicatorVS" name="Presence Indicator"/>
 <artifact id="List/Example-Smith-Johnson-PersonalPrioritiesOrganizer1" key="List-Example-Smith-Johnson-PersonalPrioritiesOrganizer1" name="Priorities for Goals and Preferences"/>
+<artifact id="StructureDefinition/adi-document-revoke-status-extension" key="StructureDefinition-adi-document-revoke-status-extension" name="Revoke Status"/>
 <artifact deprecated="true" id="ValueSet/PADIClauseTypeVS" key="ValueSet-PADIClauseTypeVS" name="Type of clause"/>
 <artifact deprecated="true" id="ValueSet/PADIUponDeathPreferencesVS" key="ValueSet-PADIUponDeathPreferencesVS" name="Upon Death Preferences"/>
 <artifact id="StructureDefinition/adi-versionNumber-extension" key="StructureDefinition-padi-versionNumber-extension" name="Version Number"/>

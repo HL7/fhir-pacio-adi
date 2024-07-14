@@ -168,19 +168,17 @@ ValueSet: ADIDocumentReferenceStatusVS
 Title: "ADI Document Reference Status"
 Description: "a document status backported from the FHIR R5 Document Reference Status."
 * ^experimental = false
-// * codes from system $HL7CompositionStatusR5  // mlt: updated to the valueset for FHIR R5 composition status.
-* include $HL7CompositionStatusR5#current
-* include $HL7CompositionStatusR5#superceded
-* include $HL7CompositionStatusR5#entered-in-error
+* codes from system $HL7DocumentReferenceStatusR5  
 
 ValueSet: ADIDocumentRevokeStatusVS
 Title: "ADI Document Revoke Status"
 Description: "a document status backported from the FHIR R5 Composition status version which supports the revoked document use case."
 * ^experimental = false
 // * codes from system $HL7CompositionStatusR5  // mlt: updated to the valueset for FHIR R5 composition status.
-* include $HL7CompositionStatusR5#cancelled
-* include $HL7CompositionStatusR5#entered-in-error
-* include $HL7CompositionStatusR5#deprecated
+//* include $HL7CompositionStatusR5#cancelled
+//* include $HL7CompositionStatusR5#entered-in-error
+//* include $HL7CompositionStatusR5#deprecated
+* codes from system ADIRevokeStatusCS
 
 /* ********** RuleSets *********/
 
