@@ -6,9 +6,6 @@ Description: "This profile encompasses information that makes up a practitioner'
 
 /*
 
-
-
-
 Need observation for no additonal order (Specific profile an documentation on use)
 https://loinc.org/100824-2/
 Some sort of Value of NA or NI.
@@ -17,9 +14,6 @@ Some sort of Value of NA or NI.
 Connectathon: How to do addtional orders. What code and how to negate. Predefined use a different pattern. Like Yes CPR or No CPR.
 
 TODO will need descriptions of using service request for all orders (including additional orders) And the observation for no additional orders
-
-
-
 
 
 CDA sections are:
@@ -63,6 +57,8 @@ LA46-8 Other
 
 // TODO, need a category code
 //* category = $LOINC#81352-7	"Medical Order for Life-Sustaining Treatment, Physician Order for Life-Sustaining Treatment, or a similar medical order is in place [Reported]"
+
+* author only Reference($USCorePractitionerRole)
 
 * type = $LOINC#93037-0 // "Portable medical order form"
 
