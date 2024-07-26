@@ -7,6 +7,7 @@ Description: "This profile encompasses information that makes up the author’s 
 // TODO add administrative info section 81381-6
 
 * author only Reference($USCorePatient)
+* attester.party only Reference($USCorePatient or RelatedPerson)
 
 * section ^slicing.discriminator.type = #pattern 
 * section ^slicing.discriminator.path = "code"
