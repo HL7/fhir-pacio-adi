@@ -12,7 +12,7 @@ This ADI implementation guide (IG) describes how to use existing HL7 FHIR® stan
 </p>
 
 <p>
-Advance healthcare directives can be categorized into <a href="content_type_overview.html#adi-content-types">three types of information</a>. The current version of this guide addresses Content Type I: Person-Authored Advance Directive Information and Content Type 3:  Portable Medical Orders for Life-Sustaining Treatment. Subsequent versions of this guide will address the other two types; Content Type 2: Encounter-Centric Patient Instructions (obligations and prohibitions).
+Advance healthcare directives can be categorized into <a href="content_type_overview.html#adi-content-types">three types of information</a>. The current version of this guide addresses Content Type 1: Person-Authored Advance Directive Information and Content Type 3:  Portable Medical Orders for Life-Sustaining Treatment. Subsequent versions of this guide will address the other two types; Content Type 2: Encounter-Centric Patient Instructions (obligations and prohibitions).
 </p>
 <p>
 Included in the content for this FHIR IG are person-authored advance directives and personal advance care plans which comprise Content Type 1, and also cover patient consent information attesting to their designation of a person, or persons, to serve as their healthcare agent. 

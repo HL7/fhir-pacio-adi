@@ -59,7 +59,6 @@ LA46-8 Other
 //* category = $LOINC#81352-7	"Medical Order for Life-Sustaining Treatment, Physician Order for Life-Sustaining Treatment, or a similar medical order is in place [Reported]"
 
 * author only Reference($USCorePractitionerRole)
-* attester.party only Reference($USCorePatient or $USCorePractitionerRole or $USCorePractitioner or $USCoreOrganization)
 
 * type = $LOINC#93037-0 // "Portable medical order form"
 
