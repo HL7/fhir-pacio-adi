@@ -12,7 +12,7 @@ There is a very important distinction for the three types of ADI content that wi
 <table>
     <tr>
         <th width="50">&nbsp;</th>
-        <th colspan="2" style="background-color:#DEEBF7; border: 1px solid black; vertical-align: middle; padding: 5px"><p style="font-size: 14px;"><b>Type I: Person-Authored Advance Directive Information</b></p></th>
+        <th colspan="2" style="background-color:#DEEBF7; border: 1px solid black; vertical-align: middle; padding: 5px"><p style="font-size: 14px;"><b>Type 1: Person-Authored Advance Directive Information</b></p></th>
     </tr>
     <tr><td width="50">&nbsp;</td>
         <td width="25">&nbsp;</td>
