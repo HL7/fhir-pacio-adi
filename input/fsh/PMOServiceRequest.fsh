@@ -45,9 +45,9 @@ Title: "ADI PMO Cardiopulmonary Resuscitation ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order for cardiopulmonary resuscitation."
 
 * ^experimental = false
-* category = $LOINC#100822-6 // "Cardiopulmonary resuscitation orders"
-* code from LOINCPOLSTCPRAnswerList (extensible)
-
+* category = $LOINC#100822-6 "Cardiopulmonary resuscitation orders"
+* code = $LOINC#100822-6 "Cardiopulmonary resuscitation orders" // from LOINCPOLSTCPRAnswerList (extensible)
+* doNotPerform 0..1 MS
 
 
 Profile: ADIPMOInitialTreatmentServiceRequest
@@ -57,8 +57,19 @@ Title: "ADI PMO Initial Treatment ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order for initial treatment."
 
 * ^experimental = false
-* category = $LOINC#100823-4 // "Initial portable medical treatment orders"
-* code from LOINCPOLSTInitialTxAnswerList (extensible)
+* category = $LOINC#100823-4 "Initial portable medical treatment orders"
+* code = $LOINC#100823-4 "Initial portable medical treatment orders" // from LOINCPOLSTInitialTxAnswerList (extensible)
+
+
+Profile: ADIPMOAdditionalOrdersOrInstructionsServiceRequest
+Parent: ADIPMOServiceRequest
+Id: ADI-PMOAdditionalOrdersOrInstructionsServiceRequest
+Title: "ADI PMO Additional orders or instructions ServiceRequest"
+Description: "This profile is used to represent a practitioner authored portable medical order additional orders or instructions."
+
+* ^experimental = false
+* category = $LOINC#100824-2 "Additional portable medical orders or instructions"
+* code 1..1 MS
 
 
 Profile: ADIPMOMedicallyAssistedNutritionServiceRequest
@@ -68,36 +79,8 @@ Title: "ADI PMO Medically Assisted Nutrition ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order for medically assisted nutrition."
 
 * ^experimental = false
-* category = $LOINC#100825-9 // "Medically assisted nutrition orders"
-* code from LOINCPOLSTMedAssistNutrAnswerList (extensible)
-
-
-Profile: ADIPMOAdditionalRequestServiceRequest
-Parent: ADIPMOServiceRequest
-Id: ADI-PMOAdditionalRequestServiceRequest
-Title: "ADI PMO Additional request or instruction ServiceRequest"
-Description: "This profile is used to represent a practitioner authored portable medical order additional requests or instructions."
-
-* ^experimental = false
-* category = $LOINC#100824-2 // "Additional portable medical orders or instructions"
-* code 1..1 MS
-
-
-Profile: ADIPMONoAdditionalRequestObservation
-Parent: Observation
-Id: ADI-PMONoAdditionalRequestObservation
-Title: "ADI PMO No Additional request or instruction Observation"
-Description: "This profile is used to represent that there are no other portable medical order additional requests or instructions."
-
-* ^experimental = false
-* status = #final
-* code = $LOINC#100824-2 // "Additional portable medical orders or instructions"
-* value[x] only boolean
-* valueBoolean = false
-* performer 1..1
-* performer only Reference($USCorePractitioner)
-
-
+* category = $LOINC#100825-9 "Medically assisted nutrition orders"
+* code = $LOINC#100825-9 "Medically assisted nutrition orders" // from LOINCPOLSTMedAssistNutrAnswerList (extensible)
 
 /////////////////////////////////
 // PMO as full service Request
