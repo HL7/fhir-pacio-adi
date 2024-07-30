@@ -57,12 +57,12 @@ menu:
     Signatures: signatures.html
     Search Parameters: search_parameters.html
     Key Terms and Acronyms: key_terms_and_acronyms.html
-  Patient-Authored:
+  Person-Authored:
     PACP User Stories: content_type1_pacp_user_stories.html
     PACP Specification Guidance: content_type1_pacp_guidance.html
     MHAD User Stories: content_type1_mhad_user_stories.html
     MHAD Specification Guidance: content_type1_mhad_guidance.html
-  Portable Medical Orders:
+  Provider-Authored:
     PMO User Stories: content_type3_pmo_user_stories.html
     PMO Specification Guidance: content_type3_pmo_guidance.html
   Artifacts:
