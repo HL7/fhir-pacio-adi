@@ -6,4 +6,4 @@ Description: "Codes to be used as placeholders until they have a formal assigned
 * ^copyright = "This CodeSystem is not copyrighted."
 * #ldo-completion-information "Document completion information" "Information in a document that pertains to actions or activities taken to finalize the document."
 * #ldo-administrative-information "Document administrative information" "Administrative information in a document."
-* #pmo-medically-assisted-hydration-service-request "Medically assisted hydration service request"
+* #pmo-medically-assisted-hydration-service-request "Medically assisted hydration order"

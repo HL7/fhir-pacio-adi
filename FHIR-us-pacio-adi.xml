@@ -23,7 +23,8 @@
 <artifact id="StructureDefinition/ADI-PMOAdditionalOrdersOrInstructionsServiceRequest" key="StructureDefinition-ADI-PMOAdditionalOrdersOrInstructionsServiceRequest" name="ADI PMO Additional orders or instructions ServiceRequest"/>
 <artifact id="StructureDefinition/ADI-PMOCPRServiceRequest" key="StructureDefinition-ADI-PMOCPRServiceRequest" name="ADI PMO Cardiopulmonary Resuscitation ServiceRequest"/>
 <artifact id="StructureDefinition/ADI-PMOInitialTreatmentServiceRequest" key="StructureDefinition-ADI-PMOInitialTreatmentServiceRequest" name="ADI PMO Initial Treatment ServiceRequest"/>
-<artifact id="StructureDefinition/ADI-PMOMedicallyAssistedNutritionServiceRequest" key="StructureDefinition-ADI-PMOMedicallyAssistedNutritionServiceRequest" name="ADI PMO Medically Assisted Nutrition ServiceRequest"/>
+<artifact id="StructureDefinition/ADI-PMOMedicallyAssistedHydrationServiceRequest" key="StructureDefinition-ADI-PMOMedicallyAssistedHydrationServiceRequest" name="ADI PMO Medically Assisted Hydration Service Request"/>
+<artifact id="StructureDefinition/ADI-PMOMedicallyAssistedNutritionServiceRequest" key="StructureDefinition-ADI-PMOMedicallyAssistedNutritionServiceRequest" name="ADI PMO Medically Assisted Nutrition Service Request"/>
 <artifact id="StructureDefinition/ADI-PMOParticipantObservation" key="StructureDefinition-ADI-PMOParticipantObservation" name="ADI PMO Participant Observation"/>
 <artifact id="StructureDefinition/ADI-PMOReviewObservation" key="StructureDefinition-ADI-PMOReviewObservation" name="ADI PMO Review Observation"/>
 <artifact id="StructureDefinition/ADI-Participant" key="StructureDefinition-PADI-Participant" name="ADI Participant"/>

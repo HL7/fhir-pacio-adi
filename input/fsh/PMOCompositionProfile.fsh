@@ -26,8 +26,6 @@ Description: "This profile encompasses information that makes up a practitioner'
     completion_information 0..1 MS and 
     additional_documentation 0..1 MS and
     witness_and_notary 0..1 MS
-//    gpp_personal_care_experience 0..1 and
-
 
 * section[portable_medical_orders] ^short = "Portable Medical Orders"
 * section[portable_medical_orders].extension[adi-clause-extension] ^short = "Section clause, additional instructions, or information"
@@ -50,14 +48,15 @@ Description: "This profile encompasses information that makes up a practitioner'
     cardiopulmonary_resuscitation_service_request 0..1 MS and
     initial_treatment_service_request 0..1 MS and
     additional_orders_or_instructions_service_request 0..* MS and
-    medically_assisted_nutrition_service_request 0..1 MS
-//    no_additional_request_service_request 0..1 MS
-
+    medically_assisted_nutrition_service_request 0..1 MS and
+    medically_assisted_hydration_service_request 0..1 MS
 
 * section[portable_medical_orders].entry[cardiopulmonary_resuscitation_service_request] only Reference(ADIPMOCPRServiceRequest)
 * section[portable_medical_orders].entry[initial_treatment_service_request] only Reference(ADIPMOInitialTreatmentServiceRequest)
-* section[portable_medical_orders].entry[medically_assisted_nutrition_service_request] only Reference(ADIPMOMedicallyAssistedNutritionServiceRequest)
 * section[portable_medical_orders].entry[additional_orders_or_instructions_service_request] only Reference(ADIPMOAdditionalOrdersOrInstructionsServiceRequest)
+* section[portable_medical_orders].entry[medically_assisted_nutrition_service_request] only Reference(ADIPMOMedicallyAssistedNutritionServiceRequest)
+* section[portable_medical_orders].entry[medically_assisted_hydration_service_request] only Reference(ADIPMOMedicallyAssistedHydrationServiceRequest)
+
 // * section[portable_medical_orders].entry[no_additional_request_service_request] only Reference(ADIPMONoAdditionalRequestObservation)
 
 * section[completion_information] ^short = "Portable medical order completion information"
