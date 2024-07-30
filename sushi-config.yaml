@@ -58,21 +58,21 @@ menu:
     Search Parameters: search_parameters.html
     Key Terms and Acronyms: key_terms_and_acronyms.html
   Patient-Authored:
-    User Stories and Personas: content_type1_pacp_user_stories.html
-    Specification Guidance: content_type1_pacp_guidance.html
+    PACP User Stories: content_type1_pacp_user_stories.html
+    PACP Specification Guidance: content_type1_pacp_guidance.html
+    MHAD User Stories: content_type1_mhad_user_stories.html
+    MHAD Specification Guidance: content_type1_mhad_guidance.html
   Portable Medical Orders:
-    User Stories and Personas: content_type3_pmo_user_stories.html
-    Specification Guidance: content_type3_pmo_guidance.html
-  Mental Health: 
-    User Stories and Personas: content_type1_mhad_user_stories.html
-    Specification Guidance: content_type1_mhad_guidance.html
-  FHIR Artifacts:
+    PMO User Stories: content_type3_pmo_user_stories.html
+    PMO Specification Guidance: content_type3_pmo_guidance.html
+  Artifacts:
     Profiles: artifacts.html#3
     Extensions: artifacts.html#5
     Terminology: artifacts.html#6
     Search Parameters: search_parameters.html
     Capability Statement: CapabilityStatement-adi.html
     Examples: artifacts.html#8
+    Package Dependencies: package_dependencies.html
   Release Notes: change_log.html
   Downloads: downloads.html
 
@@ -95,6 +95,8 @@ pages:
     title: PMO Guidance
   formal_specification.md:
     title: Formal Specification
+  package_dependencies.md:
+    title: Package Dependencies
   security_privacy_consent.md:
     title: Security, Privacy, and Consent
   signatures.md:
@@ -105,7 +107,7 @@ pages:
     title: Recommended Search Parameters
   key_terms_and_acronyms.md:
     title: Key Terms and Acronyms
-  artifacts.html:
+  artifact_adi.md:
     title: FHIR Artifacts
   change_log.md:
     title: Release Notes

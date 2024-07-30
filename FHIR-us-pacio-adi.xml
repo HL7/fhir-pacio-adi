@@ -190,6 +190,7 @@
 <artifact id="Practitioner/us-core-practitioner-kyle-anydoc" key="Practitioner-us-core-practitioner-kyle-anydoc" name="us-core-practitioner-kyle-anydoc"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
+<page key="artifacts" name="Artifacts Summary"/>
 <page key="downloads" name="Downloads"/>
 <page key="artifacts" name="FHIR Artifacts"/>
 <page key="formal_specification" name="Formal Specification"/>
@@ -199,6 +200,7 @@
 <page key="content_type1_mhad_guidance" name="MHAD Guidance"/>
 <page key="content_type1_pacp_guidance" name="PACP Guidance"/>
 <page key="content_type3_pmo_guidance" name="PMO Guidance"/>
+<page key="package_dependencies" name="Package Dependencies"/>
 <page deprecated="true" key="patient_stories_and_personas" name="Patient Stories and Personas"/>
 <page key="search_parameters" name="Recommended Search Parameters"/>
 <page key="change_log" name="Release Notes"/>
