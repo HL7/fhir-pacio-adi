@@ -37,16 +37,6 @@ Context: Composition
 * valueReference 1..1 MS
 * valueReference only Reference($USCorePractitioner or $USCorePractitionerRole or $USCorePatient or RelatedPerson)
 
-/*
-Extension: InformationRecipientExtension
-Id: adi-informationRecipient-extension
-Title: "Information Recipient"
-Description: "The Information Recipient Extension records the intended recipient of the advance directive information at the time the document was created."
-* value[x] only Reference
-* valueReference 1..1 MS
-* valueReference only Reference($USCorePractitioner or $USCorePractitionerRole or $USCorePatient or RelatedPerson or $USCoreOrganization)
-*/
-
 Extension: ParticipantExtension
 Id: adi-participant-extension
 Title: "Participant"
@@ -189,64 +179,16 @@ Severity:   #error
 
 
 
+Extension: DocumentRevokeStatusExtension
+Id: adi-document-revoke-status-extension
+Title: "Revoke Status"
+Description: "The Advance Directive document revoke status."
+Context: Composition, DocumentReference
+* value[x] only code
+* value[x] 0..1 MS
+* value[x] from ADIDocumentRevokeStatusVS (required) //  R5 Composition Status valueset. Fix for FHIR-
+
+
 // TODO Could add Invariant for Signature.type matching the attesterRole
 // TODO Notary Expiration Date?
 
-/*
-
-
-
-
-The official URL for this extension is:
-
-http://hl7.org/fhir/us/ccda/StructureDefinition/InformantExtension
-
-
-Extension: VersionNumber
-Id: composition-clinicaldocument-versionNumber
-Title: "Version Number"
-Description: "Advance Directive Information Document Version Number."
-* value[x] 1..1
-
-Extension: VersionNumber
-Id: composition-clinicaldocument-versionNumber
-Title: "Version Number"
-Description: "Advance Directive Information Document Version Number."
-* value[x] 1..1
-
-Extension: VersionNumber
-Id: composition-clinicaldocument-versionNumber
-Title: "Version Number"
-Description: "Advance Directive Information Document Version Number."
-* value[x] 1..1
-
-Extension: VersionNumber
-Id: composition-clinicaldocument-versionNumber
-Title: "Version Number"
-Description: "Advance Directive Information Document Version Number."
-* value[x] 1..1
-
-Extension: VersionNumber
-Id: composition-clinicaldocument-versionNumber
-Title: "Version Number"
-Description: "Advance Directive Information Document Version Number."
-* value[x] 1..1
-
-Extension: VersionNumber
-Id: composition-clinicaldocument-versionNumber
-Title: "Version Number"
-Description: "Advance Directive Information Document Version Number."
-* value[x] 1..1
-
-Extension: VersionNumber
-Id: composition-clinicaldocument-versionNumber
-Title: "Version Number"
-Description: "Advance Directive Information Document Version Number."
-* value[x] 1..1
-
-Extension: VersionNumber
-Id: composition-clinicaldocument-versionNumber
-Title: "Version Number"
-Description: "Advance Directive Information Document Version Number."
-* value[x] 1..1
-*/

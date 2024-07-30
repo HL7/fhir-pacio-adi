@@ -44,10 +44,13 @@ Id: ADI-PMOCPRServiceRequest
 Title: "ADI PMO Cardiopulmonary Resuscitation ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order for cardiopulmonary resuscitation."
 
-* ^experimental = false
-* category = $LOINC#100822-6 // "Cardiopulmonary resuscitation orders"
-* code from LOINCPOLSTCPRAnswerList (extensible)
+* status = #active
+* intent = #order
 
+* ^experimental = false
+* category = $LOINC#100822-6 "Cardiopulmonary resuscitation orders"
+* code = $LOINC#100822-6 "Cardiopulmonary resuscitation orders" // from LOINCPOLSTCPRAnswerList (extensible)
+* doNotPerform 0..1 MS
 
 
 Profile: ADIPMOInitialTreatmentServiceRequest
@@ -56,48 +59,50 @@ Id: ADI-PMOInitialTreatmentServiceRequest
 Title: "ADI PMO Initial Treatment ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order for initial treatment."
 
+* status = #active
+* intent = #order
+
 * ^experimental = false
-* category = $LOINC#100823-4 // "Initial portable medical treatment orders"
-* code from LOINCPOLSTInitialTxAnswerList (extensible)
+* category = $LOINC#100823-4 "Initial portable medical treatment orders"
+* code = $LOINC#100823-4 "Initial portable medical treatment orders" // from LOINCPOLSTInitialTxAnswerList (extensible)
+
+
+Profile: ADIPMOAdditionalOrdersOrInstructionsServiceRequest
+Parent: ADIPMOServiceRequest
+Id: ADI-PMOAdditionalOrdersOrInstructionsServiceRequest
+Title: "ADI PMO Additional orders or instructions ServiceRequest"
+Description: "This profile is used to represent a practitioner authored portable medical order additional orders or instructions."
+
+* status = #active
+* intent = #order
+
+* ^experimental = false
+* category = $LOINC#100824-2 "Additional portable medical orders or instructions"
+* code 1..1 MS
 
 
 Profile: ADIPMOMedicallyAssistedNutritionServiceRequest
 Parent: ADIPMOServiceRequest
 Id: ADI-PMOMedicallyAssistedNutritionServiceRequest
-Title: "ADI PMO Medically Assisted Nutrition ServiceRequest"
+Title: "ADI PMO Medically Assisted Nutrition Service Request"
 Description: "This profile is used to represent a practitioner authored portable medical order for medically assisted nutrition."
 
 * ^experimental = false
-* category = $LOINC#100825-9 // "Medically assisted nutrition orders"
+* category = $LOINC#100825-9 "Medically assisted nutrition orders"
 * code from LOINCPOLSTMedAssistNutrAnswerList (extensible)
 
-
-Profile: ADIPMOAdditionalRequestServiceRequest
+Profile: ADIPMOMedicallyAssistedHydrationServiceRequest
 Parent: ADIPMOServiceRequest
-Id: ADI-PMOAdditionalRequestServiceRequest
-Title: "ADI PMO Additional request or instruction ServiceRequest"
-Description: "This profile is used to represent a practitioner authored portable medical order additional requests or instructions."
+Id: ADI-PMOMedicallyAssistedHydrationServiceRequest
+Title: "ADI PMO Medically Assisted Hydration Service Request"
+Description: "This profile is used to represent a practitioner authored portable medical order for medically assisted hydration."
+
+* status = #active
+* intent = #order
 
 * ^experimental = false
-* category = $LOINC#100824-2 // "Additional portable medical orders or instructions"
-* code 1..1 MS
-
-
-Profile: ADIPMONoAdditionalRequestObservation
-Parent: Observation
-Id: ADI-PMONoAdditionalRequestObservation
-Title: "ADI PMO No Additional request or instruction Observation"
-Description: "This profile is used to represent that there are no other portable medical order additional requests or instructions."
-
-* ^experimental = false
-* status = #final
-* code = $LOINC#100824-2 // "Additional portable medical orders or instructions"
-* value[x] only boolean
-* valueBoolean = false
-* performer 1..1
-* performer only Reference($USCorePractitioner)
-
-
+* category = ADITempCS#pmo-medically-assisted-hydration-service-request "Medically assisted hydration order"
+* code 1..1 MS // TO DO: create valueset of hydration orders with an extensible binding.
 
 /////////////////////////////////
 // PMO as full service Request

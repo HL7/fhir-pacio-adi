@@ -21,3 +21,10 @@ Description: "Advance Directive Preference Category"
 * ^caseSensitive = true
 * ^experimental = false
 * ^copyright = "This CodeSystem is not copyrighted."
+
+CodeSystem: ADIRevokeStatusCS
+Title: "ADI Revoke Status Code System"
+Description: "Advance Directive Revoke Status"
+* #cancelled "The composition is unavailable because the measurement was not started or not completed (also sometimes called \"aborted\"). "
+* #entered-in-error "The composition or document was originally created/issued in error, and this is an amendment that marks that the entire series should not be considered as valid."
+* #deprecated "This composition has been withdrawn or superseded and should no longer be used."
