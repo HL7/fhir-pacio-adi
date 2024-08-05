@@ -87,6 +87,8 @@
 <artifact id="ValueSet/ADIDocumentationTypeVS" key="ValueSet-PADIDocumentationTypeVS" name="Documentation Types"/>
 <artifact id="StructureDefinition/adi-effective-date-extension" key="StructureDefinition-padi-effective-date-extension" name="Effective Date"/>
 <artifact id="StructureDefinition/adi-enclosedPrecondition-extension" key="StructureDefinition-adi-enclosedPrecondition-extension" name="Enclosed Precondition"/>
+<artifact id="Practitioner/Example-Kyle-Anydoc-Practitioner" key="Practitioner-Example-Kyle-Anydoc-Practitioner" name="Example-Kyle-Anydoc-Practitioner"/>
+<artifact id="PractitionerRole/Example-Kyle-Anydoc-PractitionerRole1" key="PractitionerRole-Example-Kyle-Anydoc-PractitionerRole1" name="Example-Kyle-Anydoc-PractitionerRole1"/>
 <artifact id="RelatedPerson/Example-McBee-ADINotary" key="RelatedPerson-Example-McBee-ADINotary" name="Example-McBee-ADINotary"/>
 <artifact id="RelatedPerson/Example-McBee-ADIWitness" key="RelatedPerson-Example-McBee-ADIWitness" name="Example-McBee-ADIWitness"/>
 <artifact id="Observation/Example-McBee-AutopsyObservation1" key="Observation-Example-McBee-AutopsyObservation1" name="Example-McBee-AutopsyObservation1"/>
@@ -120,6 +122,7 @@
 <artifact id="Observation/Example-McBee-PersonalInterventionPreference8" key="Goal-Example-McBee-PersonalInterventionPreference8" name="Example-McBee-PersonalInterventionPreference8"/>
 <artifact id="Observation/Example-Smith-Johnson-AutopsyObservation1" key="Observation-Example-Smith-Johnson-AutopsyObservation1" name="Example-Smith-Johnson-AutopsyObservation1"/>
 <artifact id="Bundle/Example-Smith-Johnson-Bundle1" key="Bundle-Example-Smith-Johnson-Bundle1" name="Example-Smith-Johnson-Bundle1"/>
+<artifact id="ServiceRequest/Example-Smith-Johnson-CPR-ServiceRequest1" key="ServiceRequest-Example-Smith-Johnson-CPR-ServiceRequest1" name="Example-Smith-Johnson-CPR-ServiceRequest1"/>
 <artifact id="Observation/Example-Smith-Johnson-CareExperiencePreference1" key="Goal-Example-Smith-Johnson-CareExperiencePreference1" name="Example-Smith-Johnson-CareExperiencePreference1"/>
 <artifact id="Observation/Example-Smith-Johnson-CareExperiencePreference2" key="Goal-Example-Smith-Johnson-CareExperiencePreference2" name="Example-Smith-Johnson-CareExperiencePreference2"/>
 <artifact id="Observation/Example-Smith-Johnson-CareExperiencePreference3" key="Goal-Example-Smith-Johnson-CareExperiencePreference3" name="Example-Smith-Johnson-CareExperiencePreference3"/>
@@ -173,6 +176,7 @@
 <artifact deprecated="true" id="StructureDefinition/PADI-Header" key="StructureDefinition-PADI-Header" name="PACIO ADI Header"/>
 <artifact deprecated="true" id="StructureDefinition/PADI-Provenance" key="StructureDefinition-PADI-Provenance" name="PACIO ADI Provenance"/>
 <artifact deprecated="true" id="CapabilityStatement/padi" key="CapabilityStatement-padi" name="PADI CapabilityStatement"/>
+<artifact id="Bundle/PMO-Example-Smith-Johnson-Bundle2" key="Bundle-PMO-Example-Smith-Johnson-Bundle2" name="PMO-Example-Smith-Johnson-Bundle2"/>
 <artifact id="StructureDefinition/adi-participant-extension" key="StructureDefinition-padi-participant-extension" name="Participant"/>
 <artifact deprecated="true" id="ValueSet/PADIParticipantRelationshipVS" key="ValueSet-PADIParticipantRelationshipVS" name="Participant Relationships"/>
 <artifact id="StructureDefinition/adi-performer-extension" key="StructureDefinition-padi-performer-extension" name="Performer"/>
@@ -180,6 +184,7 @@
 <artifact id="Composition/Example-McBee-PACPComposition1" key="Composition-Example-McBee-PACPComposition1" name="Personal Advance Care Plan Document for Roger McBee"/>
 <artifact id="ValueSet/ADIPersonalAndLegalRelationshipRoleTypeVS" key="ValueSet-PADIPersonalAndLegalRelationshipRoleTypeVS" name="Personal And Legal Relationship Role Type"/>
 <artifact id="StructureDefinition/ADI-PersonalInterventionPreference" key="StructureDefinition-PADI-PersonalInterventionPreference" name="Personal Intervention Preference"/>
+<artifact id="Composition/PMO-Example-Smith-Johnson-PMOComposition1" key="Composition-PMO-Example-Smith-Johnson-PMOComposition1" name="Portable Medical Order"/>
 <artifact id="ValueSet/ADIPMOConsentCategoriesVS" key="ValueSet-ADIPMOConsentCategoriesVS" name="Portable Medical Order Categories"/>
 <artifact deprecated="true" id="ValueSet/PADIPresenceIndicatorVS" key="ValueSet-PADIPresenceIndicatorVS" name="Presence Indicator"/>
 <artifact id="List/Example-Smith-Johnson-PersonalPrioritiesOrganizer1" key="List-Example-Smith-Johnson-PersonalPrioritiesOrganizer1" name="Priorities for Goals and Preferences"/>
