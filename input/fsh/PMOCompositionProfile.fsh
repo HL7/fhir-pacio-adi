@@ -184,7 +184,7 @@ Description: "This profile encompasses information that makes up a practitioner'
 
 /*
 Invariant:  HCA-section-entries0
-Description: "0 - If healthcare agent section entry exists, then the HCA consent entry and HCA relatedPerson entry must exist"
+Description: "0 - If healthcare agent section entry exists, then the HCA consent entry and HCA RelatedPerson entry must exist"
 //Expression: "entry.exists() implies (entry.where($this is Consent).exists() and entry.where($this is RelatedPerson).exists())"
 Expression: "entry.exists().not()"
 //Expression: "entry.resolve() is Consent" fail
@@ -193,7 +193,7 @@ Severity:   #error
 
 
 Invariant:  HCA-section-entries1
-Description: "1 -If healthcare agent section entry exists, then the HCA consent entry and HCA relatedPerson entry must exist"
+Description: "1 -If healthcare agent section entry exists, then the HCA consent entry and HCA RelatedPerson entry must exist"
 //Expression: "entry.exists() implies (entry.where($this is Consent).exists() and entry.where($this is RelatedPerson).exists())"
 Expression: "entry.where($this.resolve() is Consent)"
 Severity:   #error
@@ -201,9 +201,9 @@ Severity:   #error
 
 
 Invariant:  HCA-section-entries2
-Description: "2 - If healthcare agent section entry exists, then the HCA consent entry and HCA relatedPerson entry must exist"
+Description: "2 - If healthcare agent section entry exists, then the HCA consent entry and HCA RelatedPerson entry must exist"
 //Expression: "entry.exists() implies (entry.where($this is Consent).exists() and entry.where($this is RelatedPerson).exists())"
-Expression: "entry.where($this.resolve() is relatedPerson)"
+Expression: "entry.where($this.resolve() is RelatedPerson)"
 Severity:   #error
 
 */
