@@ -1321,7 +1321,7 @@ Usage: #example
 * identifier[=].value = "5367-047e62ccf09d4b39a8add708a69b7f38"
 
 * status = #current
-* docStatus = #final
+* docStatus = #current
 
 
 * type.coding[0] = $LOINC#86533-7 "Patient Living will"
@@ -1364,7 +1364,7 @@ Usage: #example
 
 
 * status = #current
-* docStatus = #final
+* docStatus = #current
 
 
 * type.coding[0] = $LOINC#81334-5 "Patient Personal advance care plan"
