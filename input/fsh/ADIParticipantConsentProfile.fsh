@@ -14,7 +14,7 @@ Description: "This profile is used to represent a consent for an advance directi
 //[TODO] need verification that it is active only. Is the authority proposed if the agent is not yet aware or accepted the role?
 * status = #active
 // [TODO], the LOINC code is an observable, which is not meant to express scope. Will need to find another code that could (Follow-up with Dan Vreeman  Liz Umberfield)
-* scope from ADIConsentTypeVS (required)
+* scope from $VSACADIConsentType (required)
 
 // Fix for FHIR_34506 - meeting on 2023-08-28: re-point to http://terminology.hl7.org/CodeSystem/consentcategorycodes
 /*
