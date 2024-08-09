@@ -21,6 +21,8 @@ This section defines additional requirements and guidance relevant to this guide
 
 **MAY** assert missing information by using an appropriate value set code where allowed or by using a (dataAbsentReason extension)http://hl7.org/fhir/r4/extension-data-absent-reason.html for elements that are not marked as required (cardinality 0..*)
 
+**SHOULD** send all elements defined in the profiles if captured in the system in a way that can be shared and do so as codified and as structured as possible (in addition to meeting the [CodeableConcept](#must-support-of-codeableconcept-text-elements) and [resource](#must-support-of-resource-text-elements) human readable text requirements). 
+
 **SHALL** meet the requirements identified in the definition of Must Support elements.
 
 
