@@ -1,3 +1,4 @@
+/*
 ValueSet: ADIConsentTypeVS
 Title: "Consent Type"
 Description: "Codes indicating type of advance directive consents."
@@ -7,6 +8,7 @@ Description: "Codes indicating type of advance directive consents."
 * include $LOINC#81346-9 "Limitations placed on healthcare agent [Reported]" // "Healthcare agents identified with limitations placed specified"
 * include $LOINC#81343-6 "Healthcare agent advisor [Reported]"
 * insert LOINCCopyrightNotice
+*/
 
 ValueSet: ADIPersonalAndLegalRelationshipRoleTypeVS
 Title: "Personal And Legal Relationship Role Type"

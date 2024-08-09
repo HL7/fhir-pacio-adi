@@ -55,7 +55,7 @@
 <artifact id="CarePlan/Example-McBee-PreferenceCarePlan1" key="CarePlan-Example-McBee-PreferenceCarePlan1" name="Care Plan for Unconscious, vegetative state, coma for McBee"/>
 <artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan1" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan1" name="Care Plan for Unconscious, vegetative state, coma for Smith-Johnson"/>
 <artifact id="StructureDefinition/adi-clause-extension" key="StructureDefinition-padi-clause-extension" name="Clause"/>
-<artifact id="ValueSet/ADIConsentTypeVS" key="ValueSet-PADIConsentTypeVS" name="Consent Type"/>
+<artifact deprecated="true" id="ValueSet/ADIConsentTypeVS" key="ValueSet-PADIConsentTypeVS" name="Consent Type"/>
 <artifact id="SearchParameter/Consent-id" key="SearchParameter-Consent-id" name="Consent-id"/>
 <artifact deprecated="true" id="StructureDefinition/padi-contextualValue-extension" key="StructureDefinition-padi-contextualValue-extension" name="Contextual Value"/>
 <artifact id="StructureDefinition/adi-dataEnterer-extension" key="StructureDefinition-padi-dataEnterer-extension" name="Data Enterer"/>
