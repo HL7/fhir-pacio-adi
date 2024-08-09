@@ -44,15 +44,6 @@ Description: "This profile encompasses information that makes up the author’s 
 // TODO add guidance around this emptyReason element
 // TODO add invariant stating that if entry exists, then agent Consent must exist
 
-* section[gpp_personal_care_experience] ^short = "Quality of Life related personal care experiences, personal goals, and priorities"
-* section[gpp_personal_care_experience].title 1..1 MS
-* section[gpp_personal_care_experience].code 1..1 
-* section[gpp_personal_care_experience].code = $LOINC#81338-6
-* section[healthcare_agent].orderedBy 
-* section[gpp_personal_care_experience].entry 
-* section[gpp_personal_care_experience].entry only Reference(ADICareExperiencePreference or ADIPersonalPrioritiesOrganizer or ADIPersonalGoal)
-
-
 * section[gpp_for_certain_health_condition] ^short = "Preference care plans defined for specific situations and/or conditions"
 * section[gpp_for_certain_health_condition] ^definition = "The section defines Goals, Preferences, and Priorities of the person under certain health conditions.  In this section, the CarePlan resource provides a construct by which the identified personal values and preferences for treatment can be integrated into the plan of care which acts, from a workflow or process perspective, as the roadmap for care delivery and treatment. "
 * section[gpp_for_certain_health_condition].title 1..1 MS
@@ -60,6 +51,14 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[gpp_for_certain_health_condition].code = $LOINC#81336-0
 //* section[gpp_for_certain_health_condition].entry only Reference(ADIPreferenceCarePlan or ADIPersonalInterventionPreference or ADIPersonalInterventionRequestPreference or ADIPersonalPrioritiesOrganizer or ADIPersonalGoal)
 * section[gpp_for_certain_health_condition].entry only Reference(ADIPreferenceCarePlan)
+
+* section[gpp_personal_care_experience] ^short = "Quality of Life related personal care experiences, personal goals, and priorities"
+* section[gpp_personal_care_experience].title 1..1 MS
+* section[gpp_personal_care_experience].code 1..1 
+* section[gpp_personal_care_experience].code = $LOINC#81338-6
+* section[healthcare_agent].orderedBy 
+* section[gpp_personal_care_experience].entry 
+* section[gpp_personal_care_experience].entry only Reference(ADICareExperiencePreference or ADIPersonalPrioritiesOrganizer or ADIPersonalGoal)
 
 * section[gpp_upon_death] ^short = "Goals, preferences, and priorities upon death"
 * section[gpp_upon_death].title 1..1 MS
