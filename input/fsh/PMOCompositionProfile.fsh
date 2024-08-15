@@ -27,6 +27,7 @@ Description: "This profile encompasses information that makes up a practitioner'
 * section contains
     portable_medical_orders 1..1 MS and
     completion_information 0..1 MS and 
+    administration_information 0..1 MS and
     additional_documentation 0..1 MS and
     witness_and_notary 0..1 MS
 
@@ -66,7 +67,7 @@ Description: "This profile encompasses information that makes up a practitioner'
 * section[completion_information].extension[adi-clause-extension] ^short = "Administrative, instructional, and/or legal information"
 * section[completion_information].title 1..1 MS
 * section[completion_information].code 1..1 MS
-* section[completion_information].code = $LOINC#100970-3 // "Portable medical order completion information" // Code is LOINC pre-release as on 11/03/2022 - https://loinc.org/prerelease/
+* section[completion_information].code = adi-temp-cs#ldo // "Portable medical order completion information" // Code is LOINC pre-release as on 11/03/2022 - https://loinc.org/prerelease/
 // need to slice on entries. OrderReview has a max of 1 and orders participant has a max of 1
 
 * section[completion_information].entry ^slicing.discriminator.type = #profile
@@ -85,6 +86,13 @@ Description: "This profile encompasses information that makes up a practitioner'
 * section[completion_information].entry[orders_participant] only Reference(ADIPMOParticipantObservation)
 * section[completion_information].entry[hospice_observation] only Reference(ADIPMOHospiceObservation)
 * section[completion_information].entry[hospice_agency] only Reference($USCoreOrganization)
+
+* section[administration_information] ^short = "Observations regarding the existence of other advance directive related information"
+* section[administration_information].title 1..1 MS
+* section[administration_information].code 1..1 MS
+* section[administration_information].code = adi-temp-cs#adm
+// * section[administration_information].entry only Reference(<enter reference to EmergencyContactInformation>)
+
 
 * section[additional_documentation] ^short = "Observations regarding the existence of other advance directive related information"
 * section[additional_documentation].title 1..1 MS
