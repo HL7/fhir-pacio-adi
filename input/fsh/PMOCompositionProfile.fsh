@@ -8,6 +8,9 @@ Description: "This profile encompasses information that makes up a practitioner'
 
 * type = $LOINC#93037-0 // "Portable medical order form"
 
+// fix for FHIR-46609: PMO Composition event needs further constraints for facilitators.
+* event.detail only Reference(ADIPMOServiceRequest or ADIParticipantConsent or $USCoreProcedure)
+
 * section ^slicing.discriminator.type = #pattern 
 * section ^slicing.discriminator.path = "code"
 * section ^slicing.rules = #open
