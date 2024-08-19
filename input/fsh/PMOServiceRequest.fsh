@@ -1,7 +1,7 @@
 Profile: ADIPMOServiceRequest
 Parent: $USCoreServiceRequest
 Id: ADI-PMOServiceRequest
-Title: "ADI ServiceRequest"
+Title: "ADI PMO ServiceRequest"
 Description: "This profile is used to represent both a patient authored care plan (PACP) and a practitioner authored portable medical order (PMO)."
 
 /*
@@ -29,7 +29,8 @@ Description: "This profile is used to represent both a patient authored care pla
 * subject 1..1
 * subject only Reference($USCorePatient)
 
-* occurrenceTiming ^short = "Used to express a trial or period to conduct the treatment" 
+* occurrencePeriod ^short = "Used to specify when the PMO Medical Order goes into effect." 
+* occurrencePeriod.start 1..1 MS
 
 * encounter 0..0 // verify no encounter possible
 * requester 1..1

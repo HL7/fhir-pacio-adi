@@ -26,7 +26,9 @@
 <artifact id="StructureDefinition/ADI-PMOMedicallyAssistedHydrationServiceRequest" key="StructureDefinition-ADI-PMOMedicallyAssistedHydrationServiceRequest" name="ADI PMO Medically Assisted Hydration Service Request"/>
 <artifact id="StructureDefinition/ADI-PMOMedicallyAssistedNutritionServiceRequest" key="StructureDefinition-ADI-PMOMedicallyAssistedNutritionServiceRequest" name="ADI PMO Medically Assisted Nutrition Service Request"/>
 <artifact id="StructureDefinition/ADI-PMOParticipantObservation" key="StructureDefinition-ADI-PMOParticipantObservation" name="ADI PMO Participant Observation"/>
+<artifact id="StructureDefinition/ADI-PMOProcedure" key="StructureDefinition-ADI-PMOProcedure" name="ADI PMO Procedure"/>
 <artifact id="StructureDefinition/ADI-PMOReviewObservation" key="StructureDefinition-ADI-PMOReviewObservation" name="ADI PMO Review Observation"/>
+<artifact id="StructureDefinition/ADI-PMOServiceRequest" key="StructureDefinition-ADI-PMOServiceRequest" name="ADI PMO ServiceRequest"/>
 <artifact id="StructureDefinition/ADI-Participant" key="StructureDefinition-PADI-Participant" name="ADI Participant"/>
 <artifact id="StructureDefinition/ADI-ParticipantConsent" key="StructureDefinition-PADI-ParticipantConsent" name="ADI Participant Consent"/>
 <artifact id="StructureDefinition/ADI-PACPComposition" key="StructureDefinition-PADI-PACPComposition" name="ADI Personal Advance Care Plan Composition"/>
@@ -38,7 +40,6 @@
 <artifact id="StructureDefinition/ADI-PreferenceCarePlan" key="StructureDefinition-PADI-PreferenceCarePlan" name="ADI Preference Care Plan"/>
 <artifact id="StructureDefinition/ADI-Provenance" key="StructureDefinition-ADI-Provenance" name="ADI Provenance"/>
 <artifact id="CodeSystem/ADIRevokeStatusCS" key="CodeSystem-ADIRevokeStatusCS" name="ADI Revoke Status Code System"/>
-<artifact id="StructureDefinition/ADI-PMOServiceRequest" key="StructureDefinition-ADI-PMOServiceRequest" name="ADI ServiceRequest"/>
 <artifact id="CodeSystem/adi-temp-cs" key="CodeSystem-adi-temp-cs" name="ADI Temporary Code System"/>
 <artifact id="StructureDefinition/ADI-Witness" key="StructureDefinition-ADI-Witness" name="ADI Witness"/>
 <artifact deprecated="true" id="ValueSet/PADIAdvanceDirectiveCategoriesVS" key="ValueSet-PADIAdvanceDirectiveCategoriesVS" name="Advance Directive Categories"/>
