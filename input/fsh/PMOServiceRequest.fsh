@@ -29,9 +29,6 @@ Description: "This profile is used to represent both a patient authored care pla
 * subject 1..1
 * subject only Reference($USCorePatient)
 
-* occurrencePeriod ^short = "Used to specify when the PMO Medical Order goes into effect." 
-* occurrencePeriod.start 1..1 MS
-
 * encounter 0..0 // verify no encounter possible
 * requester 1..1
 * requester only Reference($USCorePractitioner)
@@ -50,7 +47,7 @@ Description: "This profile is used to represent a practitioner authored portable
 
 * ^experimental = false
 * category = $LOINC#100822-6 "Cardiopulmonary resuscitation orders"
-* code = $LOINC#100822-6 "Cardiopulmonary resuscitation orders" // from LOINCPOLSTCPRAnswerList (extensible)
+* code = $SNOMEDCT#89666000 "Cardiopulmonary resuscitation (procedure)" 
 * doNotPerform 0..1 MS
 
 
@@ -65,7 +62,7 @@ Description: "This profile is used to represent a practitioner authored portable
 
 * ^experimental = false
 * category = $LOINC#100823-4 "Initial portable medical treatment orders"
-* code = $LOINC#100823-4 "Initial portable medical treatment orders" // from LOINCPOLSTInitialTxAnswerList (extensible)
+* code from $VSACADIInitialTreatmentPMOOptions (extensible) // VSAC value set with codes from LOINCPOLSTInitialTxAnswerList (extensible)
 
 
 Profile: ADIPMOAdditionalOrdersOrInstructionsServiceRequest
