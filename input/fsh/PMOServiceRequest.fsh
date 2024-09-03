@@ -11,7 +11,7 @@ Description: "This profile is used to represent both a patient authored care pla
 //* text 1..1 MS
 
 * status = #active
-* intent = #order
+* intent = #directive
 
 // TODO need a category 
 // TODO may need to get a variance request from us core ServiceRequest. In different version and also do any of the categories fit?
@@ -43,13 +43,14 @@ Title: "ADI PMO Cardiopulmonary Resuscitation ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order for cardiopulmonary resuscitation."
 
 * status = #active
-* intent = #order
 
 * ^experimental = false
 * category = $LOINC#100822-6 "Cardiopulmonary resuscitation orders"
 * code = $SNOMEDCT#89666000 "Cardiopulmonary resuscitation (procedure)" 
 * doNotPerform 0..1 MS
+* orderDetail 0..1 MS
 
+// TO DO: 
 
 Profile: ADIPMOInitialTreatmentServiceRequest
 Parent: ADIPMOServiceRequest
@@ -58,12 +59,13 @@ Title: "ADI PMO Initial Treatment ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order for initial treatment."
 
 * status = #active
-* intent = #order
 
 * ^experimental = false
 * category = $LOINC#100823-4 "Initial portable medical treatment orders"
-* code from $VSACADIInitialTreatmentPMOOptions (extensible) // VSAC value set with codes from LOINCPOLSTInitialTxAnswerList (extensible)
+* code 1..1 MS
+* orderDetail from $VSACADIInitialTreatmentPMOOptions (extensible) // VSAC value set with codes from LOINCPOLSTInitialTxAnswerList (extensible)
 
+* supportingInfo only Reference(ADIPersonalGoal or ADIDocumentReference)
 
 Profile: ADIPMOAdditionalOrdersOrInstructionsServiceRequest
 Parent: ADIPMOServiceRequest
@@ -72,7 +74,6 @@ Title: "ADI PMO Additional orders or instructions ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order additional orders or instructions."
 
 * status = #active
-* intent = #order
 
 * ^experimental = false
 * category = $LOINC#100824-2 "Additional portable medical orders or instructions"
@@ -96,7 +97,6 @@ Title: "ADI PMO Medically Assisted Hydration Service Request"
 Description: "This profile is used to represent a practitioner authored portable medical order for medically assisted hydration."
 
 * status = #active
-* intent = #order
 
 * ^experimental = false
 * category = ADITempCS#pmo-medically-assisted-hydration-service-request "Medically assisted hydration order"
@@ -108,7 +108,7 @@ Description: "This profile is used to represent a practitioner authored portable
 Profile: ADIPMOFullServiceRequest
 Parent: ServiceRequest
 Id: ADI-PMOFullServiceRequest
-Title: "ADI Portable Medical Order Full ServiceRequest"
+Title: "ADI PMO Full ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order."
 
 * text 1..1 MS

@@ -1,7 +1,7 @@
 Profile: ADIPACPComposition
 Parent: ADICompositionHeader
 Id: ADI-PACPComposition
-Title: "ADI Personal Advance Care Plan Composition"
+Title: "ADI PtAuthored Composition"
 Description: "This profile encompasses information that makes up the author’s advance care information plan."
 
 * author only Reference($USCorePatient)

@@ -38,7 +38,7 @@ The table below summarizes the relevant profiles and elements by ADI Content Typ
         </td>
     </tr>
     <tr>
-        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PACPComposition.html">ADI Personal Advance Care Plan Composition</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PACPComposition.html">ADI PtAuthored Composition</a></td>
         <td style="padding: 7px;"><p>This profile encompasses information that makes up the author’s advance care planning information.</p></td>
     </tr>
     <tr>
@@ -54,15 +54,15 @@ The table below summarizes the relevant profiles and elements by ADI Content Typ
         <td style="padding: 7px;"><p>This profile is used to indicate if additional advance directive documents, such as physician order for life sustaining treatment (MOLST or POLST) or Do Not Resuscitate Order (DNR) exist and a reference to the document.</p></td>
     </tr>
     <tr>    
-        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PersonalInterventionPreference.html">ADI Personal Intervention Preference</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PersonalInterventionPreference.html">ADI ADI PtAuthored Personal Intervention Preference</a></td>
         <td style="padding: 7px;"><p>This profile is used to represent personal medical intervention preferences under certain health conditions.</p></td>
     </tr>
     <tr>    
-        <td style="padding: 7px;"><a href="StructureDefinition-ADI-CareExperiencePreference.html">ADI Care Experience Preference</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-CareExperiencePreference.html">ADI PtAuthored Care Experience Preference</a></td>
         <td style="padding: 7px;"><p>This profile is used to express the author's personal thoughts about something he or she feels is relevant to his or her care experience which can be important to know when planning or delivering his or her care.</p></td>
     </tr>
     <tr>    
-        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PersonalGoal.html">ADI Personal Goal</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PersonalGoal.html">ADI PtAuthored Personal Goal</a></td>
         <td style="padding: 7px;"><p>This profile is a statement that presents the author's personal health goals that are important to be mindful of when planning his or her care.</p></td>
     </tr>
     <tr>    
@@ -78,7 +78,7 @@ The table below summarizes the relevant profiles and elements by ADI Content Typ
         <td style="padding: 7px;"><p>This profile is used to represent the author's thoughts about autopsy.</p></td>
     </tr>
     <tr>    
-       <td style="padding: 7px;"><a href="StructureDefinition-ADI-PreferenceCarePlan.html">ADI Preference Care Plan</a></td>
+       <td style="padding: 7px;"><a href="StructureDefinition-ADI-PreferenceCarePlan.html">ADI PtAuthored Care Plan</a></td>
         <td style="padding: 7px;"><p>The Preference Care Plan is a means for an individual to express their goals and preferences under certain circumstances that may be pertinent when planning his or her care.</p></td>
     </tr>
     <tr>    
@@ -127,22 +127,22 @@ The table below summarizes the relevant profiles and elements by ADI Content Typ
         <th style="padding: 10px;"><b>Based On</b></th>
     </tr>
     <tr>
-        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PMOComposition.html">ADI Portable Medical Order Composition</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PMOComposition.html">ADI PMO Composition</a></td>
         <td style="padding: 7px;"><p>This profile encompasses information that makes up a practitioner's portable medical order.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/composition.html">Composition</a></td>
     </tr>
     <tr>
-        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PMOCarePlan.html">ADI Portable Medical Order Care Plan</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PMOCarePlan.html">ADI PMO Care Plan</a></td>
         <td style="padding: 7px;"><p>This profile is used to specify the plan of care that represents the persons wishes, preferences, and experiences as documented in the PMO.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/careplan.html">Care Plan</a></td>
     </tr>
     <tr>
-        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PMOServiceRequest.html">ADI Portable Medical Order ServiceRequest</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PMOServiceRequest.html">ADI PMO ServiceRequest</a></td>
         <td style="padding: 7px;"><p>This profile is used to represent a practitioner authored portable medical order.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/servicerequest.html">Care Plan</a></td>
     </tr>
     <tr>
-        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PMOHospiceObservation.html">ADI Portable Medical Order Hospice Observation</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PMOHospiceObservation.html">ADI PMO Hospice Observation</a></td>
         <td style="padding: 7px;"><p>This profile is used to represent a finding that the individual is under hospice care.</p></td>
         <td style="padding: 7px;"><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
     </tr>

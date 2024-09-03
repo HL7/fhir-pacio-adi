@@ -1,7 +1,7 @@
 Profile: ADIPMOCarePlan
 Parent: $USCoreCarePlan
 Id: ADI-PMOCarePlan
-Title: "ADI Portable Medical Order Care Plan"
+Title: "ADI PMO Care Plan"
 Description: "The Portable Medical Order Care Plan."
 
 //* text 1..1 MS

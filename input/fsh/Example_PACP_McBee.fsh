@@ -753,7 +753,7 @@ Usage: #example
 // // Personal Intervention Preferences
 Instance: Example-McBee-PersonalInterventionPreference1
 InstanceOf: ADIPersonalInterventionPreference
-Description: "Example Patient McBee Personal Intervention Preference (Palliative Care)"
+Description: "Example Patient McBee ADI PtAuthored Personal Intervention Preference (Palliative Care)"
 Usage: #example
 
 * text.status = #additional
@@ -771,7 +771,7 @@ Usage: #example
 
 Instance: Example-McBee-PersonalInterventionPreference2
 InstanceOf: ADIPersonalInterventionPreference
-Description: "Example Patient McBee Personal Intervention Preference (Terminal Illness Health Deterioration)"
+Description: "Example Patient McBee ADI PtAuthored Personal Intervention Preference (Terminal Illness Health Deterioration)"
 Usage: #example
 
 * text.status = #additional
@@ -788,7 +788,7 @@ Usage: #example
 
 Instance: Example-McBee-PersonalInterventionPreference3
 InstanceOf: ADIPersonalInterventionPreference
-Description: "Example Patient McBee Personal Intervention Preference (Artificial Nutrition and Hydration)"
+Description: "Example Patient McBee ADI PtAuthored Personal Intervention Preference (Artificial Nutrition and Hydration)"
 Usage: #example
 
 * text.status = #additional
@@ -806,7 +806,7 @@ Usage: #example
 
 Instance: Example-McBee-PersonalInterventionPreference4
 InstanceOf: ADIPersonalInterventionPreference
-Description: "Example Patient McBee Personal Intervention Preference (Severe Illness or Injury)"
+Description: "Example Patient McBee ADI PtAuthored Personal Intervention Preference (Severe Illness or Injury)"
 Usage: #example
 
 * text.status = #additional
@@ -823,7 +823,7 @@ Usage: #example
 
 Instance: Example-McBee-PersonalInterventionPreference5
 InstanceOf: ADIPersonalInterventionPreference
-Description: "Example Patient McBee Personal Intervention Preference (Thoughts on CPR 1)"
+Description: "Example Patient McBee ADI PtAuthored Personal Intervention Preference (Thoughts on CPR 1)"
 Usage: #example
 
 * text.status = #additional
@@ -841,7 +841,7 @@ Usage: #example
 
 Instance: Example-McBee-PersonalInterventionPreference6
 InstanceOf: ADIPersonalInterventionPreference
-Description: "Example Patient McBee Personal Intervention Preference (THoughts on CPR 2)"
+Description: "Example Patient McBee ADI PtAuthored Personal Intervention Preference (THoughts on CPR 2)"
 Usage: #example
 
 * text.status = #additional
@@ -859,7 +859,7 @@ Usage: #example
 
 Instance: Example-McBee-PersonalInterventionPreference7
 InstanceOf: ADIPersonalInterventionPreference
-Description: "Example Patient McBee Personal Intervention Preference (Preferred Location for Last Days)"
+Description: "Example Patient McBee ADI PtAuthored Personal Intervention Preference (Preferred Location for Last Days)"
 Usage: #example
 
 * text.status = #additional
@@ -878,7 +878,7 @@ Usage: #example
 
 Instance: Example-McBee-PersonalInterventionPreference8
 InstanceOf: ADIPersonalInterventionPreference
-Description: "Example Patient McBee Personal Intervention Preference (Death arrangements)"
+Description: "Example Patient McBee ADI PtAuthored Personal Intervention Preference (Death arrangements)"
 Usage: #example
 
 * text.status = #additional

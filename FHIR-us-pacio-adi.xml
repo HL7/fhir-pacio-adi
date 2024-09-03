@@ -8,7 +8,6 @@
 <artifactPageExtension value="-mappings"/>
 <artifact id="StructureDefinition/ADI-AutopsyObservation" key="StructureDefinition-PADI-AutopsyObservation" name="ADI Autopsy Observation"/>
 <artifact id="CapabilityStatement/adi" key="CapabilityStatement-adi" name="ADI CapabilityStatement"/>
-<artifact id="StructureDefinition/ADI-CareExperiencePreference" key="StructureDefinition-PADI-CareExperiencePreference" name="ADI Care Experience Preference"/>
 <artifact id="StructureDefinition/ADI-Composition-Header" key="StructureDefinition-ADI-Composition-Header" name="ADI Composition Header"/>
 <artifact id="ValueSet/ADICompositionStatusVS" key="ValueSet-ADICompositionStatusVS" name="ADI Composition Status"/>
 <artifact deprecated="true" id="ValueSet/PADIConsentActorRoleVS" key="ValueSet-PADIConsentActorRoleVS" name="ADI Consent Actor Role"/>
@@ -22,6 +21,9 @@
 <artifact id="StructureDefinition/ADI-OrganDonationObservation" key="StructureDefinition-PADI-OrganDonationObservation" name="ADI Organ Donation"/>
 <artifact id="StructureDefinition/ADI-PMOAdditionalOrdersOrInstructionsServiceRequest" key="StructureDefinition-ADI-PMOAdditionalOrdersOrInstructionsServiceRequest" name="ADI PMO Additional orders or instructions ServiceRequest"/>
 <artifact id="StructureDefinition/ADI-PMOCPRServiceRequest" key="StructureDefinition-ADI-PMOCPRServiceRequest" name="ADI PMO Cardiopulmonary Resuscitation ServiceRequest"/>
+<artifact id="StructureDefinition/ADI-PMOCarePlan" key="StructureDefinition-ADI-PMOCarePlan" name="ADI PMO Care Plan"/>
+<artifact id="StructureDefinition/ADI-PMOComposition" key="StructureDefinition-ADI-PMOComposition" name="ADI PMO Composition"/>
+<artifact id="StructureDefinition/ADI-PMOHospiceObservation" key="StructureDefinition-ADI-PMOHospiceObservation" name="ADI PMO Hospice Observation"/>
 <artifact id="StructureDefinition/ADI-PMOInitialTreatmentServiceRequest" key="StructureDefinition-ADI-PMOInitialTreatmentServiceRequest" name="ADI PMO Initial Treatment ServiceRequest"/>
 <artifact id="StructureDefinition/ADI-PMOMedicallyAssistedHydrationServiceRequest" key="StructureDefinition-ADI-PMOMedicallyAssistedHydrationServiceRequest" name="ADI PMO Medically Assisted Hydration Service Request"/>
 <artifact id="StructureDefinition/ADI-PMOMedicallyAssistedNutritionServiceRequest" key="StructureDefinition-ADI-PMOMedicallyAssistedNutritionServiceRequest" name="ADI PMO Medically Assisted Nutrition Service Request"/>
@@ -31,14 +33,13 @@
 <artifact id="StructureDefinition/ADI-PMOServiceRequest" key="StructureDefinition-ADI-PMOServiceRequest" name="ADI PMO ServiceRequest"/>
 <artifact id="StructureDefinition/ADI-Participant" key="StructureDefinition-PADI-Participant" name="ADI Participant"/>
 <artifact id="StructureDefinition/ADI-ParticipantConsent" key="StructureDefinition-PADI-ParticipantConsent" name="ADI Participant Consent"/>
-<artifact id="StructureDefinition/ADI-PACPComposition" key="StructureDefinition-PADI-PACPComposition" name="ADI Personal Advance Care Plan Composition"/>
-<artifact id="StructureDefinition/ADI-PersonalGoal" key="StructureDefinition-PADI-PersonalGoal" name="ADI Personal Goal"/>
 <artifact id="StructureDefinition/ADI-PersonalPrioritiesOrganizer" key="StructureDefinition-PADI-PersonalPrioritiesOrganizer" name="ADI Personal Priorities Organizer"/>
-<artifact id="StructureDefinition/ADI-PMOCarePlan" key="StructureDefinition-ADI-PMOCarePlan" name="ADI Portable Medical Order Care Plan"/>
-<artifact id="StructureDefinition/ADI-PMOComposition" key="StructureDefinition-ADI-PMOComposition" name="ADI Portable Medical Order Composition"/>
-<artifact id="StructureDefinition/ADI-PMOHospiceObservation" key="StructureDefinition-ADI-PMOHospiceObservation" name="ADI Portable Medical Order Hospice Observation"/>
-<artifact id="StructureDefinition/ADI-PreferenceCarePlan" key="StructureDefinition-PADI-PreferenceCarePlan" name="ADI Preference Care Plan"/>
 <artifact id="StructureDefinition/ADI-Provenance" key="StructureDefinition-ADI-Provenance" name="ADI Provenance"/>
+<artifact id="StructureDefinition/ADI-CareExperiencePreference" key="StructureDefinition-PADI-CareExperiencePreference" name="ADI PtAuthored Care Experience Preference"/>
+<artifact id="StructureDefinition/ADI-PreferenceCarePlan" key="StructureDefinition-PADI-PreferenceCarePlan" name="ADI PtAuthored Care Plan"/>
+<artifact id="StructureDefinition/ADI-PACPComposition" key="StructureDefinition-PADI-PACPComposition" name="ADI PtAuthored Composition"/>
+<artifact id="StructureDefinition/ADI-PersonalGoal" key="StructureDefinition-PADI-PersonalGoal" name="ADI PtAuthored Personal Goal"/>
+<artifact id="StructureDefinition/ADI-PersonalInterventionPreference" key="StructureDefinition-PADI-PersonalInterventionPreference" name="ADI PtAuthored Personal Intervention Preference"/>
 <artifact id="CodeSystem/ADIRevokeStatusCS" key="CodeSystem-ADIRevokeStatusCS" name="ADI Revoke Status Code System"/>
 <artifact id="CodeSystem/adi-temp-cs" key="CodeSystem-adi-temp-cs" name="ADI Temporary Code System"/>
 <artifact id="StructureDefinition/ADI-Witness" key="StructureDefinition-ADI-Witness" name="ADI Witness"/>
@@ -184,7 +185,6 @@
 <artifact id="Composition/Example-Smith-Johnson-PACPComposition1" key="Composition-Example-Smith-Johnson-PACPComposition1" name="Personal Advance Care Plan"/>
 <artifact id="Composition/Example-McBee-PACPComposition1" key="Composition-Example-McBee-PACPComposition1" name="Personal Advance Care Plan Document for Roger McBee"/>
 <artifact id="ValueSet/ADIPersonalAndLegalRelationshipRoleTypeVS" key="ValueSet-PADIPersonalAndLegalRelationshipRoleTypeVS" name="Personal And Legal Relationship Role Type"/>
-<artifact id="StructureDefinition/ADI-PersonalInterventionPreference" key="StructureDefinition-PADI-PersonalInterventionPreference" name="Personal Intervention Preference"/>
 <artifact id="Composition/PMO-Example-Smith-Johnson-PMOComposition1" key="Composition-PMO-Example-Smith-Johnson-PMOComposition1" name="Portable Medical Order"/>
 <artifact id="ValueSet/ADIPMOConsentCategoriesVS" key="ValueSet-ADIPMOConsentCategoriesVS" name="Portable Medical Order Categories"/>
 <artifact deprecated="true" id="ValueSet/PADIPresenceIndicatorVS" key="ValueSet-PADIPresenceIndicatorVS" name="Presence Indicator"/>
