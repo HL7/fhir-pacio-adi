@@ -865,7 +865,7 @@ Description: "Example Patient Smith-Johnson Personal Goal 3"
 
 Instance: Example-Smith-Johnson-PersonalInterventionPreference1
 InstanceOf: ADIPersonalInterventionPreference
-Description: "Example Patient Smith-Johnson Personal Intervention Preference (Significant Pain or Suffering)"
+Description: "Example Patient Smith-Johnson ADI PtAuthored Personal Intervention Preference (Significant Pain or Suffering)"
 Usage: #example
 
 * text.status = #generated
@@ -884,7 +884,7 @@ Usage: #example
 
 Instance: Example-Smith-Johnson-PersonalInterventionPreference2
 InstanceOf: ADIPersonalInterventionPreference
-Description: "Example Patient Smith-Johnson Personal Intervention Preference (Specific Circumstance)"
+Description: "Example Patient Smith-Johnson ADI PtAuthored Personal Intervention Preference (Specific Circumstance)"
 Usage: #example
 
 * text.status = #generated
@@ -904,7 +904,7 @@ Usage: #example
 
 Instance: Example-Smith-Johnson-PersonalInterventionPreference3
 InstanceOf: ADIPersonalInterventionPreference
-Description: "Example Patient Smith-Johnson Personal Intervention Preference (Mental Illness Deterioration)"
+Description: "Example Patient Smith-Johnson ADI PtAuthored Personal Intervention Preference (Mental Illness Deterioration)"
 Usage: #example
 
 * text.status = #generated
@@ -924,7 +924,7 @@ Usage: #example
 
 Instance: Example-Smith-Johnson-PersonalInterventionPreference4
 InstanceOf: ADIPersonalInterventionPreference
-Description: "Example Patient Smith-Johnson Personal Intervention Preference (Severe Irreversible Brain Injury or Illness)"
+Description: "Example Patient Smith-Johnson ADI PtAuthored Personal Intervention Preference (Severe Irreversible Brain Injury or Illness)"
 Usage: #example
 
 * text.status = #generated
@@ -944,7 +944,7 @@ Usage: #example
 
 Instance: Example-Smith-Johnson-PersonalInterventionPreference5
 InstanceOf: ADIPersonalInterventionPreference
-Description: "Example Patient Smith-Johnson Personal Intervention Preference (Final Days Location)"
+Description: "Example Patient Smith-Johnson ADI PtAuthored Personal Intervention Preference (Final Days Location)"
 Usage: #example
 
 * text.status = #generated
@@ -965,7 +965,7 @@ Usage: #example
 
 Instance: Example-Smith-Johnson-PersonalInterventionPreference6
 InstanceOf: ADIPersonalInterventionPreference
-Description: "Example Patient Smith-Johnson Personal Intervention Preference (Death Arrangements)"
+Description: "Example Patient Smith-Johnson ADI PtAuthored Personal Intervention Preference (Death Arrangements)"
 Usage: #example
 
 * text.status = #generated
@@ -988,7 +988,7 @@ Usage: #example
 // Personal Intervention Request Preferences
 Instance: Example-Smith-Johnson-PersonalInterventionPreference1
 InstanceOf: ADIPersonalInterventionRequestPreference
-Description: "Example Patient Smith-Johnson Personal Intervention Preference (Significant Pain or Suffering)"
+Description: "Example Patient Smith-Johnson ADI PtAuthored Personal Intervention Preference (Significant Pain or Suffering)"
 
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
@@ -1002,7 +1002,7 @@ Description: "Example Patient Smith-Johnson Personal Intervention Preference (Si
 
 Instance: Example-Smith-Johnson-PersonalInterventionPreference2
 InstanceOf: ADIPersonalInterventionPreference
-Description: "Example Patient Smith-Johnson Personal Intervention Preference (Specific Circumstance)"
+Description: "Example Patient Smith-Johnson ADI PtAuthored Personal Intervention Preference (Specific Circumstance)"
 
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
@@ -1016,7 +1016,7 @@ Description: "Example Patient Smith-Johnson Personal Intervention Preference (Sp
 
 Instance: Example-Smith-Johnson-PersonalInterventionPreference3
 InstanceOf: ADIPersonalInterventionPreference
-Description: "Example Patient Smith-Johnson Personal Intervention Preference (Mental Illness Deterioration)"
+Description: "Example Patient Smith-Johnson ADI PtAuthored Personal Intervention Preference (Mental Illness Deterioration)"
 
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
@@ -1030,7 +1030,7 @@ Description: "Example Patient Smith-Johnson Personal Intervention Preference (Me
 
 Instance: Example-Smith-Johnson-PersonalInterventionPreference4
 InstanceOf: ADIPersonalInterventionPreference
-Description: "Example Patient Smith-Johnson Personal Intervention Preference (Severe Irreversible Brain Injury or Illness)"
+Description: "Example Patient Smith-Johnson ADI PtAuthored Personal Intervention Preference (Severe Irreversible Brain Injury or Illness)"
 
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
@@ -1044,7 +1044,7 @@ Description: "Example Patient Smith-Johnson Personal Intervention Preference (Se
 
 Instance: Example-Smith-Johnson-PersonalInterventionPreference5
 InstanceOf: ADIPersonalInterventionPreference
-Description: "Example Patient Smith-Johnson Personal Intervention Preference (Final Days Location)"
+Description: "Example Patient Smith-Johnson ADI PtAuthored Personal Intervention Preference (Final Days Location)"
 
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
@@ -1058,7 +1058,7 @@ Description: "Example Patient Smith-Johnson Personal Intervention Preference (Fi
 
 Instance: Example-Smith-Johnson-PersonalInterventionPreference6
 InstanceOf: ADIPersonalInterventionPreference
-Description: "Example Patient Smith-Johnson Personal Intervention Preference (Death Arrangements)"
+Description: "Example Patient Smith-Johnson ADI PtAuthored Personal Intervention Preference (Death Arrangements)"
 
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
@@ -1074,7 +1074,7 @@ Description: "Example Patient Smith-Johnson Personal Intervention Preference (De
 
 Instance: Example-Smith-Johnson-PersonalInterventionPreference1
 InstanceOf: ADIPersonalInterventionPreference
-Description: "Example Patient Smith-Johnson Personal Intervention Preference (Palliative Care)"
+Description: "Example Patient Smith-Johnson ADI PtAuthored Personal Intervention Preference (Palliative Care)"
 
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
@@ -1088,7 +1088,7 @@ Description: "Example Patient Smith-Johnson Personal Intervention Preference (Pa
 
 Instance: Example-Smith-Johnson-PersonalInterventionPreference2
 InstanceOf: ADIPersonalInterventionPreference
-Description: "Example Patient Smith-Johnson Personal Intervention Preference (Terminal Illness Health Deterioration)"
+Description: "Example Patient Smith-Johnson ADI PtAuthored Personal Intervention Preference (Terminal Illness Health Deterioration)"
 
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
@@ -1101,7 +1101,7 @@ Description: "Example Patient Smith-Johnson Personal Intervention Preference (Te
 
 Instance: Example-Smith-Johnson-PersonalInterventionPreference3
 InstanceOf: ADIPersonalInterventionPreference
-Description: "Example Patient Smith-Johnson Personal Intervention Preference (Artificial Nutrition and Hydration)"
+Description: "Example Patient Smith-Johnson ADI PtAuthored Personal Intervention Preference (Artificial Nutrition and Hydration)"
 
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
@@ -1115,7 +1115,7 @@ Description: "Example Patient Smith-Johnson Personal Intervention Preference (Ar
 
 Instance: Example-Smith-Johnson-PersonalInterventionPreference4
 InstanceOf: ADIPersonalInterventionPreference
-Description: "Example Patient Smith-Johnson Personal Intervention Preference (Severe Illness or Injury)"
+Description: "Example Patient Smith-Johnson ADI PtAuthored Personal Intervention Preference (Severe Illness or Injury)"
 
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
@@ -1128,7 +1128,7 @@ Description: "Example Patient Smith-Johnson Personal Intervention Preference (Se
 
 Instance: Example-Smith-Johnson-PersonalInterventionPreference5
 InstanceOf: ADIPersonalInterventionPreference
-Description: "Example Patient Smith-Johnson Personal Intervention Preference (Thoughts on CPR 1)"
+Description: "Example Patient Smith-Johnson ADI PtAuthored Personal Intervention Preference (Thoughts on CPR 1)"
 
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
@@ -1142,7 +1142,7 @@ Description: "Example Patient Smith-Johnson Personal Intervention Preference (Th
 
 Instance: Example-Smith-Johnson-PersonalInterventionPreference6
 InstanceOf: ADIPersonalInterventionPreference
-Description: "Example Patient Smith-Johnson Personal Intervention Preference (THoughts on CPR 2)"
+Description: "Example Patient Smith-Johnson ADI PtAuthored Personal Intervention Preference (THoughts on CPR 2)"
 
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
@@ -1156,7 +1156,7 @@ Description: "Example Patient Smith-Johnson Personal Intervention Preference (TH
 
 Instance: Example-Smith-Johnson-PersonalInterventionPreference7
 InstanceOf: ADIPersonalInterventionPreference
-Description: "Example Patient Smith-Johnson Personal Intervention Preference (Preferred Location for Last Days)"
+Description: "Example Patient Smith-Johnson ADI PtAuthored Personal Intervention Preference (Preferred Location for Last Days)"
 
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">

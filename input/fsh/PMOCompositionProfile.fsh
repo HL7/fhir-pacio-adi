@@ -1,7 +1,7 @@
 Profile: ADIPMOComposition
 Parent: ADICompositionHeader
 Id: ADI-PMOComposition
-Title: "ADI Portable Medical Order Composition"
+Title: "ADI PMO Composition"
 Description: "This profile encompasses information that makes up a practitioner's portable medical order."
 
 * author only Reference($USCorePractitionerRole)
@@ -31,6 +31,7 @@ Description: "This profile encompasses information that makes up a practitioner'
     additional_documentation 0..1 MS and
     witness_and_notary 0..1 MS
 
+// ******* Medical Orders Section ********
 * section[portable_medical_orders] ^short = "Portable Medical Orders"
 * section[portable_medical_orders].extension[adi-clause-extension] ^short = "Section clause, additional instructions, or information"
 * section[portable_medical_orders].title 1..1 MS
@@ -63,6 +64,8 @@ Description: "This profile encompasses information that makes up a practitioner'
 
 // * section[portable_medical_orders].entry[no_additional_request_service_request] only Reference(ADIPMONoAdditionalRequestObservation)
 
+// ******* PMO Completion Information Section ********
+
 * section[completion_information] ^short = "Portable medical order completion information"
 * section[completion_information].extension[adi-clause-extension] ^short = "Administrative, instructional, and/or legal information"
 * section[completion_information].title 1..1 MS
@@ -87,12 +90,25 @@ Description: "This profile encompasses information that makes up a practitioner'
 * section[completion_information].entry[hospice_observation] only Reference(ADIPMOHospiceObservation)
 * section[completion_information].entry[hospice_agency] only Reference($USCoreOrganization)
 
+// ******* PMO Administration Information Section ********
+
 * section[administration_information] ^short = "Observations regarding the existence of other advance directive related information"
 * section[administration_information].title 1..1 MS
 * section[administration_information].code 1..1 MS
 * section[administration_information].code = adi-temp-cs#adm
 // * section[administration_information].entry only Reference(<enter reference to EmergencyContactInformation>)
 
+* section[administration_information].entry ^slicing.discriminator.type = #profile
+* section[administration_information].entry ^slicing.discriminator.path = "resolve()"
+* section[administration_information].entry ^slicing.rules = #open 
+* section[administration_information].entry ^slicing.ordered = false
+* section[administration_information].entry ^slicing.description = "Slice based on $this value"
+
+* section[administration_information].entry contains
+    adi_personal_goal 0..* MS
+* section[administration_information].entry[adi_personal_goal] only Reference(ADIPersonalGoal)
+
+// ******* PMO Additional Documentation Section ********
 
 * section[additional_documentation] ^short = "Observations regarding the existence of other advance directive related information"
 * section[additional_documentation].title 1..1 MS
@@ -100,6 +116,7 @@ Description: "This profile encompasses information that makes up a practitioner'
 * section[additional_documentation].code = $LOINC#77599-9
 * section[additional_documentation].entry only Reference(ADIDocumentationObservation)
 
+// ******* PMO Witness and Notary Section ********
 
 * section[witness_and_notary] ^short = "Witness and notary information.  The first witness should be the author of the document."
 * section[witness_and_notary] ^definition = "A participant who has assumed the role of Notary and attested to the authenticity of the signers and accuracy of the composition/document."
@@ -108,20 +125,11 @@ Description: "This profile encompasses information that makes up a practitioner'
 * section[witness_and_notary].code = $LOINC#81339-4
 * section[witness_and_notary].entry only Reference(ADIParticipant)
 
-// NEW For Connectathon
-// 
-// ServiceRequest
-// Consent at the document level (not connectathon)
-// For CarePlan, look at MCC to see about CarePLan reconciliation. CarePlan is not part of the guide, we are defining orders that may be integrated into a care plan.
 
-
-// Open for discussion
+//****** Open for discussion **********
 // Signature
 // How to capture hospice agency
 // TODO add extension to ServiceRequest for basedOn consent.
-
-
-
 
 // TODO: May need to add a witness and notary section for the persons signature
 // TODO: Where it physician participants? What are informants in CDA ePOLST? Looks like dataEnterer (from POLST mapping) For Ordering participant, may be done by a PA, so a supervising physician. Physicians should have licensing/cert #s
@@ -131,66 +139,13 @@ Description: "This profile encompasses information that makes up a practitioner'
 // TODO: CDA - Difference between License and Cert # - From Howard - Physician Assistants are Certified (PA-C) and it looks like Nurse Practitioners may vary between states as certified or licensed. Certified would have to operate under a medical director or supervising physician, and would likely need that validating signature.
 // TODO: CDA has "Patient is enrolled in hospice" in the mapping to "US Realm Header (V3), participant" How is this to be done in the CDA? Not clear in the templates.
 
-// Practitioner (role supervising (Or is this attending) ) Hospice phone number, Hospice Hospice agency
-// Who can complete the document (http://polst.org/state-signature-requirements-pdf), may need to get roles here, may need to look at forms to see what roles they may have.
-// Need a place to store licenses and certifications (Need to determine the difference) - MD/DO, PA, NP/APRN/ARNP/ND 
-// DAR for supervising physician
 
 
 // TODO the Professional Assisting Health Care Provider w/ Form Completion Maybe should not be an observation, but a related person with a role.
 // Signature date of provide needs to be linked to provider.
 
-
-// Split Orders out into slices with the various types (CPR initial Treatment, etc.)
-// TODO for Connectathon dataEnterer, Practitioner signing, and supervising Practitioner, Sub elements including license number
-// TODO Connectathon Hospice status and agency, Legally designated responsible person.
-//551781000124102 SnowMed code for Under Hospice Team Care (US Edition - Under care of hospice team (finding))
-
-
-
-
-// FOR O&O Service Request
-// How to state preconditions? asNeeded only allows for 1.
-// servicerequest-precondition
-// Trigger extension? Rob Hausam mentioned it.
-// Flag resource to raise the importance http://hl7.org/fhir/R4/valueset-flag-code.html (Maybe not a Flag.)
-// Consider CarePlan
-// Maybe consider consent
-// IPS has done some with Advance Directives - Not much, but should take a look at it.
-// ServiceRequest has a basedOn, but does not include a consent 
-
-
-// Concepts for Connectathon
-// Do not forms of orders
-// Hospice
-// Medically assisted hydration (vs nutrition)
-// Medically assisted nutrition (Will we need to include different types)
-// Patient presence at a healthcare facility - Loinc 78022-1 - (MAYBE/MAYBE NOT)
-// Additional Orders - Captured as free text in form, maybe need to support free and structured
-// Signatures (Practitioner, license#/cert# and phone numbers)
-// Add Patient preference Goals
-
-
-
 // For medically assisted nutrition and hydration (and anti-biotics) trial period. Need a goal and time in the consent (or CarePlan)?
 // Need to have an "if needed" indicator for interventions
-
-
-// Consent 2022-11-17
-
-
-
-
-// Re-assessment timepoints used resources that we may want to consider. Chris P would be the contact
-
-// TODO add entries
-//Orders Review Observation
-//Orders Participants Observation
-//Administrative Information? Is this an observation with code 100828-3 "Portable medical order administrative information" or is this a new section with text?
-//      This is equivalent to the clause. TODO, do we need to create a specialization on the clause to support the code from ePOLST? This would help in reverse transformation.
-
-
-
 
 
 /*

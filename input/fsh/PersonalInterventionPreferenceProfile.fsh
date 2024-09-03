@@ -1,7 +1,7 @@
 Profile: ADIPersonalInterventionPreference
 Parent: Observation
 Id: ADI-PersonalInterventionPreference
-Title: "Personal Intervention Preference"
+Title: "ADI PtAuthored Personal Intervention Preference"
 Description: "This profile is used to represent a personal preference for a type of medical intervention (treatment) request under certain conditions."
 
 * category ^slicing.discriminator.type = #value 
@@ -36,7 +36,7 @@ Description: "This profile is used to represent a personal preference for a type
 //* obeys value-personal-intervention-preference-ordinal
 
 Invariant:  value-personal-intervention-preference-ordinal
-Description: "If the Personal Intervention Preference code is from the Personal Intervention Preference Ordinal ValueSet, the value SHALL be 'Y' or 'N'"
+Description: "If the ADI PtAuthored Personal Intervention Preference code is from the ADI PtAuthored Personal Intervention Preference Ordinal ValueSet, the value SHALL be 'Y' or 'N'"
 Expression: "category.coding.where(code.memberOf('http://hl7.org/fhir/us/pacio-adi/ValueSet/ADIInterventionPreferencesOrdinalVS')).exists() implies (description.coding.code = 'Y' or description.coding.code = 'N')"
 //Expression: "category.coding.where(code.memberOf('http://hl7.org/fhir/us/pacio-adi/ValueSet/ADIInterventionPreferencesOrdinalVS')).exists() implies description.coding.where(code.memberOf('http://terminology.hl7.org/ValueSet/v2-0136')).exists()"
 //Expression: "category.coding.code.memberOf('http://hl7.org/fhir/us/pacio-adi/ValueSet/ADIInterventionPreferencesOrdinalVS').exists()"

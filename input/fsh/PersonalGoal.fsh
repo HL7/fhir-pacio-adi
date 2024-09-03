@@ -1,7 +1,7 @@
 Profile: ADIPersonalGoal
 Parent: $USCoreGoal
 Id: ADI-PersonalGoal
-Title: "ADI Personal Goal"
+Title: "ADI PtAuthored Personal Goal"
 Description: "This profile is a statement that presents the author's personal health and treatment goals that are pertinent when planning their care."
 
 * category ^slicing.discriminator.type = #value 
