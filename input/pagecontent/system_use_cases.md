@@ -57,7 +57,10 @@ Use-case 3 aims to enable provider access to advance directive information. It i
 
 {% include examplebutton_default.html example="use_case_3_actor_transition_1.md" b_title = "Click Here To See Use Case 3 Actor Transaction Diagram Step 1" %}
 
-* Step 2 is a `DocumentReference` query, where the Content Requester system performs a `GET DocumentReference` request using the retrieved patient ID and additional search parameters like date, to the Content Custodian system. The Content Custodian system returns all matching `DocumentReference` information that has been authorized by the person to be eligible for access. This step returns a `DocumentReference` FHIR resource, which may or may not contain a binary-encoded document. Systems claiming conformance to this guide will not encode the document in the `DocumentReference` resource. Instead, the `DocumentReference` resource will reference a base64 binary attachment that contains the content.
+* Step 2 is a `DocumentReference` query, where the Content Requester system performs a `GET DocumentReference` request using the retrieved patient ID and additional search parameters like date, to the Content Custodian system. The Content Custodian system returns all matching `DocumentReference` information that has been authorized by the person to be eligible for access. This step returns a `DocumentReference` FHIR resource, which may or may not contain a binary-encoded document. To allow for pragmatic variations in implementer infrastructures, systems claiming conformance to this guide may encode scanned documents in one of two ways: 
+1. as a `DocumentReference`.content.attachment.contentType set to a MimeType like "application/pdf".
+2. as a `DocumentReference` resource referencing a base64 binary attachment that contains the content.
+
 
 {% include examplebutton_default.html example="use_case_3_actor_transition_2.md" b_title = "Click Here To See Use Case 3 Actor Transaction Diagram Step 2" %}
 
