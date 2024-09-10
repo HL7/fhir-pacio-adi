@@ -36,7 +36,6 @@ Description: "This profile encompasses information that makes up a practitioner'
 * section[portable_medical_orders].extension[adi-clause-extension] ^short = "Section clause, additional instructions, or information"
 * section[portable_medical_orders].title 1..1 MS
 * section[portable_medical_orders].code 1..1 MS
-//* section[portable_medical_orders].code = $LOINC#100821-8 // "National POLST form: portable medical order panel"
 * section[portable_medical_orders].code = $LOINC#93037-0 "Portable medical order form" 
 
 * section[portable_medical_orders].entry MS
@@ -61,8 +60,6 @@ Description: "This profile encompasses information that makes up a practitioner'
 * section[portable_medical_orders].entry[additional_orders_or_instructions_service_request] only Reference(ADIPMOAdditionalOrdersOrInstructionsServiceRequest)
 * section[portable_medical_orders].entry[medically_assisted_nutrition_service_request] only Reference(ADIPMOMedicallyAssistedNutritionServiceRequest)
 * section[portable_medical_orders].entry[medically_assisted_hydration_service_request] only Reference(ADIPMOMedicallyAssistedHydrationServiceRequest)
-
-// * section[portable_medical_orders].entry[no_additional_request_service_request] only Reference(ADIPMONoAdditionalRequestObservation)
 
 // ******* PMO Completion Information Section ********
 

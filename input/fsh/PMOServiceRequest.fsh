@@ -63,6 +63,7 @@ Description: "This profile is used to represent a practitioner authored portable
 * ^experimental = false
 * category = $LOINC#100823-4 "Initial portable medical treatment orders"
 * code 1..1 MS
+* code from $VSACADIInitialTreatmentPMOOptionsGrouping (extensible)
 * orderDetail from $VSACADIInitialTreatmentPMOOptions (extensible) // VSAC value set with codes from LOINCPOLSTInitialTxAnswerList (extensible)
 
 * supportingInfo only Reference(ADIPersonalGoal or ADIDocumentReference)
@@ -78,7 +79,8 @@ Description: "This profile is used to represent a practitioner authored portable
 * ^experimental = false
 * category = $LOINC#100824-2 "Additional portable medical orders or instructions"
 * code 1..1 MS
-
+* code from $VSACADIAdditionalPMOProcedures (extensible)
+* orderDetail from $VSACADIAdditionalPMOProceduresGrouping (extensible)
 
 Profile: ADIPMOMedicallyAssistedNutritionServiceRequest
 Parent: ADIPMOServiceRequest
@@ -88,7 +90,9 @@ Description: "This profile is used to represent a practitioner authored portable
 
 * ^experimental = false
 * category = $LOINC#100825-9 "Medically assisted nutrition orders"
-* code from LOINCPOLSTMedAssistNutrAnswerList (extensible)
+* code 1..1 MS
+* code from $VSACADIMedicallyAssistedNutritionOrderOptions (extensible) // LOINCPOLSTMedAssistNutrAnswerList 
+* orderDetail from $VSACADIMedicallyAssistedNutritionOrderOptionsGrouping (extensible)
 
 Profile: ADIPMOMedicallyAssistedHydrationServiceRequest
 Parent: ADIPMOServiceRequest
