@@ -182,6 +182,17 @@ Description: "a document status backported from the FHIR R5 Composition status v
 //* include $HL7CompositionStatusR5#deprecated
 * codes from system ADIRevokeStatusCS
 
+ValueSet: ADIDMedicallyAssistedHydrationNutritionOrderVS
+Title: "Medially Assisted Hydration Order"
+Description: "a document status backported from the FHIR R5 Composition status version which supports the revoked document use case."
+* ^experimental = false
+
+ValueSet: ADIDMedicallyAssistedHydrationNutritionOrderGroupingVS
+Title: "Medially Assisted Hydration Order"
+Description: "a document status backported from the FHIR R5 Composition status version which supports the revoked document use case."
+* ^experimental = false
+
+
 /* ********** RuleSets *********/
 
 RuleSet: LOINCCopyrightNotice
@@ -189,83 +200,3 @@ RuleSet: LOINCCopyrightNotice
 
 RuleSet: SNOMEDCopyrightNotice
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement. The SNOMED International IPS Terminology is distributed by International Health Terminology Standards Development Organisation, trading as SNOMED International, and is subject the terms of the Creative Commons Attribution 4.0 International Public License. For more information, see SNOMED IPS Terminology. The HL7 International IPS implementation guides incorporate SNOMED CT®, used by permission of the International Health Terminology Standards Development Organisation, trading as SNOMED International. SNOMED CT was originally created by the College of American Pathologists. SNOMED CT is a registered trademark of the International Health Terminology Standards Development Organisation, all rights reserved. Implementers of SNOMED CT should review usage terms or directly contact SNOMED International: info@snomed.org"
-// mlt_20240619 - replaced copyright to new wording specified by HTA and enforced in the IG Publisher.
-// * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-
-/*
-ValueSet: ADIConsentActorRoleVS
-Title: "ADI Consent Actor Role"
-Description: "This value set identifies the role the advance directive participant has, which could include: healthcare agent, proxy, or advisor roles that individuals commonly designate to empower surrogates to make medical treatment and care decisions when the individual is unable to effectively communicate with medical personnel or requires assistance with decision making.
-
-This ValueSet is managed at the US National Library of Medicine (NLM) Value Set Authority Center (VSAC): https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1046.35/expansion"
-* ^experimental = false
-* include $LOINC#75783-1 "Primary healthcare agent [Reported]"
-* include $LOINC#75784-9 "First alternate healthcare agent [Reported]"
-* include $LOINC#75785-6 "Second alternate healthcare agent [Reported]"
-* include $LOINC#81343-6 "Healthcare agent advisor [Reported]"
-* insert LOINCCopyrightNotice
-*/
-
-
-/*
-ValueSet: ADICareExperiencePreferencesVS
-Title: "Care Experience Preferences"
-Description: "This value set includes concepts representing an individual's care experience preferences at end of life which can be expressed by the individual in his or her advance care plan),(Data Element Scope: The intent of this value set is to identify personal care experience preferences that may be relevant and could be considered by clinicians when making a treatment/care plan for the person.
-
-This ValueSet is managed at the US National Library of Medicine (NLM) Value Set Authority Center (VSAC): https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.11/expansion"
-* ^experimental = false
-* include $LOINC#75774-0 "Allowance to change advance directive preferences in the future regardless of mental state [Reported]"
-* include $LOINC#75775-7 "Decision to inform doctors and nurses about the role religion, faith, culture, or spirituality play in my life [Reported]"
-* include $LOINC#75793-0 "Other directives that have not otherwise been documented [Reported]"
-* include $LOINC#81359-2 "Near death thoughts and feelings to be shared [Reported]"
-* include $LOINC#81360-0 "My likes and joys [Reported]"
-* include $LOINC#81361-8 "Things that make me laugh [Reported]"
-* include $LOINC#81362-6 "My dislikes and fears [Reported]"
-* include $LOINC#81363-4 "Things that matter to me [Reported]"
-* include $LOINC#81364-2 "Religious or cultural beliefs [Reported]"
-* include $LOINC#81365-9 "Religious or cultural affiliation contact to notify [Reported]'"
-* include $LOINC#81366-7 "Unfinished business [Reported]"
-* include ADIPreferenceCategoryCS#care-experience-preference "Care experience preference"
-* insert LOINCCopyrightNotice
-*/
-
-
-/*
-ValueSet: ADIInterventionPreferencesEndOfLifeGroupingVS
-Title: "Intervention Preferences - Narrative"
-Description: "Clinical Focus: This value set includes concepts representing an individual's intervention preferences which can be expressed by the individual in his or her advance care plan.),(Data Element Scope: The intent of this value set is to identify personal intervention preferences that may be relevant and could be considered by clinicians or any person or organization that is providing care, treatment, or performing any other type of act to or on behalf of the individual.)"
-* ^experimental = false
-* include $LOINC#75776-5 "Preference on consulting a supportive and palliative care team to help treat physical, emotional, and spiritual discomfort and support family [Reported]"
-* include $LOINC#75777-3 "Information to tell doctors if my health deteriorates due to a terminal illness and I am unable to interact meaningfully with family, friends, or surroundings [Reported]"
-* include $LOINC#75778-1 "Information to tell doctors if I have a severe, irreversible brain injury or illness and can't dress, feed, or bathe myself, or communicate my medical wishes, but can be kept alive [Reported]"
-* include $LOINC#75780-7 "Preferred location to spend final days if possible to choose [Reported]"
-* include $LOINC#75793-0 "Other directives that have not otherwise been documented [Reported]"
-* include $LOINC#77352-3 "Thoughts on artificial nutrition and hydration [Reported]"
-* include $LOINC#81329-5 "Thoughts on resuscitation [Reported]"
-* include $LOINC#81330-3 "Thoughts on intubation [Reported]"
-* include $LOINC#81331-1 "Thoughts on tube feeding [Reported]"
-* include $LOINC#81332-9 "Thoughts on IV fluid and support [Reported]"
-* include $LOINC#81333-7 "Thoughts on antibiotics [Reported]"
-* include $LOINC#81349-3 "Thoughts on life-sustaining procedures if pregnant [Reported]"
-* include $LOINC#81350-1 "Thoughts on pain management [Reported]"
-* include $LOINC#81376-6 "Mental health treatment preferences [Reported]"
-* include $LOINC#75779-9 "Thoughts on cardiopulmonary resuscitation (CPR) [Reported]"
-* include $LOINC#81353-5 "Thoughts on hastening death [Reported]"
-* codes from valueset $VSACUponDeathPreferences
-* insert LOINCCopyrightNotice
-*/
-
-/*
-ValueSet: ADIAutopsyVS
-Title: "Autopsy Thoughts"
-Description: "This value set includes the concept representing an individual's thoughts on autopsy after death."
-* include $LOINC#75782-3 "Thoughts regarding autopsy [Reported]"
-* insert LOINCCopyrightNotice
-
-
-ValueSet: ADIOrganDonationVS
-Title: "Organ Donation"
-Description: "This value set includes the concept representing an individual's thoughts on organ and tissue donation after death."
-* include $LOINC#75781-5 "Thoughts on organ and tissue donations [Reported]"
-* insert LOINCCopyrightNotice
-*/

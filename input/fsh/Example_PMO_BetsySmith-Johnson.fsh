@@ -145,7 +145,7 @@ InstanceOf: $USCorePractitioner
 Description: "Example of Practitioner for PMO Composition Example 1"
 Usage: #example
 
-* identifier[NPI].value = "9988776655"
+* identifier[NPI].value = "7894563210"
 * name.family = "Anydoc"
 * name.given = "Kyle"
 * name.prefix = "Dr."
@@ -157,7 +157,9 @@ Usage: #example
 * address.postalCode = "12345"
 * address.country = "US"
 * qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360#MD "Doctor of Medicine"
-
+* telecom.system = #email
+* telecom.value = "kanydoc@example.org"
+* telecom.use = #work
 
 Instance: Example-Smith-Johnson-CPR-ServiceRequest1
 InstanceOf: ADIPMOCPRServiceRequest
