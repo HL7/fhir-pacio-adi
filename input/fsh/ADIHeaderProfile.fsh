@@ -7,7 +7,7 @@ Description: "This abstract profile defines constraints that represent common ad
 * ^abstract = true 
 * language 1..1 MS
 
-
+* extension[composition-clinicaldocument-versionNumber] 1..1 MS
 // Need extensions
 //* extension contains
 //    http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber named versionNumber 0..1 
@@ -23,7 +23,7 @@ Description: "This abstract profile defines constraints that represent common ad
     */
 
 * extension contains
-    adi-versionNumber-extension named VersionNumber 0..1 MS and
+  //  adi-versionNumber-extension named VersionNumber 0..1 MS and
     adi-effective-date-extension named EffectiveDateExtension 0..1 and
     adi-jurisdiction-extension named Jurisdiction 0..* and 
     adi-dataEnterer-extension named DataEntererExtension 0..1 and

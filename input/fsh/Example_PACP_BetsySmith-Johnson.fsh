@@ -162,7 +162,7 @@ Usage: #example
 * language = #en-US
 
 // Need to add extensions (mostly participants)
-* extension[adi-versionNumber-extension].valueInteger = 1
+* extension[composition-clinicaldocument-versionNumber].valueString = "9f94d9de-a514-4e10-9c23-dc8c87f0c6fc"
 * extension[adi-jurisdiction-extension].valueCodeableConcept = urn:iso:std:iso:3166:-2#US-MI
 * extension[adi-dataEnterer-extension].valueReference = Reference(Example-Smith-Johnson-Patient1)
 * extension[adi-effective-date-extension].valuePeriod.start = "2021-03-29T14:25:34-05:00"

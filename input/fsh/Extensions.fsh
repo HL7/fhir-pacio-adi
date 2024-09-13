@@ -1,10 +1,12 @@
-Extension: VersionNumber
-Id: adi-versionNumber-extension
+
+Extension: DocumentReferenceVersionNumber
+Id: adi-docVersionNumber-extension
 Title: "Version Number"
 Description: "Advance Directive Information VersionNumber Extension represents a numeric value used to version successive replacement documents."
-Context: Composition
-* valueInteger 0..1 MS
-* value[x] only integer
+Context: DocumentReference
+* valueString 1..1 MS
+* value[x] only string
+
 
 Extension: Jurisdiction
 Id: adi-jurisdiction-extension
