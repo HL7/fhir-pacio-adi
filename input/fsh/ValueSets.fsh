@@ -183,15 +183,21 @@ Description: "a document status backported from the FHIR R5 Composition status v
 * codes from system ADIRevokeStatusCS
 
 ValueSet: ADIDMedicallyAssistedHydrationNutritionOrderVS
-Title: "Medially Assisted Hydration Order"
-Description: "a document status backported from the FHIR R5 Composition status version which supports the revoked document use case."
+Title: "Medically Assisted Hydration Order"
+Description: "Medically Assisted Hydration Order."
 * ^experimental = false
 
 ValueSet: ADIDMedicallyAssistedHydrationNutritionOrderGroupingVS
-Title: "Medially Assisted Hydration Order"
-Description: "a document status backported from the FHIR R5 Composition status version which supports the revoked document use case."
+Title: "Medically Assisted Hydration Order"
+Description: "Medically Assisted Hydration Order."
 * ^experimental = false
 
+ValueSet: ADIInitialTreatmentPMOOptionsVS
+Title: "Initial Treatment Portable Medical Order Options"
+Description: "Initial Treatment Portable Medical Order Options."
+* ^experimental = false
+* include codes from valueset $VSACADIInitialTreatmentPMOOptions
+* include codes from valueset $VSACADIInitialTreatmentPMOOptionsGrouping
 
 /* ********** RuleSets *********/
 

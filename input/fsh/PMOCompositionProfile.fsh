@@ -36,7 +36,7 @@ Description: "This profile encompasses information that makes up a practitioner'
 * section[portable_medical_orders].extension[adi-clause-extension] ^short = "Section clause, additional instructions, or information"
 * section[portable_medical_orders].title 1..1 MS
 * section[portable_medical_orders].code 1..1 MS
-* section[portable_medical_orders].code = $LOINC#93037-0 "Portable medical order form" 
+* section[portable_medical_orders].code = $LOINC#59772-4
 
 * section[portable_medical_orders].entry MS
 * section[portable_medical_orders].entry only Reference(ADIPMOServiceRequest) // or ADIPMONoAdditionalRequestObservation)
@@ -135,7 +135,6 @@ Description: "This profile encompasses information that makes up a practitioner'
 // TODO: CDA ePOLST legalAuthenticator is •	Legal Authenticator: The legalAuthenticator element is the individual who is responsible for the document. For the ePOLST, this is the signer in "Section F. Signature: Health Care Provider" of the National POLST Form (either the "Health Care Provider" or the "Supervising physician"). Only licensed healthcare providers authorized to sign POLST forms in their state or D.C. can sign this form. 
 // TODO: CDA - Difference between License and Cert # - From Howard - Physician Assistants are Certified (PA-C) and it looks like Nurse Practitioners may vary between states as certified or licensed. Certified would have to operate under a medical director or supervising physician, and would likely need that validating signature.
 // TODO: CDA has "Patient is enrolled in hospice" in the mapping to "US Realm Header (V3), participant" How is this to be done in the CDA? Not clear in the templates.
-
 
 
 // TODO the Professional Assisting Health Care Provider w/ Form Completion Maybe should not be an observation, but a related person with a role.

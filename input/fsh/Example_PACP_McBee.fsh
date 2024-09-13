@@ -138,7 +138,7 @@ Usage: #example
 * language = #en-US
 
 // Need to add extensions (mostly participants)
-* extension[adi-versionNumber-extension].valueInteger = 1
+* extension[composition-clinicaldocument-versionNumber].valueString = "98e4d027-8689-4062-ab35-f25e78b323a0"
 * extension[adi-dataEnterer-extension].valueReference = Reference(Example-McBee-Patient1)
 // witness Sally Bobbins
 * extension[adi-effective-date-extension].valuePeriod.start = "2018-08-28T08:49:58.313-04:00"

@@ -63,7 +63,7 @@ Description: "This profile is used to represent a practitioner authored portable
 * ^experimental = false
 * category = $LOINC#100823-4 "Initial portable medical treatment orders"
 * code 1..1 MS
-* code from $VSACADIInitialTreatmentPMOOptionsGrouping (extensible)
+* code from ADIInitialTreatmentPMOOptionsVS (extensible)
 * orderDetail from $VSACADIInitialTreatmentPMOOptions (extensible) // VSAC value set with codes from LOINCPOLSTInitialTxAnswerList (extensible)
 
 * supportingInfo only Reference(ADIPersonalGoal or ADIDocumentReference)
