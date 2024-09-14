@@ -57,10 +57,35 @@ Use-case 3 aims to enable provider access to advance directive information. It i
 
 {% include examplebutton_default.html example="use_case_3_actor_transition_1.md" b_title = "Click Here To See Use Case 3 Actor Transaction Diagram Step 1" %}
 
-* Step 2 is a `DocumentReference` query, where the Content Requester system performs a `GET DocumentReference` request using the retrieved patient ID and additional search parameters like date, to the Content Custodian system. The Content Custodian system returns all matching `DocumentReference` information that has been authorized by the person to be eligible for access. This step returns a `DocumentReference` FHIR resource, which may or may not contain a binary-encoded document. To allow for pragmatic variations in implementer infrastructures, systems claiming conformance to this guide may encode scanned documents in one of two ways: 
-1. as a `DocumentReference`.content.attachment.contentType set to a MimeType like "application/pdf".
-2. as a `DocumentReference` resource referencing a base64 binary attachment that contains the content.
+* Step 2 is a `DocumentReference` query, where the Content Requester system performs a `GET DocumentReference` request using the retrieved patient ID and additional search parameters like date, to the Content Custodian system. The Content Custodian system returns all matching `DocumentReference` information that has been authorized by the person to be eligible for access. This step returns a `DocumentReference` FHIR resource, which may or may not contain a binary-encoded document. To allow for pragmatic variations in implementer infrastructures, systems claiming conformance to this guide may encode scanned documents in one of two ways. Both options are supported in FHIR and the Server decides which it will utilize.
 
+**Option 1:** file attachment has In-line Representation `content.attachment`, where
+*  `.contentType` is a MIME type  (application/pdf)
+*  `.data` is inline Base64 binary Data
+
+```
+For example:
+"attachment": {
+      "contentType": "application/pdf",
+      "data": "JVBERi0xLjQKJdPr6eEKMSAwIG9iago8PC9DcmVhdG9yIChNb3ppbGxhLzUuMCBcKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NFwpIEFwcGxlV2ViS2l0LzUzNy4zNiBcKEtIVE1MLCBsaWtlIEdlY2tvXCkgQ2hyb21lLzExOS4wLjAuMCBTYWZhcmkvNTM3LjM2KQovUHJvZHVjZXIgKFNraWEvUERGIG0xMTkpCi9DcmVhdGlvbkRhdGUgKEQ6MjAyMzExMDcxNTIxMzkrMDAnMDAnKQovTW9kRGF0ZSAoRDoyMDIzMTEwNzE1MjEzOSswMCcwMCcpPj4KZW5kb2JqCjMgMCBvYmoKPDwvY2EgMQovQk0gL05vcm1hbD4...+CmVuZG9iago1IDAgb2JqCjw8L0NBIDEKL2NhIDEKL0xDIDAKL0xKIDAKL0xXIDEKL01MIDQKL1NBIHRydWUKL0JNIC9Ob3JtYWw+PgplbmRvYmoKOCAwIG9iago8PC9GaWx0ZXIgL0ZsYXRlRGVjb2RlCi9MZW5ndGggMzY4OT4+IHN0cmVhbQp4nO1cWY8bxxF+56+Y5wAZ9X0AggCS2jXyYCCJF/Cz4cgGAq2ROA6Qn5/qo7prZljDppZaKYElSBxOH1X91d3TnFnpmP9MAv7+cSZffVTTj8+Hfx7EZOOsvZ10dHNIn362068fDt//",
+      "creation": "2023-12-22T05:00:00+00:00" }
+
+```
+
+<br />
+
+**Option 2:** file attachment is referenced by url in `content.attachment`, where
+* `.contentType` is a MIME type (application/pdf)
+* `.url` is the uri where the data can be found
+
+For example:
+```
+"attachment": {
+      "contentType": "application/pdf",
+      "url": https://qa-rr-fhir2.maxmddirect.com/Binary/b193ff07-d6ca-495d-a995-b222f87d5942,
+      "creation": "2023-12-22T05:00:00+00:00"}
+```
+<br />
 
 {% include examplebutton_default.html example="use_case_3_actor_transition_2.md" b_title = "Click Here To See Use Case 3 Actor Transaction Diagram Step 2" %}
 
