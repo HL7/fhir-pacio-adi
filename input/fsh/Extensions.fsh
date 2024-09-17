@@ -181,7 +181,7 @@ Severity:   #error
 
 
 
-Extension: DocumentRevokeStatusExtension
+Extension: DocumentRevokeStatus
 Id: adi-document-revoke-status
 Title: "Revoke Status"
 Description: "The Advance Directive document revoke status."
