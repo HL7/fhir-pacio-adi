@@ -33,7 +33,7 @@ Description: "This profile defines constraints that represent the information ne
 * docStatus from ADIDocumentReferenceStatusVS (required) // fix for FHIR-46153
 
 * extension contains
-    adi-document-revoke-status-extension named DocumentRevokeStatusExtension 0..1 MS and
+    adi-document-revoke-status named DocumentRevokeStatusExtension 0..1 MS and
     adi-docVersionNumber-extension named DocumentReferenceVersionNumber 0..1 MS
 // These are from the mapping document and are likely not the intended final short descriptions
 RuleSet: ADIDocumentReferenceShortDescriptions
