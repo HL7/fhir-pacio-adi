@@ -49,6 +49,7 @@ Description: "This profile is used to represent a practitioner authored portable
 * code = $SNOMEDCT#89666000 "Cardiopulmonary resuscitation (procedure)" 
 * doNotPerform 0..1 MS
 * orderDetail 0..1 MS
+* orderDetail from http://loinc.org/vs/LL6263-9
 
 // TO DO: 
 
