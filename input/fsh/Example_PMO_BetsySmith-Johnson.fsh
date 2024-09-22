@@ -169,3 +169,4 @@ Usage: #example
 * doNotPerform = true
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * requester = Reference(Example-Kyle-Anydoc-Practitioner)
+* orderDetail = $LOINC#LA33470-8
