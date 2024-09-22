@@ -11,7 +11,7 @@ Description: "This profile is used to represent both a patient authored care pla
 //* text 1..1 MS
 
 * status = #active
-* intent = #directive
+* intent = #order
 
 // TODO need a category 
 // TODO may need to get a variance request from us core ServiceRequest. In different version and also do any of the categories fit?
@@ -48,7 +48,7 @@ Description: "This profile is used to represent a practitioner authored portable
 * category = $LOINC#100822-6 "Cardiopulmonary resuscitation orders"
 * code = $SNOMEDCT#89666000 "Cardiopulmonary resuscitation (procedure)" 
 * doNotPerform 0..1 MS
-* orderDetail 0..1 MS
+* orderDetail 1..1 MS
 * orderDetail from $VSACCardiopulmonaryResuscitationOrderOptions (required) 
 
 // TO DO: 
