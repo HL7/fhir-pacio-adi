@@ -22,7 +22,10 @@ Description: "This profile is used to represent a consent for an advance directi
 	* Write in narrative what our interpretation of the existing code.
 */
 
-* category from $HL7ConsentCategoryVS (extensible)
+* category 1..1 MS
+* category = $HL7ConsentCategoryCodes#acd
+// * category from $HL7ConsentCategoryVS (extensible)
+
 
 // Attempt at slicing category
 // * category ^slicing.discriminator.type = #pattern
