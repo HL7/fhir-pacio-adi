@@ -145,7 +145,7 @@ InstanceOf: $USCorePractitioner
 Description: "Example of Practitioner for PMO Composition Example 1"
 Usage: #example
 
-* identifier[NPI].value = "7894563210"
+* identifier[NPI].value = "21548796354"
 * name.family = "Anydoc"
 * name.given = "Kyle"
 * name.prefix = "Dr."
@@ -169,3 +169,4 @@ Usage: #example
 * doNotPerform = true
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * requester = Reference(Example-Kyle-Anydoc-Practitioner)
+* orderDetail = $LOINC#LA33470-8
