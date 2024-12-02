@@ -409,7 +409,7 @@ Usage: #example
 // // Healthcare Agent examples
 
 Instance: Example-Smith-Johnson-HealthcareAgent1
-InstanceOf: ADIParticipant
+InstanceOf: ADIHealthcareAgentParticipant
 Description: "Example Patient Smith-Johnson Healthcare Agent (Charles Johnson)"
 Usage: #example
 * text.status = #additional
@@ -436,7 +436,7 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-HealthcareAgent2
-InstanceOf: ADIParticipant
+InstanceOf: ADIHealthcareAgentParticipant
 Description: "Example Patient Smith-Johnson Healthcare Agent (Debra Johnson)"
 Usage: #example
 * text.status = #additional
@@ -464,7 +464,7 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-Notary1
-InstanceOf: ADIParticipant
+InstanceOf: ADIHealthcareAgentParticipant
 Description: "Example Patient Smith-Johnson Notary"
 Usage: #example
 * text.status = #additional
@@ -486,7 +486,7 @@ Usage: #example
 
 // TODO update text
 Instance: Example-Smith-Johnson-HealthcareAgentConsent
-InstanceOf: ADIParticipantConsent
+InstanceOf: ADIHealthcareAgentConsent
 Description: "Example Patient Smith-Johnson Healthcare Agent Consent"
 Usage: #example
 * text.status = #additional

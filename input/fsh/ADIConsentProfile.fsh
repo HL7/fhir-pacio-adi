@@ -1,7 +1,7 @@
-Profile: ADIParticipantConsent
+Profile: ADIHealthcareAgentConsent
 Parent: Consent
-Id: ADI-ParticipantConsent
-Title: "ADI Participant Consent"
+Id: ADI-HealthcareAgentConsent
+Title: "ADI Healthcare Agent Consent"
 Description: "This profile is used to represent a consent for an advance directive participant such as a healthcare agent or advisor and power or limitation granted to such persons."
 
 * obeys HCA-authority-scope-provisionType
@@ -75,7 +75,7 @@ Description: "This profile is used to represent a consent for an advance directi
     adi-clause-extension named ClauseExtension 0..*
     
 * provision.actor.role from $VSACADIConsentActorRole (required)
-* provision.actor.reference only Reference(ADIParticipant)
+* provision.actor.reference only Reference(ADIHealthcareAgentParticipant)
 
 // [TODO] we need a valueset defined. Any candidates?
 

@@ -144,7 +144,7 @@ Usage: #example
 * extension[adi-effective-date-extension].valuePeriod.start = "2018-08-28T08:49:58.313-04:00"
 * extension[adi-informant-extension].valueReference = Reference(Example-McBee-HealthcareAgent1)
 // * extension[adi-informationRecipient-extension].valueReference = Reference(Example-McBee-HealthcareAgent1)
-* extension[adi-participant-extension].valueReference = Reference(Example-McBee-HealthcareAgent1)
+* extension[ADI-HealthcareAgentParticipant-extension].valueReference = Reference(Example-McBee-HealthcareAgent1)
 * extension[adi-performer-extension].valueReference.display = "Advance Directives, Inc."
 
 * identifier.system = "urn:oid:2.16.840.1.113883.4.823.1.7124"
@@ -379,7 +379,7 @@ agent to make decisions in my best interests and based on what is known of my wi
 // // Healthcare Agent examples
 
 Instance: Example-McBee-HealthcareAgent1
-InstanceOf: ADIParticipant
+InstanceOf: ADIHealthcareAgentParticipant
 Description: "Example Patient McBee Healthcare Agent (Sally Bobbins)"
 Usage: #example
 * text.status = #additional
@@ -406,7 +406,7 @@ Usage: #example
 
 
 Instance: Example-McBee-HealthcareAgent2
-InstanceOf: ADIParticipant
+InstanceOf: ADIHealthcareAgentParticipant
 Description: "Example Patient McBee Healthcare Agent (S. Leonard Susskind)"
 Usage: #example
 * text.status = #additional
@@ -433,7 +433,7 @@ Usage: #example
 
 // // TODO update text
 Instance: Example-McBee-HealthcareAgentConsent
-InstanceOf: ADIParticipantConsent
+InstanceOf: ADIHealthcareAgentConsent
 Description: "Example Patient McBee Healthcare Agent Consent"
 Usage: #example
 * text.status = #additional

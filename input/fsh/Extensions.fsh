@@ -40,7 +40,7 @@ Context: Composition
 * valueReference only Reference($USCorePractitioner or $USCorePractitionerRole or $USCorePatient or RelatedPerson)
 
 Extension: ParticipantExtension
-Id: adi-participant-extension
+Id: ADI-HealthcareAgentParticipant-extension
 Title: "Participant"
 Description: "The Advance Directive Information Participant Extension identifies supporting entities, including parents, relatives, caregivers, insurance policyholders, guarantors, and others related in some way to the patient. A supporting person or organization is an individual or an organization with a relationship to the patient. A supporting person who is playing multiple roles would be recorded in multiple participants (e.g., emergency contact and next-of-kin)."
 Context: Composition

@@ -9,7 +9,7 @@ Description: "This profile encompasses information that makes up a practitioner'
 * type = $LOINC#93037-0 // "Portable medical order form"
 
 // fix for FHIR-46609: PMO Composition event needs further constraints for facilitators.
-* event.detail only Reference(ADIPMOServiceRequest or ADIParticipantConsent or ADIPMOProcedure)
+* event.detail only Reference(ADIPMOServiceRequest or ADIHealthcareAgentConsent or ADIPMOProcedure)
 
 * section ^slicing.discriminator.type = #pattern 
 * section ^slicing.discriminator.path = "code"
@@ -120,7 +120,7 @@ Description: "This profile encompasses information that makes up a practitioner'
 * section[witness_and_notary].title 1..1 MS
 * section[witness_and_notary].code 1..1 MS
 * section[witness_and_notary].code = $LOINC#81339-4
-* section[witness_and_notary].entry only Reference(ADIParticipant)
+* section[witness_and_notary].entry only Reference(ADIHealthcareAgentParticipant)
 
 
 //****** Open for discussion **********
