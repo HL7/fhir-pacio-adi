@@ -64,7 +64,7 @@ Description: "This abstract profile defines constraints that represent common ad
 * event.detail ^slicing.description = "Slice based on the reference profile and code pattern"
 
 * event.detail contains adiFacilitator 0..1
-* event.detail[adiFacilitator] only Reference(PractitionerRole)
+* event.detail[adiFacilitator] only Reference(ADIFacilitator)
 * event.detail[adiFacilitator] ^short = "ADI Facilitator"
 
 * section.extension contains    
