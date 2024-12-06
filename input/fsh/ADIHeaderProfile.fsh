@@ -36,6 +36,9 @@ Description: "This abstract profile defines constraints that represent common ad
 
 * language 1..1 MS
 * identifier 1..1 MS
+
+*  status from ADICompositionStatusVS (required) // fix for FHIR-46153
+
 * type MS
 * type from $VSACADIAdvanceDirectiveCategories (extensible)
 
@@ -52,9 +55,17 @@ Description: "This abstract profile defines constraints that represent common ad
 * confidentiality 0..0
 
 * custodian 1..1 MS
-* custodian only Reference ($USCoreOrganization)
+* custodian only Reference($USCoreOrganization)
 
-*  status from ADICompositionStatusVS (required) // fix for FHIR-46153
+* event.code = ADITempCS#acp-services "Advance care planning services"
+* event.detail ^slicing.discriminator.type = #profile
+* event.detail ^slicing.discriminator.path = "resolve()"
+* event.detail ^slicing.rules = #open
+* event.detail ^slicing.description = "Slice based on the reference profile and code pattern"
+
+* event.detail contains adiFacilitator 0..1
+* event.detail[adiFacilitator] only Reference(ADIFacilitator)
+* event.detail[adiFacilitator] ^short = "ADI Facilitator"
 
 * section.extension contains    
     adi-clause-extension named ClauseExtension 0..*

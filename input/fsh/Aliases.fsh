@@ -43,6 +43,7 @@ Alias: $OmbRaceCat = urn:oid:2.16.840.1.113883.6.238
 Alias: $HL7RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $HL7RoleClass = http://terminology.hl7.org/CodeSystem/v3-RoleClass
 Alias: $HL7RelatedPersonRelationshipType = http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype
+Alias: $HL7ServiceEventPerformer = http://terminology.hl7.org/ValueSet/v3-xServiceEventPerformer
 
 Alias: $HL7ObservationCategory = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $HL7CompositionStatusR5 = http://hl7.org/fhir/composition-status|5.0.0
