@@ -15,6 +15,7 @@
 <artifact id="ValueSet/ADIDocumentReferenceStatusVS" key="ValueSet-ADIDocumentReferenceStatusVS" name="ADI Document Reference Status"/>
 <artifact id="ValueSet/ADIDocumentRevokeStatusVS" key="ValueSet-ADIDocumentRevokeStatusVS" name="ADI Document Revoke Status"/>
 <artifact id="StructureDefinition/ADI-DocumentationObservation" key="StructureDefinition-PADI-DocumentationObservation" name="ADI Documentation Observation"/>
+<artifact id="StructureDefinition/ADI-Facilitator" key="StructureDefinition-ADI-Facilitator" name="ADI Facilitator"/>
 <artifact deprecated="true" id="StructureDefinition/PADI-Goal" key="StructureDefinition-PADI-Goal" name="ADI Goal"/>
 <artifact id="CodeSystem/ADIPreferenceCategoryCS" key="CodeSystem-PADIGoalCategoryCS" name="ADI Goal Category Code System"/>
 <artifact id="StructureDefinition/ADI-HealthcareAgentConsent" key="StructureDefinition-ADI-HealthcareAgentConsent" name="ADI Healthcare Agent Consent"/>
