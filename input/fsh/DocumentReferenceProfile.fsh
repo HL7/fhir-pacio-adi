@@ -1,6 +1,6 @@
 Profile: ADIDocumentReference
 // [TODO] Does this need to derive from US Core DocumentReference? If so, need to review the requirements below and remove incompatible or redundant requirements
-Parent: $USCoreDocumentReference
+Parent: DocumentReference
 Id: ADI-DocumentReference
 Title: "ADI Document Reference"
 Description: "This profile defines constraints that represent the information needed to register an advance directive information document on a FHIR server."
@@ -15,9 +15,9 @@ Description: "This profile defines constraints that represent the information ne
 * subject only Reference($USCorePatient)
 * date MS
 * author MS
-* author only Reference ($USCorePractitioner or $USCoreOrganization or $USCorePatient)
+* author only Reference($USCorePractitioner or $USCoreOrganization or $USCorePatient)
 * custodian MS
-* custodian only Reference ($USCoreOrganization)
+* custodian only Reference($USCoreOrganization)
 * content MS
 * content.attachment MS
 * content.attachment.contentType 1..1 MS
@@ -27,7 +27,7 @@ Description: "This profile defines constraints that represent the information ne
 * content.format MS
 * context MS
 * context.encounter MS
-* context.encounter only Reference ($USCoreEncounter)
+* context.encounter only Reference($USCoreEncounter)
 * context.period MS
 
 * docStatus from ADIDocumentReferenceStatusVS (required) // fix for FHIR-46153
