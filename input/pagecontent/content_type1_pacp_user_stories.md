@@ -7,7 +7,7 @@ Betsy Smith-Johnson is a 73 year-old female who lived in Texas. In 2015, just be
 
 Betsy uses a consumer facing tool to create a digital advance directive or upload a scanned copy of her paper advance directive document. This tool may integrate with any customer-facing application, including but not limited to an EHR or a specialized care application. Her interoperable digital advance directive information is made available by being stored in a registry/repository/HIE/QHIN/EHR.
 
-Betsy then shares her advance directive information with her son Charles, her primary healthcare agent (HCA) her daughter Debra, her first Alternate HCA, and her primary care physician via the MyExampleAD application. That way, if either Charles or Debra are contacted by a treating provider in an emergency, they can make her advance directive accessible to inform treatment. 
+Betsy then shares her advance directive information with her son Charles, her primary healthcare agent (HCA) her daughter Debra, her first Alternate HCA, and her primary care physician via the MyExampleAD application. That way, if either Charles or Debra are contacted by a treating provider in an emergency, they can make her advance directive accessible to inform treatments. 
 
 
 **NOTE:** This IG makes no comment as to how EHRs should be architected, as this is beyond the scope of a FHIR implementation guide.
