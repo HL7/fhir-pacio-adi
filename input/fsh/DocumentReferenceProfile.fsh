@@ -15,7 +15,7 @@ Description: "This profile defines constraints that represent the information ne
 * subject only Reference($USCorePatient)
 * date MS
 * author MS
-* author only Reference($USCorePractitioner or $USCoreOrganization or $USCorePatient)
+* author only Reference($USCorePractitionerRole or $USCoreOrganization or $USCorePatient)
 * custodian MS
 * custodian only Reference($USCoreOrganization)
 * content MS
