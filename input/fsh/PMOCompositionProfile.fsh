@@ -12,11 +12,11 @@ Description: "This profile encompasses information that makes up a practitioner'
 // * event.detail only Reference(ADIPMOServiceRequest or ADIParticipantConsent or ADIPMOProcedure)
 
 // modified FHIR-46609 with FHIR-48858 to accommodate slicing in support of ADI faciliator at the PMO Composition Header level.
-* event.detail contains pmo-servicerequest 0..* and pmo-participantconsent 0..* and pmo-procedure 0..*
+* event.detail contains pmo-servicerequest 0..* and pmo-healthcareagentconsent 0..* and pmo-procedure 0..*
 * event.detail[pmo-servicerequest] only Reference(ADIPMOServiceRequest)
 * event.detail[pmo-servicerequest] ^short = "ADI PMO Service Request"
-* event.detail[pmo-participantconsent] only Reference(ADIParticipantConsent)
-* event.detail[pmo-participantconsent] ^short = "ADI Participant Consent"
+* event.detail[pmo-healthcareagentconsent] only Reference(ADIHealthcareAgentConsent)
+* event.detail[pmo-healthcareagentconsent] ^short = "ADI Healthcare Agent Consent"
 * event.detail[pmo-procedure] only Reference(ADIPMOProcedure)
 * event.detail[pmo-procedure] ^short = "ADI PMO Procedure"
 
