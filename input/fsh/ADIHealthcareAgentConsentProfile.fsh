@@ -57,6 +57,24 @@ Description: "This profile is used to represent a consent for an advance directi
 * provision.action ^comment = "Actions without a defined code are placed in action.text."
 * provision.purpose from http://terminology.hl7.org/ValueSet/v3-ActReason (required)
 
+
+Profile: ADIPermitConsent
+Parent: ADIHealthcareAgentConsent
+Id: ADI-PermitConsent
+Title: "ADI Healthcare Agent Permit Consent"
+Description: "This profile is used to represent permit consents for an advance directive participant such as a healthcare agent or advisor and power or limitation granted to such persons."
+
+* provision.type = #permit
+
+Profile: ADIDenyConsent
+Parent: ADIHealthcareAgentConsent
+Id: ADI-DenyConsent
+Title: "ADI Healthcare Agent Deny Consent"
+Description: "This profile is used to represent deny consents for an advance directive participant such as a healthcare agent or advisor and power or limitation granted to such persons."
+
+* provision.type = #deny
+
+
 // [TODO] need to add guidance that first provision is the base set of rules, and the nested ones are exceptions to the rules.
 // This may tke 2 forms, either a permit as a base rule with exceptions stating what is type deny, or vice versa.
 
