@@ -4,7 +4,7 @@ Id: ADI-HealthcareAgentConsent
 Title: "ADI Healthcare Agent Consent"
 Description: "This profile is used to represent a consent for an advance directive participant such as a healthcare agent or advisor and power or limitation granted to such persons."
 
-* obeys HCA-authority-scope-provisionType
+// * obeys HCA-authority-scope-provisionType // provisionType invariant no longer needed since we fix scope to only one LOINC code (81377-4)
 * obeys HCA-consent-category
 * obeys HCA-provision-purpose
 
@@ -33,7 +33,6 @@ Description: "This profile is used to represent a consent for an advance directi
 // [TODO] Where is the appropriate place to state that this Consent is for an agent 
 * policy MS
 * policy ^comment = "A URI indicating the policy or jurisdiction that defines the policy for healthcare agents and granted powers and limitations."
-//$LOINC#75786-4
 
 * provision 1..1 MS
 
@@ -84,24 +83,22 @@ Description: "This profile is used to represent deny consents for an advance dir
     i.      My agent is authorized to
     ii.      __Consent, refuse, or withdraw consent to any care, procedure, treatment, or service to diagnose, treat, or maintain a physical or mental condition, including artificial nutrition and hydration;
     iii.      __Permit, refuse, or withdraw permission to participate in federally regulated research related to my condition or disorder;
-    iv.      __Make all necessary arrangements for any hospital, phychiatric treatment facility, hospice, nursing home, or other healthcare organization; and, employ or discharge healthcare personnel (any person who is authorized or permitted by the laws of the state to provide healthcare services) as he or she shall deem necessary for my physical, mental, or emotional well-being;
+    iv.      __Make all necessary arrangements for any hospital, psychiatric treatment facility, hospice, nursing home, or other healthcare organization; and, employ or discharge healthcare personnel (any person who is authorized or permitted by the laws of the state to provide healthcare services) as he or she shall deem necessary for my physical, mental, or emotional well-being;
     v.      __Request, receive, review, and authorize sending any information regarding my physical or mental health, or my personal affairs, including medical and hospital records; and execute any releases that may be required to obtain such information;
     vi.      __Move me into or out of any State or institution;
     vii.      __Take legal action, if needed;
     viii.      __Make decisions about autopsy, tissue and organ donation, and the disposition of my body in conformity with state law; and
     ix.      __Become my guardian if one is needed.
 
-
 */
 
-// need to define jurisdiction, original form?
 
-
-
+/* 
 Invariant:  HCA-authority-scope-provisionType
 Description: "Scope indicates powers granted and provision type is permit or scope indicates limitations placed and provision type is deny or scope indicates no powers/limitations and no provisions type and no action exist"
-Expression: "(scope.coding.where(code = '75786-4').exists() and provision.type = 'permit') or (scope.coding.where(code = '81346-9').exists() and provision.type = 'deny') or (scope.coding.where(code = '81335-2').exists() and provision.type.exists().not() and provision.action.exists().not() and provision.provision.exists().not())"
+Expression: "(scope.coding.where(code = '81377-4').exists() and provision.type = 'permit') or (scope.coding.where(code = '81346-9').exists() and provision.type = 'deny') or (scope.coding.where(code = '81335-2').exists() and provision.type.exists().not() and provision.action.exists().not() and provision.provision.exists().not())"
 Severity:   #error
+*/
 
 Invariant: HCA-consent-category
 Description: "Category must have a ConsentCategory of 'acd'"
