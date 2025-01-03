@@ -2,7 +2,7 @@ Mental health advance directives are legal documents that allow individuals to s
 
 The main purposes of a mental health advance directive are to ensure that an individual’s treatment preferences are respected and followed during periods when they might not be able to communicate their wishes due to their mental health condition. This can provide reassurance to both the individual and their family, and can also help in preventing conflicts or confusion about the best course of action during a crisis.
 
-The specifics of how to create and implement a mental health advance directive can vary by jurisdiction, so it is important to consult local laws and possibly seek legal advice when considering creating one.
+The specifics of how to create and implement a mental health advance directive can vary by jurisdiction, so it is important to consult local laws and possibly seek legal advice when considering creating one or another.
 
 
 

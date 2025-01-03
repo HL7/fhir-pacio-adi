@@ -3,10 +3,10 @@
 <svg width="3317" height="1705" version="1.1" viewBox="0 0 3317 1705" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <image width="3317" height="1705" href="ADI_DocumentStructure.png" preserveAspectRatio="none" id="image2"/>
 	<!-- Healthcare Agent Appointment-->
-    <a xlink:href="StructureDefinition-ADI-ParticipantConsent.html" target="_blank">
+    <a xlink:href="StructureDefinition-ADI-HealthcareAgentConsent.html" target="_blank">
 		<path d="m 6.5911,435.02 h 474.56 v 955.72 h-474.56 z" fill="#ffffff" fill-opacity="0" />
 	</a>
-    <a xlink:href="StructureDefinition-ADI-Participant.html" target="_blank">
+    <a xlink:href="StructureDefinition-ADI-HealthcareAgentParticipant.html" target="_blank">
 		<path d="m 0,1394 h 481.15 v 309.78 h -481.15 z" fill="#ffffff" fill-opacity="0" />
 	</a>
 	<!-- GPPs for Certain Conditions -->

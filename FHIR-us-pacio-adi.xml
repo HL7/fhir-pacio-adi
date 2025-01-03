@@ -18,6 +18,10 @@
 <artifact id="StructureDefinition/ADI-Facilitator" key="StructureDefinition-ADI-Facilitator" name="ADI Facilitator"/>
 <artifact deprecated="true" id="StructureDefinition/PADI-Goal" key="StructureDefinition-PADI-Goal" name="ADI Goal"/>
 <artifact id="CodeSystem/ADIPreferenceCategoryCS" key="CodeSystem-PADIGoalCategoryCS" name="ADI Goal Category Code System"/>
+<artifact id="StructureDefinition/ADI-HealthcareAgentConsent" key="StructureDefinition-ADI-HealthcareAgentConsent" name="ADI Healthcare Agent Consent"/>
+<artifact id="StructureDefinition/ADI-DenyConsent" key="StructureDefinition-ADI-DenyConsent" name="ADI Healthcare Agent Deny Consent"/>
+<artifact id="StructureDefinition/ADI-HealthcareAgentParticipant" key="StructureDefinition-ADI-HealthcareAgentParticipant" name="ADI Healthcare Agent Participant"/>
+<artifact id="StructureDefinition/ADI-PermitConsent" key="StructureDefinition-ADI-PermitConsent" name="ADI Healthcare Agent Permit Consent"/>
 <artifact id="StructureDefinition/ADI-Notary" key="StructureDefinition-ADI-Notary" name="ADI Notary"/>
 <artifact id="StructureDefinition/ADI-OrganDonationObservation" key="StructureDefinition-PADI-OrganDonationObservation" name="ADI Organ Donation"/>
 <artifact id="StructureDefinition/ADI-PMOAdditionalOrdersOrInstructionsServiceRequest" key="StructureDefinition-ADI-PMOAdditionalOrdersOrInstructionsServiceRequest" name="ADI PMO Additional orders or instructions ServiceRequest"/>
@@ -32,8 +36,8 @@
 <artifact id="StructureDefinition/ADI-PMOProcedure" key="StructureDefinition-ADI-PMOProcedure" name="ADI PMO Procedure"/>
 <artifact id="StructureDefinition/ADI-PMOReviewObservation" key="StructureDefinition-ADI-PMOReviewObservation" name="ADI PMO Review Observation"/>
 <artifact id="StructureDefinition/ADI-PMOServiceRequest" key="StructureDefinition-ADI-PMOServiceRequest" name="ADI PMO ServiceRequest"/>
-<artifact id="StructureDefinition/ADI-Participant" key="StructureDefinition-PADI-Participant" name="ADI Participant"/>
-<artifact id="StructureDefinition/ADI-ParticipantConsent" key="StructureDefinition-PADI-ParticipantConsent" name="ADI Participant Consent"/>
+<artifact deprecated="true" id="StructureDefinition/ADI-Participant" key="StructureDefinition-PADI-Participant" name="ADI Participant"/>
+<artifact deprecated="true" id="StructureDefinition/ADI-ParticipantConsent" key="StructureDefinition-PADI-ParticipantConsent" name="ADI Participant Consent"/>
 <artifact id="StructureDefinition/ADI-PersonalPrioritiesOrganizer" key="StructureDefinition-PADI-PersonalPrioritiesOrganizer" name="ADI Personal Priorities Organizer"/>
 <artifact id="StructureDefinition/ADI-Provenance" key="StructureDefinition-ADI-Provenance" name="ADI Provenance"/>
 <artifact id="StructureDefinition/ADI-CareExperiencePreference" key="StructureDefinition-PADI-CareExperiencePreference" name="ADI PtAuthored Care Experience Preference"/>
@@ -183,7 +187,7 @@
 <artifact deprecated="true" id="StructureDefinition/PADI-Provenance" key="StructureDefinition-PADI-Provenance" name="PACIO ADI Provenance"/>
 <artifact deprecated="true" id="CapabilityStatement/padi" key="CapabilityStatement-padi" name="PADI CapabilityStatement"/>
 <artifact id="Bundle/PMO-Example-Smith-Johnson-Bundle2" key="Bundle-PMO-Example-Smith-Johnson-Bundle2" name="PMO-Example-Smith-Johnson-Bundle2"/>
-<artifact id="StructureDefinition/adi-participant-extension" key="StructureDefinition-padi-participant-extension" name="Participant"/>
+<artifact id="StructureDefinition/ADI-HealthcareAgentParticipant-extension" key="StructureDefinition-padi-participant-extension" name="Participant"/>
 <artifact deprecated="true" id="ValueSet/PADIParticipantRelationshipVS" key="ValueSet-PADIParticipantRelationshipVS" name="Participant Relationships"/>
 <artifact id="StructureDefinition/adi-performer-extension" key="StructureDefinition-padi-performer-extension" name="Performer"/>
 <artifact id="Composition/Example-Smith-Johnson-PACPComposition1" key="Composition-Example-Smith-Johnson-PACPComposition1" name="Personal Advance Care Plan"/>

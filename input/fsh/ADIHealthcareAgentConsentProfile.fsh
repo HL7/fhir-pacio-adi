@@ -1,7 +1,7 @@
-Profile: ADIParticipantConsent
+Profile: ADIHealthcareAgentConsent
 Parent: Consent
-Id: ADI-ParticipantConsent
-Title: "ADI Participant Consent"
+Id: ADI-HealthcareAgentConsent
+Title: "ADI Healthcare Agent Consent"
 Description: "This profile is used to represent a consent for an advance directive participant such as a healthcare agent or advisor and power or limitation granted to such persons."
 
 * obeys HCA-authority-scope-provisionType
@@ -11,10 +11,9 @@ Description: "This profile is used to represent a consent for an advance directi
 * text 1..1 MS
 
 * status MS
-//[TODO] need verification that it is active only. Is the authority proposed if the agent is not yet aware or accepted the role?
 * status = #active
-// [TODO], the LOINC code is an observable, which is not meant to express scope. Will need to find another code that could (Follow-up with Dan Vreeman  Liz Umberfield)
-* scope from $VSACADIConsentType (required)
+// * scope from $VSACADIConsentType (required)  
+* scope = $LOINC#81377-4 "Goals, preferences, and priorities regarding the appointment of healthcare agents [Reported]" // mlt: fixed to LOINC 81377-4 per (FHIR-48900)
 
 // Fix for FHIR_34506 - meeting on 2023-08-28: re-point to http://terminology.hl7.org/CodeSystem/consentcategorycodes
 /*
@@ -26,25 +25,6 @@ Description: "This profile is used to represent a consent for an advance directi
 * category = $HL7ConsentCategoryCodes#acd
 // * category from $HL7ConsentCategoryVS (extensible)
 
-
-// Attempt at slicing category
-// * category ^slicing.discriminator.type = #pattern
-// * category ^slicing.discriminator.path = "$this"
-// * category ^slicing.rules = #open
-// * category ^slicing.ordered = true
-// * category ^slicing.description = "Description"
-
-// * category contains AdvanceDirective 1..1
-// * category[AdvanceDirective] = $HL7ConsentCategoryCodes#acd "Advance Directive"
-// * category[AdvanceDirective] ^requirements = "Used to identify that this is a consent related to an advance directive."
-
-// * category contains ConsentCategory 0..*
-// * category[ConsentCategory] from $HL7ConsentCategoryVS (extensible)
-// * category[ConsentCategory] ^requirements = "Indicates other categories this consent is related to."
-
-// [TODO] there seems to be an issue with consent scope. The url http://terminology.hl7.org/CodeSystem/consentscope forwards to https://terminology.hl7.org/2.1.0/CodeSystem-consentscope.html
-// But the version we are using is the R4 version http://hl7.org/fhir/codesystem-consent-scope.html#consent-scope-adr
-//* scope = $HL7ConsentScope#adr
 
 * patient 1..1 MS
 * patient only Reference($USCorePatient)
@@ -67,25 +47,36 @@ Description: "This profile is used to represent a consent for an advance directi
 * provision.actor 1..* MS
 
 
-// TODO Add guidanceexamples from spreadsheet
-// Has communication with your healthcare agent(s) occurred?
-// Health care agent willingness to serve in the HCA role
-
 * provision.actor.extension contains
     adi-clause-extension named ClauseExtension 0..*
     
 * provision.actor.role from $VSACADIConsentActorRole (required)
-* provision.actor.reference only Reference(ADIParticipant)
-
-// [TODO] we need a valueset defined. Any candidates?
+* provision.actor.reference only Reference(ADIHealthcareAgentParticipant)
 
 * provision.action from ADIHCADecisionsVS (extensible)
 * provision.action ^comment = "Actions without a defined code are placed in action.text."
 * provision.purpose from http://terminology.hl7.org/ValueSet/v3-ActReason (required)
 
+
+Profile: ADIPermitConsent
+Parent: ADIHealthcareAgentConsent
+Id: ADI-PermitConsent
+Title: "ADI Healthcare Agent Permit Consent"
+Description: "This profile is used to represent permit consents for an advance directive participant such as a healthcare agent or advisor and power or limitation granted to such persons."
+
+* provision.type = #permit
+
+Profile: ADIDenyConsent
+Parent: ADIHealthcareAgentConsent
+Id: ADI-DenyConsent
+Title: "ADI Healthcare Agent Deny Consent"
+Description: "This profile is used to represent deny consents for an advance directive participant such as a healthcare agent or advisor and power or limitation granted to such persons."
+
+* provision.type = #deny
+
+
 // [TODO] need to add guidance that first provision is the base set of rules, and the nested ones are exceptions to the rules.
 // This may tke 2 forms, either a permit as a base rule with exceptions stating what is type deny, or vice versa.
-
 
 // examples of provisions in OneNote - Powers & Limitation Examples for consent
 

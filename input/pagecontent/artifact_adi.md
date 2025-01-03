@@ -32,8 +32,8 @@ The table below summarizes the relevant profiles and elements by ADI Content Typ
         <td style="padding: 7px;">healthcare_agent (LNC 81335-2)</td>
         <td style="padding: 7px;">
             <ul>
-                <li><a href="StructureDefinition-ADI-ParticipantConsent.html">ADI Participant Consent</a></li>
-                <li><a href="StructureDefinition-ADI-Participant.html">ADI Participant</a></li>
+                <li><a href="StructureDefinition-ADI-HealthcareAgentConsent.html">ADI Participant Consent</a></li>
+                <li><a href="StructureDefinition-ADI-HealthcareAgentParticipant.html">ADI Participant</a></li>
             </ul>
         </td>
     </tr>
@@ -42,11 +42,11 @@ The table below summarizes the relevant profiles and elements by ADI Content Typ
         <td style="padding: 7px;"><p>This profile encompasses information that makes up the author’s advance care planning information.</p></td>
     </tr>
     <tr>
-        <td style="padding: 7px;"><a href="StructureDefinition-ADI-Participant.html">ADI Participant</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-HealthcareAgentParticipant.html">ADI Participant</a></td>
         <td style="padding: 7px;"><p>This profile represents a person participating in a person's advance directives in some designated capacity such as healthcare agent or healthcare agent advisor.</p></td>
     </tr>
     <tr>    
-        <td style="padding: 7px;"><a href="StructureDefinition-ADI-ParticipantConsent.html">ADI Participant Consent</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-HealthcareAgentConsent.html">ADI Participant Consent</a></td>
         <td style="padding: 7px;"><p>This profile is used to represent the author’s consent for an ADI participant such as a healthcare agent or advisor and can include powers granted to, or limitations imposed upon, such persons.</p></td>
     </tr>
     <tr>    

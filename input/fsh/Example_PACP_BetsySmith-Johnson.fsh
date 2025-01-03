@@ -409,7 +409,7 @@ Usage: #example
 // // Healthcare Agent examples
 
 Instance: Example-Smith-Johnson-HealthcareAgent1
-InstanceOf: ADIParticipant
+InstanceOf: ADIHealthcareAgentParticipant
 Description: "Example Patient Smith-Johnson Healthcare Agent (Charles Johnson)"
 Usage: #example
 * text.status = #additional
@@ -436,7 +436,7 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-HealthcareAgent2
-InstanceOf: ADIParticipant
+InstanceOf: ADIHealthcareAgentParticipant
 Description: "Example Patient Smith-Johnson Healthcare Agent (Debra Johnson)"
 Usage: #example
 * text.status = #additional
@@ -464,7 +464,7 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-Notary1
-InstanceOf: ADIParticipant
+InstanceOf: ADIHealthcareAgentParticipant
 Description: "Example Patient Smith-Johnson Notary"
 Usage: #example
 * text.status = #additional
@@ -486,14 +486,13 @@ Usage: #example
 
 // TODO update text
 Instance: Example-Smith-Johnson-HealthcareAgentConsent
-InstanceOf: ADIParticipantConsent
+InstanceOf: ADIHealthcareAgentConsent
 Description: "Example Patient Smith-Johnson Healthcare Agent Consent"
 Usage: #example
 * text.status = #additional
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>status</b>: active</p><p><b>scope</b>: <span title='Codes: {http://loinc.org 75786-4}'>Powers granted to healthcare agent [Reported]</span></p><p><b>category</b>: <span title='Codes: {http://terminology.hl7.org/CodeSystem/consentcategorycodes acd}'>Advance Directive</span></p><p><b>patient</b>: <a href='Patient-Example-Smith-Johnson-Patient1.html'>Betsy Smith-Johnson</a> ; BetsySJ@example.com; gender: female; birthDate: 1950-11-15</p><p><b>dateTime</b>: 2020-08-03</p><h3>Policies</h3><table class='grid'><tr><td>-</td><td><b>Authority</b></td><td><b>Uri</b></td></tr><tr><td>*</td><td><a href='https://www.michigan.gov/'>https://www.michigan.gov/</a></td><td><a href='http://www.legislature.mi.gov/(S(tpnclc1ofteerx2x2dppcmdz))/mileg.aspx?page=GetObject&amp;objectname=mcl-386-1998-V-5'>http://www.legislature.mi.gov/(S(tpnclc1ofteerx2x2dppcmdz))/mileg.aspx?page=GetObject&amp;objectname=mcl-386-1998-V-5</a></td></tr></table><blockquote><p><b>provision</b></p><p><b>type</b>: permit</p><blockquote><p><b>actor</b></p><p><b>role</b>: <span title='Codes: {http://loinc.org 75783-1}'>Primary healthcare agent [Reported]</span></p><p><b>reference</b>: <a href='RelatedPerson-Example-Smith-Johnson-HealthcareAgent1.html'><span title='Codes: {http://terminology.hl7.org/CodeSystem/v3-RoleCode SON}'>natural son</span>; Charles Johnson ; CharlesSJ@example.com</a></p></blockquote><blockquote><p><b>actor</b></p><p><b>role</b>: <span title='Codes: {http://loinc.org 75784-9}'>First alternate healthcare agent [Reported]</span></p><p><b>reference</b>: <a href='RelatedPerson-Example-Smith-Johnson-HealthcareAgent2.html'><span title='Codes: {http://loinc.org 75784-9}'>First alternate healthcare agent [Reported]</span>, <span title='Codes: {http://terminology.hl7.org/CodeSystem/v3-RoleCode DAU}'>natural daughter</span>; Debra Johnson ; DebraSJ@example.com</a></p></blockquote><p><b>action</b>: <span title='Codes: {http://loinc.org 75787-2}'>Advance directive - request for intubation</span>, <span title='Codes: {http://loinc.org 75788-0}'>Advance directive - request for tube feeding</span>, <span title='Codes: {http://loinc.org 75789-8}'>Advance directive - request for life support</span>, <span title='Codes: {http://loinc.org 75790-6}'>Advance directive - request for IV fluid and support</span>, <span title='Codes: {http://loinc.org 75791-4}'>Advance directive - request for antibiotics</span>, <span title='Codes: {http://loinc.org 75792-2}'>Advance directive - request for resuscitation that differs from cardiopulmonary resuscitation</span></p><p><b>purpose</b>: <span title='{http://terminology.hl7.org/CodeSystem/v3-ActReason PWATRNY}'>power of attorney</span></p></blockquote></div>"
 
 * status = #active
-* scope = $LOINC#75786-4 "Powers granted to healthcare agent [Reported]"
 * category = $HL7ConsentCategoryCodes#acd "Advance Directive"
 //* category[AdvanceDirective] = $HL7ConsentCategoryCodes#acd "Advance Directive"
 * patient = Reference(Example-Smith-Johnson-Patient1)

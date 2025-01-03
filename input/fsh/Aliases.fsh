@@ -54,7 +54,7 @@ Alias: $HL7ConsentCategoryCodes = http://terminology.hl7.org/CodeSystem/consentc
 Alias: $VSACClauseType = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.14
 Alias: $VSACUponDeathPreferences = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.15
 
-Alias: $VSACADIParticipantRole = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1046.35
+Alias: $VSACADIHealthcareAgentParticipantRole = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1046.35
 Alias: $VSACADIAdvanceDirectiveCategories = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.11.20.9.69.4
 Alias: $VSACADIInterventionPreferencesEndOfLifeGrouping = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.9
 Alias: $VSACADIConsentActorRole = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1046.35

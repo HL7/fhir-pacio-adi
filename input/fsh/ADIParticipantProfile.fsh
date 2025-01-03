@@ -1,7 +1,7 @@
-Profile: ADIParticipant
+Profile: ADIHealthcareAgentParticipant
 Parent: RelatedPerson
-Id: ADI-Participant
-Title: "ADI Participant"
+Id: ADI-HealthcareAgentParticipant
+Title: "ADI Healthcare Agent Participant"
 Description: "This profile represents a person participating in a person's advance directives in some capacity such as healthcare agent or healthcare agent advisor."
 
 * active MS

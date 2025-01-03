@@ -37,7 +37,7 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[healthcare_agent].code 1..1 
 * section[healthcare_agent].code = $LOINC#81335-2
 * section[healthcare_agent].entry 
-* section[healthcare_agent].entry only Reference(ADIParticipantConsent or ADIParticipant)
+* section[healthcare_agent].entry only Reference(ADIHealthcareAgentConsent or ADIHealthcareAgentParticipant)
 * section[healthcare_agent].emptyReason from ADINoHealthcareAgentIncludedReasonVS (required)
 * section[healthcare_agent].emptyReason ^short = "This is only MS (must support) if the document types are supported."
 * section[healthcare_agent] obeys HCA-section-entries
