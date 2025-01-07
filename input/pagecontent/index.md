@@ -1,8 +1,8 @@
-The Advance Directive Interoperability (ADI) FHIR implementation guide (IG) explains how to represent, exchange, and verify a person’s goals, preferences and priorities for medical treatment and interventions regarding future medical care. 
+The Advance Directive Interoperability (ADI) FHIR implementation guide (IG) explains how to represent, exchange, and verify a person’s goals, preferences and priorities for medical treatment and interventions regarding future medical care. It also explains how to represent a person’s appointment of one or more healthcare agents who can make care decisions for the patient if the patient can’t communicate. 
 
 <blockquote class="stu-note">
     <p>
-    This is a preliminary draft of STU2, which includes support for portable medical orders for life-sustaining treatment, Content Type 3. This builds upon STU1, which supported only Person-authored Advance Directives (ADI Content Type 1) documents. Future versions of this FHIR IG will address encounter-centric patient instructions, Content Type 2.
+    This is a preliminary draft of STU2, which includes support for portable medical orders for life-sustaining treatment (ADI Content Type 3) building upon STU1, which supported only Person-authored Advance Directives (ADI Content Type 1) documents. Future versions of this IG will address encounter-centric patient instructions (ADI Content Type 2).
     </p>
 </blockquote>
 
@@ -87,16 +87,18 @@ This Guide is divided into several pages which are listed at the top of each pag
             <li>Key Terms and Acronyms: A glossary of relevant terms described in advance directives.</li>
         </ul>
     </li>
-    <li>Patient-Authored: These sections provide the use cases, personas, and additional guidance specific to patient-authored care preferences (PACP).
+    <li>Person-Authored: These sections provide the use cases and additional guidance specific to patient-authored advance care plan (PACP) and mental health advance directive (MHAD) documents.
         <ul>
-            <li>Use Cases and Persona Examples</li>
-            <li>PACP-specific guidance</li>
+            <li>PACP User Stories</li>
+            <li>PACP Specification Guidance</li>
+            <li>MHAD User Stories</li>
+            <li>MHAD Specification Guidance</li>
         </ul>
     </li>
-    <li>Portable Medical Orders: These sections provide the use cases, personas, and additional guidance specific to portable medical orders (PMO).
+    <li>Portable Medical Orders: These sections provide the use cases and additional guidance specific to portable medical order (PMO) documents.
         <ul>
-            <li>Use Cases and Persona Examples</li>
-            <li>PMO-specific guidance</li>
+            <li>PMO User Stories</li>
+            <li>PMO Specification Guidance</li>
         </ul>
     </li>
     <li>FHIR Artifacts: These sections provide detailed descriptions and formal definitions for all the FHIR artifacts defined in this guide.
@@ -106,7 +108,7 @@ This Guide is divided into several pages which are listed at the top of each pag
             <li>Search Parameters and Operations: This section lists the HL7 FHIR® ADI Implementation Guide defined Operations and Search Parameters that are used in ADI transactions.</li>
             <li>Terminology: This section lists the value sets and code system defined for HL7 FHIR® ADI Implementation Guide profiles.</li>
             <li>Capability Statement: The following artifacts define the specific capabilities that different types of systems need to support to comply with this implementation guide. Systems conforming to this implementation guide are expected to declare conformance to one or more of the included capability statements.</li>
-            <li>Examples: The section that contains examples of advance directive information that is conformant to the profiles of this guide.</li>
+            <li>Examples: The section that contains examples of advance healthcare directive information that is conformant to the profiles of this guide.</li>
         </ul>
     </li>
     <li>Release Notes: A summary of changes from the PACIO ADI STU1 release.</li>
