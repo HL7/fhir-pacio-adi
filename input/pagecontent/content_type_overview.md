@@ -1,5 +1,5 @@
 
-This section provides additional guidance on the relationship between the associated profiles and the structure of the interoperable advance directive document.
+This section provides additional guidance on the relationship between the associated profiles and the structure of the interoperable advance healthcare directive documents defined in this IG.
 
 
 <a name="content_types">
@@ -12,23 +12,25 @@ There is a very important distinction for the three types of ADI content that wi
 <table>
     <tr>
         <th width="50">&nbsp;</th>
-        <th colspan="2" style="background-color:#DEEBF7; border: 1px solid black; vertical-align: middle; padding: 5px"><p style="font-size: 14px;"><b>Type 1: Person-Authored Advance Directive Information</b></p></th>
+        <th colspan="2" style="background-color:#DEEBF7; border: 1px solid black; vertical-align: middle; padding: 5px"><p style="font-size: 14px;"><b>Type 1: Person-Authored Advance Directive Documents</b></p></th>
     </tr>
     <tr><td width="50">&nbsp;</td>
         <td width="25">&nbsp;</td>
         <td>
             <ul>
-                <li>Person-authored information</li>
-                <li>Used as a tool for sharing an individual’s medical treatment and intervention goals, preferences, and priorities (GPP)</li>
-                <li>Provides guidance that a person would want known to inform treatment and care planning during a potential future medical emergency, in the case where the patient is unable to communicate with caregivers and medical personnel</li>
+                <li>Person-authored documents</li>
+                <li>Used as a tool for establishing a healthcare agent and sharing an individual’s medical treatment and intervention goals, preferences, and priorities (GPP)</li>
+                <li>Provides guidance that a person would want known to inform treatment and care planning during a potential future medical emergency, in the case where the patient is unable to communicate with caregivers and medical personnel and the appointed healthcare agent needs to make decisions on the patient's behalf.</li>
                 <li>There is NO “contract” between the author (patient) and any other party involved in the future medical emergency that the GPP is required to be followed (i.e., no offer or acceptance, no consideration, no consequences for failure to follow the patient’s directives)</li>
+                <li>A Mental Health Advance Directive is a special type of patient-authored document focused on treatment and care experience preferences relevant to behavioral health conditions. This type of document may appoint a healthcare agent whose powers are constrained to addresses mental health related care decisions during times when the patient is not able to make decisions.</li>
+                <li>In some cases, a practitioner may assist a person with creating their advance directive or mental health advance directive document. The pracitioner functions as a facilitator, assisting the patient to document their preferences accurately and completely. The facilitator is not an author of the document. The document reflects the thoughts and words of the patient. The facilitator is recorded in the document as someone who has performed advance care planning services to support the patient’s creation of their own document.</li>  
             </ul>
         </td>
     </tr>
     <tr height="15"><td colspan="3">&nbsp;</td></tr>
     <tr>
         <th width="50">&nbsp;</th>
-        <th colspan="2" style="background-color:#9DC3E6; border: 1px solid black; vertical-align: middle;  padding: 5px"><p style="font-size: 14px;"><b>Type II: Encounter-Centric Instructions</b></p></th>
+        <th colspan="2" style="background-color:#9DC3E6; border: 1px solid black; vertical-align: middle;  padding: 5px"><p style="font-size: 14px;"><b>Type 2: Encounter-Centric Instructions</b></p></th>
     </tr>
     <tr><td width="50">&nbsp;</td>
         <td width="25">&nbsp;</td>
@@ -43,16 +45,17 @@ There is a very important distinction for the three types of ADI content that wi
     <tr height="15"><td colspan="3">&nbsp;</td></tr>
     <tr>
         <th width="50">&nbsp;</th>
-        <th colspan="2" style="background-color:#478FD1; border: 1px solid black; vertical-align: middle;  padding: 5px"><p style="font-size: 14px;"><b>Type III: Portable Medical Orders for Life-Sustaining Treatments</b></p></th>
+        <th colspan="2" style="background-color:#478FD1; border: 1px solid black; vertical-align: middle;  padding: 5px"><p style="font-size: 14px;"><b>Type 3: Practitioner-Authored Portable Medical Orders for Life-Sustaining Treatments</b></p></th>
     </tr>
     <tr><td width="50">&nbsp;</td>
         <td width="25">&nbsp;</td>
         <td>
             <ul>
-                <li>Practitioner-authored</li>
+                <li>Practitioner-authored documents</li>
                 <li>A set of medical orders intended to follow a patient and be available across the continuum of care</li>
-                <li>The patient, or their healthcare agent, provides direct input in the creation of the orders.</li>
+                <li>The patient, or their healthcare agent, provides direct input in the creation of the orders but the documents are authored by a licensed practitioner.</li>
                 <li>These orders are used to document a provider’s orders for, or preferences against, treatments that are to be utilized during a future medical emergency that would necessitate life-sustaining treatment and interventions, and are based on the patient’s expressed goals, preferences, and priorities for such care.</li>
+                <li>In some cases, a provider who author’s (and signs) the portable medical order document may be supported by a different pracitioner functions as a facilitator, discussing options and decisions the patient may want to make.  The facilitator is not an author of this type of document. The document reflects the orders issued by the authoring provider. A facilitator is recorded in the document as someone who has performed advance care planning services to support the authoring provider.</li> 
             </ul>
         </td>
     </tr>
