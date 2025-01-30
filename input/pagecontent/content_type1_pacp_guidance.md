@@ -10,7 +10,7 @@ The ADI Content Type 1 document defines 7 sections:
 7. Administrative Information - Administrative information associated with the personal advance care plan and/or advance directive information.
 
 <p align="center">
-    <img src="./document_structure_adi_pacp.png" alt="Person-authored Advance Directive Document Structure" style="width: 100%; float: none; vertical-align: middle;"/>
+    <img src="./document_structure_adi_pacp.jpg" alt="Person-authored Advance Directive Document Structure" style="width: 100%; float: none; vertical-align: middle;"/>
 </p>
 
 The content in these categories of advance directive could include, but are not limited to:
