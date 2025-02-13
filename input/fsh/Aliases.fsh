@@ -18,6 +18,7 @@ Alias:   $USCoreEthnicity = http://hl7.org/fhir/us/core/StructureDefinition/us-c
 Alias: $USCoreDocumentReference = http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
 Alias: $USCoreDocumentReferenceType = http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-type
 Alias: $USCoreDocumentReferenceCategory = http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-category
+Alias: $USCoreConditionCode = http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code
 
 Alias: $USRealmHeader = http://hl7.org/fhir/us/ccda/StructureDefinition/US-Realm-Header
 

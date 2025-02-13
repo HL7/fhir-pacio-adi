@@ -25,8 +25,8 @@ Description: "The Preference Care Plan is a means for an individual to express t
 * subject only Reference($USCorePatient)
 
 * addresses 0..* MS
-* addresses ^short = "Health issues this plan addresses (use display only for potential conditions the patient does not currently have)"
-* addresses ^comment = "The conditions or circumstances in which the stated preferences and goals of the care plan apply. If there are no contained or referenceable resources (e.g. these are potential future conditions that do not represent a condition the patient currently has), the display should be in addresses.display. If no specific circumstances, then the display should indicate something like 'General' or 'All'"
+* addresses ^short = "The future potential health scenario or condition in which this ADI preference care plan is relevant (use display only for potential conditions the patient does not currently have)"
+* addresses ^comment = "The conditions or circumstances in which the stated preferences and goals of the care plan apply. If there are no contained or referenceable resources (e.g. these are potential future conditions that do not represent a condition the patient currently has), the display should be in addresses.display. If there are no specific circumstances, then the display should indicate something like 'General' or 'All'. Identified future potential health scenarios should not be expressed as a Condition resource. Instead, the future health scenario codes are to be placed in the adi-condition-code-extension. If there is conditional (AND/OR) logic involved in indicating the situation in which the care plan is   to be considered to address, this is to be included in addresses.text as text."
 
 * goal ^short = "Patient's goals for the scope of this care plan."
 * goal 0..* MS
@@ -41,7 +41,8 @@ Description: "The Preference Care Plan is a means for an individual to express t
 * obeys goal-or-supportingInfo-required
 
 * extension contains
-    adi-goal-order-by-descending-priority-extension named GoalOrderByDescendingPriority 0..1 
+    adi-goal-order-by-descending-priority-extension named GoalOrderByDescendingPriority 0..1 and
+    adi-condition-code-extension named ADIConditionCodeExtension 0..*
 
 Invariant: goal-or-supportingInfo-required
 Description: "Either goal or supportingInfo must exist, ie. goal and supportingInfo cannot both be blank, ie. if goal does not exist then supportingInfo must exist."

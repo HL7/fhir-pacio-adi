@@ -8,6 +8,7 @@
 <artifactPageExtension value="-mappings"/>
 <artifact id="StructureDefinition/ADI-AutopsyObservation" key="StructureDefinition-PADI-AutopsyObservation" name="ADI Autopsy Observation"/>
 <artifact id="CapabilityStatement/adi" key="CapabilityStatement-adi" name="ADI CapabilityStatement"/>
+<artifact id="StructureDefinition/adi-condition-code-extension" key="StructureDefinition-adi-condition-code-extension" name="ADI Care Plan Condition Codes"/>
 <artifact id="StructureDefinition/ADI-Composition-Header" key="StructureDefinition-ADI-Composition-Header" name="ADI Composition Header"/>
 <artifact id="ValueSet/ADICompositionStatusVS" key="ValueSet-ADICompositionStatusVS" name="ADI Composition Status"/>
 <artifact deprecated="true" id="ValueSet/PADIConsentActorRoleVS" key="ValueSet-PADIConsentActorRoleVS" name="ADI Consent Actor Role"/>
