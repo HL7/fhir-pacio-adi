@@ -164,6 +164,14 @@ Context: CarePlan
 * valueCodeableConcept 1..1 MS
 * valueCodeableConcept from $HL7YesNoVS (extensible)
 
+Extension: ADIConditionCodeExtension
+Id: adi-condition-code-extension
+Title: "ADI Care Plan Condition Codes"
+Description: "Indicates hypothetical conditions that indicate when a CarePlan should be considered and not be confused with conditions a patient has, has had, is suspected of having or is at any sort of risk of having."
+Context: CarePlan
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1 MS
+* valueCodeableConcept from $USCoreConditionCode (extensible)
 
 Invariant:  notary-information-requires-notary-role
 Description: "If Notary information (seal or commission expiration date) exists, then role must be notary"
