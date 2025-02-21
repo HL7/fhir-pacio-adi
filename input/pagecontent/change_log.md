@@ -1,11 +1,11 @@
-**Change log page for release notes**
+### Enhancements to STU2
 
-### Support for Portable Medical Orders (PMO)
-*Insert list of new PMO-related artifacts*
+#### Support for Portable Medical Orders (PMO)
+* Document structure and categorization of FHIR profiles describing a provider-authored PMO. 
 
-### Menu re-organization
+#### Menu and Naming Convention Changes
+* Renaming references from Patient Advance Care Plan (PACP) to "Patient-authored" advance directives.
 
-### Mental Health Advance Directive (TBD)
-
-### etc...insert more feature enhancements
+#### Mental Health Advance Directive (MHAD)
+* Initial document structure and categorization of FHIR profiles describing a MHAD. 
 

@@ -188,8 +188,8 @@ Description: "Medically Assisted Hydration Order."
 * ^experimental = false
 
 ValueSet: ADIDMedicallyAssistedHydrationNutritionOrderGroupingVS
-Title: "Medically Assisted Hydration Order"
-Description: "Medically Assisted Hydration Order."
+Title: "Medically Assisted Hydration Order Grouping"
+Description: "Medically Assisted Hydration Order Grouping."
 * ^experimental = false
 
 ValueSet: ADIInitialTreatmentPMOOptionsVS
