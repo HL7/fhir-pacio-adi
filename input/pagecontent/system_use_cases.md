@@ -3,7 +3,7 @@
 
 In ADI use cases, advance directive content created and updated will be represented using FHIR resources. The advance directive content is created and may be updated periodically by human actors.
 
-For Content Type 1, Person-authored advance directive information, there may be multiple human actors involved; however, there will only be one author which is the patient. Other human actors may include the healthcare agent, alternate healthcare agents, witness, notary, provider, and data enterer.
+For Content Type 1, Person-authored advance directive information, there may be multiple human actors involved; however, there will only be one author which is the patient. Other human actors may include the healthcare agent, behavioral healthcare agent, alternate healthcare agents, witness, notary, provider, and data enterer.
 
 <blockquote class="stu-note">
     <p>
@@ -89,7 +89,7 @@ For example:
 
 {% include examplebutton_default.html example="use_case_3_actor_transition_2.md" b_title = "Click Here To See Use Case 3 Actor Transaction Diagram Step 2" %}
 
-* Step 3 involves retrieving the document content. The Content Retriever system performs a GET operation using the URL specified in `DocumentReference`. This operation should be available using the same authentication and authorization that was used to retrieve the DocumentReference in a previous step of this process. Depending on the capabilities of the Content Custodian system or the format of the content, the retrieved Binary resource may need to be decoded. If the Content Custodian system supports it, and if the document content is in xml or json formatting, a request with an HTTP Accept Header of application/xml, text/xml, or application/json may retrieve the decoded document (which may be a FHIR Bundle with type = document).
+* Step 3 involves retrieving the document content. The Content Retriever system performs an HTTP GET operation using the URL specified in `DocumentReference`. This operation should be available using the same authentication and authorization that was used to retrieve the DocumentReference in a previous step of this process. Depending on the capabilities of the Content Custodian system or the format of the content, the retrieved Binary resource may need to be decoded. If the Content Custodian system supports it, and if the document content is in xml or json formatting, a request with an HTTP Accept Header of application/xml, text/xml, or application/json may retrieve the decoded document (which may be a FHIR Bundle with type = document).
 
 {% include examplebutton_default.html example="use_case_3_actor_transition_3.md" b_title = "Click Here To See Use Case 3 Actor Transaction Diagram Step 3" %}
 

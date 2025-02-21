@@ -5,7 +5,7 @@ Description: "Example Patient Smith-Johnson PMO ADI Document Bundle Smith-Johnso
 Usage: #example
 
 * identifier.system = "urn:oid:2.16.840.1.113883.3.3208.101.1"
-// * identifier.value = "20130607100315-CCDA-CCD"
+* identifier.value = "20130607100315-ExamplePMODocument"
 * type = #document
 * timestamp = "2024-03-29T14:25:34.001-05:00"
 
@@ -13,12 +13,17 @@ Usage: #example
 * entry[=].resource = PMO-Example-Smith-Johnson-PMOComposition1
 * entry[+].fullUrl = "http://www.example.org/fhir/Patient/Example-Smith-Johnson-Patient1"
 * entry[=].resource = Example-Smith-Johnson-Patient1
-* entry[+].fullUrl = "http://www.example.org/fhir/Patient/Example-Kyle-Anydoc-PractitionerRole1"
+* entry[+].fullUrl = "http://www.example.org/fhir/PractitionerRole/Example-Kyle-Anydoc-PractitionerRole1"
 * entry[=].resource = Example-Kyle-Anydoc-PractitionerRole1
-* entry[+].fullUrl = "http://www.example.org/fhir/Patient/Example-Kyle-Anydoc-Practitioner"
+* entry[+].fullUrl = "http://www.example.org/fhir/Practitioner/Example-Kyle-Anydoc-Practitioner"
 * entry[=].resource = Example-Kyle-Anydoc-Practitioner
-* entry[+].fullUrl = "http://www.example.org/fhir/Patient/Example-Smith-Johnson-CPR-ServiceRequest1"
+* entry[+].fullUrl = "http://www.example.org/fhir/Organization/Example-Smith-Johnson-OrganizationCustodian1"
+* entry[=].resource = Example-Smith-Johnson-OrganizationCustodian1
+* entry[+].fullUrl = "http://www.example.org/fhir/ServiceRequest/Example-Smith-Johnson-CPR-ServiceRequest1"
 * entry[=].resource = Example-Smith-Johnson-CPR-ServiceRequest1
+* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-DocumentationObservation1"
+* entry[=].resource = Example-Smith-Johnson-DocumentationObservation1
+
 
 // Patient Examples - *** MLT: example already created for PACP.
 
@@ -139,13 +144,16 @@ Description: "Example of PractitionerRole for PMO Composition Example 1"
 Usage: #example
 
 * practitioner = Reference(Example-Kyle-Anydoc-Practitioner)
+* telecom.system = #email
+* telecom.value = "kanydoc@example.org"
+* telecom.use = #work
 
 Instance: Example-Kyle-Anydoc-Practitioner
 InstanceOf: $USCorePractitioner
 Description: "Example of Practitioner for PMO Composition Example 1"
 Usage: #example
 
-* identifier[NPI].value = "21548796354"
+* identifier[NPI].value = "1818345971"
 * name.family = "Anydoc"
 * name.given = "Kyle"
 * name.prefix = "Dr."

@@ -104,6 +104,10 @@ The `text` element of a resource is a [Narrative](http://hl7.org/fhir/R4/narrati
 
 For the purposes of this implementation guide, it is expected that most implementations will have resource instances that have additional data in the `text` than is captured in the structured data. When that is the case, the narrative `text.status` **SHALL** be `additional`.
 
+### CapabilityStatement Server Requirement
+
+Servers claiming conformance to this guide SHALL include a CapabilityStatement that has a CapabilityStatement.instantiates with a URL of http://hl7.org/fhir/us/fhir-pacio-adi/CapabilityStatement/adi or a URL to the appropriate version of the CapabilityStatement.
+
 ### Document Bundles and Constituent Resources
 
 <!--[TODO]--> 
