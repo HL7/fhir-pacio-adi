@@ -5,6 +5,8 @@ Title: "ADI PMO Composition"
 Description: "This profile encompasses information that makes up a practitioner's portable medical order."
 
 * author only Reference($USCorePractitionerRole)
+* attester 1..* MS     
+* attester.party only Reference($USCorePractitioner or $USCorePractitionerRole or RelatedPerson)
 
 * type = $LOINC#93037-0 // "Portable medical order form"
 

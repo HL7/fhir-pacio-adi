@@ -157,6 +157,8 @@ Usage: #example
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * date = "2021-03-29T14:25:34-05:00"
 * author = Reference(Example-Smith-Johnson-Patient1)
+* attester.mode = #personal
+* attester.party = Reference(Example-Smith-Johnson-Patient1)
 * title = "Personal Advance Care Plan"
 
 * custodian = Reference(Example-Smith-Johnson-OrganizationCustodian1)

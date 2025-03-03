@@ -148,6 +148,8 @@ Usage: #example
 * author.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * author.extension.valueCode = #as-text
 * author[0].display = "author name in PDF attachment"
+* attester.mode = #personal
+* attester.party = Reference(6231012c-74ea-43bf-b58e-eebc30665312)
 * title = "Personal Advance Care Plan Document for Roger McBee"
 
 * custodian = Reference(011aa682-5c47-4f9b-95fe-c601eedb68ae)
