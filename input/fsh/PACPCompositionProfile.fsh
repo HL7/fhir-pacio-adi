@@ -5,6 +5,7 @@ Title: "ADI PtAuthored Composition"
 Description: "This profile encompasses information that makes up the author’s advance care information plan."
 
 * author only Reference($USCorePatient)
+* attester 1..* MS      // made required (FHIR-46446)
 * attester.party only Reference($USCorePatient or RelatedPerson)
 
 * section ^slicing.discriminator.type = #pattern 
