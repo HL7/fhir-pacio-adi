@@ -58,6 +58,9 @@ Description: "This abstract profile defines constraints that represent common ad
 * custodian 1..1 MS
 * custodian only Reference($USCoreOrganization)
 
+* relatesTo.extension contains adi-document-reference-extension named ADIDocumentReferenceExtension 0..* MS
+
+
 * event.code = ADITempCS#acp-services "Advance care planning services"
 * event.detail ^slicing.discriminator.type = #profile
 * event.detail ^slicing.discriminator.path = "resolve()"

@@ -26,6 +26,7 @@
 <artifact id="ValueSet/ADICompositionStatusVS" key="ValueSet-ADICompositionStatusVS" name="ADI Composition Status"/>
 <artifact deprecated="true" id="ValueSet/PADIConsentActorRoleVS" key="ValueSet-PADIConsentActorRoleVS" name="ADI Consent Actor Role"/>
 <artifact id="StructureDefinition/ADI-DocumentReference" key="StructureDefinition-ADI-DocumentReference" name="ADI Document Reference"/>
+<artifact id="StructureDefinition/adi-document-reference-extension" key="StructureDefinition-adi-document-reference-extension" name="ADI Document Reference Extension"/>
 <artifact id="ValueSet/ADIDocumentReferenceStatusVS" key="ValueSet-ADIDocumentReferenceStatusVS" name="ADI Document Reference Status"/>
 <artifact id="ValueSet/ADIDocumentRevokeStatusVS" key="ValueSet-ADIDocumentRevokeStatusVS" name="ADI Document Revoke Status"/>
 <artifact id="StructureDefinition/ADI-DocumentationObservation" key="StructureDefinition-PADI-DocumentationObservation" name="ADI Documentation Observation"/>
