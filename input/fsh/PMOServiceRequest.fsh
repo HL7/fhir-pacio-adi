@@ -11,7 +11,7 @@ Description: "This profile is used to represent both a patient authored care pla
 //* text 1..1 MS
 
 * status = #active
-* intent = #order
+* intent = #directive
 
 // TODO need a category 
 // TODO may need to get a variance request from us core ServiceRequest. In different version and also do any of the categories fit?
