@@ -30,16 +30,17 @@ Alias: $HL7YesNoVS = http://terminology.hl7.org/ValueSet/v2-0136
 Alias: $HL7YesNoCS = http://terminology.hl7.org/CodeSystem/v2-0532
 
 
-
 Alias: $HL7CompositionAttestation = http://hl7.org/fhir/ValueSet/composition-attestation-mode
 Alias: $HL7ConsentScope = http://terminology.hl7.org/CodeSystem/consentscope
 Alias: $HL7ConsentCategoryCodes = http://terminology.hl7.org/CodeSystem/consentcategorycodes
 Alias: $HL7ConsentCategoryVS = http://hl7.org/fhir/ValueSet/consent-category
 Alias: $HL7JurisdictionCodes = http://hl7.org/fhir/ValueSet/jurisdiction
+Alias: $HL7DegreeLicenseCertificate = http://terminology.hl7.org/ValueSet/v2-0360
 
 Alias: $LOINC = http://loinc.org
 Alias: $SNOMEDCT = http://snomed.info/sct
 Alias: $OmbRaceCat = urn:oid:2.16.840.1.113883.6.238
+// Alias: $NUCC = http://nucc.org/provider-taxonomy  // note: had to comment out. IG Publisher is not recognizing this as a valid URL, even though it was specified by HL7 THO https://terminology.hl7.org/CodeSystem-v3-nuccProviderCodes.html. 
 
 Alias: $HL7RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $HL7RoleClass = http://terminology.hl7.org/CodeSystem/v3-RoleClass

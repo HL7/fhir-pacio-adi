@@ -29,7 +29,7 @@ fhirVersion: 4.0.1
 dependencies:
   hl7.fhir.us.core: 6.1.0
   hl7.fhir.uv.extensions: current
-  hl7.terminology: 5.4.0
+  hl7.terminology: 6.2.0
   us.nlm.vsac:
     uri: 'http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac'
     version: 0.15.0
