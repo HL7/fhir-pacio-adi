@@ -11,6 +11,15 @@ Description: "Advance Directive Interoperability Provenance based on US Core to 
 * agent[assembler].type 1..1 MS 
 * agent[assembler].type = $HL7ProvenanceParticipantType#assembler
 
+* target only Reference(ADIPMOComposition)
+
+* agent.role from $HL7DegreeLicenseCertificate (extensible)
+* agent[ProvenanceAuthor].role from $HL7DegreeLicenseCertificate (extensible)
+* agent[ProvenanceTransmitter].role from $HL7DegreeLicenseCertificate (extensible)
+
+
+* signature 0..1 MS
+
 // TODO US Core provenance does not allow provenance agent.who of a device
 
 * insert ADIProvenanceDescriptions
