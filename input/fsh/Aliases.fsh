@@ -69,6 +69,7 @@ Alias: $VSACADIAdditionalPMOProceduresGrouping = http://cts.nlm.nih.gov/fhir/Val
 Alias: $VSACADIMedicallyAssistedNutritionOrderOptions = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.35
 Alias: $VSACADIMedicallyAssistedNutritionOrderOptionsGrouping = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.36
 Alias: $VSACCardiopulmonaryResuscitationOrderOptions = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.28
+Alias: $HealthGoalsAtEndOfLifeGrouping = https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.7
 
 // Standard extension aliases
 Alias: $data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason
