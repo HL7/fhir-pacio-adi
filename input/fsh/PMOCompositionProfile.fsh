@@ -7,7 +7,7 @@ Description: "This profile encompasses information that makes up a practitioner'
 * author only Reference($USCorePractitionerRole)
 * attester 1..* MS     
 * attester.party only Reference($USCorePractitioner or $USCorePractitionerRole or RelatedPerson)
-* attester.mode = #professional
+* attester.mode = #legal
 
 * type = $LOINC#93037-0 // "Portable medical order form"
 
