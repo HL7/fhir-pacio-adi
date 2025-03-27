@@ -7,6 +7,7 @@ Description: "This profile encompasses information that makes up a practitioner'
 * author only Reference($USCorePractitionerRole)
 * attester 1..* MS     
 * attester.party only Reference($USCorePractitioner or $USCorePractitionerRole or RelatedPerson)
+* attester.mode = #professional
 
 * type = $LOINC#93037-0 // "Portable medical order form"
 
@@ -38,10 +39,10 @@ Description: "This profile encompasses information that makes up a practitioner'
 * section ^slicing.description = "Slice based on code"
 * section contains
     portable_medical_orders 1..1 MS and
-    completion_information 0..1 MS and 
-    administration_information 0..1 MS and
-    additional_documentation 0..1 MS and
-    witness_and_notary 0..1 MS
+    completion_information 0..1 and 
+    administration_information 0..1 and
+    additional_documentation 0..1 and
+    witness_and_notary 0..1
 
 // ******* Medical Orders Section ********
 * section[portable_medical_orders] ^short = "Portable Medical Orders"
@@ -114,7 +115,7 @@ Description: "This profile encompasses information that makes up a practitioner'
 * section[administration_information].entry ^slicing.description = "Slice based on $this value"
 
 * section[administration_information].entry contains
-    adi_personal_goal 0..* MS
+    adi_personal_goal 0..* 
 * section[administration_information].entry[adi_personal_goal] only Reference(ADIPersonalGoal)
 
 // ******* PMO Additional Documentation Section ********
