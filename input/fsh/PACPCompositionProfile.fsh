@@ -23,13 +23,13 @@ Description: "This profile encompasses information that makes up the author’s 
 * section ^slicing.ordered = false   // can be omitted, since false is the default
 * section ^slicing.description = "Slice based on $this value"
 * section contains
-    healthcare_agent 0..1 and
-    gpp_for_certain_health_condition 0..1 MS and
-    gpp_personal_care_experience 0..1 MS and
-    gpp_upon_death 0..1 MS and
-    additional_documentation 0..1 MS and
-    witness_and_notary 0..1 MS and
-    administrative_information 0..1 MS
+    healthcare_agent 1..1 MS and
+    gpp_for_certain_health_condition 0..1 and
+    gpp_personal_care_experience 0..1 and
+    gpp_upon_death 0..1 and
+    additional_documentation 0..1 and
+    witness_and_notary 0..1 and
+    administrative_information 0..1
 
 * section[healthcare_agent] ^short = "Healthcare agents, healthcare agent advisors, and consent regarding their roles, powers, and limitations"
 
