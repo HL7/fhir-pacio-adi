@@ -54,7 +54,7 @@ Usage: #example
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * date = "2024-03-29T14:25:34-05:00"
 * author = Reference(Example-Kyle-Anydoc-PractitionerRole1)
-* attester.mode = #professional
+* attester.mode = #legal
 * attester.party = Reference(Example-Kyle-Anydoc-PractitionerRole1)
 * title = "Portable Medical Order"
 

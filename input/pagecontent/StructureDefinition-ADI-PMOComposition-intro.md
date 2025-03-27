@@ -2,4 +2,4 @@ This profile defines the requirements for communicating a Portable Medical Order
 
 It is possible for a PMO composition to only contain textual information and not have any encoded entries. In this case, an implementer may populate the `section.text` element in place of a resource reference in the `section.entry` element.
 
-For a provider-authored composition, the attester is set to *professional*.
+For a provider-authored composition, the attester is set to *legal*.
