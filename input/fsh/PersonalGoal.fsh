@@ -13,7 +13,7 @@ Description: "This profile is a statement that presents the author's personal he
 * category 1..*
 * category.text MS
 * category contains type 1..1 MS 
-* category[type] from $HealthGoalsAtEndOfLifeGrouping
+* category[type] from $HealthGoalsGrouping
 
 * text 1..1 MS
 

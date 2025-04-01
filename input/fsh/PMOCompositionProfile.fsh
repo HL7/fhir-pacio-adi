@@ -41,6 +41,7 @@ Description: "This profile encompasses information that makes up a practitioner'
     portable_medical_orders 1..1 MS and
     completion_information 0..1 and 
     administration_information 0..1 and
+    gpp_upon_death 0..1 and
     additional_documentation 0..1 and
     witness_and_notary 0..1
 
@@ -117,6 +118,16 @@ Description: "This profile encompasses information that makes up a practitioner'
 * section[administration_information].entry contains
     adi_personal_goal 0..* 
 * section[administration_information].entry[adi_personal_goal] only Reference(ADIPersonalGoal)
+
+// ******* GPP Upon Death ************
+
+* section[gpp_upon_death] ^short = "Goals, preferences, and priorities upon death"
+* section[gpp_upon_death].title 1..1 MS
+* section[gpp_upon_death].code 1..1 
+* section[gpp_upon_death].code = $LOINC#81337-8
+* section[gpp_upon_death].entry 
+* section[gpp_upon_death].entry only Reference(ADIPersonalInterventionPreference or ADIPersonalPrioritiesOrganizer or ADIAutopsyObservation or ADIOrganDonationObservation or ADIPersonalGoal or ADIUponDeathPreference)
+
 
 // ******* PMO Additional Documentation Section ********
 

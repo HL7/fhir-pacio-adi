@@ -46,7 +46,8 @@ Description: "This profile is used to represent a practitioner authored portable
 
 * ^experimental = false
 * category = $LOINC#100822-6 "Cardiopulmonary resuscitation orders"
-* code = $SNOMEDCT#89666000 "Cardiopulmonary resuscitation (procedure)" 
+* code 1..1 MS
+* code from $CardiopulmonaryResuscitationProceduresGrouping (extensible)
 * doNotPerform 0..1 MS
 * orderDetail 1..1 MS
 * orderDetail from $VSACCardiopulmonaryResuscitationOrderOptions (required) 

@@ -67,7 +67,7 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[gpp_upon_death].code 1..1 
 * section[gpp_upon_death].code = $LOINC#81337-8
 * section[gpp_upon_death].entry 
-* section[gpp_upon_death].entry only Reference(ADIPersonalInterventionPreference or ADIPersonalPrioritiesOrganizer or ADIAutopsyObservation or ADIOrganDonationObservation or ADIPersonalGoal)
+* section[gpp_upon_death].entry only Reference(ADIPersonalInterventionPreference or ADIPersonalPrioritiesOrganizer or ADIAutopsyObservation or ADIOrganDonationObservation or ADIPersonalGoal or ADIUponDeathPreference)
 
 
 * section[additional_documentation] ^short = "Observations regarding the existence of other advance directive related information"
