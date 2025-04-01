@@ -62,6 +62,7 @@
 <artifact id="StructureDefinition/ADI-PersonalInterventionPreference" key="StructureDefinition-PADI-PersonalInterventionPreference" name="ADI PtAuthored Personal Intervention Preference"/>
 <artifact id="CodeSystem/ADIRevokeStatusCS" key="CodeSystem-ADIRevokeStatusCS" name="ADI Revoke Status Code System"/>
 <artifact id="CodeSystem/adi-temp-cs" key="CodeSystem-adi-temp-cs" name="ADI Temporary Code System"/>
+<artifact id="StructureDefinition/ADI-UponDeathPreferences" key="StructureDefinition-ADI-UponDeathPreferences" name="ADI Upon Death Preferences"/>
 <artifact id="StructureDefinition/ADI-Witness" key="StructureDefinition-ADI-Witness" name="ADI Witness"/>
 <artifact deprecated="true" id="ValueSet/PADIAdvanceDirectiveCategoriesVS" key="ValueSet-PADIAdvanceDirectiveCategoriesVS" name="Advance Directive Categories"/>
 <artifact deprecated="true" id="StructureDefinition/padi-attestationInformation-extension" key="StructureDefinition-padi-attestationInformation-extension" name="Attestation Information"/>

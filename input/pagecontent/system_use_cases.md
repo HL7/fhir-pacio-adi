@@ -7,7 +7,7 @@ For Content Type 1, Person-authored advance directive information, there may be 
 
 <blockquote class="stu-note">
     <p>
-    STU1 supports only Person-authored Advance Directives (ADI Content Type 1) documents. Future versions of this FHIR IG will address encounter-centric patient instructions, Content Type 2, and portable medical orders (such as DNRs or POLST/MOLST orders) for Content Type 3.
+    STU2 includes support for Person-authored Advance Directives (ADI Content Type 1) and portable medical orders (such as DNRs or POLST/MOLST orders) for Content Type 3 documents. Future versions of this FHIR IG will address encounter-centric patient instructions, Content Type 2..**TO DO: Revise wording on scope**.
     </p>
 </blockquote>
 
