@@ -27,6 +27,7 @@ Description: "This profile encompasses information that makes up the author’s 
     gpp_for_certain_health_condition 0..1 and
     gpp_personal_care_experience 0..1 and
     gpp_upon_death 0..1 and
+    minimal_source_form 0..1 and
     additional_documentation 0..1 and
     witness_and_notary 0..1 and
     administrative_information 0..1
@@ -69,6 +70,14 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[gpp_upon_death].entry 
 * section[gpp_upon_death].entry only Reference(ADIPersonalInterventionPreference or ADIPersonalPrioritiesOrganizer or ADIAutopsyObservation or ADIOrganDonationObservation or ADIPersonalGoal or ADIUponDeathPreference)
 
+// ******* ADI Minimal Source Form Section ********
+* section[minimal_source_form] ^short = "Minimal source form"
+* section[minimal_source_form].title 1..1 MS
+* section[minimal_source_form].code 1..1 MS
+* section[minimal_source_form].code = ADITempCS#minimal_source_form
+* section[minimal_source_form].entry only Reference(ADIMinimalSourceFormInformation)
+
+* obeys Composition-section-code-equals-type
 
 * section[additional_documentation] ^short = "Observations regarding the existence of other advance directive related information"
 * section[additional_documentation].title 1..1 MS
