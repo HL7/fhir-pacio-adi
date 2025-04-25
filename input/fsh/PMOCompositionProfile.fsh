@@ -116,8 +116,11 @@ Description: "This profile encompasses information that makes up a practitioner'
 * section[administration_information].entry ^slicing.description = "Slice based on $this value"
 
 * section[administration_information].entry contains
-    adi_personal_goal 0..* 
+    adi_personal_goal 0..* and 
+    minimal_source_form 0..1 MS
+
 * section[administration_information].entry[adi_personal_goal] only Reference(ADIPersonalGoal)
+* section[administration_information].entry[minimal_source_form] only Reference(Binary)
 
 // ******* GPP Upon Death ************
 
