@@ -42,6 +42,7 @@ Description: "This profile encompasses information that makes up a practitioner'
     completion_information 0..1 and 
     administration_information 0..1 and
     gpp_upon_death 0..1 and
+    minimal_source_form 0..1 and
     additional_documentation 0..1 and
     witness_and_notary 0..1
 
@@ -128,6 +129,14 @@ Description: "This profile encompasses information that makes up a practitioner'
 * section[gpp_upon_death].entry 
 * section[gpp_upon_death].entry only Reference(ADIPersonalInterventionPreference or ADIPersonalPrioritiesOrganizer or ADIAutopsyObservation or ADIOrganDonationObservation or ADIPersonalGoal or ADIUponDeathPreference)
 
+// ******* ADI Minimal Source Form Section ********
+* section[minimal_source_form] ^short = "Minimal source form"
+* section[minimal_source_form].title 1..1 MS
+* section[minimal_source_form].code 1..1 MS
+* section[minimal_source_form].code = ADITempCS#minimal_source_form
+* section[minimal_source_form].entry only Reference(ADIMinimalSourceFormInformation)
+
+* obeys Composition-section-code-equals-type
 
 // ******* PMO Additional Documentation Section ********
 
@@ -146,50 +155,9 @@ Description: "This profile encompasses information that makes up a practitioner'
 * section[witness_and_notary].code = $LOINC#81339-4
 * section[witness_and_notary].entry only Reference(ADIHealthcareAgentParticipant)
 
-
-//****** Open for discussion **********
-// Signature
-// How to capture hospice agency
-// TODO add extension to ServiceRequest for basedOn consent.
-
-// TODO: May need to add a witness and notary section for the persons signature
-// TODO: Where it physician participants? What are informants in CDA ePOLST? Looks like dataEnterer (from POLST mapping) For Ordering participant, may be done by a PA, so a supervising physician. Physicians should have licensing/cert #s
-// TODO: In CDA ePOLST review •	Legal Authenticator va Authentication. •	Legal Authenticator seems to be for supervising
-// TODO: Part of National POLST - Professional Assisting Health Care Professional w/ Completion (Name) - With role that could include Social Worker, Nurse, Clergy, Other.
-// TODO: CDA ePOLST legalAuthenticator is •	Legal Authenticator: The legalAuthenticator element is the individual who is responsible for the document. For the ePOLST, this is the signer in "Section F. Signature: Health Care Provider" of the National POLST Form (either the "Health Care Provider" or the "Supervising physician"). Only licensed healthcare providers authorized to sign POLST forms in their state or D.C. can sign this form. 
-// TODO: CDA - Difference between License and Cert # - From Howard - Physician Assistants are Certified (PA-C) and it looks like Nurse Practitioners may vary between states as certified or licensed. Certified would have to operate under a medical director or supervising physician, and would likely need that validating signature.
-// TODO: CDA has "Patient is enrolled in hospice" in the mapping to "US Realm Header (V3), participant" How is this to be done in the CDA? Not clear in the templates.
-
-
-// TODO the Professional Assisting Health Care Provider w/ Form Completion Maybe should not be an observation, but a related person with a role.
-// Signature date of provide needs to be linked to provider.
-
-// For medically assisted nutrition and hydration (and anti-biotics) trial period. Need a goal and time in the consent (or CarePlan)?
-// Need to have an "if needed" indicator for interventions
-
-
-/*
-Invariant:  HCA-section-entries0
-Description: "0 - If healthcare agent section entry exists, then the HCA consent entry and HCA RelatedPerson entry must exist"
-//Expression: "entry.exists() implies (entry.where($this is Consent).exists() and entry.where($this is RelatedPerson).exists())"
-Expression: "entry.exists().not()"
-//Expression: "entry.resolve() is Consent" fail
-Severity:   #error
-
-
-
-Invariant:  HCA-section-entries1
-Description: "1 -If healthcare agent section entry exists, then the HCA consent entry and HCA RelatedPerson entry must exist"
-//Expression: "entry.exists() implies (entry.where($this is Consent).exists() and entry.where($this is RelatedPerson).exists())"
-Expression: "entry.where($this.resolve() is Consent)"
-Severity:   #error
-
-
-
-Invariant:  HCA-section-entries2
-Description: "2 - If healthcare agent section entry exists, then the HCA consent entry and HCA RelatedPerson entry must exist"
-//Expression: "entry.exists() implies (entry.where($this is Consent).exists() and entry.where($this is RelatedPerson).exists())"
-Expression: "entry.where($this.resolve() is RelatedPerson)"
-Severity:   #error
-
-*/
+// *********** Invariants **********
+Invariant: Composition-section-code-equals-type
+Description: "Composition section code must equal Composition type"
+Expression: "section.code = type"
+XPath: "f:section/f:code = f:type"
+Severity: #error
