@@ -1,6 +1,6 @@
 // Bundle Examples
 Instance: PMO-Example-Smith-Johnson-Bundle2
-InstanceOf: Bundle
+InstanceOf: ADIBundle
 Description: "Example Patient Smith-Johnson PMO ADI Document Bundle Smith-Johnson 2"
 Usage: #example
 

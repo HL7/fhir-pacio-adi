@@ -20,6 +20,7 @@
 <artifact id="Goal/8107564a-77d6-4b9f-a79e-0a7d9ad5cc27" key="Goal-8107564a-77d6-4b9f-a79e-0a7d9ad5cc27" name="8107564a-77d6-4b9f-a79e-0a7d9ad5cc27"/>
 <artifact id="Observation/8c8cf0ca-1d02-46d4-8b50-bd7e89506127" key="Observation-8c8cf0ca-1d02-46d4-8b50-bd7e89506127" name="8c8cf0ca-1d02-46d4-8b50-bd7e89506127"/>
 <artifact id="StructureDefinition/ADI-AutopsyObservation" key="StructureDefinition-PADI-AutopsyObservation" name="ADI Autopsy Observation"/>
+<artifact id="StructureDefinition/ADI-Bundle" key="StructureDefinition-ADI-Bundle" name="ADI Bundle"/>
 <artifact id="CapabilityStatement/adi" key="CapabilityStatement-adi" name="ADI CapabilityStatement"/>
 <artifact id="StructureDefinition/adi-condition-code-extension" key="StructureDefinition-adi-condition-code-extension" name="ADI Care Plan Condition Codes"/>
 <artifact id="StructureDefinition/ADI-Composition-Header" key="StructureDefinition-ADI-Composition-Header" name="ADI Composition Header"/>

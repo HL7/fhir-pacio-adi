@@ -1,6 +1,6 @@
 // // Bundle Examples
 Instance: 28965f6b-fb09-4208-8b77-d01b10c68903
-InstanceOf: Bundle
+InstanceOf: ADIBundle
 Description: "Example Patient McBee ADI Document Bundle McBee 1"
 Usage: #example
 
