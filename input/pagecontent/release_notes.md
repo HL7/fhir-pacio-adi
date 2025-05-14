@@ -1,17 +1,16 @@
-### Changes from STU1
+### STU2 Release Notes
 
-#### Guidance for Portable Medical Orders (PMO)
+**Support for new AD document types**
+* Provider-authored advance directives
+  * Portable Medical Orders (PMO)
+* Guidance on Mental Health Advance Directives (MHAD)
+* Minimally Structured Document (MSD)
+  
+**Changes to STU1 based profiles**
+* Closer Alignment with US Core
+  * ADI Care Plan
+* Specifying Jurisdictions and Healthcare Facilitators
+* Specifying attester and facilitator signatures
 
-#### IG Menu Re-organization
-
-The IG menu structure separates detailed guidance for all AD content types.
-
-#### New guidance on mental health AD
-
-#### Closer Alignment with US Core
-
-The following ADI profiles are now derived from US Core profiles:
-
-* ADI Care Plan
-
-#### Care Plan
+**Examples**
+* Integrative use cases and examples to demonstrate clearer use of the ADI profiles.

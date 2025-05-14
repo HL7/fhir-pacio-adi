@@ -1,6 +1,6 @@
 // Bundle Examples
 Instance: Example-Smith-Johnson-Bundle1
-InstanceOf: Bundle
+InstanceOf: ADIBundle
 Description: "Example Patient Smith-Johnson ADI Document Bundle Smith-Johnson 1"
 Usage: #example
 

@@ -92,14 +92,14 @@ Description: "This profile encompasses information that makes up a practitioner'
 
 * section[completion_information].entry contains
     orders_review 0..* and
-    orders_participant 0..* and
-    hospice_observation 0..1 and 
-    hospice_agency 0..1
+    orders_participant 0..* // and
+ //   hospice_observation 0..1 and 
+ //   hospice_agency 0..1
 
 * section[completion_information].entry[orders_review] only Reference(ADIPMOReviewObservation)
 * section[completion_information].entry[orders_participant] only Reference(ADIPMOParticipantObservation)
-* section[completion_information].entry[hospice_observation] only Reference(ADIPMOHospiceObservation)
-* section[completion_information].entry[hospice_agency] only Reference($USCoreOrganization)
+// * section[completion_information].entry[hospice_observation] only Reference(ADIPMOHospiceObservation)
+// * section[completion_information].entry[hospice_agency] only Reference($USCoreOrganization)
 
 // ******* PMO Administration Information Section ********
 
@@ -116,8 +116,11 @@ Description: "This profile encompasses information that makes up a practitioner'
 * section[administration_information].entry ^slicing.description = "Slice based on $this value"
 
 * section[administration_information].entry contains
-    adi_personal_goal 0..* 
+    adi_personal_goal 0..* and 
+    minimal_source_form 0..1 MS
+
 * section[administration_information].entry[adi_personal_goal] only Reference(ADIPersonalGoal)
+* section[administration_information].entry[minimal_source_form] only Reference(Binary)
 
 // ******* GPP Upon Death ************
 
