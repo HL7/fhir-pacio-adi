@@ -16,3 +16,4 @@ Description: "Codes to be used as placeholders until they have a formal assigned
 * #artificial-hydration-no-surgical-placed-tubes "Trial period for artificial hydration but no without surgically-placed tubes"
 * #acp-services "Advance care planning services"
 * #adi-document-location "ADI document location endpoint" "A FHIR endpoint URL that points to the ADI document or resource that exists."
+* #minimal_source_form "Minimal source form"
