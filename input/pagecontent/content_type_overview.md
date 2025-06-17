@@ -85,7 +85,7 @@ This implementation guide is designed to guide a range of digitization levels, r
 The diagram below further illustrates how these documents are organized. The FHIR `DocumentReference` resource is used for "indexing" of documents, similar to the way a library uses a card catalog to index books based on different search criteria, for example, by title, author, date, or classification code.  The DocumentReference can be used in the same way for searching and finding documents with specific attributes such as type of document, subject (e.g., patient), author, dates.  These attributes are provided in the metadata of the DocumentReference so that the actual documents do not have to be accessed for most common searches.  A complete list of search capabilities on DocumentReference can be found in the [Search Parameters](search_parameters.html#adi-documentreference-documentreference) section.
 
 <p align="center">
-    <object data="ADI_profile_resource_relationships2.svg" type="image/svg+xml" width="70%"></object>
+    <object data="ADI_profile_resource_relationships3.svg" type="image/svg+xml" width="70%"></object>
 </p>
 
 Digital signatures are defined as optional in this guide, for a myriad of factors including maturity of systems that can create and exchange digital ADI. If supported by a Content Creator system, the digital signature will be a captured in a `Binary` resource that is referenced by an additional `DocumentReference` resource.
