@@ -24,7 +24,7 @@ Description: "This abstract profile defines constraints that represent common ad
 
 * extension contains
   //  adi-versionNumber-extension named VersionNumber 0..1 MS and
-    adi-effective-date-extension named EffectiveDateExtension 0..1 and
+    adi-expiration-date-extension named ExpirationDateExtension 0..1 and
   //  adi-jurisdiction-extension named Jurisdiction 0..* and 
     http://hl7.org/fhir/us/core/StructureDefinition/us-core-jurisdiction named Jurisdiction 0..* and  // fix for FHIR-49201
     adi-dataEnterer-extension named DataEntererExtension 0..1 and

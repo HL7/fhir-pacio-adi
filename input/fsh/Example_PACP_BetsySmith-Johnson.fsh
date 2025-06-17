@@ -1,6 +1,6 @@
 // Bundle Examples
 Instance: Example-Smith-Johnson-Bundle1
-InstanceOf: Bundle
+InstanceOf: ADIBundle
 Description: "Example Patient Smith-Johnson ADI Document Bundle Smith-Johnson 1"
 Usage: #example
 
@@ -90,7 +90,7 @@ Usage: #example
 * identifier[=].system = "http://hospital.smarthealthit.org"
 * identifier[=].value = "1032702"
 * identifier[+].system = "http://hl7.org/fhir/sid/us-medicare"
-* identifier[=].value = "10A3D58WH1600"
+* identifier[=].value = "1PA3D58WH16"
 
 * active = true
 * name[0].use = #usual
@@ -144,7 +144,7 @@ Usage: #example
 * extension[composition-clinicaldocument-versionNumber].valueString = "9f94d9de-a514-4e10-9c23-dc8c87f0c6fc"
 * extension[adi-jurisdiction-extension].valueCodeableConcept = urn:iso:std:iso:3166:-2#US-MI
 * extension[adi-dataEnterer-extension].valueReference = Reference(Example-Smith-Johnson-Patient1)
-* extension[adi-effective-date-extension].valuePeriod.start = "2021-03-29T14:25:34-05:00"
+* extension[adi-expiration-date-extension].valueDateTime = "2021-03-29T14:25:34-05:00"
 // witness Sally Bobbins
 
 * identifier.system = "urn:oid:2.16.840.1.113883.4.823.1.7124"
@@ -847,7 +847,7 @@ Usage: #example
 <p><i>I would like my doctors to consult a Supportive and Palliative Care Team to help treat my physical, emotional and spiritual discomfort, and to support my family.</i></p>
 </div>"
 * category[type] = ADIPreferenceCategoryCS#intervention-preference "Intervention preference"
-* code = $LOINC#75780-7
+* code = $LOINC#75780-7 "Preferred location to spend final days if possible to choose Narrative - Reported"
 * extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "If I am having significant pain or suffering"
 * valueString = "I would like my doctors to consult a Supportive and Palliative Care Team to help treat my physical, emotional and spiritual discomfort, and to support my family."
 * subject = Reference(Example-Smith-Johnson-Patient1)
@@ -1195,7 +1195,7 @@ Usage: #example
 </div>"
 * status = #final
 //* code = $LOINC#81352-7 "Medical Order for Life-Sustaining Treatment, Physician Order for Life-Sustaining Treatment, or a similar medical order is in place [Reported]"
-* code = $LOINC#42348-3 "Advance directives"
+// * code = $LOINC#42348-3 "Advance directives" // MLT: commented out since it's fixed value in the profile.
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * performer = Reference(Example-Smith-Johnson-Patient1)
 //* focus = "DocumentReference/Example-Smith-Johnson-Patient1-DocumentReference_PMOLST"

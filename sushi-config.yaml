@@ -66,19 +66,16 @@ menu:
     PMO User Stories: content_type3_pmo_user_stories.html
     PMO Specification Guidance: content_type3_pmo_guidance.html
   Artifacts:
-    Profiles: artifacts.html#3
-    Extensions: artifacts.html#5
-    Terminology: artifacts.html#6
-    Search Parameters: search_parameters.html
-    Capability Statement: CapabilityStatement-adi.html
-    Examples: artifacts.html#8
-    Package Dependencies: package_dependencies.html
+    By Resource Type: artifact_resource_type.html
+    Index: artifacts.html
   Release Notes: change_log.html
   Downloads: downloads.html
 
 pages:
   index.md:
     title: Home
+  artifact_resource_type.md:
+    title: Artifacts by FHIR Resource Type
   content_type_overview.md:
     title: General Guidance
   content_type1_pacp_user_stories.md:

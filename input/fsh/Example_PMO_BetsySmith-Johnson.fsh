@@ -1,6 +1,6 @@
 // Bundle Examples
 Instance: PMO-Example-Smith-Johnson-Bundle2
-InstanceOf: Bundle
+InstanceOf: ADIBundle
 Description: "Example Patient Smith-Johnson PMO ADI Document Bundle Smith-Johnson 2"
 Usage: #example
 
@@ -41,7 +41,7 @@ Usage: #example
 * extension[composition-clinicaldocument-versionNumber].valueString = "2024-03-29T14:25:34-05:00"  // versionNumber changed to dateTime stamp (fix for FHIR-46150)
 * extension[adi-jurisdiction-extension].valueCodeableConcept = urn:iso:std:iso:3166:-2#US-MI
 * extension[adi-dataEnterer-extension].valueReference = Reference(Example-Smith-Johnson-Patient1)
-* extension[adi-effective-date-extension].valuePeriod.start = "2024-03-29T14:25:34-05:00"
+* extension[adi-expiration-date-extension].valueDateTime = "2024-03-29T14:25:34-05:00"
 // witness Sally Bobbins
 
 * identifier.system = "urn:oid:2.16.840.1.113883.4.823.1.7124"

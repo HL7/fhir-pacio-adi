@@ -39,6 +39,7 @@ There is a very important distinction for the three types of ADI content that wi
                 <li>Clinician or Practitioner-authored</li>
                 <li>Instructions are related to the current, immediate episode of care</li>
                 <li>The patient, or their healthcare agent, provides direct input in the creation of the instructions which specify decisions that have been made about treatments that may, or may not be, utilized during a medical emergency occurring within the current episode of care.</li>
+                <li>Content Type 2 documents have been addressed in US Core 8.0. We will consider this in a future version.</li>
             </ul>
         </td>
     </tr>
