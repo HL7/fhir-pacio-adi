@@ -8,6 +8,43 @@ Description: "This profile defines constraints that represent the information ne
 * identifier MS
 * status MS
 * type 1..1 MS
+// ****** fix for FHIR-36962 - addition of slicing discriminator *****
+
+// Slice the type.coding element using pattern-based discrimination
+* type.coding ^slicing.discriminator.type = #pattern
+* type.coding ^slicing.discriminator.path = "$this"
+* type.coding ^slicing.rules = #open
+* type.coding ^slicing.description = "Slicing based on document type codes to support C-CDA and FHIR PACP formats"
+
+// Slice for CDA documents
+* type.coding contains cdaDocument 0..1 MS
+* type.coding[cdaDocument] ^short = "CDA Document Type Coding"
+* type.coding[cdaDocument] ^definition = "Identifies this as a CDA document with structured body format"
+* type.coding[cdaDocument] ^patternCoding.system = "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem"
+* type.coding[cdaDocument] ^patternCoding.code = #urn:hl7-org:sdwg:pacp-structuredBody:1.2.0.1
+* type.coding[cdaDocument].system 1..1
+* type.coding[cdaDocument].code 1..1
+* type.coding[cdaDocument].display = "PACP Structured Body CDA Document"
+
+// Slice for FHIR ADI Bundle
+* type.coding contains fhirADIBundle 0..1 MS
+* type.coding[fhirADIBundle] ^short = "FHIR PACP Bundle Type Coding"
+* type.coding[fhirADIBundle] ^definition = "Identifies this as a FHIR PACP Bundle document"
+* type.coding[fhirADIBundle] ^patternCoding.system = "urn:ietf:rfc:3986"
+// Note: Replace the URL below with the actual Canonical URL of your PACP Bundle profile
+* type.coding[fhirADIBundle] ^patternCoding.code = #http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-Bundle
+* type.coding[fhirADIBundle].system 1..1
+* type.coding[fhirADIBundle].code 1..1
+* type.coding[fhirADIBundle].display = "FHIR PACP Bundle"
+
+// Ensure format element is present and constrained appropriately
+// * format MS
+// * format ^short = "Format/content rules for the document"
+// * format ^definition = "An identifier of the document encoding, structure, and template that the document conforms to beyond the base format indicated in the mimeType."
+
+
+// ****** end of fix for FHIR-36962  *****
+
 * date 1..1 MS
 * category 1..* MS
 * category from $USCoreDocumentReferenceCategory (extensible)
@@ -40,12 +77,3 @@ RuleSet: ADIDocumentReferenceShortDescriptions
 * type ^short = "Advance Directive Categories"
 * subject ^short = "Patient"
 
-// TODO add page guidance on the different document types
-/*
-* include $LOINC#64298-3 "Power of attorney"
-* include $LOINC#81334-5 "Patient Personal advance care plan"
-* include $LOINC#86533-7 "Patient Living will"
-* include $LOINC#92664-2 "Power of attorney and Living will"
-*/
-//* type from ADIAdvanceDirectiveCategoriesVS (extensible)
-//* type short name "Advance Directives Categories"

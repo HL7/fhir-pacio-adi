@@ -12,7 +12,7 @@ Extension: Jurisdiction
 Id: adi-jurisdiction-extension
 Title: "Jurisdiction"
 Description: "Jurisdiction for which content is applicable."
-Context: Composition, Extension
+Context: Composition
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1 MS
 * valueCodeableConcept from $HL7JurisdictionCodes (extensible)
@@ -116,20 +116,20 @@ Context: RelatedPerson
 
 
 
-Extension: EffectiveDateExtension
-Id: adi-effective-date-extension
-Title: "Effective Date"
-Description: "The Advance Directive document effective dates."
+Extension: ExpirationDateExtension
+Id: adi-expiration-date-extension
+Title: "ADI Expiration Date"
+Description: "The Advance Directive document expiration date. The start date is represented by the Composition.date element."
 Context: Composition
-* value[x] only Period
-* valuePeriod 1..1 MS
+* value[x] only dateTime
+* valueDateTime 0..1 MS
 
 
 Extension: ClauseExtension
 Id: adi-clause-extension
 Title: "Clause"
 Description: "A clause or set of clauses relevant to the resource or element being extended"
-Context: BackboneElement, Bundle, Composition, Consent
+Context: Bundle, Composition, Consent
 * extension 1..*
 * extension contains
 	Title 0..1 and
@@ -188,7 +188,6 @@ Expression:
 Severity:   #error
 
 
-
 Extension: DocumentRevokeStatus
 Id: adi-document-revoke-status
 Title: "Revoke Status"
@@ -210,3 +209,15 @@ Context: Composition
 // TODO Could add Invariant for Signature.type matching the attesterRole
 // TODO Notary Expiration Date?
 
+Extension: ADIDocumentLocationExtension
+Id: adi-document-location
+Title: "Document Location"
+Description: "The Advance Directive document location. This location is the endpoint URL that points to the ADI document or resource that exists or a string."
+Context: DocumentReference
+* value[x] only Reference or string
+* value[x] 0..1 MS
+* valueReference 0..1
+* valueReference only Reference(Endpoint)
+* valueString 0..1 MS
+* valueString ^short = "A FHIR endpoint URL that points to the ADI document or resource that exists."
+* valueString ^comment = "A FHIR endpoint URL that points to the ADI document or resource that exists.  This is used when the document is not available in the FHIR server, such as a PDF or other file format."

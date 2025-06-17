@@ -77,3 +77,4 @@ Alias: $data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-r
 
 // fix for FHIR-46149
 Alias: $VSACADIAdvanceDirectiveCategoriesGrouper = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.25
+Alias: $VSACADIDecisionalCapacity = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1240.1 // MLT20250610: replace with the VSAC subset once provided.

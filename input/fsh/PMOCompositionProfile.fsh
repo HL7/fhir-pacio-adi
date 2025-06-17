@@ -117,10 +117,15 @@ Description: "This profile encompasses information that makes up a practitioner'
 
 * section[administration_information].entry contains
     adi_personal_goal 0..* and 
-    minimal_source_form 0..1 MS
+    adi_decisional_capacity 0..1 MS and
+    minimal_source_form 0..1 MS  
 
+* section[administration_information].entry[adi_decisional_capacity] only Reference(ADIDecisionalCapacity)
+* section[administration_information].entry[adi_decisional_capacity] ^short = "ADI Decisional Capacity"
 * section[administration_information].entry[adi_personal_goal] only Reference(ADIPersonalGoal)
+* section[administration_information].entry[adi_personal_goal] ^short = "ADI Personal Goal"
 * section[administration_information].entry[minimal_source_form] only Reference(Binary)
+* section[administration_information].entry[minimal_source_form] ^short = "Minimal Source Form"
 
 // ******* GPP Upon Death ************
 
