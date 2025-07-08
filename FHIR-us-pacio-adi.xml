@@ -27,6 +27,7 @@
 <artifact id="StructureDefinition/ADI-ADIConsentDeny" key="StructureDefinition-ADI-ADIConsentDeny" name="ADI Healthcare Agent Consent Deny"/>
 <artifact id="StructureDefinition/ADI-ADIConsentPermit" key="StructureDefinition-ADI-ADIConsentPermit" name="ADI Healthcare Agent Consent Permit"/>
 <artifact id="StructureDefinition/ADI-HealthcareAgentParticipant" key="StructureDefinition-ADI-HealthcareAgentParticipant" name="ADI Healthcare Agent Participant"/>
+<artifact id="StructureDefinition/ADI-Jurisdiction" key="StructureDefinition-ADI-Jurisdiction" name="ADI Jurisdiction"/>
 <artifact id="StructureDefinition/ADI-ADIMinimalSourceFormInformation" key="StructureDefinition-ADI-ADIMinimalSourceFormInformation" name="ADI Minimal Source Form"/>
 <artifact id="StructureDefinition/ADI-Notary" key="StructureDefinition-ADI-Notary" name="ADI Notary"/>
 <artifact id="StructureDefinition/ADI-OrganDonationObservation" key="StructureDefinition-PADI-OrganDonationObservation" name="ADI Organ Donation"/>
