@@ -3,7 +3,7 @@ Profile: ADIProvenance
 Parent: $USCoreProvenance
 Id: ADI-Provenance
 Title: "ADI Provenance"
-Description: "Advance Directive Interoperability Provenance based on US Core to capture, search and fetch provenance information associated with advance directive interoperability data."
+Description: "Information-sharing provenance for use in 2 scenarios: 1) finding out who retrieved the ADI information when captured and 2) who fetched and sent the provenance information associated with advance directive interoperability data."
 
 * agent contains
     assembler 0..1 MS

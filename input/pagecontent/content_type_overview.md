@@ -23,7 +23,7 @@ There is a very important distinction for the three types of ADI content that wi
                 <li>Provides guidance that a person would want known to inform treatment and care planning during a potential future medical emergency, in the case where the patient is unable to communicate with caregivers and medical personnel and the appointed healthcare agent needs to make decisions on the patient's behalf.</li>
                 <li>There is NO “contract” between the author (patient) and any other party involved in the future medical emergency that the GPP is required to be followed (i.e., no offer or acceptance, no consideration, no consequences for failure to follow the patient’s directives)</li>
                 <li>A Mental Health Advance Directive is a special type of patient-authored document focused on treatment and care experience preferences relevant to behavioral health conditions. This type of document may appoint a behavioral healthcare agent whose powers are constrained to addresses mental health related care decisions during times when the patient is not able to make decisions.</li>
-                <li>In some cases, a practitioner may assist a person with creating their advance directive or mental health advance directive document. The pracitioner functions as a facilitator, assisting the patient to document their preferences accurately and completely. The facilitator is not an author of the document. The document reflects the thoughts and words of the patient. The facilitator is recorded in the document as someone who has performed advance care planning services to support the patient’s creation of their own document.</li>  
+                <li>In some cases, a practitioner may assist a person with creating their advance directive or mental health advance directive document. The practitioner functions as a facilitator, assisting the patient to document their preferences accurately and completely. The facilitator is not an author of the document. The document reflects the thoughts and words of the patient. The facilitator is recorded in the document as someone who has performed advance care planning services to support the patient’s creation of their own document.</li>  
             </ul>
         </td>
     </tr>
@@ -56,7 +56,7 @@ There is a very important distinction for the three types of ADI content that wi
                 <li>A set of medical orders intended to follow a patient and be available across the continuum of care</li>
                 <li>The patient, or their healthcare agent, provides direct input in the creation of the orders but the documents are authored by a licensed practitioner.</li>
                 <li>These orders are used to document a provider’s orders for, or preferences against, treatments that are to be utilized during a future medical emergency that would necessitate life-sustaining treatment and interventions, and are based on the patient’s expressed goals, preferences, and priorities for such care.</li>
-                <li>In some cases, a provider who author’s (and signs) the portable medical order document may be supported by a different pracitioner functions as a facilitator, discussing options and decisions the patient may want to make.  The facilitator is not an author of this type of document. The document reflects the orders issued by the authoring provider. A facilitator is recorded in the document as someone who has performed advance care planning services to support the authoring provider.</li> 
+                <li>In some cases, a provider who author’s (and signs) the portable medical order document may be supported by a different practitioner functions as a facilitator, discussing options and decisions the patient may want to make.  The facilitator is not an author of this type of document. The document reflects the orders issued by the authoring provider. A facilitator is recorded in the document as someone who has performed advance care planning services to support the authoring provider.</li> 
             </ul>
         </td>
     </tr>
@@ -107,6 +107,11 @@ This structure at the highest level is common to all ADI content types. Addition
 
 Reference the IG section, [Advance Directive Structure Requirements](formal_specification.html#advance-directive-document-structure-requirements), for further guidance.
 
+#### Handling Expiration Dates
+
+ADI documents should have a time period whereby the patient preferences or the PMOs are legally valid. These are indicated by expiration dates within the `Patient-authored Composition` and `PMO Composition` profiles as such:
+* the start date for the AD:        `Composition.date`
+* the expiration date for the AD:   `Composition:extension:ExpirationDateExtension`
 
 <!-- 
 #### ADI Content Type 2 Document Structure

@@ -14,7 +14,7 @@ id: hl7.fhir.us.pacio-adi
 canonical: http://hl7.org/fhir/us/pacio-adi
 version: 2.1.0
 name: PACIOAdvanceDirectiveInteroperability
-title: PACIO Advance Directive Interoperability Implementation Guide
+title: PACIO Advance Healthcare Directive Interoperability Implementation Guide
 status: active
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg  
@@ -58,12 +58,9 @@ menu:
     Search Parameters: search_parameters.html
     Key Terms and Acronyms: key_terms_and_acronyms.html
   Person-Authored:
-    PACP User Stories: content_type1_pacp_user_stories.html
     PACP Specification Guidance: content_type1_pacp_guidance.html
-    MHAD User Stories: content_type1_mhad_user_stories.html
     MHAD Specification Guidance: content_type1_mhad_guidance.html
   Provider-Authored:
-    PMO User Stories: content_type3_pmo_user_stories.html
     PMO Specification Guidance: content_type3_pmo_guidance.html
   Artifacts:
     By Resource Type: artifact_resource_type.html
@@ -75,19 +72,13 @@ pages:
   index.md:
     title: Home
   artifact_resource_type.md:
-    title: Artifacts by FHIR Resource Type
+    title: Profiles by Resource Type
   content_type_overview.md:
     title: General Guidance
-  content_type1_pacp_user_stories.md:
-    title: User Stories and Personas
-  content_type1_mhad_user_stories.md:
-    title: User Stories and Personas
   content_type1_mhad_guidance.md:
     title: MHAD Guidance
   content_type1_pacp_guidance.md:
     title: PACP Guidance
-  content_type3_pmo_user_stories.md:
-    title: User Stories and Personas
   content_type3_pmo_guidance.md:
     title: PMO Guidance
   formal_specification.md:

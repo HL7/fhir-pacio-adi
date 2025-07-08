@@ -34,7 +34,7 @@ Alias: $HL7CompositionAttestation = http://hl7.org/fhir/ValueSet/composition-att
 Alias: $HL7ConsentScope = http://terminology.hl7.org/CodeSystem/consentscope
 Alias: $HL7ConsentCategoryCodes = http://terminology.hl7.org/CodeSystem/consentcategorycodes
 Alias: $HL7ConsentCategoryVS = http://hl7.org/fhir/ValueSet/consent-category
-Alias: $HL7JurisdictionCodes = http://hl7.org/fhir/us/core/StructureDefinition/us-core-jurisdiction
+Alias: $HL7JurisdictionCodes = http://terminology.hl7.org/ValueSet/USPS-State
 Alias: $HL7DegreeLicenseCertificate = http://terminology.hl7.org/ValueSet/v2-0360
 
 Alias: $LOINC = http://loinc.org

@@ -51,7 +51,7 @@ Description: "This profile encompasses information that makes up a practitioner'
 * section[portable_medical_orders].extension[adi-clause-extension] ^short = "Section clause, additional instructions, or information"
 * section[portable_medical_orders].title 1..1 MS
 * section[portable_medical_orders].code 1..1 MS
-* section[portable_medical_orders].code = $LOINC#59772-4
+* section[portable_medical_orders].code = $LOINC#93037-0 "Portable medical order form" // MLT: Invariant contstraint of section.code = Composition.type (JIRA)
 
 * section[portable_medical_orders].entry MS
 * section[portable_medical_orders].entry only Reference(ADIPMOServiceRequest) // or ADIPMONoAdditionalRequestObservation)
@@ -164,8 +164,14 @@ Description: "This profile encompasses information that makes up a practitioner'
 * section[witness_and_notary].entry only Reference(ADIHealthcareAgentParticipant)
 
 // *********** Invariants **********
+// Invariant: Composition-section-code-equals-type
+// Description: "Composition section code must equal Composition type"
+// Expression: "section.code = type"
+// XPath: "f:section/f:code = f:type"
+// Severity: #error
+
 Invariant: Composition-section-code-equals-type
-Description: "Composition section code must equal Composition type"
-Expression: "section.code = type"
-XPath: "f:section/f:code = f:type"
+Description: "Composition section code must equal Composition type when section is portable_medical_orders"
+Expression: "section.where(code.coding.code = 'portable_medical_orders').exists() implies section.where(code.coding.code = 'portable_medical_orders').code = type"
+XPath: "f:section[f:code/f:coding/f:code/@value='portable_medical_orders']/f:code = f:type"
 Severity: #error
