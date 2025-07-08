@@ -11,9 +11,9 @@ Context: DocumentReference
 Extension: Jurisdiction
 Id: adi-jurisdiction-extension
 Title: "Jurisdiction"
-Description: "Jurisdiction for which content is applicable."
-Context: Composition
-* value[x] only CodeableConcept
+Description: "Jurisdiction for which content is applicable. Represent state jurisdictions as a codeableConcept using the 2-letter state value set, and organization jurisdictions as a string value."
+Context: DocumentReference
+* value[x] only CodeableConcept or string
 * valueCodeableConcept 1..1 MS
 * valueCodeableConcept from $HL7JurisdictionCodes (extensible)
 

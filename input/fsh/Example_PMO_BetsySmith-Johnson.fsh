@@ -13,16 +13,16 @@ Usage: #example
 * entry[=].resource = PMO-Example-Smith-Johnson-PMOComposition1
 * entry[+].fullUrl = "http://www.example.org/fhir/Patient/Example-Smith-Johnson-Patient1"
 * entry[=].resource = Example-Smith-Johnson-Patient1
-* entry[+].fullUrl = "http://www.example.org/fhir/PractitionerRole/Example-Kyle-Anydoc-PractitionerRole1"
-* entry[=].resource = Example-Kyle-Anydoc-PractitionerRole1
-* entry[+].fullUrl = "http://www.example.org/fhir/Practitioner/Example-Kyle-Anydoc-Practitioner"
-* entry[=].resource = Example-Kyle-Anydoc-Practitioner
-* entry[+].fullUrl = "http://www.example.org/fhir/Organization/Example-Smith-Johnson-OrganizationCustodian1"
-* entry[=].resource = Example-Smith-Johnson-OrganizationCustodian1
-* entry[+].fullUrl = "http://www.example.org/fhir/ServiceRequest/Example-Smith-Johnson-CPR-ServiceRequest1"
-* entry[=].resource = Example-Smith-Johnson-CPR-ServiceRequest1
-* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-DocumentationObservation1"
-* entry[=].resource = Example-Smith-Johnson-DocumentationObservation1
+// * entry[+].fullUrl = "http://www.example.org/fhir/PractitionerRole/Example-Kyle-Anydoc-PractitionerRole1"
+// * entry[=].resource = Example-Kyle-Anydoc-PractitionerRole1
+// * entry[+].fullUrl = "http://www.example.org/fhir/Practitioner/Example-Kyle-Anydoc-Practitioner"
+// * entry[=].resource = Example-Kyle-Anydoc-Practitioner
+// * entry[+].fullUrl = "http://www.example.org/fhir/Organization/Example-Smith-Johnson-OrganizationCustodian1"
+// * entry[=].resource = Example-Smith-Johnson-OrganizationCustodian1
+// * entry[+].fullUrl = "http://www.example.org/fhir/ServiceRequest/Example-Smith-Johnson-CPR-ServiceRequest1"
+// * entry[=].resource = Example-Smith-Johnson-CPR-ServiceRequest1
+// * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-DocumentationObservation1"
+// * entry[=].resource = Example-Smith-Johnson-DocumentationObservation1
 
 
 // Patient Examples - *** MLT: example already created for PACP.
@@ -37,12 +37,9 @@ Usage: #example
 
 * language = #en-US
 
-// Need to add extensions (mostly participants)
 * extension[composition-clinicaldocument-versionNumber].valueString = "2024-03-29T14:25:34-05:00"  // versionNumber changed to dateTime stamp (fix for FHIR-46150)
-* extension[adi-jurisdiction-extension].valueCodeableConcept = urn:iso:std:iso:3166:-2#US-MI
 * extension[adi-dataEnterer-extension].valueReference = Reference(Example-Smith-Johnson-Patient1)
 * extension[adi-expiration-date-extension].valueDateTime = "2024-03-29T14:25:34-05:00"
-// witness Sally Bobbins
 
 * identifier.system = "urn:oid:2.16.840.1.113883.4.823.1.7124"
 * identifier.value = "0-87f37989294a408897aacd1fc5d8fd16"
@@ -52,7 +49,7 @@ Usage: #example
 * type = $LOINC#93037-0 "Portable medical order form"
 * category = $LOINC#42348-3 "Advance directives"
 * subject = Reference(Example-Smith-Johnson-Patient1)
-* date = "2024-03-29T14:25:34-05:00"
+* date = "2023-03-29T14:25:34-05:00"
 * author = Reference(Example-Kyle-Anydoc-PractitionerRole1)
 * attester.mode = #legal
 * attester.party = Reference(Example-Kyle-Anydoc-PractitionerRole1)
@@ -62,7 +59,6 @@ Usage: #example
 
 
 * section[portable_medical_orders].title = "Portable Medical Orders"
-// * section[portable_medical_orders].code = $LOINC#93037-0 
 * section[portable_medical_orders].text.status = #generated
 * section[portable_medical_orders].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p><b>PMO Medical Orders</b></p>

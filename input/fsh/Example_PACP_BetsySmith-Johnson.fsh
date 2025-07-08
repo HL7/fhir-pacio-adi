@@ -13,54 +13,54 @@ Usage: #example
 * entry[=].resource = Example-Smith-Johnson-PACPComposition1
 * entry[+].fullUrl = "http://www.example.org/fhir/Patient/Example-Smith-Johnson-Patient1"
 * entry[=].resource = Example-Smith-Johnson-Patient1
-* entry[+].fullUrl = "http://www.example.org/fhir/RelatedPerson/Example-Smith-Johnson-Notary1"
-* entry[=].resource = Example-Smith-Johnson-Notary1
-* entry[+].fullUrl = "http://www.example.org/fhir/RelatedPerson/Example-Smith-Johnson-HealthcareAgent1"
-* entry[=].resource = Example-Smith-Johnson-HealthcareAgent1
-* entry[+].fullUrl = "http://www.example.org/fhir/RelatedPerson/Example-Smith-Johnson-HealthcareAgent2"
-* entry[=].resource = Example-Smith-Johnson-HealthcareAgent2
-* entry[+].fullUrl = "http://www.example.org/fhir/Consent/Example-Smith-Johnson-HealthcareAgentConsent"
-* entry[=].resource = Example-Smith-Johnson-HealthcareAgentConsent
-* entry[+].fullUrl = "http://www.example.org/fhir/CarePlan/Example-Smith-Johnson-PreferenceCarePlan1"
-* entry[=].resource = Example-Smith-Johnson-PreferenceCarePlan1
-* entry[+].fullUrl = "http://www.example.org/fhir/CarePlan/Example-Smith-Johnson-PreferenceCarePlan2"
-* entry[=].resource = Example-Smith-Johnson-PreferenceCarePlan2
-* entry[+].fullUrl = "http://www.example.org/fhir/CarePlan/Example-Smith-Johnson-PreferenceCarePlan3"
-* entry[=].resource = Example-Smith-Johnson-PreferenceCarePlan3
-* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference1"
-* entry[=].resource = Example-Smith-Johnson-CareExperiencePreference1
-* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference2"
-* entry[=].resource = Example-Smith-Johnson-CareExperiencePreference2
-* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference3"
-* entry[=].resource = Example-Smith-Johnson-CareExperiencePreference3
-* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference4"
-* entry[=].resource = Example-Smith-Johnson-CareExperiencePreference4
-* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference5"
-* entry[=].resource = Example-Smith-Johnson-CareExperiencePreference5
-* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference6"
-* entry[=].resource = Example-Smith-Johnson-CareExperiencePreference6
-* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference7"
-* entry[=].resource = Example-Smith-Johnson-CareExperiencePreference7
-* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference8"
-* entry[=].resource = Example-Smith-Johnson-CareExperiencePreference8
-* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-PersonalInterventionPreference1"
-* entry[=].resource = Example-Smith-Johnson-PersonalInterventionPreference1
-* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-PersonalInterventionPreference3"
-* entry[=].resource = Example-Smith-Johnson-PersonalInterventionPreference3
-* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-PersonalInterventionPreference5"
-* entry[=].resource = Example-Smith-Johnson-PersonalInterventionPreference5
-* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-PersonalInterventionPreference6"
-* entry[=].resource = Example-Smith-Johnson-PersonalInterventionPreference6
-* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-PersonalGoal1"
-* entry[=].resource = Example-Smith-Johnson-PersonalGoal1
-* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-OrganDonationObservation1"
-* entry[=].resource = Example-Smith-Johnson-OrganDonationObservation1
-* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-AutopsyObservation1"
-* entry[=].resource = Example-Smith-Johnson-AutopsyObservation1
-* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-DocumentationObservation1"
-* entry[=].resource = Example-Smith-Johnson-DocumentationObservation1
-* entry[+].fullUrl = "http://www.example.org/fhir/Organization/Example-Smith-Johnson-OrganizationCustodian1"
-* entry[=].resource = Example-Smith-Johnson-OrganizationCustodian1
+// * entry[+].fullUrl = "http://www.example.org/fhir/RelatedPerson/Example-Smith-Johnson-Notary1"
+// * entry[=].resource = Example-Smith-Johnson-Notary1
+// * entry[+].fullUrl = "http://www.example.org/fhir/RelatedPerson/Example-Smith-Johnson-HealthcareAgent1"
+// * entry[=].resource = Example-Smith-Johnson-HealthcareAgent1
+// * entry[+].fullUrl = "http://www.example.org/fhir/RelatedPerson/Example-Smith-Johnson-HealthcareAgent2"
+// * entry[=].resource = Example-Smith-Johnson-HealthcareAgent2
+// * entry[+].fullUrl = "http://www.example.org/fhir/Consent/Example-Smith-Johnson-HealthcareAgentConsent"
+// * entry[=].resource = Example-Smith-Johnson-HealthcareAgentConsent
+// * entry[+].fullUrl = "http://www.example.org/fhir/CarePlan/Example-Smith-Johnson-PreferenceCarePlan1"
+// * entry[=].resource = Example-Smith-Johnson-PreferenceCarePlan1
+// * entry[+].fullUrl = "http://www.example.org/fhir/CarePlan/Example-Smith-Johnson-PreferenceCarePlan2"
+// * entry[=].resource = Example-Smith-Johnson-PreferenceCarePlan2
+// * entry[+].fullUrl = "http://www.example.org/fhir/CarePlan/Example-Smith-Johnson-PreferenceCarePlan3"
+// * entry[=].resource = Example-Smith-Johnson-PreferenceCarePlan3
+// * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference1"
+// * entry[=].resource = Example-Smith-Johnson-CareExperiencePreference1
+// * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference2"
+// * entry[=].resource = Example-Smith-Johnson-CareExperiencePreference2
+// * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference3"
+// * entry[=].resource = Example-Smith-Johnson-CareExperiencePreference3
+// * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference4"
+// * entry[=].resource = Example-Smith-Johnson-CareExperiencePreference4
+// * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference5"
+// * entry[=].resource = Example-Smith-Johnson-CareExperiencePreference5
+// * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference6"
+// * entry[=].resource = Example-Smith-Johnson-CareExperiencePreference6
+// * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference7"
+// * entry[=].resource = Example-Smith-Johnson-CareExperiencePreference7
+// * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-CareExperiencePreference8"
+// * entry[=].resource = Example-Smith-Johnson-CareExperiencePreference8
+// * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-PersonalInterventionPreference1"
+// * entry[=].resource = Example-Smith-Johnson-PersonalInterventionPreference1
+// * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-PersonalInterventionPreference3"
+// * entry[=].resource = Example-Smith-Johnson-PersonalInterventionPreference3
+// * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-PersonalInterventionPreference5"
+// * entry[=].resource = Example-Smith-Johnson-PersonalInterventionPreference5
+// * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-PersonalInterventionPreference6"
+// * entry[=].resource = Example-Smith-Johnson-PersonalInterventionPreference6
+// * entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-PersonalGoal1"
+// * entry[=].resource = Example-Smith-Johnson-PersonalGoal1
+// * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-OrganDonationObservation1"
+// * entry[=].resource = Example-Smith-Johnson-OrganDonationObservation1
+// * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-AutopsyObservation1"
+// * entry[=].resource = Example-Smith-Johnson-AutopsyObservation1
+// * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-DocumentationObservation1"
+// * entry[=].resource = Example-Smith-Johnson-DocumentationObservation1
+// * entry[+].fullUrl = "http://www.example.org/fhir/Organization/Example-Smith-Johnson-OrganizationCustodian1"
+// * entry[=].resource = Example-Smith-Johnson-OrganizationCustodian1
 
 //* entry[+].fullUrl = "http://www.example.org/fhir/Organization/Example-Smith-Johnson-OrganizationAssembler1"
 //* entry[=].resource = Example-Smith-Johnson-OrganizationAssembler1
@@ -142,9 +142,8 @@ Usage: #example
 
 // Need to add extensions (mostly participants)
 * extension[composition-clinicaldocument-versionNumber].valueString = "9f94d9de-a514-4e10-9c23-dc8c87f0c6fc"
-* extension[adi-jurisdiction-extension].valueCodeableConcept = urn:iso:std:iso:3166:-2#US-MI
 * extension[adi-dataEnterer-extension].valueReference = Reference(Example-Smith-Johnson-Patient1)
-* extension[adi-expiration-date-extension].valueDateTime = "2021-03-29T14:25:34-05:00"
+* extension[adi-expiration-date-extension].valueDateTime = "2022-03-29T14:25:34-05:00"
 // witness Sally Bobbins
 
 * identifier.system = "urn:oid:2.16.840.1.113883.4.823.1.7124"
@@ -269,8 +268,6 @@ Usage: #example
 * section[gpp_personal_care_experience].entry[+] = Reference(Example-Smith-Johnson-CareExperiencePreference8)
 
 
-
-// Line 477
 * section[gpp_for_certain_health_condition].title = "Patient Goals, preferences, and priorities under certain conditions"
 * section[gpp_for_certain_health_condition].code = $LOINC#81336-0 "Patient Goals, preferences, and priorities under certain health conditions" 
 * section[gpp_for_certain_health_condition].text.status = #additional
@@ -1293,6 +1290,8 @@ Usage: #example
 * identifier[+].system = "urn:oid:2.16.840.1.113883.4.823.1.8561"
 * identifier[=].value = "5367-047e62ccf09d4b39a8add708a69b7f38"
 
+* extension[adi-jurisdiction-extension].valueCodeableConcept = urn:iso:std:iso:3166:-2#US-MI
+
 * status = #current
 * docStatus = #current
 
@@ -1335,6 +1334,7 @@ Usage: #example
 * identifier[+].system = "urn:oid:2.16.840.1.113883.3.3208.101.1"
 * identifier[=].value = "0-87f37989294a408897aacd1fc5d8fd16"
 
+* extension[adi-jurisdiction-extension].valueCodeableConcept = urn:iso:std:iso:3166:-2#US-MI
 
 * status = #current
 * docStatus = #current

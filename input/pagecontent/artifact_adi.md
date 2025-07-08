@@ -83,7 +83,7 @@ The table below summarizes the relevant profiles and elements by ADI Content Typ
     </tr>
     <tr>    
         <td style="padding: 7px;"><a href="StructureDefinition-ADI-Provenance.html">ADI Provenance</a></td>
-        <td style="padding: 7px;"><p>Advance Directive Interoperability Provenance based on US Core to capture, search and fetch provenance information associated with advance directive interoperability data.</p></td>
+        <td style="padding: 7px;"><p>Advance Directive Interoperability Provenance based on US Core to capture and fetch provenance information associated with advance directive interoperability data.</p></td>
     </tr>
     <tr>
         <th colspan="4" style="background-color: #9DC3E6; text-align:center; padding: 10px; padding: 10px;"><b>CONTENT TYPE II: Encounter-Centric Patient Instructions</b> <i>(after STU2)</i></th>
