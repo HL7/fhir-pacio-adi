@@ -52,7 +52,7 @@
 
 ### ServiceRequest
 * [ADI PMO Additional orders or instructions ServiceRequest](StructureDefinition-ADI-PMOAdditionalOrdersOrInstructionsServiceRequest.html)
-* [ADI PMO Cardiopulmonary Resuscitation ServiceRequest](StructureDefinitio-ADI-PMOCPRServiceRequest.html)
+* [ADI PMO Cardiopulmonary Resuscitation ServiceRequest](StructureDefinition-ADI-PMOCPRServiceRequest.html)
 * [ADI PMO Initial Treatment ServiceRequest](StructureDefinition-ADI-PMOInitialTreatmentServiceRequest.html)
 * [ADI PMO Medically Assisted Hydration Service Request](StructureDefinition-ADI-PMOMedicallyAssistedHydrationServiceRequest.html)
 * [ADI PMO Medically Assisted Nutrition Service Request](StructureDefinition-ADI-PMOMedicallyAssistedNutritionServiceRequest.html)
