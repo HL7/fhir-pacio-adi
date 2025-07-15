@@ -13,19 +13,16 @@ Usage: #example
 * entry[=].resource = PMO-Example-Smith-Johnson-PMOComposition1
 * entry[+].fullUrl = "http://www.example.org/fhir/Patient/Example-Smith-Johnson-Patient1"
 * entry[=].resource = Example-Smith-Johnson-Patient1
-// * entry[+].fullUrl = "http://www.example.org/fhir/PractitionerRole/Example-Kyle-Anydoc-PractitionerRole1"
-// * entry[=].resource = Example-Kyle-Anydoc-PractitionerRole1
-// * entry[+].fullUrl = "http://www.example.org/fhir/Practitioner/Example-Kyle-Anydoc-Practitioner"
-// * entry[=].resource = Example-Kyle-Anydoc-Practitioner
-// * entry[+].fullUrl = "http://www.example.org/fhir/Organization/Example-Smith-Johnson-OrganizationCustodian1"
-// * entry[=].resource = Example-Smith-Johnson-OrganizationCustodian1
-// * entry[+].fullUrl = "http://www.example.org/fhir/ServiceRequest/Example-Smith-Johnson-CPR-ServiceRequest1"
-// * entry[=].resource = Example-Smith-Johnson-CPR-ServiceRequest1
-// * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-DocumentationObservation1"
-// * entry[=].resource = Example-Smith-Johnson-DocumentationObservation1
-
-
-// Patient Examples - *** MLT: example already created for PACP.
+* entry[+].fullUrl = "http://www.example.org/fhir/PractitionerRole/Example-Kyle-Anydoc-PractitionerRole1"
+* entry[=].resource = Example-Kyle-Anydoc-PractitionerRole1
+* entry[+].fullUrl = "http://www.example.org/fhir/Practitioner/Example-Kyle-Anydoc-Practitioner"
+* entry[=].resource = Example-Kyle-Anydoc-Practitioner
+* entry[+].fullUrl = "http://www.example.org/fhir/Organization/Example-Smith-Johnson-OrganizationCustodian1"
+* entry[=].resource = Example-Smith-Johnson-OrganizationCustodian1
+* entry[+].fullUrl = "http://www.example.org/fhir/ServiceRequest/Example-Smith-Johnson-CPR-ServiceRequest1"
+* entry[=].resource = Example-Smith-Johnson-CPR-ServiceRequest1
+* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-DocumentationObservation1"
+* entry[=].resource = Example-Smith-Johnson-DocumentationObservation1
 
 
 //Composition Examples
@@ -50,9 +47,9 @@ Usage: #example
 * category = $LOINC#42348-3 "Advance directives"
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * date = "2023-03-29T14:25:34-05:00"
-* author = Reference(Example-Kyle-Anydoc-PractitionerRole1)
+* author = Reference(PractitionerRole/Example-Kyle-Anydoc-PractitionerRole1)
 * attester.mode = #legal
-* attester.party = Reference(Example-Kyle-Anydoc-PractitionerRole1)
+* attester.party = Reference(PractitionerRole/Example-Kyle-Anydoc-PractitionerRole1)
 * title = "Portable Medical Order"
 
 * custodian = Reference(Example-Smith-Johnson-OrganizationCustodian1)
@@ -65,7 +62,7 @@ Usage: #example
 <p><i>Order Exists: <a href='http://www.example.com'>available here</a></i></p>
 </div>"
 
-* section[portable_medical_orders].entry[+] = Reference(Example-Smith-Johnson-CPR-ServiceRequest1)
+* section[portable_medical_orders].entry[+] = Reference(ServiceRequest/Example-Smith-Johnson-CPR-ServiceRequest1)
 
 
 * section[additional_documentation].title = "Additional Documentation"

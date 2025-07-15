@@ -14,8 +14,16 @@ Title: "Jurisdiction"
 Description: "Jurisdiction for which content is applicable. Represent state jurisdictions as a codeableConcept using the 2-letter state value set, and organization jurisdictions as a string value."
 Context: DocumentReference
 * value[x] only CodeableConcept or string
-* valueCodeableConcept 1..1 MS
-* valueCodeableConcept from $HL7JurisdictionCodes (extensible)
+* valueCodeableConcept 0..1 MS
+* valueCodeableConcept from $HL7JurisdictionCodes (extensible)  
+* valueString 0..1 MS
+// * obeys jurisdiction-choice-required
+
+// Add jurisdiction invariant
+// Invariant: jurisdiction-choice-required
+// Description: "Either valueCodeableConcept or valueString must be present"
+// Expression: "valueCodeableConcept.exists() xor valueString.exists()"
+// Severity: #error
 
 
 //[TODO get clarification on the extension descriptions and constraints. ]
