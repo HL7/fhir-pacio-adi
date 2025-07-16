@@ -11,7 +11,7 @@ Description: "The Preference Care Plan is a means for an individual to express t
 
 * category ^slicing.discriminator.type = #pattern 
 * category ^slicing.discriminator.path = "$this"
-// Should the pattern be open or closed?
+
 * category ^slicing.rules = #open
 * category ^slicing.ordered = false   // can be omitted, since false is the default
 * category ^slicing.description = "Slice based on $this value"
