@@ -1,5 +1,5 @@
 Profile: ADIFacilitator
-Parent: $USCorePractitionerRole
+Parent: PractitionerRole
 Id: ADI-Facilitator
 Title: "ADI Facilitator"
 Description: "This profile represents a clinician who assists the patient in advance care planning services."

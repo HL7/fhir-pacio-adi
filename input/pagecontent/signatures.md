@@ -8,8 +8,8 @@ Data Consumers may require signatures from a Data Source to attest to the inform
  
 Signatures represent different levels of attestation:
 
-- The signature represents a provider or patient signature attesting that the information is true and accurate to the best of their knowledge.
-- The signature representing the sending system is a *system-level* attestation by the sending organization that they supplied the information. It is a complete and accurate representation of the shareable information from that system, meeting the requested criteria. This signature does NOT attest that the information is accurate because the system can't make that determination.
+- The signature of a provider or patient attests that the information is true and accurate to the best of their knowledge.
+- The signature of a sending or receiving system is a system-level attestation that seals the information being sent or received. It is a complete and accurate representation of the shareable information from that system, meeting the requested criteria. This signature does NOT attest that the information is accurate because the system can't make that determination.
 
 Consult with your legal team for questions regarding legal liability associated with sharing and signing data.
 {:.bg-warning}

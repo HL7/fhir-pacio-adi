@@ -56,6 +56,7 @@
 <artifact id="CodeSystem/adi-temp-cs" key="CodeSystem-adi-temp-cs" name="ADI Temporary Code System"/>
 <artifact id="StructureDefinition/ADI-UponDeathPreferences" key="StructureDefinition-ADI-UponDeathPreferences" name="ADI Upon Death Preferences"/>
 <artifact id="StructureDefinition/ADI-Witness" key="StructureDefinition-ADI-Witness" name="ADI Witness"/>
+<artifact id="PractitionerRole/ADI-Facilitator-MSW-MargaretReynolds" key="PractitionerRole-ADI-Facilitator-MSW-MargaretReynolds" name="ADI-Facilitator-MSW-MargaretReynolds"/>
 <artifact deprecated="true" id="ValueSet/PADIAdvanceDirectiveCategoriesVS" key="ValueSet-PADIAdvanceDirectiveCategoriesVS" name="Advance Directive Categories"/>
 <artifact deprecated="true" id="StructureDefinition/padi-attestationInformation-extension" key="StructureDefinition-padi-attestationInformation-extension" name="Attestation Information"/>
 <artifact id="ValueSet/ADIAttesterRoleTypeVS" key="ValueSet-PADIAttesterRoleTypeVS" name="Attester Role"/>
@@ -152,14 +153,18 @@
 <artifact id="Device/Example-Smith-Johnson-DocRef-Device1" key="Device-Example-Smith-Johnson-DocRef-Device1" name="Example-Smith-Johnson-DocRef-Device1"/>
 <artifact id="DocumentReference/Example-Smith-Johnson-DocRef-DocumentReference" key="DocumentReference-Example-Smith-Johnson-DocRef-DocumentReference" name="Example-Smith-Johnson-DocRef-DocumentReference"/>
 <artifact id="Observation/Example-Smith-Johnson-DocumentationObservation1" key="Observation-Example-Smith-Johnson-DocumentationObservation1" name="Example-Smith-Johnson-DocumentationObservation1"/>
+<artifact id="Observation/Example-Smith-Johnson-DocumentationObservation2" key="Observation-Example-Smith-Johnson-DocumentationObservation2" name="Example-Smith-Johnson-DocumentationObservation2"/>
 <artifact id="RelatedPerson/Example-Smith-Johnson-HealthcareAgent1" key="RelatedPerson-Example-Smith-Johnson-HealthcareAgent1" name="Example-Smith-Johnson-HealthcareAgent1"/>
 <artifact id="RelatedPerson/Example-Smith-Johnson-HealthcareAgent2" key="RelatedPerson-Example-Smith-Johnson-HealthcareAgent2" name="Example-Smith-Johnson-HealthcareAgent2"/>
 <artifact id="Consent/Example-Smith-Johnson-HealthcareAgentConsent" key="Consent-Example-Smith-Johnson-HealthcareAgentConsent" name="Example-Smith-Johnson-HealthcareAgentConsent"/>
+<artifact id="Consent/Example-Smith-Johnson-HealthcareAgentConsent-Deny" key="Consent-Example-Smith-Johnson-HealthcareAgentConsent-Deny" name="Example-Smith-Johnson-HealthcareAgentConsent-Deny"/>
+<artifact id="Consent/Example-Smith-Johnson-HealthcareAgentConsent-Permit" key="Consent-Example-Smith-Johnson-HealthcareAgentConsent-Permit" name="Example-Smith-Johnson-HealthcareAgentConsent-Permit"/>
 <artifact id="RelatedPerson/Example-Smith-Johnson-Notary1" key="RelatedPerson-Example-Smith-Johnson-Notary1" name="Example-Smith-Johnson-Notary1"/>
 <artifact id="Observation/Example-Smith-Johnson-OrganDonationObservation1" key="Observation-Example-Smith-Johnson-OrganDonationObservation1" name="Example-Smith-Johnson-OrganDonationObservation1"/>
 <artifact id="Organization/Example-Smith-Johnson-OrganizationAssembler1" key="Organization-Example-Smith-Johnson-OrganizationAssembler1" name="Example-Smith-Johnson-OrganizationAssembler1"/>
 <artifact id="Organization/Example-Smith-Johnson-OrganizationCustodian1" key="Organization-Example-Smith-Johnson-OrganizationCustodian1" name="Example-Smith-Johnson-OrganizationCustodian1"/>
-<artifact id="Provenance/Example-Smith-Johnson-PACPProvenance1" key="Provenance-Example-Smith-Johnson-PACPProvenance1" name="Example-Smith-Johnson-PACPProvenance1"/>
+<artifact deprecated="true" id="Provenance/Example-Smith-Johnson-PACPProvenance1" key="Provenance-Example-Smith-Johnson-PACPProvenance1" name="Example-Smith-Johnson-PACPProvenance1"/>
+<artifact id="Provenance/Example-Smith-Johnson-PMOProvenance1" key="Provenance-Example-Smith-Johnson-PMOProvenance1" name="Example-Smith-Johnson-PMOProvenance1"/>
 <artifact id="Patient/Example-Smith-Johnson-Patient1" key="Patient-Example-Smith-Johnson-Patient1" name="Example-Smith-Johnson-Patient1"/>
 <artifact id="Goal/Example-Smith-Johnson-PersonalGoal1" key="Goal-Example-Smith-Johnson-PersonalGoal1" name="Example-Smith-Johnson-PersonalGoal1"/>
 <artifact id="Goal/Example-Smith-Johnson-PersonalGoal2" key="Goal-Example-Smith-Johnson-PersonalGoal2" name="Example-Smith-Johnson-PersonalGoal2"/>
@@ -204,6 +209,7 @@
 <artifact id="ValueSet/ADIPersonalAndLegalRelationshipRoleTypeVS" key="ValueSet-PADIPersonalAndLegalRelationshipRoleTypeVS" name="Personal And Legal Relationship Role Type"/>
 <artifact id="Composition/PMO-Example-Smith-Johnson-PMOComposition1" key="Composition-PMO-Example-Smith-Johnson-PMOComposition1" name="Portable Medical Order"/>
 <artifact id="ValueSet/ADIPMOConsentCategoriesVS" key="ValueSet-ADIPMOConsentCategoriesVS" name="Portable Medical Order Categories"/>
+<artifact id="Practitioner/Practitioner-MargaretReynolds" key="Practitioner-Practitioner-MargaretReynolds" name="Practitioner-MargaretReynolds"/>
 <artifact deprecated="true" id="ValueSet/PADIPresenceIndicatorVS" key="ValueSet-PADIPresenceIndicatorVS" name="Presence Indicator"/>
 <artifact id="List/Example-Smith-Johnson-PersonalPrioritiesOrganizer1" key="List-Example-Smith-Johnson-PersonalPrioritiesOrganizer1" name="Priorities for Goals and Preferences"/>
 <artifact id="StructureDefinition/adi-document-revoke-status" key="StructureDefinition-adi-document-revoke-status" name="Revoke Status"/>

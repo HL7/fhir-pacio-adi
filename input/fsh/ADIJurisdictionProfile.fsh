@@ -2,7 +2,7 @@ Profile: ADIJurisdiction
 Parent: Observation
 Id: ADI-Jurisdiction
 Title: "ADI Jurisdiction"
-Description: "This profile enables Jurisdiction Information to be carried in the body of Composition rather than as an extension on Composition.  This change will align the approach taken in CDA to represent the Jurisdiction of the Source Form within the body of the document in the Source Form Section."
+Description: "The ADI Jurisdiction Observation profile includes information about the state jurisdiction of the source advance healthcare directive document. The observation.value (codeableConcept) holds the two letter abbreviation of the relevant state which accepts this form. A valueString can be used to hold the name of a form that may be accepted in multiple states such as the 'National POLST Form', 'American Bar Association Power of Attorney Form'."
 
 * code 1..1 MS
 * code = $LOINC#101349-9 "Jurisdiction where advance directive is accepted [Location]"

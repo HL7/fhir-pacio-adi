@@ -17,5 +17,5 @@ Description: "This profile is used to represent the author's thoughts about orga
 
 * value[x] 1..1 MS
 
-* note 
+* note 0..1 MS
 
