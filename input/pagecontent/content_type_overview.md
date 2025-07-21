@@ -19,8 +19,8 @@ There is a very important distinction for the three types of ADI content that wi
         <td>
             <ul>
                 <li>Person-authored documents</li>
-                <li>Used as a tool for establishing a healthcare agent and sharing an individual’s medical treatment and intervention goals, preferences, and priorities (GPP)</li>
-                <li>Provides guidance that a person would want known to inform treatment and care planning during a potential future medical emergency, in the case where the patient is unable to communicate with caregivers and medical personnel and the appointed healthcare agent needs to make decisions on the patient's behalf.</li>
+                <li>Used as a tool for establishing a healthcare agent (delegation of rights consenting to appoint an authorized personal representative in the role of healthcare agent) and sharing an individual’s medical treatment  intervention and care experience preferences, and care goals and priorities (GPP).</li>
+                <li>Provides guidance that a person would want others to know to inform treatment and care planning during a potential future medical emergency, in the case where the patient is unable to communicate with caregivers and medical personnel and the appointed healthcare agent needs to make decisions on the patient's behalf.</li>
                 <li>There is NO “contract” between the author (patient) and any other party involved in the future medical emergency that the GPP is required to be followed (i.e., no offer or acceptance, no consideration, no consequences for failure to follow the patient’s directives)</li>
                 <li>A Mental Health Advance Directive is a special type of patient-authored document focused on treatment and care experience preferences relevant to behavioral health conditions. This type of document may appoint a behavioral healthcare agent whose powers are constrained to addresses mental health related care decisions during times when the patient is not able to make decisions.</li>
                 <li>In some cases, a practitioner may assist a person with creating their advance directive or mental health advance directive document. The practitioner functions as a facilitator, assisting the patient to document their preferences accurately and completely. The facilitator is not an author of the document. The document reflects the thoughts and words of the patient. The facilitator is recorded in the document as someone who has performed advance care planning services to support the patient’s creation of their own document.</li>  
@@ -39,7 +39,6 @@ There is a very important distinction for the three types of ADI content that wi
                 <li>Clinician or Practitioner-authored</li>
                 <li>Instructions are related to the current, immediate episode of care</li>
                 <li>The patient, or their healthcare agent, provides direct input in the creation of the instructions which specify decisions that have been made about treatments that may, or may not be, utilized during a medical emergency occurring within the current episode of care.</li>
-                <li>Content Type 2 documents have been addressed in US Core 8.0. We will consider this in a future version.</li>
             </ul>
         </td>
     </tr>
@@ -56,7 +55,7 @@ There is a very important distinction for the three types of ADI content that wi
                 <li>A set of medical orders intended to follow a patient and be available across the continuum of care</li>
                 <li>The patient, or their healthcare agent, provides direct input in the creation of the orders but the documents are authored by a licensed practitioner.</li>
                 <li>These orders are used to document a provider’s orders for, or preferences against, treatments that are to be utilized during a future medical emergency that would necessitate life-sustaining treatment and interventions, and are based on the patient’s expressed goals, preferences, and priorities for such care.</li>
-                <li>In some cases, a provider who author’s (and signs) the portable medical order document may be supported by a different practitioner functions as a facilitator, discussing options and decisions the patient may want to make.  The facilitator is not an author of this type of document. The document reflects the orders issued by the authoring provider. A facilitator is recorded in the document as someone who has performed advance care planning services to support the authoring provider.</li> 
+                <li>In some cases, a provider who author’s (and signs) the portable medical order document may be supported by a different practitioner functioning as a facilitator, discussing options and decisions the patient may want to make.  The facilitator is not an author of this type of document. The document reflects the orders issued by the authoring provider. A facilitator is recorded in the document as someone who has performed advance care planning services to support the authoring provider.</li> 
             </ul>
         </td>
     </tr>
@@ -89,7 +88,9 @@ The diagram below further illustrates how these documents are organized. The FHI
     <object data="ADI_profile_resource_relationships3.svg" type="image/svg+xml" width="70%"></object>
 </p>
 
-Digital signatures are defined as optional in this guide, for a myriad of factors including maturity of systems that can create and exchange digital ADI. If supported by a Content Creator system, the digital signature will be a captured in a `Binary` resource that is referenced by an additional `DocumentReference` resource.
+Digital signatures are defined as optional in this guide, for a myriad of factors including maturity of systems that can create and exchange digital ADI. If supported by a Content Creator or Document Registry Server system, the digital signature “authenticity information” will be captured in a Binary resource that is referenced by an additional DocumentReference resource where the relatesTo relationship of the “signature page” to the source document is “signs”.
+
+There is movement within the FHIR community to begin using the Provenance resource as a standard way to capture the  digital signature of a document. The signature within the Provenance resource would be used hold the digital signature authenticity information associated with a document, not and additional DocumentReference. As the DocumentReference resource begins to be used for many different types of documents, it may be more effective to keep signature pages in the Provenance Resource. A future version of the implementation guide will be updated to follow the standard FHIR guidance on signatures when it is finalized.
 
 <blockquote class="stu-note">
     <p>
@@ -101,8 +102,8 @@ Digital signatures are defined as optional in this guide, for a myriad of factor
 
 ADI native documents using FHIR are instances of the `Bundle` resource with the `type` = `document`. The document should have all content contained within the Bundle with no external references except for the references to external documents in the [DocumentationObservation](StructureDefinition-ADI-DocumentationObservation.html) through the `focus` data element. FHIR `Bundle` documents consist of multiple entry resources within it, with the first entry being a `Composition` resource. The `Composition` resource acts as the header and organizational construct. It contains information about the document such as the category of document, dates, and references to the various participants of the document, as well as document sections used to categorize or organize the contained entries. 
 
-This structure at the highest level is common to all ADI content types. Additional FHIR representation requirements will depend on:
-* the form of advance directive document
+This structure at the highest level is common to all ADI document types. Additional FHIR representation requirements will depend on:
+* the form of advance healthcare directive document
 * the ADI content type
 
 Reference the IG section, [Advance Directive Structure Requirements](formal_specification.html#advance-directive-document-structure-requirements), for further guidance.

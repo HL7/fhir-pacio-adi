@@ -21,9 +21,22 @@ Usage: #example
 * entry[=].resource = Example-Smith-Johnson-OrganizationCustodian1
 * entry[+].fullUrl = "http://www.example.org/fhir/ServiceRequest/Example-Smith-Johnson-CPR-ServiceRequest1"
 * entry[=].resource = Example-Smith-Johnson-CPR-ServiceRequest1
-* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-DocumentationObservation1"
-* entry[=].resource = Example-Smith-Johnson-DocumentationObservation1
-
+* entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-DocumentationObservation2"
+* entry[=].resource = Example-Smith-Johnson-DocumentationObservation2
+* entry[+].fullUrl = "http://www.example.org/fhir/PractitionerRole/ADI-Facilitator-MSW-MargaretReynolds"
+* entry[=].resource = ADI-Facilitator-MSW-MargaretReynolds
+* entry[+].fullUrl = "http://www.example.org/fhir/Practitioner/Practitioner-MargaretReynolds"
+* entry[=].resource = Practitioner-MargaretReynolds
+* entry[+].fullUrl = "http://www.example.org/fhir/Consent/Example-Smith-Johnson-HealthcareAgentConsent-Permit"
+* entry[=].resource = Example-Smith-Johnson-HealthcareAgentConsent-Permit
+* entry[+].fullUrl = "http://www.example.org/fhir/Consent/Example-Smith-Johnson-HealthcareAgentConsent-Deny"
+* entry[=].resource = Example-Smith-Johnson-HealthcareAgentConsent-Deny
+* entry[+].fullUrl = "http://www.example.org/fhir/RelatedPerson/Example-Smith-Johnson-HealthcareAgent1"
+* entry[=].resource = Example-Smith-Johnson-HealthcareAgent1
+* entry[+].fullUrl = "http://www.example.org/fhir/Provenance/Example-Smith-Johnson-PMOProvenance1"
+* entry[=].resource = Example-Smith-Johnson-PMOProvenance1
+* entry[+].fullUrl = "http://www.example.org/fhir/Organization/Example-Smith-Johnson-OrganizationAssembler1"
+* entry[=].resource = Example-Smith-Johnson-OrganizationAssembler1
 
 //Composition Examples
 
@@ -54,6 +67,9 @@ Usage: #example
 
 * custodian = Reference(Example-Smith-Johnson-OrganizationCustodian1)
 
+* event.detail[0] = Reference(PractitionerRole/ADI-Facilitator-MSW-MargaretReynolds)
+* event.detail[+] = Reference(Consent/Example-Smith-Johnson-HealthcareAgentConsent-Permit)
+* event.detail[+] = Reference(Consent/Example-Smith-Johnson-HealthcareAgentConsent-Deny)
 
 * section[portable_medical_orders].title = "Portable Medical Orders"
 * section[portable_medical_orders].text.status = #generated
@@ -73,7 +89,7 @@ Usage: #example
 <p><i>Order Exists: <a href='http://www.example.com'>available here</a></i></p>
 </div>"
 
-* section[additional_documentation].entry[+] = Reference(Example-Smith-Johnson-DocumentationObservation1)
+* section[additional_documentation].entry[+] = Reference(Example-Smith-Johnson-DocumentationObservation2)
 
 
 // Line 1205
@@ -174,3 +190,119 @@ Usage: #example
 * requester = Reference(Example-Kyle-Anydoc-Practitioner)
 * code = $LOINC#LA33470-8
 * orderDetail = $LOINC#LA33470-8
+
+Instance: Example-Smith-Johnson-HealthcareAgentConsent-Permit
+InstanceOf: ADIConsentPermit
+Description: "Example of ADI Healthcare Agent Permit"
+Usage: #example
+
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p>I am consenting for my son Charles to be my authorized personal representative (primary healthcare agent) and I am permitting him to make decisions on my behalf about intubation.</p>
+</div>"
+* status = #active
+* patient = Reference(Example-Smith-Johnson-Patient1)
+* policy.uri = "http://example.org/healthcare-agent-policy"  // fictitious policy URL for example
+* provision.actor.role = $LOINC#75783-1 "Primary healthcare agent [Reported]"
+* provision.actor.reference = Reference(RelatedPerson/Example-Smith-Johnson-HealthcareAgent1)
+
+Instance: Example-Smith-Johnson-HealthcareAgentConsent-Deny
+InstanceOf: ADIConsentDeny
+Description: "Example of ADI Healthcare Agent Deny"
+Usage: #example
+
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p>I am consenting for my son Charles to be my primary healthcare agent and I am denying him to make decisions on my behalf about nutrition.</p>
+</div>"
+* status = #active
+* patient = Reference(Example-Smith-Johnson-Patient1)
+* policy.uri = "http://example.org/healthcare-agent-policy"  // fictitious policy URL for example
+* provision.actor.role = $LOINC#75783-1 "Primary healthcare agent [Reported]"
+* provision.actor.reference = Reference(RelatedPerson/Example-Smith-Johnson-HealthcareAgent1)
+
+Instance: ADI-Facilitator-MSW-MargaretReynolds
+InstanceOf: ADIFacilitator
+Usage: #example
+Description: "Margaret A. Reynolds' Facilitator Role"
+* active = true
+* code = $HL7v3ParticipationType#PPRF
+* practitioner = Reference(Practitioner/Practitioner-MargaretReynolds) "Margaret A. Reynolds"
+
+Instance: Practitioner-MargaretReynolds
+InstanceOf: Practitioner
+Usage: #example
+Description: "Margaret Q. Reynolds's practitioner record."
+* meta.versionId = "4"
+* meta.lastUpdated = "2024-09-20T19:03:21.000+00:00"
+// * meta.source = "#S7gHLyFgHVToyfil"
+* identifier.system = "http://example.org/fhir/MI-state-license"
+* identifier.value = "86420"
+* active = true
+* name.text = "Margaret Q. Reynolds"
+* name.family = "Reynolds"
+* name.given[0] = "Margaret"
+* name.given[1] = "Q."
+* telecom[0].system = #phone
+* telecom[=].value = "(555) 391-9414"
+* address.text = "18051 Mack Ave, Detroit, MI 48224"
+* address.line = "18051 Mack Ave"
+* address.city = "Detroit"
+* address.state = "MI"
+* address.postalCode = "48224"
+* address.country = "US"
+* gender = #female
+
+Instance: Example-Smith-Johnson-DocumentationObservation2
+InstanceOf: ADIDocumentationObservation
+Description: "Example Patient Smith-Johnson PMOLST Documentation Observation"
+Usage: #example
+
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>PMOLST Order Observation</b></p>
+<p><i>Order Exists: <a href='http://www.example.com'>available here</a></i></p>
+</div>"
+* status = #final
+* subject = Reference(Example-Smith-Johnson-Patient1)
+* performer = Reference(Example-Kyle-Anydoc-PractitionerRole1)
+//* focus = "DocumentReference/Example-Smith-Johnson-Patient1-DocumentReference_PMOLST"
+* effectiveDateTime = "2021-03-29T14:25:34.001-05:00"
+* valueCodeableConcept = $SNOMEDCT#697978002 "Provider orders for life-sustaining treatment"
+* performer = Reference(Example-Smith-Johnson-Patient1)
+* effectiveDateTime = "2016-05-18T22:33:22Z"
+
+// Provenance Examples
+
+Instance: Example-Smith-Johnson-PMOProvenance1
+InstanceOf: ADIProvenance
+Description: "Example Patient Smith-Johnson Provenance"
+Usage: #example
+
+* target = Reference(PMO-Example-Smith-Johnson-PMOComposition1)
+* recorded = "2021-03-29T14:25:34.001-05:00"
+
+* agent[assembler].type = $HL7ProvenanceParticipantType#assembler "Assembler"
+* agent[assembler].who = Reference(Example-Smith-Johnson-OrganizationAssembler1)
+
+// TODO where does assembler or provenance get referenced to by the Composition (or doesn't it)?
+Instance: Example-Smith-Johnson-OrganizationAssembler1
+InstanceOf: $USCoreOrganization
+Description: "Example Patient Smith-Johnson Assembler Organization"
+Usage: #example
+
+* identifier.system = "urn:oid:1.3.6.1.4.1.42424242.4.99930.4"
+* identifier.value = "12c5dcee5089494ca1ca0cb428ed3fff"
+* active = true
+* name = "ADVault, Inc."
+
+* telecom[0].system = #phone
+* telecom[0].value = "+1(202)776-7700"
+* telecom[0].use = #work
+
+* address[0].type = http://hl7.org/fhir/address-type#physical
+* address[0].line[0] = "740 E. Campbell Rd. Suite 825"
+* address[0].city = "Richardson"
+* address[0].state = "TX"
+* address[0].postalCode = "75081"
+* address[0].country = "US"

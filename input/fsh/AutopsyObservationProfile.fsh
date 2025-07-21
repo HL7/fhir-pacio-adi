@@ -7,12 +7,12 @@ Description: "This profile is used to represent the author's thoughts about auto
 * text 1..1 MS
 * status = #final
 //* code from ADIAutopsyVS (required)
-* code = $LOINC#75782-3
+* code = $LOINC#75782-3 "Thoughts regarding autopsy Narrative - Reported"
 * subject 1..1 MS
 * subject only Reference($USCorePatient)
 
 * value[x] 1..1 MS
 
-* note 
+* note 0..1 MS
 
 

@@ -61,10 +61,8 @@ Usage: #example
 * entry[=].resource = Example-Smith-Johnson-DocumentationObservation1
 * entry[+].fullUrl = "http://www.example.org/fhir/Organization/Example-Smith-Johnson-OrganizationCustodian1"
 * entry[=].resource = Example-Smith-Johnson-OrganizationCustodian1
-* entry[+].fullUrl = "http://www.example.org/fhir/Organization/Example-Smith-Johnson-OrganizationAssembler1"
-* entry[=].resource = Example-Smith-Johnson-OrganizationAssembler1
-* entry[+].fullUrl = "http://www.example.org/fhir/Provenance/Example-Smith-Johnson-PACPProvenance1"
-* entry[=].resource = Example-Smith-Johnson-PACPProvenance1
+// * entry[+].fullUrl = "http://www.example.org/fhir/Organization/Example-Smith-Johnson-OrganizationAssembler1"
+// * entry[=].resource = Example-Smith-Johnson-OrganizationAssembler1
 * entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-PersonalGoal2"
 * entry[=].resource = Example-Smith-Johnson-PersonalGoal2
 * entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-PersonalGoal3"
@@ -213,7 +211,6 @@ Usage: #example
 // will need to add HCA authority when the profile is created
 
 
-// Line 1011
 * section[gpp_personal_care_experience].title = "Patient Goals, Preferences, and Priorities for Care Experience"
 * section[gpp_personal_care_experience].code = $LOINC#81338-6 "Patient Goals, Preferences, and Priorities for Care Experience"
 * section[gpp_personal_care_experience].text.status = #additional
@@ -272,7 +269,6 @@ Usage: #example
 * section[gpp_for_certain_health_condition].text.status = #additional
 * section[gpp_for_certain_health_condition].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p><b>Care Plan 1</b></p>
-
 <p><b>status</b>: active</p><p><b>intent</b>: proposal</p><p><b>category</b>: <span title='Codes: {http://snomed.info/sct 736366004}'>Advance care plan</span></p><p><b>subject</b>: <a href='Patient-Example-Smith-Johnson-Patient1.html'>Betsy Smith-Johnson</a> ; BetsySJ@example.com; gender: female; birthDate: 1950-11-15</p><p><b>addresses</b>: </p><ul><li><span>Unconscious, in a coma, or in a persistent vegetative state with little or no chance of recovery</span></li><li><span>Persistent vegetative state (SNOMED CT 24473007)</span></li><li><span>Irreversible coma (SNOMED CT 73453007)</span></li></ul><p><b>goal</b>: </p><ul><li><a href='Goal-Example-Smith-Johnson-PersonalGoal1.html'><span title='Codes: {http://loinc.org 81378-2}'>Goals, preferences, and priorities under certain health conditions - Reported</span></a>; <span title='Codes: '>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Avoiding prolonged dependence on machines, Not being a physical burden to my family, Dying at home</span></li><li><a href='Observation-Example-Smith-Johnson-PersonalInterventionPreference3.html'><span title='Codes: {http://loinc.org 75778-1}'>Information to tell doctors if I have a severe, irreversible brain injury or illness and can't dress, feed, or bathe myself, or communicate my medical wishes, but can be kept alive - Reported</span></a>; <span title='Codes: '>If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings, I would like for them to keep trying life-sustaining treatments until my healthcare agent decides it is time to stop and such treatments and let me die gently.</span></li><li><a href='Observation-Example-Smith-Johnson-CareExperiencePreference6.html'><span title='Codes: {http://loinc.org 81365-9}'>Religious or cultural affiliation contact to notify - Reported</span></a>; <span title='Codes: '>Please attempt to notify someone from my religion at the following phone number: If I have included one: Catholic</span></li><li><a href='Observation-Example-Smith-Johnson-CareExperiencePreference5.html'><span title='Codes: {http://loinc.org 81364-2}'>Religious or cultural beliefs - Reported</span></a>; <span title='Codes: '>If I appear to be approaching the end of my life, here are some things that I would like for my caregivers to know about my faith and my religion. Please call Father Mark if my condition warrants the services of a priest.</span></li><li><a href='Observation-Example-Smith-Johnson-CareExperiencePreference1.html'><span title='Codes: {http://loinc.org 75775-7}'>Decision to inform doctors and nurses about the role religion, faith, culture, or spirituality play in my life - Reported</span></a>; <span title='Codes: '>Here are some thoughts that I would like for my medical care team and my healthcare agent(s) to know about the role that religion, faith or spirituality play in my life: I am Catholic, please call Father Mark at Saint Catherine's on Main Street.</span></li></ul>
 
 <p><b>Care Plan 2</b></p>
@@ -284,7 +280,7 @@ Usage: #example
 <p><b>status</b>: active</p><p><b>intent</b>: proposal</p><p><b>category</b>: <span title='Codes: {http://snomed.info/sct 736366004}'>Advance care plan</span></p><p><b>subject</b>: <a href='Patient-Example-Smith-Johnson-Patient1.html'>Betsy Smith-Johnson</a> ; BetsySJ@example.com; gender: female; birthDate: 1950-11-15</p><p><b>addresses</b>: <span>Terminal illness, lack of meaningful interaction</span></p><p><b>goal</b>: </p><ul><li><a href='Goal-Example-Smith-Johnson-PersonalGoal1.html'><span title='Codes: {http://loinc.org 81378-2}'>Goals, preferences, and priorities under certain health conditions - Reported</span></a>; <span title='Codes: '>If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me: Avoiding prolonged dependence on machines, Not being a physical burden to my family, Dying at home</span></li><li><a href='Observation-Example-Smith-Johnson-CareExperiencePreference1.html'><span title='Codes: {http://loinc.org 75775-7}'>Decision to inform doctors and nurses about the role religion, faith, culture, or spirituality play in my life - Reported</span></a>; <span title='Codes: '>Here are some thoughts that I would like for my medical care team and my healthcare agent(s) to know about the role that religion, faith or spirituality play in my life: I am Catholic, please call Father Mark at Saint Catherine's on Main Street.</span></li><li><a href='Observation-Example-Smith-Johnson-CareExperiencePreference2.html'><span title='Codes: {http://loinc.org 81360-0}'>My likes and joys - Reported</span></a>; <span title='Codes: '>Here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed: I love the smell of lavender and the feeling of sunshine on my face.</span></li><li><a href='Observation-Example-Smith-Johnson-CareExperiencePreference3.html'><span title='Codes: {http://loinc.org 81362-6}'>My dislikes and fears - Reported</span></a>; <span title='Codes: '>Here is a list of things that I would like to avoid if at all possible, people that I don’t wish to see, and concerns I have about particular family members, pets, and so on: I do not like my feet to be cold.</span></li><li><a href='Observation-Example-Smith-Johnson-CareExperiencePreference4.html'><span title='Codes: {http://loinc.org 81380-8}'>Goals, preferences, and priorities for care experience - Reported</span></a>; <span title='Codes: '>How to care for me: If I become incapacitated and cannot express myself, here is what I would like to tell my healthcare agent, family and friends about how I would like for them to care for me: I want photos of my family where I can see them.</span></li><li><a href='Observation-Example-Smith-Johnson-CareExperiencePreference5.html'><span title='Codes: {http://loinc.org 81364-2}'>Religious or cultural beliefs - Reported</span></a>; <span title='Codes: '>If I appear to be approaching the end of my life, here are some things that I would like for my caregivers to know about my faith and my religion. Please call Father Mark if my condition warrants the services of a priest.</span></li><li><a href='Observation-Example-Smith-Johnson-CareExperiencePreference7.html'><span title='Codes: {http://loinc.org 81366-7}'>Unfinished business - Reported</span></a>; <span title='Codes: '>If it appears that I am approaching the end of my life, and I cannot communicate with persons around me, I would want my doctors and nurses, my family, and my friends to know about some unfinished business that I need to address: I want my sister and I to talk again, and miss her.  I wish we hadn't disagreed all those years ago and regret the time it has cost us.  I'd like to see her face if I were very ill and needed the comfort of family at my side.</span></li><li><a href='Observation-Example-Smith-Johnson-PersonalInterventionPreference1.html'><span title='Codes: {http://loinc.org 75776-5}'>Preference on consulting a supportive and palliative care team to help treat physical, emotional, and spiritual discomfort and support family - Reported</span></a>; <span title='Codes: '>If I am having significant pain or suffering, I would like my doctors to consult a Supportive and Palliative Care Team to help treat my physical, emotional and spiritual discomfort, and to support my family.</span></li><li><a href='Observation-Example-Smith-Johnson-PersonalInterventionPreference3.html'><span title='Codes: {http://loinc.org 75778-1}'>Information to tell doctors if I have a severe, irreversible brain injury or illness and can't dress, feed, or bathe myself, or communicate my medical wishes, but can be kept alive - Reported</span></a>; <span title='Codes: '>If my health ever deteriorates due to a terminal illness, and my doctors believe I will not be able to interact meaningfully with my family, friends, or surroundings, I would like for them to keep trying life-sustaining treatments until my healthcare agent decides it is time to stop and such treatments and let me die gently.</span></li><li><a href='Observation-Example-Smith-Johnson-PersonalInterventionPreference5.html'><span title='Codes: {http://loinc.org 75780-7}'>Preferred location to spend final days if possible to choose - Reported</span></a>; <span title='Codes: '>If it were possible to choose, here is where I would like to spend my final days: At home.I would like to receive hospice care at home if possible.</span></li></ul>
 </div>"
 
-* section[gpp_for_certain_health_condition].entry[+] = Reference(Example-Smith-Johnson-PreferenceCarePlan1)
+* section[gpp_for_certain_health_condition].entry[0] = Reference(Example-Smith-Johnson-PreferenceCarePlan1)
 * section[gpp_for_certain_health_condition].entry[+] = Reference(Example-Smith-Johnson-PreferenceCarePlan2)
 * section[gpp_for_certain_health_condition].entry[+] = Reference(Example-Smith-Johnson-PreferenceCarePlan3)
 
@@ -470,8 +466,8 @@ Usage: #example
 * patient = Reference(Example-Smith-Johnson-Patient1)
 * dateTime = "2020-08-03"
 
-* policy.authority = "https://www.michigan.gov/"
-* policy.uri = "http://www.legislature.mi.gov/(S(tpnclc1ofteerx2x2dppcmdz))/mileg.aspx?page=GetObject&objectname=mcl-386-1998-V-5"
+* policy.authority = "https://www.michigan.gov"
+* policy.uri = "https://www.legislature.mi.gov/Laws/MCL?objectName=MCL-386-1998-V-5"
 
 * provision.type = #permit
 
@@ -517,9 +513,10 @@ Usage: #example
 * addresses[+].display = "Irreversible coma (SNOMED CT 73453007)"
 * goal = Reference(Example-Smith-Johnson-PersonalGoal1)
 // * supportingInfo[+] = Reference(Example-Smith-Johnson-PersonalInterventionPreference3)
-* supportingInfo[0] = Reference(Example-Smith-Johnson-CareExperiencePreference6)
+* supportingInfo[0] = Reference(Example-Smith-Johnson-CareExperiencePreference1)
 * supportingInfo[+] = Reference(Example-Smith-Johnson-CareExperiencePreference5)
-* supportingInfo[+] = Reference(Example-Smith-Johnson-CareExperiencePreference1)
+* supportingInfo[+] = Reference(Example-Smith-Johnson-CareExperiencePreference6)
+
 
 
 
@@ -788,7 +785,7 @@ Usage: #example
 </ul>	
 </div>"
 * lifecycleStatus = #proposed
-* category = $LOINC#87528-6 "Personal health goal"
+* category[type] = $LOINC#87528-6 "Personal health goal"
 * description.extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me"
 * description.text = "Avoiding prolonged dependence on machines, Not being a physical burden to my family, Dying at home"
 * subject = Reference(Example-Smith-Johnson-Patient1)
@@ -805,7 +802,7 @@ Description: "Example Patient Smith-Johnson Personal Goal 2"
 <p><i>Not being a physical burden to my family</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category = $LOINC#87528-6 "Personal health goal"
+* category[type] = $LOINC#87528-6 "Personal health goal"
 * description.extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me"
 * description.text = "Not being a physical burden to my family"
 * subject = Reference(Example-Smith-Johnson-Patient1)
@@ -822,7 +819,7 @@ Description: "Example Patient Smith-Johnson Personal Goal 3"
 <p><i>Dying at home</i></p>
 </div>"
 * lifecycleStatus = #proposed
-* category = $LOINC#87528-6 "Personal health goal"
+* category[type] = $LOINC#87528-6 "Personal health goal"
 * description.extension[adi-enclosedPrecondition-extension].valueCodeableConcept.text = "If I am so sick or seriously injured that I cannot express my own medical treatment preferences, and if I am not expected to live without additional treatment for my illness, disease, condition or injury, then I want my medical care team to know that these are the things that are most important to me"
 * description.text = "Dying at home"
 * subject = Reference(Example-Smith-Johnson-Patient1)
@@ -1150,7 +1147,7 @@ Usage: #example
 <p><i>I consent to donate all organs and tissues.</i></p>
 </div>"
 * status = #final
-* code = $LOINC#75781-5 "Thoughts on organ and tissue donations Narrative - Reported"
+// * code = $LOINC#75781-5 "Thoughts on organ and tissue donations Narrative - Reported"
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * valueString = "Consent to Donate: I consent to donate all organs and tissues."
 * performer = Reference(Example-Smith-Johnson-Patient1)
@@ -1171,7 +1168,7 @@ Usage: #example
 <p><i>only if there are questions about my death.</i></p>
 </div>"
 * status = #final
-* code = $LOINC#75782-3 "Thoughts regarding autopsy Narrative - Reported"
+// * code = $LOINC#75782-3 "Thoughts regarding autopsy Narrative - Reported" 
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * valueString = "Autopsy: I want an autopsy: only if there are questions about my death."
 * performer = Reference(Example-Smith-Johnson-Patient1)
@@ -1189,8 +1186,6 @@ Usage: #example
 <p><i>Order Exists: <a href='http://www.example.com'>available here</a></i></p>
 </div>"
 * status = #final
-//* code = $LOINC#81352-7 "Medical Order for Life-Sustaining Treatment, Physician Order for Life-Sustaining Treatment, or a similar medical order is in place - Reported"
-// * code = $LOINC#42348-3 "Advance directives" // MLT: commented out since it's fixed value in the profile.
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * performer = Reference(Example-Smith-Johnson-Patient1)
 //* focus = "DocumentReference/Example-Smith-Johnson-Patient1-DocumentReference_PMOLST"
@@ -1224,45 +1219,28 @@ Usage: #example
 * address[0].country = "US"
 
 
-
 // TODO where does assembler or provenance get referenced to by the Composition (or doesn't it)?
-Instance: Example-Smith-Johnson-OrganizationAssembler1
-InstanceOf: $USCoreOrganization
-Description: "Example Patient Smith-Johnson Assembler Organization"
-Usage: #example
+// Instance: Example-Smith-Johnson-OrganizationAssembler1
+// InstanceOf: $USCoreOrganization
+// Description: "Example Patient Smith-Johnson Assembler Organization"
+// Usage: #example
 
-* identifier.system = "urn:oid:1.3.6.1.4.1.42424242.4.99930.4"
-* identifier.value = "12c5dcee5089494ca1ca0cb428ed3fff"
-* active = true
-* name = "ADVault, Inc."
+// * identifier.system = "urn:oid:1.3.6.1.4.1.42424242.4.99930.4"
+// * identifier.value = "12c5dcee5089494ca1ca0cb428ed3fff"
+// * active = true
+// * name = "ADVault, Inc."
 
-* telecom[0].system = #phone
-* telecom[0].value = "+1(202)776-7700"
-* telecom[0].use = #work
+// * telecom[0].system = #phone
+// * telecom[0].value = "+1(202)776-7700"
+// * telecom[0].use = #work
 
-* address[0].type = http://hl7.org/fhir/address-type#physical
-* address[0].line[0] = "740 E. Campbell Rd. Suite 825"
-* address[0].city = "Richardson"
-* address[0].state = "TX"
-* address[0].postalCode = "75081"
-* address[0].country = "US"
+// * address[0].type = http://hl7.org/fhir/address-type#physical
+// * address[0].line[0] = "740 E. Campbell Rd. Suite 825"
+// * address[0].city = "Richardson"
+// * address[0].state = "TX"
+// * address[0].postalCode = "75081"
+// * address[0].country = "US"
 
-
-
-
-
-// Provenance Examples
-
-Instance: Example-Smith-Johnson-PACPProvenance1
-InstanceOf: ADIProvenance
-Description: "Example Patient Smith-Johnson Provenance"
-Usage: #example
-
-* target = Reference(Example-Smith-Johnson-PACPComposition1)
-* recorded = "2021-03-29T14:25:34.001-05:00"
-
-* agent[assembler].type = $HL7ProvenanceParticipantType#assembler "Assembler"
-* agent[assembler].who = Reference(Example-Smith-Johnson-OrganizationAssembler1)
 
 
 //////////////////////////////////////////////////////////////////////////////////////

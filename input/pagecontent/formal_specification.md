@@ -138,7 +138,7 @@ An example of this representation is shown in the resource snippet below:
 
 CDA attachments **SHALL** align with the [HL7 CDA® R2 Implementation Guide: Personal Advance Care Plan (PACP) Document, Release 1 STU3 - US Realm](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=434) specification:
 
-* Set the FHIR `DocumentReference.content.attachment.format.system` element to "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem" 
+* Set the FHIR `DocumentReference.content.attachment.format.system` element to "http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes" 
 * Set the FHIR `DocumentReference.content.attachment.format.code` element to one of two options depending on the CDA format:
 
 | Format              | DocumentReference.content.format.code               |
@@ -156,7 +156,7 @@ An example of this representation is shown in the resource snippet below:
         "url": "Binary/03fdcd6b-4e0f-406e-86ac-6b56bf9ce575"
     },
     "format": {
-        "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes",
         "code": "urn:hl7-org:sdwg:pacp-structuredBody:1.3.1",
         "display": "PACP C-CDA"
     }

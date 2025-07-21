@@ -2,7 +2,9 @@ Profile: ADIHealthcareAgentConsent
 Parent: Consent
 Id: ADI-HealthcareAgentConsent
 Title: "ADI Healthcare Agent Consent"
-Description: "This profile is used to represent a consent for an advance directive participant such as a healthcare agent or advisor and power or limitation granted to such persons."
+Description: "This profile is used to represent a delegation of rights consent for healthcare related decision-making. The Perm Consent enables the patient to delegate the typical powers of a durable medical power of attorney to one or more healthcare agents which may be in a prioritized order (primary, secondary, tertiary) or simply may be designated as healthcare agents to act as an authorized personal representative for the patient in circumstances where the patient is not able to communicate.
+The ADI Healthcare Agent Consent Deny Profile may be used in conjunction to constrain the powers granted through the permit. 
+The authorized personal representative appointed as healthcare agents are referenced from the Consent Resource via the actor.reference where the actor.code indicates the healthcare agent role"
 
 * ^abstract = true
 // * obeys HCA-authority-scope-provisionType // provisionType invariant no longer needed since we fix scope to only one LOINC code (81377-4)
@@ -52,6 +54,7 @@ Description: "This profile is used to represent a consent for an advance directi
     
 * provision.actor.role from $VSACADIConsentActorRole (required)
 * provision.actor.reference only Reference(ADIHealthcareAgentParticipant)
+* provision.actor.reference ^comment = "authorized personal representative"
 
 * provision.action from ADIHCADecisionsVS (extensible)
 * provision.action ^comment = "Actions without a defined code are placed in action.text."
@@ -70,7 +73,7 @@ Profile: ADIConsentDeny
 Parent: ADIHealthcareAgentConsent
 Id: ADI-ADIConsentDeny
 Title: "ADI Healthcare Agent Consent Deny"
-Description: "This profile is used to represent deny consents for an advance directive participant such as a healthcare agent or advisor and power or limitation granted to such persons."
+Description: "The ADI Healthcare Agent Consent Deny profile is used to constrain the powers permitted for the healthcare agent appointment through the ADI Healthcare Agent Consent Permit profile."
 
 * provision.type = #deny
 

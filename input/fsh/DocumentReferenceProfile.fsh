@@ -20,8 +20,8 @@ Description: "This profile defines constraints that represent the information ne
 * type.coding contains cdaDocument 0..1 MS
 * type.coding[cdaDocument] ^short = "CDA Document Type Coding"
 * type.coding[cdaDocument] ^definition = "Identifies this as a CDA document with structured body format"
-* type.coding[cdaDocument] ^patternCoding.system = "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem"
-* type.coding[cdaDocument] ^patternCoding.code = #urn:hl7-org:sdwg:pacp-structuredBody:1.2.0.1
+* type.coding[cdaDocument] ^patternCoding.system = "http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes"
+* type.coding[cdaDocument] ^patternCoding.code = #urn:hl7-org:sdwg:pacp-structuredBody:1.3
 * type.coding[cdaDocument].system 1..1
 * type.coding[cdaDocument].code 1..1
 * type.coding[cdaDocument].display = "PACP Structured Body CDA Document"
@@ -35,7 +35,7 @@ Description: "This profile defines constraints that represent the information ne
 * type.coding[fhirADIBundle] ^patternCoding.code = #http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-Bundle
 * type.coding[fhirADIBundle].system 1..1
 * type.coding[fhirADIBundle].code 1..1
-* type.coding[fhirADIBundle].display = "FHIR PACP Bundle"
+* type.coding[fhirADIBundle].display = "pacp-structuredBody:1.3"
 
 // Ensure format element is present and constrained appropriately
 // * format MS
