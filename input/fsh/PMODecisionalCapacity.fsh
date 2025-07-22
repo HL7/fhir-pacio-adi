@@ -23,7 +23,7 @@ Description: "This profile is used to represent a patient's decisional capacity 
 * subject only Reference($USCorePatient)
 
 * encounter 0..0 // verify no encounter possible
-* performer only Reference($USCorePractitioner)
+* performer only Reference($USCorePractitioner or $USCorePractitionerRole)
 
 
 * code = $SNOMEDCT#551781000124102 //Under care of hospice team (finding) - US Edition

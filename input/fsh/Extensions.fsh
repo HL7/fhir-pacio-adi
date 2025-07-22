@@ -15,7 +15,7 @@ Description: "Jurisdiction for which content is applicable. Represent state juri
 Context: DocumentReference
 * value[x] only CodeableConcept or string
 * valueCodeableConcept 0..1 MS
-* valueCodeableConcept from $HL7JurisdictionCodes (extensible)  
+* valueCodeableConcept from $HL7JurisdictionCodesVS (extensible)  
 * valueString 0..1 MS
 // * obeys jurisdiction-choice-required
 
@@ -48,7 +48,7 @@ Context: Composition
 * valueReference only Reference($USCorePractitioner or $USCorePractitionerRole or $USCorePatient or RelatedPerson)
 
 Extension: ParticipantExtension
-Id: ADI-HealthcareAgentParticipant-extension
+Id: adi-healthcareAgentParticipant-extension
 Title: "Participant"
 Description: "The Advance Directive Information Participant Extension identifies supporting entities, including parents, relatives, caregivers, insurance policyholders, guarantors, and others related in some way to the patient. A supporting person or organization is an individual or an organization with a relationship to the patient. A supporting person who is playing multiple roles would be recorded in multiple participants (e.g., emergency contact and next-of-kin)."
 Context: Composition
@@ -224,7 +224,7 @@ Description: "The Advance Directive document location. This location is the endp
 Context: DocumentReference
 * value[x] only Reference or string
 * value[x] 0..1 MS
-* valueReference 0..1
+* valueReference 0..1 MS
 * valueReference only Reference(Endpoint)
 * valueString 0..1 MS
 * valueString ^short = "A FHIR endpoint URL that points to the ADI document or resource that exists."
