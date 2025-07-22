@@ -66,6 +66,7 @@
 <artifact id="SearchParameter/Bundle-timestamp" key="SearchParameter-Bundle-timestamp" name="Bundle-timestamp"/>
 <artifact id="SearchParameter/Bundle-type" key="SearchParameter-Bundle-type" name="Bundle-type"/>
 <artifact deprecated="true" id="ValueSet/PADICareExperiencePreferencesVS" key="ValueSet-PADICareExperiencePreferencesVS" name="Care Experience Preferences"/>
+<artifact id="CarePlan/Example-Smith-Johnson-PMOCarePlan1" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan2" name="Care Plan for Permanent, severe brain damage"/>
 <artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan2" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan2" name="Care Plan for Permanent, severe brain damage"/>
 <artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan3" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan3" name="Care Plan for Terminal illness, lack of meaningful interaction"/>
 <artifact deprecated="true" id="CarePlan/Example-McBee-PreferenceCarePlan1" key="CarePlan-Example-McBee-PreferenceCarePlan1" name="Care Plan for Unconscious, vegetative state, coma for McBee"/>
@@ -137,6 +138,12 @@
 <artifact deprecated="true" id="Observation/Example-McBee-PersonalInterventionPreference6" key="Goal-Example-McBee-PersonalInterventionPreference6" name="Example-McBee-PersonalInterventionPreference6"/>
 <artifact deprecated="true" id="Observation/Example-McBee-PersonalInterventionPreference7" key="Goal-Example-McBee-PersonalInterventionPreference7" name="Example-McBee-PersonalInterventionPreference7"/>
 <artifact deprecated="true" id="Observation/Example-McBee-PersonalInterventionPreference8" key="Goal-Example-McBee-PersonalInterventionPreference8" name="Example-McBee-PersonalInterventionPreference8"/>
+<artifact id="Observation/Example-Smith-Johnson-ADIJurisdiction1" key="Observation-Example-Smith-Johnson-ADIJurisdiction1" name="Example-Smith-Johnson-ADIJurisdiction1"/>
+<artifact id="RelatedPerson/Example-Smith-Johnson-ADINotary2" key="RelatedPerson-Example-Smith-Johnson-ADINotary2" name="Example-Smith-Johnson-ADINotary2"/>
+<artifact id="Observation/Example-Smith-Johnson-ADIPMOParticipantObservation1" key="Observation-Example-Smith-Johnson-ADIPMOParticipantObservation1" name="Example-Smith-Johnson-ADIPMOParticipantObservation1"/>
+<artifact id="Procedure/Example-Smith-Johnson-ADIPMOProcedure1" key="Procedure-Example-Smith-Johnson-ADIPMOProcedure1" name="Example-Smith-Johnson-ADIPMOProcedure1"/>
+<artifact id="Observation/Example-Smith-Johnson-ADIPMOReviewObservation1" key="Observation-Example-Smith-Johnson-ADIPMOReviewObservation1" name="Example-Smith-Johnson-ADIPMOReviewObservation1"/>
+<artifact id="RelatedPerson/Example-Smith-Johnson-ADIWitness1" key="RelatedPerson-Example-Smith-Johnson-ADIWitness1" name="Example-Smith-Johnson-ADIWitness1"/>
 <artifact id="Observation/Example-Smith-Johnson-AutopsyObservation1" key="Observation-Example-Smith-Johnson-AutopsyObservation1" name="Example-Smith-Johnson-AutopsyObservation1"/>
 <artifact id="Bundle/Example-Smith-Johnson-Bundle1" key="Bundle-Example-Smith-Johnson-Bundle1" name="Example-Smith-Johnson-Bundle1"/>
 <artifact id="ServiceRequest/Example-Smith-Johnson-CPR-ServiceRequest1" key="ServiceRequest-Example-Smith-Johnson-CPR-ServiceRequest1" name="Example-Smith-Johnson-CPR-ServiceRequest1"/>
@@ -148,6 +155,7 @@
 <artifact id="Observation/Example-Smith-Johnson-CareExperiencePreference6" key="Goal-Example-Smith-Johnson-CareExperiencePreference6" name="Example-Smith-Johnson-CareExperiencePreference6"/>
 <artifact id="Observation/Example-Smith-Johnson-CareExperiencePreference7" key="Goal-Example-Smith-Johnson-CareExperiencePreference7" name="Example-Smith-Johnson-CareExperiencePreference7"/>
 <artifact id="Observation/Example-Smith-Johnson-CareExperiencePreference8" key="Goal-Example-Smith-Johnson-CareExperiencePreference8" name="Example-Smith-Johnson-CareExperiencePreference8"/>
+<artifact id="Observation/Example-Smith-Johnson-DecisionalCapacity1" key="Observation-Example-Smith-Johnson-DecisionalCapacity1" name="Example-Smith-Johnson-DecisionalCapacity1"/>
 <artifact deprecated="true" id="Binary/Example-Smith-Johnson-DocRef-Binary1" key="Binary-Example-Smith-Johnson-DocRef-Binary1" name="Example-Smith-Johnson-DocRef-Binary1"/>
 <artifact id="DocumentReference/Example-Smith-Johnson-DocRef-Bundle" key="DocumentReference-Example-Smith-Johnson-DocRef-Bundle" name="Example-Smith-Johnson-DocRef-Bundle"/>
 <artifact id="Device/Example-Smith-Johnson-DocRef-Device1" key="Device-Example-Smith-Johnson-DocRef-Device1" name="Example-Smith-Johnson-DocRef-Device1"/>
@@ -164,6 +172,7 @@
 <artifact id="Organization/Example-Smith-Johnson-OrganizationAssembler1" key="Organization-Example-Smith-Johnson-OrganizationAssembler1" name="Example-Smith-Johnson-OrganizationAssembler1"/>
 <artifact id="Organization/Example-Smith-Johnson-OrganizationCustodian1" key="Organization-Example-Smith-Johnson-OrganizationCustodian1" name="Example-Smith-Johnson-OrganizationCustodian1"/>
 <artifact deprecated="true" id="Provenance/Example-Smith-Johnson-PACPProvenance1" key="Provenance-Example-Smith-Johnson-PACPProvenance1" name="Example-Smith-Johnson-PACPProvenance1"/>
+<artifact id="Observation/Example-Smith-Johnson-PMOHospiceObservation1" key="Observation-Example-Smith-Johnson-PMOHospiceObservation1" name="Example-Smith-Johnson-PMOHospiceObservation1"/>
 <artifact id="Provenance/Example-Smith-Johnson-PMOProvenance1" key="Provenance-Example-Smith-Johnson-PMOProvenance1" name="Example-Smith-Johnson-PMOProvenance1"/>
 <artifact id="Patient/Example-Smith-Johnson-Patient1" key="Patient-Example-Smith-Johnson-Patient1" name="Example-Smith-Johnson-Patient1"/>
 <artifact id="Goal/Example-Smith-Johnson-PersonalGoal1" key="Goal-Example-Smith-Johnson-PersonalGoal1" name="Example-Smith-Johnson-PersonalGoal1"/>
@@ -201,7 +210,7 @@
 <artifact deprecated="true" id="StructureDefinition/PADI-Provenance" key="StructureDefinition-PADI-Provenance" name="PACIO ADI Provenance"/>
 <artifact deprecated="true" id="CapabilityStatement/padi" key="CapabilityStatement-padi" name="PADI CapabilityStatement"/>
 <artifact id="Bundle/PMO-Example-Smith-Johnson-Bundle2" key="Bundle-PMO-Example-Smith-Johnson-Bundle2" name="PMO-Example-Smith-Johnson-Bundle2"/>
-<artifact id="StructureDefinition/ADI-HealthcareAgentParticipant-extension" key="StructureDefinition-padi-participant-extension" name="Participant"/>
+<artifact id="StructureDefinition/adi-healthcareAgentParticipant-extension" key="StructureDefinition-padi-participant-extension" name="Participant"/>
 <artifact deprecated="true" id="ValueSet/PADIParticipantRelationshipVS" key="ValueSet-PADIParticipantRelationshipVS" name="Participant Relationships"/>
 <artifact id="StructureDefinition/adi-performer-extension" key="StructureDefinition-padi-performer-extension" name="Performer"/>
 <artifact id="Composition/Example-Smith-Johnson-PACPComposition1" key="Composition-Example-Smith-Johnson-PACPComposition1" name="Personal Advance Care Plan"/>

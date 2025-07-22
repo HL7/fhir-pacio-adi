@@ -49,6 +49,7 @@ Usage: #example
 
 * extension[composition-clinicaldocument-versionNumber].valueString = "2024-03-29T14:25:34-05:00"  // versionNumber changed to dateTime stamp (fix for FHIR-46150)
 * extension[adi-dataEnterer-extension].valueReference = Reference(Example-Smith-Johnson-Patient1)
+* extension[adi-healthcareAgentParticipant-extension].valueReference = Reference(PractitionerRole/Example-Kyle-Anydoc-PractitionerRole1)
 * extension[adi-expiration-date-extension].valueDateTime = "2024-03-29T14:25:34-05:00"
 
 * identifier.system = "urn:oid:2.16.840.1.113883.4.823.1.7124"
@@ -57,7 +58,7 @@ Usage: #example
 
 * status = #final
 * type = $LOINC#93037-0 "Portable medical order form"
-* category = $LOINC#42348-3 "Advance directives"
+* category = $LOINC#42348-3 "Advance healthcare directives"
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * date = "2023-03-29T14:25:34-05:00"
 * author = Reference(PractitionerRole/Example-Kyle-Anydoc-PractitionerRole1)

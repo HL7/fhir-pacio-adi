@@ -8,4 +8,4 @@ Description: "The ADI Jurisdiction Observation profile includes information abou
 * code = $LOINC#101349-9 "Jurisdiction where advance directive is accepted [Location]"
 
 * valueCodeableConcept 1..1 MS
-* valueCodeableConcept from $HL7JurisdictionCodes (extensible)
+* valueCodeableConcept from $HL7JurisdictionCodesVS (extensible)

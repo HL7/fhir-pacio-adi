@@ -84,7 +84,7 @@ Usage: #example
 * identifier[0].use = #usual
 * identifier[=].type = $HL7IdentifierType#MR "Medical Record Number"
 * identifier[=].type.text = "Medical Record Number"
-* identifier[=].system = "http://hospital.smarthealthit.org"
+* identifier[=].system = "http://example.org/GoodHealthHospital"
 * identifier[=].value = "1032702"
 * identifier[+].system = "http://hl7.org/fhir/sid/us-medicare"
 * identifier[=].value = "1PA3D58WH16"
@@ -149,7 +149,7 @@ Usage: #example
 
 * status = #final
 * type = $LOINC#81334-5 "Patient Personal advance care plan"
-* category = $LOINC#42348-3 "Advance directives"
+* category = $LOINC#42348-3 "Advance healthcare directives"
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * date = "2021-03-29T14:25:34-05:00"
 * author = Reference(Example-Smith-Johnson-Patient1)
@@ -454,7 +454,7 @@ Usage: #example
 
 // TODO update text
 Instance: Example-Smith-Johnson-HealthcareAgentConsent
-InstanceOf: ADIHealthcareAgentConsent
+InstanceOf: ADIConsentPermit
 Description: "Example Patient Smith-Johnson Healthcare Agent Consent"
 Usage: #example
 * text.status = #additional
@@ -466,10 +466,8 @@ Usage: #example
 * patient = Reference(Example-Smith-Johnson-Patient1)
 * dateTime = "2020-08-03"
 
-* policy.authority = "https://www.michigan.gov"
-* policy.uri = "https://www.legislature.mi.gov/Laws/MCL?objectName=MCL-386-1998-V-5"
-
-* provision.type = #permit
+// * policy.authority = "https://www.michigan.gov"
+* policy.uri = "http://example.org/healthcare-agent-policy"  // fictitious policy URL for example
 
 //[TODO] do we need to support and require provision.actor for all HCA's?
 * provision.actor[+].role = $LOINC#75783-1 "Primary healthcare agent [Reported]"
@@ -1321,7 +1319,7 @@ Usage: #example
 * type.coding[0] = $LOINC#81334-5 "Patient Personal advance care plan"
 
 
-* category.coding[0] = $LOINC#42348-3 "Advance directives"
+* category.coding[0] = $LOINC#42348-3 "Advance healthcare directives"
 
 
 * subject = Reference(Example-Smith-Johnson-Patient1)

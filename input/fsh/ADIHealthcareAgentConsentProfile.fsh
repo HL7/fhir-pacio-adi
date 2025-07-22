@@ -16,7 +16,7 @@ The authorized personal representative appointed as healthcare agents are refere
 * status MS
 * status = #active
 // * scope from $VSACADIConsentType (required)  
-* scope = $LOINC#81377-4 "Goals, preferences, and priorities regarding the appointment of healthcare agents [Reported]" // mlt: fixed to LOINC 81377-4 per (FHIR-48900)
+* scope = $LOINC#81377-4 "Goals, preferences, and priorities regarding the appointment of healthcare agents Narrative - Reported" // mlt: fixed to LOINC 81377-4 per (FHIR-48900)
 
 // Fix for FHIR_34506 - meeting on 2023-08-28: re-point to http://terminology.hl7.org/CodeSystem/consentcategorycodes
 /*

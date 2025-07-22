@@ -11,7 +11,6 @@ Description: "The Portable Medical Order Care Plan."
 
 * category ^slicing.discriminator.type = #pattern 
 * category ^slicing.discriminator.path = "$this"
-// Should the pattern be open or closed?
 * category ^slicing.rules = #open
 * category ^slicing.ordered = false   // can be omitted, since false is the default
 * category ^slicing.description = "Slice based on $this value"

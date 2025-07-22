@@ -34,8 +34,9 @@ Alias: $HL7CompositionAttestation = http://hl7.org/fhir/ValueSet/composition-att
 Alias: $HL7ConsentScope = http://terminology.hl7.org/CodeSystem/consentscope
 Alias: $HL7ConsentCategoryCodes = http://terminology.hl7.org/CodeSystem/consentcategorycodes
 Alias: $HL7ConsentCategoryVS = http://hl7.org/fhir/ValueSet/consent-category
-Alias: $HL7JurisdictionCodes = http://terminology.hl7.org/ValueSet/USPS-State
+Alias: $HL7JurisdictionCodesVS = http://terminology.hl7.org/ValueSet/USPS-State
 Alias: $HL7DegreeLicenseCertificate = http://terminology.hl7.org/ValueSet/v2-0360
+Alias: $USPSCodes = https://www.usps.com/
 
 Alias: $LOINC = http://loinc.org
 Alias: $SNOMEDCT = http://snomed.info/sct
@@ -63,7 +64,7 @@ Alias: $VSACADIInterventionPreferencesEndOfLifeGrouping = http://cts.nlm.nih.gov
 Alias: $VSACADIConsentActorRole = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1046.35
 Alias: $VSACADICareExperiencePreferences = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.11
 Alias: $VSACADIConsentType = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.13
-Alias: $VSACADIInitialTreatmentPMOOptions = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.27 // mlt_note: there is a LOINC answer list: LL6264-7
+Alias: $VSACADIInitialTreatmentPMOOptions = https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.27 // mlt_note: there is a LOINC answer list: LL6264-7
 Alias: $VSACADIInitialTreatmentPMOOptionsGrouping = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.33
 Alias: $VSACADIAdditionalPMOProcedures = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.32
 Alias: $VSACADIAdditionalPMOProceduresGrouping = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.34
@@ -78,7 +79,7 @@ Alias: $data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-r
 
 // fix for FHIR-46149
 Alias: $VSACADIAdvanceDirectiveCategoriesGrouper = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.25
-Alias: $VSACADIDecisionalCapacity = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1240.1 // MLT20250610: replace with the VSAC subset once provided.
+Alias: $VSACADIDecisionalCapacity = https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1240.1 // MLT20250610: replace with the VSAC subset once provided.
 
 Alias: $endpoint-connection-type = http://terminology.hl7.org/CodeSystem/endpoint-connection-type
 Alias: $endpoint-payload-type = http://terminology.hl7.org/CodeSystem/endpoint-payload-type
