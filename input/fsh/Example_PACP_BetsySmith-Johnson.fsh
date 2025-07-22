@@ -1265,6 +1265,8 @@ Usage: #example
 * identifier[=].value = "5367-047e62ccf09d4b39a8add708a69b7f38"
 
 * extension[adi-jurisdiction-extension].valueCodeableConcept = urn:iso:std:iso:3166:-2#US-MI
+* extension[adi-docVersionNumber-extension].valueString = "2015-11-05T15:52:20.000+00:00"
+* extension[adi-document-location].valueString = "http://example.org/DocumentLocation/document12345.txt"
 
 * status = #current
 * docStatus = #current

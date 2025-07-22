@@ -51,6 +51,10 @@ Usage: #example
 * extension[adi-dataEnterer-extension].valueReference = Reference(Example-Smith-Johnson-Patient1)
 * extension[adi-healthcareAgentParticipant-extension].valueReference = Reference(PractitionerRole/Example-Kyle-Anydoc-PractitionerRole1)
 * extension[adi-expiration-date-extension].valueDateTime = "2024-03-29T14:25:34-05:00"
+* extension[adi-performer-extension].valueReference = Reference(PractitionerRole/Example-Kyle-Anydoc-PractitionerRole1)
+* extension[adi-informant-extension].valueReference = Reference(RelatedPerson/Example-Smith-Johnson-HealthcareAgent1)
+* extension[adi-document-revoke-status].valueCode = ADIRevokeStatusCS#deprecated
+* extension[adi-clause-extension].extension[Clause].valueMarkdown = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Example Clause Statement</p></div>"
 
 * identifier.system = "urn:oid:2.16.840.1.113883.4.823.1.7124"
 * identifier.value = "0-87f37989294a408897aacd1fc5d8fd16"

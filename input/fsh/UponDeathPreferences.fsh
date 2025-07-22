@@ -10,7 +10,7 @@ Description: "This profile is used to represent the author's thoughts about pref
 * category = #care-experience-preference
 * code 1..1 MS
 * code from $VSACUponDeathPreferences (extensible)
-* code.text 
+* code.text 0..1 MS
 * subject 1..1 MS
 * subject only Reference($USCorePatient)
 

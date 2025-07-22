@@ -22,6 +22,7 @@ Reference to draft item http://terminology.hl7.org/CodeSystem/provenance-partici
 # VSAC valuesets need a UTS login to validate.
 %A definition could not be found for Canonical URL 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.7'%
 %A definition could not be found for Canonical URL 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.27'%
+%Unable to find included value set 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.27'%
 %ValueSet 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.28' not found%
 %ValueSet 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.31' not found%
 %A definition could not be found for Canonical URL 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.32'%
