@@ -60,7 +60,7 @@ Usage: #example
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p><b>Witness</b></p><p>Debra Johnson</p></div>"
-
+* extension[adi-notaryInformation-extension].extension[AttesterRole].valueCodeableConcept = $LOINC#81369-1 "First witness"
 * name[0].family = "Johnson"
 * name[0].given[0] = "Debra"
 * name[0].text = "Johnson, Debra"
@@ -79,7 +79,7 @@ Usage: #example
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Example PMO Care Plan</p></div>"
 
 * status = #active
-
+* extension[adi-condition-code-extension].valueCodeableConcept = $SNOMEDCT#230690007 "Cerebrovascular accident (disorder)"
 * title = "Care Plan for Permanent, severe brain damage"
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * addresses[+].display = "Stroke and impaired speech."
