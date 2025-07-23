@@ -43,7 +43,7 @@ Alias: $SNOMEDCT = http://snomed.info/sct
 Alias: $OmbRaceCat = urn:oid:2.16.840.1.113883.6.238
 // Alias: $NUCC = http://nucc.org/provider-taxonomy  // note: had to comment out. IG Publisher is not recognizing this as a valid URL, even though it was specified by HL7 THO https://terminology.hl7.org/CodeSystem-v3-nuccProviderCodes.html. 
 
-Alias: $HL7RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
+Alias: $HL7RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode|3.0.0
 Alias: $HL7RoleClass = http://terminology.hl7.org/CodeSystem/v3-RoleClass
 Alias: $HL7RelatedPersonRelationshipType = http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype
 Alias: $HL7ServiceEventPerformer = http://terminology.hl7.org/ValueSet/v3-xServiceEventPerformer

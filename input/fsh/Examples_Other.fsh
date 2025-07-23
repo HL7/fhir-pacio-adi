@@ -80,7 +80,7 @@ Usage: #example
 
 * status = #active
 * extension[adi-condition-code-extension].valueCodeableConcept = $SNOMEDCT#230690007 "Cerebrovascular accident (disorder)"
-* title = "Care Plan for Permanent, severe brain damage"
+* title = "Care Plan for Cerebrovascular accident"
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * addresses[+].display = "Stroke and impaired speech."
 * goal.display = "Prescribe speech therapy to improve expressive dysphasia."

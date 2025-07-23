@@ -12,13 +12,17 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.us.pacio-adi
 canonical: http://hl7.org/fhir/us/pacio-adi
-version: 2.0.0
+version: 2.0.0-ballot
 name: PACIOAdvanceDirectiveInteroperability
 title: PACIO Advance Healthcare Directive Interoperability Implementation Guide
 status: active
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg  
     valueCode: pe
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    valueCode: trial-use
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 2
 publisher:
   name: HL7 International / Patient Empowerment
   url: http://www.hl7.org/Special/committees/patientempowerment
@@ -27,12 +31,10 @@ description: PACIO Advance Directive Interoperability Implementation Guide
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.us.core: 6.1.0
-  hl7.fhir.uv.extensions: current
-  hl7.terminology: 6.2.0
+  hl7.fhir.us.core: 8.0.0
   us.nlm.vsac:
     uri: 'http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac'
-    version: 0.15.0
+    version: 0.23.0
     id: vsac
 parameters:
   show-inherited-invariants: false
@@ -40,7 +42,7 @@ parameters:
   apply-publisher: true
   path-expansion-params: '../../exp-params.json'
 copyrightYear: 2021+
-releaseLabel: STU 2
+releaseLabel: STU 2 – Ballot
 jurisdiction: urn:iso:std:iso:3166#US "United States of America"
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
@@ -65,7 +67,7 @@ menu:
   Artifacts:
     By Resource Type: artifact_resource_type.html
     Index: artifacts.html
-  Release Notes: change_log.html
+  Change Log: change_log.html
   Downloads: downloads.html
 
 pages:
@@ -98,6 +100,6 @@ pages:
   artifact_adi.md:
     title: FHIR Artifacts
   change_log.md:
-    title: Release Notes
+    title: Change Log
   downloads.md:
     title: Downloads
