@@ -9,14 +9,15 @@ Description: "The Portable Medical Order Care Plan."
 * status = #active
 * intent = #order
 
-* category ^slicing.discriminator.type = #pattern 
+// * category ^slicing.discriminator.type = #pattern 
+// * category ^slicing.discriminator.path = "$this"
+* category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category ^slicing.ordered = false   // can be omitted, since false is the default
 * category ^slicing.description = "Slice based on $this value"
 * category contains
     portable_medical_order 1..1 MS
-
 * category[portable_medical_order] = $LOINC#93037-0 "Portable medical order form" //"Portable medical order form"
 
 

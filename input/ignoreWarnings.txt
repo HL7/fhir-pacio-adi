@@ -16,15 +16,25 @@ None of the codings provided are in the value set 'Observation Category Codes' (
 provenance-1: The left side is inherently a collection, and so the expression '%resource.agent.who.resolve() is Practitioner' may fail or return false if there is more than one item in the content being evaluated
 provenance-1: The left side is inherently a collection, and so the expression '%resource.agent.who.resolve() is Device' may fail or return false if there is more than one item in the content being evaluated
 
-# References latest version of this code system
-Reference to draft item http://terminology.hl7.org/CodeSystem/provenance-participant-type|1.0.0
+# Draft and deprecated versions of code system that are part of the base are not due to the ADI FHIR IG.
+%Reference to draft item http://terminology.hl7.org/CodeSystem/provenance-participant-type|1.0.0%
+%Reference to draft CodeSystem http://hl7.org/fhir/narrative-status|4.0.1%
+%Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/provenance-participant-type|1.0.0%
+%Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/list-order|1.0.0%
+%Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/consentcategorycodes|1.0.0%
+%The extension http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber|5.2.0 is deprecated%
+%The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated%
+%Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0%
+%Reference to draft CodeSystem urn:iso:std:iso:3166:-2|2021 from fhir.tx.support.r4#0.30.0%
 
 # VSAC valuesets need a UTS login to validate.
 %A definition could not be found for Canonical URL 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.7'%
 %A definition could not be found for Canonical URL 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.27'%
+%The value set import https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.27 could not be found so cannot be checked%
 %Unable to find included value set 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.27'%
 %ValueSet 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.28' not found%
 %ValueSet 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.31' not found%
+%A definition could not be found for Canonical URL 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.31'%
 %A definition could not be found for Canonical URL 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.32'%
 %The value set import http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.33 could not be found so cannot be checked%
 %A definition could not be found for Canonical URL 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.33'%
@@ -33,6 +43,7 @@ Reference to draft item http://terminology.hl7.org/CodeSystem/provenance-partici
 %A definition could not be found for Canonical URL 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.36'%
 %Unable to find included value set 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.27'%
 %ValueSet 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1240.1' not found%
+%A definition could not be found for Canonical URL 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1240.1'%
 
 # Since this IG is based on FHIR R4, the pattern discriminator is still valid. The deprecation warning is for future R5+ compatibility, but it won't break the current implementation.
 %The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)%

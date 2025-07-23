@@ -9,7 +9,7 @@ Description: "The Preference Care Plan is a means for an individual to express t
 * status = #active
 * intent = #proposal
 
-* category ^slicing.discriminator.type = #pattern 
+* category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
 
 * category ^slicing.rules = #open

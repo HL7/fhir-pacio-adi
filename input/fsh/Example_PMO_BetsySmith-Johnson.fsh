@@ -4,7 +4,7 @@ InstanceOf: ADIBundle
 Description: "Example Patient Smith-Johnson PMO ADI Document Bundle Smith-Johnson 2"
 Usage: #example
 
-* identifier.system = "urn:oid:2.16.840.1.113883.3.3208.101.1"
+* identifier.system = "http://example.org/GoodHealthClinic/id"
 * identifier.value = "20130607100315-ExamplePMODocument"
 * type = #document
 * timestamp = "2024-03-29T14:25:34.001-05:00"
@@ -56,7 +56,7 @@ Usage: #example
 * extension[adi-document-revoke-status].valueCode = ADIRevokeStatusCS#deprecated
 * extension[adi-clause-extension].extension[Clause].valueMarkdown = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Example Clause Statement</p></div>"
 
-* identifier.system = "urn:oid:2.16.840.1.113883.4.823.1.7124"
+* identifier.system = "http://example.org/GoodHealthClinic/id"
 * identifier.value = "0-87f37989294a408897aacd1fc5d8fd16"
 
 
@@ -296,10 +296,10 @@ InstanceOf: $USCoreOrganization
 Description: "Example Patient Smith-Johnson Assembler Organization"
 Usage: #example
 
-* identifier.system = "urn:oid:1.3.6.1.4.1.42424242.4.99930.4"
+* identifier.system = "http://example.org/GoodHealthClinic/id"
 * identifier.value = "12c5dcee5089494ca1ca0cb428ed3fff"
 * active = true
-* name = "ADVault, Inc."
+* name = "GoodHealth Clinic"
 
 * telecom[0].system = #phone
 * telecom[0].value = "+1(202)776-7700"

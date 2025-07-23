@@ -4,7 +4,7 @@ InstanceOf: ADIBundle
 Description: "Example Patient Smith-Johnson ADI Document Bundle Smith-Johnson 1"
 Usage: #example
 
-* identifier.system = "urn:oid:2.16.840.1.113883.3.3208.101.1"
+* identifier.system = "http://example.org/GoodHealthClinic/id"
 * identifier.value = "20130607100315-CCDA-CCD"
 * type = #document
 * timestamp = "2021-03-29T14:25:34.001-05:00"
@@ -143,7 +143,7 @@ Usage: #example
 * extension[adi-expiration-date-extension].valueDateTime = "2022-03-29T14:25:34-05:00"
 // witness Sally Bobbins
 
-* identifier.system = "urn:oid:2.16.840.1.113883.4.823.1.7124"
+* identifier.system = "http://example.org/GoodHealthClinic/id"
 * identifier.value = "0-87f37989294a408897aacd1fc5d8fd16"
 
 
@@ -1226,7 +1226,7 @@ Usage: #example
 // * identifier.system = "urn:oid:1.3.6.1.4.1.42424242.4.99930.4"
 // * identifier.value = "12c5dcee5089494ca1ca0cb428ed3fff"
 // * active = true
-// * name = "ADVault, Inc."
+// * name = "GoodHealth Clinic"
 
 // * telecom[0].system = #phone
 // * telecom[0].value = "+1(202)776-7700"
@@ -1252,16 +1252,16 @@ InstanceOf: ADI-DocumentReference
 Description: "Example Patient Smith-Johnson DocumentReference"
 Usage: #example
 
-* masterIdentifier.system = "urn:oid:2.16.840.1.113883.3.3208.101.1"
+* masterIdentifier.system = "http://example.org/GoodHealthClinic/id"
 * masterIdentifier.value = "5367-047e62ccf09d4b39a8add708a69b7f38-1"
 
-* identifier[+].system = "urn:oid:2.16.840.1.113883.3.3208.101.1"
+* identifier[+].system = "http://example.org/GoodHealthClinic/id"
 * identifier[=].value = "5367-047e62ccf09d4b39a8add708a69b7f38-1"
 
-* identifier[+].system = "urn:oid:2.16.840.1.113883.3.3208.101.1"
+* identifier[+].system = "http://example.org/GoodHealthClinic/id"
 * identifier[=].value = "0e37bb3e-1e36-46c6-b0f5-396d636a483b"
 
-* identifier[+].system = "urn:oid:2.16.840.1.113883.4.823.1.8561"
+* identifier[+].system = "http://example.org/GoodHealthClinic/id"
 * identifier[=].value = "5367-047e62ccf09d4b39a8add708a69b7f38"
 
 * extension[adi-jurisdiction-extension].valueCodeableConcept = urn:iso:std:iso:3166:-2#US-MI
@@ -1295,7 +1295,7 @@ Usage: #example
 * securityLabel.coding[0] = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N "normal"
 
 * content[0].attachment.contentType = #text/xml
-* content[0].attachment.url = "Binary/Example-Smith-Johnson-DocRef-Binary1"
+* content[0].attachment.url = "http://hl7.org/fhir/us/pacio-adi/Binary/Example-Smith-Johnson-DocRef-Binary1"
 * content[0].attachment.creation = "2015-11-05T15:52:20.000+00:00"
 
 
@@ -1304,10 +1304,10 @@ InstanceOf: ADI-DocumentReference
 Description: "Example Patient Smith-Johnson DocumentReference Bundle"
 Usage: #example
 
-* masterIdentifier.system = "urn:oid:2.16.840.1.113883.4.823.1.7124"
+* masterIdentifier.system = "http://example.org/GoodHealthClinic/id"
 * masterIdentifier.value = "0-87f37989294a408897aacd1fc5d8fd16"
 
-* identifier[+].system = "urn:oid:2.16.840.1.113883.3.3208.101.1"
+* identifier[+].system = "http://example.org/GoodHealthClinic/id"
 * identifier[=].value = "0-87f37989294a408897aacd1fc5d8fd16"
 
 * extension[adi-jurisdiction-extension].valueCodeableConcept.coding.system = "urn:iso:std:iso:3166:-2"
@@ -1340,7 +1340,7 @@ Usage: #example
 * securityLabel.coding[0] = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N "normal"
 
 * content[0].attachment.contentType = #application/fhir+json
-* content[0].attachment.url = "Bundle/Example-Smith-Johnson-Bundle1"
+* content[0].attachment.url = "http://hl7.org/fhir/us/pacio-adi/Bundle/Example-Smith-Johnson-Bundle1"
 * content[0].attachment.creation = "2021-03-29T14:25:34.001-05:00"
 
 
@@ -1349,14 +1349,14 @@ InstanceOf: Device
 Description: "Example Patient Smith-Johnson DocumentReference Device"
 Usage: #example
 
-* identifier.system = "urn:oid:2.16.840.1.113883.4.6"
+* identifier.system = "http://example.org/GoodHealthClinic/id"
 * identifier.value = "ed6f4f50c6cb47dd89cb5d8f3007ecb0"
 
-* modelNumber = "ADVault RR Portal"
+* modelNumber = "GoodHealth RR Portal"
 * version.value = "1.0"
 
 * owner = Reference(Example-Smith-Johnson-OrganizationCustodian1)
-* owner.display = "ADVault, Inc."
+* owner.display = "GoodHealth Clinic"
 
 /* Remvoved because this is causing a jekyll build error with later publisher version
 Instance: Example-Smith-Johnson-DocRef-Binary1
