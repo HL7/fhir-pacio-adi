@@ -215,7 +215,7 @@ Usage: #example
 * section[gpp_personal_care_experience].code = $LOINC#81338-6 "Patient Goals, Preferences, and Priorities for Care Experience"
 * section[gpp_personal_care_experience].text.status = #additional
 * section[gpp_personal_care_experience].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-<p><i>MyDirectives® offers people a list of optional questions that can be answered by typing text in a text box or by uploading a video or audio file for each question. Only those questions answered by Betsy Smith-Johnson appear here. For a complete list of questions in My Thoughts, please visit www.MyDirectives.com.</i></p>
+<p><i>MyDirectives® offers people a list of optional questions that can be answered by typing text in a text box or by uploading a video or audio file for each question. Only those questions answered by Betsy Smith-Johnson appear here. For a complete list of questions in My Thoughts, please visit www.example.org.</i></p>
 <p> </p>
 <p><b>In case I’m being cared for by a person(s) who doesn't know me very well, I’d like my following thoughts to be known.</b></p>
 <p> </p>
@@ -1203,7 +1203,7 @@ Usage: #example
 * identifier.system = "http://hl7.org/fhir/sid/us-npi"
 * identifier.value = "1234567893"
 * active = true
-* name = "MyDirectives.com"
+* name = "example.org"
 
 * telecom[0].system = #phone
 * telecom[0].value = "+1(202)776-7700"
@@ -1304,39 +1304,26 @@ InstanceOf: ADI-DocumentReference
 Description: "Example Patient Smith-Johnson DocumentReference Bundle"
 Usage: #example
 
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p>PACP DocumentReference</p></div>"
 * masterIdentifier.system = "http://example.org/GoodHealthClinic/id"
 * masterIdentifier.value = "0-87f37989294a408897aacd1fc5d8fd16"
-
 * identifier[+].system = "http://example.org/GoodHealthClinic/id"
 * identifier[=].value = "0-87f37989294a408897aacd1fc5d8fd16"
-
 * extension[adi-jurisdiction-extension].valueCodeableConcept.coding.system = "urn:iso:std:iso:3166:-2"
 * extension[adi-jurisdiction-extension].valueCodeableConcept.coding.code = #US-MI
 * extension[adi-jurisdiction-extension].valueCodeableConcept.coding.display = "Michigan"
-
 * status = #current
 * docStatus = #current
-
-
 * type.coding[0] = $LOINC#81334-5 "Patient Personal advance care plan"
-
-
 * category.coding[0] = $LOINC#42348-3 "Advance healthcare directives"
-
-
 * subject = Reference(Example-Smith-Johnson-Patient1)
-
 * date = "2021-03-29T14:25:34.001-05:00"
-
 * author = Reference(Example-Smith-Johnson-Patient1)
-
-
 * authenticator = Reference(Example-Smith-Johnson-OrganizationCustodian1)
-
 * custodian = Reference(Organization/Example-Smith-Johnson-OrganizationCustodian1)
-
 * description = "Personal Advance Care Plan"
-
 * securityLabel.coding[0] = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N "normal"
 
 * content[0].attachment.contentType = #application/fhir+json

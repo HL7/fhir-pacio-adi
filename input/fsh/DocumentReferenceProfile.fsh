@@ -1,6 +1,7 @@
 Profile: ADIDocumentReference
 // [TODO] Does this need to derive from US Core DocumentReference? If so, need to review the requirements below and remove incompatible or redundant requirements
-Parent: DocumentReference
+// Parent: DocumentReference
+Parent: $USCoreDocumentReference
 Id: ADI-DocumentReference
 Title: "ADI Document Reference"
 Description: "This profile defines constraints that represent the information needed to register an advance directive information document on a FHIR server."

@@ -23,10 +23,10 @@ Usage: #example
 * entry[=].resource = Example-Smith-Johnson-CPR-ServiceRequest1
 * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-DocumentationObservation2"
 * entry[=].resource = Example-Smith-Johnson-DocumentationObservation2
-* entry[+].fullUrl = "http://www.example.org/fhir/PractitionerRole/ADI-Facilitator-MSW-MargaretReynolds"
-* entry[=].resource = ADI-Facilitator-MSW-MargaretReynolds
-* entry[+].fullUrl = "http://www.example.org/fhir/Practitioner/Practitioner-MargaretReynolds"
-* entry[=].resource = Practitioner-MargaretReynolds
+// * entry[+].fullUrl = "http://www.example.org/fhir/PractitionerRole/ADI-Facilitator-MSW-MargaretReynolds"
+// * entry[=].resource = ADI-Facilitator-MSW-MargaretReynolds
+// * entry[+].fullUrl = "http://www.example.org/fhir/Practitioner/Practitioner-MargaretReynolds"
+// * entry[=].resource = Practitioner-MargaretReynolds
 * entry[+].fullUrl = "http://www.example.org/fhir/Consent/Example-Smith-Johnson-HealthcareAgentConsent-Permit"
 * entry[=].resource = Example-Smith-Johnson-HealthcareAgentConsent-Permit
 * entry[+].fullUrl = "http://www.example.org/fhir/Consent/Example-Smith-Johnson-HealthcareAgentConsent-Deny"
@@ -54,7 +54,7 @@ Usage: #example
 * extension[adi-performer-extension].valueReference = Reference(PractitionerRole/Example-Kyle-Anydoc-PractitionerRole1)
 * extension[adi-informant-extension].valueReference = Reference(RelatedPerson/Example-Smith-Johnson-HealthcareAgent1)
 * extension[adi-document-revoke-status].valueCode = ADIRevokeStatusCS#deprecated
-* extension[adi-clause-extension].extension[Clause].valueMarkdown = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Example Clause Statement</p></div>"
+* extension[adi-clause-extension].extension[Clause].valueMarkdown = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Example Clause Statement</p></div>"
 
 * identifier.system = "http://example.org/GoodHealthClinic/id"
 * identifier.value = "0-87f37989294a408897aacd1fc5d8fd16"
@@ -72,16 +72,14 @@ Usage: #example
 
 * custodian = Reference(Example-Smith-Johnson-OrganizationCustodian1)
 
-* event.detail[0] = Reference(PractitionerRole/ADI-Facilitator-MSW-MargaretReynolds)
-* event.detail[+] = Reference(Consent/Example-Smith-Johnson-HealthcareAgentConsent-Permit)
+// * event.detail[0] = Reference(PractitionerRole/ADI-Facilitator-MSW-MargaretReynolds)
+* event.detail[0] = Reference(Consent/Example-Smith-Johnson-HealthcareAgentConsent-Permit)
 * event.detail[+] = Reference(Consent/Example-Smith-Johnson-HealthcareAgentConsent-Deny)
 
 * section[portable_medical_orders].title = "Portable Medical Orders"
 * section[portable_medical_orders].text.status = #generated
 * section[portable_medical_orders].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-<p><b>PMO Medical Orders</b></p>
-<p><i>Order Exists: <a href='http://www.example.com'>available here</a></i></p>
-</div>"
+<p><b>PMO Medical Orders</b></p><p><i>Order Exists: <a href=\"http://www.example.com\">available here</a></i></p></div>"
 
 * section[portable_medical_orders].entry[+] = Reference(ServiceRequest/Example-Smith-Johnson-CPR-ServiceRequest1)
 
@@ -90,8 +88,8 @@ Usage: #example
 * section[additional_documentation].code = $LOINC#77599-9
 * section[additional_documentation].text.status = #generated
 * section[additional_documentation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-<p><b>PMOLST Order Observation</b></p>
-<p><i>Order Exists: <a href='http://www.example.com'>available here</a></i></p>
+  <p><b>PMOLST Order Observation</b></p>
+  <p><i>Order Exists: <a href=\"http://www.example.com\">available here</a></i></p>
 </div>"
 
 * section[additional_documentation].entry[+] = Reference(Example-Smith-Johnson-DocumentationObservation2)
@@ -232,7 +230,7 @@ Usage: #example
 Description: "Margaret A. Reynolds' Facilitator Role"
 * active = true
 * code = $HL7v3ParticipationType#PPRF
-* practitioner = Reference(Practitioner/Practitioner-MargaretReynolds) "Margaret A. Reynolds"
+* practitioner = Reference(PractitionerRole/PractitionerRole-MSW-MargaretReynolds) "Margaret A. Reynolds"
 
 Instance: Practitioner-MargaretReynolds
 InstanceOf: Practitioner
@@ -240,7 +238,6 @@ Usage: #example
 Description: "Margaret Q. Reynolds's practitioner record."
 * meta.versionId = "4"
 * meta.lastUpdated = "2024-09-20T19:03:21.000+00:00"
-// * meta.source = "#S7gHLyFgHVToyfil"
 * identifier.system = "http://example.org/fhir/MI-state-license"
 * identifier.value = "86420"
 * active = true
@@ -257,6 +254,15 @@ Description: "Margaret Q. Reynolds's practitioner record."
 * address.postalCode = "48224"
 * address.country = "US"
 * gender = #female
+
+Instance: PractitionerRole-MSW-MargaretReynolds
+InstanceOf: PractitionerRole
+Usage: #example
+Description: "Margaret A. Reynolds' role"
+* active = true
+* code = $SNOMEDCT#224598009 "Trained social worker counselor (occupation)" // modified for the US Core specified Care Team Function value set 2.16.840.1.113762.1.4.1099.30
+* practitioner = Reference(Practitioner/Practitioner-MargaretReynolds) "Margaret A. Reynolds"
+// * organization = Reference(Organization/Example-Smith-Johnson-OrganizationAssembler1) "Example Organization"
 
 Instance: Example-Smith-Johnson-DocumentationObservation2
 InstanceOf: ADIDocumentationObservation

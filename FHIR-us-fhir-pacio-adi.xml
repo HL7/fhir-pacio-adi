@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/pacio-adi/2022Jan" ciUrl="http://build.fhir.org/ig/HL7/fhir-pacio-adi" defaultVersion="1.0.0" defaultWorkgroup="pe" gitUrl="https://github.com/HL7/pacio-adi" url="http://hl7.org/fhir/us/pacio-adi">
-<version code="current" url="http://build.fhir.org/ig/HL7/fhir-pacio-adi"/>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="" defaultVersion="1.0.0" defaultWorkgroup="pe" gitUrl="https://github.com/HL7/pacio-adi" url="http://hl7.org/fhir/us/fhir-pacio-adi">
+<version code="current" url=""/>
 <version code="1.0.0" url="http://hl7.org/fhir/us/pacio-adi/STU1"/>
-<version code="0.1.0" url="http://hl7.org/fhir/us/pacio-adi/2022Jan"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
@@ -202,7 +201,6 @@
 <artifact id="ValueSet/LOINCPOLSTReviewAnswerList" key="ValueSet-LOINCPOLSTReviewAnswerList" name="LOINC POLST review Answer List"/>
 <artifact id="ValueSet/ADIDMedicallyAssistedHydrationNutritionOrderVS" key="ValueSet-ADIDMedicallyAssistedHydrationNutritionOrderVS" name="Medically Assisted Hydration Order"/>
 <artifact id="ValueSet/ADIDMedicallyAssistedHydrationNutritionOrderGroupingVS" key="ValueSet-ADIDMedicallyAssistedHydrationNutritionOrderGroupingVS" name="Medically Assisted Hydration Order Grouping"/>
-<artifact id="Composition/2517482f-82e4-4f3d-bcc6-5a082bbf3286" key="Composition-2517482f-82e4-4f3d-bcc6-5a082bbf3286" name="Mental Health Directive (Maryland)"/>
 <artifact deprecated="true" id="List/Example-McBee-PersonalPrioritiesOrganizer1" key="List-Example-McBee-PersonalPrioritiesOrganizer1" name="My Advance Care Goals"/>
 <artifact id="ValueSet/ADINoHealthcareAgentIncludedReasonVS" key="ValueSet-PADINoHealthcareAgentIncludedReasonVS" name="No Healthcare Agent Included Reason"/>
 <artifact id="StructureDefinition/adi-notaryInformation-extension" key="StructureDefinition-adi-notaryInformation-extension" name="Notary Information"/>
@@ -220,14 +218,12 @@
 <artifact id="Composition/PMO-Example-Smith-Johnson-PMOComposition1" key="Composition-PMO-Example-Smith-Johnson-PMOComposition1" name="Portable Medical Order"/>
 <artifact id="ValueSet/ADIPMOConsentCategoriesVS" key="ValueSet-ADIPMOConsentCategoriesVS" name="Portable Medical Order Categories"/>
 <artifact id="Practitioner/Practitioner-MargaretReynolds" key="Practitioner-Practitioner-MargaretReynolds" name="Practitioner-MargaretReynolds"/>
-<artifact id="PractitionerRole/PractitionerRole-MSW-MargaretReynolds" key="PractitionerRole-PractitionerRole-MSW-MargaretReynolds" name="PractitionerRole-MSW-MargaretReynolds"/>
 <artifact deprecated="true" id="ValueSet/PADIPresenceIndicatorVS" key="ValueSet-PADIPresenceIndicatorVS" name="Presence Indicator"/>
 <artifact id="List/Example-Smith-Johnson-PersonalPrioritiesOrganizer1" key="List-Example-Smith-Johnson-PersonalPrioritiesOrganizer1" name="Priorities for Goals and Preferences"/>
 <artifact id="StructureDefinition/adi-document-revoke-status" key="StructureDefinition-adi-document-revoke-status" name="Revoke Status"/>
 <artifact deprecated="true" id="ValueSet/PADIClauseTypeVS" key="ValueSet-PADIClauseTypeVS" name="Type of clause"/>
 <artifact deprecated="true" id="ValueSet/PADIUponDeathPreferencesVS" key="ValueSet-PADIUponDeathPreferencesVS" name="Upon Death Preferences"/>
 <artifact id="StructureDefinition/adi-docVersionNumber-extension" key="StructureDefinition-padi-versionNumber-extension" name="Version Number"/>
-<artifact id="Bundle/bfcbe3a5-0807-4d09-937c-8f2a6c87b8c9" key="Bundle-bfcbe3a5-0807-4d09-937c-8f2a6c87b8c9" name="bfcbe3a5-0807-4d09-937c-8f2a6c87b8c9"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
