@@ -215,7 +215,7 @@ Usage: #example
 * section[gpp_personal_care_experience].code = $LOINC#81338-6 "Patient Goals, Preferences, and Priorities for Care Experience"
 * section[gpp_personal_care_experience].text.status = #additional
 * section[gpp_personal_care_experience].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-<p><i>MyDirectives® offers people a list of optional questions that can be answered by typing text in a text box or by uploading a video or audio file for each question. Only those questions answered by Betsy Smith-Johnson appear here. For a complete list of questions in My Thoughts, please visit www.MyDirectives.com.</i></p>
+<p><i>MyDirectives® offers people a list of optional questions that can be answered by typing text in a text box or by uploading a video or audio file for each question. Only those questions answered by Betsy Smith-Johnson appear here. For a complete list of questions in My Thoughts, please visit www.example.org.</i></p>
 <p> </p>
 <p><b>In case I’m being cared for by a person(s) who doesn't know me very well, I’d like my following thoughts to be known.</b></p>
 <p> </p>
@@ -1203,7 +1203,7 @@ Usage: #example
 * identifier.system = "http://hl7.org/fhir/sid/us-npi"
 * identifier.value = "1234567893"
 * active = true
-* name = "MyDirectives.com"
+* name = "example.org"
 
 * telecom[0].system = #phone
 * telecom[0].value = "+1(202)776-7700"

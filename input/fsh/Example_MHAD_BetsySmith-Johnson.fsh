@@ -27,7 +27,7 @@ InstanceOf: Composition
 Usage: #example
 * extension.url = "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber"
 * extension.valueString = "1703257800"
-* identifier.system = "https://mydirectives.com/standards/terminology/namingSystem/setId"
+* identifier.system = "https://example.org/standards/terminology/namingSystem/setId"
 * identifier.value = "2.16.840.1.113883.15.15.200.1:11220-d580858d0d83427381cd9d2237580048"
 * status = #final
 * type = $loinc#104144-1 "Mental Health Directive"

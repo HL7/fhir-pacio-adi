@@ -261,7 +261,7 @@ Usage: #example
 Description: "Margaret A. Reynolds' role"
 * active = true
 * code = $SNOMEDCT#224598009 "Trained social worker counselor (occupation)" // modified for the US Core specified Care Team Function value set 2.16.840.1.113762.1.4.1099.30
-// * practitioner = Reference(Practitioner/Practitioner-MargaretReynolds) "Margaret A. Reynolds"
+* practitioner = Reference(Practitioner/Practitioner-MargaretReynolds) "Margaret A. Reynolds"
 // * organization = Reference(Organization/Example-Smith-Johnson-OrganizationAssembler1) "Example Organization"
 
 Instance: Example-Smith-Johnson-DocumentationObservation2
