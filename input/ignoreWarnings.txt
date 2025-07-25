@@ -16,6 +16,10 @@ None of the codings provided are in the value set 'Observation Category Codes' (
 provenance-1: The left side is inherently a collection, and so the expression '%resource.agent.who.resolve() is Practitioner' may fail or return false if there is more than one item in the content being evaluated
 provenance-1: The left side is inherently a collection, and so the expression '%resource.agent.who.resolve() is Device' may fail or return false if there is more than one item in the content being evaluated
 
+# USCoreDocumentReference error on constraints not specified or used by ADI FHIR IG and needs to be resolved by the US Core project team.
+%The slice 'uscore' on path 'DocumentReference.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true%
+%The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet|5.2.0 is deprecated%
+
 # Draft and deprecated versions of code system that are part of the base are not due to the ADI FHIR IG.
 %Reference to draft item http://terminology.hl7.org/CodeSystem/provenance-participant-type|1.0.0%
 %Reference to draft CodeSystem http://hl7.org/fhir/narrative-status|4.0.1%
@@ -47,3 +51,6 @@ provenance-1: The left side is inherently a collection, and so the expression '%
 
 # Since this IG is based on FHIR R4, the pattern discriminator is still valid. The deprecation warning is for future R5+ compatibility, but it won't break the current implementation.
 %The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)%
+
+# The additional specified codes are essential for the management of advance directive documents. The ADI specification team is working with the Structured Documents Working Group to add these additional codes.
+%Binding http://hl7.org/fhir/us/pacio-adi/ValueSet/ADIDocumentReferenceStatusVS is not a subset of binding http://hl7.org/fhir/ValueSet/composition-status|4.0.1 because The codes 'current,superseded,entered-in-error' are not in the base valueset%

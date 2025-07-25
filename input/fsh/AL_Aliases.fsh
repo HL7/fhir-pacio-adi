@@ -17,7 +17,7 @@ Alias:   $USCoreEthnicity = http://hl7.org/fhir/us/core/StructureDefinition/us-c
 
 Alias: $USCoreDocumentReference = http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
 Alias: $USCoreDocumentReferenceType = http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-type
-Alias: $USCoreDocumentReferenceCategory = http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-category
+Alias: $USCoreDocumentReferenceCategory = http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-category|8.0.0
 Alias: $USCoreConditionCode = http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code
 
 Alias: $USRealmHeader = http://hl7.org/fhir/us/ccda/StructureDefinition/US-Realm-Header
@@ -50,8 +50,8 @@ Alias: $HL7ServiceEventPerformer = http://terminology.hl7.org/ValueSet/v3-xServi
 Alias: $HL7v3ParticipationType = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
 
 Alias: $HL7ObservationCategory = http://terminology.hl7.org/CodeSystem/observation-category
-Alias: $HL7CompositionStatusR5 = http://hl7.org/fhir/composition-status|5.0.0
-Alias: $HL7DocumentReferenceStatusR5 = http://hl7.org/fhir/document-reference-status|5.0.0
+Alias: $HL7CompositionStatusR5 = http://hl7.org/fhir/composition-status
+Alias: $HL7DocumentReferenceStatusR5 = http://hl7.org/fhir/document-reference-status
 Alias: $HL7AdataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason
 Alias: $HL7ConsentCategoryCodes = http://terminology.hl7.org/CodeSystem/consentcategorycodes
 
