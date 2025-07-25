@@ -54,7 +54,7 @@ Usage: #example
 * extension[adi-performer-extension].valueReference = Reference(PractitionerRole/Example-Kyle-Anydoc-PractitionerRole1)
 * extension[adi-informant-extension].valueReference = Reference(RelatedPerson/Example-Smith-Johnson-HealthcareAgent1)
 * extension[adi-document-revoke-status].valueCode = ADIRevokeStatusCS#deprecated
-* extension[adi-clause-extension].extension[Clause].valueMarkdown = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Example Clause Statement</p></div>"
+* extension[adi-clause-extension].extension[Clause].valueMarkdown = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Example Clause Statement</p></div>"
 
 * identifier.system = "http://example.org/GoodHealthClinic/id"
 * identifier.value = "0-87f37989294a408897aacd1fc5d8fd16"
@@ -79,7 +79,7 @@ Usage: #example
 * section[portable_medical_orders].title = "Portable Medical Orders"
 * section[portable_medical_orders].text.status = #generated
 * section[portable_medical_orders].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-<p><b>PMO Medical Orders</b></p><p><i>Order Exists: <a href='http://www.example.com'>available here</a></i></p></div>"
+<p><b>PMO Medical Orders</b></p><p><i>Order Exists: <a href=\"http://www.example.com\">available here</a></i></p></div>"
 
 * section[portable_medical_orders].entry[+] = Reference(ServiceRequest/Example-Smith-Johnson-CPR-ServiceRequest1)
 
@@ -88,8 +88,8 @@ Usage: #example
 * section[additional_documentation].code = $LOINC#77599-9
 * section[additional_documentation].text.status = #generated
 * section[additional_documentation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-<p><b>PMOLST Order Observation</b></p>
-<p><i>Order Exists: <a href='http://www.example.com'>available here</a></i></p>
+  <p><b>PMOLST Order Observation</b></p>
+  <p><i>Order Exists: <a href=\"http://www.example.com\">available here</a></i></p>
 </div>"
 
 * section[additional_documentation].entry[+] = Reference(Example-Smith-Johnson-DocumentationObservation2)
