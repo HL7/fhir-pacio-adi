@@ -1,7 +1,7 @@
 Profile: ADIDocumentReference
 // [TODO] Does this need to derive from US Core DocumentReference? If so, need to review the requirements below and remove incompatible or redundant requirements
 // Parent: DocumentReference
-Parent: $USCoreDocumentReference
+Parent: DocumentReference
 Id: ADI-DocumentReference
 Title: "ADI Document Reference"
 Description: "This profile defines constraints that represent the information needed to register an advance directive information document on a FHIR server."
@@ -68,7 +68,9 @@ Description: "This profile defines constraints that represent the information ne
 * context.encounter only Reference($USCoreEncounter)
 * context.period MS
 
-* docStatus from ADIDocumentReferenceStatusVS (required) // fix for FHIR-46153
+// * docStatus from ADIDocumentReferenceStatusVS (required) // fix for FHIR-46153
+
+* docStatus from http://hl7.org/fhir/us/pacio-adi/ValueSet/ADICompositionStatusVS (required)
 
 * extension contains
     adi-document-revoke-status named DocumentRevokeStatus 0..1 MS and

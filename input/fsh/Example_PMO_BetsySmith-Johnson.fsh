@@ -23,10 +23,10 @@ Usage: #example
 * entry[=].resource = Example-Smith-Johnson-CPR-ServiceRequest1
 * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-DocumentationObservation2"
 * entry[=].resource = Example-Smith-Johnson-DocumentationObservation2
-// * entry[+].fullUrl = "http://www.example.org/fhir/PractitionerRole/ADI-Facilitator-MSW-MargaretReynolds"
-// * entry[=].resource = ADI-Facilitator-MSW-MargaretReynolds
-// * entry[+].fullUrl = "http://www.example.org/fhir/Practitioner/Practitioner-MargaretReynolds"
-// * entry[=].resource = Practitioner-MargaretReynolds
+* entry[+].fullUrl = "http://www.example.org/fhir/PractitionerRole/ADI-Facilitator-MSW-MargaretReynolds"
+* entry[=].resource = ADI-Facilitator-MSW-MargaretReynolds
+* entry[+].fullUrl = "http://www.example.org/fhir/Practitioner/Practitioner-MargaretReynolds"
+* entry[=].resource = Practitioner-MargaretReynolds
 * entry[+].fullUrl = "http://www.example.org/fhir/Consent/Example-Smith-Johnson-HealthcareAgentConsent-Permit"
 * entry[=].resource = Example-Smith-Johnson-HealthcareAgentConsent-Permit
 * entry[+].fullUrl = "http://www.example.org/fhir/Consent/Example-Smith-Johnson-HealthcareAgentConsent-Deny"
@@ -72,7 +72,7 @@ Usage: #example
 
 * custodian = Reference(Example-Smith-Johnson-OrganizationCustodian1)
 
-// * event.detail[0] = Reference(PractitionerRole/ADI-Facilitator-MSW-MargaretReynolds)
+* event.detail[0] = Reference(PractitionerRole/ADI-Facilitator-MSW-MargaretReynolds)
 * event.detail[0] = Reference(Consent/Example-Smith-Johnson-HealthcareAgentConsent-Permit)
 * event.detail[+] = Reference(Consent/Example-Smith-Johnson-HealthcareAgentConsent-Deny)
 
@@ -230,14 +230,15 @@ Usage: #example
 Description: "Margaret A. Reynolds' Facilitator Role"
 * active = true
 * code = $HL7v3ParticipationType#PPRF
-* practitioner = Reference(PractitionerRole/PractitionerRole-MSW-MargaretReynolds) "Margaret A. Reynolds"
+* specialty = $NUCC#1041C0700X "Clinical Social Worker"
+* practitioner = Reference(Practitioner/Practitioner-MargaretReynolds) "Margaret A. Reynolds"
+* organization = Reference(Organization/Example-Smith-Johnson-OrganizationAssembler1) "Example Organization"
+* endpoint = Reference(Example-Smith-Johnson-Endpoint2)
 
 Instance: Practitioner-MargaretReynolds
 InstanceOf: Practitioner
 Usage: #example
 Description: "Margaret Q. Reynolds's practitioner record."
-* meta.versionId = "4"
-* meta.lastUpdated = "2024-09-20T19:03:21.000+00:00"
 * identifier.system = "http://example.org/fhir/MI-state-license"
 * identifier.value = "86420"
 * active = true
@@ -255,14 +256,6 @@ Description: "Margaret Q. Reynolds's practitioner record."
 * address.country = "US"
 * gender = #female
 
-Instance: PractitionerRole-MSW-MargaretReynolds
-InstanceOf: PractitionerRole
-Usage: #example
-Description: "Margaret A. Reynolds' role"
-* active = true
-* code = $SNOMEDCT#224598009 "Trained social worker counselor (occupation)" // modified for the US Core specified Care Team Function value set 2.16.840.1.113762.1.4.1099.30
-* practitioner = Reference(Practitioner/Practitioner-MargaretReynolds) "Margaret A. Reynolds"
-// * organization = Reference(Organization/Example-Smith-Johnson-OrganizationAssembler1) "Example Organization"
 
 Instance: Example-Smith-Johnson-DocumentationObservation2
 InstanceOf: ADIDocumentationObservation
@@ -317,3 +310,18 @@ Usage: #example
 * address[0].state = "TX"
 * address[0].postalCode = "75081"
 * address[0].country = "US"
+
+Instance: Example-Smith-Johnson-Endpoint2
+InstanceOf: Endpoint
+Usage: #example
+Description: "Betsy Smith-Johnson MHAD Composition Example"
+
+* identifier.system = "https://example.org/GoodHealth-Clinic"
+* identifier.value = "PatientCorrection"
+* connectionType = $endpoint-connection-type#hl7-fhir-rest "HL7 FHIR"
+* status = #active
+* name = "Good Health Clinic Endpoint"
+* payloadType.coding[0] = $HL7v3DocumentFormatCodes#urn:hl7-org:sdwg:ccda-nonXMLBody:1.1
+* payloadType.coding[+] = $HL7v3DocumentFormatCodes#urn:hl7-org:sdwg:ccda-structuredBody:1.1
+* payloadType.text = "For documents following C-CDA constraints using a structured body"
+* address = "https://example.org/address"

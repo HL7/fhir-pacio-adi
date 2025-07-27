@@ -162,6 +162,8 @@
 <artifact id="DocumentReference/Example-Smith-Johnson-DocRef-DocumentReference" key="DocumentReference-Example-Smith-Johnson-DocRef-DocumentReference" name="Example-Smith-Johnson-DocRef-DocumentReference"/>
 <artifact id="Observation/Example-Smith-Johnson-DocumentationObservation1" key="Observation-Example-Smith-Johnson-DocumentationObservation1" name="Example-Smith-Johnson-DocumentationObservation1"/>
 <artifact id="Observation/Example-Smith-Johnson-DocumentationObservation2" key="Observation-Example-Smith-Johnson-DocumentationObservation2" name="Example-Smith-Johnson-DocumentationObservation2"/>
+<artifact id="Endpoint/Example-Smith-Johnson-Endpoint1" key="Endpoint-Example-Smith-Johnson-Endpoint1" name="Example-Smith-Johnson-Endpoint1"/>
+<artifact id="Endpoint/Example-Smith-Johnson-Endpoint2" key="Endpoint-Example-Smith-Johnson-Endpoint2" name="Example-Smith-Johnson-Endpoint2"/>
 <artifact id="RelatedPerson/Example-Smith-Johnson-HealthcareAgent1" key="RelatedPerson-Example-Smith-Johnson-HealthcareAgent1" name="Example-Smith-Johnson-HealthcareAgent1"/>
 <artifact id="RelatedPerson/Example-Smith-Johnson-HealthcareAgent2" key="RelatedPerson-Example-Smith-Johnson-HealthcareAgent2" name="Example-Smith-Johnson-HealthcareAgent2"/>
 <artifact id="Consent/Example-Smith-Johnson-HealthcareAgentConsent" key="Consent-Example-Smith-Johnson-HealthcareAgentConsent" name="Example-Smith-Johnson-HealthcareAgentConsent"/>
@@ -220,13 +222,13 @@
 <artifact id="Composition/PMO-Example-Smith-Johnson-PMOComposition1" key="Composition-PMO-Example-Smith-Johnson-PMOComposition1" name="Portable Medical Order"/>
 <artifact id="ValueSet/ADIPMOConsentCategoriesVS" key="ValueSet-ADIPMOConsentCategoriesVS" name="Portable Medical Order Categories"/>
 <artifact id="Practitioner/Practitioner-MargaretReynolds" key="Practitioner-Practitioner-MargaretReynolds" name="Practitioner-MargaretReynolds"/>
-<artifact id="PractitionerRole/PractitionerRole-MSW-MargaretReynolds" key="PractitionerRole-PractitionerRole-MSW-MargaretReynolds" name="PractitionerRole-MSW-MargaretReynolds"/>
 <artifact deprecated="true" id="ValueSet/PADIPresenceIndicatorVS" key="ValueSet-PADIPresenceIndicatorVS" name="Presence Indicator"/>
 <artifact id="List/Example-Smith-Johnson-PersonalPrioritiesOrganizer1" key="List-Example-Smith-Johnson-PersonalPrioritiesOrganizer1" name="Priorities for Goals and Preferences"/>
 <artifact id="StructureDefinition/adi-document-revoke-status" key="StructureDefinition-adi-document-revoke-status" name="Revoke Status"/>
 <artifact deprecated="true" id="ValueSet/PADIClauseTypeVS" key="ValueSet-PADIClauseTypeVS" name="Type of clause"/>
 <artifact deprecated="true" id="ValueSet/PADIUponDeathPreferencesVS" key="ValueSet-PADIUponDeathPreferencesVS" name="Upon Death Preferences"/>
 <artifact id="StructureDefinition/adi-docVersionNumber-extension" key="StructureDefinition-padi-versionNumber-extension" name="Version Number"/>
+<artifact id="Binary/b193ff07-d6ca-495d-a995-b222f87d5942" key="Binary-b193ff07-d6ca-495d-a995-b222f87d5942" name="b193ff07-d6ca-495d-a995-b222f87d5942"/>
 <artifact id="Bundle/bfcbe3a5-0807-4d09-937c-8f2a6c87b8c9" key="Bundle-bfcbe3a5-0807-4d09-937c-8f2a6c87b8c9" name="bfcbe3a5-0807-4d09-937c-8f2a6c87b8c9"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>

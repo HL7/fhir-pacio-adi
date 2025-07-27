@@ -1295,7 +1295,7 @@ Usage: #example
 * securityLabel.coding[0] = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N "normal"
 
 * content[0].attachment.contentType = #text/xml
-* content[0].attachment.url = "http://hl7.org/fhir/us/pacio-adi/Binary/Example-Smith-Johnson-DocRef-Binary1"
+* content[0].attachment.url = "http://example.org/Binary/Example-Smith-Johnson-DocRef-Binary1"
 * content[0].attachment.creation = "2015-11-05T15:52:20.000+00:00"
 
 
