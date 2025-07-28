@@ -61,8 +61,9 @@ Description: "Betsy Smith-Johnson MHAD Composition Example"
 <p>I am appointing my son, Charles Johnson, as my healthcare agent</p>
 </div>"
 
-* section[minimal_source_form].title = "MHAD Minimal Source Form for Betsy Smith-Johnson"
 * section[minimal_source_form].entry[+] = Reference(Binary/MHAD-Example-Smith-Johnson-Binary)
+* section[minimal_source_form].title = "MHAD Minimal Source Form for Betsy Smith-Johnson"
+* section[minimal_source_form].code = ADITempCS#minimal_source_form
 * section[minimal_source_form].text.status = #additional
 * section[minimal_source_form].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p>I am emotionally and mentally competent to make this Mental Health Advance Directive (MHAD). I understand the purpose and effect of this MHAD, I agree with everything that is written in this uADD, and I have made this MHAD knowingly, willingly and after careful deliberation.</p>
@@ -146,11 +147,10 @@ Usage: #example
 // * policy.authority = "https://www.michigan.gov"
 * policy.uri = "http://example.org/healthcare-agent-policy"  // fictitious policy URL for example
 
-//[TODO] do we need to support and require provision.actor for all HCA's?
 * provision.actor[+].role = $LOINC#75783-1 "Primary healthcare agent [Reported]"
-* provision.actor[=].reference = Reference(Example-Smith-Johnson-HealthcareAgent1)
+* provision.actor[=].reference = Reference(RelatedPerson/Example-Smith-Johnson-HealthcareAgent1)
 * provision.actor[+].role = $LOINC#75784-9 "First alternate healthcare agent [Reported]"
-* provision.actor[=].reference = Reference(Example-Smith-Johnson-HealthcareAgent3)
+* provision.actor[=].reference = Reference(RelatedPerson/Example-Smith-Johnson-HealthcareAgent3)
 
 * provision.action[+] = ADIHCADecisionsCS#intubation "Intubation"
 * provision.action[+] = ADIHCADecisionsCS#tube-feeding "Tube feeding"

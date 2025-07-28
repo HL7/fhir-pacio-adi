@@ -25,6 +25,10 @@ Usage: #example
 * entry[=].resource = Example-Smith-Johnson-DocumentationObservation2
 * entry[+].fullUrl = "http://www.example.org/fhir/PractitionerRole/ADI-Facilitator-MSW-MargaretReynolds"
 * entry[=].resource = ADI-Facilitator-MSW-MargaretReynolds
+* entry[+].fullUrl = "http://www.example.org/fhir/Practitioner/Practitioner-MargaretReynolds"
+* entry[=].resource = Practitioner-MargaretReynolds
+* entry[+].fullUrl = "http://www.example.org/fhir/Endpoint/Example-Smith-Johnson-Endpoint2"
+* entry[=].resource = Example-Smith-Johnson-Endpoint2
 * entry[+].fullUrl = "http://www.example.org/fhir/Consent/Example-Smith-Johnson-HealthcareAgentConsent-Permit"
 * entry[=].resource = Example-Smith-Johnson-HealthcareAgentConsent-Permit
 * entry[+].fullUrl = "http://www.example.org/fhir/Consent/Example-Smith-Johnson-HealthcareAgentConsent-Deny"
