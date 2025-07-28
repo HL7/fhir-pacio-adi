@@ -36,7 +36,6 @@ provenance-1: The left side is inherently a collection, and so the expression '%
 %A definition could not be found for Canonical URL 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.7'%
 %A definition could not be found for Canonical URL 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.27'%
 %The value set import https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.27 could not be found so cannot be checked%
-%Unable to find included value set 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.27'%
 %ValueSet 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.28' not found%
 %ValueSet 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.31' not found%
 %A definition could not be found for Canonical URL 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.31'%
@@ -48,6 +47,7 @@ provenance-1: The left side is inherently a collection, and so the expression '%
 %A definition could not be found for Canonical URL 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.36'%
 %ValueSet 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1240.1' not found%
 %A definition could not be found for Canonical URL 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1240.1'%
+%Unable to find included value set 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.27'%
 
 # Since this IG is based on FHIR R4, the pattern discriminator is still valid. The deprecation warning is for future R5+ compatibility, but it won't break the current implementation.
 %The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)%
@@ -63,3 +63,18 @@ provenance-1: The left side is inherently a collection, and so the expression '%
 
 # Advance Directive documents require document types that are currently not supported in US Core. The ADI team is working with Structure Documents and US Core for better alignment. In the meantime, we had to fall back to the DocumentReference base resource.
 %US FHIR Usage rules require that all profiles on DocumentReference derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process.%
+
+# The repeating element pattern is intentional for consistency in each ADI profile.
+%The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)%
+
+# ADI intentional variance for the several profiles
+%This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-PMOCPRServiceRequest|2.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)%
+%This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-Bundle|2.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)%
+%This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-DocumentReference|2.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)%
+%Details for Observation/Example-Smith-Johnson-AutopsyObservation1 matching against profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-PersonalInterventionPreference|2.0.0-ballot%
+%This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|8.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)%
+
+# A fictitious and non-existent example.org was used on purpose for sample data creation.
+%Can't find 'http://example.org/healthcare-agent-policy' in the bundle (Bundle.entry[5].resource.policy[0].uri)%
+%Can't find 'http://example.org/healthcare-agent-policy' in the bundle (Bundle.entry[10].resource.policy[0].uri)%
+%Can't find 'http://example.org/healthcare-agent-policy' in the bundle (Bundle.entry[11].resource.policy[0].uri)%

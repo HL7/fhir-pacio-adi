@@ -193,7 +193,7 @@ ValueSet: ADIInitialTreatmentPMOOptionsVS
 Title: "Initial Treatment Portable Medical Order Options"
 Description: "Initial Treatment Portable Medical Order Options."
 * ^experimental = false
-* include codes from valueset $VSACADIInitialTreatmentPMOOptions
+// * include codes from valueset $VSACADIInitialTreatmentPMOOptions // commented out since $VSACADIInitialTreatmentPMOOptionsGrouping contains the oid from $VSACADIInitialTreatmentPMOOptions
 * include codes from valueset $VSACADIInitialTreatmentPMOOptionsGrouping
 
 /* ********** RuleSets *********/

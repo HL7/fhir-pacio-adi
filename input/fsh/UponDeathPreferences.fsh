@@ -7,7 +7,7 @@ Description: "This profile is used to represent the author's thoughts about pref
 * text 1..1 MS
 * status = #final
 
-* category = #care-experience-preference
+* category = ADIPreferenceCategoryCS#care-experience-preference
 * code 1..1 MS
 * code from $VSACUponDeathPreferences (extensible)
 * code.text 0..1 MS

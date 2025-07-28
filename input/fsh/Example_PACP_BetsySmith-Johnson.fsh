@@ -373,8 +373,8 @@ Usage: #example
 </div>"
 
 
-// // Participant examples
-// // Healthcare Agent examples
+// Participant examples
+// Healthcare Agent examples
 
 Instance: Example-Smith-Johnson-HealthcareAgent1
 InstanceOf: ADIHealthcareAgentParticipant
@@ -1145,7 +1145,6 @@ Usage: #example
 <p><i>I consent to donate all organs and tissues.</i></p>
 </div>"
 * status = #final
-// * code = $LOINC#75781-5 "Thoughts on organ and tissue donations Narrative - Reported"
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * valueString = "Consent to Donate: I consent to donate all organs and tissues."
 * performer = Reference(Example-Smith-Johnson-Patient1)

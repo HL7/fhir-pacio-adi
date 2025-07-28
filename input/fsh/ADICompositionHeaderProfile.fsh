@@ -8,22 +8,7 @@ Description: "This abstract profile defines constraints that represent common ad
 * language 1..1 MS
 
 * extension[composition-clinicaldocument-versionNumber] 1..1 MS
-// Need extensions
-//* extension contains
-//    http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber named versionNumber 0..1 
-/*    
-    http://hl7.org/fhir/us/ccda/StructureDefinition/VersionNumber named version_number_extension 0..1 MS and
-    http://hl7.org/fhir/us/ccda/StructureDefinition/DataEntererExtension named data_enterer_extension 0..1 MS and
-    http://hl7.org/fhir/us/ccda/StructureDefinition/InformantExtension named informant_extension 0..* MS and
-    http://hl7.org/fhir/us/ccda/StructureDefinition/InformationRecipientExtension named information_recipient_extension 0..* MS and
-    http://hl7.org/fhir/us/ccda/StructureDefinition/ParticipantExtension named participant_extension 0..* MS and
-    http://hl7.org/fhir/us/ccda/StructureDefinition/PerformerExtension named performer_extension 0..* MS and
-    http://hl7.org/fhir/us/ccda/StructureDefinition/AuthorizationExtension named authorization_extension 0..* MS and
-    http://hl7.org/fhir/us/ccda/StructureDefinition/OrderExtension named order_extension 0..* MS
-    */
-
 * extension contains
-  //  adi-versionNumber-extension named VersionNumber 0..1 MS and
     adi-expiration-date-extension named ExpirationDateExtension 0..1 and
   //  adi-jurisdiction-extension named Jurisdiction 0..* and 
     http://hl7.org/fhir/us/core/StructureDefinition/us-core-jurisdiction named Jurisdiction 0..* and  // fix for FHIR-49201
