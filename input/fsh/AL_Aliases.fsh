@@ -19,6 +19,7 @@ Alias: $USCoreDocumentReference = http://hl7.org/fhir/us/core/StructureDefinitio
 Alias: $USCoreDocumentReferenceType = http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-type
 Alias: $USCoreDocumentReferenceCategory = http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-category|8.0.0
 Alias: $USCoreConditionCode = http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code
+Alias: $USCoreServiceRequestCategory = http://hl7.org/fhir/us/core/CodeSystem/us-core-category
 
 Alias: $USRealmHeader = http://hl7.org/fhir/us/ccda/StructureDefinition/US-Realm-Header
 
@@ -36,6 +37,7 @@ Alias: $HL7ConsentCategoryCodes = http://terminology.hl7.org/CodeSystem/consentc
 Alias: $HL7ConsentCategoryVS = http://hl7.org/fhir/ValueSet/consent-category
 Alias: $HL7JurisdictionCodesVS = http://terminology.hl7.org/ValueSet/USPS-State
 Alias: $HL7DegreeLicenseCertificate = http://terminology.hl7.org/ValueSet/v2-0360
+Alias: $HL7DocumentRelationshipType = http://hl7.org/fhir/document-relationship-type
 Alias: $USPSCodes = https://www.usps.com/
 
 Alias: $LOINC = http://loinc.org

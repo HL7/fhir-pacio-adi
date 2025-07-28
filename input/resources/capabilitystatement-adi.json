@@ -23,7 +23,7 @@
         "json"
     ],
     "implementationGuide": [
-        "https://build.fhir.org/ig/HL7/pacio-adi/ImplementationGuide-hl7.fhir.us.pacio-adi"
+        "http://hl7.org/fhir/us/pacio-adi/ImplementationGuide/hl7.fhir.us.pacio-adi"
     ],
     "jurisdiction": [
         {
@@ -238,8 +238,8 @@
                         "resolves"
                     ],
                     "supportedProfile": [
-                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-Composition-Header.html",
-                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-PACPComposition.html"
+                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-Composition-Header",
+                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-PACPComposition."
                     ],
                     "type": "Composition"
                 },
@@ -310,8 +310,8 @@
                         "resolves"
                     ],
                     "supportedProfile": [
-                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-HealthcareAgentAuthority.html",
-                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-ConsentForHealthcareAgent.html"
+                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-HealthcareAgentAuthority",
+                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-ConsentForHealthcareAgent"
                     ],
                     "type": "Consent"
                 },
@@ -659,7 +659,7 @@
                         }
                     ],
                     "supportedProfile": [
-                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-DocumentReference.html"
+                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-DocumentReference"
                     ],
                     "type": "DocumentReference"
                 },
@@ -730,7 +730,7 @@
                         "resolves"
                     ],
                     "supportedProfile": [
-                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-PersonalGoal.html"
+                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-PersonalGoal"
                     ],
                     "type": "Goal"
                 },
@@ -801,7 +801,7 @@
                         "resolves"
                     ],
                     "supportedProfile": [
-                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-PersonalPrioritiesOrganizer.html"
+                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-PersonalPrioritiesOrganizer"
                     ],
                     "type": "List"
                 },
@@ -872,11 +872,11 @@
                         "resolves"
                     ],
                     "supportedProfile": [
-                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-DocumentationObservation.html",
-                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-PersonalInterventionPreference.html",
-                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-OrganDonationObservation.html",
-                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-AutopsyObservation.html",
-                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-CareExperiencePreference.html"
+                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-DocumentationObservation",
+                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-PersonalInterventionPreference",
+                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-OrganDonationObservation",
+                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-AutopsyObservation",
+                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-CareExperiencePreference"
                     ],
                     "type": "Observation"
                 },
@@ -1111,7 +1111,7 @@
                                     "valueCode": "SHALL"
                                 }
                             ],
-                            "definition": "https://build.fhir.org/ig/HL7/pacio-adi/SearchParameter/patient-birthdate",
+                            "definition": "http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-birthdate",
                             "documentation": "https://www.hl7.org/fhir/us/core/SearchParameter-us-core-patient-birthdate.html",
                             "name": "birthdate",
                             "type": "date"
@@ -1160,18 +1160,6 @@
                             "documentation": "https://www.hl7.org/fhir/us/core/SearchParameter-us-core-patient-family.html",
                             "name": "family",
                             "type": "string"
-                        },
-                        {
-                            "extension": [
-                                {
-                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                                    "valueCode": "SHALL"
-                                }
-                            ],
-                            "definition": "http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-gender",
-                            "documentation": "https://www.hl7.org/fhir/us/core/SearchParameter-us-core-patient-given.html",
-                            "name": "gender",
-                            "type": "token"
                         },
                         {
                             "extension": [
@@ -1312,7 +1300,7 @@
                         }
                     ],
                     "supportedProfile": [
-                        "https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html"
+                        "https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-patient"
                     ],
                     "type": "Patient"
                 },
@@ -1383,7 +1371,7 @@
                         "resolves"
                     ],
                     "supportedProfile": [
-                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-Provenance.html"
+                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-Provenance"
                     ],
                     "type": "Provenance"
                 },
@@ -1454,8 +1442,7 @@
                         "resolves"
                     ],
                     "supportedProfile": [
-                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-HealthcareAgent.html",
-                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-Guardian.html"
+                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-HealthcareAgent"
                     ],
                     "type": "RelatedPerson"
                 },
@@ -1463,11 +1450,10 @@
                     "operation": [
                         {
                             "name": "$match",
-                            "definition": "https://hl7.org/fhir/R4/patient-operation-match.html",
+                            "definition": "http://hl7.org/fhir/OperationDefinition/Patient-match",
                             "documentation": "$match is a service used to manage patient identification in a context where multiple patient databases exist.To ask an MPI to match a patient, clients use the '$match' operation, which accepts a patient resource which may be only partially complete. The data provided is interpreted as an MPI input and processed by an algorithm of some kind that uses the data to determine the most appropriate matches in the patient set."
                         }
                     ],
-                    "profile": "https://hl7.org/fhir/R4/patient-operation-match.html",
                     "type": "OperationDefinition"
                 }
             ],

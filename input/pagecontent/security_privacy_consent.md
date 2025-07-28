@@ -24,7 +24,7 @@ For the purposes of Advance Directive Interoperability, additional security conf
 ##### Exchange Security
 
 1.	The exchange of information **SHALL** support [Transport Layer Security (TLS) Protocol Version 1.2 (RFC5246)](https://www.rfc-editor.org/rfc/rfc5246) or a more recent version of TLS for transport layer security.
-2.	Implementers of this Implementation Guide **SHALL** support [SMART on FHIR STU 2.1 App Launch Framework](http://hl7.org/fhir/smart-app-launch/STU2.1/index.html) and **MAY** support [SMART on FHIR STU 2.1 Backend Services](https://www.hl7.org/fhir/smart-app-launch/STU2.1/backend-services.html).
+2.	Implementers of this Implementation Guide **SHALL** support [SMART on FHIR App Launch Framework](http://hl7.org/fhir/smart-app-launch/index.html) and **MAY** support [SMART on FHIR Backend Services](https://www.hl7.org/fhir/smart-app-launch/backend-services.html).
 3.	Implementers of this Implementation Guide **SHOULD** support mutually authenticated TLS.
 4.	Server implementations that expect to support browser-based javascript applications SHOULD enable [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) for REST operations. Many client web-based apps use javascript for API calls which requires CORS. However, CORS could present security concerns if not implemented correctly or is not continually updated as new security issues are found and addressed. Implementers of CORS **SHOULD** consider advice about CORS from sources such as [Enable-CORS](http://enable-cors.org/) and [Moesif blog on Guide to CORS Pitfalls](https://www.moesif.com/blog/technical/cors/Authoritative-Guide-to-CORS-Cross-Origin-Resource-Sharing-for-REST-APIs/).
 
@@ -35,15 +35,15 @@ For the purposes of Advance Directive Interoperability, additional security conf
 The following only applies to servers supporting app launch:
 
 1.	Implementations **SHALL** support the FHIR US Core [Patient Privacy and Security requirements](https://hl7.org/fhir/us/core/STU6.1/security.html).
-2.	Server systems **SHALL** publish their authorization and token endpoints for discovery in accordance with the SMART App Launch STU2 framework and publicly publish the [Well-Known Uniform Resource Identifiers (URIs)](http://hl7.org/fhir/smart-app-launch/STU2.1/conformance.html) JSON file with scopes defined in the `scopes_supported` property.
-3.	Implementations **SHOULD** consider the [SMART on FHIR STU2 Best Practices in Authorization](https://hl7.org/fhir/smart-app-launch/STU2.1/best-practices.html)
+2.	Server systems **SHALL** publish their authorization and token endpoints for discovery in accordance with the SMART App Launch STU2 framework and publicly publish the [Well-Known Uniform Resource Identifiers (URIs)](http://hl7.org/fhir/smart-app-launch/conformance.html) JSON file with scopes defined in the `scopes_supported` property.
+3.	Implementations **SHOULD** consider the [SMART on FHIR STU2 Best Practices in Authorization](https://hl7.org/fhir/smart-app-launch/best-practices.html)
 4.  Implementation **MAY** support [Health Relationship Trust Profile for User-Managed Access (HEART)](https://openid.net/specs/openid-heart-uma2-1_0.html).
-5.  This guide defines the following server requirements for [SMART on FHIR Core Capabilities](https://hl7.org/fhir/smart-app-launch/STU2.1/conformance.html#capability-sets):
+5.  This guide defines the following server requirements for [SMART on FHIR Core Capabilities](https://hl7.org/fhir/smart-app-launch/conformance.html#capability-sets):
 
-    1.  **SHALL** support [Patient Access for Standalone Apps](http://hl7.org/fhir/smart-app-launch/STU2.1/conformance.html#patient-access-for-standalone-apps)
-    2.  **SHOULD** support [Patient Access for EHR Launch](http://hl7.org/fhir/smart-app-launch/STU2.1/conformance.html#patient-access-for-ehr-launch-ie-from-portal)
-    3.  **SHALL** support [Clinician Access for Standalone Apps](http://hl7.org/fhir/smart-app-launch/STU2.1/conformance.html#clinician-access-for-standalone)
-    4.  **SHOULD** support: [Clinician Access for EHR Launch](http://hl7.org/fhir/smart-app-launch/STU2.1/conformance.html#clinician-access-for-ehr-launch)
+    1.  **SHALL** support [Patient Access for Standalone Apps](http://hl7.org/fhir/smart-app-launch/conformance.html#patient-access-for-standalone-apps)
+    2.  **SHOULD** support [Patient Access for EHR Launch](http://hl7.org/fhir/smart-app-launch/conformance.html#patient-access-for-ehr-launch-ie-from-portal)
+    3.  **SHALL** support [Clinician Access for Standalone Apps](http://hl7.org/fhir/smart-app-launch/conformance.html#clinician-access-for-standalone)
+    4.  **SHOULD** support: [Clinician Access for EHR Launch](http://hl7.org/fhir/smart-app-launch/conformance.html#clinician-access-for-ehr-launch)
     5.  In addition to the guidance above, there are additional requirements for other SMART on FHIR capabilities not included above, including:
         <br />
         <table>
