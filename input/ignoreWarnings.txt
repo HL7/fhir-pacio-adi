@@ -30,6 +30,7 @@ provenance-1: The left side is inherently a collection, and so the expression '%
 %The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated%
 %Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0%
 %Reference to draft CodeSystem urn:iso:std:iso:3166:-2|2021 from fhir.tx.support.r4#0.30.0%
+%Reference to draft CodeSystem http://hl7.org/fhir/composition-status|4.0.1 from hl7.fhir.r4.core#4.0.1%
 
 # VSAC valuesets need a UTS login to validate.
 %A definition could not be found for Canonical URL 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.7'%
@@ -45,7 +46,6 @@ provenance-1: The left side is inherently a collection, and so the expression '%
 %A definition could not be found for Canonical URL 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.34'%
 %A definition could not be found for Canonical URL 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.35'%
 %A definition could not be found for Canonical URL 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.36'%
-%Unable to find included value set 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.27'%
 %ValueSet 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1240.1' not found%
 %A definition could not be found for Canonical URL 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1240.1'%
 
@@ -54,3 +54,12 @@ provenance-1: The left side is inherently a collection, and so the expression '%
 
 # The additional specified codes are essential for the management of advance directive documents. The ADI specification team is working with the Structured Documents Working Group to add these additional codes.
 %Binding http://hl7.org/fhir/us/pacio-adi/ValueSet/ADIDocumentReferenceStatusVS is not a subset of binding http://hl7.org/fhir/ValueSet/composition-status|4.0.1 because The codes 'current,superseded,entered-in-error' are not in the base valueset%
+
+# XHTML-related error to div. Not relevant if set to div status is generated.
+%The markdown contains content that appears to be an embedded HTML tag starting at '<d'. This will (or SHOULD) be escaped by the presentation layer. The content should be checked to confirm that this is the desired behaviour%
+
+# These are local codes that are specific to the context of Advance Directives. Still, the PACIO ADI team intends to continue following the process to work with LOINC and SNOMED to add these codes.
+%Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)%
+
+# Advance Directive documents require document types that are currently not supported in US Core. The ADI team is working with Structure Documents and US Core for better alignment. In the meantime, we had to fall back to the DocumentReference base resource.
+%US FHIR Usage rules require that all profiles on DocumentReference derive from one of the base US profiles. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process.%

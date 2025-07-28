@@ -1,32 +1,41 @@
 Alias: $loinc = http://loinc.org
 Alias: $endpoint-connection-type = http://terminology.hl7.org/CodeSystem/endpoint-connection-type
 
-Instance: bfcbe3a5-0807-4d09-937c-8f2a6c87b8c9
+Instance: MHAD-Example-Smith-Johnson-Bundle3
 InstanceOf: Bundle
 Usage: #example
 Description: "Betsy Smith-Johnson MHAD Bundle Example"
-* meta.versionId = "1"
-* meta.lastUpdated = "2024-09-12T21:06:07.242+00:00"
-* meta.source = "#Nqi1G1iHQHIByXeu"
+
 * identifier.system = "https://example.org/GoodHealth-Clinic"
-* identifier.value = "2.16.840.1.113883.15.15.100.1:11220-d580858d0d83427381cd9d2237580048-1703257800"
+* identifier.value = "d580858d0d83427381cd9d2237580048-1703257800"
 * type = #document
-* entry[0].fullUrl = "http://www.example.org/fhir/Organization/2517482f-82e4-4f3d-bcc6-5a082bbf3286" // Composition
-* entry[=].resource = 2517482f-82e4-4f3d-bcc6-5a082bbf3286 // Composition
-* entry[0].fullUrl = "http://www.example.org/fhir/Endpoint/Example-Smith-Johnson-Endpoint1" // Endpoint
-* entry[+].resource = Example-Smith-Johnson-Endpoint1 // Endpoint
-// * entry[+].resource = f3fab0ab-37a3-468f-a692-9782480db2ff
-* entry[+].fullUrl = "http://www.example.org/fhir/Organization/Example-organization-good-health-clinic"
-* entry[=].resource = Example-organization-good-health-clinic // Organization
+* timestamp = "2024-03-29T14:25:34.001-05:00"
+
+* entry[0].fullUrl = "http://www.example.org/fhir/Composition/MHAD-Example-Smith-Johnson-Composition" // Composition
+* entry[=].resource = MHAD-Example-Smith-Johnson-Composition // Composition
+// * entry[+].fullUrl = "http://www.example.org/fhir/Endpoint/Example-Smith-Johnson-Endpoint1" // Endpoint
+// * entry[=].resource = Example-Smith-Johnson-Endpoint1 // Endpoint
+* entry[+].fullUrl = "http://www.example.org/fhir/Organization/Example-Smith-Johnson-OrganizationCustodian1"
+* entry[=].resource = Example-Smith-Johnson-OrganizationCustodian1 // Organization
+// * entry[+].fullUrl = "http://www.example.org/fhir/Organization/Example-organization-good-health-clinic"
+// * entry[=].resource = Example-organization-good-health-clinic // Organization
 * entry[+].fullUrl = "http://www.example.org/fhir/Patient/Example-Smith-Johnson-Patient1"
 * entry[=].resource = Example-Smith-Johnson-Patient1
-* entry[+].fullUrl = "http://www.example.org/fhir/Binary/b193ff07-d6ca-495d-a995-b222f87d5942"
-* entry[=].resource = b193ff07-d6ca-495d-a995-b222f87d5942 // Binary
+* entry[+].fullUrl = "http://www.example.org/fhir/RelatedPerson/Example-Smith-Johnson-Notary2"
+* entry[=].resource = Example-Smith-Johnson-Notary2
+* entry[+].fullUrl = "http://www.example.org/fhir/RelatedPerson/Example-Smith-Johnson-HealthcareAgent3"
+* entry[=].resource = Example-Smith-Johnson-HealthcareAgent3
+* entry[+].fullUrl = "http://www.example.org/fhir/Consent/Example-Smith-Johnson-HealthcareAgentConsent2"
+* entry[=].resource = Example-Smith-Johnson-HealthcareAgentConsent2
+* entry[+].fullUrl = "http://www.example.org/fhir/Binary/MHAD-Example-Smith-Johnson-Binary"
+* entry[=].resource = MHAD-Example-Smith-Johnson-Binary // Binary
 
-Instance: 2517482f-82e4-4f3d-bcc6-5a082bbf3286
-InstanceOf: Composition
+Instance: MHAD-Example-Smith-Johnson-Composition
+InstanceOf: ADIPACPComposition
 Usage: #example
 Description: "Betsy Smith-Johnson MHAD Composition Example"
+
+* language = #en-US
 * extension.url = "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber"
 * extension.valueString = "1703257800"
 * identifier.system = "https://example.org/standards/terminology/namingSystem/setId"
@@ -38,9 +47,26 @@ Description: "Betsy Smith-Johnson MHAD Composition Example"
 * date = "2024-12-22T05:00:00+00:00"
 * author = Reference(Patient/Example-Smith-Johnson-Patient1) "Betsy Smith-Johnson"
 * title = "Mental Health Directive (Maryland)"
-* confidentiality = #N
 * custodian = Reference(Organization/Example-Smith-Johnson-OrganizationCustodian1)
-* event.detail = Reference(Binary/b193ff07-d6ca-495d-a995-b222f87d5942)
+// * event.detail = Reference(Binary/MHAD-Example-Smith-Johnson-Binary)
+
+* section[healthcare_agent].entry[+] = Reference(Example-Smith-Johnson-Notary2)
+* section[healthcare_agent].entry[+] = Reference(Example-Smith-Johnson-HealthcareAgent3)
+* section[healthcare_agent].entry[+] = Reference(Example-Smith-Johnson-HealthcareAgentConsent2)
+
+* section[healthcare_agent].title = "Appointment of a Primary Healthcare Agent and Alternate Healthcare Agents"
+* section[healthcare_agent].code = $LOINC#81335-2 "Healthcare Agent"
+* section[healthcare_agent].text.status = #additional
+* section[healthcare_agent].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p>I am appointing my son, Charles Johnson, as my healthcare agent</p>
+</div>"
+
+* section[minimal_source_form].title = "MHAD Minimal Source Form for Betsy Smith-Johnson"
+* section[minimal_source_form].entry[+] = Reference(Binary/MHAD-Example-Smith-Johnson-Binary)
+* section[minimal_source_form].text.status = #additional
+* section[minimal_source_form].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p>I am emotionally and mentally competent to make this Mental Health Advance Directive (MHAD). I understand the purpose and effect of this MHAD, I agree with everything that is written in this uADD, and I have made this MHAD knowingly, willingly and after careful deliberation.</p>
+</div>"
 
 Instance: Example-Smith-Johnson-Endpoint1
 InstanceOf: Endpoint
@@ -57,7 +83,87 @@ Description: "Betsy Smith-Johnson MHAD Endpoint Example"
 * payloadType.text = "For documents following C-CDA constraints using a structured body"
 * address = "https://example.org/address"
 
-Instance: b193ff07-d6ca-495d-a995-b222f87d5942
+Instance: Example-Smith-Johnson-Notary2
+InstanceOf: ADIHealthcareAgentParticipant
+Description: "Example Patient Smith-Johnson Notary"
+Usage: #example
+
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>Notary</b></p>
+<p>Charles Xavier</p>
+</div>"
+
+* patient = Reference(Patient/Example-Smith-Johnson-Patient1)
+* relationship = $HL7RoleCode#SON "natural son"
+* name[0].family = "Johnson"
+* name[0].given[0] = "Charles"
+* name[0].text = "Johnson, Charles"
+* telecom[0].system = #email
+* telecom[0].value = "CharlesSJ@example.com"
+* telecom[0].use = #home
+
+
+Instance: Example-Smith-Johnson-HealthcareAgent3
+InstanceOf: ADIHealthcareAgentParticipant
+Description: "Example Patient Smith-Johnson Healthcare Agent (Charles Johnson)"
+Usage: #example
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>Primary Healthcare Agent</b></p>
+<p>The person I choose as my Primary Healthcare Agent is:</p>
+<p><i>Charles Johnson</i></p>
+<p><i>(Son)</i></p>
+<p><i>CharlesSJ@example.com</i></p>
+<p>[SELECTED to act as a healthcare agent on 3/29/2021, at 2:25 PM CDT]</p>
+<p>[ACCEPTED to act as a healthcare agent on 4/1/2021, at 3:39 PM CDT]</p>
+</div>"
+
+* patient = Reference(Example-Smith-Johnson-Patient1)
+* relationship = $HL7RoleCode#SON "natural son"
+* name[0].family = "Johnson"
+* name[0].given[0] = "Charles"
+* name[0].text = "Johnson, Charles"
+* telecom[0].system = #email
+* telecom[0].value = "CharlesSJ@example.com"
+* telecom[0].use = #home
+
+// ******************
+
+Instance: Example-Smith-Johnson-HealthcareAgentConsent2
+InstanceOf: ADIConsentPermit
+Description: "Example Patient Smith-Johnson Healthcare Agent Consent"
+Usage: #example
+* text.status = #additional
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>status</b>: active</p><p><b>scope</b>: <span title='Codes: {http://loinc.org 75786-4}'>Powers granted to healthcare agent - Reported</span></p><p><b>category</b>: <span title='Codes: {http://terminology.hl7.org/CodeSystem/consentcategorycodes acd}'>Advance Directive</span></p><p><b>patient</b>: <a href='Patient-Example-Smith-Johnson-Patient1.html'>Betsy Smith-Johnson</a> ; BetsySJ@example.com; gender: female; birthDate: 1950-11-15</p><p><b>dateTime</b>: 2020-08-03</p><h3>Policies</h3><table class='grid'><tr><td>-</td><td><b>Authority</b></td><td><b>Uri</b></td></tr><tr><td>*</td><td><a href='https://www.michigan.gov/'>https://www.michigan.gov/</a></td><td><a href='http://www.legislature.mi.gov/(S(tpnclc1ofteerx2x2dppcmdz))/mileg.aspx?page=GetObject&amp;objectname=mcl-386-1998-V-5'>http://www.legislature.mi.gov/(S(tpnclc1ofteerx2x2dppcmdz))/mileg.aspx?page=GetObject&amp;objectname=mcl-386-1998-V-5</a></td></tr></table><blockquote><p><b>provision</b></p><p><b>type</b>: permit</p><blockquote><p><b>actor</b></p><p><b>role</b>: <span title='Codes: {http://loinc.org 75783-1}'>Primary healthcare agent - Reported</span></p><p><b>reference</b>: <a href='RelatedPerson-Example-Smith-Johnson-HealthcareAgent1.html'><span title='Codes: {http://terminology.hl7.org/CodeSystem/v3-RoleCode SON}'>natural son</span>; Charles Johnson ; CharlesSJ@example.com</a></p></blockquote><blockquote><p><b>actor</b></p><p><b>role</b>: <span title='Codes: {http://loinc.org 75784-9}'>First alternate healthcare agent - Reported</span></p><p><b>reference</b>: <a href='RelatedPerson-Example-Smith-Johnson-HealthcareAgent3.html'><span title='Codes: {http://loinc.org 75784-9}'>First alternate healthcare agent - Reported</span>, <span title='Codes: {http://terminology.hl7.org/CodeSystem/v3-RoleCode DAU}'>natural daughter</span>; Debra Johnson ; DebraSJ@example.com</a></p></blockquote><p><b>action</b>: <span title='Codes: {http://loinc.org 75787-2}'>Advance directive - request for intubation</span>, <span title='Codes: {http://loinc.org 75788-0}'>Advance directive - request for tube feeding</span>, <span title='Codes: {http://loinc.org 75789-8}'>Advance directive - request for life support</span>, <span title='Codes: {http://loinc.org 75790-6}'>Advance directive - request for IV fluid and support</span>, <span title='Codes: {http://loinc.org 75791-4}'>Advance directive - request for antibiotics</span>, <span title='Codes: {http://loinc.org 75792-2}'>Advance directive - request for resuscitation that differs from cardiopulmonary resuscitation</span></p><p><b>purpose</b>: <span title='{http://terminology.hl7.org/CodeSystem/v3-ActReason PWATRNY}'>power of attorney</span></p></blockquote></div>"
+
+* status = #active
+* category = $HL7ConsentCategoryCodes#acd "Advance Directive"
+//* category[AdvanceDirective] = $HL7ConsentCategoryCodes#acd "Advance Directive"
+* patient = Reference(Example-Smith-Johnson-Patient1)
+* dateTime = "2020-08-03"
+
+// * policy.authority = "https://www.michigan.gov"
+* policy.uri = "http://example.org/healthcare-agent-policy"  // fictitious policy URL for example
+
+//[TODO] do we need to support and require provision.actor for all HCA's?
+* provision.actor[+].role = $LOINC#75783-1 "Primary healthcare agent [Reported]"
+* provision.actor[=].reference = Reference(Example-Smith-Johnson-HealthcareAgent1)
+* provision.actor[+].role = $LOINC#75784-9 "First alternate healthcare agent [Reported]"
+* provision.actor[=].reference = Reference(Example-Smith-Johnson-HealthcareAgent3)
+
+* provision.action[+] = ADIHCADecisionsCS#intubation "Intubation"
+* provision.action[+] = ADIHCADecisionsCS#tube-feeding "Tube feeding"
+* provision.action[+] = ADIHCADecisionsCS#life-support "Life support"
+* provision.action[+] = ADIHCADecisionsCS#iv-fluid-and-support "IV fluid and support"
+* provision.action[+] = ADIHCADecisionsCS#antibiotics "Antibiotics"
+* provision.action[+] = ADIHCADecisionsCS#resuscitation-non-cpr "Non-CPR Resuscitation"
+
+* provision.purpose = http://terminology.hl7.org/CodeSystem/v3-ActReason#PWATRNY
+
+// ****************************
+
+Instance: MHAD-Example-Smith-Johnson-Binary
 InstanceOf: Binary
 Usage: #Example
 Description: "Betsy Smith-Johnson MHAD Binary Example"
@@ -67,7 +173,8 @@ Description: "Betsy Smith-Johnson MHAD Binary Example"
 
 Instance: Example-organization-good-health-clinic
 InstanceOf: Organization
-Usage: #inline
+Usage: #example
+Description: "Example Organization - Good Health Clinic"
 * identifier.system = "http://example.org/GoodHealthClinic"
 * identifier.value = "identifier-good-health"
 * name = "Good Health Clinic."
@@ -81,7 +188,7 @@ Usage: #inline
 * address.state = "MI"
 * address.postalCode = "99999"
 * address.country = "US"
-* endpoint = Reference(Example-Smith-Johnson-Endpoint1)
+* endpoint = Reference(Endpoint/Example-Smith-Johnson-Endpoint1)
 
 // ************
 

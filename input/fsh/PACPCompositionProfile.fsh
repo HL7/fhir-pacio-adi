@@ -36,6 +36,8 @@ Description: "This profile encompasses information that makes up the author’s 
 
 * obeys HCA-section-cardinality and HCA-section-emptyReason-required
 
+// ******* PACP Healthcare Agent Section ********
+
 * section[healthcare_agent].title 1..1 MS
 * section[healthcare_agent].code 1..1 
 * section[healthcare_agent].code = $LOINC#81335-2
@@ -63,6 +65,8 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[gpp_personal_care_experience].entry 
 * section[gpp_personal_care_experience].entry only Reference(ADICareExperiencePreference or ADIPersonalPrioritiesOrganizer or ADIPersonalGoal)
 
+// ******* GPP Upon Death ************
+
 * section[gpp_upon_death] ^short = "Goals, preferences, and priorities upon death"
 * section[gpp_upon_death].title 1..1 MS
 * section[gpp_upon_death].code 1..1 
@@ -79,6 +83,8 @@ Description: "This profile encompasses information that makes up the author’s 
 
 * obeys Composition-section-code-equals-type
 
+// ******* PACP Additional Documentation Section ********
+
 * section[additional_documentation] ^short = "Observations regarding the existence of other advance directive related information"
 * section[additional_documentation].title 1..1 MS
 * section[additional_documentation].code 1..1 
@@ -86,7 +92,7 @@ Description: "This profile encompasses information that makes up the author’s 
 
 * section[additional_documentation].entry only Reference(ADIDocumentationObservation)
 
-
+// ******* PACP Witness and Notary Section ********
 * section[witness_and_notary] ^short = "Witness and notary information.  The first witness should be the author of the document"
 * section[witness_and_notary] ^definition = "A participant who has assumed the role of Notary and attested to the authenticity of the signers and accuracy of the composition/document."
 * section[witness_and_notary].title 1..1 MS
@@ -95,6 +101,8 @@ Description: "This profile encompasses information that makes up the author’s 
 // TODO DWH - Add short description "Witness and notary statement" to ClauseExtension
 
 * section[witness_and_notary].entry only Reference(ADIWitness or ADINotary)
+
+// ******* PMO Administration Information Section ********
 
 * section[administrative_information] ^short = "Administrative information associated with this personal advance care plan"
 * section[administrative_information].title 1..1 MS

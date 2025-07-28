@@ -51,8 +51,12 @@ Usage: #example
 * entry[=].resource = Example-Smith-Johnson-PersonalInterventionPreference5
 * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-PersonalInterventionPreference6"
 * entry[=].resource = Example-Smith-Johnson-PersonalInterventionPreference6
-* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-PersonalGoal1"
-* entry[=].resource = Example-Smith-Johnson-PersonalGoal1
+// * entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-PersonalGoal1"
+// * entry[=].resource = Example-Smith-Johnson-PersonalGoal1
+// * entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-PersonalGoal2"
+// * entry[=].resource = Example-Smith-Johnson-PersonalGoal2
+// * entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-PersonalGoal3"
+// * entry[=].resource = Example-Smith-Johnson-PersonalGoal3
 * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-OrganDonationObservation1"
 * entry[=].resource = Example-Smith-Johnson-OrganDonationObservation1
 * entry[+].fullUrl = "http://www.example.org/fhir/Observation/Example-Smith-Johnson-AutopsyObservation1"
@@ -63,11 +67,8 @@ Usage: #example
 * entry[=].resource = Example-Smith-Johnson-OrganizationCustodian1
 // * entry[+].fullUrl = "http://www.example.org/fhir/Organization/Example-Smith-Johnson-OrganizationAssembler1"
 // * entry[=].resource = Example-Smith-Johnson-OrganizationAssembler1
-* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-PersonalGoal2"
-* entry[=].resource = Example-Smith-Johnson-PersonalGoal2
-* entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-PersonalGoal3"
-* entry[=].resource = Example-Smith-Johnson-PersonalGoal3
-// * entry[+].fullUrl = "http://www.example.org/fhir/Goal/Example-Smith-Johnson-PersonalInterventionPreference4"
+
+// * entry[+].fullUrl= "http://www.example.org/fhir/Goal/Example-Smith-Johnson-PersonalInterventionPreference4"
 // * entry[=].resource = Example-Smith-Johnson-PersonalInterventionPreference4
 
 
@@ -141,6 +142,7 @@ Usage: #example
 * extension[composition-clinicaldocument-versionNumber].valueString = "9f94d9de-a514-4e10-9c23-dc8c87f0c6fc"
 * extension[adi-dataEnterer-extension].valueReference = Reference(Example-Smith-Johnson-Patient1)
 * extension[adi-expiration-date-extension].valueDateTime = "2022-03-29T14:25:34-05:00"
+
 // witness Sally Bobbins
 
 * identifier.system = "http://example.org/GoodHealthClinic/id"
@@ -159,12 +161,10 @@ Usage: #example
 
 * custodian = Reference(Example-Smith-Johnson-OrganizationCustodian1)
 
-// TODO Where should the top level note go? <p><b>It is very important for you to discuss your medical treatment goals and wishes with your healthcare agent, your family, and your medical care providers.</b> Keep in mind that advance medical directives are simply expressions of your medical treatment goals and preferences. There is no guarantee that your medical care providers will follow all of your wishes, but one thing is certain: <b>If your advance medical directives cannot be quickly located and retrieved in a time of need, then medical care providers, your family and friends will not be able to take your wishes into consideration when they make critical decisions regarding your treatment.</b></p>
+* relatesTo.code = #appends
+* relatesTo.targetIdentifier.assigner = Reference(Organization/Example-Smith-Johnson-OrganizationCustodian1)
+* relatesTo.extension[adi-document-reference-extension].valueReference = Reference(Example-Smith-Johnson-DocRef-DocumentReference)
 
-
-// no legal authenticator in CDA
-
-// Line 202
 * section[healthcare_agent].title = "Appointment of a Primary Healthcare Agent and Alternate Healthcare Agents"
 * section[healthcare_agent].code = $LOINC#81335-2 "Healthcare Agent"
 * section[healthcare_agent].text.status = #additional
@@ -509,7 +509,7 @@ Usage: #example
 * addresses[+].display = "Unconscious, in a coma, or in a persistent vegetative state with little or no chance of recovery"
 * addresses[+].display = "Persistent vegetative state (SNOMED CT 24473007)"
 * addresses[+].display = "Irreversible coma (SNOMED CT 73453007)"
-* goal = Reference(Example-Smith-Johnson-PersonalGoal1)
+// * goal = Reference(Example-Smith-Johnson-PersonalGoal1)
 // * supportingInfo[+] = Reference(Example-Smith-Johnson-PersonalInterventionPreference3)
 * supportingInfo[0] = Reference(Example-Smith-Johnson-CareExperiencePreference1)
 * supportingInfo[+] = Reference(Example-Smith-Johnson-CareExperiencePreference5)
@@ -538,7 +538,7 @@ Usage: #example
 
 * addresses[+].display = "Permanent, severe brain damage and I am unable to recognize my family and friends"
 
-* goal = Reference(Goal/Example-Smith-Johnson-PersonalGoal2)
+// * goal = Reference(Goal/Example-Smith-Johnson-PersonalGoal2)
 // * supportingInfo[+] = Reference(Example-Smith-Johnson-PersonalInterventionPreference3)
 * supportingInfo = Reference(Example-Smith-Johnson-CareExperiencePreference5)
 
@@ -563,7 +563,7 @@ Usage: #example
 
 * addresses[+].display = "Terminal illness, lack of meaningful interaction"
 
-* goal = Reference(Goal/Example-Smith-Johnson-PersonalGoal3)
+// * goal = Reference(Goal/Example-Smith-Johnson-PersonalGoal3)
 * supportingInfo[0] = Reference(Example-Smith-Johnson-CareExperiencePreference1)
 * supportingInfo[+] = Reference(Example-Smith-Johnson-CareExperiencePreference2)
 * supportingInfo[+] = Reference(Example-Smith-Johnson-CareExperiencePreference3)
@@ -1269,7 +1269,7 @@ Usage: #example
 * extension[adi-document-location].valueString = "http://example.org/DocumentLocation/document12345.txt"
 
 * status = #current
-* docStatus = #current
+* docStatus = #final
 
 
 * type.coding[0] = $LOINC#86533-7 "Patient Living will"
@@ -1315,7 +1315,7 @@ Usage: #example
 * extension[adi-jurisdiction-extension].valueCodeableConcept.coding.code = #US-MI
 * extension[adi-jurisdiction-extension].valueCodeableConcept.coding.display = "Michigan"
 * status = #current
-* docStatus = #current
+* docStatus = #final
 * type.coding[0] = $LOINC#81334-5 "Patient Personal advance care plan"
 * category.coding[0] = $LOINC#42348-3 "Advance healthcare directives"
 * subject = Reference(Example-Smith-Johnson-Patient1)

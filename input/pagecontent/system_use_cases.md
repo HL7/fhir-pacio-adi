@@ -82,7 +82,7 @@ For example:
 ```
 "attachment": {
       "contentType": "application/pdf",
-      "url": https://example.org/GoodhealthClinic/Binary/b193ff07-d6ca-495d-a995-b222f87d5942,
+      "url": https://example.org/GoodhealthClinic/Binary/MHAD-Example-Smith-Johnson-Binary,
       "creation": "2023-12-22T05:00:00+00:00"}
 ```
 <br />

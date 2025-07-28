@@ -23,7 +23,7 @@
         "json"
     ],
     "implementationGuide": [
-        "https://build.fhir.org/ig/HL7/pacio-adi/ImplementationGuide-hl7.fhir.us.pacio-adi"
+        "https://build.fhir.org/ig/HL7/pacio-adi/ImplementationGuide-hl7.fhir.us.fhir-pacio-adi"
     ],
     "jurisdiction": [
         {
@@ -883,11 +883,11 @@
                         "resolves"
                     ],
                     "supportedProfile": [
-                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-DocumentationObservation.html",
-                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-PersonalInterventionPreference.html",
-                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-OrganDonationObservation.html",
-                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-AutopsyObservation.html",
-                        "https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-CareExperiencePreference.html"
+                        "https://hl7.org/fhir/us/fhir-pacio-adi/StructureDefinition-ADI-DocumentationObservation.html",
+                        "https://hl7.org/fhir/us/fhir-pacio-adi/StructureDefinition-ADI-PersonalInterventionPreference.html",
+                        "https://hl7.org/fhir/us/fhir-pacio-adi/StructureDefinition-ADI-OrganDonationObservation.html",
+                        "https://hl7.org/fhir/us/fhir-pacio-adi/StructureDefinition-ADI-AutopsyObservation.html",
+                        "https://hl7.org/fhir/us/fhir-pacio-adi/StructureDefinition-ADI-CareExperiencePreference.html"
                     ],
                     "type": "Observation"
                 },
@@ -1478,7 +1478,7 @@
     ],
     "status": "active",
     "title": "ADI CapabilityStatement",
-    "url": "http://hl7.org/fhir/us/pacio-adi/CapabilityStatement/adi",
+    "url": "http://hl7.org/fhir/us/fhir-pacio-adi/CapabilityStatement/adi",
     "version": "0.0.1",
     "resourceType": "CapabilityStatement"
 }

@@ -25,8 +25,6 @@ Usage: #example
 * entry[=].resource = Example-Smith-Johnson-DocumentationObservation2
 * entry[+].fullUrl = "http://www.example.org/fhir/PractitionerRole/ADI-Facilitator-MSW-MargaretReynolds"
 * entry[=].resource = ADI-Facilitator-MSW-MargaretReynolds
-* entry[+].fullUrl = "http://www.example.org/fhir/Practitioner/Practitioner-MargaretReynolds"
-* entry[=].resource = Practitioner-MargaretReynolds
 * entry[+].fullUrl = "http://www.example.org/fhir/Consent/Example-Smith-Johnson-HealthcareAgentConsent-Permit"
 * entry[=].resource = Example-Smith-Johnson-HealthcareAgentConsent-Permit
 * entry[+].fullUrl = "http://www.example.org/fhir/Consent/Example-Smith-Johnson-HealthcareAgentConsent-Deny"
@@ -191,6 +189,7 @@ Usage: #example
 * doNotPerform = true
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * requester = Reference(Example-Kyle-Anydoc-Practitioner)
+// * category[0] = $USCoreServiceRequestCategory#treatment-intervention-preference "Treatment Intervention Preference"
 * code = $LOINC#LA33470-8
 * orderDetail = $LOINC#LA33470-8
 

@@ -1,5 +1,5 @@
 {
-    "package-id" : "hl7.fhir.us.pacio-adi",
+    "package-id" : "hl7.fhir.us.fhir-pacio-adi",
     "version" : "1.0.0",
     "path" : "http://hl7.org/fhir/us/pacio-adi/STU1",
     "status" : "trial-use",
