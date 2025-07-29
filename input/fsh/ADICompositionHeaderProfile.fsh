@@ -7,7 +7,7 @@ Description: "This abstract profile defines constraints that represent common ad
 * ^abstract = true 
 * language 1..1 MS
 
-* extension[composition-clinicaldocument-versionNumber] 1..1 MS
+// * extension[composition-clinicaldocument-versionNumber] 1..1 MS // MLT_20250729 - this standard extension is now deprecated. We need another way to version. Remove for now and revisit after Ballot.
 * extension contains
     adi-expiration-date-extension named ExpirationDateExtension 0..1 and
   //  adi-jurisdiction-extension named Jurisdiction 0..* and 
@@ -43,8 +43,7 @@ Description: "This abstract profile defines constraints that represent common ad
 * custodian 1..1 MS
 * custodian only Reference($USCoreOrganization)
 
-* relatesTo.extension contains adi-document-reference-extension named ADIDocumentReferenceExtension 0..* MS
-
+// * relatesTo.extension contains adi-document-reference-extension named ADIDocumentReferenceExtension 0..* MS
 
 * event.code = ADITempCS#acp-services "Advance care planning services"
 * event.detail ^slicing.discriminator.type = #profile

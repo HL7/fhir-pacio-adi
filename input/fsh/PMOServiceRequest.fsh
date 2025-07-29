@@ -4,11 +4,7 @@ Id: ADI-PMOServiceRequest
 Title: "ADI PMO ServiceRequest"
 Description: "This profile is used to represent both a patient authored care plan (PACP) and a practitioner authored portable medical order (PMO)."
 
-/*
-* extension contains
-    adi-based-on-consent-extension named BasedOnConsentExtension 0..1
-*/
-//* text 1..1 MS
+* ^abstract = true  // this is an abstract profile
 
 * status = #active
 * intent = #directive
@@ -31,7 +27,7 @@ Description: "This profile is used to represent both a patient authored care pla
 
 * encounter 0..0 // verify no encounter possible
 * requester 1..1
-* requester only Reference($USCorePractitioner)
+* requester only Reference($USCorePractitioner or $USCorePractitionerRole)
 
 
 

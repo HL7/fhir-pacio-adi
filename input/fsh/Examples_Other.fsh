@@ -144,6 +144,55 @@ Usage: #example
 
 // ------------------------------
 
+Instance: Example-Smith-Johnson-PMOAdditionalOrdersServiceRequest1
+InstanceOf: ADIPMOAdditionalOrdersOrInstructionsServiceRequest
+Description: "Example Patient Smith-Johnson PMO Additional Orders Service Request"
+Usage: #example
 
+* subject = Reference(Patient/Example-Smith-Johnson-Patient1)
+* requester = Reference(Practitioner/Example-Kyle-Anydoc-Practitioner)
+* code = $SNOMEDCT#428311008
+* authoredOn = "2024-03-29T14:25:34.001-05:00"
+* doNotPerform = true
+// * occurenceDateTime = "2024-04-01T22:33:22Z"
+
+// ------------------------------
+
+Instance: Example-Smith-Johnson-PMONutritionServiceRequest1
+InstanceOf: ADIPMOMedicallyAssistedNutritionServiceRequest
+Description: "Example Patient Smith-Johnson PMO Medically Assisted Nutrition Service Request"
+Usage: #example
+
+* subject = Reference(Patient/Example-Smith-Johnson-Patient1)
+* requester = Reference(Practitioner/Example-Kyle-Anydoc-Practitioner)
+* code = $LOINC#LA33489-8 "Provide feeding through new or existing surgically-placed tubes"
+* authoredOn = "2024-03-29T14:25:34.001-05:00"
+* doNotPerform = true
+
+// ------------------------------
+
+Instance: Example-Smith-Johnson-PMOHydrationServiceRequest1
+InstanceOf: ADIPMOMedicallyAssistedHydrationServiceRequest
+Description: "Example Patient Smith-Johnson PMO Medically Assisted Hydration Service Request"
+Usage: #example
+
+* subject = Reference(Patient/Example-Smith-Johnson-Patient1)
+* requester = Reference(Practitioner/Example-Kyle-Anydoc-Practitioner)
+* code = $SNOMEDCT#281800008 "Intravenous fluid replacement (procedure)"
+* authoredOn = "2024-03-29T14:25:34.001-05:00"
+* doNotPerform = false
+
+// ------------------------------
+
+Instance: Example-Smith-Johnson-PMOInitialTreatmentServiceRequest1
+InstanceOf: ADIPMOInitialTreatmentServiceRequest
+Description: "Example Patient Smith-Johnson PMO Initial Treatment Service Request"
+Usage: #example
+
+* subject = Reference(Patient/Example-Smith-Johnson-Patient1)
+* requester = Reference(Practitioner/Example-Kyle-Anydoc-Practitioner)
+* code = $LOINC#LA33475-7 "Comfort-focused treatments"
+* authoredOn = "2024-03-29T14:25:34.001-05:00"
+* doNotPerform = false
 
 // ------------------------------
