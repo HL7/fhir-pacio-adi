@@ -33,7 +33,7 @@ Alias: $HL7YesNoCS = http://terminology.hl7.org/CodeSystem/v2-0532
 
 Alias: $HL7CompositionAttestation = http://hl7.org/fhir/ValueSet/composition-attestation-mode
 Alias: $HL7ConsentScope = http://terminology.hl7.org/CodeSystem/consentscope
-Alias: $HL7ConsentCategoryCodes = http://terminology.hl7.org/CodeSystem/consentcategorycodes
+Alias: $HL7ConsentCategoryCodes = http://terminology.hl7.org/CodeSystem/consentcategorycodes|1.0.0
 Alias: $HL7ConsentCategoryVS = http://hl7.org/fhir/ValueSet/consent-category
 Alias: $HL7JurisdictionCodesVS = http://terminology.hl7.org/ValueSet/USPS-State
 Alias: $HL7DegreeLicenseCertificate = http://terminology.hl7.org/ValueSet/v2-0360
@@ -55,7 +55,6 @@ Alias: $HL7ObservationCategory = http://terminology.hl7.org/CodeSystem/observati
 Alias: $HL7CompositionStatusR5 = http://hl7.org/fhir/composition-status
 Alias: $HL7DocumentReferenceStatusR5 = http://hl7.org/fhir/document-reference-status
 Alias: $HL7AdataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason
-Alias: $HL7ConsentCategoryCodes = http://terminology.hl7.org/CodeSystem/consentcategorycodes
 
 Alias: $VSACClauseType = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.14
 Alias: $VSACUponDeathPreferences = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.15
@@ -66,22 +65,22 @@ Alias: $VSACADIInterventionPreferencesEndOfLifeGrouping = http://cts.nlm.nih.gov
 Alias: $VSACADIConsentActorRole = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1046.35
 Alias: $VSACADICareExperiencePreferences = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.11
 Alias: $VSACADIConsentType = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.13
-Alias: $VSACADIInitialTreatmentPMOOptions = https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.27 // mlt_note: there is a LOINC answer list: LL6264-7
+Alias: $VSACADIInitialTreatmentPMOOptions = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.27 // mlt_note: there is a LOINC answer list: LL6264-7
 Alias: $VSACADIInitialTreatmentPMOOptionsGrouping = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.33
 Alias: $VSACADIAdditionalPMOProcedures = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.32
 Alias: $VSACADIAdditionalPMOProceduresGrouping = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.34
 Alias: $VSACADIMedicallyAssistedNutritionOrderOptions = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.35
 Alias: $VSACADIMedicallyAssistedNutritionOrderOptionsGrouping = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.36
 Alias: $VSACCardiopulmonaryResuscitationOrderOptions = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.28
-Alias: $HealthGoalsGrouping = https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.7
-Alias: $CardiopulmonaryResuscitationProceduresGrouping = https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.31
+Alias: $HealthGoalsGrouping = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.7
+Alias: $CardiopulmonaryResuscitationProceduresGrouping = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.31
 
 // Standard extension aliases
 Alias: $data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason
 
 // fix for FHIR-46149
 Alias: $VSACADIAdvanceDirectiveCategoriesGrouper = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.25
-Alias: $VSACADIDecisionalCapacity = https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1240.1 // MLT20250610: replace with the VSAC subset once provided.
+Alias: $VSACADIDecisionalCapacity = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1240.1 // MLT20250610: replace with the VSAC subset once provided.
 
 Alias: $endpoint-connection-type = http://terminology.hl7.org/CodeSystem/endpoint-connection-type
 Alias: $endpoint-payload-type = http://terminology.hl7.org/CodeSystem/endpoint-payload-type

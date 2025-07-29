@@ -19,7 +19,7 @@ Betsy then shares her advance directive information with her son Charles, her pr
 
 #### FHIR Representation
 
-The example AD document for Betsy Smith-Johnson is represented as a [here](Bundle-Example-Smith-Johnson-Bundle1.html). 
+The example AD document for Betsy Smith-Johnson is represented as a [here](Bundle-Example-Smith-Johnson-PACP-Bundle1.html).
 
 
  

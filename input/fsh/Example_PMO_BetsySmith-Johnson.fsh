@@ -75,7 +75,7 @@ Usage: #example
 * custodian = Reference(Example-Smith-Johnson-OrganizationCustodian1)
 
 * event.detail[0] = Reference(PractitionerRole/ADI-Facilitator-MSW-MargaretReynolds)
-* event.detail[0] = Reference(Consent/Example-Smith-Johnson-HealthcareAgentConsent-Permit)
+* event.detail[+] = Reference(Consent/Example-Smith-Johnson-HealthcareAgentConsent-Permit)
 * event.detail[+] = Reference(Consent/Example-Smith-Johnson-HealthcareAgentConsent-Deny)
 
 * section[portable_medical_orders].title = "Portable Medical Orders"
