@@ -23,4 +23,20 @@ Structurally, MHAD shares the same ADI header as the PACP document. It differs i
 
 <br clear="all" />
 
+### PACP and AD Guidance
+
+**Personal Advance Care Plans** - Systems used to create and update patient-generated advance care plans (PACPs) through a patient-directed process need a way for individuals to communicate information about their advance medical care goals, preferences, and priorities. 
+
+Individuals need a way to generate and update information related to their advance healthcare directives so that their current wishes can inform provider-generated care plans. Interoperable exchange of the advance directive documentation supports more effective sharing of this information across transitions of care and enables practitioners to create person-centered care plans that align with a patient’s values, goals of care, treatment preferences, and quality of life priorities when a patient can no longer communicate for themselves.
+Advance Directives – Person-authored advance directives (ADs) are legal or informal documents written by individuals, typically while they are still mentally competent, to outline their preferences for medical treatment in the event that they become incapacitated or unable to communicate their wishes. 
+
+These directives are a crucial component of advance care planning and aim to preserve patient autonomy at the end of life or during serious illness.  A typical patient-authored AD may include:
+
+* **Living Will**: Specifies desired or undesired treatments (e.g., resuscitation, mechanical ventilation, tube feeding).
+
+* **Durable Power of Attorney for Health Care (Health Care Proxy)**: Designates a trusted person to make decisions on the patient’s behalf.
+
+* **Treatment Intervention Preferences**: These represent the person's treatment intervention preferences to receive or not receive CPR when such a decision needs to be made, and often also contain other time-critical treatment orders related to life-sustaining treatment meant to restore, prolong, or sustain the life of the patient. 
+
+* **Personal Values Statements**: Descriptions of what matters most to the patient, such as quality of life or religious beliefs.
 
