@@ -10,7 +10,7 @@ Description: "This profile is used to represent the author's thoughts about orga
 
 * code 1..1 MS
 //* code from ADIOrganDonationVS (required)
-* code = $LOINC#75781-5
+* code = $LOINC#75781-5 "Thoughts on organ and tissue donations Narrative - Reported"
 * code.text 
 * subject 1..1 MS
 * subject only Reference($USCorePatient)

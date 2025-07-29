@@ -145,7 +145,7 @@
 <artifact id="Observation/Example-Smith-Johnson-ADIPMOReviewObservation1" key="Observation-Example-Smith-Johnson-ADIPMOReviewObservation1" name="Example-Smith-Johnson-ADIPMOReviewObservation1"/>
 <artifact id="RelatedPerson/Example-Smith-Johnson-ADIWitness1" key="RelatedPerson-Example-Smith-Johnson-ADIWitness1" name="Example-Smith-Johnson-ADIWitness1"/>
 <artifact id="Observation/Example-Smith-Johnson-AutopsyObservation1" key="Observation-Example-Smith-Johnson-AutopsyObservation1" name="Example-Smith-Johnson-AutopsyObservation1"/>
-<artifact id="Bundle/Example-Smith-Johnson-Bundle1" key="Bundle-Example-Smith-Johnson-Bundle1" name="Example-Smith-Johnson-Bundle1"/>
+<artifact deprecated="true" id="Bundle/Example-Smith-Johnson-Bundle1" key="Bundle-Example-Smith-Johnson-Bundle1" name="Example-Smith-Johnson-Bundle1"/>
 <artifact id="ServiceRequest/Example-Smith-Johnson-CPR-ServiceRequest1" key="ServiceRequest-Example-Smith-Johnson-CPR-ServiceRequest1" name="Example-Smith-Johnson-CPR-ServiceRequest1"/>
 <artifact id="Observation/Example-Smith-Johnson-CareExperiencePreference1" key="Goal-Example-Smith-Johnson-CareExperiencePreference1" name="Example-Smith-Johnson-CareExperiencePreference1"/>
 <artifact id="Observation/Example-Smith-Johnson-CareExperiencePreference2" key="Goal-Example-Smith-Johnson-CareExperiencePreference2" name="Example-Smith-Johnson-CareExperiencePreference2"/>
@@ -176,6 +176,7 @@
 <artifact id="Observation/Example-Smith-Johnson-OrganDonationObservation1" key="Observation-Example-Smith-Johnson-OrganDonationObservation1" name="Example-Smith-Johnson-OrganDonationObservation1"/>
 <artifact id="Organization/Example-Smith-Johnson-OrganizationAssembler1" key="Organization-Example-Smith-Johnson-OrganizationAssembler1" name="Example-Smith-Johnson-OrganizationAssembler1"/>
 <artifact id="Organization/Example-Smith-Johnson-OrganizationCustodian1" key="Organization-Example-Smith-Johnson-OrganizationCustodian1" name="Example-Smith-Johnson-OrganizationCustodian1"/>
+<artifact id="Bundle/Example-Smith-Johnson-PACP-Bundle1" key="Bundle-Example-Smith-Johnson-PACP-Bundle1" name="Example-Smith-Johnson-PACP-Bundle1"/>
 <artifact deprecated="true" id="Provenance/Example-Smith-Johnson-PACPProvenance1" key="Provenance-Example-Smith-Johnson-PACPProvenance1" name="Example-Smith-Johnson-PACPProvenance1"/>
 <artifact id="Observation/Example-Smith-Johnson-PMOHospiceObservation1" key="Observation-Example-Smith-Johnson-PMOHospiceObservation1" name="Example-Smith-Johnson-PMOHospiceObservation1"/>
 <artifact id="Provenance/Example-Smith-Johnson-PMOProvenance1" key="Provenance-Example-Smith-Johnson-PMOProvenance1" name="Example-Smith-Johnson-PMOProvenance1"/>
@@ -189,6 +190,7 @@
 <artifact id="Observation/Example-Smith-Johnson-PersonalInterventionPreference4" key="Observation-Example-Smith-Johnson-PersonalInterventionPreference4" name="Example-Smith-Johnson-PersonalInterventionPreference4"/>
 <artifact id="Observation/Example-Smith-Johnson-PersonalInterventionPreference5" key="Goal-Example-Smith-Johnson-PersonalInterventionPreference5" name="Example-Smith-Johnson-PersonalInterventionPreference5"/>
 <artifact id="Observation/Example-Smith-Johnson-PersonalInterventionPreference6" key="Goal-Example-Smith-Johnson-PersonalInterventionPreference6" name="Example-Smith-Johnson-PersonalInterventionPreference6"/>
+<artifact id="Observation/Example-Smith-Johnson-UponDeathPreference1" key="Observation-Example-Smith-Johnson-UponDeathPreference1" name="Example-Smith-Johnson-UponDeathPreference1"/>
 <artifact id="Organization/Example-organization-good-health-clinic" key="Organization-Example-organization-good-health-clinic" name="Example-organization-good-health-clinic"/>
 <artifact id="StructureDefinition/adi-goal-order-by-descending-priority-extension" key="StructureDefinition-padi-goal-order-by-descending-priority-extension" name="Goal Order by Descending Priority"/>
 <artifact deprecated="true" id="ValueSet/PADIHealthGoalsVS" key="ValueSet-PADIHealthGoalsVS" name="Health Goals"/>

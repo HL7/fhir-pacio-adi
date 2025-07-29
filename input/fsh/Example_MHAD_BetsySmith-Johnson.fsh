@@ -36,8 +36,7 @@ Usage: #example
 Description: "Betsy Smith-Johnson MHAD Composition Example"
 
 * language = #en-US
-* extension.url = "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber"
-* extension.valueString = "1703257800"
+* extension[composition-clinicaldocument-versionNumber].valueString = "2024-12-22T05:00:00+00:00"  
 * identifier.system = "https://example.org/standards/terminology/namingSystem/setId"
 * identifier.value = "2.16.840.1.113883.15.15.200.1:11220-d580858d0d83427381cd9d2237580048"
 * status = #final
@@ -148,8 +147,6 @@ Usage: #example
 * policy.uri = "http://example.org/healthcare-agent-policy"  // fictitious policy URL for example
 
 * provision.actor[+].role = $LOINC#75783-1 "Primary healthcare agent [Reported]"
-* provision.actor[=].reference = Reference(RelatedPerson/Example-Smith-Johnson-HealthcareAgent1)
-* provision.actor[+].role = $LOINC#75784-9 "First alternate healthcare agent [Reported]"
 * provision.actor[=].reference = Reference(RelatedPerson/Example-Smith-Johnson-HealthcareAgent3)
 
 * provision.action[+] = ADIHCADecisionsCS#intubation "Intubation"
@@ -164,7 +161,7 @@ Usage: #example
 // ****************************
 
 Instance: MHAD-Example-Smith-Johnson-Binary
-InstanceOf: Binary
+InstanceOf: ADIMinimalSourceFormInformation
 Usage: #Example
 Description: "Betsy Smith-Johnson MHAD Binary Example"
 * contentType = #application/pdf

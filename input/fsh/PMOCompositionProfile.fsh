@@ -119,12 +119,15 @@ Description: "This profile encompasses information that makes up a practitioner'
 * section[administration_information].entry contains
     adi_personal_goal 0..* and 
     adi_decisional_capacity 0..1 MS and
+    adi_pmo_hospice_observation 0..1 MS and
     minimal_source_form 0..1 MS  
 
 * section[administration_information].entry[adi_decisional_capacity] only Reference(ADIDecisionalCapacity)
 * section[administration_information].entry[adi_decisional_capacity] ^short = "ADI Decisional Capacity"
 * section[administration_information].entry[adi_personal_goal] only Reference(ADIPersonalGoal)
 * section[administration_information].entry[adi_personal_goal] ^short = "ADI Personal Goal"
+* section[administration_information].entry[adi_pmo_hospice_observation] only Reference(ADIPMOHospiceObservation)
+* section[administration_information].entry[adi_pmo_hospice_observation] ^short = "Hospice or palliative care enrollment"
 * section[administration_information].entry[minimal_source_form] only Reference(Binary)
 * section[administration_information].entry[minimal_source_form] ^short = "Minimal Source Form"
 
@@ -134,7 +137,7 @@ Description: "This profile encompasses information that makes up a practitioner'
 * section[gpp_upon_death].title 1..1 MS
 * section[gpp_upon_death].code 1..1 
 * section[gpp_upon_death].code = $LOINC#81337-8
-* section[gpp_upon_death].entry 
+* section[gpp_upon_death].entry 0..* MS
 * section[gpp_upon_death].entry only Reference(ADIPersonalInterventionPreference or ADIPersonalPrioritiesOrganizer or ADIAutopsyObservation or ADIOrganDonationObservation or ADIPersonalGoal or ADIUponDeathPreference)
 
 // ******* ADI Minimal Source Form Section ********
