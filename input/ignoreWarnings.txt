@@ -12,13 +12,6 @@ None of the codings provided are in the value set 'Observation Category Codes' (
 # Approved US Core Variance for RelatedPerson profiles - https://jira.hl7.org/browse/FHIR-43304
 %US FHIR Usage rules require that all profiles on RelatedPerson derive from the core US profile.%
 
-# The USCoreProvenance profile, from which the ADIProvenance profile is based, has the following warnings:
-provenance-1: The left side is inherently a collection, and so the expression '%resource.agent.who.resolve() is Practitioner' may fail or return false if there is more than one item in the content being evaluated
-provenance-1: The left side is inherently a collection, and so the expression '%resource.agent.who.resolve() is Device' may fail or return false if there is more than one item in the content being evaluated
-
-# The following warning is related to the USCoreProvenance profile and not further specified in the ADI Provenance profile.
-%There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-PurposeOfUse'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.1.0', found versions: 3.0.0, 3.1.0. Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v3-PurposeOfUse' to 'http://terminology.hl7.org/ValueSet/v3-PurposeOfUse|3.1.0'%
-
 # USCoreDocumentReference error on constraints not specified or used by ADI FHIR IG and needs to be resolved by the US Core project team.
 %The slice 'uscore' on path 'DocumentReference.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true%
 %The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet|5.2.0 is deprecated%
@@ -40,8 +33,6 @@ provenance-1: The left side is inherently a collection, and so the expression '%
 # Since this IG is based on FHIR R4, the pattern discriminator is still valid. The deprecation warning is for future R5+ compatibility, but it won't break the current implementation.
 %The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)%
 
-# The additional specified codes are essential for the management of advance directive documents. The ADI specification team is working with the Structured Documents Working Group to add these additional codes.
-%Binding http://hl7.org/fhir/us/pacio-adi/ValueSet/ADIDocumentReferenceStatusVS is not a subset of binding http://hl7.org/fhir/ValueSet/composition-status|4.0.1 because The codes 'current,superseded,entered-in-error' are not in the base valueset%
 
 # XHTML-related error to div. Not relevant if set to div status is generated.
 %The markdown contains content that appears to be an embedded HTML tag starting at '<d'. This will (or SHOULD) be escaped by the presentation layer. The content should be checked to confirm that this is the desired behaviour%
@@ -73,6 +64,3 @@ provenance-1: The left side is inherently a collection, and so the expression '%
 # The slice Goal.category:type cannot be checked because the type is bound to a VSAC value set that the IG publisher cannot access without a UMLS login.
 %This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-PersonalGoal|2.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)%
 %Slice 'Goal.category:type': a matching slice is required, but not found (from http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-PersonalGoal|2.0.0-ballot). Note that other slices are allowed in addition to this required slice%
-
-# The attachment.url is purposely fictitious for example purposes so it will not be found. The MHAD example provides an example of Binary as a minimal source document.
-%Can't find 'http://example.org/Binary/Example-Smith-Johnson-DocRef-Binary1' in the bundle (Bundle.entry[26].resource.content[0].attachment.url)%
