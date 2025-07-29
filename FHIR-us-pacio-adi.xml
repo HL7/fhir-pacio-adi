@@ -15,7 +15,6 @@
 <artifact deprecated="true" id="ValueSet/PADIConsentActorRoleVS" key="ValueSet-PADIConsentActorRoleVS" name="ADI Consent Actor Role"/>
 <artifact id="StructureDefinition/ADI-DecisionalCapacity" key="StructureDefinition-ADI-DecisionalCapacity" name="ADI Decisional Capacity"/>
 <artifact id="StructureDefinition/ADI-DocumentReference" key="StructureDefinition-ADI-DocumentReference" name="ADI Document Reference"/>
-<artifact id="StructureDefinition/adi-document-reference-extension" key="StructureDefinition-adi-document-reference-extension" name="ADI Document Reference Extension"/>
 <artifact id="ValueSet/ADIDocumentReferenceStatusVS" key="ValueSet-ADIDocumentReferenceStatusVS" name="ADI Document Reference Status"/>
 <artifact id="ValueSet/ADIDocumentRevokeStatusVS" key="ValueSet-ADIDocumentRevokeStatusVS" name="ADI Document Revoke Status"/>
 <artifact id="StructureDefinition/ADI-DocumentationObservation" key="StructureDefinition-PADI-DocumentationObservation" name="ADI Documentation Observation"/>
@@ -178,7 +177,11 @@
 <artifact id="Organization/Example-Smith-Johnson-OrganizationCustodian1" key="Organization-Example-Smith-Johnson-OrganizationCustodian1" name="Example-Smith-Johnson-OrganizationCustodian1"/>
 <artifact id="Bundle/Example-Smith-Johnson-PACP-Bundle1" key="Bundle-Example-Smith-Johnson-PACP-Bundle1" name="Example-Smith-Johnson-PACP-Bundle1"/>
 <artifact deprecated="true" id="Provenance/Example-Smith-Johnson-PACPProvenance1" key="Provenance-Example-Smith-Johnson-PACPProvenance1" name="Example-Smith-Johnson-PACPProvenance1"/>
+<artifact id="ServiceRequest/Example-Smith-Johnson-PMOAdditionalOrdersServiceRequest1" key="ServiceRequest-Example-Smith-Johnson-PMOAdditionalOrdersServiceRequest1" name="Example-Smith-Johnson-PMOAdditionalOrdersServiceRequest1"/>
 <artifact id="Observation/Example-Smith-Johnson-PMOHospiceObservation1" key="Observation-Example-Smith-Johnson-PMOHospiceObservation1" name="Example-Smith-Johnson-PMOHospiceObservation1"/>
+<artifact id="ServiceRequest/Example-Smith-Johnson-PMOHydrationServiceRequest1" key="ServiceRequest-Example-Smith-Johnson-PMOHydrationServiceRequest1" name="Example-Smith-Johnson-PMOHydrationServiceRequest1"/>
+<artifact id="ServiceRequest/Example-Smith-Johnson-PMOInitialTreatmentServiceRequest1" key="ServiceRequest-Example-Smith-Johnson-PMOInitialTreatmentServiceRequest1" name="Example-Smith-Johnson-PMOInitialTreatmentServiceRequest1"/>
+<artifact id="ServiceRequest/Example-Smith-Johnson-PMONutritionServiceRequest1" key="ServiceRequest-Example-Smith-Johnson-PMONutritionServiceRequest1" name="Example-Smith-Johnson-PMONutritionServiceRequest1"/>
 <artifact id="Provenance/Example-Smith-Johnson-PMOProvenance1" key="Provenance-Example-Smith-Johnson-PMOProvenance1" name="Example-Smith-Johnson-PMOProvenance1"/>
 <artifact id="Patient/Example-Smith-Johnson-Patient1" key="Patient-Example-Smith-Johnson-Patient1" name="Example-Smith-Johnson-Patient1"/>
 <artifact id="Goal/Example-Smith-Johnson-PersonalGoal1" key="Goal-Example-Smith-Johnson-PersonalGoal1" name="Example-Smith-Johnson-PersonalGoal1"/>

@@ -2,7 +2,7 @@
 Extension: DocumentReferenceVersionNumber
 Id: adi-docVersionNumber-extension
 Title: "Version Number"
-Description: "Advance Directive Information VersionNumber Extension represents a numeric value used to version successive replacement documents."
+Description: "Advance Directive Information VersionNumber Extension represents a string using the dateTime of the document to version successive replacement documents."
 Context: DocumentReference
 * valueString 1..1 MS
 * value[x] only string
@@ -205,14 +205,14 @@ Context: Composition, DocumentReference
 * value[x] 0..1 MS
 * value[x] from ADIDocumentRevokeStatusVS (required) //  R5 Composition Status valueset. Fix for FHIR-
 
-Extension: ADIDocumentReferenceExtension
-Id: adi-document-reference-extension
-Title: "ADI Document Reference Extension"
-Description: "ADI Document Reference Extension is used to tie to the Composition.relatesTo element."
-Context: Composition
-* value[x] only Reference
-* valueReference 1..1 MS
-* valueReference only Reference(ADIDocumentReference)
+// Extension: ADIDocumentReferenceExtension
+// Id: adi-document-reference-extension
+// Title: "ADI Document Reference Extension"
+// Description: "ADI Document Reference Extension is used to tie to the Composition.relatesTo element."
+// Context: Composition
+// * value[x] only Reference
+// * valueReference 1..1 MS
+// * valueReference only Reference(ADIDocumentReference)
 
 // TODO Could add Invariant for Signature.type matching the attesterRole
 // TODO Notary Expiration Date?

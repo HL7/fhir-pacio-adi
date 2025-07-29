@@ -37,23 +37,6 @@ provenance-1: The left side is inherently a collection, and so the expression '%
 %Reference to draft CodeSystem http://hl7.org/fhir/composition-status|4.0.1%
 %Reference to draft CodeSystem urn:iso:std:iso:3166:-2|2021 from fhir.tx.support.r4#0.27.0%
 
-# VSAC valuesets need a UTS login to validate.
-%A definition could not be found for Canonical URL 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.7'%
-%A definition could not be found for Canonical URL 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.27'%
-%The value set import https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.27 could not be found so cannot be checked%
-%ValueSet 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.28' not found%
-%ValueSet 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.31' not found%
-%A definition could not be found for Canonical URL 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.31'%
-%A definition could not be found for Canonical URL 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.32'%
-%The value set import http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.33 could not be found so cannot be checked%
-%A definition could not be found for Canonical URL 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.33'%
-%A definition could not be found for Canonical URL 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.34'%
-%A definition could not be found for Canonical URL 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.35'%
-%A definition could not be found for Canonical URL 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.36'%
-%ValueSet 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1240.1' not found%
-%A definition could not be found for Canonical URL 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1240.1'%
-%Unable to find included value set 'https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.27'%
-
 # Since this IG is based on FHIR R4, the pattern discriminator is still valid. The deprecation warning is for future R5+ compatibility, but it won't break the current implementation.
 %The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)%
 
@@ -78,6 +61,8 @@ provenance-1: The left side is inherently a collection, and so the expression '%
 %This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-DocumentReference|2.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)%
 %Details for Observation/Example-Smith-Johnson-AutopsyObservation1 matching against profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-PersonalInterventionPreference|2.0.0-ballot%
 %This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|8.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)%
+%This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-PMOAdditionalOrdersOrInstructionsServiceRequest|2.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)%
+%This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-PMOMedicallyAssistedNutritionServiceRequest|2.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)%
 
 # A fictitious and non-existent example.org was used on purpose for sample data creation.
 %Can't find 'http://example.org/healthcare-agent-policy' in the bundle (Bundle.entry[5].resource.policy[0].uri)%
