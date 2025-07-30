@@ -41,6 +41,8 @@ parameters:
   apply-jurisdiction: true
   apply-publisher: true
   path-expansion-params: '../../exp-params.json'
+  pin-canonicals: pin-multiples
+
 copyrightYear: 2021+
 releaseLabel: STU 2 – Ballot
 jurisdiction: urn:iso:std:iso:3166#US "United States of America"

@@ -54,6 +54,9 @@ None of the codings provided are in the value set 'Observation Category Codes' (
 %This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|8.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)%
 %This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-PMOAdditionalOrdersOrInstructionsServiceRequest|2.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)%
 %This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-PMOMedicallyAssistedNutritionServiceRequest|2.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)%
+%This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-PMOInitialTreatmentServiceRequest|2.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)%
+INFORMATION: ServiceRequest/Example-Smith-Johnson-PMOHydrationServiceRequest1: ServiceRequest.category[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-PMOMedicallyAssistedHydrationServiceRequest|2.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+
 
 # A fictitious and non-existent example.org was used on purpose for sample data creation.
 %Can't find 'http://example.org/healthcare-agent-policy' in the bundle (Bundle.entry[5].resource.policy[0].uri)%
@@ -64,3 +67,36 @@ None of the codings provided are in the value set 'Observation Category Codes' (
 # The slice Goal.category:type cannot be checked because the type is bound to a VSAC value set that the IG publisher cannot access without a UMLS login.
 %This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-PersonalGoal|2.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)%
 %Slice 'Goal.category:type': a matching slice is required, but not found (from http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-PersonalGoal|2.0.0-ballot). Note that other slices are allowed in addition to this required slice%
+
+# The implementation will have only one type for every Composition
+%Composition-section-code-equals-type: The left side is inherently a collection, and so the expression 'code.coding.code = 'portable_medical_orders'' may fail or return false if there is more than one item in the content being evaluated%
+%Composition-section-code-equals-type: The left side is inherently a collection, and so the expression 'section.where(code.coding.code = 'portable_medical_orders').code = type' may fail or return false if there is more than one item in the content being evaluated%
+%Composition-section-code-equals-type: The left side is inherently a collection, and so the expression 'section.where(code.coding.code = 'portable_medical_orders').code = type' may fail or return false if there is more than one item in the content being evaluated%
+
+# The CapabilityStatement canonical urls exist. It is suspected that there is a bug related to the IG publisher.
+WARNING: CapabilityStatement/adi: CapabilityStatement.rest[0].resource[1].supportedProfile[0]: A definition could not be found for Canonical URL 'https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-Composition-Header'
+WARNING: CapabilityStatement/adi: CapabilityStatement.rest[0].resource[1].supportedProfile[1]: A definition could not be found for Canonical URL 'https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-PACPComposition.'
+WARNING: CapabilityStatement/adi: CapabilityStatement.rest[0].resource[2].supportedProfile[0]: A definition could not be found for Canonical URL 'https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-HealthcareAgentAuthority'
+WARNING: CapabilityStatement/adi: CapabilityStatement.rest[0].resource[2].supportedProfile[1]: A definition could not be found for Canonical URL 'https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-ConsentForHealthcareAgent'
+WARNING: CapabilityStatement/adi: CapabilityStatement.rest[0].resource[3].supportedProfile[0]: A definition could not be found for Canonical URL 'https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-DocumentReference'
+WARNING: CapabilityStatement/adi: CapabilityStatement.rest[0].resource[4].supportedProfile[0]: A definition could not be found for Canonical URL 'https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-PersonalGoal'
+WARNING: CapabilityStatement/adi: CapabilityStatement.rest[0].resource[5].supportedProfile[0]: A definition could not be found for Canonical URL 'https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-PersonalPrioritiesOrganizer'
+WARNING: CapabilityStatement/adi: CapabilityStatement.rest[0].resource[6].supportedProfile[0]: A definition could not be found for Canonical URL 'https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-DocumentationObservation'
+WARNING: CapabilityStatement/adi: CapabilityStatement.rest[0].resource[6].supportedProfile[1]: A definition could not be found for Canonical URL 'https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-PersonalInterventionPreference'
+WARNING: CapabilityStatement/adi: CapabilityStatement.rest[0].resource[6].supportedProfile[2]: A definition could not be found for Canonical URL 'https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-OrganDonationObservation'
+WARNING: CapabilityStatement/adi: CapabilityStatement.rest[0].resource[6].supportedProfile[3]: A definition could not be found for Canonical URL 'https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-AutopsyObservation'
+WARNING: CapabilityStatement/adi: CapabilityStatement.rest[0].resource[6].supportedProfile[4]: A definition could not be found for Canonical URL 'https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-CareExperiencePreference'
+WARNING: CapabilityStatement/adi: CapabilityStatement.rest[0].resource[8].supportedProfile[0]: A definition could not be found for Canonical URL 'https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-patient'
+WARNING: CapabilityStatement/adi: CapabilityStatement.rest[0].resource[9].supportedProfile[0]: A definition could not be found for Canonical URL 'https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-Provenance'
+WARNING: CapabilityStatement/adi: CapabilityStatement.rest[0].resource[10].supportedProfile[0]: A definition could not be found for Canonical URL 'https://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-HealthcareAgent'
+
+# Acknowledged issue of issue of ambiguity where an Observation resource where a validator (IG Publisher or other) cannot identify which StructureDefinition to use for validating that resource. This will be resolved with JIRA issue FHIR-51596 post-ballot.
+%Found multiple matching profiles for Observation/Example-Smith-Johnson-OrganDonationObservation1 among choices: http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-OrganDonationObservation|2.0.0-ballot, http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-UponDeathPreferences|2.0.0-ballot%
+%Found multiple matching profiles for Observation/Example-Smith-Johnson-AutopsyObservation1 among choices: http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-AutopsyObservation|2.0.0-ballot, http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-UponDeathPreferences|2.0.0-ballot%
+%Details for Observation/Example-Smith-Johnson-OrganDonationObservation1 matching against profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-PersonalInterventionPreference|2.0.0-ballot%
+%Details for Observation/Example-Smith-Johnson-OrganDonationObservation1 matching against profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-AutopsyObservation|2.0.0-ballot%
+%Details for Observation/Example-Smith-Johnson-AutopsyObservation1 matching against profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-OrganDonationObservation|2.0.0-ballot%
+
+# Configuration Parameters set to 'pin-canonicals: pin-multiples' in sushi-config.yaml to support multiple versions.
+%Pinned the version of http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber to 5.2.0 from choices of 1.0.0 (hl7.fhir.uv.extensions.r4#1.0.0), 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)%
+%Pinned the version of http://terminology.hl7.org/ValueSet/v3-PurposeOfUse to 3.1.0 from choices of 3.0.0 (hl7.terminology#5.5.0), 3.1.0 (hl7.terminology.r4#6.4.0)%
