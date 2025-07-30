@@ -1,7 +1,7 @@
 {
     "package-id" : "hl7.fhir.us.pacio-adi",
     "version" : "2.0.0-ballot",
-    "path" : "http://hl7.org/fhir/us/pacio-adi/STU2",
+    "path" : "http://hl7.org/fhir/us/pacio-adi/2025Sep",
     "status" : "ballot",
     "sequence" : "STU 2",
     "milestone": false,

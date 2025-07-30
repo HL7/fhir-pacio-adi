@@ -1,23 +1,12 @@
 == Suppressed Messages ==
 
 # Approved US Core Variance for CarePlan and Observation profiles - https://jira.hl7.org/browse/FHIR-34110
-%US FHIR Usage rules require that all profiles on CarePlan derive from the core US profile%
 %US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles.%
-%This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|4.0.0%
-
-# Existing observation category codes are not suitable for capturing care experience preferences or intervention preferences
-None of the codings provided are in the value set 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), and a coding is recommended to come from this value set) (codes = http://hl7.org/fhir/us/pacio-adi/CodeSystem/ADIPreferenceCategoryCS#care-experience-preference)
-None of the codings provided are in the value set 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), and a coding is recommended to come from this value set) (codes = http://hl7.org/fhir/us/pacio-adi/CodeSystem/ADIPreferenceCategoryCS#intervention-preference)
 
 # Approved US Core Variance for RelatedPerson profiles - https://jira.hl7.org/browse/FHIR-43304
 %US FHIR Usage rules require that all profiles on RelatedPerson derive from the core US profile.%
 
-# USCoreDocumentReference error on constraints not specified or used by ADI FHIR IG and needs to be resolved by the US Core project team.
-%The slice 'uscore' on path 'DocumentReference.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true%
-%The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet|5.2.0 is deprecated%
-
 # Draft and deprecated versions of code system that are part of the base are not due to the ADI FHIR IG.
-%Reference to draft item http://terminology.hl7.org/CodeSystem/provenance-participant-type|1.0.0%
 %Reference to draft CodeSystem http://hl7.org/fhir/narrative-status|4.0.1%
 %Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/provenance-participant-type|1.0.0%
 %Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/list-order|1.0.0%
@@ -26,9 +15,7 @@ None of the codings provided are in the value set 'Observation Category Codes' (
 %The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated%
 %Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0%
 %Reference to draft CodeSystem urn:iso:std:iso:3166:-2|2021 from fhir.tx.support.r4#0.30.0%
-%Reference to draft CodeSystem http://hl7.org/fhir/composition-status|4.0.1 from hl7.fhir.r4.core#4.0.1%
 %Reference to draft CodeSystem http://hl7.org/fhir/composition-status|4.0.1%
-%Reference to draft CodeSystem urn:iso:std:iso:3166:-2|2021 from fhir.tx.support.r4#0.27.0%
 
 # Since this IG is based on FHIR R4, the pattern discriminator is still valid. The deprecation warning is for future R5+ compatibility, but it won't break the current implementation.
 %The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)%
@@ -64,13 +51,8 @@ INFORMATION: ServiceRequest/Example-Smith-Johnson-PMOHydrationServiceRequest1: S
 %Can't find 'http://example.org/healthcare-agent-policy' in the bundle (Bundle.entry[11].resource.policy[0].uri)%
 %Can't find 'http://example.org/healthcare-agent-policy' in the bundle (Bundle.entry[6].resource.policy[0].uri)%
 
-# The slice Goal.category:type cannot be checked because the type is bound to a VSAC value set that the IG publisher cannot access without a UMLS login.
-%This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-PersonalGoal|2.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)%
-%Slice 'Goal.category:type': a matching slice is required, but not found (from http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-PersonalGoal|2.0.0-ballot). Note that other slices are allowed in addition to this required slice%
-
 # The implementation will have only one type for every Composition
 %Composition-section-code-equals-type: The left side is inherently a collection, and so the expression 'code.coding.code = 'portable_medical_orders'' may fail or return false if there is more than one item in the content being evaluated%
-%Composition-section-code-equals-type: The left side is inherently a collection, and so the expression 'section.where(code.coding.code = 'portable_medical_orders').code = type' may fail or return false if there is more than one item in the content being evaluated%
 %Composition-section-code-equals-type: The left side is inherently a collection, and so the expression 'section.where(code.coding.code = 'portable_medical_orders').code = type' may fail or return false if there is more than one item in the content being evaluated%
 
 # The CapabilityStatement canonical urls exist. It is suspected that there is a bug related to the IG publisher.
