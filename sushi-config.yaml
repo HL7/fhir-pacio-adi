@@ -19,7 +19,7 @@ status: active
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg  
     valueCode: pe
-  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status|5.2.0
     valueCode: trial-use
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
     valueInteger: 2
