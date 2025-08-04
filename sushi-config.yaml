@@ -17,12 +17,12 @@ name: PACIOAdvanceDirectiveInteroperability
 title: PACIO Advance Healthcare Directive Interoperability Implementation Guide
 status: active
 extension:
-  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg  
-    valueCode: pe
-  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status|5.2.0
-    valueCode: trial-use
-  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
-    valueInteger: 2
+- url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg 
+  valueCode: pe
+- url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+  valueCode: trial-use
+- url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+  valueInteger: 2
 publisher:
   name: HL7 International / Patient Empowerment
   url: http://www.hl7.org/Special/committees/patientempowerment
