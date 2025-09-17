@@ -4,7 +4,7 @@ Content Type 3, are Portable Medical Orders (such as a DNR and/or POLST/MOLST or
 
 All doctors, emergency medical professionals, and other healthcare professionals, must follow these portable medical orders as the person moves from one location to another (hospital, care facility, home, etc.), unless another practitioner examines the person, reviews the orders with the person or their healthcare agent, and a decision is reached that changes to the orders are warranted or desired. In an emergency situation, life-sustaining procedures that are normally required of emergency response personnel will be overridden by the contents of portable medical orders.
 
-Depending on the state, portable medical orders may be known by any of the following names:
+Depending on the State, portable medical orders may be known by any of the following names:
 * MOLST (Medical Orders for Life Sustaining Treatment)
 * POLST (Physician Orders for Life Sustaining Treatment)
 * MOST (Medical Orders for Scope of Treatment)
