@@ -12,6 +12,7 @@
 * [ADI Patient-authored Composition](StructureDefinition-ADI-PACPComposition.html)
 
 ### Consent
+* [ADI Healthcare Agent Consent (Abstract Profile)](StructureDefinition-ADIHealthcareAgentConsent.html)
 * [ADI Healthcare Agent Consent Deny](StructureDefinition-ADI-ADIConsentDeny.html)
 * [ADI Healthcare Agent Consent Permit](StructureDefinition-ADI-ADIConsentPermit.html)
 
