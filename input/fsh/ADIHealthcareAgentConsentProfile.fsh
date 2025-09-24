@@ -2,7 +2,7 @@ Profile: ADIHealthcareAgentConsent
 Parent: Consent
 Id: ADI-HealthcareAgentConsent
 Title: "ADI Healthcare Agent Consent"
-Description: "This profile is used to represent a delegation of rights consent for healthcare related decision-making. The Perm Consent enables the patient to delegate the typical powers of a durable medical power of attorney to one or more healthcare agents which may be in a prioritized order (primary, secondary, tertiary) or simply may be designated as healthcare agents to act as an authorized personal representative for the patient in circumstances where the patient is not able to communicate.
+Description: "This profile is used to represent a delegation of rights consent for healthcare related decision-making. The ADI Healthcare Agent Consent Permit profile enables the patient to delegate the typical powers of a durable medical power of attorney to one or more healthcare agents which may be in a prioritized order (primary, secondary, tertiary) or simply may be designated as healthcare agents to act as an authorized personal representative for the patient in circumstances where the patient is not able to communicate.
 The ADI Healthcare Agent Consent Deny Profile may be used in conjunction to constrain the powers granted through the permit. 
 The authorized personal representative appointed as healthcare agents are referenced from the Consent Resource via the actor.reference where the actor.code indicates the healthcare agent role"
 
