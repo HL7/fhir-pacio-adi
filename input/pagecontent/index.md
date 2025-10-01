@@ -43,19 +43,15 @@ Systems used to create and update patient-generated advance care plans through a
 
 ### External drivers
 
-**Note:** The IG was initially developed during the beginning of the COVID-19 pandemic, before vaccines were available and many patients were put on ventilators at hospitals. The narrative below is meant to illustrate a situation where a patient in this case would want their advance directive in place.
+**NOTE:** This IG was initially developed during the beginning of the COVID-19 pandemic, as our healthcare system was incredibly stressed out by the high acuity, high volume, reduced workforce and thinly stretched resources that our nation (the world) experienced. We know from reviewing that unique time in history that many patients were put on ventilators at hospitals, and that people were triaged and treated as quickly as our healthcare system could manage, yet without the personalization of care that we strive to achieve in our country.  The narrative below is meant to illustrate a situation where a patient would want their advance healthcare directive in place.
 
-The aging population receiving healthcare in skilled nursing facilities and assisted living communities were under forced isolation to reduce the risk of contracting COVID-19. Additionally, due to the pandemic, those requiring medical care  experienced transitions of care without family or a personal advocate to accompany them in order to influence medical care or be at their side; concerns about the viral transmission potential associated with paper advance directive documents further complicate transitions of care. The impact created a sense of disempowerment, isolation, and a disconnection with the world they can no longer safely interact freely with.
+The aging population receiving healthcare in skilled nursing facilities, assisted living communities, and other types of senior living settings were under forced isolation to reduce the risk of contracting, or spreading, COVID-19.  Additionally, due to the pandemic, those requiring medical care experienced transitions of care without a family member or personal advocate to accompany them in order to influence the medical care provided or even just to be at the patient's side. Concerns about the potential viral transmission of paper advance healthcare directive documents further complicated transitions of care and communication of those important treatment preferences.  The impact was a sense of disempowerment, isolation, and a disconnection with the world they could no longer safely interact freely with.
 
-<p>
-Never before had the availability of verifiable digital advance directive documents been so essential to delivering care.
-</p>
-<p>
-Providers understood that a person’s goals, preferences, and priorities for care were a critical element in a person-centered healthcare system.
-</p>
-<p>
-The role of technology and expanded adoption by the aging population, providers, and care teams brought to the forefront the expectation of seamless accessibility of advance directive information.
-</p>
+Never before had the availability of verifiable digital advance healthcare directive information and documents been so essential to delivering care.
+
+Providers understood that a person's goals, preferences, and priorities for care were critical elements in person-centered care delivery.  The need to modernize this aspect of the healthcare system was paramount to moving to the personalization that patients, regulators, payers, and families demanded.
+
+The role of technology and expanded adoption by those desiring personalized care, providers who wanted to deliver goal-concordant care, and the care teams who were focused on what mattered and what was important to the people they cared for brought to the forefront an expectation of seamless digital accessibility of advance healthcare directive information.
 
 ### Audience/Expected Users
 <p>
