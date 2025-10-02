@@ -234,9 +234,9 @@
 <page key="general_guidance" name="General Guidance"/>
 <page key="index" name="Home"/>
 <page key="key_terms_and_acronyms" name="Key Terms and Acronyms"/>
-<page key="content_type1_mhad_guidance" name="MHAD Guidance"/>
-<page key="content_type1_pacp_guidance" name="PACP Guidance"/>
-<page key="content_type3_pmo_guidance" name="PMO Guidance"/>
+<page key="mhad_guidance" name="MHAD Guidance"/>
+<page key="pacp_guidance" name="PACP Guidance"/>
+<page key="pmo_guidance" name="PMO Guidance"/>
 <page key="package_dependencies" name="Package Dependencies"/>
 <page deprecated="true" key="patient_stories_and_personas" name="Patient Stories and Personas"/>
 <page key="artifact_resource_type" name="Profiles by Resource Type"/>

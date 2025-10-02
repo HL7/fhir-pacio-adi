@@ -136,15 +136,15 @@ An example of this representation is shown in the resource snippet below:
 
 #### Advance Directive CDA Document Structure Requirements
 
-CDA attachments **SHALL** align with the [HL7 CDA® R2 Implementation Guide: Personal Advance Care Plan (PACP) Document, Release 1 STU3 - US Realm](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=434) specification:
+CDA attachments **SHALL** align with the [HL7 CDA® R2 Implementation Guide: Personal Advance Care Plan (Personal ACP) Document, Release 1 STU3 - US Realm](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=434) specification:
 
 * Set the FHIR `DocumentReference.content.attachment.format.system` element to "http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes" 
 * Set the FHIR `DocumentReference.content.attachment.format.code` element to one of two options depending on the CDA format:
 
 | Format              | DocumentReference.content.format.code               |
 | ------------------- | --------------------------------------------------- |
-| Structured Body     | urn:hl7-org:sdwg:pacp-structuredBody:1.3.1          |
-| Non-structured Body | urn:hl7-org:sdwg:pacp-nonXMLBody:1.3.1              |
+| Structured Body     | urn:hl7-org:sdwg:Personal ACP-structuredBody:1.3.1          |
+| Non-structured Body | urn:hl7-org:sdwg:Personal ACP-nonXMLBody:1.3.1              |
 {: .grid }
 
 An example of this representation is shown in the resource snippet below:
@@ -157,8 +157,8 @@ An example of this representation is shown in the resource snippet below:
     },
     "format": {
         "system": "http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes",
-        "code": "urn:hl7-org:sdwg:pacp-structuredBody:1.3.1",
-        "display": "PACP C-CDA"
+        "code": "urn:hl7-org:sdwg:Personal ACP-structuredBody:1.3.1",
+        "display": "Personal ACP C-CDA"
     }
 }]
 ```

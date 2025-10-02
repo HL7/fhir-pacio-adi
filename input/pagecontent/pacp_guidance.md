@@ -1,6 +1,6 @@
-### ADI Content Type 1 Document Structure - Patient-authored Advance Care Plan (PACP)
+### ADI Patient-authored Advance Care Plan (Personal ACP) Document Structure - 
 
-The ADI Content Type 1 document defines 7 sections:
+The ADI Personal ACP document defines 7 sections:
 1. Healthcare Agent - Healthcare agents, healthcare agent advisors, behavioral healthcare agents, and consent by the subject regarding the stated designees’ roles, powers, and limitations.
 2. Goals, Preferences, and Priorities for Certain Conditions – Preferences to be used in treatment or care planning that express a person’s goals, preferences, and priorities for care to be considered under specific situations or conditions.
 3. Goals, Preferences, and Priorities Personal Care Experience – Characteristically these concepts express a person’s priorities for Quality of Life and the related care delivery experiences, personal goals, and preferences for that experience, which can be further grouped and placed into a Personal Priorities Organizer.
@@ -10,7 +10,7 @@ The ADI Content Type 1 document defines 7 sections:
 7. Administrative Information - Administrative information associated with the personal advance care plan and/or advance directive information.
 
 <p align="center">
-    <img src="./document_structure_adi_pacp.jpg" alt="Person-authored Advance Directive Document Structure" style="width: 100%; float: none; vertical-align: middle;"/>
+    <img src="./document_structure_adi_Personal ACP.jpg" alt="Person-authored Advance Directive Document Structure" style="width: 100%; float: none; vertical-align: middle;"/>
 </p>
 
 The content in these categories of advance directive could include, but are not limited to:
@@ -27,7 +27,7 @@ The content in these categories of advance directive could include, but are not 
 * Religious, spiritual, cultural or faith-based values that are important to the individual receiving care
 * Specific individuals or contacts to notify, likes & joys, dislikes & fears, and various messages or information to be made available
 
-Content type 1 also includes identifying the presence of any type of Portable Medical Order (PMO) such as a POLST or MOLST, and orders such as Do Not Resuscitate (DNR) orders. It also includes identifying other types of person-authored ADI that might exist outside of the document being reviewed.  It does not include the specifics of the structured information content of other PMO and/or DNR documents, but instead creates awareness as to the presence of the documents.
+Person-authored advance direcives also include identifying the presence of any type of Portable Medical Order (PMO) such as a POLST or MOLST, and orders such as Do Not Resuscitate (DNR) orders. It may also identify other types of person-authored ADI that might exist outside of the document being reviewed.  It does not include the specifics of the structured information content of other PMO and/or DNR documents, but instead creates awareness as to the presence of the documents.
 
 
 #### Example Persona
@@ -41,12 +41,12 @@ Betsy then shares her advance directive information with her son Charles, her pr
 
 **NOTE:** This IG makes no comment as to how EHRs should be architected, as this is beyond the scope of a FHIR implementation guide.
 
-#### Workflow Representation
+#### Person Authored Document Workflow
 
 <img src="./type1_patient_story_1a.svg" alt="Patient Story 1a" style="width: 100%; float: none; align: middle;"/>
 <br clear="all" />
 
 #### FHIR Representation
 
-The example AD document for Betsy Smith-Johnson is represented as a [here](Bundle-Example-Smith-Johnson-PACP-Bundle1.html). 
+The example AD document for Betsy Smith-Johnson is represented as a [here](Bundle-Example-Smith-Johnson-Personal ACP-Bundle1.html). 
 

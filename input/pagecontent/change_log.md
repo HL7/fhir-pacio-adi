@@ -68,7 +68,7 @@
 * [FHIR-40345](https://jira.hl7.org/browse/FHIR-40345.html): Consent Category binding should be on a slice
 * [FHIR-40377](https://jira.hl7.org/browse/FHIR-40377.html): Add guidance on document status
 * [FHIR-40378](https://jira.hl7.org/browse/FHIR-40378.html): Add more guidance on when to write vs update a document
-* [FHIR-40380](https://jira.hl7.org/browse/FHIR-40380.html): Change order of sections identified in PACP Composition
+* [FHIR-40380](https://jira.hl7.org/browse/FHIR-40380.html): Change order of sections identified in Personal ACP Composition
 * [FHIR-41491](https://jira.hl7.org/browse/FHIR-41491.html): Change reference of "Portable Medical Order for Life Sustaining Treatment" to "Portable Medical Order"
 * [FHIR-41493](https://jira.hl7.org/browse/FHIR-41493.html): Support search for various known ADI document by adding details
 * [FHIR-41638](https://jira.hl7.org/browse/FHIR-41638.html): Missing guidance on metadata for specifying CDA document attachments

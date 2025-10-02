@@ -4,7 +4,7 @@ This section provides additional guidance on the relationship between the associ
 
 <a name="content_types">
 
-### ADI Content Types
+### Advance Healthcare Directive Document Types
 
 There is a very important distinction for the three types of ADI content that will be covered in this IG. Below is a description of each type of content that will be covered by the ADI FHIR IG with versions.
 
@@ -30,14 +30,14 @@ There is a very important distinction for the three types of ADI content that wi
     <tr height="15"><td colspan="3">&nbsp;</td></tr>
     <tr>
         <th width="50">&nbsp;</th>
-        <th colspan="2" style="background-color:#9DC3E6; border: 1px solid black; vertical-align: middle;  padding: 5px"><p style="font-size: 14px;"><b>Type 2: Encounter-Centric Instructions</b></p></th>
+        <th colspan="2" style="background-color:#9DC3E6; border: 1px solid black; vertical-align: middle;  padding: 5px"><p style="font-size: 14px;"><b>Encounter-Centric Instructions</b></p></th>
     </tr>
     <tr><td width="50">&nbsp;</td>
         <td width="25">&nbsp;</td>
         <td>
             <ul>
                 <li>Clinician or Practitioner-authored</li>
-                <li>Instructions are related to the current, immediate episode of care</li>
+                <li>Directives are related to the current, immediate episode of care</li>
                 <li>The patient, or their healthcare agent, provides direct input in the creation of the instructions which specify decisions that have been made about treatments that may, or may not be, utilized during a medical emergency occurring within the current episode of care.</li>
             </ul>
         </td>
@@ -45,7 +45,7 @@ There is a very important distinction for the three types of ADI content that wi
     <tr height="15"><td colspan="3">&nbsp;</td></tr>
     <tr>
         <th width="50">&nbsp;</th>
-        <th colspan="2" style="background-color:#478FD1; border: 1px solid black; vertical-align: middle;  padding: 5px"><p style="font-size: 14px;"><b>Type 3: Practitioner-Authored Portable Medical Orders for Life-Sustaining Treatments</b></p></th>
+        <th colspan="2" style="background-color:#478FD1; border: 1px solid black; vertical-align: middle;  padding: 5px"><p style="font-size: 14px;"><b>Practitioner-Authored Portable Medical Orders for Life-Sustaining Treatments</b></p></th>
     </tr>
     <tr><td width="50">&nbsp;</td>
         <td width="25">&nbsp;</td>
@@ -72,7 +72,7 @@ The current version, STU2, of this ADI with FHIR IG covers the use of RESTful AP
 
 <blockquote class="stu-note">
     <p>
-    STU2 supports only Person-authored Advance Directives (ADI Content Type 1) and Portable Medical Order (ADI Content Type 3) documents. Future versions of this FHIR IG will address encounter-centric patient instructions, Content Type 2.
+    STU2 supports only Person-authored Advance Directives and PMO documents. Future versions of this FHIR IG will address encounter-centric patient instructions, Content Type 2.
     </p>
 </blockquote>
 

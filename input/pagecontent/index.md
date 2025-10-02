@@ -2,39 +2,27 @@ The Advance Healthcare Directive Interoperability (ADI) FHIR implementation guid
 
 <blockquote class="stu-note">
     <p>
-    This is a preliminary draft of STU2, which includes support for portable medical orders for life-sustaining treatment (ADI Content Type 3) building upon STU1, which supported only Person-authored Advance Directives (ADI Content Type 1) documents. Future versions of this IG will address encounter-centric patient instructions (ADI Content Type 2).
+    This is a preliminary draft of STU2, which includes support for portable medical orders (PMO) for life-sustaining treatment building upon STU1, which supported only Person-authored Advance Directives documents. Future versions of this IG will address encounter-centric patient instructions.
     </p>
 </blockquote>
 
 ### Introduction 
-<p>
-This ADI implementation guide (IG) describes how to use existing HL7 FHIR® standards to create, update, share, verify, and exchange information about an individual's advance medical goals, preferences, and priorities for care in the event the individual is unable to communicate this information to medical teams for themselves due to a health crisis. The term “advance directive” in this IG does not refer to a specific form, document, or method of memorializing advance healthcare decisions, but is instead an over-arching category.
-</p>
 
-<p>
-Advance healthcare directives can be categorized into <a href="content_type_overview.html#adi-content-types">three types of information</a>. The current version of this guide addresses Content Type 1: Person-Authored Advance Directive Information and Content Type 3:  Portable Medical Orders for Life-Sustaining Treatment. Subsequent versions of this guide will address the other type, Content Type 2: Encounter-Centric Patient Instructions (obligations and prohibitions).
-</p>
-<p>
-Included in the content for this FHIR IG are person-authored advance directives and personal advance care plans which comprise Content Type 1, and also cover patient consent information attesting to their designation of a person, or persons, to serve as their healthcare agent. 
-</p>
+This ADI Implementation Guide (IG) describes how to use existing HL7 FHIR standards to create, update, share, verify, and exchange information about an individual's advance healthcare goals, preferences, and priorities for care in the event the individual is unable to communicate this information to medical teams for themselves due to a health crisis.  The term "advance healthcare directive" in this IG does not refer to a specific form, document, or method of memorializing advance healthcare directives, but is instead representative of an over-arching category.
 
-<!-- Removed. Kept for review before ballot
-<p>
-This initial version defines the minimum conformance requirements for digital representation and exchange of person-authored advance directives and personal advance care plans (e.g. a person’s advance medical treatment and intervention goals, preferences and priorities,  regarding potential future medical care in the event the individual becomes a patient and cannot speak for himself or herself. The intervention preferences may be conditional upon a specific health condition or physical situation. It also defines minimum conformance for the representation of patient consent for the appointment of a healthcare agent or agents, and consent to share advance directive information.
-</p>
-<p>
-A subsequent version of this IG will define the minimum conformance requirements for digital representation and exchange of practitioner-authored encounter-centric patient instructions regarding medical treatment and intervention preferences and priorities that are immediate and apply to the current encounter.
-</p>
-<p>
-A subsequent version of this IG will define the minimum conformance requirements for digital representation and exchange of practitioner-authored advance medical treatment orders. The representation creates a portable record of medical orders regarding specific aspects of life-sustaining medical treatments a patient does or does not want to receive, which could be performed during a potential future medical care event if the patient were to require life-sustaining medical interventions due to a health crisis or emergency. These orders include instructions commonly found in portable medical orders for life-sustaining treatments and may include other orders such as but not limited to Do Not Hospitalize and Do Not Intubate orders.
-</p>
--->
+Advance healthcare directives can be categorized into three types of information.  The current version of this guide addresses Person-Authored medical Advance Healthcare Directive Information and Practitioner-Authored PMO.
+
+Included in the content for this FHIR IG as part of person-authored advance directives are jurisdictional advance directives such as living wills and durable medical power of attorney documents, as well as the more detailed and personalized documents known as advance care plans.  Along with documentation of a person's care experience and treatment intervention preferences, a person's consent information attesting to their designation of an individual, or individuals, to serve as their healthcare agent or surrogate is also found in this IG.
+
+Included in the content for this FHIR IG as a part of PMOs are jurisdictional advance healthcare directive documents commonly known as POLST, MOLST, and other derivatives of those terms as well as another category of practitioner-authored documents known as Do Not Resuscitate (DNR), Out of Hospital DNR, Do Not Hospitalize (DNH), and other derivatives of those terms.
+
+Subsequent versions of this guide will address another type of Person-Authored Advance Healthcare Directives for behavioral health, known as Mental Health or Psychiatric Advance Directives.  It will also address Content Type 2 for Encounter-Centric Patient Instructions where prohibitions and obligations are captured by the medical team that are stated or issued by the patient, which only apply to that encounter.
 
 ### Background
 
 Advance healthcare directive interoperability is a complex area that involves many stakeholders.  The HL7 workgroup sponsor for this FHIR IG is Patient Empowerment.  HL7 co-sponsor workgroups include Patient Care, Orders & Observations, and Community Based Care and Privacy.  As part of the Post-Acute Care Interoperability's (PACIO) main goal in improving care transitions, the PACIO Community has adopted this project as a critical use case.  The PACIO Community and sponsoring workgroups have a strong interest in the topic of advance healthcare directive interoperability with FHIR, and will support the community engagement and technical FHIR IG development needed for advance healthcare directive interoperability.  PACIO is supported by MITRE, CMS, ASTP/ONC, and many other stakeholders (clinical, technical, and industry associations).
 
-FHIR profiles have been developed for several existing FHIR resources to represent advance healthcare directive Content Type 1 for concepts such as living will, durable medical power of attorney, personal health goals, care experience preferences, treatment intervention preferences, and upon death preferences.  For more details on advance healthcare directive interoperability and the content types within scope of this IG, refer to the General Guidance section of this IG.
+FHIR profiles have been developed for several existing FHIR resources to represent person-authored advance healthcare directives for concepts such as living will, durable medical power of attorney, personal health goals, care experience preferences, treatment intervention preferences, and upon death preferences.  For more details on advance healthcare directive interoperability and the content types within scope of this IG, refer to the General Guidance section of this IG.
 
 ### Project Need
 <p>
@@ -83,10 +71,10 @@ This Guide is divided into several pages which are listed at the top of each pag
             <li>Key Terms and Acronyms: A glossary of relevant terms described in advance directives.</li>
         </ul>
     </li>
-    <li>Person-Authored: These sections provide the use cases and additional guidance specific to patient-authored advance care plan (PACP) and mental health advance directive (MHAD) documents.
+    <li>Person-Authored: These sections provide the use cases and additional guidance specific to patient-authored advance care plan (Personal ACP) and mental health advance directive (MHAD) documents.
         <ul>
-            <li>PACP User Stories</li>
-            <li>PACP Specification Guidance</li>
+            <li>Personal ACP User Stories</li>
+            <li>Personal ACP Specification Guidance</li>
             <li>MHAD User Stories</li>
             <li>MHAD Specification Guidance</li>
         </ul>

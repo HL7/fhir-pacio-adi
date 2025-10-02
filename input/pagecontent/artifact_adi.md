@@ -10,7 +10,7 @@ The table below summarizes the relevant profiles and elements by ADI Content Typ
         <th colspan="3" style="background-color: #DEEBF7; text-align:center; padding: 10px; padding: 10px;"><b>CONTENT TYPE I: Patient-authored Advance Directive Information</b></th>
     </tr>
     <tr style="background-color: #D9D9D9;">
-        <th style="padding: 10px;" colspan="1" rowspan="15"><b>PACP Document</b></th>
+        <th style="padding: 10px;" colspan="1" rowspan="15"><b>Personal ACP Document</b></th>
         <th style="padding: 10px;" colspan="1"><b>Section</b></th>
         <th style="padding: 10px;"><b>Elements or Profile References</b></th>
     </tr>
@@ -38,7 +38,7 @@ The table below summarizes the relevant profiles and elements by ADI Content Typ
         </td>
     </tr>
     <tr>
-        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PACPComposition.html">ADI PtAuthored Composition</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-Personal ACPComposition.html">ADI PtAuthored Composition</a></td>
         <td style="padding: 7px;"><p>This profile encompasses information that makes up the author’s advance care planning information.</p></td>
     </tr>
     <tr>
