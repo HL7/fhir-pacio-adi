@@ -18,7 +18,7 @@
         <p>These are statutory defined documents (i.e., states). All documents are focused on relevant clinical information as determined by a patient or their proxy related to the wishes for potential future events.</p></td>
     </tr>
     <tr>
-        <td>Patient Personal Advance Care Plan (PACP)</td>
+        <td>Patient Personal Advance Care Plan (Personal ACP)</td>
         <td><p>This term may be used as either the document or section code for the Personal Advance Care Plan. This term was created for, but is not limited in use to, the HL7 Implementation Guide for CDA Release 2: Personal Advance Care Plan Document (US Realm) Draft Standard for Trial Use Release 1.0.</p>
         <p>It may include patient goals, preferences, and priorities under certain health conditions; patient goals, preferences, and priorities upon death; patient goals, preferences, and priorities for care experience; witness and notary document; and patient healthcare agent.
         </p></td>

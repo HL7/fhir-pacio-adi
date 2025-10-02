@@ -62,10 +62,10 @@ menu:
     Search Parameters: search_parameters.html
     Key Terms and Acronyms: key_terms_and_acronyms.html
   Person-Authored:
-    PACP Specification Guidance: content_type1_pacp_guidance.html
-    MHAD Specification Guidance: content_type1_mhad_guidance.html
+    PACP Specification Guidance: pacp_guidance.html
+    MHAD Specification Guidance: mhad_guidance.html
   Provider-Authored:
-    PMO Specification Guidance: content_type3_pmo_guidance.html
+    PMO Specification Guidance: pmo_guidance.html
   Artifacts:
     By Resource Type: artifact_resource_type.html
     Index: artifacts.html
@@ -79,12 +79,12 @@ pages:
     title: Profiles by Resource Type
   content_type_overview.md:
     title: General Guidance
-  content_type1_mhad_guidance.md:
+  mhad_guidance.md:
     title: MHAD Guidance
-  content_type1_pacp_guidance.md:
+  pacp_guidance.md:
     title: PACP Guidance
-  content_type3_pmo_guidance.md:
-    title: PMO Guidance
+  pmo_guidance.md:
+    title: Provider Authored Portable Medical Order (PMO) Document
   formal_specification.md:
     title: Formal Specification
   package_dependencies.md:
