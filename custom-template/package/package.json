@@ -7,7 +7,7 @@
   "canonical": "http://fhir.org/templates/hl7.fhir.us.pacio.ig-template",
   "base": "hl7.fhir.template",
   "dependencies": {
-    "hl7.fhir.template": "current"
+    "hl7.fhir.template": "1.0.0"
   },
   "version": "0.1.0"
 }

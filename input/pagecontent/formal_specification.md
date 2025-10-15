@@ -68,8 +68,6 @@ Data Consumers **SHALL** be able to process resource instances containing data e
 
 #### Notable differences from US Core Conformance and Must Support Requirements
 
-Data Sources may assert missing information for data elements without the need of this guide explicitly stating where it is allowed.
-
 Data Consumers must be capable of displaying resource level text elements marked as Must Support.
 
 Servers must be able to reliably provide the information completely in the form in which it was received.
