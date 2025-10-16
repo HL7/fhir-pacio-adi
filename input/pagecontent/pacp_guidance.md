@@ -10,7 +10,7 @@ The ADI Personal ACP document defines 7 sections:
 7. Administrative Information - Administrative information associated with the personal advance care plan and/or advance directive information.
 
 <p align="center">
-    <img src="./document_structure_adi_Personal ACP.jpg" alt="Person-authored Advance Directive Document Structure" style="width: 100%; float: none; vertical-align: middle;"/>
+    <img src="./document_structure_adi_pacp.jpg" alt="Person-authored Advance Directive Document Structure" style="width: 100%; float: none; vertical-align: middle;"/>
 </p>
 
 The content in these categories of advance directive could include, but are not limited to:
@@ -48,5 +48,5 @@ Betsy then shares her advance directive information with her son Charles, her pr
 
 #### FHIR Representation
 
-The example AD document for Betsy Smith-Johnson is represented as a [here](Bundle-Example-Smith-Johnson-Personal ACP-Bundle1.html). 
+The example AD document for Betsy Smith-Johnson is represented as a [here](Bundle-Example-Smith-Johnson-PACP-Bundle1.html). 
 

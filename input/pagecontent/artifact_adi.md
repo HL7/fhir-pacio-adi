@@ -38,7 +38,7 @@ The table below summarizes the relevant profiles and elements by ADI Content Typ
         </td>
     </tr>
     <tr>
-        <td style="padding: 7px;"><a href="StructureDefinition-ADI-Personal ACPComposition.html">ADI PtAuthored Composition</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PACPComposition.html">ADI PtAuthored Composition</a></td>
         <td style="padding: 7px;"><p>This profile encompasses information that makes up the author’s advance care planning information.</p></td>
     </tr>
     <tr>
