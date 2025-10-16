@@ -30,7 +30,7 @@
 <artifact id="StructureDefinition/ADI-Jurisdiction" key="StructureDefinition-ADI-Jurisdiction" name="ADI Jurisdiction"/>
 <artifact id="StructureDefinition/ADI-ADIMinimalSourceFormInformation" key="StructureDefinition-ADI-ADIMinimalSourceFormInformation" name="ADI Minimal Source Form"/>
 <artifact id="StructureDefinition/ADI-Notary" key="StructureDefinition-ADI-Notary" name="ADI Notary"/>
-<artifact id="StructureDefinition/ADI-OrganDonationObservation" key="StructureDefinition-PADI-OrganDonationObservation" name="ADI Organ Donation"/>
+<artifact id="StructureDefinition/ADI-OrganDonationObservation" key="StructureDefinition-PADI-OrganDonationObservation" name="ADI Organ Donation Observation"/>
 <artifact id="StructureDefinition/ADI-PMOAdditionalOrdersOrInstructionsServiceRequest" key="StructureDefinition-ADI-PMOAdditionalOrdersOrInstructionsServiceRequest" name="ADI PMO Additional orders or instructions ServiceRequest"/>
 <artifact id="StructureDefinition/ADI-PMOCPRServiceRequest" key="StructureDefinition-ADI-PMOCPRServiceRequest" name="ADI PMO Cardiopulmonary Resuscitation ServiceRequest"/>
 <artifact id="StructureDefinition/ADI-PMOCarePlan" key="StructureDefinition-ADI-PMOCarePlan" name="ADI PMO Care Plan"/>
