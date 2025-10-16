@@ -3,7 +3,7 @@ InstanceOf: CapabilityStatement
 Usage: #definition
 * contact.telecom.system = #url
 * contact.telecom.value = "https://www.hl7.org/Special/committees/patientempowerment/index.cfm"
-* date = "2021-07-26"
+* date = "2025-08-24"
 * description = "This Section describes the expected capabilities of the PACIO Advance Directive Interoperability (ADI) Server actor which is responsible for providing responses to the queries submitted by the ADI Requestors. \n\nThere are two primary vehicles in which Advance Directive Information can be conveyed: DocumentReference and Bundle. Through a DocumentReference, the ADI may be encoded inside directly as content data or referred to through a content reference (pointing to the ADI included in a resource like Binary) or reference a Bundle with the type=document for FHIR encoded data.\nThe resources referred to by the Composition in the document bundle include Patient, Observation,Goal, ServiceRequest, Organization, RelatedPerson, Consent, List, and Provenance."
 * experimental = false
 * fhirVersion = #4.0.1
@@ -572,4 +572,4 @@ Usage: #definition
 * status = #active
 * title = "ADI CapabilityStatement"
 * url = "http://hl7.org/fhir/us/fhir-pacio-adi/CapabilityStatement/adi"
-* version = "0.0.1"
+* version = "2.0.0"

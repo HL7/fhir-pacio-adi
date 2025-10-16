@@ -78,7 +78,7 @@ The table below summarizes the relevant profiles and elements by ADI Content Typ
         <td style="padding: 7px;"><p>This profile is used to represent the author's thoughts about autopsy.</p></td>
     </tr>
     <tr>    
-       <td style="padding: 7px;"><a href="StructureDefinition-ADI-PreferenceCarePlan.html">ADI PtAuthored Care Plan</a></td>
+       <td style="padding: 7px;"><a href="StructureDefinition-ADI-PreferenceCarePlan.html">ADI Preference Care Plan</a></td>
         <td style="padding: 7px;"><p>The Preference Care Plan is a means for an individual to express their goals and preferences under certain circumstances that may be pertinent when planning his or her care.</p></td>
     </tr>
     <tr>    

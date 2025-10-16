@@ -3,8 +3,7 @@
 
 ### Care Plan
 * [ADI PMO Care Plan](StructureDefinition-ADI-PMOCarePlan.html)
-* [Preference Care Plan](StructureDefinition-ADI-PreferenceCarePlan.html)
-* [ADI PtAuthored Care Plan](StructureDefinition-ADI-PreferenceCarePlan.html)
+* [ADI Patient-authored Preference Care Plan](StructureDefinition-ADI-PreferenceCarePlan.html)
 
 ### Composition
 * [ADI Composition Header](StructureDefinition-ADI-Composition-Header.html)
