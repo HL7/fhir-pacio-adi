@@ -28,7 +28,7 @@
 * [ADI Autopsy Observation](StructureDefinition-ADI-AutopsyObservation.html)
 * [ADI Decisional Capacity](StructureDefinition-ADI-DecisionalCapacity.html)
 * [ADI Documentation Observation](StructureDefinition-ADI-DocumentationObservation.html)
-* [ADI Organ Donation](StructureDefinition-ADI-OrganDonationObservation.html)
+* [ADI Organ Donation Observation](StructureDefinition-ADI-OrganDonationObservation.html)
 * [ADI Patient-authored Care Experience](StructureDefinition-ADI-CareExperiencePreference.html)
 * [ADI Patient-authored Personal Intervention Preference](StructureDefinition-ADI-PersonalInterventionPreference.html)
 * [ADI PMO Hospice Observation](StructureDefinition-ADI-PMOHospiceObservation.html)

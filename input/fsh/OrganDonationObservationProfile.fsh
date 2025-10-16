@@ -1,7 +1,7 @@
 Profile: ADIOrganDonationObservation
 Parent: Observation
 Id: ADI-OrganDonationObservation
-Title: "ADI Organ Donation"
+Title: "ADI Organ Donation Observation"
 Description: "This profile is used to represent the author's thoughts about organ donation."
 
 * text 1..1 MS
