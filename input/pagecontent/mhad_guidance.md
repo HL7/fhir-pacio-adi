@@ -18,7 +18,7 @@ The specifics of how to create and implement a mental health advance directive c
 Structurally, MHAD shares the same ADI header as the Personal ACP document. It differs in the related clauses. A summary of the document structure is shown below:
 
 <p align="center">
-    <img src="./document_structure_adi_Personal ACP_mhad.jpg" alt="Mental Health Advance Directive Document Structure" style="width: 100%; float: none; vertical-align: middle;"/>
+    <img src="./document_structure_adi_pacp_mhad.jpg" alt="Mental Health Advance Directive Document Structure" style="width: 100%; float: none; vertical-align: middle;"/>
 </p>
 
 <br clear="all" />

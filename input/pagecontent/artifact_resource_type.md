@@ -9,10 +9,10 @@
 ### Composition
 * [ADI Composition Header](StructureDefinition-ADI-Composition-Header.html)
 * [ADI Portable Medical Order (PMO) Composition](StructureDefinition-ADI-PMOComposition.html)
-* [ADI Patient-authored Composition](StructureDefinition-ADI-Personal ACPComposition.html)
+* [ADI Patient-authored Composition](StructureDefinition-ADI-PACPComposition.html)
 
 ### Consent
-* [ADI Healthcare Agent Consent (Abstract Profile)](StructureDefinition-ADIHealthcareAgentConsent.html)
+* [ADI Healthcare Agent Consent (Abstract Profile)](StructureDefinition-ADI-HealthcareAgentConsent.html)
 * [ADI Healthcare Agent Consent Deny](StructureDefinition-ADI-ADIConsentDeny.html)
 * [ADI Healthcare Agent Consent Permit](StructureDefinition-ADI-ADIConsentPermit.html)
 
