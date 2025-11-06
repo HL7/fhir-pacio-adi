@@ -582,10 +582,10 @@ Usage: #example
 
 
 // Observations
-// Care Experience Preferences
+// Person-authored Care Experience Preferences
 Instance: Example-Smith-Johnson-CareExperiencePreference1
-InstanceOf: ADICareExperiencePreference
-Description: "Example Patient Smith-Johnson Care Experience Preference (Role of Religion)"
+InstanceOf: ADIPersonAuthoredCareExperiencePreference
+Description: "Example Patient Smith-Johnson Person-authored Person-authored Person-authored Person-authored Person-authored Care Experience Preference (Role of Religion)"
 Usage: #example
 
 * text.status = #generated
@@ -603,8 +603,8 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-CareExperiencePreference2
-InstanceOf: ADICareExperiencePreference
-Description: "Example Patient Smith-Johnson Care Experience Preference (My Likes and Joys)"
+InstanceOf: ADIPersonAuthoredCareExperiencePreference
+Description: "Example Patient Smith-Johnson Person-authored Person-authored Person-authored Person-authored Care Experience Preference (My Likes and Joys)"
 Usage: #example
 
 * text.status = #generated
@@ -623,8 +623,8 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-CareExperiencePreference3
-InstanceOf: ADICareExperiencePreference
-Description: "Example Patient Smith-Johnson Care Experience Preference (My Dislikes and Fears)"
+InstanceOf: ADIPersonAuthoredCareExperiencePreference
+Description: "Example Patient Smith-Johnson Person-authored Care Experience Preference (My Dislikes and Fears)"
 Usage: #example
 
 * text.status = #generated
@@ -643,8 +643,8 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-CareExperiencePreference4
-InstanceOf: ADICareExperiencePreference
-Description: "Example Patient Smith-Johnson Care Experience Preference (How to Care for Me)"
+InstanceOf: ADIPersonAuthoredCareExperiencePreference
+Description: "Example Patient Smith-Johnson Person-authored Care Experience Preference (How to Care for Me)"
 Usage: #example
 
 * text.status = #generated
@@ -663,7 +663,7 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-CareExperiencePreference5
-InstanceOf: ADICareExperiencePreference
+InstanceOf: ADIPersonAuthoredCareExperiencePreference
 Description: "Example Patient Smith-Johnson Care Experience Preference (My Religion)"
 Usage: #example
 
@@ -684,7 +684,7 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-CareExperiencePreference6
-InstanceOf: ADICareExperiencePreference
+InstanceOf: ADIPersonAuthoredCareExperiencePreference
 Description: "Example Patient Smith-Johnson Care Experience Preference (Religious Contact)"
 Usage: #example
 
@@ -705,8 +705,8 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-CareExperiencePreference7
-InstanceOf: ADICareExperiencePreference
-Description: "Example Patient Smith-Johnson Care Experience Preference (Religious Contact)"
+InstanceOf: ADIPersonAuthoredCareExperiencePreference
+Description: "Example Patient Smith-Johnson Person-authored Care Experience Preference (Religious Contact)"
 Usage: #example
 
 * text.status = #generated
@@ -726,8 +726,8 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-CareExperiencePreference8
-InstanceOf: ADICareExperiencePreference
-Description: "Example Patient Smith-Johnson Care Experience Preference (Religious Contact)"
+InstanceOf: ADIPersonAuthoredCareExperiencePreference
+Description: "Example Patient Smith-Johnson Person-authored Care Experience Preference (Religious Contact)"
 Usage: #example
 
 * text.status = #generated

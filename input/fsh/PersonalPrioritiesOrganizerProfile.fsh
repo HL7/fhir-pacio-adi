@@ -19,4 +19,4 @@ Description: "Personal Priorities Organizer is used to represent a set of person
 * orderedBy = http://terminology.hl7.org/CodeSystem/list-order#priority
 
 
-* entry.item only Reference(ADIPersonalGoal or ADIPersonalInterventionPreference or ADICareExperiencePreference)
+* entry.item only Reference(ADIPersonalGoal or ADIPersonalInterventionPreference or ADIPersonAuthoredCareExperiencePreference)

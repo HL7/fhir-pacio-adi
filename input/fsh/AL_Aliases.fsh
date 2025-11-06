@@ -26,7 +26,7 @@ Alias: $USRealmHeader = http://hl7.org/fhir/us/ccda/StructureDefinition/US-Realm
 
 
 Alias: $HL7IdentifierType = http://terminology.hl7.org/CodeSystem/v2-0203
-Alias: $HL7ProvenanceParticipantType = http://terminology.hl7.org/CodeSystem/provenance-participant-type|1.0.0
+Alias: $HL7ProvenanceParticipantType = http://terminology.hl7.org/CodeSystem/provenance-participant-type|1.1.0|1.0.0
 Alias: $HL7NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 Alias: $HL7YesNoVS = http://terminology.hl7.org/ValueSet/v2-0136
 Alias: $HL7YesNoCS = http://terminology.hl7.org/CodeSystem/v2-0532
@@ -34,7 +34,7 @@ Alias: $HL7YesNoCS = http://terminology.hl7.org/CodeSystem/v2-0532
 
 Alias: $HL7CompositionAttestation = http://hl7.org/fhir/ValueSet/composition-attestation-mode
 Alias: $HL7ConsentScope = http://terminology.hl7.org/CodeSystem/consentscope
-Alias: $HL7ConsentCategoryCodes = http://terminology.hl7.org/CodeSystem/consentcategorycodes|1.0.0
+Alias: $HL7ConsentCategoryCodes = http://terminology.hl7.org/CodeSystem/consentcategorycodes|1.0.1
 Alias: $HL7ConsentCategoryVS = http://hl7.org/fhir/ValueSet/consent-category
 Alias: $HL7JurisdictionCodesVS = http://terminology.hl7.org/ValueSet/USPS-State
 Alias: $HL7DegreeLicenseCertificate = http://terminology.hl7.org/ValueSet/v2-0360
@@ -64,7 +64,7 @@ Alias: $VSACADIHealthcareAgentParticipantRole = http://cts.nlm.nih.gov/fhir/Valu
 Alias: $VSACADIAdvanceDirectiveCategories = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.11.20.9.69.4
 Alias: $VSACADIInterventionPreferencesEndOfLifeGrouping = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.9
 Alias: $VSACADIConsentActorRole = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1046.35
-Alias: $VSACADICareExperiencePreferences = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.11
+Alias: $VSACADIPersonAuthoredCareExperiencePreferences = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.11
 Alias: $VSACADIConsentType = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.13
 Alias: $VSACADIInitialTreatmentPMOOptions = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.27 // mlt_note: there is a LOINC answer list: LL6264-7
 Alias: $VSACADIInitialTreatmentPMOOptionsGrouping = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.33

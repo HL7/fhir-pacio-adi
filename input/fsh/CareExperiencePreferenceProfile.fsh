@@ -1,8 +1,8 @@
-Profile: ADICareExperiencePreference
+Profile: ADIPersonAuthoredCareExperiencePreference
 Parent: Observation
-Id: ADI-CareExperiencePreference
-Title: "ADI PtAuthored Care Experience Preference"
-Description: "Care Experience Preference is a clinical statement that presents the author's personal thoughts about something a person feels is relevant to their care experience and may be pertinent when planning their care."
+Id: ADI-PersonAuthoredCareExperiencePreference
+Title: "ADI Person-Authored Care Experience Preference"
+Description: "Person-Authored Care Experience Preference is a clinical statement that presents the author's personal thoughts about something a person feels is relevant to their care experience and may be pertinent when planning their care."
 
 
 * category ^slicing.discriminator.type = #value 
@@ -12,14 +12,14 @@ Description: "Care Experience Preference is a clinical statement that presents t
 * category ^slicing.description = "Slice based on $this value"
 
 * category 1..*
-//* category from $VSACADICareExperiencePreferences (extensible) //moved from 'category' to 'code' FHIR-35078
+//* category from $VSACADIPersonAuthoredCareExperiencePreferences (extensible) //moved from 'category' to 'code' FHIR-35078
 * category contains
     type 1..1 MS 
     
 * category[type] = ADIPreferenceCategoryCS#care-experience-preference
 
 * code 1..1 MS
-* code from $VSACADICareExperiencePreferences (extensible)
+* code from $VSACADIPersonAuthoredCareExperiencePreferences (extensible)
 * code.text MS
 
 * text 1..1 MS
@@ -33,9 +33,9 @@ Description: "Care Experience Preference is a clinical statement that presents t
 
 * extension contains adi-enclosedPrecondition-extension named EnclosedPreconditionExtension 0..1
 
-/*Profile: ADICareExperiencePreference
+/*Profile: ADIPersonAuthoredCareExperiencePreference
 Parent: Observation
-Id: ADI-CareExperiencePreference
+Id: ADI-PersonAuthoredCareExperiencePreference
 Title: "ADI PtAuthored Care Experience Preference"
 Description: "Care Experience Preference is a clinical statement that presents the author's personal thoughts about something he or she feels is relevant to his or her care experience and may be pertinent when planning his or her care."
 
@@ -44,7 +44,7 @@ Description: "Care Experience Preference is a clinical statement that presents t
 
 
 * code 1..1 MS
-* code from ADICareExperiencePreferencesVS (extensible)
+* code from ADIPersonAuthoredCareExperiencePreferencesVS (extensible)
 * code.text MS
 * subject 1..1 MS
 * subject only Reference($USCorePatient)
