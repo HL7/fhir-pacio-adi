@@ -336,7 +336,7 @@ Usage: #definition
 * rest.resource[=].supportedProfile[+] = "http://hl7.org/fhir/us/fhir-pacio-adi/StructureDefinition-ADI-PersonalInterventionPreference.html"
 * rest.resource[=].supportedProfile[+] = "http://hl7.org/fhir/us/fhir-pacio-adi/StructureDefinition-ADI-OrganDonationObservation.html"
 * rest.resource[=].supportedProfile[+] = "http://hl7.org/fhir/us/fhir-pacio-adi/StructureDefinition-ADI-AutopsyObservation.html"
-* rest.resource[=].supportedProfile[+] = "http://hl7.org/fhir/us/fhir-pacio-adi/StructureDefinition-ADI-CareExperiencePreference.html"
+* rest.resource[=].supportedProfile[+] = "http://hl7.org/fhir/us/fhir-pacio-adi/StructureDefinition-ADI-PersonAuthoredCareExperiencePreference.html"
 * rest.resource[=].type = #Observation
 * rest.resource[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension.valueCode = #SHALL
@@ -424,8 +424,8 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].definition = "http://www.hl7.org/fhir/us/core/SearchParameter-us-core-patient-birthdate"
-* rest.resource[=].searchParam[=].documentation = "http://www.hl7.org/fhir/us/core/SearchParameter-us-core-patient-birthdate.html"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/us/core/SearchParameter-us-core-patient-birthdate.html"
+* rest.resource[=].searchParam[=].documentation = "http://hl7.org/fhir/us/core/SearchParameter-us-core-patient-birthdate.html.html"
 * rest.resource[=].searchParam[=].name = "birthdate"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -451,7 +451,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-gender"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-gender.html"
 * rest.resource[=].searchParam[=].documentation = "http://www.hl7.org/fhir/us/core/SearchParameter-us-core-patient-given.html"
 * rest.resource[=].searchParam[=].name = "gender"
 * rest.resource[=].searchParam[=].type = #token
@@ -520,7 +520,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].documentation = "http://www.hl7.org/fhir/us/core/SearchParameter-us-core-ethnicity.html"
 * rest.resource[=].searchParam[=].name = "ethnicity"
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].supportedProfile = "http://www.hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html"
+* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient.html"
 * rest.resource[=].type = #Patient
 * rest.resource[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension.valueCode = #MAY

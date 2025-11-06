@@ -58,7 +58,7 @@ The table below summarizes the relevant profiles and elements by ADI Content Typ
         <td style="padding: 7px;"><p>This profile is used to represent personal medical intervention preferences under certain health conditions.</p></td>
     </tr>
     <tr>    
-        <td style="padding: 7px;"><a href="StructureDefinition-ADI-CareExperiencePreference.html">ADI PtAuthored Care Experience Preference</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PersonAuthoredCareExperiencePreference.html">ADI PtAuthored Care Experience Preference</a></td>
         <td style="padding: 7px;"><p>This profile is used to express the author's personal thoughts about something he or she feels is relevant to his or her care experience which can be important to know when planning or delivering his or her care.</p></td>
     </tr>
     <tr>    

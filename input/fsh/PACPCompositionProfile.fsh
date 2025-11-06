@@ -63,7 +63,7 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[gpp_personal_care_experience].code = $LOINC#81338-6
 * section[healthcare_agent].orderedBy 
 * section[gpp_personal_care_experience].entry 
-* section[gpp_personal_care_experience].entry only Reference(ADICareExperiencePreference or ADIPersonalPrioritiesOrganizer or ADIPersonalGoal)
+* section[gpp_personal_care_experience].entry only Reference(ADIPersonAuthoredCareExperiencePreference or ADIPersonalPrioritiesOrganizer or ADIPersonalGoal)
 
 // ******* GPP Upon Death ************
 

@@ -31,7 +31,7 @@ Description: "The Portable Medical Order Care Plan."
 
 //* goal ^short = "Patient's preferences and goals for the scope of this care plan."
 //* goal 1..* MS
-//* goal only Reference(ADIPersonalInterventionPreference or ADIPersonalGoal or ADICareExperiencePreference)
+//* goal only Reference(ADIPersonalInterventionPreference or ADIPersonalGoal or ADIPersonAuthoredCareExperiencePreference)
 
 //* extension contains
     //padi-goal-order-by-descending-priority-extension named GoalOrderByDescendingPriority 0..1 

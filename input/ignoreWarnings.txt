@@ -27,7 +27,7 @@ INFORMATION: Bundle/Example-Smith-Johnson-PACP-Bundle1: Bundle.entry[8].resource
 INFORMATION: Bundle/Example-Smith-Johnson-PACP-Bundle1: Bundle.entry[9].resource/*CarePlan/Example-Smith-Johnson-PreferenceCarePlan3*/.text.status: Reference to draft CodeSystem http://hl7.org/fhir/narrative-status|4.0.1
 INFORMATION: Bundle/MHAD-Example-Smith-Johnson-Bundle3: Bundle.entry[0].resource/*Composition/MHAD-Example-Smith-Johnson-Composition*/.status: Reference to draft CodeSystem http://hl7.org/fhir/composition-status|4.0.1
 INFORMATION: Bundle/PMO-Example-Smith-Johnson-Bundle2: Bundle.entry[0].resource.status: Reference to draft CodeSystem http://hl7.org/fhir/composition-status|4.0.1
-INFORMATION: Bundle/PMO-Example-Smith-Johnson-Bundle2: Bundle.entry[13].resource/*Provenance/Example-Smith-Johnson-PMOProvenance1*/.agent[0].type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/provenance-participant-type|1.0.0
+INFORMATION: Bundle/PMO-Example-Smith-Johnson-Bundle2: Bundle.entry[13].resource/*Provenance/Example-Smith-Johnson-PMOProvenance1*/.agent[0].type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/provenance-participant-type|1.1.0|1.0.0
 INFORMATION: CarePlan/Example-Smith-Johnson-PMOCarePlan1: CarePlan.text.status: Reference to draft CodeSystem http://hl7.org/fhir/narrative-status|4.0.1
 INFORMATION: CarePlan/Example-Smith-Johnson-PreferenceCarePlan1: CarePlan.text.status: Reference to draft CodeSystem http://hl7.org/fhir/narrative-status|4.0.1
 INFORMATION: CarePlan/Example-Smith-Johnson-PreferenceCarePlan2: CarePlan.text.status: Reference to draft CodeSystem http://hl7.org/fhir/narrative-status|4.0.1
@@ -39,19 +39,19 @@ INFORMATION: DocumentReference/Example-Smith-Johnson-DocRef-Bundle: DocumentRefe
 INFORMATION: DocumentReference/Example-Smith-Johnson-DocRef-Bundle: DocumentReference.extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem urn:iso:std:iso:3166:-2|2021 from fhir.tx.support.r4#0.30.0
 INFORMATION: DocumentReference/Example-Smith-Johnson-DocRef-DocumentReference: DocumentReference.docStatus: Reference to draft CodeSystem http://hl7.org/fhir/composition-status|4.0.1
 INFORMATION: DocumentReference/Example-Smith-Johnson-DocRef-DocumentReference: DocumentReference.extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem urn:iso:std:iso:3166:-2|2021 from fhir.tx.support.r4#0.30.0
-INFORMATION: Provenance/Example-Smith-Johnson-PMOProvenance1: Provenance.agent[0].type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/provenance-participant-type|1.0.0
-INFORMATION: StructureDefinition/ADI-ADIConsentDeny: StructureDefinition.snapshot.element[12].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/consentcategorycodes|1.0.0
-INFORMATION: StructureDefinition/ADI-ADIConsentPermit: StructureDefinition.snapshot.element[12].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/consentcategorycodes|1.0.0
+INFORMATION: Provenance/Example-Smith-Johnson-PMOProvenance1: Provenance.agent[0].type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/provenance-participant-type|1.1.0|1.0.0
+INFORMATION: StructureDefinition/ADI-ADIConsentDeny: StructureDefinition.snapshot.element[12].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/consentcategorycodes|1.0.1
+INFORMATION: StructureDefinition/ADI-ADIConsentPermit: StructureDefinition.snapshot.element[12].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/consentcategorycodes|1.0.1
 INFORMATION: StructureDefinition/ADI-DecisionalCapacity: StructureDefinition.differential.element[1].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0
 INFORMATION: StructureDefinition/ADI-DecisionalCapacity: StructureDefinition.snapshot.element[13].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0
-INFORMATION: StructureDefinition/ADI-HealthcareAgentConsent: StructureDefinition.differential.element[4].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/consentcategorycodes|1.0.0
-INFORMATION: StructureDefinition/ADI-HealthcareAgentConsent: StructureDefinition.snapshot.element[12].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/consentcategorycodes|1.0.0
+INFORMATION: StructureDefinition/ADI-HealthcareAgentConsent: StructureDefinition.differential.element[4].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/consentcategorycodes|1.0.1
+INFORMATION: StructureDefinition/ADI-HealthcareAgentConsent: StructureDefinition.snapshot.element[12].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/consentcategorycodes|1.0.1
 INFORMATION: StructureDefinition/ADI-PersonalPrioritiesOrganizer: StructureDefinition.differential.element[5].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/list-order|1.0.0
 INFORMATION: StructureDefinition/ADI-PersonalPrioritiesOrganizer: StructureDefinition.snapshot.element[18].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/list-order|1.0.0
 INFORMATION: StructureDefinition/ADI-PMOHospiceObservation: StructureDefinition.differential.element[1].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0
 INFORMATION: StructureDefinition/ADI-PMOHospiceObservation: StructureDefinition.snapshot.element[13].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0
-INFORMATION: StructureDefinition/ADI-Provenance: StructureDefinition.differential.element[9].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/provenance-participant-type|1.0.0
-INFORMATION: StructureDefinition/ADI-Provenance: StructureDefinition.snapshot.element[50].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/provenance-participant-type|1.0.0
+INFORMATION: StructureDefinition/ADI-Provenance: StructureDefinition.differential.element[9].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/provenance-participant-type|1.1.0|1.0.0
+INFORMATION: StructureDefinition/ADI-Provenance: StructureDefinition.snapshot.element[50].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/provenance-participant-type|1.1.0|1.0.0
 
 
 # Since this IG is based on FHIR R4, the pattern discriminator is still valid. The deprecation warning is for future R5+ compatibility, but it won't break the current implementation.
