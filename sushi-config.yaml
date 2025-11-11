@@ -62,8 +62,9 @@ menu:
     Search Parameters: search_parameters.html
     Key Terms and Acronyms: key_terms_and_acronyms.html
   Person-Authored:
-    PACP Specification Guidance: pacp_guidance.html
-    MHAD Specification Guidance: mhad_guidance.html
+    Personal Advance Care Plan (ACP): pacp_guidance.html
+    Mental Health Advance Directive (MHAD): mhad_guidance.html
+    Person-Authored Document Workflow: pacp_workflow.html
   Provider-Authored:
     PMO Specification Guidance: pmo_guidance.html
   Artifacts:
@@ -85,6 +86,8 @@ pages:
     title: PACP Guidance
   pmo_guidance.md:
     title: Provider Authored Portable Medical Order (PMO) Document
+  pacp_workflow.md:
+    title: Person-Authored Document Workflow
   formal_specification.md:
     title: Formal Specification
   package_dependencies.md:

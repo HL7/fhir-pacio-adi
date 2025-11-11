@@ -1,4 +1,4 @@
 ### Introduction 
 <p>
-TBD for patient-authored advance directives.
+TBD for person-authored advance directives.
 </p>

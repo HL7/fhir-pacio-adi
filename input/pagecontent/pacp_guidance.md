@@ -1,4 +1,4 @@
-### ADI Patient-authored Advance Care Plan (Personal ACP) Document Structure - 
+### ADI Person-authored Advance Care Plan (Personal ACP) Document Structure - 
 
 The ADI Personal ACP document defines 7 sections:
 1. Healthcare Agent - Healthcare agents, healthcare agent advisors, behavioral healthcare agents, and consent by the subject regarding the stated designees’ roles, powers, and limitations.
@@ -40,11 +40,6 @@ Betsy then shares her advance directive information with her son Charles, her pr
 
 
 **NOTE:** This IG makes no comment as to how EHRs should be architected, as this is beyond the scope of a FHIR implementation guide.
-
-#### Person Authored Document Workflow
-
-<img src="./type1_patient_story_1a.svg" alt="Patient Story 1a" style="width: 100%; float: none; align: middle;"/>
-<br clear="all" />
 
 #### FHIR Representation
 
