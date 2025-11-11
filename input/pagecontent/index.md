@@ -71,7 +71,7 @@ This Guide is divided into several pages which are listed at the top of each pag
             <li>Key Terms and Acronyms: A glossary of relevant terms described in advance directives.</li>
         </ul>
     </li>
-    <li>Person-Authored: These sections provide the use cases and additional guidance specific to patient-authored advance care plan (Personal ACP) and mental health advance directive (MHAD) documents.
+    <li>Person-Authored: These sections provide the use cases and additional guidance specific to person-authored advance care plan (Personal ACP) and mental health advance directive (MHAD) documents.
         <ul>
             <li>Personal ACP User Stories</li>
             <li>Personal ACP Specification Guidance</li>
