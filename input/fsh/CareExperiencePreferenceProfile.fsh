@@ -36,7 +36,7 @@ Description: "Person-Authored Care Experience Preference is a clinical statement
 /*Profile: ADIPersonAuthoredCareExperiencePreference
 Parent: Observation
 Id: ADI-PersonAuthoredCareExperiencePreference
-Title: "ADI PtAuthored Care Experience Preference"
+Title: "ADI Person Authored Care Experience Preference"
 Description: "Care Experience Preference is a clinical statement that presents the author's personal thoughts about something he or she feels is relevant to his or her care experience and may be pertinent when planning his or her care."
 
 * text 1..1 MS
