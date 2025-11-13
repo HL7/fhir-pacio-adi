@@ -38,7 +38,7 @@ The table below summarizes the relevant profiles and elements by ADI Content Typ
         </td>
     </tr>
     <tr>
-        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PACPComposition.html">ADI PtAuthored Composition</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PACPComposition.html">ADI Person Authored Composition</a></td>
         <td style="padding: 7px;"><p>This profile encompasses information that makes up the author’s advance care planning information.</p></td>
     </tr>
     <tr>
@@ -54,15 +54,15 @@ The table below summarizes the relevant profiles and elements by ADI Content Typ
         <td style="padding: 7px;"><p>This profile is used to indicate if additional advance directive documents, such as physician order for life sustaining treatment (MOLST or POLST) or Do Not Resuscitate Order (DNR) exist and a reference to the document.</p></td>
     </tr>
     <tr>    
-        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PersonalInterventionPreference.html">ADI ADI PtAuthored Personal Intervention Preference</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PersonalInterventionPreference.html">ADI ADI Person Authored Personal Intervention Preference</a></td>
         <td style="padding: 7px;"><p>This profile is used to represent personal medical intervention preferences under certain health conditions.</p></td>
     </tr>
     <tr>    
-        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PersonAuthoredCareExperiencePreference.html">ADI PtAuthored Care Experience Preference</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PersonAuthoredCareExperiencePreference.html">ADI Person Authored Care Experience Preference</a></td>
         <td style="padding: 7px;"><p>This profile is used to express the author's personal thoughts about something he or she feels is relevant to his or her care experience which can be important to know when planning or delivering his or her care.</p></td>
     </tr>
     <tr>    
-        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PersonalGoal.html">ADI PtAuthored Personal Goal</a></td>
+        <td style="padding: 7px;"><a href="StructureDefinition-ADI-PersonalGoal.html">ADI Person Authored Personal Goal</a></td>
         <td style="padding: 7px;"><p>This profile is a statement that presents the author's personal health goals that are important to be mindful of when planning his or her care.</p></td>
     </tr>
     <tr>    
