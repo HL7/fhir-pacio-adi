@@ -7,7 +7,7 @@ The table below summarizes the relevant profiles and elements by ADI Content Typ
 
 <table border="1">
     <tr>
-        <th colspan="3" style="background-color: #DEEBF7; text-align:center; padding: 10px; padding: 10px;"><b>CONTENT TYPE I: Person-authored Advance Directive Information</b></th>
+        <th colspan="3" style="background-color: #DEEBF7; text-align:center; padding: 10px; padding: 10px;"><b>CONTENT TYPE I: Person-Authored Advance Directive Information</b></th>
     </tr>
     <tr style="background-color: #D9D9D9;">
         <th style="padding: 10px;" colspan="1" rowspan="15"><b>Personal ACP Document</b></th>

@@ -85,7 +85,7 @@ pages:
   pacp_guidance.md:
     title: PACP Guidance
   pmo_guidance.md:
-    title: Provider Authored Portable Medical Order (PMO) Document
+    title: Provider-Authored Portable Medical Order (PMO) Document
   pacp_workflow.md:
     title: Person-Authored Document Workflow
   formal_specification.md:

@@ -258,7 +258,7 @@
 <page deprecated="true" key="patient_stories_and_personas" name="Patient Stories and Personas"/>
 <page key="pacp_workflow" name="Person-Authored Document Workflow"/>
 <page key="artifact_resource_type" name="Profiles by Resource Type"/>
-<page key="pmo_guidance" name="Provider Authored Portable Medical Order (PMO) Document"/>
+<page key="pmo_guidance" name="Provider-Authored Portable Medical Order (PMO) Document"/>
 <page key="search_parameters" name="Recommended Search Parameters"/>
 <page key="security_privacy_consent" name="Security, Privacy, and Consent"/>
 <page key="signatures" name="Signatures"/>

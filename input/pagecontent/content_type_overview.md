@@ -12,13 +12,13 @@ There is a very important distinction for the three types of ADI content that wi
 <table>
     <tr>
         <th width="50">&nbsp;</th>
-        <th colspan="2" style="background-color:#DEEBF7; border: 1px solid black; vertical-align: middle; padding: 5px"><p style="font-size: 14px;"><b>Type 1: Person-Authored Advance Directive Documents</b></p></th>
+        <th colspan="2" style="background-color:#DEEBF7; border: 1px solid black; vertical-align: middle; padding: 5px"><p style="font-size: 14px;"><b>Person-Authored Advance Directive Documents</b></p></th>
     </tr>
     <tr><td width="50">&nbsp;</td>
         <td width="25">&nbsp;</td>
         <td>
             <ul>
-                <li>Person-authored documents</li>
+                <li>Person-Authored documents</li>
                 <li>Used as a tool for establishing a healthcare agent (delegation of rights consenting to appoint an authorized personal representative in the role of healthcare agent) and sharing an individual’s medical treatment  intervention and care experience preferences, and care goals and priorities (GPP).</li>
                 <li>Provides guidance that a person would want others to know to inform treatment and care planning during a potential future medical emergency, in the case where the patient is unable to communicate with caregivers and medical personnel and the appointed healthcare agent needs to make decisions on the patient's behalf.</li>
                 <li>There is NO “contract” between the author (patient) and any other party involved in the future medical emergency that the GPP is required to be followed (i.e., no offer or acceptance, no consideration, no consequences for failure to follow the patient’s directives)</li>
@@ -72,7 +72,7 @@ The current version, STU2, of this ADI with FHIR IG covers the use of RESTful AP
 
 <blockquote class="stu-note">
     <p>
-    STU2 supports only Person-authored Advance Directives and PMO documents. Future versions of this FHIR IG will address encounter-centric patient instructions, Content Type 2.
+    STU2 supports only Person-Authored Advance Directives and PMO documents. Future versions of this FHIR IG will address encounter-centric patient instructions, Content Type 2.
     </p>
 </blockquote>
 
@@ -110,7 +110,7 @@ Reference the IG section, [Advance Directive Structure Requirements](formal_spec
 
 #### Handling Expiration Dates
 
-ADI documents should have a time period whereby the patient preferences or the PMOs are legally valid. These are indicated by expiration dates within the `Person-authored Composition` and `PMO Composition` profiles as such:
+ADI documents should have a time period whereby the patient preferences or the PMOs are legally valid. These are indicated by expiration dates within the `Person-Authored Composition` and `PMO Composition` profiles as such:
 * the start date for the AD:        `Composition.date`
 * the expiration date for the AD:   `Composition:extension:ExpirationDateExtension`
 

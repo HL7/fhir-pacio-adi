@@ -28,14 +28,14 @@ This section defines additional requirements and guidance relevant to this guide
 
 **_Data Consumers:_**
 
-**SHALL* meet the requirements identified in the definition of Must Support elements.
+**SHALL** meet the requirements identified in the definition of Must Support elements.
 
 
 **_Servers:_**
 
 **SHALL** include a CapabilityStatement that has a CapabilityStatement.instantiates value with the canonical URL of the [ADI Capability Statement](CapabilityStatement-adi.html).
 
-**SHALL* meet the [ADI Capability Statement](CapabilityStatement-adi.html) capability expectations.
+**SHALL** meet the [ADI Capability Statement](CapabilityStatement-adi.html) capability expectations.
 
 **SHALL** reliably provide the information completely in the form in which it was received.  
 
