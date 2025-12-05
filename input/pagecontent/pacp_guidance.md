@@ -1,4 +1,4 @@
-### ADI Person-authored Advance Care Plan (Personal ACP) Document Structure - 
+### ADI Person-Authored Advance Care Plan (Personal ACP) Document Structure - 
 
 The ADI Personal ACP document defines 7 sections:
 1. Healthcare Agent - Healthcare agents, healthcare agent advisors, behavioral healthcare agents, and consent by the subject regarding the stated designees’ roles, powers, and limitations.
@@ -10,7 +10,7 @@ The ADI Personal ACP document defines 7 sections:
 7. Administrative Information - Administrative information associated with the personal advance care plan and/or advance directive information.
 
 <p align="center">
-    <img src="./document_structure_adi_pacp.jpg" alt="Person-authored Advance Directive Document Structure" style="width: 100%; float: none; vertical-align: middle;"/>
+    <img src="./document_structure_adi_pacp.jpg" alt="Person-Authored Advance Directive Document Structure" style="width: 100%; float: none; vertical-align: middle;"/>
 </p>
 
 The content in these categories of advance directive could include, but are not limited to:
@@ -27,7 +27,7 @@ The content in these categories of advance directive could include, but are not 
 * Religious, spiritual, cultural or faith-based values that are important to the individual receiving care
 * Specific individuals or contacts to notify, likes & joys, dislikes & fears, and various messages or information to be made available
 
-Person-authored advance direcives also include identifying the presence of any type of Portable Medical Order (PMO) such as a POLST or MOLST, and orders such as Do Not Resuscitate (DNR) orders. It may also identify other types of person-authored ADI that might exist outside of the document being reviewed.  It does not include the specifics of the structured information content of other PMO and/or DNR documents, but instead creates awareness as to the presence of the documents.
+Person-Authored advance direcives also include identifying the presence of any type of Portable Medical Order (PMO) such as a POLST or MOLST, and orders such as Do Not Resuscitate (DNR) orders. It may also identify other types of person-authored ADI that might exist outside of the document being reviewed.  It does not include the specifics of the structured information content of other PMO and/or DNR documents, but instead creates awareness as to the presence of the documents.
 
 
 #### Example Persona

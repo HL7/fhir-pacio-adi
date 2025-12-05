@@ -3,11 +3,11 @@
 
 In ADI use cases, advance directive content created and updated will be represented using FHIR resources. The advance directive content is created and may be updated periodically by human actors.
 
-For Person-authored advance directive information, there may be multiple human actors involved; however, there will only be one author which is the patient. Other human actors may include the healthcare agent, behavioral healthcare agent, alternate healthcare agents, witness, notary, provider, and data enterer.
+For Person-Authored advance directive information, there may be multiple human actors involved; however, there will only be one author which is the patient. Other human actors may include the healthcare agent, behavioral healthcare agent, alternate healthcare agents, witness, notary, provider, and data enterer.
 
 <blockquote class="stu-note">
     <p>
-    STU2 includes support for Person-authored Advance Directives and portable medical order (PMO) (such as DNRs or POLST/MOLST orders) documents. Future versions of this FHIR IG will address encounter-centric patient instructions.
+    STU2 includes support for Person-Authored Advance Directives and portable medical order (PMO) (such as DNRs or POLST/MOLST orders) documents. Future versions of this FHIR IG will address encounter-centric patient instructions.
     </p>
 </blockquote>
 

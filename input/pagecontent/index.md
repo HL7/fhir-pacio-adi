@@ -2,7 +2,7 @@ The Advance Healthcare Directive Interoperability (ADI) FHIR implementation guid
 
 <blockquote class="stu-note">
     <p>
-    This is a preliminary draft of STU2, which includes support for portable medical orders (PMO) for life-sustaining treatment building upon STU1, which supported only Person-authored Advance Directives documents. Future versions of this IG will address encounter-centric patient instructions.
+    This is a preliminary draft of STU2, which includes support for portable medical orders (PMO) for life-sustaining treatment building upon STU1, which supported only Person-Authored Advance Directives documents. Future versions of this IG will address encounter-centric patient instructions.
     </p>
 </blockquote>
 

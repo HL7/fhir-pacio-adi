@@ -47,7 +47,7 @@
 <artifact id="StructureDefinition/ADI-PersonalGoal" key="StructureDefinition-PADI-PersonalGoal" name="ADI Personal Goal"/>
 <artifact id="StructureDefinition/ADI-PersonalPrioritiesOrganizer" key="StructureDefinition-PADI-PersonalPrioritiesOrganizer" name="ADI Personal Priorities Organizer"/>
 <artifact id="StructureDefinition/ADI-Provenance" key="StructureDefinition-ADI-Provenance" name="ADI Provenance"/>
-<artifact id="StructureDefinition/ADI-CareExperiencePreference" key="StructureDefinition-PADI-CareExperiencePreference" name="ADI Person Authored Person-authored Care Experience Preference"/>
+<artifact id="StructureDefinition/ADI-CareExperiencePreference" key="StructureDefinition-PADI-CareExperiencePreference" name="ADI Person Authored Person-Authored Care Experience Preference"/>
 <artifact id="StructureDefinition/ADI-PreferenceCarePlan" key="StructureDefinition-PADI-PreferenceCarePlan" name="ADI Preference Care Plan"/>
 <artifact id="StructureDefinition/ADI-PACPComposition" key="StructureDefinition-PADI-PACPComposition" name="ADI Person Authored Composition"/>
 <artifact id="StructureDefinition/ADI-PersonalInterventionPreference" key="StructureDefinition-PADI-PersonalInterventionPreference" name="ADI PtAuthored Personal Intervention Preference"/>
@@ -64,7 +64,7 @@
 <artifact id="SearchParameter/Bundle-identifier" key="SearchParameter-Bundle-identifier" name="Bundle-identifier"/>
 <artifact id="SearchParameter/Bundle-timestamp" key="SearchParameter-Bundle-timestamp" name="Bundle-timestamp"/>
 <artifact id="SearchParameter/Bundle-type" key="SearchParameter-Bundle-type" name="Bundle-type"/>
-<artifact deprecated="true" id="ValueSet/PADICareExperiencePreferencesVS" key="ValueSet-PADICareExperiencePreferencesVS" name="Person-authored Care Experience Preferences"/>
+<artifact deprecated="true" id="ValueSet/PADICareExperiencePreferencesVS" key="ValueSet-PADICareExperiencePreferencesVS" name="Person-Authored Care Experience Preferences"/>
 <artifact id="CarePlan/Example-Smith-Johnson-PMOCarePlan1" key="CarePlan-Example-Smith-Johnson-PMOCarePlan1" name="Care Plan for Cerebrovascular accident"/>
 <artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan2" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan2" name="Care Plan for Permanent, severe brain damage"/>
 <artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan3" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan3" name="Care Plan for Terminal illness, lack of meaningful interaction"/>
