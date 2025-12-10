@@ -45,7 +45,7 @@ There is a very important distinction for the three types of ADI content that wi
     <tr height="15"><td colspan="3">&nbsp;</td></tr>
     <tr>
         <th width="50">&nbsp;</th>
-        <th colspan="2" style="background-color:#478FD1; border: 1px solid black; vertical-align: middle;  padding: 5px"><p style="font-size: 14px;"><b>Practitioner-Authored Portable Medical Orders for Life-Sustaining Treatments</b></p></th>
+        <th colspan="2" style="background-color:#478FD1; border: 1px solid black; vertical-align: middle;  padding: 5px"><p style="font-size: 14px;"><b>Provider-Authored Portable Medical Orders for Life-Sustaining Treatments</b></p></th>
     </tr>
     <tr><td width="50">&nbsp;</td>
         <td width="25">&nbsp;</td>

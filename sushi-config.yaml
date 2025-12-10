@@ -79,7 +79,7 @@ pages:
   artifact_resource_type.md:
     title: Profiles by Resource Type
   content_type_overview.md:
-    title: General Guidance
+    title: Content Type Overview
   mhad_guidance.md:
     title: MHAD Guidance
   pacp_guidance.md:

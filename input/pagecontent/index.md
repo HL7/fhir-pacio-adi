@@ -10,7 +10,7 @@ The Advance Healthcare Directive Interoperability (ADI) FHIR implementation guid
 
 This ADI Implementation Guide (IG) describes how to use existing HL7 FHIR standards to create, update, share, verify, and exchange information about an individual's advance healthcare goals, preferences, and priorities for care in the event the individual is unable to communicate this information to medical teams for themselves due to a health crisis.  The term "advance healthcare directive" in this IG does not refer to a specific form, document, or method of memorializing advance healthcare directives, but is instead representative of an over-arching category.
 
-Advance healthcare directives can be categorized into three types of information.  The current version of this guide addresses Person-Authored medical Advance Healthcare Directive Information and Practitioner-Authored PMO.
+Advance healthcare directives can be categorized into three types of information.  The current version of this guide addresses Person-Authored medical Advance Healthcare Directive Information and Provider-Authored PMO.
 
 Included in the content for this FHIR IG as part of person-authored advance directives are jurisdictional advance directives such as living wills and durable medical power of attorney documents, as well as the more detailed and personalized documents known as advance care plans.  Along with documentation of a person's care experience and treatment intervention preferences, a person's consent information attesting to their designation of an individual, or individuals, to serve as their healthcare agent or surrogate is also found in this IG.
 
