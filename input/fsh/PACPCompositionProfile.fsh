@@ -6,7 +6,7 @@ Description: "This profile encompasses information that makes up the author’s 
 
 * author only Reference($USCorePatient)
 * attester 1..* MS      // made required (FHIR-46446)
-* attester.party only Reference($USCorePatient or RelatedPerson)
+* attester.party only Reference($USCorePatient or RelatedPerson or ADIWitness or ADINotary)
 * attester.mode = #personal
 
 * section ^slicing.discriminator.type = #pattern 
@@ -107,7 +107,7 @@ Description: "This profile encompasses information that makes up the author’s 
 * section[administrative_information] ^short = "Administrative information associated with this personal advance care plan"
 * section[administrative_information].title 1..1 MS
 * section[administrative_information].code 1..1 
-* section[administrative_information].code = $LOINC#81381-6
+* section[administrative_information].code = $LOINC#81381-6 // replace the section LOINC with 107904-5?
 
 
 

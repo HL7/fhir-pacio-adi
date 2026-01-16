@@ -104,7 +104,7 @@ For the purposes of this implementation guide, it is expected that most implemen
 
 ### CapabilityStatement Server Requirement
 
-Servers claiming conformance to this guide SHALL include a CapabilityStatement that has a CapabilityStatement.instantiates with a URL of http://hl7.org/fhir/us/fhir-pacio-adi/CapabilityStatement/adi or a URL to the appropriate version of the CapabilityStatement.
+Servers claiming conformance to this guide **SHALL** include a CapabilityStatement that has a CapabilityStatement.instantiates with a URL of http://hl7.org/fhir/us/fhir-pacio-adi/CapabilityStatement/adi or a URL to the appropriate version of the CapabilityStatement.
 
 ### Document Bundles and Constituent Resources
 
