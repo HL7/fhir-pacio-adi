@@ -37,7 +37,8 @@ dependencies:
     version: 0.22.0
     id: vsac
 parameters:
-  show-inherited-invariants: false
+  shownav: 'true'
+  show-inherited-invariants: true
   apply-jurisdiction: true
   apply-publisher: true
   path-expansion-params: '../../exp-params.json'

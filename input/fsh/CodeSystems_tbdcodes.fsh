@@ -6,7 +6,7 @@ Description: "Codes to be used as placeholders until they have a formal assigned
 * ^experimental = false
 * ^copyright = "This CodeSystem is not copyrighted."
 * #ldo "Document completion information" "Information in a document that pertains to actions or activities taken to finalize the document."
-* #adm "Document administrative information" "Administrative information in a document."
+* #adm "Document administrative information" "Administrative information in a document." // replace with 107904-5
 * #pmo-medically-assisted-hydration-service-request "Medically assisted hydration order" "Medically assisted hydration order"
 * #situational-decision "Decide if or when the situation arises" "Decide if or when the situation arises"
 * #medical-assisted-nutrition-while-beneficial "Medically assisted nutrition until not beneficial or a burden to the patient" "Medically assisted nutrition until not beneficial or a burden to the patient"

@@ -2,7 +2,7 @@
 
 **The following changes occurred since the PACIO ADI [STU1 publication in January 2024](https://hl7.org/fhir/us/pacio-adi/)**
 
-**Support for new AD document types**
+**Support for new advance healthcare directive document types**
 * Provider-authored advance directives
   * Portable Medical Orders (PMO)
 * Guidance on Mental Health Advance Directives (MHAD)
