@@ -8,6 +8,7 @@ Description: "This profile defines constraints that represent the information ne
 to register an advance healthcare directive document on a FHIR server."
 
 * identifier MS
+* identifier ^short = "Contains a specialized identifier for the setId used to identify a specific logical document."
 * status MS
 * type 1..1 MS
 // ****** fix for FHIR-36962 - addition of slicing discriminator *****
