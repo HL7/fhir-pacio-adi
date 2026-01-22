@@ -4,7 +4,8 @@ Parent: $USCoreADIDocumentReference
 // Parent: DocumentReference
 Id: ADI-DocumentReference
 Title: "ADI Document Reference"
-Description: "This profile defines constraints that represent the information needed to register an advance directive information document on a FHIR server."
+Description: "This profile defines constraints that represent the information needed
+to register an advance healthcare directive document on a FHIR server."
 
 * identifier MS
 * status MS
@@ -37,6 +38,15 @@ Description: "This profile defines constraints that represent the information ne
 * type.coding[fhirADIBundle].system 1..1
 * type.coding[fhirADIBundle].code 1..1
 * type.coding[fhirADIBundle].display = "pacp-structuredBody:1.3"
+
+* contained ^short = "Used to communicate the DocumentReference for a superseded document referenced in DocumentReference.relatesTo.target."
+
+* description ^short = "the associated document title(s) in the description is a best practice that improves searchability."
+
+* context.encounter ^short = "An encounter where the associated document was considered relevant."
+
+* context.period ^short = "the span of time that is relevant for the advance healthcare document"
+* context.period ^comment = "Describes the span of time that is relevant for the advance healthcare document.  i.e. period.start equals document.content.creation, period.end equals document expiration date or omit period.end if no expiration date"
 
 // Ensure format element is present and constrained appropriately
 // * format MS
