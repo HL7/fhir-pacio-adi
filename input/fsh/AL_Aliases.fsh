@@ -78,11 +78,14 @@ Alias: $CardiopulmonaryResuscitationProceduresGrouping = http://cts.nlm.nih.gov/
 
 // Standard extension aliases
 Alias: $data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason
+Alias: $additional-binding = http://hl7.org/fhir/tools/StructureDefinition/additional-binding
 
-// fix for FHIR-46149
 Alias: $VSACADIAdvanceDirectiveCategoriesGrouper = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.25
 Alias: $VSACADIDecisionalCapacity = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1240.1 // MLT20250610: replace with the VSAC subset once provided.
 
 Alias: $endpoint-connection-type = http://terminology.hl7.org/CodeSystem/endpoint-connection-type
 Alias: $endpoint-payload-type = http://terminology.hl7.org/CodeSystem/endpoint-payload-type
 Alias: $HL7v3DocumentFormatCodes = http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes
+
+// Aliases for local value sets
+Alias: $ADIPractitionerRoleVS = http://hl7.org/fhir/us/pacio-adi/ValueSet/ADIPractitionerRoleVS
