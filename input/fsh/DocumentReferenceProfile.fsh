@@ -42,6 +42,10 @@ to register an advance healthcare directive document on a FHIR server."
 
 * contained ^short = "Used to communicate the DocumentReference for a superseded document referenced in DocumentReference.relatesTo.target."
 
+* authenticator only Reference($USCorePractitioner or $USCoreOrganization or ADIPractitionerRole)
+* authenticator ^short = "The attester or authenticator of the advance directive."
+* authenticator ^comment = "This role is equivalent to the Composition.attester.party element."
+
 * description ^short = "the associated document title(s) in the description is a best practice that improves searchability."
 
 * context.encounter ^short = "An encounter where the associated document was considered relevant."

@@ -196,6 +196,13 @@ Description: "Initial Treatment Portable Medical Order Options."
 // * include codes from valueset $VSACADIInitialTreatmentPMOOptions // commented out since $VSACADIInitialTreatmentPMOOptionsGrouping contains the oid from $VSACADIInitialTreatmentPMOOptions
 * include codes from valueset $VSACADIInitialTreatmentPMOOptionsGrouping
 
+ValueSet: ADIPractitionerRoleVS
+Title: "Advance Directive Provider Attester Role"
+Description: "Pracititioner roles specific to the advance directive attesters and authenticators."
+* ^experimental = false
+* include http://terminology.hl7.org/CodeSystem/claimcareteamrole#supervisor "Supervising Provider"
+
+
 /* ********** RuleSets *********/
 
 RuleSet: LOINCCopyrightNotice

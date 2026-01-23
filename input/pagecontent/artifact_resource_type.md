@@ -39,6 +39,9 @@
 ### Practitioner
 * [ADI Facilitator](StructureDefinition-ADI-Facilitator.html)
 
+### PractitionerRole
+* [ADI Practitioner Role](StructureDefinition-ADI-PractitionerRole.html)
+
 ### Procedure
 * [ADI PMO Procedure](StructureDefinition-ADI-PMOProcedure.html)
 

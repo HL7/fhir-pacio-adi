@@ -6,7 +6,7 @@ Description: "This profile encompasses information that makes up the author’s 
 
 * author only Reference($USCorePatient)
 * attester 1..* MS      // made required (FHIR-46446)
-* attester.party only Reference($USCorePatient or RelatedPerson or ADIWitness or ADINotary)
+* attester.party only Reference($USCorePatient or RelatedPerson or ADIWitness or ADINotary or ADIPractitionerRole)
 * attester.mode = #personal
 
 * section ^slicing.discriminator.type = #pattern 
