@@ -1,5 +1,9 @@
-This profile defines the requirements for communicating a Portable Medical Order (PMO) using a Composition Resource. It is used to create a provider-generated document which is authored in collaboration with the subject of the document (the patient). It contains information about the person's medical orders, goals, preferences, and priorities (GPPs) for care and treatment under certain future conditions.
+Portable medical orders are always authored by the provider who legally authenticates the document. The signing provider is represented as the legal attester. If other care team members are involved in the creation of these types of documents, they may be included as facilitators or contributors to the process, but they may or may not be signers of the resultant document. Other care team members who sign the document are represented as professional attesters. The person/patient (or their representative) is required to sign the document and is represented as a personal attester.
+The PMO Composition which is being exchanged or made accessible includes a representation of the completed source form of the document. The Composition can also include information about:
 
-It is possible for a PMO composition to only contain textual information and not have any encoded entries. In this case, an implementer may populate the `section.text` element in place of a resource reference in the `section.entry` element.
+* Medical orders for certain treatment interventions intended to be honored and followed by other care providers
+* The person’s appointed healthcare agent,
+* Administrative information; Completion information; Additional Documentation; Upon death preferences, especially organ donation, and
+* Witness and notary information (if that information is required for the specific form being represented to be considered valid.) 
 
-For a provider-authored composition, the attester is set to *legal*.
+An advance healthcare directive document must always contain the source form representation in the Source Form section. It may include other textual information organized in standard structural sections which may or may not include machine processable encoded entries. 

@@ -2,7 +2,7 @@ Profile: ADIPMOComposition
 Parent: ADICompositionHeader
 Id: ADI-PMOComposition
 Title: "ADI PMO Composition"
-Description: "This profile encompasses information that makes up a practitioner's portable medical order."
+Description: "This Composition profile is used to represent a Provider-Authored portable medical order document. Provider-Authored portable medical order documents are a subset of all types of advance healthcare directive documents. They express portable medical orders that have been established by a licensed practitioner as part of a co-creation approach with the patient or their representative."
 
 * author only Reference($USCorePractitionerRole)
 * attester 1..* MS     
