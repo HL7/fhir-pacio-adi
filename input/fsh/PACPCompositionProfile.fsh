@@ -1,8 +1,8 @@
 Profile: ADIPACPComposition
 Parent: ADICompositionHeader
 Id: ADI-PACPComposition
-Title: "ADI Person Authored Composition"
-Description: "This profile encompasses information that makes up the author’s advance care information plan."
+Title: "ADI Person-Authored Composition"
+Description: "This Composition profile is used to represent a Person-Authored advance healthcare directive document. A Person-Authored advance healthcare directive document is categorized as a personal advance care plan (Personal ACP) document. This subset of advance healthcare directive documents expresses the person’s own preferences and consent to appoint a healthcare agent(s) and permit or deny the healthcare agent’s powers to make decisions when the person can’t communicate."
 
 * author only Reference($USCorePatient)
 * attester 1..* MS      // made required (FHIR-46446)
