@@ -26,10 +26,12 @@ Description: "This abstract profile defines constraints that represent common ad
 *  status from ADICompositionStatusVS (required) // fix for FHIR-46153
 
 * type MS
-* type from $VSACADIAdvanceDirectiveCategories (extensible)
+* type from $VSACADIDocumentTypesGrouper (extensible)
 
-* category 0..1 MS
-* category = $LOINC#42348-3 "Advance healthcare directives"
+// * category 0..1 MS
+// * category = $LOINC#42348-3 "Advance healthcare directives"
+* category from $VSACADIAdvanceDirectiveCategories (extensible)
+
 * subject 1..1 MS
 * subject only Reference($USCorePatient)
 

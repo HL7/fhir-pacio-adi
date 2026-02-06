@@ -9,6 +9,9 @@ Description: "This Composition profile is used to represent a Person-Authored ad
 * attester.party only Reference($USCorePatient or RelatedPerson or ADIWitness or ADINotary or ADIPractitionerRole)
 * attester.mode = #personal
 
+* category from $VSACADIAdvanceDirectiveCategories (extensible)
+* type from $VSACADIPersonAuthoredDocumentTypes (extensible)
+
 * section ^slicing.discriminator.type = #pattern 
 * section ^slicing.discriminator.path = "code"
 * section ^slicing.rules = #open

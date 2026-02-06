@@ -42,7 +42,7 @@ On first creation, the DocumentReference version number is set to 1 and the stat
 
 #### Use Case 2: Share [Content]
 
-In Use Case 2, the Content Creator system makes the person-authored advance directive information available via a Content Receiver system using a FHIR API. The Content Receiver system may be an end system or may be another Content Custodian system.
+In Use Case 2, the Content Creator system makes the Person-Authored advance directive information available via a Content Receiver system using a FHIR API. The Content Receiver system may be an end system or may be another Content Custodian system.
 
 ##### Use Case 2 Process Steps
 

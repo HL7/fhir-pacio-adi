@@ -9,7 +9,8 @@ Description: "This Composition profile is used to represent a Provider-Authored 
 * attester.party only Reference($USCorePatient or RelatedPerson or $USCorePractitioner or $USCorePractitionerRole or ADIWitness or ADINotary or ADIPractitionerRole)
 * attester.mode = #legal
 
-* type = $LOINC#93037-0 // "Portable medical order form"
+* category from $VSACADIAdvanceDirectiveCategories (extensible)
+* type from $VSACADIPMODocumentTypes (extensible)
 
 // fix for FHIR-46609: PMO Composition event needs further constraints for facilitators.
 // * event.detail only Reference(ADIPMOServiceRequest or ADIParticipantConsent or ADIPMOProcedure)

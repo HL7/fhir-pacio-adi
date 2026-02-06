@@ -36,7 +36,7 @@ Structurally, the document structure shares the same ADI header as the Personal 
 
 #### Example Persona
 
-The following story continues the person-authored advance directive user story for person-authored advance healthcare directives such as advance care plans or jurisdictional advance directives, which may be found in a single consolidated document or segmented into two documents, one for designation of a durable medical power of attorney and the other for expressing treatment preferences called a living will.
+The following story continues the Person-Authored advance directive user story for Person-Authored advance healthcare directives such as advance care plans or jurisdictional advance directives, which may be found in a single consolidated document or segmented into two documents, one for designation of a durable medical power of attorney and the other for expressing treatment preferences called a living will.
 
 Betsy Smith-Johnson is a 74-year old female, who lives in Michigan with her son Charles and his wife Lisa, who are her designated primary and backup healthcare agents.  She understands that documenting her care experience and treatment intervention preferences, and designated healthcare agents, can inform care and treatment she would receive during a health crisis or emergency if she were unable to communicate with her care team.
 

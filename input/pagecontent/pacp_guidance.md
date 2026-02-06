@@ -27,7 +27,7 @@ The content in these categories of advance directive could include, but are not 
 * Religious, spiritual, cultural or faith-based values that are important to the individual receiving care
 * Specific individuals or contacts to notify, likes & joys, dislikes & fears, and various messages or information to be made available
 
-Person-Authored advance direcives also include identifying the presence of any type of Portable Medical Order (PMO) such as a POLST or MOLST, and orders such as Do Not Resuscitate (DNR) orders. It may also identify other types of person-authored ADI that might exist outside of the document being reviewed.  It does not include the specifics of the structured information content of other PMO and/or DNR documents, but instead creates awareness as to the presence of the documents.
+Person-Authored advance direcives also include identifying the presence of any type of Portable Medical Order (PMO) such as a POLST or MOLST, and orders such as Do Not Resuscitate (DNR) orders. It may also identify other types of Person-Authored ADI that might exist outside of the document being reviewed.  It does not include the specifics of the structured information content of other PMO and/or DNR documents, but instead creates awareness as to the presence of the documents.
 
 
 #### Example Persona
