@@ -11,34 +11,35 @@ to register an advance healthcare directive document on a FHIR server."
 * identifier ^short = "Contains a specialized identifier for the setId used to identify a specific logical document."
 * status MS
 * type 1..1 MS
-// ****** fix for FHIR-36962 - addition of slicing discriminator *****
+* type from $VSACADIDocumentTypesGrouper (extensible)
 
-// Slice the type.coding element using pattern-based discrimination
-* type.coding ^slicing.discriminator.type = #pattern
-* type.coding ^slicing.discriminator.path = "$this"
-* type.coding ^slicing.rules = #open
-* type.coding ^slicing.description = "Slicing based on document type codes to support C-CDA and FHIR PACP formats"
+// // ****** fix for FHIR-36962 - addition of slicing discriminator *****
+// // Slice the type.coding element using pattern-based discrimination
+// * type.coding ^slicing.discriminator.type = #pattern
+// * type.coding ^slicing.discriminator.path = "$this"
+// * type.coding ^slicing.rules = #open
+// * type.coding ^slicing.description = "Slicing based on document type codes to support C-CDA and FHIR PACP formats"
 
-// Slice for CDA documents
-* type.coding contains cdaDocument 0..1 MS
-* type.coding[cdaDocument] ^short = "CDA Document Type Coding"
-* type.coding[cdaDocument] ^definition = "Identifies this as a CDA document with structured body format"
-* type.coding[cdaDocument] ^patternCoding.system = "http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes"
-* type.coding[cdaDocument] ^patternCoding.code = #urn:hl7-org:sdwg:pacp-structuredBody:1.3
-* type.coding[cdaDocument].system 1..1
-* type.coding[cdaDocument].code 1..1
-* type.coding[cdaDocument].display = "PACP Structured Body CDA Document"
+// // Slice for CDA documents
+// * type.coding contains cdaDocument 0..1 MS
+// * type.coding[cdaDocument] ^short = "CDA Document Type Coding"
+// * type.coding[cdaDocument] ^definition = "Identifies this as a CDA document with structured body format"
+// * type.coding[cdaDocument] ^patternCoding.system = "http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes"
+// * type.coding[cdaDocument] ^patternCoding.code = #urn:hl7-org:sdwg:pacp-structuredBody:1.3
+// * type.coding[cdaDocument].system 1..1
+// * type.coding[cdaDocument].code 1..1
+// * type.coding[cdaDocument].display = "PACP Structured Body CDA Document"
 
-// Slice for FHIR ADI Bundle
-* type.coding contains fhirADIBundle 0..1 MS
-* type.coding[fhirADIBundle] ^short = "FHIR PACP Bundle Type Coding"
-* type.coding[fhirADIBundle] ^definition = "Identifies this as a FHIR PACP Bundle document"
-* type.coding[fhirADIBundle] ^patternCoding.system = "urn:ietf:rfc:3986"
-// Note: Replace the URL below with the actual Canonical URL of your PACP Bundle profile
-* type.coding[fhirADIBundle] ^patternCoding.code = #http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-Bundle
-* type.coding[fhirADIBundle].system 1..1
-* type.coding[fhirADIBundle].code 1..1
-* type.coding[fhirADIBundle].display = "pacp-structuredBody:1.3"
+// // Slice for FHIR ADI Bundle
+// * type.coding contains fhirADIBundle 0..1 MS
+// * type.coding[fhirADIBundle] ^short = "FHIR PACP Bundle Type Coding"
+// * type.coding[fhirADIBundle] ^definition = "Identifies this as a FHIR PACP Bundle document"
+// * type.coding[fhirADIBundle] ^patternCoding.system = "urn:ietf:rfc:3986"
+// // Note: Replace the URL below with the actual Canonical URL of your PACP Bundle profile
+// * type.coding[fhirADIBundle] ^patternCoding.code = #http://hl7.org/fhir/us/pacio-adi/StructureDefinition/ADI-Bundle
+// * type.coding[fhirADIBundle].system 1..1
+// * type.coding[fhirADIBundle].code 1..1
+// * type.coding[fhirADIBundle].display = "pacp-structuredBody:1.3"
 
 * contained ^short = "Used to communicate the DocumentReference for a superseded document referenced in DocumentReference.relatesTo.target."
 
@@ -63,7 +64,7 @@ to register an advance healthcare directive document on a FHIR server."
 
 * date 1..1 MS
 * category 1..* MS
-* category from $USCoreDocumentReferenceCategory (extensible)
+* category from $VSACADIAdvanceDirectiveCategories (extensible)
 * subject 1..1 MS
 * subject only Reference($USCorePatient)
 * date MS

@@ -30,7 +30,7 @@ Structurally, MHAD shares the same ADI header as the Personal ACP document. It d
 Individuals need a way to generate and update information related to their advance healthcare directives so that their current wishes can inform provider-generated care plans. Interoperable exchange of the advance directive documentation supports more effective sharing of this information across transitions of care and enables practitioners to create person-centered care plans that align with a patient’s values, goals of care, treatment preferences, and quality of life priorities when a patient can no longer communicate for themselves.
 Advance Directives – Person-Authored advance directives (ADs) are legal or informal documents written by individuals, typically while they are still mentally competent, to outline their preferences for medical treatment in the event that they become incapacitated or unable to communicate their wishes. 
 
-These directives are a crucial component of advance care planning and aim to preserve patient autonomy at the end of life or during serious illness.  A typical person-authored advance healthcare directive may include:
+These directives are a crucial component of advance care planning and aim to preserve patient autonomy at the end of life or during serious illness.  A typical Person-Authored advance healthcare directive may include:
 
 * **Living Will**: Specifies desired or undesired treatments (e.g., resuscitation, mechanical ventilation, tube feeding).
 
