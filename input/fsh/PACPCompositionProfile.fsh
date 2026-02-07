@@ -9,6 +9,7 @@ Description: "This Composition profile is used to represent a Person-Authored ad
 * attester.party only Reference($USCorePatient or RelatedPerson or ADIWitness or ADINotary or ADIPractitionerRole)
 * attester.mode = #personal
 
+// fix for FHIR-55633 tying .category and .type to VSAC value sets.
 * category from $VSACADIAdvanceDirectiveCategories (extensible)
 * type from $VSACADIPersonAuthoredDocumentTypes (extensible)
 
