@@ -11,9 +11,10 @@ to register an advance healthcare directive document on a FHIR server."
 * identifier ^short = "Contains a specialized identifier for the setId used to identify a specific logical document."
 * status MS
 * type 1..1 MS
-* type from $VSACADIDocumentTypesGrouper (extensible)
+* type from $VSACADIDocumentTypesGrouper (extensible) // fix for FHIR-55633 tying .category and .type to VSAC value sets and replacing the slice fix from FHIR-36962.
 
-// // ****** fix for FHIR-36962 - addition of slicing discriminator *****
+
+// ****** fix for FHIR-36962 - addition of slicing discriminator ***** - replaced by VSAC value set from FHIR-55633
 // // Slice the type.coding element using pattern-based discrimination
 // * type.coding ^slicing.discriminator.type = #pattern
 // * type.coding ^slicing.discriminator.path = "$this"
@@ -64,7 +65,7 @@ to register an advance healthcare directive document on a FHIR server."
 
 * date 1..1 MS
 * category 1..* MS
-* category from $VSACADIAdvanceDirectiveCategories (extensible)
+* category from $VSACADIAdvanceDirectiveCategories (extensible) // fix for FHIR-55633 tying .category and .type to VSAC value sets
 * subject 1..1 MS
 * subject only Reference($USCorePatient)
 * date MS

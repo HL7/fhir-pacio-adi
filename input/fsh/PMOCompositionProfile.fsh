@@ -9,6 +9,7 @@ Description: "This Composition profile is used to represent a Provider-Authored 
 * attester.party only Reference($USCorePatient or RelatedPerson or $USCorePractitioner or $USCorePractitionerRole or ADIWitness or ADINotary or ADIPractitionerRole)
 * attester.mode = #legal
 
+// fix for FHIR-55633 tying .category and .type to VSAC value sets
 * category from $VSACADIAdvanceDirectiveCategories (extensible)
 * type from $VSACADIPMODocumentTypes (extensible)
 
