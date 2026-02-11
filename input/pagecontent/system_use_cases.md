@@ -144,7 +144,7 @@ In Use Case 5, the person decides to withdraw the Advance Directive document. Re
 
 **Scenario: 2: Revoke the advance directive because it was entered in error - prior version exists**
 
-This scenario could be addressed as an update (Use Case 4), except that we describe that the reason (element name??) was entered-in-error.
+This scenario could be addressed as an update (Use Case 4), except that we describe that the reason `DocumentReference.status` was *entered-in-error*.
 
 #### Use Case 6: Verify current version of an Advance Healthcare Directive [Content]
 
