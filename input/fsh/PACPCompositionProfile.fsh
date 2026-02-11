@@ -94,7 +94,7 @@ Description: "This Composition profile is used to represent a Person-Authored ad
 * section[additional_documentation].code 1..1 
 * section[additional_documentation].code = $LOINC#77599-9
 
-* section[additional_documentation].entry only Reference(ADIDocumentationObservation)
+* section[additional_documentation].entry only Reference($USCoreObservationADIDocumentation) // fix for FHIR-51827 - replaced US Core equivalent of ADIDocumentationObservation
 
 // ******* PACP Witness and Notary Section ********
 * section[witness_and_notary] ^short = "Witness and notary information.  The first witness should be the author of the document"

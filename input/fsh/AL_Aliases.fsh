@@ -21,6 +21,7 @@ Alias: $USCoreDocumentReferenceType = http://hl7.org/fhir/us/core/ValueSet/us-co
 Alias: $USCoreDocumentReferenceCategory = http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-category|8.0.0
 Alias: $USCoreConditionCode = http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code
 Alias: $USCoreServiceRequestCategory = http://hl7.org/fhir/us/core/CodeSystem/us-core-category
+Alias: $USCoreObservationADIDocumentation = http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-adi-documentation
 
 Alias: $USRealmHeader = http://hl7.org/fhir/us/ccda/StructureDefinition/US-Realm-Header
 

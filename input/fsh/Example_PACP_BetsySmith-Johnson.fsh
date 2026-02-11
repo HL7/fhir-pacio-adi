@@ -1013,7 +1013,7 @@ Usage: #example
 // ---------------------
 
 Instance: Example-Smith-Johnson-DocumentationObservation1
-InstanceOf: ADIDocumentationObservation
+InstanceOf: $USCoreObservationADIDocumentation // fix for FHIR-51827 - replaced US Core equivalent of ADIDocumentationObservation
 Description: "Example Patient Smith-Johnson PMOLST Documentation Observation"
 Usage: #example
 

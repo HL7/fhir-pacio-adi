@@ -157,7 +157,7 @@ Description: "This Composition profile is used to represent a Provider-Authored 
 * section[additional_documentation].title 1..1 MS
 * section[additional_documentation].code 1..1 MS
 * section[additional_documentation].code = $LOINC#77599-9
-* section[additional_documentation].entry only Reference(ADIDocumentationObservation)
+* section[additional_documentation].entry only Reference($USCoreObservationADIDocumentation) // fix for FHIR-51827 - replaced US Core equivalent of ADIDocumentationObservation
 
 // ******* PMO Witness and Notary Section ********
 
