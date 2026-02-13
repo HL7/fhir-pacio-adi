@@ -229,3 +229,23 @@ Context: DocumentReference
 * valueString 0..1 MS
 * valueString ^short = "A FHIR endpoint URL that points to the ADI document or resource that exists."
 * valueString ^comment = "A FHIR endpoint URL that points to the ADI document or resource that exists.  This is used when the document is not available in the FHIR server, such as a PDF or other file format."
+
+
+// *** NEW 
+Extension: ADIAttester
+Id: adi-attester
+Title: "ADI Attester"
+Description: "An advance healthcare directive attester is a person (typically a witness or notary) who formally verifies and confirms that an individual has voluntarily signed an advance healthcare directive—a legal document outlining their wishes for medical treatment if they become unable to communicate those decisions themselves. The attester's role is to authenticate that the directive was executed properly, that the signer appeared competent, and that no undue influence or coercion was involved."
+Context: DocumentReference
+* extension contains
+	mode 0..1 MS and
+	time 0..1 MS and
+	party 0..1 MS
+* extension[mode] ^short = "mode"
+* extension[mode].value[x] only code
+* extension[mode].value[x] from http://hl7.org/fhir/ValueSet/composition-attestation-mode 
+* extension[time] ^short = "attestation or authentication time"
+* extension[time].value[x] only dateTime
+* extension[party] ^short = "attester party"
+* extension[party].value[x] only Reference($USCorePractitioner or $USCorePractitionerRole or $USCorePatient)
+

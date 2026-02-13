@@ -7,6 +7,7 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="StructureDefinition/adi-attester" key="StructureDefinition-adi-attester" name="ADI Attester"/>
 <artifact id="StructureDefinition/ADI-AutopsyObservation" key="StructureDefinition-PADI-AutopsyObservation" name="ADI Autopsy Observation"/>
 <artifact id="StructureDefinition/ADI-Bundle" key="StructureDefinition-ADI-Bundle" name="ADI Bundle"/>
 <artifact id="CapabilityStatement/adi" key="CapabilityStatement-adi" name="ADI CapabilityStatement"/>
