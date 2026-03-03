@@ -99,6 +99,14 @@ This Guide is divided into several pages which are listed at the top of each pag
     <li>Downloads: This page provides links to downloadable artifacts.</li>
 </ul>
 
+### Authors and Contributors
+
+* Maria Moen - MyDirectives
+* Lisa Nelson - MyDirectives
+* Dave Hill - Global Alliant
+* Yolanda Liu - MITRE Corporation
+* May Terry - MITRE Corporation
+
 ### Cross Version Analysis
 
 {% include cross-version-analysis.xhtml %}
