@@ -36,10 +36,8 @@
 * [ADI PMO Review Observation](StructureDefinition-ADI-PMOReviewObservation.html)
 * [ADI Upon Death Preferences](StructureDefinition-ADI-UponDeathPreferences.html)
 
-### Practitioner
-* [ADI Facilitator](StructureDefinition-ADI-Facilitator.html)
-
 ### PractitionerRole
+* [ADI Facilitator](StructureDefinition-ADI-Facilitator.html)
 * [ADI Practitioner Role](StructureDefinition-ADI-PractitionerRole.html)
 
 ### Procedure

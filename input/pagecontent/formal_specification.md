@@ -119,7 +119,7 @@ All documents, regardless of format are saved in the `Binary` resource and are a
 
 #### Advance Directive Scanned PDF Structure Requirements
 
-Scanned PDF documents are represented as a base64 encoded attachment with `DocumentReference.content.attachment.contentType` set to "application/pdf".
+Scanned PDF documents **SHALL be** represented as a base64 encoded attachment with `DocumentReference.content.attachment.contentType` set to "application/pdf".
 
 An example of this representation is shown in the resource snippet below:
 
@@ -206,6 +206,6 @@ For further information on signatures, the technology basis behind them, and imp
 At some point it may be necessary for an advance directive document to be replaced or deprecated. The situations and conditions in which a document is replaced or deprecated is dependent on jurisdictional requirements as well as the intent and interests of the actors involved. When a document is replaced or deprecated is beyond the scope of this guide, however, this guide does specify requirements that need to be supported in the event documents need to be replaced or deprecated.
 
 #### Document replacement
-When a document is to be replaced, a new DocumentReference is created. The new document points "backwards" to the documentReference it is replacing through the `DocumentReference.relatesTo.target` and a `DocumentReference.relatesTo.code` with a value of `replaces`. The original document then should be marked as replaced by updating the `DocumentReference.status` to the code `superseded`. Ideally the DocumentReference being replaced and the replacing DocumentReference will have matching business identifiers (`DocumentReference.identifier`) to enable direct searching across multiple versions.
+When a document is to be replaced, a new DocumentReference is created. The new document points "backwards" to the documentReference it is replacing through the `DocumentReference.relatesTo.target` and a `DocumentReference.relatesTo.code` with a value of `replaces`. The original document then SHALL be marked as replaced by updating the `DocumentReference.status` to the code `superseded`. Ideally the DocumentReference being replaced and the replacing DocumentReference will have matching business identifiers (`DocumentReference.identifier`) to enable direct searching across multiple versions.
 
 Documents can be deprecated through a document replacement that includes a new version indicating that the document is deprecated or otherwise no longer in force.

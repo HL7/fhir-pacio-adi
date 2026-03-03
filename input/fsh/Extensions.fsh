@@ -104,7 +104,7 @@ Context: RelatedPerson
 * extension[AttesterRole] ^short = "Attester Role"
 * extension[AttesterRole].value[x] 1..1 MS
 * extension[AttesterRole].value[x] only CodeableConcept
-* extension[AttesterRole].valueCodeableConcept from ADIAttesterRoleTypeVS (extensible)
+* extension[AttesterRole].valueCodeableConcept from ADINotaryAndWitnessAttesterRoleTypeVS (extensible)
 
 * extension[AttestationStatement] ^short = "Attestation Statement"
 * extension[AttestationStatement].value[x] 1..1 MS
@@ -247,5 +247,5 @@ Context: DocumentReference
 * extension[time] ^short = "attestation or authentication time"
 * extension[time].value[x] only dateTime
 * extension[party] ^short = "attester party"
-* extension[party].value[x] only Reference($USCorePractitioner or $USCorePractitionerRole or $USCorePatient)
+* extension[party].value[x] only Reference($USCorePractitionerRole or $USCorePatient or RelatedPerson)
 

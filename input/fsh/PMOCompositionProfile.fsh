@@ -84,7 +84,7 @@ Description: "This Composition profile is used to represent a Provider-Authored 
 * section[completion_information].extension[adi-clause-extension] ^short = "Administrative, instructional, and/or legal information"
 * section[completion_information].title 1..1 MS
 * section[completion_information].code 1..1 MS
-* section[completion_information].code = adi-temp-cs#ldo // "Portable medical order completion information" // Code is LOINC pre-release as on 11/03/2022 - https://loinc.org/prerelease/
+* section[completion_information].code = $LOINC#106622-6 // "Portable medical order completion information" // Code is LOINC pre-release as on 11/03/2022 - https://loinc.org/prerelease/
 // need to slice on entries. OrderReview has a max of 1 and orders participant has a max of 1
 
 * section[completion_information].entry ^slicing.discriminator.type = #profile
@@ -109,7 +109,7 @@ Description: "This Composition profile is used to represent a Provider-Authored 
 * section[administration_information] ^short = "Observations regarding the existence of other advance directive related information"
 * section[administration_information].title 1..1 MS
 * section[administration_information].code 1..1 MS
-* section[administration_information].code = adi-temp-cs#adm
+* section[administration_information].code = $LOINC#107904-5
 // * section[administration_information].entry only Reference(<enter reference to EmergencyContactInformation>)
 
 * section[administration_information].entry ^slicing.discriminator.type = #profile

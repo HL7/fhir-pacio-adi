@@ -58,7 +58,7 @@
 <artifact id="PractitionerRole/ADI-Facilitator-MSW-MargaretReynolds" key="PractitionerRole-ADI-Facilitator-MSW-MargaretReynolds" name="ADI-Facilitator-MSW-MargaretReynolds"/>
 <artifact deprecated="true" id="ValueSet/PADIAdvanceDirectiveCategoriesVS" key="ValueSet-PADIAdvanceDirectiveCategoriesVS" name="Advance Directive Categories"/>
 <artifact deprecated="true" id="StructureDefinition/padi-attestationInformation-extension" key="StructureDefinition-padi-attestationInformation-extension" name="Attestation Information"/>
-<artifact id="ValueSet/ADIAttesterRoleTypeVS" key="ValueSet-PADIAttesterRoleTypeVS" name="Attester Role"/>
+<artifact id="ValueSet/ADINotaryAndWitnessAttesterRoleTypeVS" key="ValueSet-PADINotaryAndWitnessAttesterRoleTypeVS" name="Attester Role"/>
 <artifact deprecated="true" id="StructureDefinition/padi-authorization-extension" key="StructureDefinition-padi-authorization-extension" name="Authorization"/>
 <artifact id="SearchParameter/Bundle-composition" key="SearchParameter-Bundle-composition" name="Bundle-composition"/>
 <artifact id="SearchParameter/Bundle-identifier" key="SearchParameter-Bundle-identifier" name="Bundle-identifier"/>
