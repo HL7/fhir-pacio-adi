@@ -65,9 +65,9 @@ Description: "Includes data absent reason concepts to express why a Healthcare A
 
 
 
-ValueSet: ADIAttesterRoleTypeVS
+ValueSet: ADINotaryAndWitnessAttesterRoleTypeVS
 Title: "Attester Role"
-Description: "Codes indicating a role of an attester."
+Description: "Codes indicating a role of a notary or witness attester."
 * ^experimental = false
 * include $LOINC#81372-5 "Notary"
 * include $LOINC#81369-1 "First witness"

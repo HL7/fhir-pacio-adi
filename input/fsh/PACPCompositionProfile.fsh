@@ -57,9 +57,8 @@ Description: "This Composition profile is used to represent a Person-Authored ad
 * section[gpp_for_certain_health_condition] ^definition = "The section defines Goals, Preferences, and Priorities of the person under certain health conditions.  In this section, the CarePlan resource provides a construct by which the identified personal values and preferences for treatment can be integrated into the plan of care which acts, from a workflow or process perspective, as the roadmap for care delivery and treatment. "
 * section[gpp_for_certain_health_condition].title 1..1 MS
 * section[gpp_for_certain_health_condition].code 1..1 
-* section[gpp_for_certain_health_condition].code = $LOINC#81336-0
-//* section[gpp_for_certain_health_condition].entry only Reference(ADIPreferenceCarePlan or ADIPersonalInterventionPreference or ADIPersonalInterventionRequestPreference or ADIPersonalPrioritiesOrganizer or ADIPersonalGoal)
-* section[gpp_for_certain_health_condition].entry only Reference(ADIPreferenceCarePlan)
+* section[gpp_for_certain_health_condition].code = $LOINC#107905-2
+* section[gpp_for_certain_health_condition].entry only Reference(ADIPreferenceCarePlan or ADIPersonalInterventionPreference or ADIPersonalPrioritiesOrganizer or ADIPersonalGoal)
 
 * section[gpp_personal_care_experience] ^short = "Quality of Life related personal care experiences, personal goals, and priorities"
 * section[gpp_personal_care_experience].title 1..1 MS
@@ -111,7 +110,7 @@ Description: "This Composition profile is used to represent a Person-Authored ad
 * section[administrative_information] ^short = "Administrative information associated with this personal advance care plan"
 * section[administrative_information].title 1..1 MS
 * section[administrative_information].code 1..1 
-* section[administrative_information].code = $LOINC#81381-6 // replace the section LOINC with 107904-5?
+* section[administrative_information].code = $LOINC#107904-5 // replace the section LOINC with 107904-5?
 
 
 
