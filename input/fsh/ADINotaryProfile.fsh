@@ -1,5 +1,5 @@
 Profile: ADINotary
-Parent: RelatedPerson
+Parent: $USCoreRelatedPerson
 Id: ADI-Notary
 Title: "ADI Notary"
 Description: "This profile represents a person participating as a notary for a person's advance directives."

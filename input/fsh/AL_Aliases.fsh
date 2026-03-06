@@ -13,7 +13,7 @@ Alias:   $USCoreCarePlan = http://hl7.org/fhir/us/core/StructureDefinition/us-co
 Alias:   $USCoreServiceRequest = http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest 
 Alias:   $USCoreRace = http://hl7.org/fhir/us/core/StructureDefinition/us-core-race
 Alias:   $USCoreEthnicity = http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity
-
+Alias:   $USCoreRelatedPerson = http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
 
 Alias: $USCoreADIDocumentReference = http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference
 Alias: $USCoreDocumentReference = http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
