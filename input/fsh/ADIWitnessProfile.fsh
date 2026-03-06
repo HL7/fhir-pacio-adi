@@ -1,5 +1,5 @@
 Profile: ADIWitness
-Parent: RelatedPerson
+Parent: $USCoreRelatedPerson
 Id: ADI-Witness
 Title: "ADI Witness"
 Description: "This profile represents a person participating as a witness for a person's advance directives."

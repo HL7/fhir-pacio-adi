@@ -94,6 +94,7 @@ Usage: #example
 <p>Charles Xavier</p>
 </div>"
 
+* active = true
 * patient = Reference(Patient/Example-Smith-Johnson-Patient1)
 * relationship = $HL7RoleCode#SON "natural son"
 * name[0].family = "Johnson"
@@ -119,6 +120,7 @@ Usage: #example
 <p>[ACCEPTED to act as a healthcare agent on 4/1/2021, at 3:39 PM CDT]</p>
 </div>"
 
+* active = true
 * patient = Reference(Example-Smith-Johnson-Patient1)
 * relationship = $HL7RoleCode#SON "natural son"
 * name[0].family = "Johnson"

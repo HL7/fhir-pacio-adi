@@ -398,6 +398,7 @@ Usage: #example
 <p>[ACCEPTED to act as a healthcare agent on 4/1/2021, at 3:39 PM CDT]</p>
 </div>"
 
+* active = true
 * patient = Reference(Example-Smith-Johnson-Patient1)
 * relationship = $HL7RoleCode#SON "natural son"
 
@@ -424,7 +425,7 @@ Usage: #example
 <p>[SELECTED to act as a healthcare agent on 3/29/2021, at 2:25 PM CDT]</p>
 <p>[As of 4/1/2021, at 3:40 PM CDT, a response is still PENDING]</p>
 </div>"
-
+* active = true
 * patient = Reference(Example-Smith-Johnson-Patient1)
 //* relationship[0] = $LOINC#75784-9 "First alternate healthcare agent - Reported"
 * relationship[0] = $HL7RoleCode#DAU "natural daughter"
@@ -448,6 +449,7 @@ Usage: #example
 <p>Charles Xavier</p>
 </div>"
 
+* active = true
 * patient = Reference(Example-Smith-Johnson-Patient1)
 
 * name[0].family = "Xavier"
