@@ -60,7 +60,7 @@ Usage: #example
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p><b>Witness</b></p><p>Debra Johnson</p></div>"
-* extension[adi-notaryInformation-extension].extension[AttesterRole].valueCodeableConcept = $LOINC#81369-1 "First witness"
+// * extension[adi-notaryInformation-extension].extension[AttesterRole].valueCodeableConcept = $LOINC#81369-1 "First witness"  // mlt_20260308: removed AttesterRole from NotaryInformationExtension per ADI SME Discussion on 3/6/26.
 * name[0].family = "Johnson"
 * name[0].given[0] = "Debra"
 * name[0].text = "Johnson, Debra"

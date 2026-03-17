@@ -31,13 +31,15 @@ Alias: $HL7ProvenanceParticipantType = http://terminology.hl7.org/CodeSystem/pro
 Alias: $HL7NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 Alias: $HL7YesNoVS = http://terminology.hl7.org/ValueSet/v2-0136
 Alias: $HL7YesNoCS = http://terminology.hl7.org/CodeSystem/v2-0532
-
+Alias: $CDASignatureCode = http://hl7.org/cda/stds/core/ValueSet/CDASignatureCode
+Alias: $HL7V3ParticipationSignature = http://terminology.hl7.org/CodeSystem/v3-ParticipationSignature
 
 Alias: $HL7CompositionAttestation = http://hl7.org/fhir/ValueSet/composition-attestation-mode
 Alias: $HL7ConsentScope = http://terminology.hl7.org/CodeSystem/consentscope
 Alias: $HL7ConsentCategoryCodes = http://terminology.hl7.org/CodeSystem/consentcategorycodes|1.0.1
 Alias: $HL7ConsentCategoryVS = http://hl7.org/fhir/ValueSet/consent-category
-Alias: $HL7JurisdictionCodesVS = http://terminology.hl7.org/ValueSet/USPS-State
+Alias: $HL7JurisdictionStateCodesVS = http://terminology.hl7.org/ValueSet/USPS-State
+Alias: $HL7JurisdictionCountyCodesCS = http://terminology.hl7.org/CodeSystem/FIPS64 
 Alias: $HL7DegreeLicenseCertificate = http://terminology.hl7.org/ValueSet/v2-0360
 Alias: $HL7DocumentRelationshipType = http://hl7.org/fhir/document-relationship-type
 Alias: $USPSCodes = https://www.usps.com/
@@ -79,6 +81,7 @@ Alias: $CardiopulmonaryResuscitationProceduresGrouping = http://cts.nlm.nih.gov/
 Alias: $VSACADIDocumentTypesGrouper = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.41
 Alias: $VSACADIPersonAuthoredDocumentTypes = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.22
 Alias: $VSACADIPMODocumentTypes = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.40
+Alias: $VSACADIWitnessCategory = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.21
 
 // Standard extension aliases
 Alias: $data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason

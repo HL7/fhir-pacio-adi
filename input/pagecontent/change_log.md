@@ -6,7 +6,7 @@
 * Provider-authored advance directives
   * Portable Medical Orders (PMO)
 * Guidance on Mental Health Advance Directives (MHAD)
-* Minimally Structured Document (MSD)
+* Advance Directive Source Form
   
 **Changes to STU1 based profiles**
 * Closer Alignment with US Core

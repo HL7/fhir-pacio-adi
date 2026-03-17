@@ -32,5 +32,7 @@ Description: "This profile represents a person participating as a witness for a 
 * telecom 1..* MS // CONF:4445-33417
 * address MS
 
+* extension contains
+    adi-witness-information-extension named WitnessInformationExtension 0..1 MS
 
 // HOW About references to external documents????

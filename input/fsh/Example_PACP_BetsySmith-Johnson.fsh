@@ -271,7 +271,7 @@ Usage: #example
 
 
 * section[gpp_for_certain_health_condition].title = "Patient Goals, preferences, and priorities under certain conditions"
-* section[gpp_for_certain_health_condition].code = $LOINC#107905-2 "Patient Goals, preferences, and priorities under certain health conditions" 
+* section[gpp_for_certain_health_condition].code = $LOINC#107905-2 "Treatment intervention preferences" // "Patient Goals, preferences, and priorities under certain health conditions" 
 * section[gpp_for_certain_health_condition].text.status = #additional
 * section[gpp_for_certain_health_condition].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p><b>Care Plan 1</b></p>

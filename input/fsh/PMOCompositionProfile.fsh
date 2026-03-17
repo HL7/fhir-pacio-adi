@@ -44,7 +44,7 @@ Description: "This Composition profile is used to represent a Provider-Authored 
     completion_information 0..1 and 
     administration_information 0..1 and
     gpp_upon_death 0..1 and
-    minimal_source_form 0..1 and
+    advance_directive_source_form 0..1 and
     additional_documentation 0..1 and
     witness_and_notary 0..1
 
@@ -84,7 +84,7 @@ Description: "This Composition profile is used to represent a Provider-Authored 
 * section[completion_information].extension[adi-clause-extension] ^short = "Administrative, instructional, and/or legal information"
 * section[completion_information].title 1..1 MS
 * section[completion_information].code 1..1 MS
-* section[completion_information].code = $LOINC#106622-6 // "Portable medical order completion information" // Code is LOINC pre-release as on 11/03/2022 - https://loinc.org/prerelease/
+* section[completion_information].code = $LOINC#106522-6 // "Portable medical order completion information" // Code is LOINC pre-release as on 11/03/2022 - https://loinc.org/prerelease/
 // need to slice on entries. OrderReview has a max of 1 and orders participant has a max of 1
 
 * section[completion_information].entry ^slicing.discriminator.type = #profile
@@ -122,7 +122,7 @@ Description: "This Composition profile is used to represent a Provider-Authored 
     adi_personal_goal 0..* and 
     adi_decisional_capacity 0..1 MS and
     adi_pmo_hospice_observation 0..1 MS and
-    minimal_source_form 0..1 MS  
+    advance_directive_source_form 0..1 MS  
 
 * section[administration_information].entry[adi_decisional_capacity] only Reference(ADIDecisionalCapacity)
 * section[administration_information].entry[adi_decisional_capacity] ^short = "ADI Decisional Capacity"
@@ -130,8 +130,8 @@ Description: "This Composition profile is used to represent a Provider-Authored 
 * section[administration_information].entry[adi_personal_goal] ^short = "ADI Personal Goal"
 * section[administration_information].entry[adi_pmo_hospice_observation] only Reference(ADIPMOHospiceObservation)
 * section[administration_information].entry[adi_pmo_hospice_observation] ^short = "Hospice or palliative care enrollment"
-* section[administration_information].entry[minimal_source_form] only Reference(Binary)
-* section[administration_information].entry[minimal_source_form] ^short = "Minimal Source Form"
+// * section[administration_information].entry[advance_directive_source_form] only Reference(Binary)
+// * section[administration_information].entry[advance_directive_source_form] ^short = "Advance Directive Source Form"
 
 // ******* GPP Upon Death ************
 
@@ -142,14 +142,14 @@ Description: "This Composition profile is used to represent a Provider-Authored 
 * section[gpp_upon_death].entry 0..* MS
 * section[gpp_upon_death].entry only Reference(ADIPersonalInterventionPreference or ADIPersonalPrioritiesOrganizer or ADIAutopsyObservation or ADIOrganDonationObservation or ADIPersonalGoal or ADIUponDeathPreference)
 
-// ******* ADI Minimal Source Form Section ********
-* section[minimal_source_form] ^short = "Minimal source form"
-* section[minimal_source_form].title 1..1 MS
-* section[minimal_source_form].code 1..1 MS
-* section[minimal_source_form].code = ADITempCS#minimal_source_form
-* section[minimal_source_form].entry only Reference(ADIMinimalSourceFormInformation)
+// ******* Advance Directive Source Form Section ******** // mlt_20260317 - removed based on Punch list discussion with Lisa on 3/13/26.
+// * section[advance_directive_source_form] ^short = "Advance directive source form"
+// * section[advance_directive_source_form].title 1..1 MS
+// * section[advance_directive_source_form].code 1..1 MS
+// * section[advance_directive_source_form].code = ADITempCS#advance_directive_source_form
+// * section[advance_directive_source_form].entry only Reference(ADISourceFormInformation)
 
-* obeys Composition-section-code-equals-type
+// * obeys Composition-section-code-equals-type // mlt_20260317 - investigate whether we should apply this invariant in a different spot.
 
 // ******* PMO Additional Documentation Section ********
 
@@ -169,11 +169,6 @@ Description: "This Composition profile is used to represent a Provider-Authored 
 * section[witness_and_notary].entry only Reference(ADIHealthcareAgentParticipant)
 
 // *********** Invariants **********
-// Invariant: Composition-section-code-equals-type
-// Description: "Composition section code must equal Composition type"
-// Expression: "section.code = type"
-// XPath: "f:section/f:code = f:type"
-// Severity: #error
 
 Invariant: Composition-section-code-equals-type
 Description: "Composition section code must equal Composition type when section is portable_medical_orders"

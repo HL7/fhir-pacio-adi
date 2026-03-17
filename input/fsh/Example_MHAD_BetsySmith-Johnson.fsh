@@ -60,11 +60,11 @@ Description: "Betsy Smith-Johnson MHAD Composition Example"
 <p>I am appointing my son, Charles Johnson, as my healthcare agent</p>
 </div>"
 
-* section[minimal_source_form].entry[+] = Reference(Binary/MHAD-Example-Smith-Johnson-Binary)
-* section[minimal_source_form].title = "MHAD Minimal Source Form for Betsy Smith-Johnson"
-* section[minimal_source_form].code = ADITempCS#minimal_source_form
-* section[minimal_source_form].text.status = #additional
-* section[minimal_source_form].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+* section[advance_directive_source_form].entry[+] = Reference(Binary/MHAD-Example-Smith-Johnson-Binary)
+* section[advance_directive_source_form].title = "MHAD Source Form for Betsy Smith-Johnson"
+* section[advance_directive_source_form].code = ADITempCS#advance_directive_source_form
+* section[advance_directive_source_form].text.status = #additional
+* section[advance_directive_source_form].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p>I am emotionally and mentally competent to make this Mental Health Advance Directive (MHAD). I understand the purpose and effect of this MHAD, I agree with everything that is written in this uADD, and I have made this MHAD knowingly, willingly and after careful deliberation.</p>
 </div>"
 
@@ -103,7 +103,7 @@ Usage: #example
 * telecom[0].system = #email
 * telecom[0].value = "CharlesSJ@example.com"
 * telecom[0].use = #home
-
+* extension[adi-notaryInformation-extension].extension[NotaryCommissionState].valueCodeableConcept = urn:iso:std:iso:3166:-2#US-MI
 
 Instance: Example-Smith-Johnson-HealthcareAgent3
 InstanceOf: ADIHealthcareAgentParticipant
@@ -163,7 +163,7 @@ Usage: #example
 // ****************************
 
 Instance: MHAD-Example-Smith-Johnson-Binary
-InstanceOf: ADIMinimalSourceFormInformation
+InstanceOf: ADISourceFormInformation
 Usage: #Example
 Description: "Betsy Smith-Johnson MHAD Binary Example"
 * contentType = #application/pdf
