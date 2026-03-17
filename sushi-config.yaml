@@ -34,8 +34,9 @@ dependencies:
   hl7.fhir.us.core: 8.0.0
   us.nlm.vsac:
     uri: 'http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac'
-    version: 0.22.0
+    version: 0.24.0
     id: vsac
+  hl7.cda.uv.core: 2.0.1-sd
 parameters:
   shownav: 'true'
   show-inherited-invariants: true
@@ -63,11 +64,11 @@ menu:
     Search Parameters: search_parameters.html
     Key Terms and Acronyms: key_terms_and_acronyms.html
   Person-Authored:
-    Personal Advance Care Plan (ACP): pacp_guidance.html
-    Mental Health Advance Directive (MHAD): mhad_guidance.html
     Person-Authored Document Workflow: pacp_workflow.html
+    Personal Advance Care Plan (PACP): pacp_guidance.html
+    Mental Health Advance Directive (MHAD): mhad_guidance.html
   Provider-Authored:
-    PMO Specification Guidance: pmo_guidance.html
+    Portable Medical Order (PMO): pmo_guidance.html
   Artifacts:
     By Resource Type: artifact_resource_type.html
     Index: artifacts.html
@@ -77,34 +78,34 @@ menu:
 pages:
   index.md:
     title: Home
-  artifact_resource_type.md:
-    title: Profiles by Resource Type
   content_type_overview.md:
     title: Content Type Overview
-  mhad_guidance.md:
-    title: MHAD Guidance
-  pacp_guidance.md:
-    title: PACP Guidance
-  pmo_guidance.md:
-    title: Provider-Authored Portable Medical Order (PMO) Document
-  pacp_workflow.md:
-    title: Person-Authored Document Workflow
+  system_use_cases.md:
+    title: System Use Cases
   formal_specification.md:
     title: Formal Specification
-  package_dependencies.md:
-    title: Package Dependencies
   security_privacy_consent.md:
     title: Security, Privacy, and Consent
   signatures.md:
     title: Signatures
-  system_use_cases.md:
-    title: System Use Cases
   search_parameters.md:
     title: Recommended Search Parameters
   key_terms_and_acronyms.md:
     title: Key Terms and Acronyms
+  pacp_workflow.md:
+    title: Person-Authored Document Workflow
+  pacp_guidance.md:
+    title: Person-Authored Advance Care Plan (PACP) Guidance
+  mhad_guidance.md:
+    title: Mental Health Advance Directive (MHAD) Guidance
+  pmo_guidance.md:
+    title: Portable Medical Order (PMO) Guidance
+  package_dependencies.md:
+    title: Package Dependencies
   artifact_adi.md:
     title: FHIR Artifacts
+  artifact_resource_type.md:
+    title: Profiles by Resource Type
   change_log.md:
     title: Change Log
   downloads.md:

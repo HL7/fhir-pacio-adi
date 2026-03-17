@@ -202,6 +202,14 @@ Description: "Pracititioner roles specific to the advance directive attesters an
 * ^experimental = false
 * include http://terminology.hl7.org/CodeSystem/claimcareteamrole#supervisor "Supervising Provider"
 
+// mlt_20260313: mlt_cmt: Add CDASignatureCodeVS while we figure out why the IG Publisher is not finding this valueset. Remove this Valueset once we resolve why the IG Publisher is not recognizing this uri.
+ValueSet: CDASignatureCodeVS
+Title: "CDA Signature Code"
+Description: "A set of codes specifying whether and how the participant has attested his participation through a signature - limited to values allowed in original CDA definition. Note: This is a copy of http://hl7.org/cda/stds/core/ValueSet/CDASignatureCode and will be replaced with the recognized canonical uri once we resolve why the IG Publisher is not recognizing this uri."
+* ^experimental = false
+// * codes from system $HL7V3ParticipationSignature
+* include $HL7V3ParticipationSignature#S
+* include $HL7V3ParticipationSignature#X
 
 /* ********** RuleSets *********/
 

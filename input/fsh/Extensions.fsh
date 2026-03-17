@@ -15,7 +15,7 @@ Description: "Jurisdiction for which content is applicable. Represent state juri
 Context: DocumentReference
 * value[x] only CodeableConcept or string
 * valueCodeableConcept 0..1 MS
-* valueCodeableConcept from $HL7JurisdictionCodesVS (extensible)  
+* valueCodeableConcept from $HL7JurisdictionStateCodesVS (extensible)  
 * valueString 0..1 MS
 // * obeys jurisdiction-choice-required
 
@@ -25,15 +25,11 @@ Context: DocumentReference
 // Expression: "valueCodeableConcept.exists() xor valueString.exists()"
 // Severity: #error
 
-
-//[TODO get clarification on the extension descriptions and constraints. ]
-
 Extension: DataEntererExtension
 Id: adi-dataEnterer-extension
 Title: "Data Enterer"
 Description: "Data Enterer Extension represents the person who transferred the content, written or dictated, into the Advance Directive document. To clarify, an author provides the content, subject to their own interpretation; a dataEnterer adds an author’s information to the electronic system."
 Context: Composition
-* value[x] only Reference
 * valueReference 1..1 MS
 * valueReference only Reference($USCorePractitioner or $USCorePractitionerRole or $USCorePatient or RelatedPerson)
 
@@ -43,7 +39,6 @@ Id: adi-informant-extension
 Title: "Informant"
 Description: "The Advance Directive Information Informant Extension describes an information source for any content within the Advance Directive document. This informant is constrained for use when the source of information is an assigned health care provider for the patient."
 Context: Composition
-* value[x] only Reference
 * valueReference 1..1 MS
 * valueReference only Reference($USCorePractitioner or $USCorePractitionerRole or $USCorePatient or RelatedPerson)
 
@@ -52,7 +47,6 @@ Id: adi-healthcareAgentParticipant-extension
 Title: "Participant"
 Description: "The Advance Directive Information Participant Extension identifies supporting entities, including parents, relatives, caregivers, insurance policyholders, guarantors, and others related in some way to the patient. A supporting person or organization is an individual or an organization with a relationship to the patient. A supporting person who is playing multiple roles would be recorded in multiple participants (e.g., emergency contact and next-of-kin)."
 Context: Composition
-* value[x] only Reference
 * valueReference 1..1 MS
 * valueReference only Reference($USCorePractitioner or $USCorePractitionerRole or RelatedPerson)
 
@@ -62,7 +56,6 @@ Id: adi-performer-extension
 Title: "Performer"
 Description: "The Advance Directive Information Performer Extension represents clinicians who actually and principally carry out the clinical services being documented. In a transfer of care this represents the healthcare providers involved in the current or pertinent historical care of the patient. Preferably, the patients key healthcare care team members would be listed, particularly their primary physician and any active consulting physicians, therapists, and counselors."
 Context: Composition
-* value[x] only Reference
 * valueReference 1..1 MS
 * valueReference only Reference($USCorePractitioner or $USCorePractitionerRole)
 
@@ -92,37 +85,52 @@ Title: "Notary Information"
 Description: "The Notary Information Extension allows for the capture of information relevant to the notary."
 Context: RelatedPerson
 * extension contains
-	AttesterRole 1..1 and
-    AttestationStatement 0..1 and
-    Signature 0..1 and
+//	AttesterRole 1..1 and		//	mlt_20260308: removed AttesterRole per ADI SME discussion on 3/6/26.
+//    AttestationStatement 0..1 and		// mlt_20260308: moved AttestationStatement to clause extension per ADI SME discussion on 3/6/26.
+    SignatureCode 0..1 and	//	mlt_20260308: replaced Signature with SignatureCode per ADI SME discussion on 3/6/26.
 	NotarySealId 0..1 and
 	NotaryCommissionExpirationDate 0..1 and
-	adi-jurisdiction-extension named NotaryCommissionJurisdiction 0..1
+//	adi-jurisdiction-extension named NotaryCommissionJurisdiction 0..1 and
+	NotaryCommissionState 0..1 and
+	NotaryCommissionCounty 0..1
 
-* obeys notary-information-requires-notary-role
 
-* extension[AttesterRole] ^short = "Attester Role"
-* extension[AttesterRole].value[x] 1..1 MS
-* extension[AttesterRole].value[x] only CodeableConcept
-* extension[AttesterRole].valueCodeableConcept from ADINotaryAndWitnessAttesterRoleTypeVS (extensible)
+// * obeys notary-information-requires-notary-role	// *** NOTE: mlt_20260308: Commented out. No longer needed since AttesterRole was removed per ADI SME discussion on 3/6/26.
 
-* extension[AttestationStatement] ^short = "Attestation Statement"
-* extension[AttestationStatement].value[x] 1..1 MS
-* extension[AttestationStatement].value[x] only string or markdown
+// * extension[AttesterRole] ^short = "Attester Role"
+// * extension[AttesterRole].value[x] 1..1 MS
+// * extension[AttesterRole].value[x] only CodeableConcept
+// * extension[AttesterRole].valueCodeableConcept from ADINotaryAndWitnessAttesterRoleTypeVS (extensible)
 
-* extension[Signature] ^short = "Attester Signature with Date"
-* extension[Signature].value[x] 1..1 MS
-* extension[Signature].value[x] only Signature
+// * extension[AttestationStatement] ^short = "Attestation Statement"
+// * extension[AttestationStatement].value[x] 1..1 MS
+// * extension[AttestationStatement].value[x] only string or markdown
+
+// * extension[Signature] ^short = "Attester Signature with Date"
+// * extension[Signature].value[x] 1..1 MS
+// * extension[Signature].value[x] only Signature
+
+* extension[SignatureCode] ^short = "Signature Code"
+* extension[SignatureCode].value[x] 0..1
+* extension[SignatureCode].value[x] only CodeableConcept
+* extension[SignatureCode].valueCodeableConcept from CDASignatureCodeVS (extensible) // Note: This is a copy of http://hl7.org/cda/stds/core/ValueSet/CDASignatureCode and will be replaced with the recognized canonical uri once we resolve why the IG Publisher is not recognizing this uri.
 
 * extension[NotarySealId] ^short = "Notary seal id"
 * extension[NotarySealId].value[x] 1..1 MS
-* extension[NotarySealId].value[x] only Identifier
+* extension[NotarySealId].value[x] only string
 
 * extension[NotaryCommissionExpirationDate] ^short = "Notary commission expiration date"
 * extension[NotaryCommissionExpirationDate].value[x] 1..1 MS
 * extension[NotaryCommissionExpirationDate].value[x] only date
 
+* extension[NotaryCommissionState] ^short = "Notary Commission State"
+* extension[NotaryCommissionState].value[x] 0..1
+* extension[NotaryCommissionState].value[x] only CodeableConcept
+* extension[NotaryCommissionState].valueCodeableConcept from $HL7JurisdictionStateCodesVS (extensible)
 
+* extension[NotaryCommissionCounty] ^short = "Notary Commission County"
+* extension[NotaryCommissionCounty].value[x] 0..1
+* extension[NotaryCommissionCounty].value[x] only string
 
 Extension: ExpirationDateExtension
 Id: adi-expiration-date-extension
@@ -143,7 +151,8 @@ Context: Bundle, Composition, Consent
 	Title 0..1 and
 	Type 0..1 and
 	Policy 0..* and
-	Clause 1..*
+	Clause 1..* and
+	AttestationStatement 0..1	// mlt_20260308: moved AttestationStatement to ClauseExtension per ADI SME discussion on 3/6/26.
 
 * extension[Title] ^short = "Section in which clauses are presented."
 * extension[Title].value[x] 1..1
@@ -156,12 +165,15 @@ Context: Bundle, Composition, Consent
 
 * extension[Policy] ^short = "Link to the policies related to the clause"
 * extension[Policy].value[x] 1..1 MS
-* extension[Policy].value[x] only Reference
+* extension[Policy].value[x] only Reference(DocumentReference or Observation or Endpoint)
 
 * extension[Clause] ^short = "A human readable clause."
 * extension[Clause].value[x] 1..1 MS
 * extension[Clause].value[x] only markdown
 
+* extension[AttestationStatement] ^short = "Attestation Statement"
+* extension[AttestationStatement].value[x] 1..1 MS
+* extension[AttestationStatement].value[x] only string or markdown
 
 Extension: GoalOrderByDescendingPriority
 Id: adi-goal-order-by-descending-priority-extension
@@ -181,19 +193,20 @@ Context: CarePlan
 * valueCodeableConcept 1..1 MS
 * valueCodeableConcept from $USCoreConditionCode (extensible)
 
-Invariant:  notary-information-requires-notary-role
-Description: "If Notary information (seal or commission expiration date) exists, then role must be notary"
-Expression: 
-	"extension.where(url = 'NotarySealId').value.exists() or 
-	extension.where(url = 'NotaryCommissionExpirationDate').value.exists() 
-	implies extension.where(url = 'AttesterRole').value.coding.exists(code='81372-5')"
+// *** NOTE: mlt_20260308: Commented out. No longer needed since AttesterRole was removed per ADI SME discussion on 3/6/26.
+// Invariant:  notary-information-requires-notary-role
+// Description: "If Notary information (seal or commission expiration date) exists, then the attester role must be notary"
+// Expression: 
+// 	"extension.where(url = 'NotarySealId').value.exists() or 
+// 	extension.where(url = 'NotaryCommissionExpirationDate').value.exists() 
+// 	implies extension.where(url = 'AttesterRole').value.coding.exists(code='81372-5')"
 
 // mlt_20231105: line below commented out for troubleshooting Invariant.
 // Expression: "(extension.where(url = 'NotarySealId').valueIdentifier.exists() or extension.where(url = 'NotaryCommissionExpirationDate').valueDate.exists()) implies extension.where(url = 'AttesterRole').valueCodeableConcept.where(coding.code='81372-5').exists()"
 
 //Expression: "category.coding.where(code.memberOf('http://hl7.org/fhir/us/pacio-adi/ValueSet/ADIInterventionPreferencesOrdinalVS')).exists() implies description.coding.where(code.memberOf('http://terminology.hl7.org/ValueSet/v2-0136')).exists()"
 //Expression: "category.coding.code.memberOf('http://hl7.org/fhir/us/pacio-adi/ValueSet/ADIInterventionPreferencesOrdinalVS').exists()"
-Severity:   #error
+// Severity:   #error
 
 
 Extension: DocumentRevokeStatus
@@ -222,7 +235,7 @@ Id: adi-document-location
 Title: "Document Location"
 Description: "The Advance Directive document location. This location is the endpoint URL that points to the ADI document or resource that exists or a string."
 Context: DocumentReference
-* value[x] only Reference or string
+* value[x] only Reference(Endpoint) or string
 * value[x] 0..1 MS
 * valueReference 0..1 MS
 * valueReference only Reference(Endpoint)
@@ -249,3 +262,21 @@ Context: DocumentReference
 * extension[party] ^short = "attester party"
 * extension[party].value[x] only Reference($USCorePractitionerRole or $USCorePatient or RelatedPerson)
 
+// *** mlt_20260308: added new witness information extension.
+Extension: WitnessInformationExtension
+Id: adi-witness-information-extension
+Title: "Witness Information"
+Description: "The Witness Information Extension allows for the capture of information relevant to the witness."
+Context: RelatedPerson
+* extension contains
+	AttesterOrdinality 1..1 and
+    SignatureCode 0..1
+* extension[AttesterOrdinality] ^short = "Attester Ordinality"
+* extension[AttesterOrdinality].value[x] 0..1
+* extension[AttesterOrdinality].value[x] only CodeableConcept
+* extension[AttesterOrdinality].valueCodeableConcept from $VSACADIWitnessCategory (extensible)
+
+* extension[SignatureCode] ^short = "Signature Code"
+* extension[SignatureCode].value[x] 0..1
+* extension[SignatureCode].value[x] only CodeableConcept
+* extension[SignatureCode].valueCodeableConcept from $CDASignatureCode (extensible)
