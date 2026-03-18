@@ -57,8 +57,32 @@ Description: "This abstract profile defines constraints that represent common ad
 * event.detail[adiFacilitator] only Reference(ADIFacilitator)
 * event.detail[adiFacilitator] ^short = "ADI Facilitator"
 
+* section ^slicing.discriminator.type = #pattern 
+* section ^slicing.discriminator.path = "code"
+* section ^slicing.rules = #open
+* section ^slicing.ordered = false   // can be omitted, since false is the default
+* section ^slicing.description = "Slice based on $this value"
+
+* section 1..*
+* section.text 1..1 MS
+* section ^slicing.discriminator.type = #pattern 
+* section ^slicing.discriminator.path = "code"
+* section ^slicing.rules = #open
+* section ^slicing.ordered = false   // can be omitted, since false is the default
+* section ^slicing.description = "Slice based on code"
+* section contains
+    advance_directive_source_form 0..1
+
+// ******* Advance Directive Source Form Section ********
+* section[advance_directive_source_form] ^short = "Advance directive source form"
+* section[advance_directive_source_form].title 1..1 MS
+* section[advance_directive_source_form].code 1..1 MS
+* section[advance_directive_source_form].code = ADITempCS#advance_directive_source_form
+* section[advance_directive_source_form].entry only Reference(ADISourceFormInformation)
+
 * section.extension contains    
     adi-clause-extension named ClauseExtension 0..*
+    
     
 // need to add notes on which attester roles there are. Change name of personal_attester to witness_attester professional_attester to notary_attester
 // Need to add an extension with a code that explains the role, witness or notary. Others?
