@@ -32,30 +32,3 @@ Description: "Person-Authored Care Experience Preference is a clinical statement
 * value[x] 1..1 MS
 
 * extension contains adi-enclosedPrecondition-extension named EnclosedPreconditionExtension 0..1
-
-/*Profile: ADIPersonAuthoredCareExperiencePreference
-Parent: Observation
-Id: ADI-PersonAuthoredCareExperiencePreference
-Title: "ADI Person Authored Care Experience Preference"
-Description: "Care Experience Preference is a clinical statement that presents the author's personal thoughts about something he or she feels is relevant to his or her care experience and may be pertinent when planning his or her care."
-
-* text 1..1 MS
-* status = #final
-
-
-* code 1..1 MS
-* code from ADIPersonAuthoredCareExperiencePreferencesVS (extensible)
-* code.text MS
-* subject 1..1 MS
-* subject only Reference($USCorePatient)
-
-* value[x] 1..1 MS
-* value[x].extension contains
-    adi-enclosedPrecondition-extension named EnclosedPreconditionExtension 0..1
-
-* value[x].extension[adi-enclosedPrecondition-extension] ^comment = "Precondition contains the components that make up the Actual Value for use by systems for rendering or other purposes. It must not include additional information."
-
-* note MS
-
-*/
-// If we restrict the value type, have guidance about including information in note

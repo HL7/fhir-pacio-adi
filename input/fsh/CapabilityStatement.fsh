@@ -4,7 +4,7 @@ Usage: #definition
 * contact.telecom.system = #url
 * contact.telecom.value = "https://www.hl7.org/Special/committees/patientempowerment/index.cfm"
 * date = "2025-08-24"
-* description = "This Section describes the expected capabilities of the PACIO Advance Directive Interoperability (ADI) Server actor which is responsible for providing responses to the queries submitted by the ADI Requestors. \n\nThere are two primary vehicles in which Advance Directive Information can be conveyed: DocumentReference and Bundle. Through a DocumentReference, the ADI may be encoded inside directly as content data or referred to through a content reference (pointing to the ADI included in a resource like Binary) or reference a Bundle with the type=document for FHIR encoded data.\nThe resources referred to by the Composition in the document bundle include Patient, Observation,Goal, ServiceRequest, Organization, RelatedPerson, Consent, List, and Provenance."
+* description = "This section describes the expected capabilities of the PACIO Advance Directive Interoperability (ADI) Server actor which is responsible for providing responses to the queries submitted by the ADI Requestors. \n\nThere are two primary vehicles in which Advance Directive Information can be conveyed: DocumentReference and Bundle. Through a DocumentReference, the ADI may be encoded inside directly as content data or referred to through a content reference (pointing to the ADI included in a resource like Binary) or reference a Bundle with the type=document for FHIR encoded data.\nThe resources referred to by the Composition in the document bundle include Patient, Observation,Goal, ServiceRequest, Organization, RelatedPerson, Consent, List, and Provenance."
 * experimental = false
 * fhirVersion = #4.0.1
 * format[0] = #xml
@@ -19,6 +19,8 @@ Usage: #definition
 * rest.mode = #server
 * rest.resource[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension.valueCode = #SHALL
+
+// **** Bundle Expectations ****
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction[=].extension.valueCode = #SHALL
 * rest.resource[=].interaction[=].code = #create
@@ -64,6 +66,8 @@ Usage: #definition
 * rest.resource[=].searchParam[=].name = "type"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].type = #Bundle
+
+// **** Composition Expectations ****
 * rest.resource[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension.valueCode = #MAY
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -85,9 +89,12 @@ Usage: #definition
 * rest.resource[=].interaction[=].extension.valueCode = #SHOULD
 * rest.resource[=].interaction[=].code = #history-instance
 * rest.resource[=].referencePolicy = #resolves
-* rest.resource[=].supportedProfile[0] = "http://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-Composition-Header.html"
-* rest.resource[=].supportedProfile[+] = "http://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-PACPComposition.html"
+* rest.resource[=].supportedProfile[0] = Canonical(ADI-Composition-Header)
+* rest.resource[=].supportedProfile[+] = Canonical(ADI-PACPComposition)
+* rest.resource[=].supportedProfile[+] = Canonical(ADI-PMOComposition)
 * rest.resource[=].type = #Composition
+
+// **** Consent Expectations ****
 * rest.resource[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension.valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -109,9 +116,10 @@ Usage: #definition
 * rest.resource[=].interaction[=].extension.valueCode = #SHOULD
 * rest.resource[=].interaction[=].code = #history-instance
 * rest.resource[=].referencePolicy = #resolves
-* rest.resource[=].supportedProfile[0] = "http://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-HealthcareAgentAuthority.html"
-* rest.resource[=].supportedProfile[+] = "http://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-ConsentForHealthcareAgent.html"
+* rest.resource[=].supportedProfile[0] = Canonical(ADI-HealthcareAgentConsent)
 * rest.resource[=].type = #Consent
+
+// **** DocumentReference Expectations ****
 * rest.resource[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension.valueCode = #SHALL
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -263,8 +271,10 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-type"
 * rest.resource[=].searchParam[=].name = "type"
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-DocumentReference.html"
+* rest.resource[=].supportedProfile = Canonical(ADI-DocumentReference)
 * rest.resource[=].type = #DocumentReference
+
+// **** Goal Expectations ****
 * rest.resource[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension.valueCode = #MAY
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -286,8 +296,10 @@ Usage: #definition
 * rest.resource[=].interaction[=].extension.valueCode = #SHOULD
 * rest.resource[=].interaction[=].code = #history-instance
 * rest.resource[=].referencePolicy = #resolves
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-PersonalGoal.html"
+* rest.resource[=].supportedProfile = Canonical(ADI-PersonalGoal)
 * rest.resource[=].type = #Goal
+
+// **** List Expectations ****
 * rest.resource[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension.valueCode = #MAY
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -309,8 +321,10 @@ Usage: #definition
 * rest.resource[=].interaction[=].extension.valueCode = #SHOULD
 * rest.resource[=].interaction[=].code = #history-instance
 * rest.resource[=].referencePolicy = #resolves
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-PersonalPrioritiesOrganizer.html"
+* rest.resource[=].supportedProfile = Canonical(ADI-PersonalPrioritiesOrganizer)
 * rest.resource[=].type = #List
+
+// **** Observation Expectations ****
 * rest.resource[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension.valueCode = #MAY
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -332,12 +346,14 @@ Usage: #definition
 * rest.resource[=].interaction[=].extension.valueCode = #SHOULD
 * rest.resource[=].interaction[=].code = #history-instance
 * rest.resource[=].referencePolicy = #resolves
-* rest.resource[=].supportedProfile[0] = "http://hl7.org/fhir/us/fhir-pacio-adi/StructureDefinition-ADI-DocumentationObservation.html"
-* rest.resource[=].supportedProfile[+] = "http://hl7.org/fhir/us/fhir-pacio-adi/StructureDefinition-ADI-PersonalInterventionPreference.html"
-* rest.resource[=].supportedProfile[+] = "http://hl7.org/fhir/us/fhir-pacio-adi/StructureDefinition-ADI-OrganDonationObservation.html"
-* rest.resource[=].supportedProfile[+] = "http://hl7.org/fhir/us/fhir-pacio-adi/StructureDefinition-ADI-AutopsyObservation.html"
-* rest.resource[=].supportedProfile[+] = "http://hl7.org/fhir/us/fhir-pacio-adi/StructureDefinition-ADI-PersonAuthoredCareExperiencePreference.html"
+* rest.resource[=].supportedProfile[0] = Canonical(ADI-DocumentationObservation)
+* rest.resource[=].supportedProfile[+] = Canonical(ADI-PersonalInterventionPreference)
+* rest.resource[=].supportedProfile[+] = Canonical(ADI-OrganDonationObservation)
+* rest.resource[=].supportedProfile[+] = Canonical(ADI-AutopsyObservation)
+* rest.resource[=].supportedProfile[+] = Canonical(ADI-PersonAuthoredCareExperiencePreference)
 * rest.resource[=].type = #Observation
+
+// **** Organization Expectations ****
 * rest.resource[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension.valueCode = #SHALL
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -360,6 +376,8 @@ Usage: #definition
 * rest.resource[=].interaction[=].code = #history-instance
 * rest.resource[=].referencePolicy = #resolves
 * rest.resource[=].type = #Organization
+
+// **** Patient Expectations ****
 * rest.resource[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension.valueCode = #MAY
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -520,8 +538,10 @@ Usage: #definition
 * rest.resource[=].searchParam[=].documentation = "http://www.hl7.org/fhir/us/core/SearchParameter-us-core-ethnicity.html"
 * rest.resource[=].searchParam[=].name = "ethnicity"
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient.html"
+* rest.resource[=].supportedProfile = Canonical(us-core-patient)
 * rest.resource[=].type = #Patient
+
+// ***** Provenance Expectations *****
 * rest.resource[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension.valueCode = #MAY
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -543,8 +563,10 @@ Usage: #definition
 * rest.resource[=].interaction[=].extension.valueCode = #SHOULD
 * rest.resource[=].interaction[=].code = #history-instance
 * rest.resource[=].referencePolicy = #resolves
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-Provenance.html"
+* rest.resource[=].supportedProfile = Canonical(ADI-Provenance)
 * rest.resource[=].type = #Provenance
+
+// **** RelatedPerson Expectations ****
 * rest.resource[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension.valueCode = #MAY
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -566,10 +588,10 @@ Usage: #definition
 * rest.resource[=].interaction[=].extension.valueCode = #SHOULD
 * rest.resource[=].interaction[=].code = #history-instance
 * rest.resource[=].referencePolicy = #resolves
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/pacio-adi/StructureDefinition-ADI-HealthcareAgentParticipant.html"
+* rest.resource[=].supportedProfile[0] = Canonical(ADI-HealthcareAgentParticipant)
 * rest.resource[=].type = #RelatedPerson
 * rest.security.description = "1. See the [Guidance](security_privacy_consent.html) section for requirements and recommendations.\n1. A server **SHALL** reject any unauthorized requests by returning an HTTP 401 \"Unauthorized\", HTTP 403 \"Forbidden\", or HTTP 404 \"Not Found\" response code."
 * status = #active
 * title = "ADI CapabilityStatement"
-* url = "http://hl7.org/fhir/us/fhir-pacio-adi/CapabilityStatement/adi"
+* url = "http://hl7.org/fhir/us/pacio-adi/CapabilityStatement/adi"
 * version = "2.0.0"

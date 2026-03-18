@@ -31,7 +31,7 @@ Description: "This Composition profile is used to represent a Person-Authored ad
     gpp_for_certain_health_condition 0..1 and
     gpp_personal_care_experience 0..1 and
     gpp_upon_death 0..1 and
-    advance_directive_source_form 0..1 and
+ //   advance_directive_source_form 0..1 and
     additional_documentation 0..1 and
     witness_and_notary 0..1 and
     administrative_information 0..1
@@ -77,12 +77,12 @@ Description: "This Composition profile is used to represent a Person-Authored ad
 * section[gpp_upon_death].entry 
 * section[gpp_upon_death].entry only Reference(ADIPersonalInterventionPreference or ADIPersonalPrioritiesOrganizer or ADIAutopsyObservation or ADIOrganDonationObservation or ADIPersonalGoal or ADIUponDeathPreference)
 
-// ******* Advance Directive Source Form Section ********
-* section[advance_directive_source_form] ^short = "Advance directive source form"
-* section[advance_directive_source_form].title 1..1 MS
-* section[advance_directive_source_form].code 1..1 MS
-* section[advance_directive_source_form].code = ADITempCS#advance_directive_source_form
-* section[advance_directive_source_form].entry only Reference(ADISourceFormInformation)
+// ******* Advance Directive Source Form Section ********       // mlt_20260317: moved AD Source Form Section to Composition Header since this is relevant to all types of advance directive documents, not just PACP. --- IGNORE ---
+// * section[advance_directive_source_form] ^short = "Advance directive source form"
+// * section[advance_directive_source_form].title 1..1 MS
+// * section[advance_directive_source_form].code 1..1 MS
+// * section[advance_directive_source_form].code = ADITempCS#advance_directive_source_form
+// * section[advance_directive_source_form].entry only Reference(ADISourceFormInformation)
 
 * obeys Composition-section-code-equals-type
 

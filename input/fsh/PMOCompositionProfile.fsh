@@ -44,7 +44,7 @@ Description: "This Composition profile is used to represent a Provider-Authored 
     completion_information 0..1 and 
     administration_information 0..1 and
     gpp_upon_death 0..1 and
-    advance_directive_source_form 0..1 and
+//    advance_directive_source_form 0..1 and
     additional_documentation 0..1 and
     witness_and_notary 0..1
 
@@ -121,15 +121,16 @@ Description: "This Composition profile is used to represent a Provider-Authored 
 * section[administration_information].entry contains
     adi_personal_goal 0..* and 
     adi_decisional_capacity 0..1 MS and
-    adi_pmo_hospice_observation 0..1 MS and
-    advance_directive_source_form 0..1 MS  
+    adi_pmo_hospice_observation 0..1 MS 
+//    advance_directive_source_form 0..1 MS  
 
-* section[administration_information].entry[adi_decisional_capacity] only Reference(ADIDecisionalCapacity)
-* section[administration_information].entry[adi_decisional_capacity] ^short = "ADI Decisional Capacity"
 * section[administration_information].entry[adi_personal_goal] only Reference(ADIPersonalGoal)
 * section[administration_information].entry[adi_personal_goal] ^short = "ADI Personal Goal"
+* section[administration_information].entry[adi_decisional_capacity] only Reference(ADIDecisionalCapacity)
+* section[administration_information].entry[adi_decisional_capacity] ^short = "ADI Decisional Capacity"
 * section[administration_information].entry[adi_pmo_hospice_observation] only Reference(ADIPMOHospiceObservation)
 * section[administration_information].entry[adi_pmo_hospice_observation] ^short = "Hospice or palliative care enrollment"
+// mlt_20260317 - moved advance directive source form to its own section in the Composition Header since this is relevant to all types of advance directive documents, not just PMO. --- IGNORE ---
 // * section[administration_information].entry[advance_directive_source_form] only Reference(Binary)
 // * section[administration_information].entry[advance_directive_source_form] ^short = "Advance Directive Source Form"
 
