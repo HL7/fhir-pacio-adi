@@ -467,12 +467,12 @@ Usage: #definition
 * rest.resource[=].searchParam[=].documentation = "http://www.hl7.org/fhir/us/core/SearchParameter-us-core-patient-family.html"
 * rest.resource[=].searchParam[=].name = "family"
 * rest.resource[=].searchParam[=].type = #string
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-gender.html"
-* rest.resource[=].searchParam[=].documentation = "http://www.hl7.org/fhir/us/core/SearchParameter-us-core-patient-given.html"
-* rest.resource[=].searchParam[=].name = "gender"
-* rest.resource[=].searchParam[=].type = #token
+// * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+// * rest.resource[=].searchParam[=].extension.valueCode = #SHALL
+// * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-gender.html"
+// * rest.resource[=].searchParam[=].documentation = "http://www.hl7.org/fhir/us/core/SearchParameter-us-core-patient-given.html"
+// * rest.resource[=].searchParam[=].name = "gender"
+// * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #MAY
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Patient-general-practitioner"

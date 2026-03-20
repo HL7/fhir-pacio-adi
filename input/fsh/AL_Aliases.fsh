@@ -5,7 +5,6 @@ Alias:   $USCorePractitioner = http://hl7.org/fhir/us/core/StructureDefinition/u
 Alias:   $USCorePractitionerRole = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole
 Alias:   $USCoreOrganization = http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
 Alias:   $USCoreGoal = http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal
-Alias:   $USCoreGoalDescription = http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description|6.1.0
 Alias:   $USCoreEncounter = http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
 Alias:   $USCoreProcedure = http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure
 Alias:   $USCoreProvenance = http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance

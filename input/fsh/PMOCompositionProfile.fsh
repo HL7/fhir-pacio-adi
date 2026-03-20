@@ -42,7 +42,7 @@ Description: "This Composition profile is used to represent a Provider-Authored 
 * section contains
     portable_medical_orders 1..1 MS and
     completion_information 0..1 and 
-    administration_information 0..1 and
+    administrative_information 0..1 and
     gpp_upon_death 0..1 and
 //    advance_directive_source_form 0..1 and
     additional_documentation 0..1 and
@@ -106,33 +106,33 @@ Description: "This Composition profile is used to represent a Provider-Authored 
 
 // ******* PMO Administration Information Section ********
 
-* section[administration_information] ^short = "Observations regarding the existence of other advance directive related information"
-* section[administration_information].title 1..1 MS
-* section[administration_information].code 1..1 MS
-* section[administration_information].code = $LOINC#107904-5
-// * section[administration_information].entry only Reference(<enter reference to EmergencyContactInformation>)
+* section[administrative_information] ^short = "Observations regarding the existence of other advance directive related information"
+* section[administrative_information].title 1..1 MS
+* section[administrative_information].code 1..1 MS
+* section[administrative_information].code = $LOINC#107904-5
+// * section[administrative_information].entry only Reference(<enter reference to EmergencyContactInformation>)
 
-* section[administration_information].entry ^slicing.discriminator.type = #profile
-* section[administration_information].entry ^slicing.discriminator.path = "resolve()"
-* section[administration_information].entry ^slicing.rules = #open 
-* section[administration_information].entry ^slicing.ordered = false
-* section[administration_information].entry ^slicing.description = "Slice based on $this value"
+* section[administrative_information].entry ^slicing.discriminator.type = #profile
+* section[administrative_information].entry ^slicing.discriminator.path = "resolve()"
+* section[administrative_information].entry ^slicing.rules = #open 
+* section[administrative_information].entry ^slicing.ordered = false
+* section[administrative_information].entry ^slicing.description = "Slice based on $this value"
 
-* section[administration_information].entry contains
+* section[administrative_information].entry contains
     adi_personal_goal 0..* and 
     adi_decisional_capacity 0..1 MS and
     adi_pmo_hospice_observation 0..1 MS 
 //    advance_directive_source_form 0..1 MS  
 
-* section[administration_information].entry[adi_personal_goal] only Reference(ADIPersonalGoal)
-* section[administration_information].entry[adi_personal_goal] ^short = "ADI Personal Goal"
-* section[administration_information].entry[adi_decisional_capacity] only Reference(ADIDecisionalCapacity)
-* section[administration_information].entry[adi_decisional_capacity] ^short = "ADI Decisional Capacity"
-* section[administration_information].entry[adi_pmo_hospice_observation] only Reference(ADIPMOHospiceObservation)
-* section[administration_information].entry[adi_pmo_hospice_observation] ^short = "Hospice or palliative care enrollment"
+* section[administrative_information].entry[adi_personal_goal] only Reference(ADIPersonalGoal)
+* section[administrative_information].entry[adi_personal_goal] ^short = "ADI Personal Goal"
+* section[administrative_information].entry[adi_decisional_capacity] only Reference(ADIDecisionalCapacity)
+* section[administrative_information].entry[adi_decisional_capacity] ^short = "ADI Decisional Capacity"
+* section[administrative_information].entry[adi_pmo_hospice_observation] only Reference(ADIPMOHospiceObservation)
+* section[administrative_information].entry[adi_pmo_hospice_observation] ^short = "Hospice or palliative care enrollment"
 // mlt_20260317 - moved advance directive source form to its own section in the Composition Header since this is relevant to all types of advance directive documents, not just PMO. --- IGNORE ---
-// * section[administration_information].entry[advance_directive_source_form] only Reference(Binary)
-// * section[administration_information].entry[advance_directive_source_form] ^short = "Advance Directive Source Form"
+// * section[administrative_information].entry[advance_directive_source_form] only Reference(Binary)
+// * section[administrative_information].entry[advance_directive_source_form] ^short = "Advance Directive Source Form"
 
 // ******* GPP Upon Death ************
 

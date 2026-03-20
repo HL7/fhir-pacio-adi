@@ -15,8 +15,10 @@ Description: "The ADI Bundle profile is used to represent a collection of resour
 
 * entry contains patient 1..1 MS and 
     pacp-composition 0..* MS and
-    pmo-composition 0..* MS
+    pmo-composition 0..* MS and
+    advance-directive-source-form 1..1 MS
 
 * entry[patient].resource only $USCorePatient
 * entry[pacp-composition].resource only ADIPACPComposition
 * entry[pmo-composition].resource only ADIPMOComposition
+* entry[advance-directive-source-form].resource only ADISourceFormInformation
