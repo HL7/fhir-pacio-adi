@@ -39,6 +39,8 @@ Usage: #example
 * entry[=].resource = Example-Smith-Johnson-PMOProvenance1
 * entry[+].fullUrl = "http://www.example.org/fhir/Organization/Example-Smith-Johnson-OrganizationAssembler1"
 * entry[=].resource = Example-Smith-Johnson-OrganizationAssembler1
+* entry[+].fullUrl = "http://www.example.org/fhir/Binary/Example-Stub-SourceForm-Smith-Johnson-Binary"
+* entry[=].resource = Example-Stub-SourceForm-Smith-Johnson-Binary
 
 //Composition Examples
 
@@ -77,6 +79,14 @@ Usage: #example
 * event.detail[0] = Reference(PractitionerRole/ADI-Facilitator-MSW-MargaretReynolds)
 * event.detail[+] = Reference(Consent/Example-Smith-Johnson-HealthcareAgentConsent-Permit)
 * event.detail[+] = Reference(Consent/Example-Smith-Johnson-HealthcareAgentConsent-Deny)
+
+* section[advance_directive_source_form].title = "Example Source Form - Betsy Smith-Johnson"
+* section[advance_directive_source_form].code = ADITempCS#advance_directive_source_form
+* section[advance_directive_source_form].text.status = #additional
+* section[advance_directive_source_form].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p>I understand the purpose and effect of this Advance Directive, I agree with everything that is written in this form, and I have made this advance directive knowingly, willingly and after careful deliberation.</p>
+</div>"
+* section[advance_directive_source_form].entry[0] = Reference(Binary/Example-Stub-SourceForm-Smith-Johnson-Binary)
 
 * section[portable_medical_orders].title = "Portable Medical Orders"
 * section[portable_medical_orders].text.status = #generated

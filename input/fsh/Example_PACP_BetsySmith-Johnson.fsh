@@ -63,6 +63,8 @@ Usage: #example
 * entry[=].resource = Example-Smith-Johnson-DocumentationObservation1
 * entry[+].fullUrl = "http://www.example.org/fhir/Organization/Example-Smith-Johnson-OrganizationCustodian1"
 * entry[=].resource = Example-Smith-Johnson-OrganizationCustodian1
+* entry[+].fullUrl = "http://www.example.org/fhir/Binary/Example-Stub-SourceForm-Smith-Johnson-Binary"
+* entry[=].resource = Example-Stub-SourceForm-Smith-Johnson-Binary
 // * entry[+].fullUrl = "http://www.example.org/fhir/DocumentReference/Example-Smith-Johnson-DocRef-DocumentReference"
 // * entry[=].resource = Example-Smith-Johnson-DocRef-DocumentReference
 // * entry[+].fullUrl = "http://www.example.org/fhir/Organization/Example-Smith-Johnson-OrganizationAssembler1"
@@ -170,6 +172,14 @@ Usage: #example
 // * relatesTo.code = #appends
 // * relatesTo.targetIdentifier.assigner = Reference(Organization/Example-Smith-Johnson-OrganizationCustodian1)
 // * relatesTo.extension[adi-document-reference-extension].valueReference = Reference(Example-Smith-Johnson-DocRef-DocumentReference)
+
+* section[advance_directive_source_form].title = "Example Source Form - Betsy Smith-Johnson"
+* section[advance_directive_source_form].code = ADITempCS#advance_directive_source_form
+* section[advance_directive_source_form].text.status = #additional
+* section[advance_directive_source_form].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p>I understand the purpose and effect of this Advance Directive, I agree with everything that is written in this form, and I have made this advance directive knowingly, willingly and after careful deliberation.</p>
+</div>"
+* section[advance_directive_source_form].entry[0] = Reference(Binary/Example-Stub-SourceForm-Smith-Johnson-Binary)
 
 * section[healthcare_agent].title = "Appointment of a Primary Healthcare Agent and Alternate Healthcare Agents"
 * section[healthcare_agent].code = $LOINC#81335-2 "Healthcare Agent"

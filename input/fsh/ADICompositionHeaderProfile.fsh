@@ -71,7 +71,7 @@ Description: "This abstract profile defines constraints that represent common ad
 * section ^slicing.ordered = false   // can be omitted, since false is the default
 * section ^slicing.description = "Slice based on code"
 * section contains
-    advance_directive_source_form 0..1
+    advance_directive_source_form 1..1 MS
 
 // ******* Advance Directive Source Form Section ********
 * section[advance_directive_source_form] ^short = "Advance directive source form"

@@ -201,6 +201,7 @@
 <artifact id="Observation/Example-Smith-Johnson-PersonalInterventionPreference5" key="Goal-Example-Smith-Johnson-PersonalInterventionPreference5" name="Example-Smith-Johnson-PersonalInterventionPreference5"/>
 <artifact id="Observation/Example-Smith-Johnson-PersonalInterventionPreference6" key="Goal-Example-Smith-Johnson-PersonalInterventionPreference6" name="Example-Smith-Johnson-PersonalInterventionPreference6"/>
 <artifact id="Observation/Example-Smith-Johnson-UponDeathPreference1" key="Observation-Example-Smith-Johnson-UponDeathPreference1" name="Example-Smith-Johnson-UponDeathPreference1"/>
+<artifact id="Binary/Example-Stub-SourceForm-Smith-Johnson-Binary" key="Binary-Example-Stub-SourceForm-Smith-Johnson-Binary" name="Example-Stub-SourceForm-Smith-Johnson-Binary"/>
 <artifact id="Organization/Example-organization-good-health-clinic" key="Organization-Example-organization-good-health-clinic" name="Example-organization-good-health-clinic"/>
 <artifact id="StructureDefinition/adi-goal-order-by-descending-priority-extension" key="StructureDefinition-padi-goal-order-by-descending-priority-extension" name="Goal Order by Descending Priority"/>
 <artifact deprecated="true" id="ValueSet/PADIHealthGoalsVS" key="ValueSet-PADIHealthGoalsVS" name="Health Goals"/>
