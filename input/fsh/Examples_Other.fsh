@@ -163,6 +163,7 @@ InstanceOf: ADIPMOMedicallyAssistedNutritionServiceRequest
 Description: "Example Patient Smith-Johnson PMO Medically Assisted Nutrition Service Request"
 Usage: #example
 
+* extension[adi-trialperiod-extension].valueString = "One week trial period for medically assisted nutrition to assess tolerance and effectiveness."
 * subject = Reference(Patient/Example-Smith-Johnson-Patient1)
 * requester = Reference(Practitioner/Example-Kyle-Anydoc-Practitioner)
 * code = $LOINC#LA33489-8 "Provide feeding through new or existing surgically-placed tubes"
@@ -176,6 +177,7 @@ InstanceOf: ADIPMOMedicallyAssistedHydrationServiceRequest
 Description: "Example Patient Smith-Johnson PMO Medically Assisted Hydration Service Request"
 Usage: #example
 
+* extension[adi-trialperiod-extension].valueString = "One week trial period for medically assisted hydration to assess tolerance and effectiveness."
 * subject = Reference(Patient/Example-Smith-Johnson-Patient1)
 * requester = Reference(Practitioner/Example-Kyle-Anydoc-Practitioner)
 * code = $SNOMEDCT#281800008 "Intravenous fluid replacement (procedure)"
