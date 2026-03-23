@@ -59,17 +59,6 @@ Context: Composition
 * valueReference 1..1 MS
 * valueReference only Reference($USCorePractitioner or $USCorePractitionerRole)
 
-/*
-Extension: OrderExtension
-Id: adi-order-extension
-Title: "Order"
-Description: "The Advance Directive Information Order Extension represents orders that are fulfilled by this document such as a radiologists report of an x-ray."
-* value[x] only Reference
-* valueReference 1..1 MS
-* valueReference only Reference(ServiceRequest)
-*/
-
-
 Extension: EnclosedPreconditionExtension
 Id: adi-enclosedPrecondition-extension
 Title: "Enclosed Precondition"
@@ -280,3 +269,17 @@ Context: RelatedPerson
 * extension[SignatureCode].value[x] 0..1
 * extension[SignatureCode].value[x] only CodeableConcept
 * extension[SignatureCode].valueCodeableConcept from $CDASignatureCode (extensible)
+
+
+// *** mlt_20260323: added trialperiod extension.
+Extension: ADITrialPeriodExtension
+Id: adi-trialperiod-extension
+Title: "Trial Period"
+Description: "The Trial Period Extension allows for the capture of information relevant to the trial period. This differs from the ServiceRequest.occurrence[x] in that the trial period is not when the service is to be performed, but rather a period of time during which a patient can try out a particular treatment or intervention to see how it works for them before making a final decision about whether to proceed with it."
+Context: ServiceRequest
+
+* value[x] only Period or string
+* valuePeriod 0..1 MS
+* valueString 0..1 MS
+* valueString ^short = "Trial period description"
+* valueString ^comment = "The trial period is the time during which a patient can try out a particular treatment or intervention to see how it works for them before making a final decision about whether to proceed with it."
