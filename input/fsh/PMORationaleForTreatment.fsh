@@ -1,8 +1,8 @@
-Profile: ADIDecisionalCapacity
+Profile: ADIRationaleForTreatment
 Parent: $USCoreSimpleObservation
-Id: ADI-DecisionalCapacity
-Title: "ADI Decisional Capacity"
-Description: "This profile is used to represent a patient's decisional capacity for medical decision-making."
+Id: adi-rationale-for-treatment
+Title: "ADI Rationale for Treatment"
+Description: "This profile is used to represent the rationale for a patient's treatment decision."
 
 * ^experimental = false
 
@@ -10,7 +10,7 @@ Description: "This profile is used to represent a patient's decisional capacity 
 
 * category = $USCoreCategory#survey
 * code 1..1 MS
-* code from $VSACADIDecisionalCapacity
+* code from $VSACADIRationaleForTreatment
 
 * subject 1..1
 * subject only Reference($USCorePatient)
@@ -18,4 +18,5 @@ Description: "This profile is used to represent a patient's decisional capacity 
 * encounter 0..0 // verify no encounter possible
 * performer only Reference($USCorePractitioner or $USCorePractitionerRole)
  
-* valueCodeableConcept from $VSACADIDecisionalCapacity
+* value[x] 1..1 MS
+* value[x] only string

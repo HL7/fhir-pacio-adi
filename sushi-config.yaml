@@ -71,6 +71,7 @@ menu:
   Artifacts:
     By Resource Type: artifact_resource_type.html
     Index: artifacts.html
+  Examples: examples_summary.html
   Change Log: change_log.html
   Downloads: downloads.html
 
@@ -105,6 +106,8 @@ pages:
     title: FHIR Artifacts
   artifact_resource_type.md:
     title: Profiles by Resource Type
+  examples_summary.md:
+    title: Examples Summary
   change_log.md:
     title: Change Log
   downloads.md:

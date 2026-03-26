@@ -19,8 +19,9 @@ Alias: $USCoreDocumentReference = http://hl7.org/fhir/us/core/StructureDefinitio
 Alias: $USCoreDocumentReferenceType = http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-type
 Alias: $USCoreDocumentReferenceCategory = http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-category|8.0.1
 Alias: $USCoreConditionCode = http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code
-Alias: $USCoreServiceRequestCategory = http://hl7.org/fhir/us/core/CodeSystem/us-core-category
+Alias: $USCoreCategory = http://hl7.org/fhir/us/core/CodeSystem/us-core-category
 Alias: $USCoreObservationADIDocumentation = http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-adi-documentation
+Alias: $USCoreSimpleObservation = http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation
 
 Alias: $USRealmHeader = http://hl7.org/fhir/us/ccda/StructureDefinition/US-Realm-Header
 
@@ -88,6 +89,7 @@ Alias: $additional-binding = http://hl7.org/fhir/tools/StructureDefinition/addit
 
 Alias: $VSACADIAdvanceDirectiveCategoriesGrouper = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.25
 Alias: $VSACADIDecisionalCapacity = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1240.1 // MLT20250610: replace with the VSAC subset once provided.
+Alias: $VSACADIRationaleForTreatment = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.49
 
 Alias: $endpoint-connection-type = http://terminology.hl7.org/CodeSystem/endpoint-connection-type
 Alias: $endpoint-payload-type = http://terminology.hl7.org/CodeSystem/endpoint-payload-type

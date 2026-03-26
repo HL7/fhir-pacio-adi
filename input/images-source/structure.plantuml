@@ -1,0 +1,131 @@
+@startjson
+#highlight "resourceType"
+#highlight "subject" / "resourceType"
+#highlight "source" / "resourceType"
+#highlight "source" / "practitioner" / "resourceType"
+#highlight "entry" / "0" / "item" / "resourceType"
+#highlight "entry" / "0" / "item" / "basedOn[0]" / "resourceType"
+#highlight "entry" / "0" / "item" / "subject" / "resourceType"
+#highlight "entry" / "1" / "item" / "resourceType"
+#highlight "entry" / "1" / "item" / "medicationReference" / "resourceType"
+#highlight "entry" / "1" / "item" / "subject" / "resourceType"
+#highlight "entry" / "2" / "item" / "resourceType"
+#highlight "entry" / "2" / "item" / "partOf[0]" / "resourceType"
+#highlight "entry" / "2" / "item" / "subject" / "resourceType"
+#highlight "entry" / "3" / "item" / "resourceType"
+{
+  "resourceType": "<b>List",
+  "meta.profile" : "http://hl7.org/fhir/us/smp/StructureDefinition/smp-medication-list",
+  "status": "current",
+  "mode": "working",
+  "title": "Hospital Medication Administration List",
+  "code.coding[0]": "http://loinc.org/104207-6",
+  "subject": {
+    "resourceType": "<b>Patient",
+    "meta.profile" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+    "identifier": "SSN:333666999",
+    "name.given": "Betsy",
+    "name.family": "Smith Johnson"
+  },
+  "date": "2024-07-02T13:28:17-05:00",
+  "source": {
+    "resourceType": "<b>PractitionerRole",
+    "meta.profile" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+    "practitioner": {
+      "resourceType": "<b>Practitioner",
+      "meta.profile" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+      "identifier": "NPI:345678",
+      "name.text": "Pharmacist Clara"
+    }
+  },
+  "note": "Administration list generated prior to discharge",
+  "entry": [
+    {
+      "item": {
+        "resourceType": "<b>MedicationStatement",
+        "meta.profile" : "http://hl7.org/fhir/us/smp/StructureDefinition/smp-medicationstatement",
+        "basedOn[0]": {
+            "resourceType": "<b>MedicationRequest",
+            "meta.profile" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest",
+            "status": "active",
+            "intent": "order",
+            "medicationCodeableConcept.coding[0]": "http://www.nlm.nih.gov/research/umls/rxnorm/310429",
+            "medicationCodeableConcept.coding[0].display": "Furosemide 20 mg",
+            "subject.reference" : "<color:red><b><u>Patient/SSN:333666999",
+            "authoredOn": "2024-06-07",
+            "reasonCode[0].coding[0]" : "http://snomed.info/sct/731000119105",
+            "reasonCode[0].coding[0].display" : "Chronic kidney disease stage 3 due to type 2 diabetes mellitus (disorder)",
+            "dosageInstruction[0].text": "po daily"
+        },
+        "status": "active",
+        "medicationCodeableConcept.coding[0]": "http://www.nlm.nih.gov/research/umls/rxnorm/310429",
+        "medicationCodeableConcept.coding[0].display": "Furosemide 20 mg",
+        "subject.reference" : "<color:red><b><u>Patient/SSN:333666999",
+        "effectiveDateTime" : "2024-06-07",
+        "dateAsserted" : "2024-07-01",
+        "reasonCode[0].coding[0]" : "http://snomed.info/sct/731000119105",
+        "reasonCode[0].coding[0].display" : "Chronic kidney disease stage 3 due to type 2 diabetes mellitus (disorder)",
+        "dosage[0].text" : "po daily"
+      }
+    },
+    {
+      "item": {
+        "resourceType": "<b>MedicationStatement",
+        "meta.profile" : "http://hl7.org/fhir/us/smp/StructureDefinition/smp-medicationstatement",
+        "status": "active",
+        "medicationReference": {
+          "resourceType": "<b>Medication",
+          "meta.profile" : "http://hl7.org/fhir/us/smp/StructureDefinition/smp-medicationstatement",
+          "code.coding[0]": "http://snomed.info/sct/10632007",
+          "status": "active"
+        },
+        "subject.reference" : "<color:red><b><u>Patient/SSN:333666999",
+        "effectiveDateTime" : "2024-06-01",
+        "dateAsserted" : "2024-07-01",
+        "dosage[0].text" : "po daily"
+      }
+    },
+    {
+      "item": {
+        "resourceType": "<b>MedicationStatement",
+        "meta.profile" : "http://hl7.org/fhir/us/smp/StructureDefinition/smp-medicationstatement",
+        "partOf[0]": {
+            "resourceType": "<b>MedicationAdministration",
+            "meta.profile" : "http://hl7.org/fhir/us/smp/StructureDefinition/smp-medicationadministration",
+            "status" : "in-progress",
+            "medicationCodeableConcept.coding[0]": "http://www.nlm.nih.gov/research/umls/rxnorm/597983",
+            "medicationCodeableConcept.coding[0].display": "Atorvastatin 40 mg",
+            "subject.reference" : "<color:red><b><u>Patient/SSN:333666999",
+            "effectiveDateTime" : "2024-06-01",
+            "reasonCode[0].coding[0]" : "http://snomed.info/sct/55822004",
+            "dosage.text" : "po nightly"
+        },
+        "status": "active",
+        "medicationCodeableConcept.coding[0]": "http://www.nlm.nih.gov/research/umls/rxnorm/597983",
+        "medicationCodeableConcept.coding[0].display": "Atorvastatin 40 mg",
+        "subject.reference" : "<color:red><b><u>Patient/SSN:333666999",
+        "effectiveDateTime" : "2024-06-01",
+        "dateAsserted" : "2024-07-02",
+        "reasonCode[0].coding[0]" : "http://snomed.info/sct/55822004",
+        "reasonCode[0].coding[0].display" : "Hyperlipidemia",
+        "dosage[0].text" : "po nightly"
+      }
+    },
+    {
+      "item": {
+        "resourceType": "<b>MedicationStatement",
+        "meta.profile" : "http://hl7.org/fhir/us/smp/StructureDefinition/smp-medicationstatement",
+        "status": "active",
+        "medicationCodeableConcept.coding[0]": "http://www.nlm.nih.gov/research/umls/rxnorm/198444",
+        "medicationCodeableConcept.coding[0].display": "Tylenol (Acetaminophen) 650 mg",
+        "subject.reference" : "<color:red><b><u>Patient/SSN:333666999",
+        "effectiveDateTime" : "2024-06-01",
+        "dateAsserted" : "2024-07-02",
+        "reasonCode[0].coding[0]" : "http://snomed.info/sct/396275006",
+        "reasonCode[0].coding[0].display" : "Osteoarthritis (disorder)",
+        "dosage[0].text" : "every 6 hours or as needed for pain"
+      }
+    }
+  ]
+}
+@endjson

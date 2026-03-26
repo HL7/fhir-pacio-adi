@@ -203,7 +203,7 @@ Usage: #example
 * doNotPerform = true
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * requester = Reference(Example-Kyle-Anydoc-Practitioner)
-// * category[0] = $USCoreServiceRequestCategory#treatment-intervention-preference "Treatment Intervention Preference"
+// * category[0] = $USCoreCategory#treatment-intervention-preference "Treatment Intervention Preference"
 * code = $LOINC#LA33470-8
 * orderDetail = $LOINC#LA33470-8
 
