@@ -121,6 +121,7 @@ Description: "This Composition profile is used to represent a Provider-Authored 
 * section[administrative_information].entry contains
     adi_personal_goal 0..* and 
     adi_decisional_capacity 0..1 MS and
+    adi_rationale_for_treatment 0..* MS and
     adi_pmo_hospice_observation 0..1 MS 
 //    advance_directive_source_form 0..1 MS  
 
@@ -130,6 +131,8 @@ Description: "This Composition profile is used to represent a Provider-Authored 
 * section[administrative_information].entry[adi_decisional_capacity] ^short = "ADI Decisional Capacity"
 * section[administrative_information].entry[adi_pmo_hospice_observation] only Reference(ADIPMOHospiceObservation)
 * section[administrative_information].entry[adi_pmo_hospice_observation] ^short = "Hospice or palliative care enrollment"
+* section[administrative_information].entry[adi_rationale_for_treatment] only Reference(ADIRationaleForTreatment)
+* section[administrative_information].entry[adi_rationale_for_treatment] ^short = "ADI Rationale for Treatment"
 // mlt_20260317 - moved advance directive source form to its own section in the Composition Header since this is relevant to all types of advance directive documents, not just PMO. --- IGNORE ---
 // * section[administrative_information].entry[advance_directive_source_form] only Reference(Binary)
 // * section[administrative_information].entry[advance_directive_source_form] ^short = "Advance Directive Source Form"

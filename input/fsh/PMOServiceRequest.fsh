@@ -16,10 +16,6 @@ Description: "This profile is used to represent both a patient authored care pla
 * category 1..* MS
 * code 1..1 MS
 
-
-* extension contains
-    adi-trialperiod-extension named ADITrialPeriodExtension 0..1
-
 * subject 1..1
 * subject only Reference($USCorePatient)
 
@@ -35,8 +31,6 @@ Parent: ADIPMOServiceRequest
 Id: ADI-PMOCPRServiceRequest
 Title: "ADI PMO Cardiopulmonary Resuscitation ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order for cardiopulmonary resuscitation."
-
-* status = #active
 
 * ^experimental = false
 * category = $LOINC#100822-6 "Cardiopulmonary resuscitation orders"
@@ -55,7 +49,8 @@ Id: ADI-PMOInitialTreatmentServiceRequest
 Title: "ADI PMO Initial Treatment ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order for initial treatment."
 
-* status = #active
+* extension contains
+    adi-trialperiod-extension named ADITrialPeriodExtension 0..1
 
 * ^experimental = false
 * category = $LOINC#100823-4 "Initial portable medical treatment orders"
@@ -71,7 +66,8 @@ Id: ADI-PMOAdditionalOrdersOrInstructionsServiceRequest
 Title: "ADI PMO Additional orders or instructions ServiceRequest"
 Description: "This profile is used to represent a practitioner authored portable medical order additional orders or instructions."
 
-* status = #active
+* extension contains
+    adi-trialperiod-extension named ADITrialPeriodExtension 0..1
 
 * ^experimental = false
 * category = $LOINC#100824-2 "Additional portable medical orders or instructions"
@@ -85,6 +81,9 @@ Id: ADI-PMOMedicallyAssistedNutritionServiceRequest
 Title: "ADI PMO Medically Assisted Nutrition Service Request"
 Description: "This profile is used to represent a practitioner authored portable medical order for medically assisted nutrition."
 
+* extension contains
+    adi-trialperiod-extension named ADITrialPeriodExtension 0..1
+
 * ^experimental = false
 * category = $LOINC#100825-9 "Medically assisted nutrition orders"
 * code 1..1 MS
@@ -97,7 +96,8 @@ Id: ADI-PMOMedicallyAssistedHydrationServiceRequest
 Title: "ADI PMO Medically Assisted Hydration Service Request"
 Description: "This profile is used to represent a practitioner authored portable medical order for medically assisted hydration."
 
-* status = #active
+* extension contains
+    adi-trialperiod-extension named ADITrialPeriodExtension 0..1
 
 * ^experimental = false
 * category = ADITempCS#pmo-medically-assisted-hydration-service-request "Medically assisted hydration order"

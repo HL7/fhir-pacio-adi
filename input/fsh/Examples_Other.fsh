@@ -9,7 +9,23 @@ Usage: #example
 * subject = Reference(Patient/Example-Smith-Johnson-Patient1)
 * performer = Reference(PractitionerRole/Example-Kyle-Anydoc-PractitionerRole1)
 * effectiveDateTime = "2021-03-29T14:25:34.001-05:00"
+* code = $SNOMEDCT#551782000124105 "Patient lacks decisional capacity (finding)"
 * valueCodeableConcept = $SNOMEDCT#55533009 "Forgetful (finding)"
+* effectiveDateTime = "2024-09-18T22:33:22Z"
+
+// ------------------------------
+
+Instance: Example-Smith-Johnson-RationaleForTreatment
+InstanceOf: ADIRationaleForTreatment
+Description: "Example Patient Smith-Johnson Rationale for Treatment Observation"
+Usage: #example
+
+* status = #final
+* subject = Reference(Patient/Example-Smith-Johnson-Patient1)
+* performer = Reference(PractitionerRole/Example-Kyle-Anydoc-PractitionerRole1)
+* effectiveDateTime = "2021-03-29T14:25:34.001-05:00"
+* code = $SNOMEDCT#408773008 " Reasons for treatment" "Patient lacks decisional capacity (finding)"
+* valueString = "Patient is forgetful and has been assessed to lack decisional capacity for medical decision-making."
 * effectiveDateTime = "2024-09-18T22:33:22Z"
 
 // ------------------------------

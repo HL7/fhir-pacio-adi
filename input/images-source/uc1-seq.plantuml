@@ -1,0 +1,15 @@
+@startuml
+skinparam responseMessageBelowArrow true
+actor "Social Worker" as SW
+participant FieldApp as FA
+database "Health Data\nManager" as HDM
+
+SW -> FA: Collect medication info
+FA -> HDM: POST SMP-Bundle-Tx\n(Medication List and Medication Statements)
+FA <-- HDM: Confirmation
+SW -> FA: Add new medications
+FA -> HDM: POST SMP-Bundle-Tx\n(updated list and Medication Statement)
+FA <-- HDM: Confirmation
+
+caption Figure A.2: Home
+@enduml

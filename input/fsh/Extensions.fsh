@@ -275,11 +275,11 @@ Context: RelatedPerson
 Extension: ADITrialPeriodExtension
 Id: adi-trialperiod-extension
 Title: "Trial Period"
-Description: "The Trial Period Extension allows for the capture of information relevant to the trial period. This differs from the ServiceRequest.occurrence[x] in that the trial period is not when the service is to be performed, but rather a period of time during which a patient can try out a particular treatment or intervention to see how it works for them before making a final decision about whether to proceed with it."
+Description: "The Trial Period Extension allows for the capture of information for a period of time during which a patient can try out a particular treatment or intervention to see how it works for them before making a final decision about whether to proceed with it. This differs from the ServiceRequest.occurrence[x] in that the dates that are required are not known."
 Context: ServiceRequest
 
 * value[x] only Period or string
 * valuePeriod 0..1 MS
 * valueString 0..1 MS
 * valueString ^short = "Trial period description"
-* valueString ^comment = "The trial period is the time during which a patient can try out a particular treatment or intervention to see how it works for them before making a final decision about whether to proceed with it."
+* valueString ^comment = "The trial period is a free-text description of the time during which a patient can try out for the particular treatment or intervention to establish effectiveness."

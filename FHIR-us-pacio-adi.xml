@@ -55,6 +55,7 @@
 <artifact id="StructureDefinition/ADI-PreferenceCarePlan" key="StructureDefinition-PADI-PreferenceCarePlan" name="ADI Preference Care Plan"/>
 <artifact id="StructureDefinition/ADI-Provenance" key="StructureDefinition-ADI-Provenance" name="ADI Provenance"/>
 <artifact deprecated="true" id="StructureDefinition/ADI-CareExperiencePreference" key="StructureDefinition-PADI-CareExperiencePreference" name="ADI PtAuthored Care Experience Preference"/>
+<artifact id="StructureDefinition/adi-rationale-for-treatment" key="StructureDefinition-adi-rationale-for-treatment" name="ADI Rationale for Treatment"/>
 <artifact id="CodeSystem/ADIRevokeStatusCS" key="CodeSystem-ADIRevokeStatusCS" name="ADI Revoke Status Code System"/>
 <artifact id="StructureDefinition/ADI-ADISourceFormInformation" key="StructureDefinition-ADI-ADISourceFormInformation" name="ADI Source Form"/>
 <artifact id="CodeSystem/adi-temp-cs" key="CodeSystem-adi-temp-cs" name="ADI Temporary Code System"/>
@@ -255,6 +256,7 @@
 <page key="change_log" name="Change Log"/>
 <page key="content_type_overview" name="Content Type Overview"/>
 <page key="downloads" name="Downloads"/>
+<page key="examples_summary" name="Examples Summary"/>
 <page key="artifact_adi" name="FHIR Artifacts"/>
 <page key="formal_specification" name="Formal Specification"/>
 <page deprecated="true" key="general_guidance" name="General Guidance"/>
