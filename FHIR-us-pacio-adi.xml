@@ -201,6 +201,7 @@
 <artifact id="Observation/Example-Smith-Johnson-PersonalInterventionPreference4" key="Observation-Example-Smith-Johnson-PersonalInterventionPreference4" name="Example-Smith-Johnson-PersonalInterventionPreference4"/>
 <artifact id="Observation/Example-Smith-Johnson-PersonalInterventionPreference5" key="Goal-Example-Smith-Johnson-PersonalInterventionPreference5" name="Example-Smith-Johnson-PersonalInterventionPreference5"/>
 <artifact id="Observation/Example-Smith-Johnson-PersonalInterventionPreference6" key="Goal-Example-Smith-Johnson-PersonalInterventionPreference6" name="Example-Smith-Johnson-PersonalInterventionPreference6"/>
+<artifact id="Observation/Example-Smith-Johnson-RationaleForTreatment" key="Observation-Example-Smith-Johnson-RationaleForTreatment" name="Example-Smith-Johnson-RationaleForTreatment"/>
 <artifact id="Observation/Example-Smith-Johnson-UponDeathPreference1" key="Observation-Example-Smith-Johnson-UponDeathPreference1" name="Example-Smith-Johnson-UponDeathPreference1"/>
 <artifact id="Binary/Example-Stub-SourceForm-Smith-Johnson-Binary" key="Binary-Example-Stub-SourceForm-Smith-Johnson-Binary" name="Example-Stub-SourceForm-Smith-Johnson-Binary"/>
 <artifact id="Organization/Example-organization-good-health-clinic" key="Organization-Example-organization-good-health-clinic" name="Example-organization-good-health-clinic"/>

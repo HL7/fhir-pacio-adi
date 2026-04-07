@@ -17,4 +17,5 @@ Description: "Codes to be used as placeholders until they have a formal assigned
 * #acp-services "Advance care planning services" "Advance care planning services"
 * #adi-document-location "ADI document location endpoint" "A FHIR endpoint URL that points to the ADI document or resource that exists."
 * #advance_directive_source_form "ADI source form" "The designation that the Advance Directive Composition"
+* #life-limiting-condition "Life-limiting condition" "The life-limiting disease, diagnosis, or medical condition which merits the creation of a Portable Medical Order (PMO)."
 * ^copyright = "This CodeSystem is not copyrighted."

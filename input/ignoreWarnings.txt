@@ -192,3 +192,5 @@ INFORMATION: StructureDefinition/ADI-ADIConsentDeny: StructureDefinition.snapsho
 # Known issue with HL7 IG Tools. This error will be present until the IG publication team can address it. See Zulip chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/IG.20Publisher.20QA.20error.20for.20expansion.20parameters/with/572018531
 ERROR: ImplementationGuide/hl7.fhir.us.pacio-adi: ImplementationGuide.definition.extension[29].url: No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
 
+# Known issue with VSAC value set management. VSAC formally has labeled it "not maintained" but was mapped by VSAC to "retired" since Observation.status has a required binding to a valueset which does not have a "not maintained" concept. Issue was discussed and acknowledged on https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Validator.20handling.20of.20VSAC.20.22not.20maintained.22.20and.20.22retired.22
+INFORMATION: Observation/Example-Smith-Johnson-RationaleForTreatment: Observation.code: Reference to retired ValueSet http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1047.358|20160610
