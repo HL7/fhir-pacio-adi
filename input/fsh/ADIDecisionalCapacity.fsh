@@ -21,6 +21,6 @@ Description: "This profile is used to represent a patient's decisional capacity 
 * performer only Reference($USCorePractitioner or $USCorePractitionerRole)
 
 * value[x] 1..1 MS
-* value[x] only CodeableConcept
-
+* value[x] only CodeableConcept or string
 * valueCodeableConcept from $VSACADIDecisionalCapacity (extensible)
+* valueString ^short = "Description of patient's decisional capacity."
