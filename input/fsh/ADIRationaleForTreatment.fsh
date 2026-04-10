@@ -20,3 +20,4 @@ Description: "This profile is used to represent the rationale for a patient's tr
  
 * value[x] only string
 * valueString 0..1 MS
+* valueString ^short = "Rationale for orders"
