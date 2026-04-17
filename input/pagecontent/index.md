@@ -111,6 +111,10 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 {% include cross-version-analysis.xhtml %}
 
+### Package Dependencies
+
+{% include dependency-table.xhtml %}
+
 ### Intellectual Property Considerations
 
 {% include ip-statements.xhtml %}

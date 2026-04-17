@@ -1,8 +1,8 @@
-Profile: ADILifeLimitingCondition
+Profile: ADISeriousAdvancedCondition
 Parent: $USCoreSimpleObservation
-Id: adi-limiting-condition
-Title: "ADI Life Limiting Condition"
-Description: "The life-limiting disease, diagnosis, or medical condition which merits the creation of a PMO."
+Id: serious-advanced-condition
+Title: "ADI Serious Advanced Condition"
+Description: "This concept expresses the medical or serious advanced condition that makes the patient appropriate for a portable medical order (PMO)."
 
 * ^experimental = false
 
@@ -10,7 +10,7 @@ Description: "The life-limiting disease, diagnosis, or medical condition which m
 
 * category = $USCoreCategory#survey
 * code 1..1 MS
-* code = ADITempCS#life-limiting-condition "Life-limiting condition"
+* code = ADITempCS#serious-advanced-condition "Serious advanced condition"
 
 * subject 1..1
 * subject only Reference($USCorePatient)
@@ -22,4 +22,4 @@ Description: "The life-limiting disease, diagnosis, or medical condition which m
 * valueCodeableConcept 0..1 MS
 * valueCodeableConcept from $USCoreConditionProblemsHealthConcernsProfile (extensible)
 * valueString 0..1 MS
-* valueString ^short = "Description of the life-limiting condition."
+* valueString ^short = "Description of the serious advanced condition."
