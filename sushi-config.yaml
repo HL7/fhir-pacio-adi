@@ -36,6 +36,7 @@ dependencies:
     uri: 'http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac'
     version: 0.24.0
     id: vsac
+  hl7.fhir.uv.fhir-clinical-document: 1.0.1
 parameters:
   shownav: 'true'
   show-inherited-invariants: true

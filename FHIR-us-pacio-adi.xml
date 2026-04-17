@@ -29,7 +29,6 @@
 <artifact id="StructureDefinition/ADI-ADIConsentPermit" key="StructureDefinition-ADI-ADIConsentPermit" name="ADI Healthcare Agent Consent Permit"/>
 <artifact id="StructureDefinition/ADI-HealthcareAgentParticipant" key="StructureDefinition-ADI-HealthcareAgentParticipant" name="ADI Healthcare Agent Participant"/>
 <artifact id="StructureDefinition/ADI-Jurisdiction" key="StructureDefinition-ADI-Jurisdiction" name="ADI Jurisdiction"/>
-<artifact id="StructureDefinition/adi-limiting-condition" key="StructureDefinition-adi-limiting-condition" name="ADI Life Limiting Condition"/>
 <artifact deprecated="true" id="StructureDefinition/ADI-ADIMinimalSourceFormInformation" key="StructureDefinition-ADI-ADIMinimalSourceFormInformation" name="ADI Minimal Source Form"/>
 <artifact id="StructureDefinition/ADI-Notary" key="StructureDefinition-ADI-Notary" name="ADI Notary"/>
 <artifact id="StructureDefinition/ADI-OrganDonationObservation" key="StructureDefinition-PADI-OrganDonationObservation" name="ADI Organ Donation Observation"/>
@@ -58,6 +57,7 @@
 <artifact deprecated="true" id="StructureDefinition/ADI-CareExperiencePreference" key="StructureDefinition-PADI-CareExperiencePreference" name="ADI PtAuthored Care Experience Preference"/>
 <artifact id="StructureDefinition/adi-rationale-for-treatment" key="StructureDefinition-adi-rationale-for-treatment" name="ADI Rationale for Treatment"/>
 <artifact id="CodeSystem/ADIRevokeStatusCS" key="CodeSystem-ADIRevokeStatusCS" name="ADI Revoke Status Code System"/>
+<artifact id="StructureDefinition/advanced-serious-condition" key="StructureDefinition-advanced-serious-condition" name="ADI Serious Advanced Condition"/>
 <artifact id="StructureDefinition/ADI-ADISourceFormInformation" key="StructureDefinition-ADI-ADISourceFormInformation" name="ADI Source Form"/>
 <artifact id="CodeSystem/adi-temp-cs" key="CodeSystem-adi-temp-cs" name="ADI Temporary Code System"/>
 <artifact id="StructureDefinition/ADI-UponDeathPreferences" key="StructureDefinition-ADI-UponDeathPreferences" name="ADI Upon Death Preferences"/>
