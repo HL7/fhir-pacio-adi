@@ -71,7 +71,14 @@ menu:
     Portable Medical Order (PMO): pmo_guidance.html
   Artifacts:
     By Resource Type: artifact_resource_type.html
-    Index: artifacts.html
+    By Index: artifacts.html
+    Capability Statement: artifacts.html#behavior-capability-statements
+    Profiles: artifacts.html#structures-resource-profiles
+    Extensions: artifacts.html#structures-extension-definitions
+    Terminology - Value Sets: artifacts.html#terminology-value-sets
+    Terminology - Local Code Systems: artifacts.html#terminology-code-systems
+    Examples: artifacts.html#example-example-instances
+    Search Parameters: search_parameters.html
   Examples: examples_summary.html
   Change Log: change_log.html
   Downloads: downloads.html
@@ -103,8 +110,6 @@ pages:
     title: Portable Medical Order (PMO) Guidance
   package_dependencies.md:
     title: Package Dependencies
-  artifact_adi.md:
-    title: FHIR Artifacts
   artifact_resource_type.md:
     title: Profiles by Resource Type
   examples_summary.md:

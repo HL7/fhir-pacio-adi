@@ -57,7 +57,7 @@
 <artifact deprecated="true" id="StructureDefinition/ADI-CareExperiencePreference" key="StructureDefinition-PADI-CareExperiencePreference" name="ADI PtAuthored Care Experience Preference"/>
 <artifact id="StructureDefinition/adi-rationale-for-treatment" key="StructureDefinition-adi-rationale-for-treatment" name="ADI Rationale for Treatment"/>
 <artifact id="CodeSystem/ADIRevokeStatusCS" key="CodeSystem-ADIRevokeStatusCS" name="ADI Revoke Status Code System"/>
-<artifact id="StructureDefinition/advanced-serious-condition" key="StructureDefinition-advanced-serious-condition" name="ADI Serious Advanced Condition"/>
+<artifact id="StructureDefinition/serious-advanced-condition" key="StructureDefinition-serious-advanced-condition" name="ADI Serious Advanced Condition"/>
 <artifact id="StructureDefinition/ADI-ADISourceFormInformation" key="StructureDefinition-ADI-ADISourceFormInformation" name="ADI Source Form"/>
 <artifact id="CodeSystem/adi-temp-cs" key="CodeSystem-adi-temp-cs" name="ADI Temporary Code System"/>
 <artifact id="StructureDefinition/ADI-UponDeathPreferences" key="StructureDefinition-ADI-UponDeathPreferences" name="ADI Upon Death Preferences"/>
@@ -259,7 +259,7 @@
 <page key="content_type_overview" name="Content Type Overview"/>
 <page key="downloads" name="Downloads"/>
 <page key="examples_summary" name="Examples Summary"/>
-<page key="artifact_adi" name="FHIR Artifacts"/>
+<page deprecated="true" key="artifact_adi" name="FHIR Artifacts"/>
 <page key="formal_specification" name="Formal Specification"/>
 <page deprecated="true" key="general_guidance" name="General Guidance"/>
 <page key="index" name="Home"/>
