@@ -98,3 +98,6 @@ Alias: $HL7v3DocumentFormatCodes = http://terminology.hl7.org/CodeSystem/v3-HL7D
 
 // Aliases for local value sets
 Alias: $ADIPractitionerRoleVS = http://hl7.org/fhir/us/pacio-adi/ValueSet/ADIPractitionerRoleVS
+
+// Alias for Clinical Documents IG
+Alias: $ClinicalDocumentComposition = http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/clinical-document-composition 

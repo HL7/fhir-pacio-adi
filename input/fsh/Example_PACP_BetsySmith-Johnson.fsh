@@ -473,7 +473,7 @@ Usage: #example
 
 // TODO update text
 Instance: Example-Smith-Johnson-HealthcareAgentConsent
-InstanceOf: ADIConsentPermit
+InstanceOf: ADIHealthcareAgentConsentPermit
 Description: "Example Patient Smith-Johnson Healthcare Agent Consent"
 Usage: #example
 * text.status = #additional

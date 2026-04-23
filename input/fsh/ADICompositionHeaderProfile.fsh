@@ -1,5 +1,5 @@
 Profile: ADICompositionHeader
-Parent: clinicaldocument
+Parent: $ClinicalDocumentComposition
 Id: ADI-Composition-Header
 Title: "ADI Composition Header"
 Description: "This abstract profile defines constraints that represent common administrative and demographic concepts for advance directives information used in US Realm clinical documents."
@@ -28,7 +28,6 @@ Description: "This abstract profile defines constraints that represent common ad
 * type MS
 * type from $VSACADIDocumentTypesGrouper (extensible) // fix for FHIR-55633 tying .category and .type to VSAC value sets
 
-* category 0..1 MS
 // * category = $LOINC#42348-3 "Advance healthcare directives"
 * category from $VSACADIAdvanceDirectiveCategories (extensible) // fix for FHIR-55633 tying .category and .type to VSAC value sets
 
