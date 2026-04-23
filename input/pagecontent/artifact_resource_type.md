@@ -1,3 +1,6 @@
+### Binary
+* [ADI Source Form](StructureDefinition-ADI-ADISourceFormInformation.html)
+
 ### Bundle
 * [ADI Bundle](StructureDefinition-ADI-Bundle.html)
 

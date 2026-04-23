@@ -208,7 +208,7 @@ Usage: #example
 * orderDetail = $LOINC#LA33470-8
 
 Instance: Example-Smith-Johnson-HealthcareAgentConsent-Permit
-InstanceOf: ADIConsentPermit
+InstanceOf: ADIHealthcareAgentConsentPermit
 Description: "Example of ADI Healthcare Agent Permit"
 Usage: #example
 
@@ -223,7 +223,7 @@ Usage: #example
 * provision.actor.reference = Reference(RelatedPerson/Example-Smith-Johnson-HealthcareAgent1)
 
 Instance: Example-Smith-Johnson-HealthcareAgentConsent-Deny
-InstanceOf: ADIConsentDeny
+InstanceOf: ADIHealthcareAgentConsentDeny
 Description: "Example of ADI Healthcare Agent Deny"
 Usage: #example
 

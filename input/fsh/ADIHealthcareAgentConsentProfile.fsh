@@ -61,17 +61,17 @@ The authorized personal representative appointed as healthcare agents are refere
 * provision.purpose from http://terminology.hl7.org/ValueSet/v3-ActReason (required)
 
 
-Profile: ADIConsentPermit
+Profile: ADIHealthcareAgentConsentPermit
 Parent: ADIHealthcareAgentConsent
-Id: ADI-ADIConsentPermit
+Id: ADI-HealthcareAgentConsentPermit
 Title: "ADI Healthcare Agent Consent Permit"
 Description: "This profile is used to represent permit consents for an advance directive participant such as a healthcare agent or advisor and power or limitation granted to such persons."
 
 * provision.type = #permit
 
-Profile: ADIConsentDeny
+Profile: ADIHealthcareAgentConsentDeny
 Parent: ADIHealthcareAgentConsent
-Id: ADI-ADIConsentDeny
+Id: ADI-HealthcareAgentConsentDeny
 Title: "ADI Healthcare Agent Consent Deny"
 Description: "The ADI Healthcare Agent Consent Deny profile is used to constrain the powers permitted for the healthcare agent appointment through the ADI Healthcare Agent Consent Permit profile."
 

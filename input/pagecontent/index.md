@@ -1,4 +1,17 @@
-The Advance Healthcare Directive Interoperability (ADI) FHIR implementation guide (IG) explains how to represent, exchange, and verify a person’s goals, preferences and priorities for medical treatment and interventions regarding future medical care. It also explains how to represent a person’s appointment of one or more healthcare agents who can make care decisions for the patient if the patient can’t communicate. 
+<div style="width: 60%;" >
+<h3 id="plain-language-summary-about-this-guide"><a class="anchorjs-link " href="#plain-language-summary-about-this-guide" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a>
+  <button class="btn btn-info btn-lg collapsed" type="button" title="Click to Open or Close the Plain Language Summary" data-toggle="collapse" data-target="#plain-lang-summary" aria-expanded="false" aria-controls="collapseExample">
+    Click Here to see the Plain Language Summary
+  </button>
+</h3>
+</div>
+<div class="collapse" id="plain-lang-summary" aria-expanded="false" style="height: 0px;">
+  <div class="card card-body" style="border:1px solid;border-color:#cccccc;padding:10px">
+
+<p>The Advance Healthcare Directive Interoperability (ADI) FHIR implementation guide (IG) explains how to represent, exchange, and verify a person’s goals, preferences and priorities for medical treatment and interventions regarding future medical care. It also explains how to represent a person’s appointment of one or more healthcare agents who can make care decisions for the patient if the patient can’t communicate.</p>
+
+  </div>
+</div> 
 
 <blockquote class="stu-note">
     <p>

@@ -25,8 +25,8 @@
 <artifact deprecated="true" id="StructureDefinition/PADI-Goal" key="StructureDefinition-PADI-Goal" name="ADI Goal"/>
 <artifact id="CodeSystem/ADIPreferenceCategoryCS" key="CodeSystem-PADIGoalCategoryCS" name="ADI Goal Category Code System"/>
 <artifact id="StructureDefinition/ADI-HealthcareAgentConsent" key="StructureDefinition-ADI-HealthcareAgentConsent" name="ADI Healthcare Agent Consent"/>
-<artifact id="StructureDefinition/ADI-ADIConsentDeny" key="StructureDefinition-ADI-ADIConsentDeny" name="ADI Healthcare Agent Consent Deny"/>
-<artifact id="StructureDefinition/ADI-ADIConsentPermit" key="StructureDefinition-ADI-ADIConsentPermit" name="ADI Healthcare Agent Consent Permit"/>
+<artifact id="StructureDefinition/ADI-HealthcareAgentConsentDeny" key="StructureDefinition-ADI-ADIConsentDeny" name="ADI Healthcare Agent Consent Deny"/>
+<artifact id="StructureDefinition/ADI-HealthcareAgentConsentPermit" key="StructureDefinition-ADI-ADIConsentPermit" name="ADI Healthcare Agent Consent Permit"/>
 <artifact id="StructureDefinition/ADI-HealthcareAgentParticipant" key="StructureDefinition-ADI-HealthcareAgentParticipant" name="ADI Healthcare Agent Participant"/>
 <artifact id="StructureDefinition/ADI-Jurisdiction" key="StructureDefinition-ADI-Jurisdiction" name="ADI Jurisdiction"/>
 <artifact deprecated="true" id="StructureDefinition/ADI-ADIMinimalSourceFormInformation" key="StructureDefinition-ADI-ADIMinimalSourceFormInformation" name="ADI Minimal Source Form"/>

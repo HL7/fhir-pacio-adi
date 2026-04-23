@@ -133,7 +133,7 @@ Usage: #example
 // ******************
 
 Instance: Example-Smith-Johnson-HealthcareAgentConsent2
-InstanceOf: ADIConsentPermit
+InstanceOf: ADIHealthcareAgentConsentPermit
 Description: "Example Patient Smith-Johnson Healthcare Agent Consent"
 Usage: #example
 * text.status = #additional
