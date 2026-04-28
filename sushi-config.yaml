@@ -70,15 +70,15 @@ menu:
   Provider-Authored:
     Portable Medical Order (PMO): pmo_guidance.html
   Artifacts:
-    By Resource Type: artifact_resource_type.html
-    By Index: artifacts.html
+    Profiles by Resource Type: artifact_resource_type.html
+    Artifacts Summary: artifacts.html
     Capability Statement: artifacts.html#behavior-capability-statements
-    Profiles: artifacts.html#structures-resource-profiles
-    Extensions: artifacts.html#structures-extension-definitions
+    Structures - ResourceProfiles: artifacts.html#structures-resource-profiles
+    Structures - Extensions: artifacts.html#structures-extension-definitions
     Terminology - Value Sets: artifacts.html#terminology-value-sets
     Terminology - Local Code Systems: artifacts.html#terminology-code-systems
-    Examples: artifacts.html#example-example-instances
-    Search Parameters: search_parameters.html
+    Example Instances: artifacts.html#example-example-instances
+    Behavior - Search Parameters: search_parameters.html
   Examples: examples_summary.html
   Change Log: change_log.html
   Downloads: downloads.html

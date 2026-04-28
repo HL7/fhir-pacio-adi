@@ -43,7 +43,7 @@ Alias: $HL7JurisdictionStateCodesVS = http://terminology.hl7.org/ValueSet/USPS-S
 Alias: $HL7JurisdictionCountyCodesCS = http://terminology.hl7.org/CodeSystem/FIPS64 
 Alias: $HL7DegreeLicenseCertificate = http://terminology.hl7.org/ValueSet/v2-0360
 Alias: $HL7DocumentRelationshipType = http://hl7.org/fhir/document-relationship-type
-Alias: $USPSCodes = https://www.usps.com/
+Alias: $USPSCodes = https://www.usps.com/       // mlt_note: per discussion re LisaN email on 4/23, we need to monitor FHIR-51043 for creating an OID to replace the USPS url. It really only affects CDA and not FHIR.
 
 Alias: $LOINC = http://loinc.org
 Alias: $SNOMEDCT = http://snomed.info/sct

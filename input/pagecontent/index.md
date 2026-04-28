@@ -1,4 +1,4 @@
-<div style="width: 60%;" >
+<!-- <div style="width: 60%;" >
 <h3 id="plain-language-summary-about-this-guide"><a class="anchorjs-link " href="#plain-language-summary-about-this-guide" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a>
   <button class="btn btn-info btn-lg collapsed" type="button" title="Click to Open or Close the Plain Language Summary" data-toggle="collapse" data-target="#plain-lang-summary" aria-expanded="false" aria-controls="collapseExample">
     Click Here to see the Plain Language Summary
@@ -18,7 +18,7 @@
     This is a preliminary draft of STU2, which includes support for portable medical orders (PMO) for life-sustaining treatment building upon STU1, which supported only Person-Authored Advance Directives documents. Future versions of this IG will address encounter-centric patient instructions.
     </p>
 </blockquote>
-
+-->
 ### Introduction 
 
 This ADI Implementation Guide (IG) describes how to use existing HL7 FHIR standards to create, update, share, verify, and exchange information about an individual's advance healthcare goals, preferences, and priorities for care in the event the individual is unable to communicate this information to medical teams for themselves due to a health crisis.  The term "advance healthcare directive" in this IG does not refer to a specific form, document, or method of memorializing advance healthcare directives, but is instead representative of an over-arching category.
@@ -68,7 +68,7 @@ The primary goal of the PACIO Project is to establish a framework for the develo
 </p>
 
 
-### How to read this Guide
+### How to Read this Guide
 This Guide is divided into several pages which are listed at the top of each page in the menu bar.
 <ul>
     <li>Home: The home page provides the introduction and background information to set context for the use of the HL7 FHIR® ADI Implementation Guide.</li>

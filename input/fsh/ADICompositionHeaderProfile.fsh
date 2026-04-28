@@ -29,7 +29,10 @@ Description: "This abstract profile defines constraints that represent common ad
 * type from $VSACADIDocumentTypesGrouper (extensible) // fix for FHIR-55633 tying .category and .type to VSAC value sets
 
 // * category = $LOINC#42348-3 "Advance healthcare directives"
-* category from $VSACADIAdvanceDirectiveCategories (extensible) // fix for FHIR-55633 tying .category and .type to VSAC value sets
+// * category from $VSACADIAdvanceDirectiveCategories (extensible) // fix for FHIR-55633 tying .category and .type to VSAC value sets
+* category contains advanceDirectiveCategory 1..1 MS
+* category[advanceDirectiveCategory] from $VSACADIAdvanceDirectiveCategories (extensible)
+* category[advanceDirectiveCategory] = $LOINC#42348-3 "Advance healthcare directives"
 
 * subject 1..1 MS
 * subject only Reference($USCorePatient)

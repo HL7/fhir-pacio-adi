@@ -33,6 +33,11 @@
         <p>Personas are used to model, summarize and communicate research about people who have been observed or researched in some way. A persona is depicted as a specific person but is not a real individual; rather, it is synthesized from observations of many people.
         </p></td>
     </tr>
+        <tr>
+        <td>Portable Medical Order</td>
+        <td><p>A Portable Medical Order is a Provider-Authored advance directive where the patient, or their healthcare agent, provides direct input in the creation of the instructions which specify decisions that have been made about treatments that may, or may not be, utilized during a medical emergency occurring within the current episode of care.
+        </p></td>
+    </tr>
     <tr>
         <td>Power of attorney</td>
         <td><p>A power of attorney or POA is a legal document which authorizes someone to act on behalf of someone else. The person granting the power of attorney is known as the principal, granter, or donor, while the person authorized to act is called an agent, attorney-in-fact, or attorney. There are many different types of POAs, and each can be further customized to suit the requirements of the granter. In short, it all depends on the content of the contract. Power of attorney documents in LOINC represent a medical or durable power of attorney.</p>
