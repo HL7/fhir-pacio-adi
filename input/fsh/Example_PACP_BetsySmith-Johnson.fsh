@@ -159,7 +159,9 @@ Usage: #example
 
 * status = #final
 * type = $LOINC#81334-5 "Patient Personal advance care plan"
-* category = $LOINC#42348-3 "Advance healthcare directives"
+// * category = $LOINC#42348-3 "Advance healthcare directives"
+* category[clinicalnotecategory] = $LOINC#107903-7 "Clinical note"
+* category[advanceDirectiveCategory] = $LOINC#42348-3 "Advance healthcare directives"
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * date = "2021-03-29T14:25:34-05:00"
 * author = Reference(Example-Smith-Johnson-Patient1)

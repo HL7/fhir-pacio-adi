@@ -9,13 +9,14 @@
 </div>
 
 #### Source Form
-TBD (insert persona summary for the Source Form use case and link to relevant profiles)
+TBD (insert persona summary for the Source Form use case and link to relevant profiles). Will be a MHAD as a PDF.
 
 {% include examplebutton_default.html example="example_1_source_form.md" b_title = "Click Here To See Source Form Workflow" %}
 
 #### Patient-Authored Advance Directive
-TBD (insert persona summary for the PACP and link to relevant PACP profiles)
-
+TBD (insert persona summary for the PACP and link to relevant PACP profiles).
+Focus on the PACP with the Healthcare Agent (e.g.: Charles Johnson, son of BSJ).
 
 #### Portable Medical Order
 TBD (insert persona summary for the PMO and link to relevant PMO profiles)
+Focus on the PMO Medical Orders Section

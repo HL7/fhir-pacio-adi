@@ -41,7 +41,9 @@ Description: "Betsy Smith-Johnson MHAD Composition Example"
 * identifier.value = "2.16.840.1.113883.15.15.200.1:11220-d580858d0d83427381cd9d2237580048"
 * status = #final
 * type = $loinc#104144-1 "Mental health Advance directives"
-* category = $loinc#42348-3 "Advance healthcare directives"
+// * category = $loinc#42348-3 "Advance healthcare directives"
+* category[clinicalnotecategory] = $LOINC#107903-7 "Clinical note"
+* category[advanceDirectiveCategory] = $LOINC#42348-3 "Advance healthcare directives"
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * date = "2024-12-22T05:00:00+00:00"
 * author = Reference(Patient/Example-Smith-Johnson-Patient1) "Betsy Smith-Johnson"
