@@ -2,7 +2,7 @@
 
 <blockquote class="stu-note">
     <p>
-    This page is a placeholder for a future version of this FHIR IG that addresses encounter-centric patient instructions, Content Type 2.
+    This page is a placeholder for a future version of this FHIR IG that addresses Encounter-centric Patient Instructions.
     </p>
 </blockquote>
 

@@ -16,7 +16,7 @@ Depending on the State, PMOs may be known by any of the following names:
 PMOs are not advance directives and should not be confused with them.
 
 1. PMOs are treatment orders written by practitioners.
-2. Episode-centric obligation and prohibition instructions written by clinicians and practitioners, not people like advance directives are.
+2. Encounter-centric obligation and prohibition instructions written by clinicians and practitioners, not people like advance directives are.
 3. PMOs are instructions given by the person or their healthcare agent to a practitioner, who then creates legal orders to carry out those treatment decisions.
 
 These are important distinctions to understand.
