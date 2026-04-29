@@ -29,7 +29,7 @@ Included in the content for this FHIR IG as part of Person-Authored advance dire
 
 Included in the content for this FHIR IG as a part of PMOs are jurisdictional advance healthcare directive documents commonly known as POLST, MOLST, and other derivatives of those terms as well as another category of practitioner-authored documents known as Do Not Resuscitate (DNR), Out of Hospital DNR, Do Not Hospitalize (DNH), and other derivatives of those terms.
 
-Subsequent versions of this guide will address another type of Person-Authored Advance Healthcare Directives for behavioral health, known as Mental Health or Psychiatric Advance Directives (MHAD).  It will also address Content Type 2 for Encounter-Centric Patient Instructions where prohibitions and obligations are captured by the medical team that are stated or issued by the patient, which only apply to that encounter.
+Subsequent versions of this guide will address another type of Person-Authored Advance Healthcare Directives for behavioral health, known as Mental Health or Psychiatric Advance Directives (MHAD).  It will also address Encounter-Centric Patient Instructions where prohibitions and obligations are captured by the medical team that are stated or issued by the patient, which only apply to that encounter.
 
 ### Background
 

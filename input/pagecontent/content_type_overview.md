@@ -62,7 +62,7 @@ There is a very important distinction for the three types of ADI content that wi
 </table>
 
 <p align="center">
-    <img src="./ADI_types_overview.png" alt="ADI Types Overview" style="width: 80%; float: none; vertical-align: middle;"/>
+    <img src="./ADI_types_overview.svg" alt="ADI Types Overview" style="width: 80%; float: none; vertical-align: middle;"/>
 </p>
 
 <br clear="all" />
@@ -72,7 +72,7 @@ The current version, STU2, of this ADI with FHIR IG covers the use of RESTful AP
 
 <blockquote class="stu-note">
     <p>
-    STU2 supports only Person-Authored Advance Directives and PMO documents. Future versions of this FHIR IG will address encounter-centric patient instructions, Content Type 2.
+    STU2 supports only Person-Authored Advance Directives and PMO documents. Future versions of this FHIR IG will address Encounter-centric Instructions.
     </p>
 </blockquote>
 
@@ -115,15 +115,15 @@ ADI documents should have a time period whereby the patient preferences or the P
 * the expiration date for the AD:   `Composition:extension:ExpirationDateExtension`
 
 <!-- 
-#### ADI Content Type 2 Document Structure
+#### ADI Encounter-centric Patient Instructions Document Structure
 
 <blockquote class="stu-note">
     <p>
-    Content Type 2 is out of scope for the PACIO ADI STU2 publication. A brief description is provided for completeness.
+    Encounter-centric Patient Instructions are out of scope for the PACIO ADI STU2 publication. A brief description is provided for completeness.
     </p>
 </blockquote>
 
-Content Type 2, Episode-Centric Patient Instructions, are used when a person is about to undergo a medical procedure during which there is the potential need to deploy life-sustaining treatments. This type of ADI information can also be used when a person is about to have an inpatient stay, or a stay at a nursing or rehab care facility, where the care delivery team asks the individual to make decisions about medical treatments they do or do not want, should circumstances arise when these decisions need to be made and the individual’s choices would need to be taken into consideration. A person may make these decisions for his or her self, and is sometimes the case if the person cannot make these decisions, the healthcare agent may decide. These medical treatment decisions are made in the present and ONLY apply to the current episode of care. They are instructions provided by the person or their surrogate decision-maker. These instructions are closely related to advance directives, in that they say, if x happens, then do y. Or, if x happens, do not do y. For this reason, these kinds of instructions and prohibitions are often recorded with a person’s advance directives. However, they are not advance directives because they represent treatment instructions that ONLY apply to the current episode of care. These instructions are considered obligation or prohibition instructions, provided by the person or their surrogate decision-maker, and authored by a practitioner.
+Encounter-centric Patient Instructions are used when a person is about to undergo a medical procedure during which there is the potential need to deploy life-sustaining treatments. This type of ADI information can also be used when a person is about to have an inpatient stay, or a stay at a nursing or rehab care facility, where the care delivery team asks the individual to make decisions about medical treatments they do or do not want, should circumstances arise when these decisions need to be made and the individual’s choices would need to be taken into consideration. A person may make these decisions for his or her self, and is sometimes the case if the person cannot make these decisions, the healthcare agent may decide. These medical treatment decisions are made in the present and ONLY apply to the current episode of care. They are instructions provided by the person or their surrogate decision-maker. These instructions are closely related to advance directives, in that they say, if x happens, then do y. Or, if x happens, do not do y. For this reason, these kinds of instructions and prohibitions are often recorded with a person’s advance directives. However, they are not advance directives because they represent treatment instructions that ONLY apply to the current episode of care. These instructions are considered obligation or prohibition instructions, provided by the person or their surrogate decision-maker, and authored by a practitioner.
  -->
 
 #### Clause Extension
