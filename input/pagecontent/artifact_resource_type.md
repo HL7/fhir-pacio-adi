@@ -15,8 +15,8 @@
 
 ### Consent
 * [ADI Healthcare Agent Consent (Abstract Profile)](StructureDefinition-ADI-HealthcareAgentConsent.html)
-* [ADI Healthcare Agent Consent Deny](StructureDefinition-ADI-ADIConsentDeny.html)
-* [ADI Healthcare Agent Consent Permit](StructureDefinition-ADI-ADIConsentPermit.html)
+* [ADI Healthcare Agent Consent Deny](StructureDefinition-ADI-HealthcareAgentConsentDeny.html)
+* [ADI Healthcare Agent Consent Permit](StructureDefinition-ADI-HealthcareAgentConsentPermit.html)
 
 ### DocumentReference
 * [ADI Document Reference](StructureDefinition-ADI-DocumentReference.html)
