@@ -57,6 +57,7 @@ menu:
   Table of Contents: toc.html
   General Guidance:
     Content Type Overview: content_type_overview.html
+    Document Lifecycle: document_lifecycle.html
     System Use Cases: system_use_cases.html
     Formal Specification: formal_specification.html
     Security, Privacy, and Consent: security_privacy_consent.html
@@ -88,6 +89,8 @@ pages:
     title: Home
   content_type_overview.md:
     title: Content Type Overview
+  document_lifecycle.md:
+    title: Document Lifecycle
   system_use_cases.md:
     title: System Use Cases
   formal_specification.md:
