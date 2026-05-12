@@ -94,7 +94,7 @@ Once published, a document instance remains a permanent historical artifact, eve
 
 In practice, healthcare interoperability standards may use multiple overlapping status models. The simplified lifecycle states below are intended to illustrate the core concepts relevant to document lifecycle management for an instance of a document.
 
-| Document Instance<br>Lifecycle Status | Meaning |
+| Document Instance<br>Status | Meaning |
 |:-----------------------------------|:--------|
 | Draft | Under development and not yet finalized |
 | Final | Officially completed and available for use |
@@ -125,7 +125,7 @@ This distinction is architecturally important because it affects the expected fu
 
 #### Metadata Indexing and Document Discovery
 
-Persistent identity and lifecycle status management make it possible to understand what a document is and how it evolves over time. However, healthcare systems must also be able to discover, track, retrieve, and manage documents across distributed environments that may span multiple organizations, repositories, jurisdictions, and periods of time.
+Persistent identity, document status, and lifecycle status management make it possible to understand what a document is and how it evolves over time. However, healthcare systems must also be able to discover, track, retrieve, and manage documents across distributed environments that may span multiple organizations, repositories, jurisdictions, and periods of time.
 
 This capability is enabled through the use of metadata indexing and discovery mechanisms.
 
@@ -140,22 +140,24 @@ Rather than relying solely on the document content itself, document management s
 
 Metadata indexing systems function as a continuously maintained catalog of document knowledge. In many cases, the indexing system may know that a document exists and understand important details about it, even when the document content itself is stored elsewhere or has not yet been generated.
 
-The metadata associated with a document commonly includes:
+In a FHIR document management server, the DocumentReference Resource holds the metadata associated with a document. The metadata commonly includes:
 
 - document identifiers, 
 - logical document identifiers, 
 - version information, 
-- document category and type, 
+- document instance status (DocumentReference.docStatus),
+- logical document lifecycle status (DocumentReference.status),
+- document relationships, 
+- document category (the generalized "kind" of document),
+- document type (the specific type of document), 
 - patient identity, 
 - authorship and stewardship, 
 - service and creation dates, 
-- lifecycle status, 
 - confidentiality and access control policies, 
-- document relationships, 
 - repository location information, 
 - and discovery or retrieval instructions. 
 
-This metadata enables healthcare systems to safely manage document lifecycles over long periods of time while supporting discoverability across distributed trust ecosystems.
+This metadata enables healthcare systems to safely manage document lifecycles over long periods of time while supporting discoverability across distributed trust ecosystems. In some cases, the DocumentReference may include the document in available formats as attachments to the registry metadata entry.
 
 Metadata indexing systems play a critical role in maintaining the lineage of logical documents as document instances evolve over time.
 
