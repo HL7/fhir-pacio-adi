@@ -69,6 +69,7 @@ menu:
     Personal Advance Care Plan (PACP): pacp_guidance.html
     Mental Health Advance Directive (MHAD): mhad_guidance.html
   Provider-Authored:
+    Provider-Authored Document Workflow: pmo_workflow.html
     Portable Medical Order (PMO): pmo_guidance.html
   Artifacts:
     Profiles by Resource Type: artifact_resource_type.html
@@ -109,6 +110,8 @@ pages:
     title: Person-Authored Advance Care Plan (PACP) Guidance
   mhad_guidance.md:
     title: Mental Health Advance Directive (MHAD) Guidance
+  pmo_workflow.md:
+    title: Provider-Authored Document Workflow
   pmo_guidance.md:
     title: Portable Medical Order (PMO) Guidance
   package_dependencies.md:
