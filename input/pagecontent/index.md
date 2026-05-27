@@ -75,12 +75,13 @@ This Guide is divided into several pages which are listed at the top of each pag
     <li>Table of Contents: A list of the narrative pages and FHIR artifacts in the IG.</li>
     <li>General Guidance: These pages provide overall guidance in using the profiles and transactions common to all ADI content types. 
         <ul>
-            <li>Content Type Overview: Content types provide a clear distinction for the three types of advance directive information. A detailed description of each type is provided.</li>
-            <li>Patient Stories and Personas: Patient stories and personas give context to the data exchange standards detailed in the technical areas of the IG. They allow the non-technical reader to envision situations in which the IGs provisions would apply, and ensure that the IG meets the intended needs for exchange of this type of information.</li>
-            <li>Use Cases: A use case is a list of technical actions or event steps typically defining the interactions between a role and a system to achieve a goal. The actor can be a human or other external system. Technical scenarios that describe systems interactions between technical actors to implement the use case.</li>
-            <li>General Guidance: Information about the structure and relationships between the profiles in this guide.</li>
+            <li>Content Type Overview: Content types provide a clear distinction for the two types of advance directive information. A detailed description of each type is provided.</li>
+            <li>Document Lifecycle: Document management principles for handling documents over their full lifetime including persistent identity, document status, and metadata indexing for document discovery.</li>
+            <li>System Use Cases: A use case is a list of technical actions or event steps typically defining the interactions between a role and a system to achieve a goal. The actor can be a human or other external system. Technical scenarios that describe systems interactions between technical actors to implement the use case.</li>
             <li>Formal Specification: Information about conformance to the guide including Must Support requirements, document signatures, and document workflow.</li>
-            <li>Security: General security requirements and recommendations for HL7 FHIR® ADI Implementation Guide actors, including authentication, authorization, and logging requirements and guidance.</li>
+            <li>Security, Privacy, and Consent: General security requirements and recommendations for HL7 FHIR® ADI Implementation Guide actors, including authentication, authorization, and logging requirements and guidance.</li>
+            <li>Signatures: fundamentals on the need for signatures on advance healthcare directive documents and the differences between electronic and digital signatures.</li>
+            <li>Search Parameters: a listing of the supported search parameters for FHIR Resources profiled in this IG.</li>
             <li>Key Terms and Acronyms: A glossary of relevant terms described in advance directives.</li>
         </ul>
     </li>
@@ -91,20 +92,22 @@ This Guide is divided into several pages which are listed at the top of each pag
         </ul>
     </li>
     <li>Provider-Authored: These sections provide the use cases and additional guidance specific to portable medical order (PMO) documents:
+    <li>Provider-Authored: These sections provide the use cases and additional guidance specific to portable medical order (PMO) documents.
         <ul>
             <li>Portable Medical Orders (PMO)</li>
         </ul>
     </li>
-    <li>FHIR Artifacts: These sections provide detailed descriptions and formal definitions for all the FHIR artifacts defined in this guide.
+    <li>Artifacts: These sections provide detailed descriptions and formal definitions for all the FHIR artifacts defined in this guide.
         <ul>
+            <li>Capability Statement: The following artifacts define the specific capabilities that different types of systems need to support to comply with this implementation guide. Systems conforming to this implementation guide are expected to declare conformance to one or more of the included capability statements.</li>
+            <li>Search Parameters and Operations: This section lists the HL7 FHIR® ADI Implementation Guide defined Operations and Search Parameters that are used in ADI transactions.</li>
             <li>Profiles: This section lists the set of Profiles that are defined in this guide to exchange advance directive information. Each linked Profile page includes a narrative introduction and a formal definition.</li>
             <li>Extensions: This section lists the set of Extensions that are defined in this guide that are used by the IG defined profiles. Each linked Extension  page includes a formal definition.</li>
-            <li>Search Parameters and Operations: This section lists the HL7 FHIR® ADI Implementation Guide defined Operations and Search Parameters that are used in ADI transactions.</li>
             <li>Terminology: This section lists the value sets and code system defined for HL7 FHIR® ADI Implementation Guide profiles.</li>
-            <li>Capability Statement: The following artifacts define the specific capabilities that different types of systems need to support to comply with this implementation guide. Systems conforming to this implementation guide are expected to declare conformance to one or more of the included capability statements.</li>
-            <li>Examples: The section that contains examples of advance healthcare directive information that is conformant to the profiles of this guide.</li>
+            <li>Examples Instances: The section that contains examples of advance healthcare directive information that is conformant to the profiles of this guide.</li>
         </ul>
     </li>
+    <li>Examples: provide full document examples for </li>
     <li>Release Notes: A summary of changes from the PACIO ADI STU1 release.</li>
     <li>Downloads: This page provides links to downloadable artifacts.</li>
 </ul>

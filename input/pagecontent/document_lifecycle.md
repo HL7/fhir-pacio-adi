@@ -29,15 +29,6 @@ Clinical documents therefore represent more than static files or exchanged messa
 #### Persistent Identity
 
 To identify a document over time, a document’s identity needs to support two fundamental needs:
-
-- It must identify the enduring clinical/legal collection of information as it evolves over time. This enduring concept is called the “logical document.” An identifier that serves this purpose is called a version-independent identifier. 
-- It must identify each specific version of the logical document as it existed at various points in time. This immutable snapshot is called the “document instance.” An identifier that serves this purpose is called a version-specific identifier. Once created and published, a document instance represents an immutable historical snapshot of the logical document at that moment in time.
-
-A document’s identifiers need to make it possible to move between these two ways of interacting with a document in an accurate way so that the version instances of a logical document can be processed and understood together in the correct temporal order to represent the logical document with fidelity.
-
-For this reason, documents utilize two types of identifiers.  One identifier identifies a document instance, and another identifier identifies the logical document this document instance is a part of. The version independent identifier, called the “set id”, identifies the set of document instances that make up the logical document. Each document instances has an additional identifier called “versionNumber” which can be used to put the documents instances that make of the logical document in the right temporal order.
-
-To identify a document over time, a document’s identity needs to support two fundamental needs:
 1.	It must identify the enduring clinical/legal collection of information as it evolves over time. This enduring concept is called the “logical document.” An identifier that serves this purpose is called a version-independent identifier. 
 2.	It must identify each specific version of the logical document as it existed at various points in time. This immutable snapshot is called the “document instance.” An identifier that serves this purpose is called a version-specific identifier. Once created and published, a document instance represents an immutable historical snapshot of the logical document at that moment in time.
 
@@ -71,7 +62,7 @@ Document status provides important contextual meaning about a document instance 
 - has been amended or replaced, 
 - is no longer considered current, 
 - has been revoked, 
-- or should only be retained for historical or legal purposes. 
+- or should be retained for historical or legal purposes only. 
 
 Without lifecycle status management, systems may be unable to determine:
 
@@ -79,12 +70,12 @@ Without lifecycle status management, systems may be unable to determine:
 - whether a document should still be relied upon for patient care, 
 - or whether a document’s authority has changed over time.
 
-Document status is also a complex topic that requires distinguishing between two related but separate concepts:
+Document status is a complex topic that requires distinguishing between two related but separate concepts:
 
-- Lifecycle status associated with individual document instances 
-- Lifecycle status associated with management of the logical document over time
+- the status associated with individual document instances (Composition.status in FHIR or ClinicalDocument.status in CDA) 
+- the status associated with management of the logical document over time (DocumentReference.status in FHIR. Note that the CDA standard does not address document management, but CDA documents and all types of documents can be managed using FHIR document management capabilities enabled through the DocumentReference Resource.)
 
-This is a subtle but very important distinction. A document instance may represent the current version of a logical document, or it may later become superseded by a newer document instance within the same logical document lineage.
+This is a subtle but very important distinction. A document instance may represent the current version of a logical document, or an instance may later become superseded by a newer document instance within the same logical document lineage.
 
 This distinction is handled in document management systems through the use of distinct metadata.  The status of a document instance reflects its completion lifecycle as a snapshot artifact. The status associated with the logical document reflects the collective management state of the document instances that belong to that logical document lineage.
 
@@ -94,7 +85,7 @@ Once published, a document instance remains a permanent historical artifact, eve
 
 In practice, healthcare interoperability standards may use multiple overlapping status models. The simplified lifecycle states below are intended to illustrate the core concepts relevant to document lifecycle management for an instance of a document.
 
-| Document Instance<br>Lifecycle Status | Meaning |
+| Document Instance<br>Status | Meaning |
 |:-----------------------------------|:--------|
 | Draft | Under development and not yet finalized |
 | Final | Officially completed and available for use |
@@ -107,7 +98,7 @@ While other statuses like Amended, Revoked, and Deprecated acknowledge the docum
 
 Versions of a single logical document may have these statuses associated with it:
 
-| Logical Document<br>Lifecycle Status | Meaning |
+| Logical Document<br>Status | Meaning |
 |:-------------------------------------|:--------|
 | Current | The current version of the logical document |
 | Superseded | A prior instance of this logical document which has now been replaced by a newer version |
@@ -117,15 +108,15 @@ Replacement creates a new document instance and changes the lifecycle standing o
 
 One subtle but important insight: an entered-in-error status for a document instance often breaks the normal logical document lineage model. 
 
-Version replacements usually occur in a temporal sequence as a logical document evolves over time. However, Entered-in-error status indicates that a document instance was not intended to participate in the logical document’s valid lifecycle progression. However, if superseded by a new final document, then the new correct version of the logical document will prevail. 
+Version replacements usually occur in a temporal sequence as a logical document evolves over time. However, Entered-in-error status indicates that a document instance was not intended to participate in the logical document’s valid lifecycle progression. When superseded by a new final document, then the new correct version of the logical document will prevail. The new correct version of the logical document may in fact be the prior final version due to a "roll back" mechanism used when processing the version that was entered in error. An example might be marking a version of a document as final, then discovering it was signed by the wrong person, and so that version is marked entered-in-error, and replaced by a version signed correctly or rolled back to the previously correctly signed version. (Composition.status = entered-in-error and DocumentReference.status = superseded. A new or previous version of the logical document becomes current.)
 
-As the final “terminal state” of a document, entered-in-error means the document should never have existed as part of the patient’s record in the first place. 
+When the entire logical document is marked entered-in-error it means the document should never have existed as part of the patient’s record in the first place. (Composition.status = entered-in-error and DocumentReference.status = entered-in-error.)
 
 This distinction is architecturally important because it affects the expected functionality required to perform document management properly over time.
 
 #### Metadata Indexing and Document Discovery
 
-Persistent identity and lifecycle status management make it possible to understand what a document is and how it evolves over time. However, healthcare systems must also be able to discover, track, retrieve, and manage documents across distributed environments that may span multiple organizations, repositories, jurisdictions, and periods of time.
+Persistent identity, document status, and lifecycle status management make it possible to understand what a document is and how it evolves over time. However, healthcare systems must also be able to discover, track, retrieve, and manage documents across distributed environments that may span multiple organizations, repositories, jurisdictions, and periods of time.
 
 This capability is enabled through the use of metadata indexing and discovery mechanisms.
 
@@ -140,22 +131,24 @@ Rather than relying solely on the document content itself, document management s
 
 Metadata indexing systems function as a continuously maintained catalog of document knowledge. In many cases, the indexing system may know that a document exists and understand important details about it, even when the document content itself is stored elsewhere or has not yet been generated.
 
-The metadata associated with a document commonly includes:
+In a FHIR document management server, the DocumentReference Resource holds the metadata associated with a document. The metadata commonly includes:
 
 - document identifiers, 
 - logical document identifiers, 
 - version information, 
-- document category and type, 
+- document instance status (DocumentReference.docStatus),
+- logical document lifecycle status (DocumentReference.status),
+- document relationships, 
+- document category (the generalized "kind" of document),
+- document type (the specific type of document), 
 - patient identity, 
 - authorship and stewardship, 
 - service and creation dates, 
-- lifecycle status, 
 - confidentiality and access control policies, 
-- document relationships, 
 - repository location information, 
 - and discovery or retrieval instructions. 
 
-This metadata enables healthcare systems to safely manage document lifecycles over long periods of time while supporting discoverability across distributed trust ecosystems.
+This metadata enables healthcare systems to safely manage document lifecycles over long periods of time while supporting discoverability across distributed trust ecosystems. In some cases, the DocumentReference may include the document in available formats as attachments to the registry metadata entry.
 
 Metadata indexing systems play a critical role in maintaining the lineage of logical documents as document instances evolve over time.
 
@@ -188,3 +181,7 @@ Examples of On-Demand documents may include:
 - or real-time compilations of clinical information. 
 
 In these cases, the metadata registry manages the persistent identity and discoverability of the document creation potential, even though a fixed document artifact may not yet exist.
+
+##### Technical Note - Status values in FHIR R4
+
+Status values in FHIR R4 utilize document revocation status values (revoked and deprecated) for Composition.status and DocumentReference.docStatus. Support for this backported terminology requires the status element to remain populated with the appropriate "completion status" value and then the additional "revocation status" is added in the extension status element (status.extension.status).
