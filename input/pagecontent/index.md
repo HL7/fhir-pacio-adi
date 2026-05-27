@@ -84,18 +84,15 @@ This Guide is divided into several pages which are listed at the top of each pag
             <li>Key Terms and Acronyms: A glossary of relevant terms described in advance directives.</li>
         </ul>
     </li>
-    <li>Person-Authored: These sections provide the use cases and additional guidance specific to Person-Authored advance care plan (Personal ACP) and mental health advance directive (MHAD) documents.
+    <li>Person-Authored: These sections provide the use cases and additional guidance specific to Person-Authored advance care plan (Personal ACP) and mental health advance directive (MHAD) documents:
         <ul>
-            <li>Personal ACP User Stories</li>
-            <li>Personal ACP Specification Guidance</li>
-            <li>MHAD User Stories</li>
-            <li>MHAD Specification Guidance</li>
+            <li>Person-Authored Advance Care Plan (PACP) Guidance</li>
+            <li>Mental Health Advance Directive (MHAD) Guidance</li>
         </ul>
     </li>
-    <li>Portable Medical Orders: These sections provide the use cases and additional guidance specific to portable medical order (PMO) documents.
+    <li>Provider-Authored: These sections provide the use cases and additional guidance specific to portable medical order (PMO) documents:
         <ul>
-            <li>PMO User Stories</li>
-            <li>PMO Specification Guidance</li>
+            <li>Portable Medical Orders (PMO)</li>
         </ul>
     </li>
     <li>FHIR Artifacts: These sections provide detailed descriptions and formal definitions for all the FHIR artifacts defined in this guide.
