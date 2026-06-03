@@ -34,7 +34,7 @@
 <artifact id="StructureDefinition/ADI-OrganDonationObservation" key="StructureDefinition-PADI-OrganDonationObservation" name="ADI Organ Donation Observation"/>
 <artifact id="StructureDefinition/ADI-PMOAdditionalOrdersOrInstructionsServiceRequest" key="StructureDefinition-ADI-PMOAdditionalOrdersOrInstructionsServiceRequest" name="ADI PMO Additional orders or instructions ServiceRequest"/>
 <artifact id="StructureDefinition/ADI-PMOCPRServiceRequest" key="StructureDefinition-ADI-PMOCPRServiceRequest" name="ADI PMO Cardiopulmonary Resuscitation ServiceRequest"/>
-<artifact id="StructureDefinition/ADI-PMOCarePlan" key="StructureDefinition-ADI-PMOCarePlan" name="ADI PMO Care Plan"/>
+<artifact deprecated="true" id="StructureDefinition/ADI-PMOCarePlan" key="StructureDefinition-ADI-PMOCarePlan" name="ADI PMO Care Plan"/>
 <artifact id="StructureDefinition/ADI-PMOComposition" key="StructureDefinition-ADI-PMOComposition" name="ADI PMO Composition"/>
 <artifact id="StructureDefinition/ADI-PMOHospiceObservation" key="StructureDefinition-ADI-PMOHospiceObservation" name="ADI PMO Hospice Observation"/>
 <artifact id="StructureDefinition/ADI-PMOInitialTreatmentServiceRequest" key="StructureDefinition-ADI-PMOInitialTreatmentServiceRequest" name="ADI PMO Initial Treatment ServiceRequest"/>
@@ -74,7 +74,7 @@
 <artifact id="SearchParameter/Bundle-type" key="SearchParameter-Bundle-type" name="Bundle-type"/>
 <artifact id="ValueSet/CDASignatureCodeVS" key="ValueSet-CDASignatureCodeVS" name="CDA Signature Code"/>
 <artifact deprecated="true" id="ValueSet/PADICareExperiencePreferencesVS" key="ValueSet-PADICareExperiencePreferencesVS" name="Care Experience Preferences"/>
-<artifact id="CarePlan/Example-Smith-Johnson-PMOCarePlan1" key="CarePlan-Example-Smith-Johnson-PMOCarePlan1" name="Care Plan for Cerebrovascular accident"/>
+<artifact deprecated="true" id="CarePlan/Example-Smith-Johnson-PMOCarePlan1" key="CarePlan-Example-Smith-Johnson-PMOCarePlan1" name="Care Plan for Cerebrovascular accident"/>
 <artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan2" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan2" name="Care Plan for Permanent, severe brain damage"/>
 <artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan3" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan3" name="Care Plan for Terminal illness, lack of meaningful interaction"/>
 <artifact deprecated="true" id="CarePlan/Example-McBee-PreferenceCarePlan1" key="CarePlan-Example-McBee-PreferenceCarePlan1" name="Care Plan for Unconscious, vegetative state, coma for McBee"/>

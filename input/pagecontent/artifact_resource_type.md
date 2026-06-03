@@ -5,7 +5,6 @@
 * [ADI Bundle](StructureDefinition-ADI-Bundle.html)
 
 ### Care Plan
-* [ADI PMO Care Plan](StructureDefinition-ADI-PMOCarePlan.html)
 * [ADI Person-Authored Preference Care Plan](StructureDefinition-ADI-PreferenceCarePlan.html)
 
 ### Composition
