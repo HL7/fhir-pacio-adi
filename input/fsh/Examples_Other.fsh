@@ -85,20 +85,20 @@ Usage: #example
 
 // ------------------------------
 
-Instance: Example-Smith-Johnson-PMOCarePlan1
-InstanceOf: ADIPMOCarePlan
-Description: "Example Patient Smith-Johnson PMO Care Plan 1"
-Usage: #example
+// Instance: Example-Smith-Johnson-PMOCarePlan1
+// InstanceOf: ADIPMOCarePlan
+// Description: "Example Patient Smith-Johnson PMO Care Plan 1"
+// Usage: #example
 
-* text.status = #generated
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Example PMO Care Plan</p></div>"
+// * text.status = #generated
+// * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Example PMO Care Plan</p></div>"
 
-* status = #active
-* extension[adi-condition-code-extension].valueCodeableConcept = $SNOMEDCT#230690007 "Cerebrovascular accident (disorder)"
-* title = "Care Plan for Cerebrovascular accident"
-* subject = Reference(Example-Smith-Johnson-Patient1)
-* addresses[+].display = "Stroke and impaired speech."
-* goal.display = "Prescribe speech therapy to improve expressive dysphasia."
+// * status = #active
+// * extension[adi-condition-code-extension].valueCodeableConcept = $SNOMEDCT#230690007 "Cerebrovascular accident (disorder)"
+// * title = "Care Plan for Cerebrovascular accident"
+// * subject = Reference(Example-Smith-Johnson-Patient1)
+// * addresses[+].display = "Stroke and impaired speech."
+// * goal.display = "Prescribe speech therapy to improve expressive dysphasia."
 // * supportingInfo = Reference(Example-Smith-Johnson-CareExperiencePreference5)
 
 // ------------------------------
