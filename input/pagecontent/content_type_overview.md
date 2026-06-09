@@ -100,11 +100,18 @@ There is movement within the FHIR community to begin using the Provenance resour
 
 ### ADI FHIR Document Structure
 
-ADI native documents using FHIR are instances of the `Bundle` resource with the `type` = `document`. The document should have all content contained within the Bundle with no external references except for the references to external documents in the [DocumentationObservation](StructureDefinition-ADI-DocumentationObservation.html) through the `focus` data element. FHIR `Bundle` documents consist of multiple entry resources within it. The first entry *SHALL* be a `Composition` resource. The `Composition` resource acts as the header and organizational construct. It contains information about the document such as the category of document, dates, and references to the various participants of the document, as well as document sections used to categorize or organize the contained entries. 
+ADI native documents using FHIR are instances of the `Bundle` resource with the `type` = `document`. The document should have all content contained within the Bundle with no external references except for the references to external documents in the [DocumentationObservation](StructureDefinition-ADI-DocumentationObservation.html) through the `focus` data element. 
 
-This structure at the highest level is common to all ADI document types. Additional FHIR representation requirements will depend on:
+FHIR `Bundle` documents consist of multiple entry resources within it. The first entry *SHALL* be a `Composition` resource. The `Composition` resource acts as the header and organizational construct. It contains information about the document such as the category and type of document, dates, and references to the various participants of the document, as well as document sections used to categorize or organize the contained entries. 
+
+#### Minimal Required Structured Data
+
+The ADI document types follow an approach which supports the minimal amount of required structured data. Under this approach, the full source form of the document is always included in the initial section of the Composition.  This ensures that all of the information in the document is available to support human readability.  Subsequent sections include information from the source document which are required in machine readable format to enable additional processes of that information. Only information required by document receivers to be available as structured data needs to be included in machine processable format.
+
+This structure is common to all ADI document types. The original source form of the document must alway be included in the body of the document. Requirements for inclusion of additional machine processable data depend on:
 * the form of advance healthcare directive document
 * the ADI content type
+* the readiness of document recipients to perform data processing on included content
 
 Reference the IG section, [Advance Directive Structure Requirements](formal_specification.html#advance-directive-document-structure-requirements), for further guidance.
 
