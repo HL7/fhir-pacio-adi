@@ -106,7 +106,9 @@ FHIR `Bundle` documents consist of multiple entry resources within it. The first
 
 #### Minimal Required Structured Data
 
-The ADI document types follow an approach which supports the minimal amount of required structured data. Under this approach, the full source form of the document is always included in the initial section of the Composition.  This ensures that all of the information in the document is available to support human readability.  Subsequent sections include information from the source document which are required in machine readable format to enable additional processes of that information. Only information required by document receivers to be available as structured data needs to be included in machine processable format.
+The ADI document types follow an approach which supports the minimal amount of required structured data. Under this approach, the full source form of the document is always included in the initial section of the Composition.  This source form section is identified using the same type code as the document itself (in section.code). 
+
+This approach ensures that all of the information in the document is available to support human readability.  Subsequent sections include information from the source document which are required in machine readable format to enable additional processes of that information. Only information required by document receivers to be available as structured data needs to be included in machine processable format.
 
 This structure is common to all ADI document types. The original source form of the document must alway be included in the body of the document. Requirements for inclusion of additional machine processable data depend on:
 * the form of advance healthcare directive document
