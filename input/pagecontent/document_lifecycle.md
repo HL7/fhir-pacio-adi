@@ -83,9 +83,9 @@ One key point to remember is that changes in document lifecycle status do not er
 
 Once published, a document instance remains a permanent historical artifact, even if its lifecycle status later changes. 
 
-In practice, healthcare interoperability standards may use multiple overlapping status models. The simplified lifecycle states below are intended to illustrate the core concepts relevant to document lifecycle management for an instance of a document.
+In practice, healthcare interoperability standards may use multiple overlapping status models. The list below shows the core "state" concepts relevant to document lifecycle management for an single instance of a document.
 
-| Document Instance<br>Status | Meaning |
+| Document Instance<br>"State" Status | Meaning |
 |:-----------------------------------|:--------|
 | Draft | Under development and not yet finalized |
 | Final | Officially completed and available for use |
@@ -94,17 +94,17 @@ In practice, healthcare interoperability standards may use multiple overlapping 
 | Deprecated | Retained for historical, legal, or audit purposes, but no longer recommended for current clinical use |
 | Entered-in-Error | Wrongly created as part of the logical document |
 
-While other statuses like Amended, Revoked, and Deprecated acknowledge the document was valid at a prior time, Entered-in-Error asserts the document instance should never have existed as part of the logical document.
+The Draft state implies the document as not yet reached the state of being Final. States like Amended, Revoked, and Deprecated imply an earlier version (instance) of the document was Final at a prior time, Entered-in-Error asserts the document instance should never have existed as part of the logical document.
 
-Versions of a single logical document may have these statuses associated with it:
+Each instance of a single logical document (each version) may have these lifecycle statuses associated with it:
 
-| Logical Document<br>Status | Meaning |
+| Logical Document<br>Lifecycle Status | Meaning |
 |:-------------------------------------|:--------|
 | Current | The current version of the logical document |
 | Superseded | A prior instance of this logical document which has now been replaced by a newer version |
 | Entered-in-Error | Wrongly created as part of the patient’s record |
 
-Replacement creates a new document instance and changes the lifecycle standing of prior instances to “superseded”, but it does not alter the content or lifecycle status of a previously published document instance. A previous final version of a document may be replaced with a new finalized version of the same logical document.
+When a new instance of a logical document (document version) replaces a prior version, the lifecycle status of the prior instance changes to “superseded”. This change does not alter the content or "state" status of that previously published document instance. A previous final version of a document may be replaced by a new final version of the same logical document. Both versions of the document reached a final state, but in the document's lifecycle, the older version is now superseded and the newer version is now current.
 
 One subtle but important insight: an entered-in-error status for a document instance often breaks the normal logical document lineage model. 
 

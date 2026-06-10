@@ -142,8 +142,13 @@ CDA attachments **SHALL** align with the [HL7 CDA® R2 Implementation Guide: Per
 | Format              | DocumentReference.content.format.code               |
 | ------------------- | --------------------------------------------------- |
 | Structured Body     | urn:hl7-org:sdwg:Personal ACP-structuredBody:1.3.1          |
-| Non-structured Body | urn:hl7-org:sdwg:Personal ACP-nonXMLBody:1.3.1              |
 {: .grid }
+
+Note: All CDA Document Representations utilize a structured body.  The non-xmlBody option is never used.  All CDA ADI Documents use the "minimally structured" approach to packaging document content. 
+
+The first section of a minimally structured document always contains the full human rendering of the complete "source form" of the document. The initial section ensures the structured documents meets the minimal requirement to make all of the contained information accessible for human readability. Subsequent structured sections containing machine processable information and the linked human narrative of the data are included following the Source Form Section. The LOINC Code for the Source Form Section is always identical to the LOINC code used for the specific document type (ClinicalDocument.code).
+
+The "minimally structured document" approach enables document creators to immediately begin exchanging documents and their required entries without sacrificing the information conveyed by the document.  It enables the wholeness principle to be met while incrementally allowing the amount of machine processable data to increase gradually over time.
 
 An example of this representation is shown in the resource snippet below:
 
@@ -166,6 +171,9 @@ An example of this representation is shown in the resource snippet below:
 FHIR native documents **SHALL** be Bundle resources with `type` = `document` and encoded as a `Binary` resource. Documents that are communicated **SHALL** have at least one DocumentReference resource that references the Binary through the `DocumentReference.content.attachment.url` element.
 
 FHIR native documents **SHOULD** have all content contained within the Bundle with no external references except for the references to external documents in the [DocumentationObservation](StructureDefinition-ADI-DocumentationObservation.html).focus. FHIR native documents have internal references between resources (e.g. the Composition resource referencing entry resources). These references **SHALL** be resolved using the `Bundle.entry.fullUrl`. This URL may be a proper URL, but there **SHOULD** be no expectation that the URL resolves outside of the confines of the Bundle. To avoid confusion, it may be desirable to use UUID (e.g. urn:uuid:53fefa32-fcbb-4ff8-8a92-55ee120877b7) instead of URLs for the fullUrl. 
+
+FHIR Clinical Documents can follow the same effective incremental improvement process as CDA Documents.  The "minimally structured document" approach applies to the first section in the Composition. Just as with a CDA Structured Document, The first section of a minimally structured FHIR document always contains the full human rendering of the complete "source form" of the document. The initial section ensures the structured documents meets the minimal requirement to make all of the contained information accessible for human readability. Subsequent structured sections containing machine processable information and the linked human narrative of the data are included following the Source Form Section. The LOINC Code for the Source Form Section is always identical to the LOINC code used for the specific document type (Composition.type).
+
 
 
 ### Document Digital Signatures
