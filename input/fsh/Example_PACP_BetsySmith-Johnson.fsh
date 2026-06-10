@@ -509,7 +509,7 @@ Usage: #example
 // Preference Care Plan
 
 Instance: Example-Smith-Johnson-PreferenceCarePlan1
-InstanceOf: ADIPreferenceCarePlan
+InstanceOf: ADIPersonAuthoredPreferenceCarePlan
 Description: "Example Patient Smith-Johnson Preference Care Plan 1"
 Usage: #example
 
@@ -539,7 +539,7 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-PreferenceCarePlan2
-InstanceOf: ADIPreferenceCarePlan
+InstanceOf: ADIPersonAuthoredPreferenceCarePlan
 Description: "Example Patient Smith-Johnson Preference Care Plan 2"
 Usage: #example
 
@@ -564,7 +564,7 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-PreferenceCarePlan3
-InstanceOf: ADIPreferenceCarePlan
+InstanceOf: ADIPersonAuthoredPreferenceCarePlan
 Description: "Example Patient Smith-Johnson Preference Care Plan 3"
 Usage: #example
 

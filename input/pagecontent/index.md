@@ -87,14 +87,15 @@ This Guide is divided into several pages which are listed at the top of each pag
     </li>
     <li>Person-Authored: These sections provide the use cases and additional guidance specific to Person-Authored advance care plan (Personal ACP) and mental health advance directive (MHAD) documents:
         <ul>
+            <li>Person-Authored Document Workflow</li>
             <li>Person-Authored Advance Care Plan (PACP) Guidance</li>
             <li>Mental Health Advance Directive (MHAD) Guidance</li>
         </ul>
     </li>
-    <li>Provider-Authored: These sections provide the use cases and additional guidance specific to portable medical order (PMO) documents:
     <li>Provider-Authored: These sections provide the use cases and additional guidance specific to portable medical order (PMO) documents.
         <ul>
-            <li>Portable Medical Orders (PMO)</li>
+            <li>Provider-Authored Document Workflow</li>
+            <li>Portable Medical Order (PMO)</li>
         </ul>
     </li>
     <li>Artifacts: These sections provide detailed descriptions and formal definitions for all the FHIR artifacts defined in this guide.

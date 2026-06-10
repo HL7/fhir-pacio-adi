@@ -49,12 +49,13 @@
 <artifact id="StructureDefinition/ADI-PersonalInterventionPreference" key="StructureDefinition-PADI-PersonalInterventionPreference" name="ADI Person Authored Personal Intervention Preference"/>
 <artifact id="StructureDefinition/ADI-PersonAuthoredCareExperiencePreference" key="StructureDefinition-ADI-PersonAuthoredCareExperiencePreference" name="ADI Person-Authored Care Experience Preference"/>
 <artifact id="StructureDefinition/ADI-PACPComposition" key="StructureDefinition-PADI-PACPComposition" name="ADI Person-Authored Composition"/>
+<artifact id="StructureDefinition/ADI-PersonAuthoredPreferenceCarePlan" key="StructureDefinition-ADI-PersonAuthoredPreferenceCarePlan" name="ADI Person-Authored Preference Care Plan"/>
 <artifact id="StructureDefinition/ADI-PersonalGoal" key="StructureDefinition-PADI-PersonalGoal" name="ADI Personal Goal"/>
 <artifact id="StructureDefinition/ADI-PersonalPrioritiesOrganizer" key="StructureDefinition-PADI-PersonalPrioritiesOrganizer" name="ADI Personal Priorities Organizer"/>
 <artifact id="StructureDefinition/ADI-PractitionerRole" key="StructureDefinition-ADI-PractitionerRole" name="ADI Practitioner Role"/>
-<artifact id="StructureDefinition/ADI-PreferenceCarePlan" key="StructureDefinition-PADI-PreferenceCarePlan" name="ADI Preference Care Plan"/>
 <artifact id="StructureDefinition/ADI-Provenance" key="StructureDefinition-ADI-Provenance" name="ADI Provenance"/>
 <artifact deprecated="true" id="StructureDefinition/ADI-CareExperiencePreference" key="StructureDefinition-PADI-CareExperiencePreference" name="ADI PtAuthored Care Experience Preference"/>
+<artifact deprecated="true" id="StructureDefinition/ADI-PreferenceCarePlan" key="StructureDefinition-PADI-PreferenceCarePlan" name="ADI PtAuthored Care Plan"/>
 <artifact id="StructureDefinition/adi-rationale-for-treatment" key="StructureDefinition-adi-rationale-for-treatment" name="ADI Rationale for Treatment"/>
 <artifact id="CodeSystem/ADIRevokeStatusCS" key="CodeSystem-ADIRevokeStatusCS" name="ADI Revoke Status Code System"/>
 <artifact id="StructureDefinition/serious-advanced-condition" key="StructureDefinition-serious-advanced-condition" name="ADI Serious Advanced Condition"/>

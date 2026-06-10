@@ -58,7 +58,7 @@ Description: "This Composition profile is used to represent a Person-Authored ad
 * section[gpp_for_certain_health_condition].title 1..1 MS
 * section[gpp_for_certain_health_condition].code 1..1 
 * section[gpp_for_certain_health_condition].code = $LOINC#107905-2
-* section[gpp_for_certain_health_condition].entry only Reference(ADIPreferenceCarePlan or ADIPersonalInterventionPreference or ADIPersonalPrioritiesOrganizer or ADIPersonalGoal)
+* section[gpp_for_certain_health_condition].entry only Reference(ADIPersonAuthoredPreferenceCarePlan or ADIPersonalInterventionPreference or ADIPersonalPrioritiesOrganizer or ADIPersonalGoal)
 
 * section[gpp_personal_care_experience] ^short = "Quality of Life related personal care experiences, personal goals, and priorities"
 * section[gpp_personal_care_experience].title 1..1 MS
