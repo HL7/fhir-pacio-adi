@@ -104,7 +104,7 @@ Each instance of a single logical document (each version) may have these lifecyc
 | Superseded | A prior instance of this logical document which has now been replaced by a newer version |
 | Entered-in-Error | Wrongly created as part of the patient’s record |
 
-When a new instance of a logical document (document version) replaces a prior version, the lifecycle status of the prior instance changes to “superseded”. This change does not alter the content or "state" status of that previously published document instance. A previous final version of a document may be replaced by a new final version of the same logical document. Both versions of the document reached a final state, but in the document's lifecycle, the older version is now superseded and the newer version is now current.
+When a new instance of a logical document (document version) replaces a prior version, the lifecycle status of the prior instance changes to “superseded”. This change does not alter the content or "state" status of that previously published document instance. A previous final version of a document may be replaced by a new final version of the same logical document. Both versions of the document reached a final state, but in the document's lifecycle, the older version is now superseded and the newer version is now current. Seeing the full history of the statuses and dates associated with prior versions of a document can paint a very accurate picture of a document's lifecycle.
 
 One subtle but important insight: an entered-in-error status for a document instance often breaks the normal logical document lineage model. 
 
