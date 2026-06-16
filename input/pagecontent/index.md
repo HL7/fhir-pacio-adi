@@ -1,18 +1,4 @@
-<!-- <div style="width: 60%;" >
-<h3 id="plain-language-summary-about-this-guide"><a class="anchorjs-link " href="#plain-language-summary-about-this-guide" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a>
-  <button class="btn btn-info btn-lg collapsed" type="button" title="Click to Open or Close the Plain Language Summary" data-toggle="collapse" data-target="#plain-lang-summary" aria-expanded="false" aria-controls="collapseExample">
-    Click Here to see the Plain Language Summary
-  </button>
-</h3>
-</div>
-<div class="collapse" id="plain-lang-summary" aria-expanded="false" style="height: 0px;">
-  <div class="card card-body" style="border:1px solid;border-color:#cccccc;padding:10px">
-
-<p>The Advance Healthcare Directive Interoperability (ADI) FHIR implementation guide (IG) explains how to represent, exchange, and verify a person’s goals, preferences and priorities for medical treatment and interventions regarding future medical care. It also explains how to represent a person’s appointment of one or more healthcare agents who can make care decisions for the patient if the patient can’t communicate.</p>
-
-  </div>
-</div> 
-
+<!--
 <blockquote class="stu-note">
     <p>
     This is a preliminary draft of STU2, which includes support for portable medical orders (PMO) for life-sustaining treatment building upon STU1, which supported only Person-Authored Advance Directives documents. Future versions of this IG will address encounter-centric patient instructions.
@@ -70,48 +56,37 @@ The primary goal of the PACIO Project is to establish a framework for the develo
 
 ### How to Read this Guide
 This Guide is divided into several pages which are listed at the top of each page in the menu bar.
-<ul>
-    <li>Home: The home page provides the introduction and background information to set context for the use of the HL7 FHIR® ADI Implementation Guide.</li>
-    <li>Table of Contents: A list of the narrative pages and FHIR artifacts in the IG.</li>
-    <li>General Guidance: These pages provide overall guidance in using the profiles and transactions common to all ADI content types. 
-        <ul>
-            <li>Content Type Overview: Content types provide a clear distinction for the two types of advance directive information. A detailed description of each type is provided.</li>
-            <li>Document Lifecycle: Document management principles for handling documents over their full lifetime including persistent identity, document status, and metadata indexing for document discovery.</li>
-            <li>System Use Cases: A use case is a list of technical actions or event steps typically defining the interactions between a role and a system to achieve a goal. The actor can be a human or other external system. Technical scenarios that describe systems interactions between technical actors to implement the use case.</li>
-            <li>Formal Specification: Information about conformance to the guide including Must Support requirements, document signatures, and document workflow.</li>
-            <li>Security, Privacy, and Consent: General security requirements and recommendations for HL7 FHIR® ADI Implementation Guide actors, including authentication, authorization, and logging requirements and guidance.</li>
-            <li>Signatures: fundamentals on the need for signatures on advance healthcare directive documents and the differences between electronic and digital signatures.</li>
-            <li>Search Parameters: a listing of the supported search parameters for FHIR Resources profiled in this IG.</li>
-            <li>Key Terms and Acronyms: A glossary of relevant terms described in advance directives.</li>
-        </ul>
-    </li>
-    <li>Person-Authored: These sections provide the use cases and additional guidance specific to Person-Authored advance care plan (Personal ACP) and mental health advance directive (MHAD) documents:
-        <ul>
-            <li>Person-Authored Document Workflow</li>
-            <li>Person-Authored Advance Care Plan (PACP) Guidance</li>
-            <li>Mental Health Advance Directive (MHAD) Guidance</li>
-        </ul>
-    </li>
-    <li>Provider-Authored: These sections provide the use cases and additional guidance specific to portable medical order (PMO) documents.
-        <ul>
-            <li>Provider-Authored Document Workflow</li>
-            <li>Portable Medical Order (PMO)</li>
-        </ul>
-    </li>
-    <li>Artifacts: These sections provide detailed descriptions and formal definitions for all the FHIR artifacts defined in this guide.
-        <ul>
-            <li>Capability Statement: The following artifacts define the specific capabilities that different types of systems need to support to comply with this implementation guide. Systems conforming to this implementation guide are expected to declare conformance to one or more of the included capability statements.</li>
-            <li>Search Parameters and Operations: This section lists the HL7 FHIR® ADI Implementation Guide defined Operations and Search Parameters that are used in ADI transactions.</li>
-            <li>Profiles: This section lists the set of Profiles that are defined in this guide to exchange advance directive information. Each linked Profile page includes a narrative introduction and a formal definition.</li>
-            <li>Extensions: This section lists the set of Extensions that are defined in this guide that are used by the IG defined profiles. Each linked Extension  page includes a formal definition.</li>
-            <li>Terminology: This section lists the value sets and code system defined for HL7 FHIR® ADI Implementation Guide profiles.</li>
-            <li>Examples Instances: The section that contains examples of advance healthcare directive information that is conformant to the profiles of this guide.</li>
-        </ul>
-    </li>
-    <li>Examples: provide full document examples for </li>
-    <li>Release Notes: A summary of changes from the PACIO ADI STU1 release.</li>
-    <li>Downloads: This page provides links to downloadable artifacts.</li>
-</ul>
+
+- [**Home:**](index.html) The home page provides the introduction and background information to set context for the use of the HL7 FHIR® ADI Implementation Guide.
+- [**Table of Contents:**](toc.html) A list of the narrative pages and FHIR artifacts in the IG.
+- **General Guidance:** These pages provide overall guidance in using the profiles and transactions common to all ADI content types.
+  - [*Content Type Overview:*](content_type_overview.html) Content types provide a clear distinction for the two types of advance directive information. A detailed description of each type is provided.
+  - [*Document Lifecycle:*](document_lifecycle.html) Document management principles for handling documents over their full lifetime including persistent identity, document status, and metadata indexing for document discovery.
+  - [*System Use Cases:*](system_use_cases.html) A use case is a list of technical actions or event steps typically defining the interactions between a role and a system to achieve a goal. The actor can be a human or other external system. Technical scenarios that describe systems interactions between technical actors to implement the use case.
+  - [*Formal Specification:*](formal_specification.html) Information about conformance to the guide including Must Support requirements, document signatures, and document workflow.
+  - [*Security, Privacy, and Consent:*](security_privacy_consent.html) General security requirements and recommendations for HL7 FHIR® ADI Implementation Guide actors, including authentication, authorization, and logging requirements and guidance.
+  - [*Signatures:*](signatures.html) Fundamentals on the need for signatures on advance healthcare directive documents and the differences between electronic and digital signatures.
+  - [*Search Parameters:*](search_parameters.html) A listing of the supported search parameters for FHIR Resources profiled in this IG.
+  - [*Key Terms and Acronyms:*](key_terms_and_acronyms.html) A glossary of relevant terms described in advance directives.
+- **Person-Authored:** These sections provide the use cases and additional guidance specific to Person-Authored advance care plan (Personal ACP) and mental health advance directive (MHAD) documents:
+  - [*Person-Authored Document Workflow*](pacp_workflow.html) 
+  - [*Person-Authored Advance Care Plan (PACP) Guidance*](pacp_guidance.html) 
+  - [*Mental Health Advance Directive (MHAD) Guidance*](mhad_guidance.html) 
+- **Provider-Authored:** These sections provide the use cases and additional guidance specific to portable medical order (PMO) documents.
+  - [*Provider-Authored Document Workflow*](pmo_workflow.html)
+  - [*Portable Medical Order (PMO)*](pmo_guidance.html)
+- **Artifacts:** These sections provide detailed descriptions and formal definitions for all the FHIR artifacts defined in this guide.
+  - [*Profiles By Resource Type*](artifact_resource_type.html) A categorization of ADI profiles by their FHIR resource type.
+  - [*Artifacts Summary:*](artifacts.html) A list of the FHIR artifacts defined as part of this implementation guide, categorized by FHIR behaviors, structures, terminology, and examples.
+  - [*Capability Statement:*](artifacts.html#behavior-capability-statements) Defines the specific capabilities that different types of systems need to support to comply with this implementation guide. Systems conforming to this implementation guide are expected to declare conformance to one or more of the included capability statements.
+  - [*Structures - Resource Profiles:*](artifacts.html#structures-resource-profiles) This section lists the set of Profiles that are defined in this guide to exchange advance directive information. Each linked Profile page includes a narrative introduction and a formal definition.
+  - [*Structures - Extensions:*](artifacts.html#structures-extension-definitions) This section lists the set of Extensions that are defined in this guide that are used by the IG-defined profiles. Each linked Extension page includes a formal definition.
+  - [*Terminology - Value Sets:*](artifacts.html#terminology-value-sets) This section lists the value sets and code system defined for HL7 FHIR® ADI Implementation Guide profiles.
+  - [*Terminology - Local Code Systems:*](artifacts.html#terminology-code-systems) This section lists temporary local codes assigned to a value set when no specific ADI term is available for semantic representation. Formal requests are submitted to standard terminology organizations, such as LOINC or SNOMED, for new term assignment. Once the standard code is assigned and available, it will replace the temporary local code.
+  - [*Examples - Example Instances:*](artifacts.html#example-example-instances) The section contains an inventory of FHIR instances that conform to specific profiles of this guide.
+- [**Examples:**](examples_summary.html) This section provides comprehensive user stories and supporting examples.
+- [**Change Log:**](change_log.html) A summary of PACIO ADI FHIR IG changes and IG fixes.
+- [**Downloads:**](downloads.html) Links to downloadable artifacts.
 
 ### Authors and Contributors
 
