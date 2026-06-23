@@ -136,6 +136,8 @@ Encounter-centric Patient Instructions are used when a person is about to underg
  -->
 
 #### Clause Extension
-Advance directive documents often contain additional information, or clauses, related to specific areas of the document. This may include things like additional observations about which named healthcare agent is to be primary versus back-up, or a healthcare agent has been selected, or a statement by the author of the document that is felt to be important to the overall contents, and other information that provides context to the data otherwise expressed in the sections or entries of an ADI document. To support this information this guide has defined a [Clause extension](StructureDefinition-adi-clause-extension.html) to all of the Composition sections and various profiles and elements.
+Advance healthcare directive source form documents often contain contextual information in the various sections of the document. Contextual information may be relevant to preserve the meaning of information represented in structured data entries associated with a section. To enable representation of contextual information and make it more processable, this guide has defined a [clause extension](StructureDefinition-adi-clause-extension.html). The clause extension can be used to represent various types of contextually relevant information in any Composition section and within the context of a Consent Resource. Information that is not contextually relevant does not get represented using the clause extension. That information remains accessible as part of the source form.
+
+Examples of clauses include: statements made by a document author or their witness as well as administrative information associated with an advance healthcare directive.
 
 
