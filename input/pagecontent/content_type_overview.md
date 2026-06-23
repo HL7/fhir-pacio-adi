@@ -12,13 +12,12 @@ There is a very important distinction for the three types of ADI content that wi
 <table>
     <tr>
         <th width="50">&nbsp;</th>
-        <th colspan="2" style="background-color:#DEEBF7; border: 1px solid black; vertical-align: middle; padding: 5px"><p style="font-size: 14px;"><b>Person-Authored Advance Directive Documents</b></p></th>
+        <th colspan="2" style="background-color:#DEEBF7; border: 1px solid black; vertical-align: middle; padding: 5px"><p style="font-size: 14px;"><b>Person-Authored Advance Healthcare Directive Documents</b></p></th>
     </tr>
     <tr><td width="50">&nbsp;</td>
         <td width="25">&nbsp;</td>
         <td>
             <ul>
-                <li>Person-Authored documents</li>
                 <li>Used as a tool for establishing a healthcare agent (delegation of rights consenting to appoint an authorized personal representative in the role of healthcare agent) and sharing an individual’s medical treatment  intervention and care experience preferences, and care goals and priorities (GPP).</li>
                 <li>Provides guidance that a person would want others to know to inform treatment and care planning during a potential future medical emergency, in the case where the patient is unable to communicate with caregivers and medical personnel and the appointed healthcare agent needs to make decisions on the patient's behalf.</li>
                 <li>There is NO “contract” between the author (patient) and any other party involved in the future medical emergency that the GPP is required to be followed (i.e., no offer or acceptance, no consideration, no consequences for failure to follow the patient’s directives)</li>
