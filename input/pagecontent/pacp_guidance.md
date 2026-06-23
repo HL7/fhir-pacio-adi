@@ -17,7 +17,7 @@ Betsy then shares her advance directive information with her son Charles, her pr
 
 The ADI Personal ACP document defines 7 sections:
 1. Healthcare Agent - Healthcare agents, healthcare agent advisors, behavioral healthcare agents, and consent by the subject regarding the stated designees’ roles, powers, and limitations.
-2. Goals, Preferences, and Priorities for Certain Conditions – Preferences to be used in treatment or care planning that express a person’s goals, preferences, and priorities for care to be considered under specific situations or conditions.
+2. Goals, Preferences, and Priorities under Certain Conditions – Preferences to be used in treatment or care planning that express a person’s goals, preferences, and priorities for care to be considered under specific situations or conditions.
 3. Goals, Preferences, and Priorities Personal Care Experience – Characteristically these concepts express a person’s priorities for Quality of Life and the related care delivery experiences, personal goals, and preferences for that experience, which can be further grouped and placed into a Personal Priorities Organizer.
 4. Goals, Preferences, and Priorities Upon Death - Goals, preferences, and priorities a person expresses for those events that occur at the time of, or soon after, their death.
 5. Additional Documentation - Observations regarding the existence of other advance directive related information.
