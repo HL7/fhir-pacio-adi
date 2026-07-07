@@ -301,8 +301,8 @@ Usage: #example
 * target = Reference(PMO-Example-Smith-Johnson-PMOComposition1)
 * recorded = "2021-03-29T14:25:34.001-05:00"
 
-* agent[assembler].type = $HL7ProvenanceParticipantType#assembler "Assembler"
-* agent[assembler].who = Reference(Example-Smith-Johnson-OrganizationAssembler1)
+* agent[ProvenanceAssembler].type = $HL7ProvenanceParticipantType#assembler "Assembler"
+* agent[ProvenanceAssembler].who = Reference(Example-Smith-Johnson-OrganizationAssembler1)
 
 // TODO where does assembler or provenance get referenced to by the Composition (or doesn't it)?
 Instance: Example-Smith-Johnson-OrganizationAssembler1
