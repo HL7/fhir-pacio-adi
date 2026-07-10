@@ -181,6 +181,7 @@ Usage: #example
 * section[advance_directive_source_form].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p>I understand the purpose and effect of this Advance Directive, I agree with everything that is written in this form, and I have made this advance directive knowingly, willingly and after careful deliberation.</p>
 </div>"
+* section[advance_directive_source_form].extension[ADISourceFormJurisdiction].valueCodeableConcept = $USPSCodes#MI "Michigan"
 * section[advance_directive_source_form].entry[0] = Reference(Binary/Example-Stub-SourceForm-Smith-Johnson-Binary)
 
 * section[healthcare_agent].title = "Appointment of a Primary Healthcare Agent and Alternate Healthcare Agents"
