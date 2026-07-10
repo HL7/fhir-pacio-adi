@@ -76,6 +76,7 @@ Description: "This abstract profile defines constraints that represent common ad
     advance_directive_source_form 1..1 MS
 
 // ******* Advance Directive Source Form Section ********
+* section[advance_directive_source_form].extension contains adi-jurisdiction-extension named ADISourceFormJurisdiction 0..1 MS
 * section[advance_directive_source_form] ^short = "Advance directive source form"
 * section[advance_directive_source_form].title 1..1 MS
 * section[advance_directive_source_form].code 1..1 MS

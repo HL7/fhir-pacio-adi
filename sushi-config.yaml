@@ -44,6 +44,7 @@ parameters:
   apply-publisher: true
   path-expansion-params: '../../exp-params.json'
   pin-canonicals: pin-multiples
+  auto-oid-root: '2.16.840.1.113883.4.642.40.68'
 
 copyrightYear: 2021+
 releaseLabel: STU 2 – Ballot
