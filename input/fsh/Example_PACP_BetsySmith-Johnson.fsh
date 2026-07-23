@@ -1028,7 +1028,8 @@ Usage: #example
 // ---------------------
 
 Instance: Example-Smith-Johnson-DocumentationObservation1
-InstanceOf: $USCoreObservationADIDocumentation // fix for FHIR-51827 - replaced US Core equivalent of ADIDocumentationObservation
+InstanceOf: ADIDocumentationObservation		// fix for FHIR-57898 - Missing guidance on how to represent a person formally declining ACP Services
+// InstanceOf: $USCoreObservationADIDocumentation // fix for FHIR-51827 - replaced US Core equivalent of ADIDocumentationObservation
 Description: "Example Patient Smith-Johnson PMOLST Documentation Observation"
 Usage: #example
 
@@ -1037,14 +1038,14 @@ Usage: #example
 <p><b>PMOLST Order Observation</b></p>
 <p><i>Order Exists: <a href='http://www.example.com'>available here</a></i></p>
 </div>"
+* extension[supporting-info].valueReference = Reference(DocumentReference/Example-Smith-Johnson-DocRef-DocumentReference)
 * status = #final
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * performer = Reference(Example-Smith-Johnson-Patient1)
 //* focus = "DocumentReference/Example-Smith-Johnson-Patient1-DocumentReference_PMOLST"
 * effectiveDateTime = "2021-03-29T14:25:34.001-05:00"
-* valueCodeableConcept = $SNOMEDCT#697978002 "Provider orders for life-sustaining treatment"
-* performer = Reference(Example-Smith-Johnson-Patient1)
-* effectiveDateTime = "2016-05-18T22:33:22Z"
+// * valueCodeableConcept = $SNOMEDCT#697978002 "Provider orders for life-sustaining treatment"
+* valueCodeableConcept = $SNOMEDCT#373066001 "Yes (qualifier value)"
 
 
 // Organization Examples

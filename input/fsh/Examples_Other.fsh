@@ -213,3 +213,19 @@ Usage: #example
 * doNotPerform = false
 
 // ------------------------------
+
+Instance: Example-Smith-Johnson-DocumentationObservation3-DeclinedACP
+InstanceOf: ADIDocumentationObservation		// fix for FHIR-57898 - Missing guidance on how to represent a person formally declining ACP Services
+Description: "Example Patient Smith-Johnson Declines ACP Services"
+Usage: #example
+
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>Patient declines Advance Care Planning (ACP) Services</b></p>
+</div>"
+* status = #final
+* subject = Reference(Example-Smith-Johnson-Patient1)
+* performer = Reference(ADI-Facilitator-MSW-MargaretReynolds)
+* effectiveDateTime = "2025-03-29T14:25:34.001-05:00"
+* valueCodeableConcept = $SNOMEDCT#373067005 "No (qualifier value)"
+* extension[adi-documentation-absent-reason].valueCodeableConcept = $HL7AdataAbsentReason#asked-declined "Asked But Declined"
