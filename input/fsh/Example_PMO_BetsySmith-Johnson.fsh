@@ -286,10 +286,9 @@ Usage: #example
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * performer = Reference(Example-Kyle-Anydoc-PractitionerRole1)
 //* focus = "DocumentReference/Example-Smith-Johnson-Patient1-DocumentReference_PMOLST"
+* extension[supporting-info].valueReference = Reference(Example-Smith-Johnson-DocRef-DocumentReference)
 * effectiveDateTime = "2021-03-29T14:25:34.001-05:00"
-* valueCodeableConcept = $SNOMEDCT#697978002 "Provider orders for life-sustaining treatment"
-* performer = Reference(Example-Smith-Johnson-Patient1)
-* effectiveDateTime = "2016-05-18T22:33:22Z"
+* valueCodeableConcept = $SNOMEDCT#373066001 "Yes (qualifier value)"
 
 // Provenance Examples
 
