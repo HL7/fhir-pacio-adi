@@ -1,5 +1,6 @@
 //USCore -
 //Alias:   $USCoreLocation = http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
+Alias:   $USCoreADIDocumentation = http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-adi-documentation
 Alias:   $USCorePatient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
 Alias:   $USCorePractitioner = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
 Alias:   $USCorePractitionerRole = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole
@@ -84,6 +85,7 @@ Alias: $VSACADIPersonAuthoredDocumentTypes = http://cts.nlm.nih.gov/fhir/ValueSe
 Alias: $VSACADIPMODocumentTypes = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.40
 Alias: $VSACADIWitnessCategory = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.21
 Alias: $VSACPersonalAndLegalRelationshipRoleType = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.11.20.12.1
+Alias: $VSACAnswerSetWithYesNoAndUnknowns = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.16
 
 // Standard extension aliases
 Alias: $data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason

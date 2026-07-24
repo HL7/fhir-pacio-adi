@@ -64,6 +64,7 @@
 <artifact id="StructureDefinition/ADI-UponDeathPreferences" key="StructureDefinition-ADI-UponDeathPreferences" name="ADI Upon Death Preferences"/>
 <artifact id="StructureDefinition/ADI-Witness" key="StructureDefinition-ADI-Witness" name="ADI Witness"/>
 <artifact id="PractitionerRole/ADI-Facilitator-MSW-MargaretReynolds" key="PractitionerRole-ADI-Facilitator-MSW-MargaretReynolds" name="ADI-Facilitator-MSW-MargaretReynolds"/>
+<artifact id="StructureDefinition/adi-documentation-absent-reason" key="StructureDefinition-adi-documentation-absent-reason" name="Advance Directive Absent Reason"/>
 <artifact deprecated="true" id="ValueSet/PADIAdvanceDirectiveCategoriesVS" key="ValueSet-PADIAdvanceDirectiveCategoriesVS" name="Advance Directive Categories"/>
 <artifact id="ValueSet/ADIPractitionerRoleVS" key="ValueSet-ADIPractitionerRoleVS" name="Advance Directive Provider Attester Role"/>
 <artifact deprecated="true" id="StructureDefinition/padi-attestationInformation-extension" key="StructureDefinition-padi-attestationInformation-extension" name="Attestation Information"/>
@@ -85,7 +86,7 @@
 <artifact id="SearchParameter/Consent-id" key="SearchParameter-Consent-id" name="Consent-id"/>
 <artifact deprecated="true" id="StructureDefinition/padi-contextualValue-extension" key="StructureDefinition-padi-contextualValue-extension" name="Contextual Value"/>
 <artifact id="StructureDefinition/adi-dataEnterer-extension" key="StructureDefinition-padi-dataEnterer-extension" name="Data Enterer"/>
-<artifact id="StructureDefinition/adi-document-location" key="StructureDefinition-adi-document-location" name="Document Location"/>
+<artifact deprecated="true" id="StructureDefinition/adi-document-location" key="StructureDefinition-adi-document-location" name="Document Location"/>
 <artifact id="SearchParameter/DocumentReference-authenticator" key="SearchParameter-DocumentReference-authenticator" name="DocumentReference-authenticator"/>
 <artifact id="SearchParameter/DocumentReference-author" key="SearchParameter-DocumentReference-author" name="DocumentReference-author"/>
 <artifact id="SearchParameter/DocumentReference-category" key="SearchParameter-DocumentReference-category" name="DocumentReference-category"/>
@@ -165,12 +166,14 @@
 <artifact id="Observation/Example-Smith-Johnson-CareExperiencePreference7" key="Goal-Example-Smith-Johnson-CareExperiencePreference7" name="Example-Smith-Johnson-CareExperiencePreference7"/>
 <artifact id="Observation/Example-Smith-Johnson-CareExperiencePreference8" key="Goal-Example-Smith-Johnson-CareExperiencePreference8" name="Example-Smith-Johnson-CareExperiencePreference8"/>
 <artifact id="Observation/Example-Smith-Johnson-DecisionalCapacity1" key="Observation-Example-Smith-Johnson-DecisionalCapacity1" name="Example-Smith-Johnson-DecisionalCapacity1"/>
+<artifact id="DocumentReference/Example-Smith-Johnson-DocRef-ACP-Decline-Service" key="DocumentReference-Example-Smith-Johnson-DocRef-ACP-Decline-Service" name="Example-Smith-Johnson-DocRef-ACP-Decline-Service"/>
 <artifact deprecated="true" id="Binary/Example-Smith-Johnson-DocRef-Binary1" key="Binary-Example-Smith-Johnson-DocRef-Binary1" name="Example-Smith-Johnson-DocRef-Binary1"/>
 <artifact id="DocumentReference/Example-Smith-Johnson-DocRef-Bundle" key="DocumentReference-Example-Smith-Johnson-DocRef-Bundle" name="Example-Smith-Johnson-DocRef-Bundle"/>
 <artifact id="Device/Example-Smith-Johnson-DocRef-Device1" key="Device-Example-Smith-Johnson-DocRef-Device1" name="Example-Smith-Johnson-DocRef-Device1"/>
 <artifact id="DocumentReference/Example-Smith-Johnson-DocRef-DocumentReference" key="DocumentReference-Example-Smith-Johnson-DocRef-DocumentReference" name="Example-Smith-Johnson-DocRef-DocumentReference"/>
 <artifact id="Observation/Example-Smith-Johnson-DocumentationObservation1" key="Observation-Example-Smith-Johnson-DocumentationObservation1" name="Example-Smith-Johnson-DocumentationObservation1"/>
 <artifact id="Observation/Example-Smith-Johnson-DocumentationObservation2" key="Observation-Example-Smith-Johnson-DocumentationObservation2" name="Example-Smith-Johnson-DocumentationObservation2"/>
+<artifact id="Observation/Example-Smith-Johnson-DocumentationObservation3-DeclinedACP" key="Observation-Example-Smith-Johnson-DocumentationObservation3-DeclinedACP" name="Example-Smith-Johnson-DocumentationObservation3-DeclinedACP"/>
 <artifact id="Endpoint/Example-Smith-Johnson-Endpoint1" key="Endpoint-Example-Smith-Johnson-Endpoint1" name="Example-Smith-Johnson-Endpoint1"/>
 <artifact id="Endpoint/Example-Smith-Johnson-Endpoint2" key="Endpoint-Example-Smith-Johnson-Endpoint2" name="Example-Smith-Johnson-Endpoint2"/>
 <artifact id="RelatedPerson/Example-Smith-Johnson-HealthcareAgent1" key="RelatedPerson-Example-Smith-Johnson-HealthcareAgent1" name="Example-Smith-Johnson-HealthcareAgent1"/>
