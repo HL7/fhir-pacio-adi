@@ -13,12 +13,14 @@ Description: "This profile is used to indicate if additional advance directive d
 // * code MS
 // * code = $LOINC#42348-3 "Advance healthcare directives"
 
-// added Invariant for dataAbsentReason and then commented out since this Invariant conflicts with USCore Observation obs-6 'dataAbsentReason SHALL only be present if Observation.value[x] is not present (dataAbsentReason.empty() or value.empty())’. 
-// * obeys obs-data-absent-reason-required
+// The absent-reason extension is required for a "No" answer; unlike
+// Observation.dataAbsentReason, it does not conflict with US Core obs-6.
 
 * extension contains
     adi-document-location named ADIDocumentLocationExtension 0..1 MS and // fix for FHIR-40376
     adi-documentation-absent-reason named ADIDocumentationAbsentReason 0..1 MS // mlt_20260722: added to support Declined ACP Service representation (https://jira.hl7.org/browse/FHIR-57898)
+
+* obeys obs-data-absent-reason-required // mlt_20260722: added to support Declined ACP Service representation (https://jira.hl7.org/browse/FHIR-57898)
 
 * subject 1..1 MS
 * subject only Reference($USCorePatient)
@@ -39,4 +41,3 @@ Description: "This profile is used to indicate if additional advance directive d
 * performer 1..1
 * note MS
 * performer ^comment = "The party responsible for or made the observation. For individual (patient) authored advance directive documents this will likely be the patient."
-
