@@ -86,7 +86,7 @@
 <artifact id="SearchParameter/Consent-id" key="SearchParameter-Consent-id" name="Consent-id"/>
 <artifact deprecated="true" id="StructureDefinition/padi-contextualValue-extension" key="StructureDefinition-padi-contextualValue-extension" name="Contextual Value"/>
 <artifact id="StructureDefinition/adi-dataEnterer-extension" key="StructureDefinition-padi-dataEnterer-extension" name="Data Enterer"/>
-<artifact id="StructureDefinition/adi-document-location" key="StructureDefinition-adi-document-location" name="Document Location"/>
+<artifact deprecated="true" id="StructureDefinition/adi-document-location" key="StructureDefinition-adi-document-location" name="Document Location"/>
 <artifact id="SearchParameter/DocumentReference-authenticator" key="SearchParameter-DocumentReference-authenticator" name="DocumentReference-authenticator"/>
 <artifact id="SearchParameter/DocumentReference-author" key="SearchParameter-DocumentReference-author" name="DocumentReference-author"/>
 <artifact id="SearchParameter/DocumentReference-category" key="SearchParameter-DocumentReference-category" name="DocumentReference-category"/>
@@ -166,6 +166,7 @@
 <artifact id="Observation/Example-Smith-Johnson-CareExperiencePreference7" key="Goal-Example-Smith-Johnson-CareExperiencePreference7" name="Example-Smith-Johnson-CareExperiencePreference7"/>
 <artifact id="Observation/Example-Smith-Johnson-CareExperiencePreference8" key="Goal-Example-Smith-Johnson-CareExperiencePreference8" name="Example-Smith-Johnson-CareExperiencePreference8"/>
 <artifact id="Observation/Example-Smith-Johnson-DecisionalCapacity1" key="Observation-Example-Smith-Johnson-DecisionalCapacity1" name="Example-Smith-Johnson-DecisionalCapacity1"/>
+<artifact id="DocumentReference/Example-Smith-Johnson-DocRef-ACP-Decline-Service" key="DocumentReference-Example-Smith-Johnson-DocRef-ACP-Decline-Service" name="Example-Smith-Johnson-DocRef-ACP-Decline-Service"/>
 <artifact deprecated="true" id="Binary/Example-Smith-Johnson-DocRef-Binary1" key="Binary-Example-Smith-Johnson-DocRef-Binary1" name="Example-Smith-Johnson-DocRef-Binary1"/>
 <artifact id="DocumentReference/Example-Smith-Johnson-DocRef-Bundle" key="DocumentReference-Example-Smith-Johnson-DocRef-Bundle" name="Example-Smith-Johnson-DocRef-Bundle"/>
 <artifact id="Device/Example-Smith-Johnson-DocRef-Device1" key="Device-Example-Smith-Johnson-DocRef-Device1" name="Example-Smith-Johnson-DocRef-Device1"/>

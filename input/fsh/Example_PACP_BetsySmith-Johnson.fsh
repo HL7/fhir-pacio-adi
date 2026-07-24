@@ -1145,7 +1145,7 @@ Usage: #example
 
 * extension[adi-jurisdiction-extension].valueCodeableConcept = urn:iso:std:iso:3166:-2#US-MI
 * extension[adi-docVersionNumber-extension].valueString = "2015-11-05T15:52:20.000+00:00"
-* extension[adi-document-location].valueString = "http://example.org/DocumentLocation/document12345.txt"
+// * extension[adi-document-location].valueString = "http://example.org/DocumentLocation/document12345.txt" // mlt_20260724: replace with supportingInfo docref.
 
 * status = #current
 * docStatus = #final

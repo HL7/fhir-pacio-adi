@@ -216,21 +216,20 @@ Context: Composition, DocumentReference
 // * valueReference 1..1 MS
 // * valueReference only Reference(ADIDocumentReference)
 
-// TODO Could add Invariant for Signature.type matching the attesterRole
-// TODO Notary Expiration Date?
+// mlt_20260724: Removed ADIDocumentLocationExtension profile as part of the fix for FHIR-57898: IG needs better guidance on how to representing ACP Services discussions
 
-Extension: ADIDocumentLocationExtension
-Id: adi-document-location
-Title: "Document Location"
-Description: "The Advance Directive document location. This location is the endpoint URL that points to the ADI document or resource that exists or a string."
-Context: DocumentReference
-* value[x] only Reference(Endpoint) or string
-* value[x] 0..1 MS
-* valueReference 0..1 MS
-* valueReference only Reference(Endpoint)
-* valueString 0..1 MS
-* valueString ^short = "A FHIR endpoint URL that points to the ADI document or resource that exists."
-* valueString ^comment = "A FHIR endpoint URL that points to the ADI document or resource that exists.  This is used when the document is not available in the FHIR server, such as a PDF or other file format."
+// Extension: ADIDocumentLocationExtension
+// Id: adi-document-location
+// Title: "Document Location"
+// Description: "The Advance Directive document location. This location is the endpoint URL that points to the ADI document or resource that exists or a string."
+// Context: DocumentReference
+// * value[x] only Reference(Endpoint) or string
+// * value[x] 0..1 MS
+// * valueReference 0..1 MS
+// * valueReference only Reference(Endpoint)
+// * valueString 0..1 MS
+// * valueString ^short = "A FHIR endpoint URL that points to the ADI document or resource that exists."
+// * valueString ^comment = "A FHIR endpoint URL that points to the ADI document or resource that exists.  This is used when the document is not available in the FHIR server, such as a PDF or other file format."
 
 
 // *** NEW 

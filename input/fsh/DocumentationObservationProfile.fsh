@@ -17,8 +17,8 @@ Description: "This profile is used to indicate if additional advance directive d
 // Observation.dataAbsentReason, it does not conflict with US Core obs-6.
 
 * extension contains
-    adi-document-location named ADIDocumentLocationExtension 0..1 MS and // fix for FHIR-40376
     adi-documentation-absent-reason named ADIDocumentationAbsentReason 0..1 MS // mlt_20260722: added to support Declined ACP Service representation (https://jira.hl7.org/browse/FHIR-57898)
+    // adi-document-location named ADIDocumentLocationExtension 0..1 MS and // fix for FHIR-40376; mlt_20260724: removed as part of fix for FHIR-57898
 
 * obeys obs-data-absent-reason-required // mlt_20260722: added to support Declined ACP Service representation (https://jira.hl7.org/browse/FHIR-57898)
 
