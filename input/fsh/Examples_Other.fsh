@@ -208,7 +208,8 @@ Usage: #example
 
 * subject = Reference(Patient/Example-Smith-Johnson-Patient1)
 * requester = Reference(Practitioner/Example-Kyle-Anydoc-Practitioner)
-* code = $LOINC#LA33475-7 "Comfort-focused treatments"
+* code = $SNOMEDCT#116859006 "Transfusion of blood product (procedure)"
+* extension[adi-trialperiod-extension].valueString = "2 weeks"
 * authoredOn = "2024-03-29T14:25:34.001-05:00"
 * doNotPerform = false
 

@@ -30,5 +30,6 @@ Description: "Person-Authored Care Experience Preference is a clinical statement
 * subject only Reference($USCorePatient)
 
 * value[x] 1..1 MS
+* value[x] only CodeableConcept or string
 
 * extension contains adi-enclosedPrecondition-extension named EnclosedPreconditionExtension 0..1
