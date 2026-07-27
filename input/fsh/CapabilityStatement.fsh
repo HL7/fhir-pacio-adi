@@ -116,7 +116,8 @@ Usage: #definition
 * rest.resource[=].interaction[=].extension.valueCode = #SHOULD
 * rest.resource[=].interaction[=].code = #history-instance
 * rest.resource[=].referencePolicy = #resolves
-* rest.resource[=].supportedProfile[0] = Canonical(ADI-HealthcareAgentConsent)
+* rest.resource[=].supportedProfile[0] = Canonical(ADI-HealthcareAgentConsentPermit)
+* rest.resource[=].supportedProfile[+] = Canonical(ADI-HealthcareAgentConsentDeny)
 * rest.resource[=].type = #Consent
 
 // **** DocumentReference Expectations ****
@@ -589,6 +590,8 @@ Usage: #definition
 * rest.resource[=].interaction[=].code = #history-instance
 * rest.resource[=].referencePolicy = #resolves
 * rest.resource[=].supportedProfile[0] = Canonical(ADI-HealthcareAgentParticipant)
+* rest.resource[=].supportedProfile[+] = Canonical(ADI-Witness)
+* rest.resource[=].supportedProfile[+] = Canonical(ADI-Notary)
 * rest.resource[=].type = #RelatedPerson
 * rest.security.description = "1. See the [Guidance](security_privacy_consent.html) section for requirements and recommendations.\n1. A server **SHALL** reject any unauthorized requests by returning an HTTP 401 \"Unauthorized\", HTTP 403 \"Forbidden\", or HTTP 404 \"Not Found\" response code."
 * status = #active
