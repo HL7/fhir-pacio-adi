@@ -4,6 +4,9 @@
 ### Bundle
 * [ADI Bundle](StructureDefinition-ADI-Bundle.html)
 
+### CapabilityStatement
+* [ADI CapabilityStatement](CapabilityStatement-adi.html)
+
 ### Care Plan
 * [ADI Person-Authored Preference Care Plan](StructureDefinition-ADI-PreferenceCarePlan.html)
 
