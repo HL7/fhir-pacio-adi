@@ -35,7 +35,7 @@
     </tr>
         <tr>
         <td>Portable Medical Order</td>
-        <td><p>A Portable Medical Order (PMO) document is a Provider-Authored advance directive where the patient, or their healthcare agent, provides direct input in the creation of the instructions which specify decisions that have been made about treatments that may, or may not be, utilized during a medical emergency occurring within the current episode of care. A PMO document may contain one or more portable medical order entries. Each portable medical order entry is also called a portable medical order.
+        <td><p>A Portable Medical Order (PMO) document is a Provider-Authored Advance Healthcare Directive where the patient, or their healthcare agent, provides direct input in the creation of the instructions which specify decisions that have been made about treatments that may, or may not be, utilized during a medical emergency occurring within the current episode of care.  A PMO document is a collection or panel of one or more portable medical order entries and may include other information such as completion information, signatures, witness and notary, and additional documentation pertaining alignment with advance directive, etc.  The collection and the singular entry both use the same term.
         </p></td>
     </tr>
     <tr>
