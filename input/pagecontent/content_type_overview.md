@@ -104,7 +104,7 @@ ADI native documents using FHIR are instances of the `Bundle` resource with the 
 
 FHIR `Bundle` documents consist of multiple entry resources within it. The first entry *SHALL* be a `Composition` resource. The `Composition` resource acts as the header and organizational construct. It contains information about the document such as the category and type of document, dates, and references to the various participants of the document, as well as document sections used to categorize or organize the contained entries. 
 
-#### Minimal Required Structured Data
+#### Utilizing Minimally Structured Documents
 
 The ADI document types follow an approach which supports the minimal amount of required structured data. Under this approach, the full source form of the document is always included in the initial section of the Composition.  This source form section is identified using the same type code as the document itself (in section.code). 
 
@@ -116,6 +116,26 @@ This structure is common to all ADI document types. The original source form of 
 * the readiness of document recipients to perform data processing on included content
 
 Reference the IG section, [Advance Directive Structure Requirements](formal_specification.html#advance-directive-document-structure-requirements), for further guidance.
+
+##### Minimally Structured Documents: A Better Implementation Approach
+Minimally Structured Documents enable an optimizable Progressive Structuring design which supports Progressive Interoperability. Healthcare interoperability has long presented implementers with an uncomfortable choice. Unstructured documents faithfully preserve the complete human-readable clinical story but expose little information for machine processing. Fully structured documents maximize computable content but require substantial implementation effort and the resulting rendered information feels unfamiliar for human users. Minimally Structured Documents provide a practical middle ground by preserving the native source form within a structured document framework and including only the structured data needed to support downstream workflows and clinical decisions. Rather than treating interoperability as an all or nothing proposition to be achieved in a single leap, the Minimally Structured Documents approach offers optimal evolution through Progressive Interoperability. It’s the timeless tortoise vs. hare tale with no surprise ending. Slow and steady wins the race.
+
+###### Progressive Interoperability Principles
+The design philosophy of Progressive Interoperability is grounded in principles that balance innovation with practicality. This philosophy provides a sustainable roadmap for organizations at every stage of interoperability maturity, assuring the value of receiving structured data is recognized before the burden of producing it is born. It recognizes that sustainable progress is achieved through a sequence of manageable improvements that collectively transform an ecosystem over time.
+* *Value matters, not volume.* The objective is not to maximize structured data—it’s to maximize the value of what can be achieved with the structured data that is supplied.
+* *Evolve with deliberation, not exuberance.* We need to meet stakeholders where they are and improve through deliberate, incremental change. Like orthodontic treatments that improve your smile, lasting transformation comes from a series of purposeful adjustments that steadily move toward a well-defined destination. Crooked teeth can’t be straightened in a single crank. It takes purposeful pressure at the right level, applied over time.
+* *Preserve the story while making it more usable.* The clinical narrative of a document remains the authoritative information source. How the source information is represented is inherently part of its context and meaning. The fidelity and authenticity of the source form is essential to preserve information as it is shared. The structured data that accompanies a document is not the “truth”, it’s a biproduct devised to improve access and increase computer processing possibilities. 
+
+###### Progressive Structuring Design Methodology
+Progressive Structuring is the design methodology at the heart of Minimally Structured Documents. Instead of requiring an all-or-nothing choice between a fully structured data representation of the information in a document, or none, Progressive Structuring starts by including the source form of the document within a structured body. The structured body framework can then progressively become more data enriched as implementation maturity and demonstrated business value increase. Enhancements can be introduced incrementally as they deliver measurable value and inclusion of the information’s source form is never omitted. It’s a middle-ground structured document design, built to fit more naturally with today’s existing workflows and systems.
+
+###### Figure 1
+This illustration shows the progression from a pdf document that has no structured data to an Unstructured Document which has a structured header but no structured data in the body, as opposed to a Fully Structured Document which has a structured header and every bit of the informational content of the document is represented. 
+
+DIAGRAM WILL GO HERE.
+
+###### A New Architectural Pattern for Documents
+Minimally Structured Documents do not replace existing healthcare document standards like CDA and FHIR. Instead, they establish an architectural pattern for structured documents that simplifies adoption, accelerates interoperability, and provides a bridge between today's inert paper documents and tomorrow's increasingly computable document data troves. Progressive Structuring allows every organization to contribute meaningful interoperability improvements today using their existing documents and evolution to come at a value-based pace.
 
 #### Handling Expiration Dates
 
