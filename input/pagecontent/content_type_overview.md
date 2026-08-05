@@ -160,4 +160,19 @@ Advance healthcare directive source form documents often contain contextual in
 
 Examples of clauses include: statements made by a document author or their witness as well as administrative information associated with an advance healthcare directive.
 
+### Advance Healthcare Directive Document Content Principles
+In order to accurate represent the semantic content contained in Advance Healthcare Directive Documents, the following principles have been applied when creating machine processable entries to represent information expressed in the source form of the document.
 
+#### Observation Resource Is Used for Patient Preferences
+The FHIR Observation Resource is used to represent care experience or treatment intervention preferences documented by an individual. This information exist to instruct a decision-maker (i.e. an appointed healthcare agent or care provider/ethics committee performing without access to an appointed healthcare agent) what the patient documented as their wishes.  This type of person authored information is documented using Observations with semantic coding to tell the statements are care experience or treatment preferences which are not conditional in nature.
+
+#### Consent Resource Is Used for Patient's Designation of a Healthcare Agent
+The FHIR Consent Resource is Used to model decisions made by a person to delegate medical decision-making rights to another person or prioritized set of person's to consent to giving them the ability interact with care providers on the patient's behalf under circumstances identified in the consent such as "when the patient can't communicate for themself."
+
+#### ServiceRequest Is Used to Express "Portaable" Directives Ordered by a Physician Intended to Travel With the Patient
+The FHIR ServiceRequest Resource is used to represent a "portable order" signed by the Patient and initiated as directives by a signing Physician who may not have authority to place an actual order in the prevailing EHR where care is being provided: Once decisions have been made by the patient or their healthcare agent, a physician can document these decisions through a POLST document as "portable medical orders" that stand across encounters regardless what care team may get involved in the future.  A POLST document may address many types of procedures. One POLST document many include one or many individual orders. Each individual portable medical order within the document is represented as ServiceRequest with an intent of "directive". Physicians or Emergency Responders acting on the "directive" ServiceRequest can easily convert this type of ServiceRequest into one with an intent of "order" within the system where they have priviledges to place Orders.  
+
+When nested  in the context of a CarePlan which expresses the circumstances under which this request would be pertinent, the ServiceRequest is conditional upon the stated conditions being true.
+
+#### CarePlan Is Used to Express Conditional Preferences or Complex Statements Including Relevant Scenarios or Intended Goals Pertinent for the Intention
+The FHIR CarePlan Resource is used for conditional preferences or complex statements that express complex conditional statement that involves an if-clause and then a main clause. These complex statements may also indicate a specific goal the stated activities are intended to acheive. A CarePlan resource is used to accurately capture these semantic nuances of the person's conditional or goal-oriented intention.
