@@ -106,11 +106,11 @@ FHIR `Bundle` documents consist of multiple entry resources within it. The first
 
 #### Utilizing Minimally Structured Documents
 
-The ADI document types follow an approach which supports the minimal amount of required structured data. Under this approach, the full source form of the document is always included in the initial section of the Composition.  This source form section is identified using the same type code as the document itself (in section.code). 
+The ADI document types follow an approach which initially supports the minimal amount of required structured data. Under this approach, the native Source Form of the document is always included in the initial section of the Composition.  The Source Form section is identified using the same type code as the document itself (in section.code). The Source Form Section includes the Binary represenation (The Source Form entry) of the source document information as it was operated on by individuals involved in the completion of the document. The Source Form Entry also may include additional machine processable data about the jurisdiction associated with the Source Form, its copyright holder, or other identifying information use as a Source Form designation established by the local jurisdiction, such as "Louisiana LaPOST".
 
 This approach ensures that all of the information in the document is available to support human readability.  Subsequent sections include information from the source document which are required in machine readable format to enable additional processes of that information. Only information required by document receivers to be available as structured data needs to be included in machine processable format.
 
-This structure is common to all ADI document types. The original source form of the document must alway be included in the body of the document. Requirements for inclusion of additional machine processable data depend on:
+This structure is common to all ADI document types. The original Source Form of the document must alway be included in the body of the document. Requirements for inclusion of additional machine processable data depend on:
 * the form of advance healthcare directive document
 * the ADI content type
 * the readiness of document recipients to perform data processing on included content
@@ -138,7 +138,6 @@ DIAGRAM WILL GO HERE.
 Minimally Structured Documents do not replace existing healthcare document standards like CDA and FHIR. Instead, they establish an architectural pattern for structured documents that simplifies adoption, accelerates interoperability, and provides a bridge between today's inert paper documents and tomorrow's increasingly computable document data troves. Progressive Structuring allows every organization to contribute meaningful interoperability improvements today using their existing documents as the complete source form for human reference, and then to evolve at a value-based pace adding structured data where systems are prepared to utilize it.
 
 #### Handling Expiration Dates
-
 ADI documents should have a time period whereby the patient preferences or the PMOs are legally valid. These are indicated by expiration dates within the `Person-Authored Composition` and `PMO Composition` profiles as such:
 * the start date for the AD:        `Composition.date`
 * the expiration date for the AD:   `Composition:extension:ExpirationDateExtension`
@@ -170,9 +169,39 @@ The FHIR Observation Resource is used to represent care experience or treatment 
 The FHIR Consent Resource is Used to model decisions made by a person to delegate medical decision-making rights to another person or prioritized set of person's to consent to giving them the ability interact with care providers on the patient's behalf under circumstances identified in the consent such as "when the patient can't communicate for themself."
 
 #### ServiceRequest Is Used to Express "Portaable" Directives Ordered by a Physician Intended to Travel With the Patient
-The FHIR ServiceRequest Resource is used to represent a "portable order" signed by the Patient and initiated as directives by a signing Physician who may not have authority to place an actual order in the prevailing EHR where care is being provided: Once decisions have been made by the patient or their healthcare agent, a physician can document these decisions through a POLST document as "portable medical orders" that stand across encounters regardless what care team may get involved in the future.  A POLST document may address many types of procedures. One POLST document many include one or many individual orders. Each individual portable medical order within the document is represented as ServiceRequest with an intent of "directive". Physicians or Emergency Responders acting on the "directive" ServiceRequest can easily convert this type of ServiceRequest into one with an intent of "order" within the system where they have priviledges to place Orders.  
+The FHIR ServiceRequest Resource is used to represent a "portable order" signed by the Patient and initiated as directives by a signing Physician who may not have authority to place an actual order in the prevailing EHR where care is being provided: Once decisions have been made by the patient or their healthcare agent, a physician can document these decisions through a POLST document as "portable medical orders" that stand across encounters regardless what care team may get involved in the future.  A POLST document may address many types of procedures. One POLST document many include one or many individual orders. Each individual portable medical order within the document is represented as ServiceRequest with an intent of "directive". Physicians or Emergency Responders acting on the "directive" ServiceRequest can easily convert this type of ServiceRequest into one with an intent of "order" within the system where they have priviledges to place Orders. The FHIR Procedure Resource is used to represent a specific intervention within the details of each ServiceRequest. 
 
 When nested  in the context of a CarePlan which expresses the circumstances under which this request would be pertinent, the ServiceRequest is conditional upon the stated conditions being true.
 
 #### CarePlan Is Used to Express Conditional Preferences or Complex Statements Including Relevant Scenarios or Intended Goals Pertinent for the Intention
 The FHIR CarePlan Resource is used for conditional preferences or complex statements that express complex conditional statement that involves an if-clause and then a main clause. These complex statements may also indicate a specific goal the stated activities are intended to acheive. A CarePlan resource is used to accurately capture these semantic nuances of the person's conditional or goal-oriented intention.
+
+#### Patient Is Used to Represent the Subject or Subject and Author for Person-Authored Document Types
+The FHIR Patient Resource is used to represent the individual who is the subject of the POLST document or the subject and author or their personal advance healthcare directive.
+
+#### RelatedPerson Is Used for Healthcare Agent, Witness, and Notary
+The FHIR RelatedPerson Resource is used to represent an individual who is being appointed to be a Healthcare Agent. It also is used to represent an individual who acts as a Witness or Notary when a document is being completed.
+
+#### PractitionerRole Is Used for Professional "Care Providers" Playing a Role in Document Creation and Completion
+The FHIR PractitionerRole Resource is used to represent a practitioner employed by a specific care organization who in involved in facilitating the creation or signing off on the completion of a portable medical order. The practitioner and the organization are joined together by the PractitionerRole resource. 
+
+#### Practitioner Is Used to Represent Individuals Acting in a Professional Capacity as a Care Provider
+The FHIR Practitioner Resource is used to represent the individual care provider. Professions also may be involved as facilitators supporting a person to fill out a personal advance directive. 
+
+#### Organization Is Used to Represent Organizations
+The FHIR Organization Resource is used to represent the organization providing care to the Patient where involved care providers are employed. The Organization Resource also is used to represent the Organization responsible for maintaining the Source Form Document.
+
+#### Provenance Is Used to Record Relevant Activities Performed on the Document
+The FHIR Provenance Resource is used to record relevant actions taken on or for an Advance Healthcare Directive Document throughout the life-cycle for the document, making the relevant history of the document transparent and easily accessible for review with the document itself.
+
+#### Composition Is Used to Organize the Attested Source Form and Human Readable Content along with Associated Machine Processable Entries
+The FHIR Composition Resource is used to formulate the digital content of the document for exchange between systems.
+
+#### Bundle Is Used to Instantiate a Completed Version of the Document
+The FHIR Bundle Resource is used to establish a persistent snapshot of the document in time and preserve it an an immutable record of a completed document. When appropriate it also can include relevant Provenance Resources associated with the document to support full transparency for the Provenance of the information.
+
+#### DocumentReference Is Used to Register and Index a Document to Enable Searching and Retrieval Through a FHIR Document Management Server
+The FHIR DocumentReference Resource is used to catalogue a completed Advance Healthcare Directive Document to make it findable by others.
+
+#### Alignment with CDA Representations
+This FHIR IG is the primary source for defining Advance Healthcare Directive Documents and their digital representation formats.  However, it operates in harmony with the CDA IG produced for the same purpose. The structured document representation principles are aligned between these two IGs and CDA templates are not updated to remain in synch with information representation designs developed in FHIR.
