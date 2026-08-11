@@ -129,10 +129,12 @@ The design philosophy of Progressive Interoperability is grounded in principles 
 ##### Progressive Structuring Design Methodology
 Progressive Structuring is the design methodology at the heart of Minimally Structured Documents. Instead of requiring an all-or-nothing choice between a fully structured data representation of the information in a document, or none, Progressive Structuring starts by including the source form of the document within a structured body. The structured body framework can then progressively become more data enriched as implementation maturity and demonstrated business value increase. Enhancements can be introduced incrementally as they deliver measurable value and inclusion of the information’s source form is never omitted. It’s a middle-ground structured document design, built to fit more naturally with today’s existing workflows and systems.
 
-###### Figure 1
+###### Figure 1. Conceptualizing Minimally Structured Document Architecture
 This illustration shows the progression from a pdf document that has no structured data to an Unstructured Document which has a structured header but no structured data in the body, as opposed to a Fully Structured Document which has a structured header and every bit of the informational content of the document is represented. 
 
-DIAGRAM WILL GO HERE.
+<p align="center">
+    <img src="./minimally_structured_documents.svg" alt="Minimally Structured Documents" style="width: 80%; float: none; vertical-align: middle;"/>
+</p>
 
 ##### A New Architectural Pattern for Documents
 Minimally Structured Documents do not replace existing healthcare document standards like CDA and FHIR. Instead, they establish an architectural pattern for structured documents that simplifies adoption, accelerates interoperability, and provides a bridge between today's inert paper documents and tomorrow's increasingly computable document data troves. Progressive Structuring allows every organization to contribute meaningful interoperability improvements today using their existing documents as the complete source form for human reference, and then to evolve at a value-based pace adding structured data where systems are prepared to utilize it.
