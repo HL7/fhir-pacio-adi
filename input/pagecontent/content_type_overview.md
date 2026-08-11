@@ -133,7 +133,7 @@ Progressive Structuring is the design methodology at the heart of Minimally Stru
 This illustration shows the progression from a pdf document that has no structured data to an Unstructured Document which has a structured header but no structured data in the body, as opposed to a Fully Structured Document which has a structured header and every bit of the informational content of the document is represented. 
 
 <p align="center">
-    <img src="./minimally_structured_documents.svg" alt="Minimally Structured Documents" style="width: 80%; float: none; vertical-align: middle;"/>
+    <img src="./minimally_structured_documents.svg" type="image/svg+xml" alt="Minimally Structured Documents" style="width: 80%; float: none; vertical-align: middle;"/>
 </p>
 
 ##### A New Architectural Pattern for Documents
