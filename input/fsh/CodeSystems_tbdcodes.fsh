@@ -18,4 +18,6 @@ Description: "Codes to be used as placeholders until they have a formal assigned
 * #adi-document-location "ADI document location endpoint" "A FHIR endpoint URL that points to the ADI document or resource that exists."
 * #advance_directive_source_form "ADI source form" "The designation that the Advance Directive Composition"
 * #serious-advanced-condition "Serious advanced condition" "The medical or serious advanced condition that makes the patient appropriate for a portable medical order (PMO)."
+* #urn:hl7-org:pe:fhir-adi:pacp:2.0 "PACP format code version 2.0" "The code that indicates the format of the PACP document"
+* #urn:hl7-org:pe:fhir-adi:pmo:2.0 "PMO format code version 2.0" "The code that indicates the format of the PMO document"
 * ^copyright = "This CodeSystem is not copyrighted."

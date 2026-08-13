@@ -31,7 +31,7 @@ description: PACIO Advance Directive Interoperability Implementation Guide
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.us.core: 8.0.1
+  hl7.fhir.us.core: 9.0.0
   us.nlm.vsac:
     uri: 'http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac'
     version: 0.24.0
@@ -44,6 +44,7 @@ parameters:
   apply-publisher: true
   path-expansion-params: '../../exp-params.json'
   pin-canonicals: pin-multiples
+  auto-oid-root: '2.16.840.1.113883.4.642.40.68'
 
 copyrightYear: 2021+
 releaseLabel: STU 2 – Ballot
@@ -69,12 +70,13 @@ menu:
     Personal Advance Care Plan (PACP): pacp_guidance.html
     Mental Health Advance Directive (MHAD): mhad_guidance.html
   Provider-Authored:
+    Provider-Authored Document Workflow: pmo_workflow.html
     Portable Medical Order (PMO): pmo_guidance.html
   Artifacts:
     Profiles by Resource Type: artifact_resource_type.html
     Artifacts Summary: artifacts.html
     Capability Statement: artifacts.html#behavior-capability-statements
-    Structures - ResourceProfiles: artifacts.html#structures-resource-profiles
+    Structures - Resource Profiles: artifacts.html#structures-resource-profiles
     Structures - Extensions: artifacts.html#structures-extension-definitions
     Terminology - Value Sets: artifacts.html#terminology-value-sets
     Terminology - Local Code Systems: artifacts.html#terminology-code-systems
@@ -109,6 +111,8 @@ pages:
     title: Person-Authored Advance Care Plan (PACP) Guidance
   mhad_guidance.md:
     title: Mental Health Advance Directive (MHAD) Guidance
+  pmo_workflow.md:
+    title: Provider-Authored Document Workflow
   pmo_guidance.md:
     title: Portable Medical Order (PMO) Guidance
   package_dependencies.md:

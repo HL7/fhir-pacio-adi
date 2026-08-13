@@ -122,7 +122,7 @@ Description: "This Composition profile is used to represent a Provider-Authored 
     adi_personal_goal 0..* and 
     adi_decisional_capacity 0..1 MS and
     adi_rationale_for_treatment 0..* MS and
-    adi_life_limiting_condition 0..1 MS and
+    adi_serious_advanced_condition 0..1 MS and
     adi_pmo_hospice_observation 0..1 MS 
 //    advance_directive_source_form 0..1 MS  
 
@@ -132,8 +132,8 @@ Description: "This Composition profile is used to represent a Provider-Authored 
 * section[administrative_information].entry[adi_decisional_capacity] ^short = "ADI Decisional Capacity"
 * section[administrative_information].entry[adi_rationale_for_treatment] only Reference(ADIRationaleForTreatment)
 * section[administrative_information].entry[adi_rationale_for_treatment] ^short = "ADI Rationale for Treatment"
-* section[administrative_information].entry[adi_life_limiting_condition] only Reference(ADISeriousAdvancedCondition)
-* section[administrative_information].entry[adi_life_limiting_condition] ^short = "ADI Life Limiting Condition"
+* section[administrative_information].entry[adi_serious_advanced_condition] only Reference(ADISeriousAdvancedCondition)
+* section[administrative_information].entry[adi_serious_advanced_condition] ^short = "ADI Serious Advanced Condition"
 * section[administrative_information].entry[adi_pmo_hospice_observation] only Reference(ADIPMOHospiceObservation)
 * section[administrative_information].entry[adi_pmo_hospice_observation] ^short = "Hospice or palliative care enrollment"
 

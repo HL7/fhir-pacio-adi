@@ -181,6 +181,7 @@ Usage: #example
 * section[advance_directive_source_form].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p>I understand the purpose and effect of this Advance Directive, I agree with everything that is written in this form, and I have made this advance directive knowingly, willingly and after careful deliberation.</p>
 </div>"
+* section[advance_directive_source_form].extension[ADISourceFormJurisdiction].valueCodeableConcept = $USPSCodes#MI "Michigan"
 * section[advance_directive_source_form].entry[0] = Reference(Binary/Example-Stub-SourceForm-Smith-Johnson-Binary)
 
 * section[healthcare_agent].title = "Appointment of a Primary Healthcare Agent and Alternate Healthcare Agents"
@@ -509,7 +510,7 @@ Usage: #example
 // Preference Care Plan
 
 Instance: Example-Smith-Johnson-PreferenceCarePlan1
-InstanceOf: ADIPreferenceCarePlan
+InstanceOf: ADIPersonAuthoredPreferenceCarePlan
 Description: "Example Patient Smith-Johnson Preference Care Plan 1"
 Usage: #example
 
@@ -539,7 +540,7 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-PreferenceCarePlan2
-InstanceOf: ADIPreferenceCarePlan
+InstanceOf: ADIPersonAuthoredPreferenceCarePlan
 Description: "Example Patient Smith-Johnson Preference Care Plan 2"
 Usage: #example
 
@@ -564,7 +565,7 @@ Usage: #example
 
 
 Instance: Example-Smith-Johnson-PreferenceCarePlan3
-InstanceOf: ADIPreferenceCarePlan
+InstanceOf: ADIPersonAuthoredPreferenceCarePlan
 Description: "Example Patient Smith-Johnson Preference Care Plan 3"
 Usage: #example
 
@@ -1027,7 +1028,8 @@ Usage: #example
 // ---------------------
 
 Instance: Example-Smith-Johnson-DocumentationObservation1
-InstanceOf: $USCoreObservationADIDocumentation // fix for FHIR-51827 - replaced US Core equivalent of ADIDocumentationObservation
+InstanceOf: ADIDocumentationObservation		// fix for FHIR-57898 - Missing guidance on how to represent a person formally declining ACP Services
+// InstanceOf: $USCoreObservationADIDocumentation // fix for FHIR-51827 - replaced US Core equivalent of ADIDocumentationObservation
 Description: "Example Patient Smith-Johnson PMOLST Documentation Observation"
 Usage: #example
 
@@ -1036,14 +1038,14 @@ Usage: #example
 <p><b>PMOLST Order Observation</b></p>
 <p><i>Order Exists: <a href='http://www.example.com'>available here</a></i></p>
 </div>"
+* extension[supporting-info].valueReference = Reference(DocumentReference/Example-Smith-Johnson-DocRef-DocumentReference)
 * status = #final
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * performer = Reference(Example-Smith-Johnson-Patient1)
 //* focus = "DocumentReference/Example-Smith-Johnson-Patient1-DocumentReference_PMOLST"
 * effectiveDateTime = "2021-03-29T14:25:34.001-05:00"
-* valueCodeableConcept = $SNOMEDCT#697978002 "Provider orders for life-sustaining treatment"
-* performer = Reference(Example-Smith-Johnson-Patient1)
-* effectiveDateTime = "2016-05-18T22:33:22Z"
+// * valueCodeableConcept = $SNOMEDCT#697978002 "Provider orders for life-sustaining treatment"
+* valueCodeableConcept = $SNOMEDCT#373066001 "Yes (qualifier value)"
 
 
 // Organization Examples
@@ -1143,7 +1145,7 @@ Usage: #example
 
 * extension[adi-jurisdiction-extension].valueCodeableConcept = urn:iso:std:iso:3166:-2#US-MI
 * extension[adi-docVersionNumber-extension].valueString = "2015-11-05T15:52:20.000+00:00"
-* extension[adi-document-location].valueString = "http://example.org/DocumentLocation/document12345.txt"
+// * extension[adi-document-location].valueString = "http://example.org/DocumentLocation/document12345.txt" // mlt_20260724: replace with supportingInfo docref.
 
 * status = #current
 * docStatus = #final

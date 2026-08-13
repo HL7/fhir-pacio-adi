@@ -85,20 +85,20 @@ Usage: #example
 
 // ------------------------------
 
-Instance: Example-Smith-Johnson-PMOCarePlan1
-InstanceOf: ADIPMOCarePlan
-Description: "Example Patient Smith-Johnson PMO Care Plan 1"
-Usage: #example
+// Instance: Example-Smith-Johnson-PMOCarePlan1
+// InstanceOf: ADIPMOCarePlan
+// Description: "Example Patient Smith-Johnson PMO Care Plan 1"
+// Usage: #example
 
-* text.status = #generated
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Example PMO Care Plan</p></div>"
+// * text.status = #generated
+// * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Example PMO Care Plan</p></div>"
 
-* status = #active
-* extension[adi-condition-code-extension].valueCodeableConcept = $SNOMEDCT#230690007 "Cerebrovascular accident (disorder)"
-* title = "Care Plan for Cerebrovascular accident"
-* subject = Reference(Example-Smith-Johnson-Patient1)
-* addresses[+].display = "Stroke and impaired speech."
-* goal.display = "Prescribe speech therapy to improve expressive dysphasia."
+// * status = #active
+// * extension[adi-condition-code-extension].valueCodeableConcept = $SNOMEDCT#230690007 "Cerebrovascular accident (disorder)"
+// * title = "Care Plan for Cerebrovascular accident"
+// * subject = Reference(Example-Smith-Johnson-Patient1)
+// * addresses[+].display = "Stroke and impaired speech."
+// * goal.display = "Prescribe speech therapy to improve expressive dysphasia."
 // * supportingInfo = Reference(Example-Smith-Johnson-CareExperiencePreference5)
 
 // ------------------------------
@@ -208,8 +208,47 @@ Usage: #example
 
 * subject = Reference(Patient/Example-Smith-Johnson-Patient1)
 * requester = Reference(Practitioner/Example-Kyle-Anydoc-Practitioner)
-* code = $LOINC#LA33475-7 "Comfort-focused treatments"
+* code = $SNOMEDCT#116859006 "Transfusion of blood product (procedure)"
+* extension[adi-trialperiod-extension].valueString = "2 weeks"
 * authoredOn = "2024-03-29T14:25:34.001-05:00"
 * doNotPerform = false
 
 // ------------------------------
+
+Instance: Example-Smith-Johnson-DocumentationObservation3-DeclinedACP
+InstanceOf: ADIDocumentationObservation		// fix for FHIR-57898 - Missing guidance on how to represent a person formally declining ACP Services
+Description: "Example Patient Smith-Johnson Declines ACP Services"
+Usage: #example
+
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>Patient declines Advance Care Planning (ACP) Services</b></p>
+</div>"
+* status = #final
+* subject = Reference(Patient/Example-Smith-Johnson-Patient1)
+* performer = Reference(ADI-Facilitator-MSW-MargaretReynolds)
+* effectiveDateTime = "2025-03-29T14:25:34.001-05:00"
+* valueCodeableConcept = $SNOMEDCT#373067005 "No (qualifier value)"
+* extension[supporting-info].valueReference = Reference(DocumentReference/Example-Smith-Johnson-DocRef-ACP-Decline-Service)
+* extension[adi-documentation-absent-reason].valueCodeableConcept = $HL7AdataAbsentReason#asked-declined "Asked But Declined"
+
+// ------------------------------
+
+Instance: Example-Smith-Johnson-DocRef-ACP-Decline-Service
+InstanceOf: $USCoreDocumentReference
+Usage: #Example
+Description: "Betsy Smith-Johnson Example Clinical Note declining Advance Care Planning (ACP) services."
+* status = #current
+* category = $LOINC#11506-3 "Progress note"
+* type = $LOINC#100532-1 "Social worker Outpatient Progress note"
+* type.text = "Social worker Progress Note"
+* subject = Reference(Patient/Example-Smith-Johnson-Patient1)
+* date = "2026-07-24T08:15:00.000+00:00"
+* custodian = Reference(Organization/org-ED-Metro-Hospital)
+* content.attachment.title = "Social worker Advance Care Planning Note for Betsy Smith-Johnson"
+* content.attachment.creation = "2026-07-24T08:15:00.000+00:00"
+* content.attachment.contentType = #text/plain
+* content.attachment.data = "R09PRCBIRUFMVEggQ0xJTklDCkNsaW5pY2FsIFNvY2lhbCBXb3JrIEVuY291bnRlciBOb3RlCgpQYXRpZW50OiBCZXRzeSBTbWl0aC1Kb2huc29uCk1STjogR0hDLTAwMDE4NDcgKGZpY3RpdGlvdXMpCkRhdGUgb2YgU2VydmljZTogMDcvMjQvMjAyNgpBdXRob3I6IE1hcmdhcmV0IFJleW5vbGRzLCBMQ1NXCkVuY291bnRlciBUeXBlOiBPdXRwYXRpZW50IFNvY2lhbCBXb3JrCgpNYXJnYXJldCBSZXlub2xkcywgTENTVywgbWV0IGJyaWVmbHkgd2l0aCBCZXRzeSBTbWl0aC1Kb2huc29uIGFuZCBwcm92aWRlZCBnZW5lcmFsIGVkdWNhdGlvbiByZWdhcmRpbmcgYWR2YW5jZSBjYXJlIHBsYW5uaW5nLCBpbmNsdWRpbmcgdGhlIHB1cnBvc2Ugb2YgZGlzY3Vzc2luZyBhbmQgZG9jdW1lbnRpbmcgZnV0dXJlIGhlYWx0aGNhcmUgcHJlZmVyZW5jZXMgYW5kIGlkZW50aWZ5aW5nIGEgaGVhbHRoY2FyZSBkZWNpc2lvbi1tYWtlci4gU29jaWFsIHdvcmsgc2VydmljZXMgd2VyZSBvZmZlcmVkIHRvIGFzc2lzdCB3aXRoIGZ1cnRoZXIgZGlzY3Vzc2lvbiBvciBjb21wbGV0aW9uIG9mIGFkdmFuY2UgY2FyZSBwbGFubmluZyBkb2N1bWVudHMuCgpNcy4gU21pdGgtSm9obnNvbiBkZWNsaW5lZCBhZHZhbmNlIGNhcmUgcGxhbm5pbmcgc2VydmljZXMgYXQgdGhpcyB0aW1lLCBzdGF0aW5nIHRoYXQgc2hlIHByZWZlcnMgbm90IHRvIGRpc2N1c3MgaGVyIGNhcmUgcHJlZmVyZW5jZXMgY3VycmVudGx5LiBIZXIgZGVjaXNpb24gd2FzIGFja25vd2xlZGdlZCBhbmQgcmVzcGVjdGVkLiBTaGUgd2FzIGluZm9ybWVkIHRoYXQgc3VwcG9ydCByZW1haW5zIGF2YWlsYWJsZSB0aHJvdWdoIEdvb2QgSGVhbHRoIENsaW5pYyBzaG91bGQgc2hlIHdpc2ggdG8gcmV2aXNpdCB0aGUgdG9waWMgaW4gdGhlIGZ1dHVyZS4gTm8gYWRkaXRpb25hbCBzb2NpYWwgd29yayBmb2xsb3ctdXAgaXMgaW5kaWNhdGVkIGF0IHRoaXMgdGltZSB1bmxlc3MgcmVxdWVzdGVkIGJ5IHRoZSBwYXRpZW50IG9yIGNhcmUgdGVhbS4KCkVsZWN0cm9uaWNhbGx5IHNpZ25lZCBieTogTWFyZ2FyZXQgUmV5bm9sZHMsIExDU1cKR29vZCBIZWFsdGggQ2xpbmlj"
+
+
+

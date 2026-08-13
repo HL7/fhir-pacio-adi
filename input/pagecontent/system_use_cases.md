@@ -19,10 +19,10 @@ Use cases in this IG will provide requirements for systems to use FHIR RESTful o
 
 
 <p align="center">
-    <img src="./ADI_use_case_overview.png" alt="ADI Use Case Overview" style="width: 70%; float: none; align: middle;"/>
+    <img src="./ADI_use_case_overview.svg" alt="ADI Use Case Overview" style="width: 70%; float: none; align: middle;"/>
 </p>
 
-#### Use Case 1: Create in Digital Form [Content]
+#### Use Case 1: Create in Digital Form 
 
 In Use Case 1, the person that wants to create their advance directive information in a digital form enters information in a content creator system. The content creator system ensures the information is stored and is available for the steps in the process that are described in the following use cases.  
 
@@ -40,7 +40,7 @@ On first creation, the DocumentReference version number is set to 1 and the stat
 
 {% include examplebutton_default.html example="use_case_1_document_structure.md" b_title = "Click Here to See the initial ADI Document Diagram" %}
 
-#### Use Case 2: Share [Content]
+#### Use Case 2: Share 
 
 In Use Case 2, the Content Creator system makes the Person-Authored advance directive information available via a Content Receiver system using a FHIR API. The Content Receiver system may be an end system or may be another Content Custodian system.
 
@@ -49,7 +49,7 @@ In Use Case 2, the Content Creator system makes the Person-Authored advance dire
 In Use Case 2, the process is started when a person wants to share their advance directive information with a human or system Content Receiver system. The person directs the Content Creator system to send the advance directive information to the Content Receiver through a FHIR based POST transaction. The Content Receiver will receive, store and process the advance directive information in their system.
 
 
-#### Use Case 3: Query and Access [Content]
+#### Use Case 3: Query and Access 
 
 Use-case 3 aims to enable provider access to advance directive information. It includes 3 steps: 
 
@@ -107,7 +107,7 @@ The Content Requester system SHOULD use the FHIR operation [$match](https://hl7.
     </p>
 </blockquote> 
 
-#### Use Case 4: Update [Content]
+#### Use Case 4: Update 
 
 In Use Case 4, the process is started by a person wanting to update previously created advance directive information. The precondition for the process is that the Content Creator and Content Custodian systems are able to associate a new version of the ADI information and/or document(s) as active and possess the ability to mark prior ADI information and/or document(s) version as inactive.
 
@@ -130,7 +130,7 @@ It is the responsibility of the Content Custodian of the advance healthcare dire
 
 **Note:** FHIR Resource versioning is only used for error corrections. 
 
-#### Use Case 5: Revoke [Content]
+#### Use Case 5: Revoke 
 
 In Use Case 5, the person decides to withdraw the Advance Directive document. Revoke is more complex than the Update use case in that the status depends on situation or reason for revoking the document.
 * scenario 1: User decides to revoke advance directive entirely; there is only one version of the document.
@@ -146,7 +146,7 @@ In Use Case 5, the person decides to withdraw the Advance Directive document. Re
 
 This scenario could be addressed as an update (Use Case 4), except that we describe that the reason `DocumentReference.status` was *entered-in-error*.
 
-#### Use Case 6: Verify current version of an Advance Healthcare Directive [Content]
+#### Use Case 6: Verify current version of an Advance Healthcare Directive 
 
 In Use Case 6, a Content Verifier has advance directive information which it previously received or retrieved.
 
@@ -168,3 +168,6 @@ In Use Case 6, the process is started by a Content Verifier system that would li
 
 {% include examplebutton_default.html example="use_case_6_sequence.md" b_title = "Click Here To See Use Case 6 Sequence Diagram" %}
 
+#### Use Case 7: Verify AD documentation exists
+
+**TBD**

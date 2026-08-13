@@ -11,7 +11,7 @@ Description: "This abstract profile defines constraints that represent common ad
 * extension contains
     adi-expiration-date-extension named ExpirationDateExtension 0..1 and
   //  adi-jurisdiction-extension named Jurisdiction 0..* and 
-    http://hl7.org/fhir/us/core/StructureDefinition/us-core-jurisdiction named Jurisdiction 0..* and  // fix for FHIR-49201
+  //    http://hl7.org/fhir/us/core/StructureDefinition/us-core-jurisdiction named Jurisdiction 0..* and  // fix for FHIR-49201. mlt_update 20260807 - ticket retracted after review with LNelson on 8/1/26 where only ADIDocumentReference needs the extension. Composition jurisdiction extension is applied at the AD source form section level.
     adi-dataEnterer-extension named DataEntererExtension 0..1 and
     adi-informant-extension named InformantExtension 0..* and
   //  adi-informationRecipient-extension named InformationRecipientExtension 0..* MS and
@@ -76,6 +76,7 @@ Description: "This abstract profile defines constraints that represent common ad
     advance_directive_source_form 1..1 MS
 
 // ******* Advance Directive Source Form Section ********
+* section[advance_directive_source_form].extension contains adi-jurisdiction-extension named ADISourceFormJurisdiction 0..1 MS
 * section[advance_directive_source_form] ^short = "Advance directive source form"
 * section[advance_directive_source_form].title 1..1 MS
 * section[advance_directive_source_form].code 1..1 MS

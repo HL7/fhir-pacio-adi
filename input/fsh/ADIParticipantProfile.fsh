@@ -11,7 +11,7 @@ Description: "A person represented using the ADI Healthcare Agent Profile and re
 * patient only Reference($USCorePatient)
 
 * relationship 0..* MS
-* relationship from $HL7RelatedPersonRelationshipType (extensible)
+* relationship from $VSACPersonalAndLegalRelationshipRoleType (extensible)
 
 
 //Healthcare Agent or Proxy Choices

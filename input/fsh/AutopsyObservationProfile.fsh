@@ -11,7 +11,5 @@ Description: "This profile is used to represent the author's thoughts about auto
 * subject only Reference($USCorePatient)
 
 * value[x] 1..1 MS
-
+* value[x] only CodeableConcept or string
 * note 0..1 MS
-
-

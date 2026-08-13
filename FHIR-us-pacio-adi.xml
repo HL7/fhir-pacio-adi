@@ -34,7 +34,7 @@
 <artifact id="StructureDefinition/ADI-OrganDonationObservation" key="StructureDefinition-PADI-OrganDonationObservation" name="ADI Organ Donation Observation"/>
 <artifact id="StructureDefinition/ADI-PMOAdditionalOrdersOrInstructionsServiceRequest" key="StructureDefinition-ADI-PMOAdditionalOrdersOrInstructionsServiceRequest" name="ADI PMO Additional orders or instructions ServiceRequest"/>
 <artifact id="StructureDefinition/ADI-PMOCPRServiceRequest" key="StructureDefinition-ADI-PMOCPRServiceRequest" name="ADI PMO Cardiopulmonary Resuscitation ServiceRequest"/>
-<artifact id="StructureDefinition/ADI-PMOCarePlan" key="StructureDefinition-ADI-PMOCarePlan" name="ADI PMO Care Plan"/>
+<artifact deprecated="true" id="StructureDefinition/ADI-PMOCarePlan" key="StructureDefinition-ADI-PMOCarePlan" name="ADI PMO Care Plan"/>
 <artifact id="StructureDefinition/ADI-PMOComposition" key="StructureDefinition-ADI-PMOComposition" name="ADI PMO Composition"/>
 <artifact id="StructureDefinition/ADI-PMOHospiceObservation" key="StructureDefinition-ADI-PMOHospiceObservation" name="ADI PMO Hospice Observation"/>
 <artifact id="StructureDefinition/ADI-PMOInitialTreatmentServiceRequest" key="StructureDefinition-ADI-PMOInitialTreatmentServiceRequest" name="ADI PMO Initial Treatment ServiceRequest"/>
@@ -49,12 +49,13 @@
 <artifact id="StructureDefinition/ADI-PersonalInterventionPreference" key="StructureDefinition-PADI-PersonalInterventionPreference" name="ADI Person Authored Personal Intervention Preference"/>
 <artifact id="StructureDefinition/ADI-PersonAuthoredCareExperiencePreference" key="StructureDefinition-ADI-PersonAuthoredCareExperiencePreference" name="ADI Person-Authored Care Experience Preference"/>
 <artifact id="StructureDefinition/ADI-PACPComposition" key="StructureDefinition-PADI-PACPComposition" name="ADI Person-Authored Composition"/>
+<artifact id="StructureDefinition/ADI-PersonAuthoredPreferenceCarePlan" key="StructureDefinition-ADI-PersonAuthoredPreferenceCarePlan" name="ADI Person-Authored Preference Care Plan"/>
 <artifact id="StructureDefinition/ADI-PersonalGoal" key="StructureDefinition-PADI-PersonalGoal" name="ADI Personal Goal"/>
 <artifact id="StructureDefinition/ADI-PersonalPrioritiesOrganizer" key="StructureDefinition-PADI-PersonalPrioritiesOrganizer" name="ADI Personal Priorities Organizer"/>
 <artifact id="StructureDefinition/ADI-PractitionerRole" key="StructureDefinition-ADI-PractitionerRole" name="ADI Practitioner Role"/>
-<artifact id="StructureDefinition/ADI-PreferenceCarePlan" key="StructureDefinition-PADI-PreferenceCarePlan" name="ADI Preference Care Plan"/>
 <artifact id="StructureDefinition/ADI-Provenance" key="StructureDefinition-ADI-Provenance" name="ADI Provenance"/>
 <artifact deprecated="true" id="StructureDefinition/ADI-CareExperiencePreference" key="StructureDefinition-PADI-CareExperiencePreference" name="ADI PtAuthored Care Experience Preference"/>
+<artifact deprecated="true" id="StructureDefinition/ADI-PreferenceCarePlan" key="StructureDefinition-PADI-PreferenceCarePlan" name="ADI PtAuthored Care Plan"/>
 <artifact id="StructureDefinition/adi-rationale-for-treatment" key="StructureDefinition-adi-rationale-for-treatment" name="ADI Rationale for Treatment"/>
 <artifact id="CodeSystem/ADIRevokeStatusCS" key="CodeSystem-ADIRevokeStatusCS" name="ADI Revoke Status Code System"/>
 <artifact id="StructureDefinition/serious-advanced-condition" key="StructureDefinition-serious-advanced-condition" name="ADI Serious Advanced Condition"/>
@@ -63,6 +64,7 @@
 <artifact id="StructureDefinition/ADI-UponDeathPreferences" key="StructureDefinition-ADI-UponDeathPreferences" name="ADI Upon Death Preferences"/>
 <artifact id="StructureDefinition/ADI-Witness" key="StructureDefinition-ADI-Witness" name="ADI Witness"/>
 <artifact id="PractitionerRole/ADI-Facilitator-MSW-MargaretReynolds" key="PractitionerRole-ADI-Facilitator-MSW-MargaretReynolds" name="ADI-Facilitator-MSW-MargaretReynolds"/>
+<artifact id="StructureDefinition/adi-documentation-absent-reason" key="StructureDefinition-adi-documentation-absent-reason" name="Advance Directive Absent Reason"/>
 <artifact deprecated="true" id="ValueSet/PADIAdvanceDirectiveCategoriesVS" key="ValueSet-PADIAdvanceDirectiveCategoriesVS" name="Advance Directive Categories"/>
 <artifact id="ValueSet/ADIPractitionerRoleVS" key="ValueSet-ADIPractitionerRoleVS" name="Advance Directive Provider Attester Role"/>
 <artifact deprecated="true" id="StructureDefinition/padi-attestationInformation-extension" key="StructureDefinition-padi-attestationInformation-extension" name="Attestation Information"/>
@@ -74,7 +76,7 @@
 <artifact id="SearchParameter/Bundle-type" key="SearchParameter-Bundle-type" name="Bundle-type"/>
 <artifact id="ValueSet/CDASignatureCodeVS" key="ValueSet-CDASignatureCodeVS" name="CDA Signature Code"/>
 <artifact deprecated="true" id="ValueSet/PADICareExperiencePreferencesVS" key="ValueSet-PADICareExperiencePreferencesVS" name="Care Experience Preferences"/>
-<artifact id="CarePlan/Example-Smith-Johnson-PMOCarePlan1" key="CarePlan-Example-Smith-Johnson-PMOCarePlan1" name="Care Plan for Cerebrovascular accident"/>
+<artifact deprecated="true" id="CarePlan/Example-Smith-Johnson-PMOCarePlan1" key="CarePlan-Example-Smith-Johnson-PMOCarePlan1" name="Care Plan for Cerebrovascular accident"/>
 <artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan2" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan2" name="Care Plan for Permanent, severe brain damage"/>
 <artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan3" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan3" name="Care Plan for Terminal illness, lack of meaningful interaction"/>
 <artifact deprecated="true" id="CarePlan/Example-McBee-PreferenceCarePlan1" key="CarePlan-Example-McBee-PreferenceCarePlan1" name="Care Plan for Unconscious, vegetative state, coma for McBee"/>
@@ -84,7 +86,7 @@
 <artifact id="SearchParameter/Consent-id" key="SearchParameter-Consent-id" name="Consent-id"/>
 <artifact deprecated="true" id="StructureDefinition/padi-contextualValue-extension" key="StructureDefinition-padi-contextualValue-extension" name="Contextual Value"/>
 <artifact id="StructureDefinition/adi-dataEnterer-extension" key="StructureDefinition-padi-dataEnterer-extension" name="Data Enterer"/>
-<artifact id="StructureDefinition/adi-document-location" key="StructureDefinition-adi-document-location" name="Document Location"/>
+<artifact deprecated="true" id="StructureDefinition/adi-document-location" key="StructureDefinition-adi-document-location" name="Document Location"/>
 <artifact id="SearchParameter/DocumentReference-authenticator" key="SearchParameter-DocumentReference-authenticator" name="DocumentReference-authenticator"/>
 <artifact id="SearchParameter/DocumentReference-author" key="SearchParameter-DocumentReference-author" name="DocumentReference-author"/>
 <artifact id="SearchParameter/DocumentReference-category" key="SearchParameter-DocumentReference-category" name="DocumentReference-category"/>
@@ -164,12 +166,14 @@
 <artifact id="Observation/Example-Smith-Johnson-CareExperiencePreference7" key="Goal-Example-Smith-Johnson-CareExperiencePreference7" name="Example-Smith-Johnson-CareExperiencePreference7"/>
 <artifact id="Observation/Example-Smith-Johnson-CareExperiencePreference8" key="Goal-Example-Smith-Johnson-CareExperiencePreference8" name="Example-Smith-Johnson-CareExperiencePreference8"/>
 <artifact id="Observation/Example-Smith-Johnson-DecisionalCapacity1" key="Observation-Example-Smith-Johnson-DecisionalCapacity1" name="Example-Smith-Johnson-DecisionalCapacity1"/>
+<artifact id="DocumentReference/Example-Smith-Johnson-DocRef-ACP-Decline-Service" key="DocumentReference-Example-Smith-Johnson-DocRef-ACP-Decline-Service" name="Example-Smith-Johnson-DocRef-ACP-Decline-Service"/>
 <artifact deprecated="true" id="Binary/Example-Smith-Johnson-DocRef-Binary1" key="Binary-Example-Smith-Johnson-DocRef-Binary1" name="Example-Smith-Johnson-DocRef-Binary1"/>
 <artifact id="DocumentReference/Example-Smith-Johnson-DocRef-Bundle" key="DocumentReference-Example-Smith-Johnson-DocRef-Bundle" name="Example-Smith-Johnson-DocRef-Bundle"/>
 <artifact id="Device/Example-Smith-Johnson-DocRef-Device1" key="Device-Example-Smith-Johnson-DocRef-Device1" name="Example-Smith-Johnson-DocRef-Device1"/>
 <artifact id="DocumentReference/Example-Smith-Johnson-DocRef-DocumentReference" key="DocumentReference-Example-Smith-Johnson-DocRef-DocumentReference" name="Example-Smith-Johnson-DocRef-DocumentReference"/>
 <artifact id="Observation/Example-Smith-Johnson-DocumentationObservation1" key="Observation-Example-Smith-Johnson-DocumentationObservation1" name="Example-Smith-Johnson-DocumentationObservation1"/>
 <artifact id="Observation/Example-Smith-Johnson-DocumentationObservation2" key="Observation-Example-Smith-Johnson-DocumentationObservation2" name="Example-Smith-Johnson-DocumentationObservation2"/>
+<artifact id="Observation/Example-Smith-Johnson-DocumentationObservation3-DeclinedACP" key="Observation-Example-Smith-Johnson-DocumentationObservation3-DeclinedACP" name="Example-Smith-Johnson-DocumentationObservation3-DeclinedACP"/>
 <artifact id="Endpoint/Example-Smith-Johnson-Endpoint1" key="Endpoint-Example-Smith-Johnson-Endpoint1" name="Example-Smith-Johnson-Endpoint1"/>
 <artifact id="Endpoint/Example-Smith-Johnson-Endpoint2" key="Endpoint-Example-Smith-Johnson-Endpoint2" name="Example-Smith-Johnson-Endpoint2"/>
 <artifact id="RelatedPerson/Example-Smith-Johnson-HealthcareAgent1" key="RelatedPerson-Example-Smith-Johnson-HealthcareAgent1" name="Example-Smith-Johnson-HealthcareAgent1"/>
@@ -257,6 +261,7 @@
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="change_log" name="Change Log"/>
 <page key="content_type_overview" name="Content Type Overview"/>
+<page key="document_lifecycle" name="Document Lifecycle"/>
 <page key="downloads" name="Downloads"/>
 <page key="examples_summary" name="Examples Summary"/>
 <page deprecated="true" key="artifact_adi" name="FHIR Artifacts"/>
@@ -274,6 +279,7 @@
 <page key="pacp_workflow" name="Person-Authored Document Workflow"/>
 <page key="pmo_guidance" name="Portable Medical Order (PMO) Guidance"/>
 <page key="artifact_resource_type" name="Profiles by Resource Type"/>
+<page key="pmo_workflow" name="Provider-Authored Document Workflow"/>
 <page key="search_parameters" name="Recommended Search Parameters"/>
 <page key="security_privacy_consent" name="Security, Privacy, and Consent"/>
 <page key="signatures" name="Signatures"/>

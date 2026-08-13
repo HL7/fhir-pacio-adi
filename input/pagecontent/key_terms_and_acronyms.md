@@ -22,7 +22,19 @@
     </tr>
     <tr>
         <td>Person-Authored Advance Care Plan (Personal ACP)</td>
-        <td><p>This term is used to describe person-authored documents that include patient goals, preferences, and priorities under certain health conditions; patient goals, preferences, and priorities upon death; patient goals, preferences, and priorities for care experience--sometimes referred to as the patient's story. They are documents which include a patient's signature and witness and/or notary information to be fully completed.  This type of document also may include a Patient's consent to appoint a healthcare agent called a Durable Medical Power of Attorney.
+        <td><p>This term may be used as either the document or section code for the Personal Advance Care Plan. This term was created for, but is not limited in use to, the HL7 Implementation Guide for CDA Release 2: Personal Advance Care Plan Document (US Realm) Draft Standard for Trial Use Release 1.0.</p>
+        <p>It may include patient goals, preferences, and priorities under certain health conditions; patient goals, preferences, and priorities upon death; patient goals, preferences, and priorities for care experience; witness and notary document; and patient healthcare agent.
+        </p></td>
+    </tr>
+    <tr>
+        <td>Patient story</td>
+        <td><p>Patient stories are fictitious illustrative personal stories that are included to show the personal nature of the information being shared and demonstrate the value of having and sharing personal advance care plan information or, alternatively, the negative outcomes that arise when this information is not available in a high-quality, standardized, sharable digital format.</p>
+        <p>Personas are used to model, summarize and communicate research about people who have been observed or researched in some way. A persona is depicted as a specific person but is not a real individual; rather, it is synthesized from observations of many people.
+        </p></td>
+    </tr>
+        <tr>
+        <td>Portable Medical Order</td>
+        <td><p>A Portable Medical Order (PMO) document is a Provider-Authored Advance Healthcare Directive where the patient, or their healthcare agent, provides direct input in the creation of the instructions which specify decisions that have been made about treatments that may, or may not be, utilized during a medical emergency occurring within the current episode of care.  A PMO document is a collection or panel of one or more portable medical order entries and may include other information such as completion information, signatures, witness and notary, and additional documentation pertaining alignment with advance directive, etc.  The collection and the singular entry both use the same term.
         </p></td>
     </tr>
     <tr>

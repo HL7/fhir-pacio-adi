@@ -15,7 +15,9 @@ Description: "This profile is used to represent the author's thoughts about orga
 * subject 1..1 MS
 * subject only Reference($USCorePatient)
 
+* value[x] only CodeableConcept or string
 * value[x] 1..1 MS
+* value[x] ^short = "Description of thoughts on organ and tissue donations."
 
 * note 0..1 MS
 

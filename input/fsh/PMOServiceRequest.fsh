@@ -22,7 +22,7 @@ Description: "This profile is used to represent both a patient authored care pla
 * encounter 0..0 // verify no encounter possible
 * requester 1..1
 * requester only Reference($USCorePractitioner or $USCorePractitionerRole)
-
+* reasonReference only Reference(ADIDocumentReference)  // fix for https://jira.hl7.org/browse/FHIR-52545
 
 
 

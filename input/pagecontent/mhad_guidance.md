@@ -7,7 +7,15 @@ The main purposes of a mental health advance directive are to ensure that an ind
 
 The specifics of how to create and implement a mental health advance directive can vary by jurisdiction, so it is important to consult local laws and possibly seek legal advice when considering creating one or another.
 
-### Document Structure
+### User Story
+
+**TBD**
+
+### MHAD-centric Specification
+
+**TBD**
+
+#### Document Structure
 
 <blockquote class="stu-note">
     <p>
@@ -23,7 +31,7 @@ Structurally, MHAD shares the same ADI header as the Personal ACP document. It d
 
 <br clear="all" />
 
-### Personal ACP and Advance Healthcare Directive Guidance
+#### Personal ACP and Advance Healthcare Directive Guidance
 
 **Personal Advance Care Plans** - Systems used to create and update patient-generated advance care plans (Personal ACPs) through a patient-directed process need a way for individuals to communicate information about their advance medical care goals, preferences, and priorities. 
 

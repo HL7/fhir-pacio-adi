@@ -11,7 +11,7 @@ Context: DocumentReference
 Extension: Jurisdiction
 Id: adi-jurisdiction-extension
 Title: "Jurisdiction"
-Description: "Jurisdiction for which content is applicable. Represent state jurisdictions as a codeableConcept using the 2-letter state value set, and organization jurisdictions as a string value."
+Description: "Jurisdiction for which content is applicable. Represent state jurisdictions as a codeableConcept using the 2-letter state value set, and organization jurisdictions as a string value. This extension is only to be used for DocumentReference. ADI Compositions will instead reference the ADI Jurisdiction profile."
 Context: DocumentReference
 * value[x] only CodeableConcept or string
 * valueCodeableConcept 0..1 MS
@@ -134,7 +134,7 @@ Extension: ClauseExtension
 Id: adi-clause-extension
 Title: "Clause"
 Description: "A clause or set of clauses relevant to the resource or element being extended"
-Context: Bundle, Composition, Consent
+Context: Composition, Consent
 * extension 1..*
 * extension contains
 	Title 0..1 and
@@ -216,21 +216,20 @@ Context: Composition, DocumentReference
 // * valueReference 1..1 MS
 // * valueReference only Reference(ADIDocumentReference)
 
-// TODO Could add Invariant for Signature.type matching the attesterRole
-// TODO Notary Expiration Date?
+// mlt_20260724: Removed ADIDocumentLocationExtension profile as part of the fix for FHIR-57898: IG needs better guidance on how to representing ACP Services discussions
 
-Extension: ADIDocumentLocationExtension
-Id: adi-document-location
-Title: "Document Location"
-Description: "The Advance Directive document location. This location is the endpoint URL that points to the ADI document or resource that exists or a string."
-Context: DocumentReference
-* value[x] only Reference(Endpoint) or string
-* value[x] 0..1 MS
-* valueReference 0..1 MS
-* valueReference only Reference(Endpoint)
-* valueString 0..1 MS
-* valueString ^short = "A FHIR endpoint URL that points to the ADI document or resource that exists."
-* valueString ^comment = "A FHIR endpoint URL that points to the ADI document or resource that exists.  This is used when the document is not available in the FHIR server, such as a PDF or other file format."
+// Extension: ADIDocumentLocationExtension
+// Id: adi-document-location
+// Title: "Document Location"
+// Description: "The Advance Directive document location. This location is the endpoint URL that points to the ADI document or resource that exists or a string."
+// Context: DocumentReference
+// * value[x] only Reference(Endpoint) or string
+// * value[x] 0..1 MS
+// * valueReference 0..1 MS
+// * valueReference only Reference(Endpoint)
+// * valueString 0..1 MS
+// * valueString ^short = "A FHIR endpoint URL that points to the ADI document or resource that exists."
+// * valueString ^comment = "A FHIR endpoint URL that points to the ADI document or resource that exists.  This is used when the document is not available in the FHIR server, such as a PDF or other file format."
 
 
 // *** NEW 
@@ -283,3 +282,13 @@ Context: ServiceRequest
 * valueString 0..1 MS
 * valueString ^short = "Trial period description"
 * valueString ^comment = "The trial period is a free-text description of the time during which a patient can try out for the particular treatment or intervention to establish effectiveness."
+
+Extension: ADIDocumentationAbsentReason
+Id: adi-documentation-absent-reason
+Title: "Advance Directive Absent Reason"
+Description: "The Advance Directive Absent Reason Extension specifies why an advance directive document does not exist or was not completed. This differs from dataAbsentReason which is completed when a field has no value. Rather, the USCoreObservationADIDocumentationProfile from which this IG's ADI-DocumentationObservation profile derives from has a Yes/No answer and hence cannot use dataAbsentReason due to the FHIR obs-6 invariant which states that the element will have a value only if Observation.value[x] is missing."
+Context: Observation
+
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1 MS
+* valueCodeableConcept from http://hl7.org/fhir/ValueSet/data-absent-reason
