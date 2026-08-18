@@ -64,7 +64,8 @@ menu:
     Security, Privacy, and Consent: security_privacy_consent.html
     Signatures: signatures.html
     Search Parameters: search_parameters.html
-    Key Terms and Acronyms: key_terms_and_acronyms.html
+    Appendix A - Key Terms and Acronyms: key_terms_and_acronyms.html
+    Appendix B - Progressive Structuring: appendix_b_msd_progressive_structuring.html
   Person-Authored:
     Person-Authored Document Workflow: pacp_workflow.html
     Personal Advance Care Plan (PACP): pacp_guidance.html
@@ -104,7 +105,9 @@ pages:
   search_parameters.md:
     title: Recommended Search Parameters
   key_terms_and_acronyms.md:
-    title: Key Terms and Acronyms
+    title: Appendix A - Key Terms and Acronyms
+  appendix_b_msd_progressive_structuring.md:
+    title: Appendix B - Progressive Structuring
   pacp_workflow.md:
     title: Person-Authored Document Workflow
   pacp_guidance.md:

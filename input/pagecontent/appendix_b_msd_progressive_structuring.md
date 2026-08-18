@@ -1,0 +1,18 @@
+### Progressive Interoperability Principles
+The design philosophy of Progressive Interoperability is grounded in principles that balance innovation with pragmatism. This philosophy provides a sustainable roadmap for organizations at every stage of interoperability maturity, assuring the value of receiving structured data is recognized before the burden of producing it is born. It recognizes that sustainable progress is achieved through a sequence of manageable improvements that collectively transform an ecosystem over time.
+* *Value matters, not volume.* The objective is not to maximize structured data—it’s to maximize the value of what can be achieved with the structured data that is supplied.
+* *Evolve with deliberation, not exuberance.* We need to meet stakeholders where they are and improve through deliberate, incremental change. Like orthodontic treatments that improve your smile, lasting transformation comes from a series of purposeful adjustments that steadily move toward a well-defined destination. Crooked teeth can’t be straightened in a single crank. It takes purposeful pressure at the right level, applied over time.
+* *Preserve the story while making it more usable.* The clinical narrative of a document remains the authoritative information source. How the source information is represented is inherently part of its context and meaning. The fidelity and authenticity of the source form is essential to preserve information as it is shared. The structured data that accompanies a document is not the “truth”, it’s a biproduct devised to improve access and increase computer processing possibilities. 
+
+#### Progressive Structuring Design Methodology
+Progressive Structuring is the design methodology at the heart of Minimally Structured Documents. Instead of requiring an all-or-nothing choice between a fully structured data representation of the information in a document, or none, Progressive Structuring starts by including the source form of the document within a structured body. The structured body framework can then progressively become more data enriched as implementation maturity and demonstrated business value increase. Enhancements can be introduced incrementally as they deliver measurable value and inclusion of the information’s source form is never omitted. It’s a middle-ground structured document design, built to fit more naturally with today’s existing workflows and systems.
+
+##### Figure 1. Conceptualizing Minimally Structured Document Architecture
+This illustration shows the progression from a pdf document that has no structured data to an Unstructured Document which has a structured header but no structured data in the body, as opposed to a Fully Structured Document which has a structured header and every bit of the informational content of the document is represented. 
+
+<p align="center">
+    <img src="./minimally_structured_documents.svg" type="image/svg+xml" alt="Minimally Structured Documents" style="width: 80%; float: none; vertical-align: middle;"/>
+</p>
+
+#### A New Architectural Pattern for Documents
+Minimally Structured Documents do not replace existing healthcare document standards like CDA and FHIR. Instead, they establish an architectural pattern for structured documents that simplifies adoption, accelerates interoperability, and provides a bridge between today's inert paper documents and tomorrow's increasingly computable document data troves. Progressive Structuring allows every organization to contribute meaningful interoperability improvements today using their existing documents as the complete source form for human reference, and then to evolve at a value-based pace adding structured data where systems are prepared to utilize it.

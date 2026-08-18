@@ -66,7 +66,6 @@ Usage: #example
 
 * status = #final
 * type = $LOINC#93037-0 "Portable medical order form"
-// * category = $LOINC#42348-3 "Advance healthcare directives"
 * category[clinicalnotecategory] = $LOINC#107903-7 "Clinical note"
 * category[advanceDirectiveCategory] = $LOINC#42348-3 "Advance healthcare directives"
 * subject = Reference(Example-Smith-Johnson-Patient1)
@@ -285,7 +284,6 @@ Usage: #example
 * status = #final
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * performer = Reference(Example-Kyle-Anydoc-PractitionerRole1)
-//* focus = "DocumentReference/Example-Smith-Johnson-Patient1-DocumentReference_PMOLST"
 * extension[supporting-info].valueReference = Reference(Example-Smith-Johnson-DocRef-DocumentReference)
 * effectiveDateTime = "2021-03-29T14:25:34.001-05:00"
 * valueCodeableConcept = $SNOMEDCT#373066001 "Yes (qualifier value)"

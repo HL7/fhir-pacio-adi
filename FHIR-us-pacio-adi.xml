@@ -66,7 +66,6 @@
 <artifact id="PractitionerRole/ADI-Facilitator-MSW-MargaretReynolds" key="PractitionerRole-ADI-Facilitator-MSW-MargaretReynolds" name="ADI-Facilitator-MSW-MargaretReynolds"/>
 <artifact id="StructureDefinition/adi-documentation-absent-reason" key="StructureDefinition-adi-documentation-absent-reason" name="Advance Directive Absent Reason"/>
 <artifact deprecated="true" id="ValueSet/PADIAdvanceDirectiveCategoriesVS" key="ValueSet-PADIAdvanceDirectiveCategoriesVS" name="Advance Directive Categories"/>
-<artifact id="ValueSet/ADIPractitionerRoleVS" key="ValueSet-ADIPractitionerRoleVS" name="Advance Directive Provider Attester Role"/>
 <artifact deprecated="true" id="StructureDefinition/padi-attestationInformation-extension" key="StructureDefinition-padi-attestationInformation-extension" name="Attestation Information"/>
 <artifact id="ValueSet/ADINotaryAndWitnessAttesterRoleTypeVS" key="ValueSet-PADIAttesterRoleTypeVS" name="Attester Role"/>
 <artifact deprecated="true" id="StructureDefinition/padi-authorization-extension" key="StructureDefinition-padi-authorization-extension" name="Authorization"/>
@@ -81,6 +80,7 @@
 <artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan3" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan3" name="Care Plan for Terminal illness, lack of meaningful interaction"/>
 <artifact deprecated="true" id="CarePlan/Example-McBee-PreferenceCarePlan1" key="CarePlan-Example-McBee-PreferenceCarePlan1" name="Care Plan for Unconscious, vegetative state, coma for McBee"/>
 <artifact id="CarePlan/Example-Smith-Johnson-PreferenceCarePlan1" key="CarePlan-Example-Smith-Johnson-PreferenceCarePlan1" name="Care Plan for Unconscious, vegetative state, coma for Smith-Johnson"/>
+<artifact id="ValueSet/ADIPractitionerRoleVS" key="ValueSet-ADIPractitionerRoleVS" name="Care Team Member Function Extension"/>
 <artifact id="StructureDefinition/adi-clause-extension" key="StructureDefinition-padi-clause-extension" name="Clause"/>
 <artifact deprecated="true" id="ValueSet/ADIConsentTypeVS" key="ValueSet-PADIConsentTypeVS" name="Consent Type"/>
 <artifact id="SearchParameter/Consent-id" key="SearchParameter-Consent-id" name="Consent-id"/>
@@ -258,6 +258,8 @@
 <artifact id="StructureDefinition/adi-witness-information-extension" key="StructureDefinition-adi-witness-information-extension" name="Witness Information"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
+<page key="key_terms_and_acronyms" name="Appendix A - Key Terms and Acronyms"/>
+<page key="appendix_b_msd_progressive_structuring" name="Appendix B - Progressive Structuring"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="change_log" name="Change Log"/>
 <page key="content_type_overview" name="Content Type Overview"/>
@@ -268,7 +270,6 @@
 <page key="formal_specification" name="Formal Specification"/>
 <page deprecated="true" key="general_guidance" name="General Guidance"/>
 <page key="index" name="Home"/>
-<page key="key_terms_and_acronyms" name="Key Terms and Acronyms"/>
 <page deprecated="true" key="content_type1_mhad_guidance" name="MHAD Guidance"/>
 <page key="mhad_guidance" name="Mental Health Advance Directive (MHAD) Guidance"/>
 <page deprecated="true" key="content_type1_pacp_guidance" name="PACP Guidance"/>
