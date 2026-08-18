@@ -7,5 +7,7 @@ Description: "The ADI Jurisdiction Observation profile includes information abou
 * code 1..1 MS
 * code = $LOINC#101349-9 "Jurisdiction where advance directive is accepted [Location]"
 
-* valueCodeableConcept 1..1 MS
+// MLT_TO DO (2260804): make value[x] either valueCodeableConcept or string.
+* value[x] 1..1 MS
+* value[x] only CodeableConcept or string
 * valueCodeableConcept from $HL7JurisdictionStateCodesVS (extensible)

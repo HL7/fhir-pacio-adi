@@ -197,8 +197,8 @@ Description: "Initial Treatment Portable Medical Order Options."
 * include codes from valueset $VSACADIInitialTreatmentPMOOptionsGrouping
 
 ValueSet: ADIPractitionerRoleVS
-Title: "Advance Directive Provider Attester Role"
-Description: "Pracititioner roles specific to the advance directive attesters and authenticators."
+Title: "Care Team Member Function Extension"
+Description: "Additional care team member functions, such as supervising provider."
 * ^experimental = false
 * include http://terminology.hl7.org/CodeSystem/claimcareteamrole#supervisor "Supervising Provider"
 
