@@ -25,7 +25,7 @@ FHIR profiles have been developed for several existing FHIR resources to represe
 
 ### Project Need
 <p>
-Systems used to create and update patient-generated advance care plans through a patient-directed process need a way for individuals to communicate information about their advance medical care goals, preferences, and priorities. Individuals need a way to generate and update information related to their advance directives so that their current wishes can inform provider-generated care plans. Interoperable exchange of the advance directive documentation supports more effective sharing of this information across transitions of care and enables practitioners to create person-centered care plans that align with a patient’s values, goals of care, treatment preferences, and quality of life priorities when a patient can no longer communicate for themselves.
+Systems used to create and update person-generated advance care plans through a person-directed process need a way for individuals to communicate information about their advance medical care goals, treatment and care preferences, and priorities for those expressed preferences. Individuals need a way to generate and update information related to their advance healthcare directives so that their current wishes can inform provider-generated care plans. Interoperable exchange of the advance healthcare directive documentation supports more effective sharing of this information during transitions of care enabling practitioners to create person-centered care plans that align with a patient’s values, goals of care, treatment preferences, and quality of life priorities when a patient can no longer communicate for themselves.
 </p>
 
 ### External drivers
