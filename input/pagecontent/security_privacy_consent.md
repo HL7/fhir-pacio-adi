@@ -24,7 +24,7 @@ For the purposes of Advance Directive Interoperability, additional security conf
 ##### Exchange Security
 
 1.	The exchange of information **SHALL** support [Transport Layer Security (TLS) Protocol Version 1.2 (RFC5246)](https://www.rfc-editor.org/rfc/rfc5246) or a more recent version of TLS for transport layer security.
-2.	Implementers of this Implementation Guide **SHALL** support [SMART on FHIR App Launch Framework](http://hl7.org/fhir/smart-app-launch/index.html) and **MAY** support [SMART on FHIR Backend Services](https://www.hl7.org/fhir/smart-app-launch/backend-services.html).
+2.	Implementers of this Implementation Guide **SHOULD** support [SMART on FHIR App Launch Framework](http://hl7.org/fhir/smart-app-launch/index.html) and **MAY** support [SMART on FHIR Backend Services](https://www.hl7.org/fhir/smart-app-launch/backend-services.html).
 3.	Implementers of this Implementation Guide **SHOULD** support mutually authenticated TLS.
 4.	Server implementations that expect to support browser-based javascript applications SHOULD enable [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) for REST operations. Many client web-based apps use javascript for API calls which requires CORS. However, CORS could present security concerns if not implemented correctly or is not continually updated as new security issues are found and addressed. Implementers of CORS **SHOULD** consider advice about CORS from sources such as [Enable-CORS](http://enable-cors.org/) and [Moesif blog on Guide to CORS Pitfalls](https://www.moesif.com/blog/technical/cors/Authoritative-Guide-to-CORS-Cross-Origin-Resource-Sharing-for-REST-APIs/).
 

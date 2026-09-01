@@ -141,8 +141,8 @@ Advance healthcare directive source form documents often contain contextual in
 
 Examples of clauses include: statements made by a document author or their witness as well as administrative information associated with an advance healthcare directive.
 
-### Advance Healthcare Directive Document Content Principles
-In order to accurate represent the semantic content contained in Advance Healthcare Directive Documents, the following principles have been applied when creating machine processable entries to represent information expressed in the source form of the document.
+### Advance Healthcare Directive Document Content Representation and Relationships Rationale
+In order to accurate represent the semantic content contained in Advance Healthcare Directive Documents, the following conventions have been applied when creating machine processable entries to represent information expressed in the source form of the document.
 
 #### Observation Resource Is Used for Patient Preferences
 Use of FHIR Observation Resource to express Care Experience Preferences: Care experience preferences captured for an individual are semantically represented as Observations. This information exists to inform the care team who is providing care for the individual what is meaningful or important to the person, from a personal or spiritual or cultural perspective. This type of person-authored information is documented using Observations with semantic coding and are typically not conditional in nature.
@@ -186,4 +186,4 @@ The FHIR Bundle Resource is used to establish a persistent snapshot of the docum
 The FHIR DocumentReference Resource  is used to record important information such as the most current version of the document, important at the point of care, and provides proof that the directive exists in the system.  This resource expresses elements such as status, composition document status, author, custodian, and content attachment to name a few data elements.
 
 #### Alignment with CDA Representations
-This FHIR IG is the primary source for defining Advance Healthcare Directive Documents and their digital representation formats.  However, it operates in harmony with the CDA IG produced for the same purpose. The structured document representation principles are aligned between these two IGs and CDA templates are not updated to remain in synch with information representation designs developed in FHIR.
+This FHIR IG is the primary source for defining Advance Healthcare Directive Documents and their digital representation formats.  However, it operates in harmony with the CDA IG produced for the same purpose. The structured document representation conventions are aligned between these two IGs and CDA templates are not updated to remain in synch with information representation designs developed in FHIR.
