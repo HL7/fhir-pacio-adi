@@ -56,6 +56,7 @@ Alias: $HL7RoleClass = http://terminology.hl7.org/CodeSystem/v3-RoleClass
 Alias: $HL7RelatedPersonRelationshipType = http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype
 Alias: $HL7ServiceEventPerformer = http://terminology.hl7.org/ValueSet/v3-xServiceEventPerformer
 Alias: $HL7v3ParticipationType = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
+Alias: $HL7v3PowerOfAttorneyVS = http://terminology.hl7.org/ValueSet/v3-PowerOfAttorney 
 
 Alias: $HL7ObservationCategory = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $HL7CompositionStatusR5 = http://hl7.org/fhir/composition-status

@@ -39,6 +39,7 @@
 * [ADI PMO Hospice Observation](StructureDefinition-ADI-PMOHospiceObservation.html)
 * [ADI PMO Participant Observation](StructureDefinition-ADI-PMOParticipantObservation.html)
 * [ADI PMO Review Observation](StructureDefinition-ADI-PMOReviewObservation.html)
+* [ADI Serious Advanced Condition](StructureDefinition-ADI-SeriousAdvancedCondition.html)
 * [ADI Upon Death Preferences](StructureDefinition-ADI-UponDeathPreferences.html)
 
 ### PractitionerRole

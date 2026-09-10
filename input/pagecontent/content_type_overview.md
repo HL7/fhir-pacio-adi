@@ -75,7 +75,14 @@ The current version, STU2, of this ADI with FHIR IG covers the use of RESTful AP
     </p>
 </blockquote>
 
-### Structure and Resource Relationships
+### Advance Healthcare Directive Document and DocumentReference Structure
+
+ADI native documents using FHIR are instances of the `Bundle` resource with the `type` = `document`. The document should have all content contained within the Bundle with no external references except for the references to external documents in the [DocumentationObservation](StructureDefinition-ADI-DocumentationObservation.html) through the `focus` data element. 
+
+FHIR `Bundle` documents consist of multiple entry resources within it. The first entry *SHALL* be a `Composition` resource. The `Composition` resource acts as the header and organizational construct. It contains information about the document such as the category and type of document, dates, and references to the various participants of the document, as well as document sections used to categorize or organize the contained entries. 
+
+
+#### Structure and Resource Relationships
 
 Advance healthcare decision documents may take several forms, including scanned PDF documents, CDA documents, other binary documents, as well as native FHIR documents (using the `Composition` and other ADI-specific profiled FHIR resources). This guide defines the interoperable guidance necessary to support creation, update, query, and access to all of these types and other potential ADI document types (through encoding in a `Binary` resource). Today, most of these documents are shared through scanned images housed in EMRs, EHRs and other systems.
 
@@ -97,12 +104,6 @@ There is movement within the FHIR community to begin using the Provenance resour
     </p>
 </blockquote>
 
-### ADI FHIR Document Structure
-
-ADI native documents using FHIR are instances of the `Bundle` resource with the `type` = `document`. The document should have all content contained within the Bundle with no external references except for the references to external documents in the [DocumentationObservation](StructureDefinition-ADI-DocumentationObservation.html) through the `focus` data element. 
-
-FHIR `Bundle` documents consist of multiple entry resources within it. The first entry *SHALL* be a `Composition` resource. The `Composition` resource acts as the header and organizational construct. It contains information about the document such as the category and type of document, dates, and references to the various participants of the document, as well as document sections used to categorize or organize the contained entries. 
-
 #### Utilizing Minimally Structured Documents
 
 The ADI document types follow an approach which initially supports the minimal amount of required structured data. Under this approach, the native Source Form of the document is always included in the initial section of the Composition. The Source Form section is the section in the Composition resource where `section.code` equals `Composition.type`. The Source Form Section includes the Binary representation (The Source Form entry) of the source document information as it was operated on by individuals involved in the completion of the document. The Source Form Entry also may include additional machine processable data about the jurisdiction associated with the Source Form, its copyright holder, or other identifying information use as a Source Form designation established by the local jurisdiction, such as "Louisiana LaPOST".
@@ -123,6 +124,8 @@ Minimally Structured Documents enable an optimizable Progressive Structuring des
 ADI documents should have a time period whereby the patient preferences or the PMOs are legally valid. These are indicated by expiration dates within the `Person-Authored Composition` and `PMO Composition` profiles as such:
 * the start date for the AD:        `Composition.date`
 * the expiration date for the AD:   `Composition:extension:ExpirationDateExtension`
+
+These expiration dates apply to the whole document, and does not apply to the notion of trial periods for the PMO.
 
 <!-- 
 #### ADI Encounter-centric Patient Instructions Document Structure
