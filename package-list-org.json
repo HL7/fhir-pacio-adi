@@ -1,5 +1,5 @@
 {
-    "package-id": "hl7.fhir.us.pacio-adi",
+    "package-id": "hl7.fhir.us.fhir-pacio-adi",
     "title": "PACIO Advance Directive Interoperability Implementation Guide",
     "canonical": "http://hl7.org/fhir/us/pacio-adi",
     "introduction": "The Advance Directive Interoperability (ADI) FHIR implementation guide (IG) explains how to represent, exchange, and verify a person’s goals, preferences and priorities for medical treatment and interventions regarding future medical care. ",
@@ -7,7 +7,7 @@
       {
         "version": "current",
         "desc": "PACIO Advance Directive Interoperability Implementation Guide STU2 Preliminary",
-        "path": "http://build.fhir.org/ig/HL7/fhir-pacio-adi",
+        "path": "http://build.fhir.org/ig/HL7/pacio-adi",
         "status": "trial-use",
         "current": true
       },

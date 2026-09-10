@@ -1477,7 +1477,7 @@
     ],
     "status": "active",
     "title": "ADI CapabilityStatement",
-    "url": "http://hl7.org/fhir/us/fhir-pacio-adi/CapabilityStatement/adi",
+    "url": "http://hl7.org/fhir/us/pacio-adi/CapabilityStatement/adi",
     "version": "0.0.1",
     "resourceType": "CapabilityStatement"
 }

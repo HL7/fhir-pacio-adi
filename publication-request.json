@@ -1,12 +1,12 @@
 {
     "package-id" : "hl7.fhir.us.pacio-adi",
-    "version" : "2.0.0-ballot",
-    "path" : "http://hl7.org/fhir/us/pacio-adi/2025Sep",
-    "status" : "ballot",
+    "version" : "2.0.0",
+    "path" : "http://hl7.org/fhir/us/pacio-adi/STU2",
+    "status" : "trial-use",
     "sequence" : "STU 2",
     "milestone": false,
-    "desc" : "STU2 Ballot",
-    "descmd" : "STU2 Ballot",
+    "desc" : "Version for STU 2 Advance Healthcare Directive Interoperability",
+    "descmd" : "Version for STU 2 Advance Healthcare Directive Interoperability",
     "changes" : "change_log.html",
     "mode" : "working"
   }
