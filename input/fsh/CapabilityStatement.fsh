@@ -13,7 +13,7 @@ Usage: #definition
 * fhirVersion = #4.0.1
 * format[0] = #xml
 * format[+] = #json
-* implementationGuide = "http://hl7.org/fhir/us/pacio-adi/ImplementationGuide-hl7.fhir.us.fhir-pacio-adi"
+* implementationGuide = "http://hl7.org/fhir/us/pacio-adi/ImplementationGuide/hl7.fhir.pacio-adi"
 * jurisdiction = urn:iso:std:iso:3166#US
 * kind = #requirements
 * name = "PacioAdiCapabilityStatement"

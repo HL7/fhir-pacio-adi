@@ -14,16 +14,19 @@ Description: "A person represented using the ADI Healthcare Agent Profile and re
 * relationship from $VSACPersonalAndLegalRelationshipRoleType (extensible)
 
 
-//Healthcare Agent or Proxy Choices
-//Personal And Legal Relationship Role Type
+// Healthcare Agent or Proxy Choices
+// Personal And Legal Relationship Role Type
 
-* relationship ^slicing.discriminator.type = #pattern 
+* relationship ^slicing.discriminator.type = #value
 
 * relationship ^slicing.discriminator.path = "$this"
 * relationship ^slicing.rules = #open
 * relationship ^slicing.ordered = false   // can be omitted, since false is the default
-* relationship ^slicing.description = "Slice based on $this pattern"
+* relationship ^slicing.description = "Slice based on $this value"
 
+* relationship contains healthcare-agent-type 0..* MS
+* relationship[healthcare-agent-type] from $HL7v3PowerOfAttorneyVS
+* relationship[healthcare-agent-type] ^requirements = "Indicates the relationship of the healthcare agent participant."
 
 * name 1..1 MS // CONF:4445-33420
 * telecom 1..* MS // CONF:4445-33417
