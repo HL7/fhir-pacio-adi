@@ -125,7 +125,12 @@ ADI documents should have a time period whereby the patient preferences or the P
 * the start date for the AD:        `Composition.date`
 * the expiration date for the AD:   `Composition:extension:ExpirationDateExtension`
 
-These expiration dates apply to the whole document, and does not apply to the notion of trial periods for the PMO.
+These expiration dates apply to the document as a whole. They do not represent the notion of "trial period" for intervention acts covered in a PMO.
+
+Documents that have an expiration date carry specialzed registration information which describes the Expiration Date associated with the document. 
+* the expiration date of the AD document is indicated in DocumentReference.context.period.end.
+
+
 
 <!-- 
 #### ADI Encounter-centric Patient Instructions Document Structure
