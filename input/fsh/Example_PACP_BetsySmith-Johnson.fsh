@@ -19,8 +19,6 @@ Usage: #example
 * entry[=].resource = Example-Smith-Johnson-HealthcareAgent1
 * entry[+].fullUrl = "http://www.example.org/fhir/RelatedPerson/Example-Smith-Johnson-HealthcareAgent2"
 * entry[=].resource = Example-Smith-Johnson-HealthcareAgent2
-* entry[+].fullUrl = "http://www.example.org/fhir/RelatedPerson/Example-Smith-Johnson-HealthcareAgent3"
-* entry[=].resource = Example-Smith-Johnson-HealthcareAgent3
 * entry[+].fullUrl = "http://www.example.org/fhir/Consent/Example-Smith-Johnson-HealthcareAgentConsent"
 * entry[=].resource = Example-Smith-Johnson-HealthcareAgentConsent
 * entry[+].fullUrl = "http://www.example.org/fhir/CarePlan/Example-Smith-Johnson-PreferenceCarePlan1"
@@ -413,7 +411,9 @@ Usage: #example
 
 * active = true
 * patient = Reference(Example-Smith-Johnson-Patient1)
-* relationship = $HL7RoleCode#SON "natural son"
+* relationship[healthcare-agent-type][+] = $HL7RoleCode#DPOWATT
+* relationship[healthcare-agent-type][=] = $HL7RoleCode#SONC "son"
+* relationship[healthcare-agent-ordinality] = $LOINC#75783-1 "Primary healthcare agent [Reported]"
 
 * name[0].family = "Johnson"
 * name[0].given[0] = "Charles"
@@ -421,8 +421,6 @@ Usage: #example
 * telecom[0].system = #email
 * telecom[0].value = "CharlesSJ@example.com"
 * telecom[0].use = #home
-
-
 
 Instance: Example-Smith-Johnson-HealthcareAgent2
 InstanceOf: ADIHealthcareAgentParticipant
@@ -441,7 +439,9 @@ Usage: #example
 * active = true
 * patient = Reference(Example-Smith-Johnson-Patient1)
 //* relationship[0] = $LOINC#75784-9 "First alternate healthcare agent - Reported"
-* relationship[0] = $HL7RoleCode#DAU "natural daughter"
+* relationship[healthcare-agent-type][+] = $HL7RoleCode#DPOWATT
+* relationship[healthcare-agent-type][=] = $HL7RoleCode#DAUINLAW "daughter in-law"
+* relationship[healthcare-agent-ordinality] = $LOINC#75784-9 "First alternate healthcare agent [Reported]"
 
 * name[0].family = "Johnson"
 * name[0].given[0] = "Debra"
@@ -464,12 +464,14 @@ Usage: #example
 
 * active = true
 * patient = Reference(Example-Smith-Johnson-Patient1)
+* relationship[healthcare-agent-type] = $HL7RoleCode#HPOWATT "healthcare power of attorney"
+* relationship[healthcare-agent-ordinality] = $LOINC#75785-6 "Second alternate healthcare agent [Reported]"
 
 * name[0].family = "Xavier"
 * name[0].given[0] = "Charles"
 * name[0].text = "Xavier, Charles"
 * telecom[0].system = #email
-* telecom[0].value = "Chales@example.com"
+* telecom[0].value = "Charles@example.com"
 * telecom[0].use = #work
 
 
@@ -494,7 +496,7 @@ Usage: #example
 * provision.actor[+].role = $LOINC#75783-1 "Primary healthcare agent [Reported]"
 * provision.actor[=].reference = Reference(Example-Smith-Johnson-HealthcareAgent1)
 * provision.actor[+].role = $LOINC#75784-9 "First alternate healthcare agent [Reported]"
-* provision.actor[=].reference = Reference(Example-Smith-Johnson-HealthcareAgent3)
+* provision.actor[=].reference = Reference(Example-Smith-Johnson-HealthcareAgent2)
 
 * provision.action[+] = ADIHCADecisionsCS#intubation "Intubation"
 * provision.action[+] = ADIHCADecisionsCS#tube-feeding "Tube feeding"

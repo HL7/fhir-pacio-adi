@@ -66,7 +66,6 @@ Alias: $HL7AdataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent
 Alias: $VSACClauseType = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.14
 Alias: $VSACUponDeathPreferences = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.15
 
-Alias: $VSACADIHealthcareAgentParticipantRole = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1046.35
 Alias: $VSACADIAdvanceDirectiveCategories = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.11.20.9.69.4
 Alias: $VSACADIInterventionPreferencesEndOfLifeGrouping = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.9
 Alias: $VSACADIConsentActorRole = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1046.35
@@ -79,6 +78,7 @@ Alias: $VSACADIAdditionalPMOProceduresGrouping = http://cts.nlm.nih.gov/fhir/Val
 Alias: $VSACADIMedicallyAssistedNutritionOrderOptions = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.35
 Alias: $VSACADIMedicallyAssistedNutritionOrderOptionsGrouping = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.36
 Alias: $VSACCardiopulmonaryResuscitationOrderOptions = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.28
+Alias: $VSACHealthcareAgentOrProxyChoices = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1046.35
 Alias: $HealthGoalsGrouping = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.7
 Alias: $CardiopulmonaryResuscitationProceduresGrouping = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.31
 Alias: $VSACADIDocumentTypesGrouper = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.41

@@ -23,8 +23,8 @@ Description: "Betsy Smith-Johnson MHAD Bundle Example"
 * entry[=].resource = Example-Smith-Johnson-Patient1
 * entry[+].fullUrl = "http://www.example.org/fhir/RelatedPerson/Example-Smith-Johnson-Notary2"
 * entry[=].resource = Example-Smith-Johnson-Notary2
-* entry[+].fullUrl = "http://www.example.org/fhir/RelatedPerson/Example-Smith-Johnson-HealthcareAgent3"
-* entry[=].resource = Example-Smith-Johnson-HealthcareAgent3
+* entry[+].fullUrl = "http://www.example.org/fhir/RelatedPerson/Example-Smith-Johnson-HealthcareAgent1"
+* entry[=].resource = Example-Smith-Johnson-HealthcareAgent1
 * entry[+].fullUrl = "http://www.example.org/fhir/Consent/Example-Smith-Johnson-HealthcareAgentConsent2"
 * entry[=].resource = Example-Smith-Johnson-HealthcareAgentConsent2
 * entry[+].fullUrl = "http://www.example.org/fhir/Binary/MHAD-Example-Smith-Johnson-Binary"
@@ -52,7 +52,7 @@ Description: "Betsy Smith-Johnson MHAD Composition Example"
 // * event.detail = Reference(Binary/MHAD-Example-Smith-Johnson-Binary)
 
 * section[healthcare_agent].entry[+] = Reference(Example-Smith-Johnson-Notary2)
-* section[healthcare_agent].entry[+] = Reference(Example-Smith-Johnson-HealthcareAgent3)
+* section[healthcare_agent].entry[+] = Reference(Example-Smith-Johnson-HealthcareAgent1)
 * section[healthcare_agent].entry[+] = Reference(Example-Smith-Johnson-HealthcareAgentConsent2)
 
 * section[healthcare_agent].title = "Appointment of a Primary Healthcare Agent and Alternate Healthcare Agents"
@@ -98,7 +98,9 @@ Usage: #example
 
 * active = true
 * patient = Reference(Patient/Example-Smith-Johnson-Patient1)
-* relationship = $HL7RoleCode#SON "natural son"
+* relationship[healthcare-agent-type][+] = $HL7RoleCode#DPOWATT
+* relationship[healthcare-agent-type][=] = $HL7RoleCode#SONC "son"
+* relationship[healthcare-agent-ordinality] = $LOINC#75783-1 "Primary healthcare agent [Reported]"
 * name[0].family = "Johnson"
 * name[0].given[0] = "Charles"
 * name[0].text = "Johnson, Charles"
@@ -107,30 +109,30 @@ Usage: #example
 * telecom[0].use = #home
 * extension[adi-notaryInformation-extension].extension[NotaryCommissionState].valueCodeableConcept = urn:iso:std:iso:3166:-2#US-MI
 
-Instance: Example-Smith-Johnson-HealthcareAgent3
-InstanceOf: ADIHealthcareAgentParticipant
-Description: "Example Patient Smith-Johnson Healthcare Agent (Charles Johnson)"
-Usage: #example
-* text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
-<p><b>Primary Healthcare Agent</b></p>
-<p>The person I choose as my Primary Healthcare Agent is:</p>
-<p><i>Charles Johnson</i></p>
-<p><i>(Son)</i></p>
-<p><i>CharlesSJ@example.com</i></p>
-<p>[SELECTED to act as a healthcare agent on 3/29/2021, at 2:25 PM CDT]</p>
-<p>[ACCEPTED to act as a healthcare agent on 4/1/2021, at 3:39 PM CDT]</p>
-</div>"
+// Instance: Example-Smith-Johnson-HealthcareAgent3
+// InstanceOf: ADIHealthcareAgentParticipant
+// Description: "Example Patient Smith-Johnson Healthcare Agent (Charles Johnson)"
+// Usage: #example
+// * text.status = #additional
+// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+// <p><b>Primary Healthcare Agent</b></p>
+// <p>The person I choose as my Primary Healthcare Agent is:</p>
+// <p><i>Charles Johnson</i></p>
+// <p><i>(Son)</i></p>
+// <p><i>CharlesSJ@example.com</i></p>
+// <p>[SELECTED to act as a healthcare agent on 3/29/2021, at 2:25 PM CDT]</p>
+// <p>[ACCEPTED to act as a healthcare agent on 4/1/2021, at 3:39 PM CDT]</p>
+// </div>"
 
-* active = true
-* patient = Reference(Example-Smith-Johnson-Patient1)
-* relationship = $HL7RoleCode#SON "natural son"
-* name[0].family = "Johnson"
-* name[0].given[0] = "Charles"
-* name[0].text = "Johnson, Charles"
-* telecom[0].system = #email
-* telecom[0].value = "CharlesSJ@example.com"
-* telecom[0].use = #home
+// * active = true
+// * patient = Reference(Example-Smith-Johnson-Patient1)
+// * relationship = $HL7RoleCode#SON "natural son"
+// * name[0].family = "Johnson"
+// * name[0].given[0] = "Charles"
+// * name[0].text = "Johnson, Charles"
+// * telecom[0].system = #email
+// * telecom[0].value = "CharlesSJ@example.com"
+// * telecom[0].use = #home
 
 // ******************
 
@@ -139,7 +141,7 @@ InstanceOf: ADIHealthcareAgentConsentPermit
 Description: "Example Patient Smith-Johnson Healthcare Agent Consent"
 Usage: #example
 * text.status = #additional
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>status</b>: active</p><p><b>scope</b>: <span title='Codes: {http://loinc.org 75786-4}'>Powers granted to healthcare agent - Reported</span></p><p><b>category</b>: <span title='Codes: {http://terminology.hl7.org/CodeSystem/consentcategorycodes acd}'>Advance Directive</span></p><p><b>patient</b>: <a href='Patient-Example-Smith-Johnson-Patient1.html'>Betsy Smith-Johnson</a> ; BetsySJ@example.com; gender: female; birthDate: 1950-11-15</p><p><b>dateTime</b>: 2020-08-03</p><h3>Policies</h3><table class='grid'><tr><td>-</td><td><b>Authority</b></td><td><b>Uri</b></td></tr><tr><td>*</td><td><a href='https://www.michigan.gov/'>https://www.michigan.gov/</a></td><td><a href='http://www.legislature.mi.gov/(S(tpnclc1ofteerx2x2dppcmdz))/mileg.aspx?page=GetObject&amp;objectname=mcl-386-1998-V-5'>http://www.legislature.mi.gov/(S(tpnclc1ofteerx2x2dppcmdz))/mileg.aspx?page=GetObject&amp;objectname=mcl-386-1998-V-5</a></td></tr></table><blockquote><p><b>provision</b></p><p><b>type</b>: permit</p><blockquote><p><b>actor</b></p><p><b>role</b>: <span title='Codes: {http://loinc.org 75783-1}'>Primary healthcare agent - Reported</span></p><p><b>reference</b>: <a href='RelatedPerson-Example-Smith-Johnson-HealthcareAgent1.html'><span title='Codes: {http://terminology.hl7.org/CodeSystem/v3-RoleCode SON}'>natural son</span>; Charles Johnson ; CharlesSJ@example.com</a></p></blockquote><blockquote><p><b>actor</b></p><p><b>role</b>: <span title='Codes: {http://loinc.org 75784-9}'>First alternate healthcare agent - Reported</span></p><p><b>reference</b>: <a href='RelatedPerson-Example-Smith-Johnson-HealthcareAgent3.html'><span title='Codes: {http://loinc.org 75784-9}'>First alternate healthcare agent - Reported</span>, <span title='Codes: {http://terminology.hl7.org/CodeSystem/v3-RoleCode DAU}'>natural daughter</span>; Debra Johnson ; DebraSJ@example.com</a></p></blockquote><p><b>action</b>: <span title='Codes: {http://loinc.org 75787-2}'>Advance directive - request for intubation</span>, <span title='Codes: {http://loinc.org 75788-0}'>Advance directive - request for tube feeding</span>, <span title='Codes: {http://loinc.org 75789-8}'>Advance directive - request for life support</span>, <span title='Codes: {http://loinc.org 75790-6}'>Advance directive - request for IV fluid and support</span>, <span title='Codes: {http://loinc.org 75791-4}'>Advance directive - request for antibiotics</span>, <span title='Codes: {http://loinc.org 75792-2}'>Advance directive - request for resuscitation that differs from cardiopulmonary resuscitation</span></p><p><b>purpose</b>: <span title='{http://terminology.hl7.org/CodeSystem/v3-ActReason PWATRNY}'>power of attorney</span></p></blockquote></div>"
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>status</b>: active</p><p><b>scope</b>: <span title='Codes: {http://loinc.org 75786-4}'>Powers granted to healthcare agent - Reported</span></p><p><b>category</b>: <span title='Codes: {http://terminology.hl7.org/CodeSystem/consentcategorycodes acd}'>Advance Directive</span></p><p><b>patient</b>: <a href='Patient-Example-Smith-Johnson-Patient1.html'>Betsy Smith-Johnson</a> ; BetsySJ@example.com; gender: female; birthDate: 1950-11-15</p><p><b>dateTime</b>: 2020-08-03</p><h3>Policies</h3><table class='grid'><tr><td>-</td><td><b>Authority</b></td><td><b>Uri</b></td></tr><tr><td>*</td><td><a href='https://www.michigan.gov/'>https://www.michigan.gov/</a></td><td><a href='http://www.legislature.mi.gov/(S(tpnclc1ofteerx2x2dppcmdz))/mileg.aspx?page=GetObject&amp;objectname=mcl-386-1998-V-5'>http://www.legislature.mi.gov/(S(tpnclc1ofteerx2x2dppcmdz))/mileg.aspx?page=GetObject&amp;objectname=mcl-386-1998-V-5</a></td></tr></table><blockquote><p><b>provision</b></p><p><b>type</b>: permit</p><blockquote><p><b>actor</b></p><p><b>role</b>: <span title='Codes: {http://loinc.org 75783-1}'>Primary healthcare agent - Reported</span></p><p><b>reference</b>: <a href='RelatedPerson-Example-Smith-Johnson-HealthcareAgent1.html'><span title='Codes: {http://terminology.hl7.org/CodeSystem/v3-RoleCode SON}'>natural son</span>; Charles Johnson ; CharlesSJ@example.com</a></p></blockquote><blockquote><p><b>actor</b></p><p><b>role</b>: <span title='Codes: {http://loinc.org 75784-9}'>First alternate healthcare agent - Reported</span></p><p><b>reference</b>: <a href='RelatedPerson-Example-Smith-Johnson-HealthcareAgent1.html'><span title='Codes: {http://loinc.org 75784-9}'>First alternate healthcare agent - Reported</span>, <span title='Codes: {http://terminology.hl7.org/CodeSystem/v3-RoleCode DAU}'>natural daughter</span>; Debra Johnson ; DebraSJ@example.com</a></p></blockquote><p><b>action</b>: <span title='Codes: {http://loinc.org 75787-2}'>Advance directive - request for intubation</span>, <span title='Codes: {http://loinc.org 75788-0}'>Advance directive - request for tube feeding</span>, <span title='Codes: {http://loinc.org 75789-8}'>Advance directive - request for life support</span>, <span title='Codes: {http://loinc.org 75790-6}'>Advance directive - request for IV fluid and support</span>, <span title='Codes: {http://loinc.org 75791-4}'>Advance directive - request for antibiotics</span>, <span title='Codes: {http://loinc.org 75792-2}'>Advance directive - request for resuscitation that differs from cardiopulmonary resuscitation</span></p><p><b>purpose</b>: <span title='{http://terminology.hl7.org/CodeSystem/v3-ActReason PWATRNY}'>power of attorney</span></p></blockquote></div>"
 
 * status = #active
 * category = $HL7ConsentCategoryCodes#acd "Advance Directive"
@@ -151,7 +153,7 @@ Usage: #example
 * policy.uri = "http://example.org/healthcare-agent-policy"  // fictitious policy URL for example
 
 * provision.actor[+].role = $LOINC#75783-1 "Primary healthcare agent [Reported]"
-* provision.actor[=].reference = Reference(RelatedPerson/Example-Smith-Johnson-HealthcareAgent3)
+* provision.actor[=].reference = Reference(RelatedPerson/Example-Smith-Johnson-HealthcareAgent1)
 
 * provision.action[+] = ADIHCADecisionsCS#intubation "Intubation"
 * provision.action[+] = ADIHCADecisionsCS#tube-feeding "Tube feeding"

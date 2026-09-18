@@ -179,7 +179,7 @@
 <artifact id="Endpoint/Example-Smith-Johnson-Endpoint2" key="Endpoint-Example-Smith-Johnson-Endpoint2" name="Example-Smith-Johnson-Endpoint2"/>
 <artifact id="RelatedPerson/Example-Smith-Johnson-HealthcareAgent1" key="RelatedPerson-Example-Smith-Johnson-HealthcareAgent1" name="Example-Smith-Johnson-HealthcareAgent1"/>
 <artifact id="RelatedPerson/Example-Smith-Johnson-HealthcareAgent2" key="RelatedPerson-Example-Smith-Johnson-HealthcareAgent2" name="Example-Smith-Johnson-HealthcareAgent2"/>
-<artifact id="RelatedPerson/Example-Smith-Johnson-HealthcareAgent3" key="RelatedPerson-Example-Smith-Johnson-HealthcareAgent3" name="Example-Smith-Johnson-HealthcareAgent3"/>
+<artifact deprecated="true" id="RelatedPerson/Example-Smith-Johnson-HealthcareAgent3" key="RelatedPerson-Example-Smith-Johnson-HealthcareAgent3" name="Example-Smith-Johnson-HealthcareAgent3"/>
 <artifact id="Consent/Example-Smith-Johnson-HealthcareAgentConsent" key="Consent-Example-Smith-Johnson-HealthcareAgentConsent" name="Example-Smith-Johnson-HealthcareAgentConsent"/>
 <artifact id="Consent/Example-Smith-Johnson-HealthcareAgentConsent-Deny" key="Consent-Example-Smith-Johnson-HealthcareAgentConsent-Deny" name="Example-Smith-Johnson-HealthcareAgentConsent-Deny"/>
 <artifact id="Consent/Example-Smith-Johnson-HealthcareAgentConsent-Permit" key="Consent-Example-Smith-Johnson-HealthcareAgentConsent-Permit" name="Example-Smith-Johnson-HealthcareAgentConsent-Permit"/>
