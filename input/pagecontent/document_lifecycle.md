@@ -1,5 +1,5 @@
 
-### Document Lifecycle Managment
+### Document Lifecycle Management
 
 Healthcare documents are not static files sitting in a folder. They evolve, version, move between systems, gain or lose authority, become replaced or revoked.  Healthcare documents, also called “clinical documents”, are a durable collection of clinical/legal assertions traveling through a distributed trust and policy ecosystem. A clinical document represents an attestable snapshot of information at a point in time, even though the underlying healthcare record may continue to evolve. These documents must remain discoverable and trustworthy over long periods of time. 
 

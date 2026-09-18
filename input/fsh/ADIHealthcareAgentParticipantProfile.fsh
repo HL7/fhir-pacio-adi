@@ -25,12 +25,14 @@ Description: "A person represented using the ADI Healthcare Agent Profile and re
 * relationship ^slicing.description = "Slice based on $this value"
 
 * relationship contains healthcare-agent-type 0..* MS
-* relationship[healthcare-agent-type] from $HL7v3PowerOfAttorneyVS
-* relationship[healthcare-agent-type] ^requirements = "Indicates the relationship of the healthcare agent participant."
+* relationship[healthcare-agent-type] from $VSACPersonalAndLegalRelationshipRoleType (required)
+* relationship[healthcare-agent-type] ^short = "The healthcare agent participant's personal or legal relationships."
+
+* relationship contains healthcare-agent-ordinality 0..1 MS
+* relationship[healthcare-agent-ordinality] from $VSACHealthcareAgentOrProxyChoices (required)
+* relationship[healthcare-agent-ordinality] ^short = "The healthcare agent or proxy roles that individuals commonly designate to empower surrogates to make medical treatment and care decisions when the individual is unable to effectively communicate with medical personnel or requires assistance with decision making."
 
 * name 1..1 MS // CONF:4445-33420
 * telecom 1..* MS // CONF:4445-33417
 * address MS
 
-
-// HOW About references to external documents????
