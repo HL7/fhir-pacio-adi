@@ -75,22 +75,22 @@ Description: "Codes indicating a role of a notary or witness attester."
 * include $LOINC#81371-7 "Third witness"
 * insert LOINCCopyrightNotice
 
-
-ValueSet: ADIDocumentationTypeVS
-Title: "Documentation Types"
-Description: "Types of Documents"
-* ^experimental = false
-* include $LOINC#81352-7 "Medical Order for Life-Sustaining Treatment, Physician Order for Life-Sustaining Treatment, or a similar medical order is in place [Reported]"
-* include $LOINC#81351-9 "Do Not Resuscitate, Do Not Attempt Resuscitation, or Allow Natural Death order is in place [Reported]"
-* include $LOINC#42348-3 "Advance healthcare directives"
-//* include $LOINC#81375-8 "Self assessment of health status [Reported]"
-//* include $LOINC#81354-3 "Prescribed anticipatory medication [Reported]"
-* include $SNOMEDCT#304253006 "Not for resuscitation"
-* include $SNOMEDCT#714748000 "Has advance care plan"
-* include codes from system $SNOMEDCT where concept is-a #425392003 "Active advance directive"
-* include codes from system $SNOMEDCT where concept is-a #423876004 "Clinical document"
-* insert LOINCCopyrightNotice
-* insert SNOMEDCopyrightNotice
+// commented out since it is no longer used.
+// ValueSet: ADIDocumentationTypeVS
+// Title: "Documentation Types"
+// Description: "Types of Documents"
+// * ^experimental = false
+// * include $LOINC#81352-7 "Medical Order for Life-Sustaining Treatment, Physician Order for Life-Sustaining Treatment, or a similar medical order is in place [Reported]"
+// * include $LOINC#81351-9 "Do Not Resuscitate, Do Not Attempt Resuscitation, or Allow Natural Death order is in place [Reported]"
+// * include $LOINC#42348-3 "Advance healthcare directives"
+// //* include $LOINC#81375-8 "Self assessment of health status [Reported]"
+// //* include $LOINC#81354-3 "Prescribed anticipatory medication [Reported]"
+// * include $SNOMEDCT#304253006 "Not for resuscitation"
+// * include $SNOMEDCT#714748000 "Has advance care plan"
+// * include codes from system $SNOMEDCT where concept is-a #425392003 "Active advance directive"
+// * include codes from system $SNOMEDCT where concept is-a #423876004 "Clinical document"
+// * insert LOINCCopyrightNotice
+// * insert SNOMEDCopyrightNotice
 
 // LOINC PMO ValueSet lists
 

@@ -93,7 +93,7 @@ Alias: $data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-r
 Alias: $additional-binding = http://hl7.org/fhir/tools/StructureDefinition/additional-binding
 
 Alias: $VSACADIAdvanceDirectiveCategoriesGrouper = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.25
-Alias: $VSACADIDecisionalCapacity = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1115.49 // http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1240.1 // MLT20250610: replace with the VSAC subset once provided.
+Alias: $VSACADIDecisionalCapacity = https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.49 // http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1240.1 // MLT20250610: replace with the VSAC subset once provided.
 Alias: $VSACADIRationaleForTreatment = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1047.358
 
 Alias: $endpoint-connection-type = http://terminology.hl7.org/CodeSystem/endpoint-connection-type

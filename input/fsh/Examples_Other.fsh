@@ -9,7 +9,7 @@ Usage: #example
 * subject = Reference(Patient/Example-Smith-Johnson-Patient1)
 * performer = Reference(PractitionerRole/Example-Kyle-Anydoc-PractitionerRole1)
 * effectiveDateTime = "2021-03-29T14:25:34.001-05:00"
-* valueCodeableConcept = $SNOMEDCT#551782000124105 "Patient lacks decisional capacity (finding)"
+* valueCodeableConcept = $SNOMEDCT#304651004 "Unable to use decision making strategies (finding)"
 * effectiveDateTime = "2024-09-18T22:33:22Z"
 
 // ------------------------------
@@ -250,5 +250,17 @@ Description: "Betsy Smith-Johnson Example Clinical Note declining Advance Care P
 * content.attachment.contentType = #text/plain
 * content.attachment.data = "R09PRCBIRUFMVEggQ0xJTklDCkNsaW5pY2FsIFNvY2lhbCBXb3JrIEVuY291bnRlciBOb3RlCgpQYXRpZW50OiBCZXRzeSBTbWl0aC1Kb2huc29uCk1STjogR0hDLTAwMDE4NDcgKGZpY3RpdGlvdXMpCkRhdGUgb2YgU2VydmljZTogMDcvMjQvMjAyNgpBdXRob3I6IE1hcmdhcmV0IFJleW5vbGRzLCBMQ1NXCkVuY291bnRlciBUeXBlOiBPdXRwYXRpZW50IFNvY2lhbCBXb3JrCgpNYXJnYXJldCBSZXlub2xkcywgTENTVywgbWV0IGJyaWVmbHkgd2l0aCBCZXRzeSBTbWl0aC1Kb2huc29uIGFuZCBwcm92aWRlZCBnZW5lcmFsIGVkdWNhdGlvbiByZWdhcmRpbmcgYWR2YW5jZSBjYXJlIHBsYW5uaW5nLCBpbmNsdWRpbmcgdGhlIHB1cnBvc2Ugb2YgZGlzY3Vzc2luZyBhbmQgZG9jdW1lbnRpbmcgZnV0dXJlIGhlYWx0aGNhcmUgcHJlZmVyZW5jZXMgYW5kIGlkZW50aWZ5aW5nIGEgaGVhbHRoY2FyZSBkZWNpc2lvbi1tYWtlci4gU29jaWFsIHdvcmsgc2VydmljZXMgd2VyZSBvZmZlcmVkIHRvIGFzc2lzdCB3aXRoIGZ1cnRoZXIgZGlzY3Vzc2lvbiBvciBjb21wbGV0aW9uIG9mIGFkdmFuY2UgY2FyZSBwbGFubmluZyBkb2N1bWVudHMuCgpNcy4gU21pdGgtSm9obnNvbiBkZWNsaW5lZCBhZHZhbmNlIGNhcmUgcGxhbm5pbmcgc2VydmljZXMgYXQgdGhpcyB0aW1lLCBzdGF0aW5nIHRoYXQgc2hlIHByZWZlcnMgbm90IHRvIGRpc2N1c3MgaGVyIGNhcmUgcHJlZmVyZW5jZXMgY3VycmVudGx5LiBIZXIgZGVjaXNpb24gd2FzIGFja25vd2xlZGdlZCBhbmQgcmVzcGVjdGVkLiBTaGUgd2FzIGluZm9ybWVkIHRoYXQgc3VwcG9ydCByZW1haW5zIGF2YWlsYWJsZSB0aHJvdWdoIEdvb2QgSGVhbHRoIENsaW5pYyBzaG91bGQgc2hlIHdpc2ggdG8gcmV2aXNpdCB0aGUgdG9waWMgaW4gdGhlIGZ1dHVyZS4gTm8gYWRkaXRpb25hbCBzb2NpYWwgd29yayBmb2xsb3ctdXAgaXMgaW5kaWNhdGVkIGF0IHRoaXMgdGltZSB1bmxlc3MgcmVxdWVzdGVkIGJ5IHRoZSBwYXRpZW50IG9yIGNhcmUgdGVhbS4KCkVsZWN0cm9uaWNhbGx5IHNpZ25lZCBieTogTWFyZ2FyZXQgUmV5bm9sZHMsIExDU1cKR29vZCBIZWFsdGggQ2xpbmlj"
 
-
-
+Instance: org-ED-Metro-Hospital
+InstanceOf: Organization
+Usage: #example
+Description: "Metro Hospital Emergency Department organization."
+* active = true
+* name = "Metro Hospital Emergency Department"
+* telecom.system = #phone
+* telecom.value = "(555) 384-4444"
+* address.line = "22327 Moross Rd, Detroit, MI 48236"
+* address.city = "Detroit"
+* address.state = "MI"
+* address.postalCode = "48236"
+* address.country = "US"
+* address.text = "22327 Moross Rd, Detroit, MI 48236"
