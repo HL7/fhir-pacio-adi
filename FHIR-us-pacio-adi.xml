@@ -113,7 +113,7 @@
 <artifact id="SearchParameter/DocumentReference-status" key="SearchParameter-DocumentReference-status" name="DocumentReference-status"/>
 <artifact id="SearchParameter/DocumentReference-subject" key="SearchParameter-DocumentReference-subject" name="DocumentReference-subject"/>
 <artifact id="SearchParameter/DocumentReference-type" key="SearchParameter-DocumentReference-type" name="DocumentReference-type"/>
-<artifact id="ValueSet/ADIDocumentationTypeVS" key="ValueSet-PADIDocumentationTypeVS" name="Documentation Types"/>
+<artifact deprecated="true" id="ValueSet/ADIDocumentationTypeVS" key="ValueSet-PADIDocumentationTypeVS" name="Documentation Types"/>
 <artifact deprecated="true" id="StructureDefinition/adi-effective-date-extension" key="StructureDefinition-padi-effective-date-extension" name="Effective Date"/>
 <artifact id="StructureDefinition/adi-enclosedPrecondition-extension" key="StructureDefinition-adi-enclosedPrecondition-extension" name="Enclosed Precondition"/>
 <artifact id="Practitioner/Example-Kyle-Anydoc-Practitioner" key="Practitioner-Example-Kyle-Anydoc-Practitioner" name="Example-Kyle-Anydoc-Practitioner"/>
@@ -257,6 +257,7 @@
 <artifact deprecated="true" id="ValueSet/PADIUponDeathPreferencesVS" key="ValueSet-PADIUponDeathPreferencesVS" name="Upon Death Preferences"/>
 <artifact id="StructureDefinition/adi-docVersionNumber-extension" key="StructureDefinition-padi-versionNumber-extension" name="Version Number"/>
 <artifact id="StructureDefinition/adi-witness-information-extension" key="StructureDefinition-adi-witness-information-extension" name="Witness Information"/>
+<artifact id="Organization/org-ED-Metro-Hospital" key="Organization-org-ED-Metro-Hospital" name="org-ED-Metro-Hospital"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="key_terms_and_acronyms" name="Appendix A - Key Terms and Acronyms"/>

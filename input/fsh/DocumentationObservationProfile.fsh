@@ -29,12 +29,6 @@ Description: "This profile is used to indicate if additional advance directive d
 
 * effective[x] 1..1 MS  // CONF:4445-33113
 
-// * value[x] 1..1 MS
-// * value[x] only CodeableConcept
-// * valueCodeableConcept from ADIDocumentationTypeVS (extensible)  // mlt_20260722: commented out since US Core has a "yes/no" VS binding
-
-
-
 // need to add derived from documentReference to allow pointing to the actual order
 * derivedFrom only Reference(ADIDocumentReference)
 * derivedFrom ^short = "Reference to the additional document that exists"
