@@ -2,7 +2,7 @@ Profile: ADIOrganDonationObservation
 Parent: Observation
 Id: ADI-OrganDonationObservation
 Title: "ADI Organ Donation Observation"
-Description: "This profile is used to represent the author's thoughts about organ donation."
+Description: "This profile is used to represent the author's thoughts about organ donation. Note: this information also can be represented using the Upon Death Preferences Entry profile."  // mlt_20260921: added the note to fix FHIR-51596.
 
 * text 1..1 MS
 * status = #final
