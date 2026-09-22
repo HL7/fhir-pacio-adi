@@ -2,7 +2,7 @@ Profile: ADIAutopsyObservation
 Parent: Observation
 Id: ADI-AutopsyObservation
 Title: "ADI Autopsy Observation"
-Description: "This profile is used to represent the author's thoughts about autopsy."
+Description: "This profile is used to represent the author's thoughts about autopsy. Note: this information also can be represented using the Upon Death Preferences Entry profile."  // mlt_20260921: added the note to fix FHIR-51596.
 
 * text 1..1 MS
 * status = #final
