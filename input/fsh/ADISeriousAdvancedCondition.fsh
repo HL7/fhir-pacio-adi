@@ -10,7 +10,7 @@ Description: "This concept expresses the medical or serious advanced condition t
 
 * status = #final
 
-* category = $USCoreCategory#survey
+* category = $USCoreCategory#PMO
 * code 1..1 MS
 * code = ADITempCS#serious-advanced-condition "Serious advanced condition"
 
