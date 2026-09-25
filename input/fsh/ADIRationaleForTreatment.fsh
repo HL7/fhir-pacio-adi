@@ -8,7 +8,7 @@ Description: "This profile is used to represent the rationale for a patient's tr
 
 * status = #final
 
-* category = $USCoreCategory#survey
+* category = $USCoreCategory#PMO
 * code 1..1 MS
 * code from $VSACADIRationaleForTreatment
 

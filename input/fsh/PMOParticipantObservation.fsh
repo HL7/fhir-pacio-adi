@@ -13,8 +13,8 @@ Description: "This profile is used to represent the portable medical orders part
 * code 1..1 MS
 * code = $LOINC#100827-5
 
-* focus 1..1 MS
-* focus only Reference(ADIPMOComposition) // TODO, is this needed, check with O&O
+// * focus 1..1 MS
+// * focus only Reference(ADIPMOComposition) // mlt_20260925: Removed ADIPMOComposition reference to avoid a circular reference. (fix for JIRA FHIR-52686)
 
 * value[x] 1..1 MS
 * value[x] only CodeableConcept

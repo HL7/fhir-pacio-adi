@@ -89,10 +89,16 @@ pages:
     title: Content Type Overview
   document_lifecycle.md:
     title: Document Lifecycle
+    extension:
+    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      valueCode: informative
   system_use_cases.md:
     title: System Use Cases
   formal_specification.md:
     title: Formal Specification
+    extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
   security_privacy_consent.md:
     title: Security, Privacy, and Consent
   signatures.md:
@@ -101,6 +107,9 @@ pages:
     title: Recommended Search Parameters
   key_terms_and_acronyms.md:
     title: Appendix A - Key Terms and Acronyms
+    extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
   appendix_b_msd_progressive_structuring.md:
     title: Appendix B - Progressive Structuring
   pacp_workflow.md:

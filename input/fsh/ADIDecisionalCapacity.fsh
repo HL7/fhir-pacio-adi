@@ -8,7 +8,7 @@ Description: "This profile is used to represent a patient's decisional capacity 
 
 * status = #final
 
-* category = $USCoreCategory#survey
+* category = $USCoreCategory#PMO
 
 * code 1..1 MS
 * code = $LOINC#8693-4 "Mental status"

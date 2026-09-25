@@ -124,7 +124,6 @@ Usage: #example
 
 * status = #final
 * subject = Reference(Patient/Example-Smith-Johnson-Patient1)
-* focus = Reference(Composition/PMO-Example-Smith-Johnson-PMOComposition1)
 * performer = Reference(PractitionerRole/Example-Kyle-Anydoc-PractitionerRole1)
 * effectiveDateTime = "2021-03-29T14:25:34.001-05:00"
 * valueCodeableConcept = $LOINC#LA33482-3 "Patient with decision-making capacity"
