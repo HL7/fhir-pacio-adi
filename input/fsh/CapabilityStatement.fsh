@@ -93,8 +93,8 @@ Usage: #definition
 * rest.resource[=].interaction[=].extension.valueCode = #SHOULD
 * rest.resource[=].interaction[=].code = #history-instance
 * rest.resource[=].referencePolicy = #resolves
-* rest.resource[=].supportedProfile[0] = Canonical(ADI-Composition-Header)
-* rest.resource[=].supportedProfile[+] = Canonical(ADI-PACPComposition)
+// * rest.resource[=].supportedProfile[0] = Canonical(ADI-Composition-Header)
+* rest.resource[=].supportedProfile[0] = Canonical(ADI-PACPComposition)
 * rest.resource[=].supportedProfile[+] = Canonical(ADI-PMOComposition)
 * rest.resource[=].type = #Composition
 
