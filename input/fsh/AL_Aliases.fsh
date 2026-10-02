@@ -87,6 +87,7 @@ Alias: $VSACADIPMODocumentTypes = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.
 Alias: $VSACADIWitnessCategory = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.21
 Alias: $VSACPersonalAndLegalRelationshipRoleType = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.11.20.12.1
 Alias: $VSACAnswerSetWithYesNoAndUnknowns = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.16
+Alias: $VSACHospiceOrPalliativeCareEnrollmentIndicator = https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1115.42 
 
 // Standard extension aliases
 Alias: $data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason

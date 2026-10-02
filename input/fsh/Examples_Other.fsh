@@ -114,6 +114,7 @@ Usage: #example
 * effectiveDateTime = "2021-03-29T14:25:34.001-05:00"
 * valueBoolean = true
 * effectiveDateTime = "2024-09-18T22:33:22Z"
+* code = $SNOMEDCT#551781000124102 "Under care of hospice team (finding)"
 
 // ------------------------------
 

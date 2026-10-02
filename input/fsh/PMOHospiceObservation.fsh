@@ -21,6 +21,7 @@ Description: "This profile is used to represent a finding that the individual is
 * code 1..1 MS
 
 //* code = $LOINC#75781-5
+* code from $VSACHospiceOrPalliativeCareEnrollmentIndicator (extensible)
 
 * subject 1..1
 * subject only Reference($USCorePatient)
@@ -28,7 +29,8 @@ Description: "This profile is used to represent a finding that the individual is
 * encounter 0..0 // verify no encounter possible
 * performer only Reference($USCorePractitioner or $USCorePractitionerRole)
 
-* code = $SNOMEDCT#551781000124102 //Under care of hospice team (finding) - US Edition
- 
+// * code = $SNOMEDCT#551781000124102 //Under care of hospice team (finding) - US Edition
+
+
 * value[x] only boolean
 * value[x] 1..1
