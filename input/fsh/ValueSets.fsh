@@ -65,15 +65,15 @@ Description: "Includes data absent reason concepts to express why a Healthcare A
 
 
 
-ValueSet: ADINotaryAndWitnessAttesterRoleTypeVS
-Title: "Attester Role"
-Description: "Codes indicating a role of a notary or witness attester."
-* ^experimental = false
-* include $LOINC#81372-5 "Notary"
-* include $LOINC#81369-1 "First witness"
-* include $LOINC#81370-9 "Second witness"
-* include $LOINC#81371-7 "Third witness"
-* insert LOINCCopyrightNotice
+// ValueSet: ADINotaryAndWitnessAttesterRoleTypeVS         // mlt_20261013: commenting out since this is now replaced by a VSAC valueset.
+// Title: "Attester Role"
+// Description: "Codes indicating a role of a notary or witness attester."
+// * ^experimental = false
+// * include $LOINC#81372-5 "Notary"
+// * include $LOINC#81369-1 "First witness"
+// * include $LOINC#81370-9 "Second witness"
+// * include $LOINC#81371-7 "Third witness"
+// * insert LOINCCopyrightNotice
 
 // commented out since it is no longer used.
 // ValueSet: ADIDocumentationTypeVS
