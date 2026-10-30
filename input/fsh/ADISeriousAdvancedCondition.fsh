@@ -5,7 +5,7 @@ Title: "ADI Serious Advanced Condition"
 Description: "This concept expresses the medical or serious advanced condition that makes the patient appropriate for a portable medical order (PMO)."
 
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
-* ^extension[=].valueInteger = 0
+* ^extension[=].valueInteger = 1
 * ^experimental = false
 
 * status = #final

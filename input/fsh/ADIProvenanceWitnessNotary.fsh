@@ -1,9 +1,12 @@
-Profile: ADIProvenance
-// Does this need to derive from US Core DocumentReference? If so, need to review the requirements below and remove incompatible or redundant requirements
+Profile: ADIProvenanceWitnessNotary
 Parent: $USCoreProvenance
-Id: ADI-Provenance
+Id: ADI-ProvenanceWitnessNotary
 Title: "ADI Provenance"
-Description: "Information-sharing provenance for use in 2 scenarios: 1) finding out who retrieved the ADI information when captured and 2) who fetched and sent the provenance information associated with advance directive interoperability data."
+Description: "Information-sharing provenance for use in 1) linking the Witness or Notary statements to witness or notary signatories 2) linking the witness and notary information block with the advance directive document."
+
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 0
+* ^experimental = false
 
 * agent contains
     ProvenanceAssembler 0..1 MS
@@ -19,8 +22,6 @@ Description: "Information-sharing provenance for use in 2 scenarios: 1) finding 
 
 
 * signature 0..1 MS
-
-// TODO US Core provenance does not allow provenance agent.who of a device
 
 * insert ADIProvenanceDescriptions
 
