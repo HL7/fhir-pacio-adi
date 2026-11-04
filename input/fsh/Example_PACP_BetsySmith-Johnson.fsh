@@ -1117,7 +1117,7 @@ Usage: #example
 * subject = Reference(Example-Smith-Johnson-Patient1)
 * date = "2021-03-29T14:25:34.001-05:00"
 * author = Reference(Example-Smith-Johnson-Patient1)
-* authenticator = Reference(Example-Smith-Johnson-OrganizationCustodian1)
+// * authenticator = Reference(Example-Smith-Johnson-OrganizationCustodian1)
 * custodian = Reference(Organization/Example-Smith-Johnson-OrganizationCustodian1)
 * description = "Personal Advance Care Plan"
 * securityLabel.coding[0] = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N "normal"
@@ -1161,7 +1161,7 @@ Usage: #example
 
 * date = "2015-11-05T15:52:20.000+00:00"
 * author = Reference(Example-Smith-Johnson-Patient1)
-* authenticator = Reference(Example-Smith-Johnson-OrganizationCustodian1)
+// * authenticator = Reference(Example-Smith-Johnson-OrganizationCustodian1)
 * custodian = Reference(Example-Smith-Johnson-OrganizationAssembler1)
 * description = "Living Will"
 * securityLabel.coding[0] = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N "normal"
