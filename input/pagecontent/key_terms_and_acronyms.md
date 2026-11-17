@@ -59,6 +59,11 @@
         </p></td>
     </tr>
     <tr>
+        <td>Source form</td>
+        <td><p>A human-readable rendered image of the document from which the structured data is drawn. For example, a source form may be a advance healthcare directive document that is in PDF or scanned as JPG or PNG.
+        </p></td>
+    </tr>
+    <tr>
         <td>Use case</td>
         <td>A use case is a list of technical actions or event steps typically defining the interactions between a role and a system to achieve a goal. The actor can be a human or other external system. Technical scenarios that describe systems interactions between technical actors to implement the use case.</td>
     </tr>
