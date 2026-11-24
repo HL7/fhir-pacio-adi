@@ -9,7 +9,6 @@ Description: "This abstract profile defines constraints that represent common ad
 
 // * extension[composition-clinicaldocument-versionNumber] 1..1 MS // MLT_20250729 - this standard extension is now deprecated. We need another way to version. Remove for now and revisit after Ballot.
 * extension contains
-    adi-expiration-date-extension named ExpirationDateExtension 0..1 and
   //  adi-jurisdiction-extension named Jurisdiction 0..* and 
   //    http://hl7.org/fhir/us/core/StructureDefinition/us-core-jurisdiction named Jurisdiction 0..* and  // fix for FHIR-49201. mlt_update 20260807 - ticket retracted after review with LNelson on 8/1/26 where only ADIDocumentReference needs the extension. Composition jurisdiction extension is applied at the AD source form section level.
     adi-dataEnterer-extension named DataEntererExtension 0..1 and
@@ -84,9 +83,9 @@ Description: "This abstract profile defines constraints that represent common ad
 * section[advance_directive_source_form].entry only Reference(ADISourceFormInformation)
 
 * section.extension contains    
-    adi-clause-extension named ClauseExtension 0..*
-    
-    
+    adi-clause-extension named ClauseExtension 0..* and
+    adi-expiration-date-extension named ExpirationDateExtension 0..1
+        
 // need to add notes on which attester roles there are. Change name of personal_attester to witness_attester professional_attester to notary_attester
 // Need to add an extension with a code that explains the role, witness or notary. Others?
 
